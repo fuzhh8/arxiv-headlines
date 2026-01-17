@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>arXiv Headlines</title>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body{
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 16px;
+    }
+
+    .layout{
+      max-width: 1600px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .header{
+      padding: 22px 18px;
+      border-radius: 16px;
+      margin-bottom: 14px;
+      background: transparent;
+      box-shadow: none;
+      text-align: center;
+    }
+    .header h1{ 
+      color: white;
+      font-size: 2.8em; 
+      margin-bottom: 8px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .header p{ 
+      color: rgba(255,255,255,0.9);
+      font-size: 1.02em; 
+      line-height: 1.4;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .main{ padding: 18px; }
+
+    .controls{
+      background: white;
+      padding: 14px;
+      border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+      margin-bottom: 12px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .controls .group{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      flex: 1;
+      min-width: 240px;
+    }
+
+    label{
+      color:#555;
+      font-size: 0.95em;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    select, input[type="date"], button{
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 2px solid #667eea;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: white;
+      width: 100%;
+    }
+
+    button{
+      background: #667eea;
+      color: white;
+      font-weight: 850;
+      border: 2px solid #667eea;
+      width: auto;
+      min-width: 120px;
+    }
+    button:hover:not(:disabled){
+      background: #5568d3;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(102,126,234,0.35);
+    }
+    button:disabled{
+      background:#b7b7b7;
+      border-color:#b7b7b7;
+      cursor:not-allowed;
+      transform:none;
+      box-shadow:none;
+    }
+
+    .category-bar{
+      background: white;
+      padding: 12px 14px;
+      border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+      margin-bottom: 12px;
+    }
+    .category-bar .row{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .category-chip{
+      border: 1px solid #e7e7e7;
+      background: #fafafa;
+      padding: 8px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      color: #2f2f2f;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .category-chip:hover{ background: #f2f5ff; border-color: #667eea; }
+    .category-chip.active{ background: #e8edff; border-color: #667eea; color: #2b3fbf; }
+
+    .chip-badge{
+      background: #e0e7ff;
+      color: #465bd6;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.82em;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .status{
+      background: rgba(255,255,255,0.22);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.95);
+      padding: 12px 14px;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .error{
+      background: #fff1f1;
+      color: #b3261e;
+      padding: 14px;
+      border-radius: 14px;
+      margin: 14px 0;
+      line-height: 1.6;
+    }
+
+    .info{
+      background: #e3f2fd;
+      color: #1565c0;
+      padding: 14px;
+      border-radius: 14px;
+      margin: 14px 0;
+      line-height: 1.6;
+      font-weight: 600;
+    }
+
+    .section{
+      margin-bottom: 18px;
+    }
+    .section-title{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.22);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.95);
+      margin-bottom: 10px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .section-title .left{
+      display:flex;
+      gap: 10px;
+      align-items: center;
+      font-weight: 850;
+    }
+    .pill{
+      background: rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 750;
+    }
+
+    .papers-grid{
+      display: grid;
+      gap: 18px;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    
+    .papers-grid.cols-1{
+      grid-template-columns: 1fr;
+    }
+    .papers-grid.cols-2{
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    .papers-grid.cols-3{
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .paper-card{
+      background: white;
+      border-radius: 14px;
+      padding: 20px 18px 18px 22px;
+      box-shadow: 0 5px 16px rgba(0,0,0,0.10);
+      transition: all 0.25s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      display:flex;
+      flex-direction: column;
+    }
+    .paper-card:hover{ transform: translateY(-4px); box-shadow: 0 14px 34px rgba(0,0,0,0.18); }
+    .paper-card.selected{
+      border: 3px solid #667eea;
+      box-shadow: 0 8px 24px rgba(102,126,234,0.3);
+    }
+    .paper-card::before{
+      content:'';
+      position:absolute;
+      top:0; left:0;
+      width: 5px; height: 100%;
+      background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    }
+    .paper-title{ color:#222; font-size: 1.05em; font-weight: 900; margin-bottom: 10px; line-height: 1.4; }
+    .paper-authors{ color:#666; font-size: 0.88em; margin-bottom: 10px; font-style: italic; }
+    .paper-footer{ 
+      margin-top: auto;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .paper-link{
+      color:#465bd6;
+      text-decoration:none;
+      font-weight: 900;
+      font-size: 0.92em;
+      display:inline-block;
+    }
+    .paper-link:hover{ text-decoration: underline; }
+
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    /* Two-column layout: List | (Abstract + PDF vertically stacked) */
+    .content-split{
+      display: grid;
+      grid-template-columns: 5fr 5fr;
+      gap: 16px;
+      align-items: start;
+    }
+    @media (max-width: 1150px){
+      .content-split{ grid-template-columns: 1fr; }
+    }
+
+    /* 右侧面板容器 */
+    .preview-panels{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: sticky;
+      top: 16px;
+      height: calc(100vh - 32px);
+      max-height: calc(100vh - 32px);
+    }
+
+    @media (max-width: 1150px){
+      .preview-panels{ 
+        position: static; 
+        height: auto;
+        max-height: none; 
+      }
+    }
+
+/* 摘要卡片 - 3D 立体边框 */
+.abstract-card{
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  overflow-y: auto;
+  flex: 2.5 0 0;
+  min-height: 0;
+  border: 3px solid #667eea;
+  box-shadow: 
+    -4px -4px 0 0 #764ba2,
+    -8px -8px 0 0 rgba(118, 75, 162, 0.3),
+    0 10px 30px rgba(0,0,0,0.18);
+}
+
+/* PDF 卡片 - 3D 立体边框 */
+.pdf-card{
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  flex: 2 0 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 3px solid #667eea;
+  box-shadow: 
+    -4px -4px 0 0 #764ba2,
+    -8px -8px 0 0 rgba(118, 75, 162, 0.3),
+    0 10px 30px rgba(0,0,0,0.18);
+}
+
+    /* PDF 标题栏 */
+    .pdf-section-title{
+      font-size: 1.1em;
+      font-weight: 800;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .preview-muted{
+      color: #666;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+    .preview-title{
+      font-size: 1.3em;
+      font-weight: 950;
+      color: #222;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+    .preview-meta{
+      color:#666;
+      font-size: 0.92em;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      font-style: italic; 
+    }
+    .preview-abstract{
+      color:#333;
+      font-size: 1.0em;
+      line-height: 1.65;
+      white-space: pre-wrap;
+      word-break: break-word;
+      padding-right: 6px;
+    }
+
+    .pdf-actions{
+      display: flex;
+      gap: 8px;
+    }
+    .pdf-btn{
+      padding: 6px 12px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85em;
+      font-weight: 700;
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .pdf-btn:hover{
+      background: #5568d3;
+      transform: translateY(-1px);
+    }
+    .pdf-btn.secondary{
+      background: #e8edff;
+      color: #465bd6;
+    }
+    .pdf-btn.secondary:hover{
+      background: #d0dcff;
+    }
+
+    /* PDF iframe container */
+    .pdf-viewer-container{
+      width: 100%;
+      flex: 1;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #f5f5f5;
+      position: relative;
+      min-height: 0;
+    }
+
+    .pdf-iframe{
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .paper-card[tabindex="0"]:focus{
+      outline: 3px solid rgba(102,126,234,0.45);
+      outline-offset: 2px;
+    }
+
+    .back-to-top{
+      position: fixed;
+      left: 16px;
+      bottom: 16px;
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
+      border: 2px solid rgba(255,255,255,0.45);
+      background: rgba(32,32,32,0.45);
+      color: white;
+      font-weight: 950;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(6px);
+    }
+    .back-to-top:hover{ background: rgba(32,32,32,0.62); }
+    .back-to-top:active{ transform: translateY(1px); }
+
+    .pdf-toggle{
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      user-select: none;
+      font-size: 0.9em;
+      color: #667eea;
+      font-weight: 700;
+    }
+    .pdf-toggle input{
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="layout">
+    <main class="main">
+      <div class="header">
+        <h1>arXiv Headlines</h1>
+        <p> </p>
+      </div>
+
+      <div class="controls">
+        <div class="group" style="max-width: 340px;">
+          <label for="day">Date</label>
+          <input id="day" type="date" />
+        </div>
+
+        <div class="group" style="max-width: 260px;">
+          <label for="maxResults">Count</label>
+          <select id="maxResults">
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+
+        <div class="group" style="max-width: 200px;">
+          <label for="columnsSelect">Columns</label>
+          <select id="columnsSelect">
+            <option value="1">1 per row</option>
+            <option value="2" selected>2 per row</option>
+          </select>
+        </div>
+
+        <div class="group" style="min-width: 240px;">
+          <label>Selected</label>
+          <div id="selectedCat" class="mono" style="padding: 10px 12px; border: 2px solid #667eea; border-radius: 10px; width:100%; background:#fff;">
+            astro-ph
+          </div>
+        </div>
+
+        <label class="pdf-toggle">
+          <input type="checkbox" id="pdfPreviewToggle" checked />
+          <span>PDF Preview</span>
+        </label>
+
+        <button id="loadBtn" onclick="loadPapers()">Refresh</button>
+      </div>
+
+      <div class="category-bar">
+        <div class="row" id="catBar"></div>
+      </div>
+
+      <div id="content"></div>
+    </main>
+  </div>
+
+  <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">↑</button>
+
+  <script>
+    const PROXY_SERVICES = [
+      url => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+      url => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+      url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
+    ];
+
+    const CATEGORIES = [
+      { code: 'astro-ph', label: 'Astrophysics (all)' },
+      { code: 'astro-ph.CO', label: 'Cosmology & Nongalactic' },
+      { code: 'astro-ph.EP', label: 'Earth & Planetary' },
+      { code: 'astro-ph.GA', label: 'Astrophysics of Galaxies' },
+      { code: 'astro-ph.HE', label: 'High Energy Phenomena' },
+      { code: 'astro-ph.IM', label: 'Instrumentation & Methods' },
+      { code: 'astro-ph.SR', label: 'Solar & Stellar' }
+    ];
+
+    let selectedCategory = 'astro-ph';
+    let currentSelectedCard = null;
+
+    function pad2(n){ return String(n).padStart(2, '0'); }
+    function escapeHtml(text){
+      const div = document.createElement('div');
+      div.textContent = text ?? '';
+      return div.innerHTML;
+    }
+    function cleanText(s){ return (s ?? '').replace(/\s+/g, ' ').trim(); }
+
+    function setStatus(message){
+      document.getElementById('content').innerHTML = `<div class="status">${message}<br/><span class="mono"> </span></div>`;
+    }
+
+    async function fetchWithProxy(url, accept, proxyIndex = 0){
+      if (proxyIndex >= PROXY_SERVICES.length) throw new Error('All proxy services failed');
+      const proxyUrl = PROXY_SERVICES[proxyIndex](url);
+
+      try{
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 30000);
+
+        const resp = await fetch(proxyUrl, {
+          method: 'GET',
+          signal: controller.signal,
+          headers: { 'Accept': accept }
+        });
+
+        clearTimeout(timeoutId);
+
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const text = await resp.text();
+        if (!text || text.length < 50) throw new Error('Empty response');
+        return text;
+      } catch (e){
+        return fetchWithProxy(url, accept, proxyIndex + 1);
+      }
+    }
+
+    function normalizeId(id){ return (id || '').trim().replace(/v\d+$/i, ''); }
+
+    function extractIdFromAbsUrl(url){
+      const m = (url || '').match(/\/abs\/([^?#]+)/);
+      return m && m[1] ? normalizeId(m[1]) : '';
+    }
+
+    function chunkArray(arr, size){
+      const out = [];
+      for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
+      return out;
+    }
+
+    function parseCatchupByHeadings(htmlText){
+      const doc = new DOMParser().parseFromString(htmlText, "text/html");
+      const root = doc.querySelector('#content') || doc;
+
+      const h3s = Array.from(root.querySelectorAll('h3'));
+      const out = { new: [], cross: [], repl: [] };
+
+      function keyForHeadingText(t){
+        const s = cleanText(t).toLowerCase();
+        if (s.startsWith('new submissions')) return 'new';
+        if (s.startsWith('cross submissions') || s.startsWith('cross-lists') || s.startsWith('cross lists')) return 'cross';
+        if (s.startsWith('replacement submissions') || s.startsWith('replacements')) return 'repl';
+        return null;
+      }
+
+      for (const h3 of h3s){
+        const key = keyForHeadingText(h3.textContent || '');
+        if (!key) continue;
+
+        let node = h3.nextElementSibling;
+        while (node){
+          if (node.tagName && node.tagName.toLowerCase() === 'h3') break;
+
+          const absLinks = Array.from(node.querySelectorAll('a[href*="/abs/"]'));
+          for (const a of absLinks){
+            const href = a.getAttribute('href') || '';
+            const id = extractIdFromAbsUrl(href);
+            if (id) out[key].push(id);
+          }
+          node = node.nextElementSibling;
+        }
+      }
+      return out;
+    }
+
+    function parseArxivApi(xmlText){
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+      const parserError = xmlDoc.querySelector('parsererror');
+      if (parserError) throw new Error('API XML parsing failed');
+
+      const entries = xmlDoc.getElementsByTagName("entry");
+      const papers = [];
+
+      for (const entry of entries){
+        const title = cleanText(entry.getElementsByTagName("title")[0]?.textContent);
+        const summary = cleanText(entry.getElementsByTagName("summary")[0]?.textContent);
+        const published = entry.getElementsByTagName("published")[0]?.textContent;
+        const updated = entry.getElementsByTagName("updated")[0]?.textContent;
+        const idUrl = entry.getElementsByTagName("id")[0]?.textContent;
+
+        if (!title || !summary || !idUrl) continue;
+
+        papers.push({
+          absId: extractIdFromAbsUrl(idUrl),
+          title,
+          summary,
+          published: published ? new Date(published) : null,
+          updated: updated ? new Date(updated) : null,
+          link: idUrl,
+          authors: Array.from(entry.getElementsByTagName("author"))
+            .map(a => a.getElementsByTagName("name")[0]?.textContent?.trim())
+            .filter(Boolean),
+          categories: Array.from(entry.getElementsByTagName("category"))
+            .map(c => c.getAttribute("term"))
+            .filter(Boolean)
+        });
+      }
+      return papers;
+    }
+
+    async function fetchPapersForIds(ids){
+      const idChunks = chunkArray(ids, 200);
+      const all = [];
+
+      for (const chunk of idChunks){
+        const apiUrl =
+          `https://export.arxiv.org/api/query?id_list=${encodeURIComponent(chunk.join(','))}` +
+          `&start=0&max_results=${encodeURIComponent(chunk.length)}`;
+        const xmlText = await fetchWithProxy(apiUrl, 'application/atom+xml, application/xml, text/xml');
+        all.push(...parseArxivApi(xmlText));
+      }
+
+      const byAbsId = new Map();
+      for (const p of all){
+        if (p.absId) byAbsId.set(p.absId, p);
+      }
+      return byAbsId;
+    }
+
+    function renderPapersGrid(papers, sec){
+      if (!papers.length){
+        return `<div class="error">No entries in this section (or truncated by Count).</div>`;
+      }
+
+      const columns = document.getElementById('columnsSelect').value;
+      let html = `<div class="papers-grid cols-${columns}">`;
+
+      for (const p of papers){
+        const authorsText = p.authors?.length
+          ? `${p.authors.slice(0, 3).join(', ')}${p.authors.length > 3 ? ' et al.' : ''}`
+          : 'Unknown authors';
+
+        html += `
+          <div class="paper-card"
+               tabindex="0"
+               data-absid="${escapeHtml(p.absId)}"
+               data-sec="${escapeHtml(sec || '')}">
+
+            <div class="paper-title">${escapeHtml(p.title)}</div>
+            <div class="paper-authors">${escapeHtml(authorsText)}</div>
+            <div class="paper-footer">
+              <a class="paper-link" href="${escapeHtml(p.link)}" target="_blank" onclick="event.stopPropagation()">Open arXiv</a>
+              <a class="paper-link" href="https://arxiv.org/pdf/${escapeHtml(p.absId)}.pdf" target="_blank" onclick="event.stopPropagation()">Open PDF</a>
+            </div>
+          </div>
+        `;
+      }
+
+      html += `</div>`;
+      return html;
+    }
+
+    function renderPreviewEmpty(){
+      return `
+        <div class="preview-muted">
+          Click on a paper card to see the abstract and PDF preview here.
+        </div>
+      `;
+    }
+
+function setPreviewPaper(paper){
+  const abstractPane = document.getElementById('abstractPane');
+  const pdfPane = document.getElementById('pdfPane');
+  
+  if (!abstractPane || !pdfPane) return;
+
+  // Remove previous selection highlight
+  if (currentSelectedCard){
+    currentSelectedCard.classList.remove('selected');
+  }
+
+  // Highlight current card
+  const cards = document.querySelectorAll('.paper-card');
+  for (const card of cards){
+    if (card.getAttribute('data-absid') === paper.absId){
+      card.classList.add('selected');
+      currentSelectedCard = card;
+      break;
+    }
+  }
+
+  const MAX_AUTHORS_PREVIEW = 6;
+  const authors = (paper.authors || []).filter(Boolean);
+
+  const authorsFull =
+      authors.length <= MAX_AUTHORS_PREVIEW
+      ? authors.join(', ')
+      : `${authors.slice(0, MAX_AUTHORS_PREVIEW).join(', ')}, et al.`;
+
+  // Update abstract pane
+  abstractPane.innerHTML = `
+    <div class="preview-title">${escapeHtml(paper.title || '')}</div>
+    <div class="preview-meta">
+      <div>${escapeHtml(authorsFull || 'Unknown')}</div>
+    </div>
+    <div class="preview-abstract">${escapeHtml(paper.summary || '')}</div>
+  `;
+
+  // ⭐ 修改这部分 - 控制 PDF 卡片显示/隐藏
+  const pdfToggle = document.getElementById('pdfPreviewToggle');
+  const showPdf = pdfToggle.checked;
+  const pdfCard = pdfPane.closest('.pdf-card');  // 获取 PDF 卡片容器
+
+  if (showPdf){
+    if (pdfCard) pdfCard.style.display = 'flex';  // 显示 PDF 卡片
+    
+    const pdfUrl = `https://arxiv.org/pdf/${paper.absId}.pdf`;
+    pdfPane.innerHTML = `
+      <div class="pdf-section-title">
+        <span>📄 PDF Preview</span>
+        <div class="pdf-actions">
+          <a class="pdf-btn secondary" href="${escapeHtml(pdfUrl)}" target="_blank">Open in New Tab</a>
+        </div>
+      </div>
+      <div class="pdf-viewer-container">
+        <iframe 
+          class="pdf-iframe" 
+          src="${escapeHtml(pdfUrl)}#view=FitH"
+          title="PDF Preview">
+        </iframe>
+      </div>
+    `;
+  } else {
+    if (pdfCard) pdfCard.style.display = 'none';  // 隐藏 PDF 卡片
+  }
+
+  if (window.MathJax) {
+      MathJax.typesetPromise([abstractPane]).catch(err => console.log('MathJax error:', err));
+  }
+}
+
+    function renderSections(meta){
+      const content = document.getElementById('content');
+
+      let html = '';
+
+      if (meta.redirectedFrom){
+        const dayName = meta.redirectedDayName || 'weekend';
+        html += `
+          <div class="info">
+            ℹ Auto-redirected from ${dayName} (${escapeHtml(meta.redirectedFrom)}) to Friday (${escapeHtml(meta.date)}).<br/>
+            arXiv does not publish announcements on weekends.
+          </div>
+        `;
+      }
+
+      html += `
+        <div class="content-split">
+          <div id="listPane"></div>
+          <div class="preview-panels">
+            <div class="abstract-card" id="abstractPane">
+              ${renderPreviewEmpty()}
+            </div>
+            <div class="pdf-card" id="pdfPane">
+              <div class="preview-muted">PDF will appear here when you select a paper.</div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      content.innerHTML = html;
+      
+      const listPane = document.getElementById('listPane');
+
+      const order = ['new', 'cross', 'repl'];
+      let listHtml = '';
+
+      for (const sec of order){
+        if (!meta.enabled[sec]) continue;
+
+        const title = sec === 'new' ? 'New submissions' : sec === 'cross' ? 'Cross submissions' : 'Replacement submissions';
+        const shown = meta.shownCounts[sec];
+        const total = meta.counts[sec];
+
+        listHtml += `
+          <div class="section">
+            <div class="section-title">
+              <div class="left">${escapeHtml(title)} <span class="pill">showing ${escapeHtml(String(shown))} / ${escapeHtml(String(total))}</span></div>
+              <div class="pill mono">${escapeHtml(sec)}</div>
+            </div>
+            ${renderPapersGrid(meta.papersBySection[sec], sec)}
+          </div>
+        `;
+      }
+
+      listPane.innerHTML = listHtml;
+
+      const firstPaper = (meta.papersBySection.new?.[0] || meta.papersBySection.cross?.[0] || meta.papersBySection.repl?.[0] || null);
+      if (firstPaper) setPreviewPaper(firstPaper);
+      
+      if (window.MathJax) {
+        MathJax.typesetPromise([listPane]).catch(err => console.log('MathJax error:', err));
+      }
+    }
+
+    function getEnabled(){
+      return {
+          new: true,
+          cross: true,
+          repl: true
+      };
+    }
+
+    function renderCategoryBar(){
+      const bar = document.getElementById('catBar');
+      if (!bar) return;
+
+      bar.innerHTML = '';
+      for (const c of CATEGORIES){
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `category-chip ${c.code === selectedCategory ? 'active' : ''}`;
+        btn.innerHTML = `<span>${escapeHtml(c.label)}</span><span class="chip-badge">${escapeHtml(c.code)}</span>`;
+        btn.onclick = () => {
+          selectedCategory = c.code;
+          document.getElementById('selectedCat').textContent = selectedCategory;
+          renderCategoryBar();
+          loadPapers();
+        };
+        bar.appendChild(btn);
+      }
+    }
+
+    function isWeekendYmd(ymd){
+      const dt = new Date(`${ymd}T00:00:00`);
+      const dow = dt.getDay();
+      return dow === 0 || dow === 6 ? dow : -1;
+    }
+
+    function getPreviousFriday(ymd){
+      const dt = new Date(`${ymd}T00:00:00`);
+      const dow = dt.getDay();
+      
+      let daysToSubtract;
+      if (dow === 0) {
+        daysToSubtract = 2;
+      } else if (dow === 6) {
+        daysToSubtract = 1;
+      } else {
+        return ymd;
+      }
+      
+      dt.setDate(dt.getDate() - daysToSubtract);
+      return `${dt.getFullYear()}-${pad2(dt.getMonth() + 1)}-${pad2(dt.getDate())}`;
+    }
+
+    function setupDateInput(){
+      const dateInput = document.getElementById('day');
+      
+      dateInput.addEventListener('change', function(){
+        const selectedDate = this.value;
+        if (!selectedDate) return;
+        
+        const weekend = isWeekendYmd(selectedDate);
+        if (weekend !== -1){
+          const friday = getPreviousFriday(selectedDate);
+          this.value = friday;
+          loadPapers();
+        }
+      });
+    }
+
+    function setupColumnsSelector(){
+      const columnsSelect = document.getElementById('columnsSelect');
+      columnsSelect.addEventListener('change', function(){
+        const listPane = document.getElementById('listPane');
+        if (listPane && listPane.innerHTML.trim() !== ''){
+          if (window.__LAST_RENDER_META__){
+            renderSections(window.__LAST_RENDER_META__);
+          }
+        }
+      });
+    }
+
+    // PDF toggle listener
+    document.getElementById('pdfPreviewToggle').addEventListener('change', function(){
+      // Re-render current preview if exists
+      if (currentSelectedCard){
+        const absId = currentSelectedCard.getAttribute('data-absid');
+        const paper = window.__PAPER_BY_ID__?.get?.(absId);
+        if (paper) setPreviewPaper(paper);
+      }
+    });
+
+    async function loadPapers(){
+      const loadBtn = document.getElementById('loadBtn');
+      const dateInput = document.getElementById('day');
+      let selectedYmd = dateInput.value;
+      const maxResults = Number(document.getElementById('maxResults').value);
+      const enabled = getEnabled();
+
+      if (!selectedYmd){
+        setStatus('Please select a date.');
+        return;
+      }
+
+      const originalDate = selectedYmd;
+      const weekend = isWeekendYmd(selectedYmd);
+      let redirectInfo = null;
+      
+      if (weekend !== -1){
+        const dayName = weekend === 6 ? 'Saturday' : 'Sunday';
+        const friday = getPreviousFriday(selectedYmd);
+        selectedYmd = friday;
+        dateInput.value = friday;
+        redirectInfo = {
+          from: originalDate,
+          dayName: dayName
+        };
+      }
+
+      loadBtn.disabled = true;
+
+      try{
+        const catchupUrl = `https://arxiv.org/catchup/${encodeURIComponent(selectedCategory)}/${encodeURIComponent(selectedYmd)}?abs=False`;
+        setStatus(`Loading catchup page…<br/><span class="mono">${escapeHtml(catchupUrl)}</span>`);
+
+        const htmlText = await fetchWithProxy(catchupUrl, 'text/html');
+        const idsBySection = parseCatchupByHeadings(htmlText);
+
+        const counts = {
+          new: idsBySection.new.length,
+          cross: idsBySection.cross.length,
+          repl: idsBySection.repl.length
+        };
+
+        const limited = {
+          new: idsBySection.new.slice(0, maxResults),
+          cross: idsBySection.cross.slice(0, maxResults),
+          repl: idsBySection.repl.slice(0, maxResults)
+        };
+
+        const papersBySection = { new: [], cross: [], repl: [] };
+        const shownCounts = {
+          new: enabled.new ? limited.new.length : 0,
+          cross: enabled.cross ? limited.cross.length : 0,
+          repl: enabled.repl ? limited.repl.length : 0
+        };
+
+        for (const sec of ['new', 'cross', 'repl']){
+          if (!enabled[sec]) continue;
+          if (!limited[sec].length) continue;
+
+          setStatus(`Loading metadata: ${sec} (${limited[sec].length})…`);
+          const byAbsId = await fetchPapersForIds(limited[sec]);
+
+          const ordered = [];
+          for (const id of limited[sec]){
+            const p = byAbsId.get(normalizeId(id));
+            if (p) ordered.push(p);
+          }
+          papersBySection[sec] = ordered;
+        }
+
+        window.__PAPER_BY_ID__ = new Map();
+        for (const sec of ['new','cross','repl']){
+          for (const p of (papersBySection[sec] || [])){
+            if (p?.absId) window.__PAPER_BY_ID__.set(p.absId, p);
+          }
+        }
+
+        const renderMeta = {
+          category: selectedCategory,
+          date: selectedYmd,
+          catchupUrl,
+          enabled,
+          counts,
+          shownCounts,
+          papersBySection
+        };
+
+        if (redirectInfo){
+          renderMeta.redirectedFrom = redirectInfo.from;
+          renderMeta.redirectedDayName = redirectInfo.dayName;
+        }
+
+        window.__LAST_RENDER_META__ = renderMeta;
+
+        renderSections(renderMeta);
+      } finally{
+        loadBtn.disabled = false;
+      }
+    }
+
+    document.addEventListener('click', (e) => {
+      const card = e.target?.closest?.('.paper-card');
+      if (!card) return;
+      const absId = card.getAttribute('data-absid') || '';
+      if (!absId) return;
+      const p = window.__PAPER_BY_ID__?.get?.(absId);
+      if (p) setPreviewPaper(p);
+    });
+
+    document.addEventListener('focusin', (e) => {
+      const card = e.target?.closest?.('.paper-card');
+      if (!card) return;
+      const absId = card.getAttribute('data-absid') || '';
+      const p = window.__PAPER_BY_ID__?.get?.(absId);
+      if (p) setPreviewPaper(p);
+    });
+
+    const backToTopBtn = document.getElementById('backToTop');
+    function updateBackToTop(){
+      if (!backToTopBtn) return;
+      backToTopBtn.style.display = (window.scrollY > 500) ? 'flex' : 'none';
+    }
+    window.addEventListener('scroll', updateBackToTop, { passive: true });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.onload = () => {
+      try{
+        renderCategoryBar();
+        setupDateInput();
+        setupColumnsSelector();
+
+        const d = new Date();
+        let initialDate = `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`;
+        
+        const weekend = isWeekendYmd(initialDate);
+        if (weekend !== -1){
+          initialDate = getPreviousFriday(initialDate);
+        }
+        
+        document.getElementById('day').value = initialDate;
+        document.getElementById('selectedCat').textContent = selectedCategory;
+
+        document.getElementById('maxResults').addEventListener('change', loadPapers);
+        document.getElementById('day').addEventListener('change', loadPapers);
+
+        updateBackToTop();
+        setTimeout(loadPapers, 250);
+      } catch (e){
+        console.error('Init failed:', e);
+      }
+    };
+  </script>
+</body>
+</html>
