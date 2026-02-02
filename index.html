@@ -24,7 +24,187 @@
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       min-height: 100vh;
       padding: 16px;
+      transition: background 0.3s ease;
     }
+
+    /* Background themes */
+    body.theme-purple{
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    body.theme-ocean{
+      background: linear-gradient(135deg, #2E3192 0%, #1BFFFF 100%);
+    }
+    body.theme-sunset{
+      background: linear-gradient(135deg, #FF512F 0%, #F09819 100%);
+    }
+    body.theme-forest{
+      background: linear-gradient(135deg, #134E5E 0%, #71B280 100%);
+    }
+    body.theme-night{
+      background: linear-gradient(135deg, #2C3E50 0%, #4CA1AF 100%);
+    }
+    body.theme-rose{
+      background: linear-gradient(135deg, #ED4264 0%, #FFEDBC 100%);
+    }
+    body.theme-dark{
+      background: linear-gradient(135deg, #0F0F0F 0%, #2D2D2D 100%);
+    }
+
+    /* Theme-specific card colors */
+    body.theme-purple .paper-card::before{
+      background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    }
+    body.theme-purple .paper-card.selected{
+      border-color: #667eea;
+      box-shadow: 0 8px 24px rgba(102,126,234,0.3);
+    }
+    body.theme-purple .abstract-card,
+    body.theme-purple .pdf-card{
+      border-color: #667eea;
+      box-shadow: 
+        -4px -4px 0 0 #764ba2,
+        -8px -8px 0 0 rgba(118, 75, 162, 0.3),
+        0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    body.theme-ocean .paper-card::before{
+      background: linear-gradient(180deg, #2E3192 0%, #1BFFFF 100%);
+    }
+    body.theme-ocean .paper-card.selected{
+      border-color: #2E3192;
+      box-shadow: 0 8px 24px rgba(46,49,146,0.3);
+    }
+    body.theme-ocean .abstract-card,
+    body.theme-ocean .pdf-card{
+      border-color: #2E3192;
+      box-shadow: 
+        -4px -4px 0 0 #1BFFFF,
+        -8px -8px 0 0 rgba(27, 255, 255, 0.3),
+        0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    body.theme-sunset .paper-card::before{
+      background: linear-gradient(180deg, #FF512F 0%, #F09819 100%);
+    }
+    body.theme-sunset .paper-card.selected{
+      border-color: #FF512F;
+      box-shadow: 0 8px 24px rgba(255,81,47,0.3);
+    }
+    body.theme-sunset .abstract-card,
+    body.theme-sunset .pdf-card{
+      border-color: #FF512F;
+      box-shadow: 
+        -4px -4px 0 0 #F09819,
+        -8px -8px 0 0 rgba(240, 152, 25, 0.3),
+        0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    body.theme-forest .paper-card::before{
+      background: linear-gradient(180deg, #134E5E 0%, #71B280 100%);
+    }
+    body.theme-forest .paper-card.selected{
+      border-color: #134E5E;
+      box-shadow: 0 8px 24px rgba(19,78,94,0.3);
+    }
+    body.theme-forest .abstract-card,
+    body.theme-forest .pdf-card{
+      border-color: #134E5E;
+      box-shadow: 
+        -4px -4px 0 0 #71B280,
+        -8px -8px 0 0 rgba(113, 178, 128, 0.3),
+        0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    body.theme-night .paper-card::before{
+      background: linear-gradient(180deg, #2C3E50 0%, #4CA1AF 100%);
+    }
+    body.theme-night .paper-card.selected{
+      border-color: #2C3E50;
+      box-shadow: 0 8px 24px rgba(44,62,80,0.3);
+    }
+    body.theme-night .abstract-card,
+    body.theme-night .pdf-card{
+      border-color: #2C3E50;
+      box-shadow: 
+        -4px -4px 0 0 #4CA1AF,
+        -8px -8px 0 0 rgba(76, 161, 175, 0.3),
+        0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    body.theme-rose .paper-card::before{
+      background: linear-gradient(180deg, #ED4264 0%, #FFEDBC 100%);
+    }
+    body.theme-rose .paper-card.selected{
+      border-color: #ED4264;
+      box-shadow: 0 8px 24px rgba(237,66,100,0.3);
+    }
+    body.theme-rose .abstract-card,
+    body.theme-rose .pdf-card{
+      border-color: #ED4264;
+      box-shadow: 
+        -4px -4px 0 0 #FFEDBC,
+        -8px -8px 0 0 rgba(255, 237, 188, 0.3),
+        0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    body.theme-dark .paper-card::before{
+      background: linear-gradient(180deg, #0F0F0F 0%, #2D2D2D 100%);
+    }
+    body.theme-dark .paper-card.selected{
+      border-color: #2D2D2D;
+      box-shadow: 0 8px 24px rgba(45,45,45,0.5);
+    }
+    body.theme-dark .abstract-card,
+    body.theme-dark .pdf-card{
+      border-color: #2D2D2D;
+      box-shadow: 
+        -4px -4px 0 0 #0F0F0F,
+        -8px -8px 0 0 rgba(15, 15, 15, 0.5),
+        0 10px 30px rgba(0,0,0,0.18);
+    }
+    /* Theme-specific button colors */
+    body.theme-ocean button:not(.range-btn):not(.col-btn),
+    body.theme-ocean .range-btn.active,
+    body.theme-ocean .col-btn.active{
+      background: #2E3192;
+      border-color: #2E3192;
+    }
+
+    body.theme-sunset button:not(.range-btn):not(.col-btn),
+    body.theme-sunset .range-btn.active,
+    body.theme-sunset .col-btn.active{
+      background: #FF512F;
+      border-color: #FF512F;
+    }
+
+    body.theme-forest button:not(.range-btn):not(.col-btn),
+    body.theme-forest .range-btn.active,
+    body.theme-forest .col-btn.active{
+      background: #134E5E;
+      border-color: #134E5E;
+    }
+
+    body.theme-night button:not(.range-btn):not(.col-btn),
+    body.theme-night .range-btn.active,
+    body.theme-night .col-btn.active{
+      background: #2C3E50;
+      border-color: #2C3E50;
+    }
+
+    body.theme-rose button:not(.range-btn):not(.col-btn),
+    body.theme-rose .range-btn.active,
+    body.theme-rose .col-btn.active{
+      background: #ED4264;
+      border-color: #ED4264;
+    }
+
+    body.theme-dark button:not(.range-btn):not(.col-btn),
+    body.theme-dark .range-btn.active,
+    body.theme-dark .col-btn.active{
+      background: #2D2D2D;
+      border-color: #2D2D2D;
+    }
+
 
     .layout{
       max-width: 1600px;
@@ -60,6 +240,57 @@
 
     .main{ padding: 18px; }
 
+    /* Tab-style category bar */
+    .category-tabs{
+      background: transparent;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    .category-tab{
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 2px solid rgba(255,255,255,0.25);
+      border-bottom: none;
+      border-radius: 12px 12px 0 0;
+      padding: 12px 20px;
+      color: rgba(255,255,255,0.85);
+      font-weight: 700;
+      font-size: 0.92em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .category-tab:hover{
+      background: rgba(255,255,255,0.25);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .category-tab.active{
+      background: white;
+      color: #667eea;
+      border-color: white;
+      font-weight: 800;
+      transform: translateY(0);
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+    }
+
+    .category-tab.active::after{
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: white;
+    }
+
     .controls{
       background: white;
       padding: 14px;
@@ -76,7 +307,7 @@
       gap: 10px;
       align-items:center;
       flex: 1;
-      min-width: 240px;
+      min-width: 200px;
     }
 
     label{
@@ -95,6 +326,10 @@
       transition: all 0.2s ease;
       background: white;
       width: 100%;
+    }
+
+    select{
+      font-weight: 600;
     }
 
     button{
@@ -118,44 +353,67 @@
       box-shadow:none;
     }
 
-    .category-bar{
-      background: white;
-      padding: 12px 14px;
-      border-radius: 16px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.10);
-      margin-bottom: 12px;
-    }
-    .category-bar .row{
+    .range-toggle{
       display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .category-chip{
-      border: 1px solid #e7e7e7;
-      background: #fafafa;
-      padding: 8px 10px;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      color: #2f2f2f;
-      font-weight: 800;
-      display: inline-flex;
-      align-items: center;
       gap: 8px;
+      align-items: center;
     }
-    .category-chip:hover{ background: #f2f5ff; border-color: #667eea; }
-    .category-chip.active{ background: #e8edff; border-color: #667eea; color: #2b3fbf; }
 
-    .chip-badge{
-      background: #e0e7ff;
-      color: #465bd6;
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-size: 0.82em;
-      font-weight: 900;
-      white-space: nowrap;
+    .range-btn{
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 2px solid #667eea;
+      background: white;
+      color: #667eea;
+      font-size: 0.9em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-width: 80px;
     }
+
+    .range-btn:hover{
+      background: #f2f5ff;
+    }
+
+    .range-btn.active{
+      background: #667eea;
+      color: white;
+    }
+
+    /* Theme selector */
+    .theme-selector{
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .theme-dot{
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 3px solid transparent;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .theme-dot:hover{
+      transform: scale(1.15);
+    }
+
+    .theme-dot.active{
+      border-color: #667eea;
+      box-shadow: 0 0 0 2px white, 0 0 8px rgba(102,126,234,0.5);
+    }
+
+    .theme-dot.purple{ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .theme-dot.ocean{ background: linear-gradient(135deg, #2E3192 0%, #1BFFFF 100%); }
+    .theme-dot.sunset{ background: linear-gradient(135deg, #FF512F 0%, #F09819 100%); }
+    .theme-dot.forest{ background: linear-gradient(135deg, #134E5E 0%, #71B280 100%); }
+    .theme-dot.night{ background: linear-gradient(135deg, #2C3E50 0%, #4CA1AF 100%); }
+    .theme-dot.rose{ background: linear-gradient(135deg, #ED4264 0%, #FFEDBC 100%); }
+    .theme-dot.dark{ background: linear-gradient(135deg, #0F0F0F 0%, #2D2D2D 100%); }
 
     .status{
       background: rgba(255,255,255,0.22);
@@ -208,6 +466,11 @@
       align-items: center;
       font-weight: 850;
     }
+    .section-title .right{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
     .pill{
       background: rgba(255,255,255,0.25);
       border: 1px solid rgba(255,255,255,0.35);
@@ -216,21 +479,56 @@
       font-weight: 750;
     }
 
+    /* Column toggle buttons in section header */
+    .column-toggle-mini{
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      background: rgba(255,255,255,0.15);
+      padding: 4px 6px;
+      border-radius: 8px;
+    }
+
+    .col-btn{
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.85);
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-weight: 900;
+      line-height: 1;
+      transition: all 0.2s ease;
+      min-width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .col-btn:hover{
+      background: rgba(255,255,255,0.25);
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    .col-btn.active{
+      background: white;
+      color: #667eea;
+      border-color: white;
+    }
+
     .papers-grid{
       display: grid;
       gap: 18px;
       width: 100%;
       margin-bottom: 8px;
     }
-    
+
     .papers-grid.cols-1{
       grid-template-columns: 1fr;
     }
     .papers-grid.cols-2{
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
-    .papers-grid.cols-3{
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
     .paper-card{
@@ -259,6 +557,12 @@
     }
     .paper-title{ color:#222; font-size: 1.05em; font-weight: 900; margin-bottom: 10px; line-height: 1.4; }
     .paper-authors{ color:#666; font-size: 0.88em; margin-bottom: 10px; font-style: italic; }
+    .paper-date{
+      color:#999;
+      font-size: 0.82em;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
     .paper-footer{ 
       margin-top: auto;
       display: flex;
@@ -289,7 +593,7 @@
       .content-split{ grid-template-columns: 1fr; }
     }
 
-    /* 右侧面板容器 */
+    /* Right panel container */
     .preview-panels{
       display: flex;
       flex-direction: column;
@@ -308,39 +612,39 @@
       }
     }
 
-/* 摘要卡片 - 3D 立体边框 */
-.abstract-card{
-  background: white;
-  border-radius: 16px;
-  padding: 16px;
-  overflow-y: auto;
-  flex: 2.5 0 0;
-  min-height: 0;
-  border: 3px solid #667eea;
-  box-shadow: 
-    -4px -4px 0 0 #764ba2,
-    -8px -8px 0 0 rgba(118, 75, 162, 0.3),
-    0 10px 30px rgba(0,0,0,0.18);
-}
+    /* Abstract card - 3D border */
+    .abstract-card{
+      background: white;
+      border-radius: 16px;
+      padding: 16px;
+      overflow-y: auto;
+      flex: 2.5 0 0;
+      min-height: 0;
+      border: 3px solid #667eea;
+      box-shadow: 
+        -4px -4px 0 0 #764ba2,
+        -8px -8px 0 0 rgba(118, 75, 162, 0.3),
+        0 10px 30px rgba(0,0,0,0.18);
+    }
 
-/* PDF 卡片 - 3D 立体边框 */
-.pdf-card{
-  background: white;
-  border-radius: 16px;
-  padding: 16px;
-  flex: 2 0 0;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  border: 3px solid #667eea;
-  box-shadow: 
-    -4px -4px 0 0 #764ba2,
-    -8px -8px 0 0 rgba(118, 75, 162, 0.3),
-    0 10px 30px rgba(0,0,0,0.18);
-}
+    /* PDF card - 3D border */
+    .pdf-card{
+      background: white;
+      border-radius: 16px;
+      padding: 16px;
+      flex: 2 0 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border: 3px solid #667eea;
+      box-shadow: 
+        -4px -4px 0 0 #764ba2,
+        -8px -8px 0 0 rgba(118, 75, 162, 0.3),
+        0 10px 30px rgba(0,0,0,0.18);
+    }
 
-    /* PDF 标题栏 */
+    /* PDF title bar */
     .pdf-section-title{
       font-size: 1.1em;
       font-weight: 800;
@@ -472,7 +776,7 @@
   </style>
 </head>
 
-<body>
+<body class="theme-purple">
   <div class="layout">
     <main class="main">
       <div class="header">
@@ -480,35 +784,34 @@
         <p> </p>
       </div>
 
+      <!-- Tab-style category selector -->
+      <div class="category-tabs" id="categoryTabs"></div>
+
       <div class="controls">
-        <div class="group" style="max-width: 340px;">
+        <div class="group" style="max-width: 280px;">
           <label for="day">Date</label>
           <input id="day" type="date" />
         </div>
 
-        <div class="group" style="max-width: 260px;">
-          <label for="maxResults">Count</label>
-          <select id="maxResults">
-            <option value="10">10</option>
-            <option value="20" selected>20</option>
-            <option value="30">30</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-          </select>
-        </div>
-
-        <div class="group" style="max-width: 200px;">
-          <label for="columnsSelect">Columns</label>
-          <select id="columnsSelect">
-            <option value="1">1 per row</option>
-            <option value="2" selected>2 per row</option>
-          </select>
-        </div>
-
         <div class="group" style="min-width: 240px;">
-          <label>Selected</label>
-          <div id="selectedCat" class="mono" style="padding: 10px 12px; border: 2px solid #667eea; border-radius: 10px; width:100%; background:#fff;">
-            astro-ph
+          <label>Range</label>
+          <div class="range-toggle">
+            <button class="range-btn active" data-range="1" onclick="setDateRange(1)">Today</button>
+            <button class="range-btn" data-range="3" onclick="setDateRange(3)">3 Days</button>
+            <button class="range-btn" data-range="7" onclick="setDateRange(7)">1 Week</button>
+          </div>
+        </div>
+        
+        <div class="group" style="min-width: 240px;">
+          <label>Theme</label>
+          <div class="theme-selector">
+            <div class="theme-dot purple active" onclick="setTheme('purple')" title="Purple"></div>
+            <div class="theme-dot ocean" onclick="setTheme('ocean')" title="Ocean"></div>
+            <div class="theme-dot sunset" onclick="setTheme('sunset')" title="Sunset"></div>
+            <div class="theme-dot forest" onclick="setTheme('forest')" title="Forest"></div>
+            <div class="theme-dot night" onclick="setTheme('night')" title="Night"></div>
+            <div class="theme-dot rose" onclick="setTheme('rose')" title="Rose"></div>
+            <div class="theme-dot dark" onclick="setTheme('dark')" title="Dark"></div>
           </div>
         </div>
 
@@ -516,12 +819,6 @@
           <input type="checkbox" id="pdfPreviewToggle" checked />
           <span>PDF Preview</span>
         </label>
-
-        <button id="loadBtn" onclick="loadPapers()">Refresh</button>
-      </div>
-
-      <div class="category-bar">
-        <div class="row" id="catBar"></div>
       </div>
 
       <div id="content"></div>
@@ -549,6 +846,67 @@
 
     let selectedCategory = 'astro-ph';
     let currentSelectedCard = null;
+    let currentDateRange = 1;
+    let sectionColumns = { new: 2, cross: 2, repl: 2 };
+
+    // Settings management with localStorage
+    function saveSettings() {
+      const settings = {
+        theme: document.body.className.replace('theme-', ''),
+        dateRange: currentDateRange,
+        sectionColumns: sectionColumns,
+        pdfPreview: document.getElementById('pdfPreviewToggle').checked,
+        selectedCategory: selectedCategory
+      };
+      localStorage.setItem('arxivSettings', JSON.stringify(settings));
+    }
+
+    function loadSettings() {
+      const saved = localStorage.getItem('arxivSettings');
+      if (!saved) return null;
+      
+      try {
+        return JSON.parse(saved);
+      } catch (e) {
+        console.error('Failed to parse settings:', e);
+        return null;
+      }
+    }
+
+    function applySettings(settings) {
+      if (!settings) return;
+      
+      // Apply theme
+      if (settings.theme) {
+        setTheme(settings.theme, false);
+      }
+      
+      // Apply date range
+      if (settings.dateRange) {
+        currentDateRange = settings.dateRange;
+        document.querySelectorAll('.range-btn').forEach(btn => {
+          btn.classList.remove('active');
+          if (parseInt(btn.getAttribute('data-range')) === settings.dateRange) {
+            btn.classList.add('active');
+          }
+        });
+      }
+      
+      // Apply section columns
+      if (settings.sectionColumns) {
+        sectionColumns = settings.sectionColumns;
+      }
+      
+      // Apply PDF preview toggle
+      if (settings.pdfPreview !== undefined) {
+        document.getElementById('pdfPreviewToggle').checked = settings.pdfPreview;
+      }
+      
+      // Apply selected category
+      if (settings.selectedCategory) {
+        selectedCategory = settings.selectedCategory;
+      }
+    }
 
     function pad2(n){ return String(n).padStart(2, '0'); }
     function escapeHtml(text){
@@ -560,6 +918,72 @@
 
     function setStatus(message){
       document.getElementById('content').innerHTML = `<div class="status">${message}<br/><span class="mono"> </span></div>`;
+    }
+
+    function setTheme(theme, save = true){
+      document.body.className = `theme-${theme}`;
+      
+      // Update active dot
+      document.querySelectorAll('.theme-dot').forEach(dot => {
+        dot.classList.remove('active');
+      });
+      document.querySelector(`.theme-dot.${theme}`).classList.add('active');
+      
+      if (save) saveSettings();
+    }
+
+    function renderCategoryTabs(){
+      const container = document.getElementById('categoryTabs');
+      if (!container) return;
+
+      container.innerHTML = '';
+      for (const cat of CATEGORIES){
+        const tab = document.createElement('div');
+        tab.className = `category-tab ${cat.code === selectedCategory ? 'active' : ''}`;
+        tab.textContent = cat.label;
+        tab.onclick = () => {
+          selectedCategory = cat.code;
+          saveSettings();
+          renderCategoryTabs();
+          loadPapers();
+        };
+        container.appendChild(tab);
+      }
+    }
+
+    function setDateRange(days){
+      currentDateRange = days;
+      
+      document.querySelectorAll('.range-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (parseInt(btn.getAttribute('data-range')) === days){
+          btn.classList.add('active');
+        }
+      });
+      
+      saveSettings();
+      loadPapers();
+    }
+
+    function setSectionColumns(section, cols){
+      sectionColumns[section] = cols;
+      saveSettings();
+      if (window.__LAST_RENDER_META__){
+        renderSections(window.__LAST_RENDER_META__);
+      }
+    }
+
+    function getDateList(endDate, days){
+      const dates = [];
+      const dt = new Date(`${endDate}T00:00:00`);
+      
+      for (let i = 0; i < days; i++){
+        const ymd = `${dt.getFullYear()}-${pad2(dt.getMonth() + 1)}-${pad2(dt.getDate())}`;
+        dates.push(ymd);
+        dt.setDate(dt.getDate() - 1);
+      }
+      
+      return dates;
     }
 
     async function fetchWithProxy(url, accept, proxyIndex = 0){
@@ -692,25 +1116,29 @@
 
     function renderPapersGrid(papers, sec){
       if (!papers.length){
-        return `<div class="error">No entries in this section (or truncated by Count).</div>`;
+        return `<div class="info">No papers available</div>`;
       }
 
-      const columns = document.getElementById('columnsSelect').value;
-      let html = `<div class="papers-grid cols-${columns}">`;
+      const cols = sectionColumns[sec] || 2;
+      let html = `<div class="papers-grid cols-${cols}">`;
 
       for (const p of papers){
         const authorsText = p.authors?.length
           ? `${p.authors.slice(0, 3).join(', ')}${p.authors.length > 3 ? ' et al.' : ''}`
           : 'Unknown authors';
 
+        const dateStr = p.published ? p.published.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
+
         html += `
           <div class="paper-card"
                tabindex="0"
                data-absid="${escapeHtml(p.absId)}"
-               data-sec="${escapeHtml(sec || '')}">
+               data-sec="${escapeHtml(sec || '')}"
+               data-date="${escapeHtml(p.catchupDate || '')}">
 
             <div class="paper-title">${escapeHtml(p.title)}</div>
             <div class="paper-authors">${escapeHtml(authorsText)}</div>
+            ${dateStr ? `<div class="paper-date">📅 ${escapeHtml(dateStr)}</div>` : ''}
             <div class="paper-footer">
               <a class="paper-link" href="${escapeHtml(p.link)}" target="_blank" onclick="event.stopPropagation()">Open arXiv</a>
               <a class="paper-link" href="https://arxiv.org/pdf/${escapeHtml(p.absId)}.pdf" target="_blank" onclick="event.stopPropagation()">Open PDF</a>
@@ -731,88 +1159,82 @@
       `;
     }
 
-function setPreviewPaper(paper){
-  const abstractPane = document.getElementById('abstractPane');
-  const pdfPane = document.getElementById('pdfPane');
-  
-  if (!abstractPane || !pdfPane) return;
+    function setPreviewPaper(paper){
+      const abstractPane = document.getElementById('abstractPane');
+      const pdfPane = document.getElementById('pdfPane');
+      
+      if (!abstractPane || !pdfPane) return;
 
-  // Remove previous selection highlight
-  if (currentSelectedCard){
-    currentSelectedCard.classList.remove('selected');
-  }
+      if (currentSelectedCard){
+        currentSelectedCard.classList.remove('selected');
+      }
 
-  // Highlight current card
-  const cards = document.querySelectorAll('.paper-card');
-  for (const card of cards){
-    if (card.getAttribute('data-absid') === paper.absId){
-      card.classList.add('selected');
-      currentSelectedCard = card;
-      break;
-    }
-  }
+      const cards = document.querySelectorAll('.paper-card');
+      for (const card of cards){
+        if (card.getAttribute('data-absid') === paper.absId){
+          card.classList.add('selected');
+          currentSelectedCard = card;
+          break;
+        }
+      }
 
-  const MAX_AUTHORS_PREVIEW = 6;
-  const authors = (paper.authors || []).filter(Boolean);
+      const MAX_AUTHORS_PREVIEW = 6;
+      const authors = (paper.authors || []).filter(Boolean);
 
-  const authorsFull =
-      authors.length <= MAX_AUTHORS_PREVIEW
-      ? authors.join(', ')
-      : `${authors.slice(0, MAX_AUTHORS_PREVIEW).join(', ')}, et al.`;
+      const authorsFull =
+          authors.length <= MAX_AUTHORS_PREVIEW
+          ? authors.join(', ')
+          : `${authors.slice(0, MAX_AUTHORS_PREVIEW).join(', ')}, et al.`;
 
-  // Update abstract pane
-  abstractPane.innerHTML = `
-    <div class="preview-title">${escapeHtml(paper.title || '')}</div>
-    <div class="preview-meta">
-      <div>${escapeHtml(authorsFull || 'Unknown')}</div>
-    </div>
-    <div class="preview-abstract">${escapeHtml(paper.summary || '')}</div>
-  `;
-
-  // ⭐ 修改这部分 - 控制 PDF 卡片显示/隐藏
-  const pdfToggle = document.getElementById('pdfPreviewToggle');
-  const showPdf = pdfToggle.checked;
-  const pdfCard = pdfPane.closest('.pdf-card');  // 获取 PDF 卡片容器
-
-  if (showPdf){
-    if (pdfCard) pdfCard.style.display = 'flex';  // 显示 PDF 卡片
-    
-    const pdfUrl = `https://arxiv.org/pdf/${paper.absId}.pdf`;
-    pdfPane.innerHTML = `
-      <div class="pdf-section-title">
-        <span>📄 PDF Preview</span>
-        <div class="pdf-actions">
-          <a class="pdf-btn secondary" href="${escapeHtml(pdfUrl)}" target="_blank">Open in New Tab</a>
+      abstractPane.innerHTML = `
+        <div class="preview-title">${escapeHtml(paper.title || '')}</div>
+        <div class="preview-meta">
+          <div>${escapeHtml(authorsFull || 'Unknown')}</div>
         </div>
-      </div>
-      <div class="pdf-viewer-container">
-        <iframe 
-          class="pdf-iframe" 
-          src="${escapeHtml(pdfUrl)}#view=FitH"
-          title="PDF Preview">
-        </iframe>
-      </div>
-    `;
-  } else {
-    if (pdfCard) pdfCard.style.display = 'none';  // 隐藏 PDF 卡片
-  }
+        <div class="preview-abstract">${escapeHtml(paper.summary || '')}</div>
+      `;
 
-  if (window.MathJax) {
-      MathJax.typesetPromise([abstractPane]).catch(err => console.log('MathJax error:', err));
-  }
-}
+      const pdfToggle = document.getElementById('pdfPreviewToggle');
+      const showPdf = pdfToggle.checked;
+      const pdfCard = pdfPane.closest('.pdf-card');
+
+      if (showPdf){
+        if (pdfCard) pdfCard.style.display = 'flex';
+        
+        const pdfUrl = `https://arxiv.org/pdf/${paper.absId}.pdf`;
+        pdfPane.innerHTML = `
+          <div class="pdf-section-title">
+            <span>📄 PDF Preview</span>
+            <div class="pdf-actions">
+              <a class="pdf-btn secondary" href="${escapeHtml(pdfUrl)}" target="_blank">Open in New Tab</a>
+            </div>
+          </div>
+          <div class="pdf-viewer-container">
+            <iframe 
+              class="pdf-iframe" 
+              src="${escapeHtml(pdfUrl)}#view=FitH"
+              title="PDF Preview">
+            </iframe>
+          </div>
+        `;
+      } else {
+        if (pdfCard) pdfCard.style.display = 'none';
+      }
+
+      if (window.MathJax) {
+          MathJax.typesetPromise([abstractPane]).catch(err => console.log('MathJax error:', err));
+      }
+    }
 
     function renderSections(meta){
       const content = document.getElementById('content');
 
       let html = '';
 
-      if (meta.redirectedFrom){
-        const dayName = meta.redirectedDayName || 'weekend';
+      if (meta.dateRange && meta.dateRange.length > 1){
         html += `
           <div class="info">
-            ℹ Auto-redirected from ${dayName} (${escapeHtml(meta.redirectedFrom)}) to Friday (${escapeHtml(meta.date)}).<br/>
-            arXiv does not publish announcements on weekends.
+            📅 Showing papers from ${escapeHtml(meta.dateRange[meta.dateRange.length - 1])} to ${escapeHtml(meta.dateRange[0])} (${meta.dateRange.length} days)
           </div>
         `;
       }
@@ -836,6 +1258,7 @@ function setPreviewPaper(paper){
       const listPane = document.getElementById('listPane');
 
       const order = ['new', 'cross', 'repl'];
+
       let listHtml = '';
 
       for (const sec of order){
@@ -844,12 +1267,18 @@ function setPreviewPaper(paper){
         const title = sec === 'new' ? 'New submissions' : sec === 'cross' ? 'Cross submissions' : 'Replacement submissions';
         const shown = meta.shownCounts[sec];
         const total = meta.counts[sec];
+        const cols = sectionColumns[sec] || 2;
 
         listHtml += `
           <div class="section">
             <div class="section-title">
               <div class="left">${escapeHtml(title)} <span class="pill">showing ${escapeHtml(String(shown))} / ${escapeHtml(String(total))}</span></div>
-              <div class="pill mono">${escapeHtml(sec)}</div>
+              <div class="right">
+                <div class="column-toggle-mini">
+                  <button class="col-btn ${cols === 1 ? 'active' : ''}" onclick="setSectionColumns('${sec}', 1)">-</button>
+                  <button class="col-btn ${cols === 2 ? 'active' : ''}" onclick="setSectionColumns('${sec}', 2)">=</button>
+                </div>
+              </div>
             </div>
             ${renderPapersGrid(meta.papersBySection[sec], sec)}
           </div>
@@ -872,26 +1301,6 @@ function setPreviewPaper(paper){
           cross: true,
           repl: true
       };
-    }
-
-    function renderCategoryBar(){
-      const bar = document.getElementById('catBar');
-      if (!bar) return;
-
-      bar.innerHTML = '';
-      for (const c of CATEGORIES){
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = `category-chip ${c.code === selectedCategory ? 'active' : ''}`;
-        btn.innerHTML = `<span>${escapeHtml(c.label)}</span><span class="chip-badge">${escapeHtml(c.code)}</span>`;
-        btn.onclick = () => {
-          selectedCategory = c.code;
-          document.getElementById('selectedCat').textContent = selectedCategory;
-          renderCategoryBar();
-          loadPapers();
-        };
-        bar.appendChild(btn);
-      }
     }
 
     function isWeekendYmd(ymd){
@@ -933,21 +1342,8 @@ function setPreviewPaper(paper){
       });
     }
 
-    function setupColumnsSelector(){
-      const columnsSelect = document.getElementById('columnsSelect');
-      columnsSelect.addEventListener('change', function(){
-        const listPane = document.getElementById('listPane');
-        if (listPane && listPane.innerHTML.trim() !== ''){
-          if (window.__LAST_RENDER_META__){
-            renderSections(window.__LAST_RENDER_META__);
-          }
-        }
-      });
-    }
-
-    // PDF toggle listener
     document.getElementById('pdfPreviewToggle').addEventListener('change', function(){
-      // Re-render current preview if exists
+      saveSettings();
       if (currentSelectedCard){
         const absId = currentSelectedCard.getAttribute('data-absid');
         const paper = window.__PAPER_BY_ID__?.get?.(absId);
@@ -956,10 +1352,8 @@ function setPreviewPaper(paper){
     });
 
     async function loadPapers(){
-      const loadBtn = document.getElementById('loadBtn');
       const dateInput = document.getElementById('day');
       let selectedYmd = dateInput.value;
-      const maxResults = Number(document.getElementById('maxResults').value);
       const enabled = getEnabled();
 
       if (!selectedYmd){
@@ -967,60 +1361,63 @@ function setPreviewPaper(paper){
         return;
       }
 
-      const originalDate = selectedYmd;
-      const weekend = isWeekendYmd(selectedYmd);
-      let redirectInfo = null;
-      
-      if (weekend !== -1){
-        const dayName = weekend === 6 ? 'Saturday' : 'Sunday';
-        const friday = getPreviousFriday(selectedYmd);
-        selectedYmd = friday;
-        dateInput.value = friday;
-        redirectInfo = {
-          from: originalDate,
-          dayName: dayName
-        };
-      }
-
-      loadBtn.disabled = true;
-
       try{
-        const catchupUrl = `https://arxiv.org/catchup/${encodeURIComponent(selectedCategory)}/${encodeURIComponent(selectedYmd)}?abs=False`;
-        setStatus(`Loading catchup page…<br/><span class="mono">${escapeHtml(catchupUrl)}</span>`);
+        const dateList = getDateList(selectedYmd, currentDateRange);
+        
+        setStatus(`Loading papers from ${dateList.length} day(s)...`);
 
-        const htmlText = await fetchWithProxy(catchupUrl, 'text/html');
-        const idsBySection = parseCatchupByHeadings(htmlText);
+        const allIdsBySection = { new: [], cross: [], repl: [] };
+        const seenIds = { new: new Set(), cross: new Set(), repl: new Set() };
+
+        for (const date of dateList){
+          const catchupUrl = `https://arxiv.org/catchup/${encodeURIComponent(selectedCategory)}/${encodeURIComponent(date)}?abs=False`;
+          setStatus(`Loading ${escapeHtml(date)}...<br/><span class="mono">${escapeHtml(catchupUrl)}</span>`);
+
+          try{
+            const htmlText = await fetchWithProxy(catchupUrl, 'text/html');
+            const idsBySection = parseCatchupByHeadings(htmlText);
+
+            for (const sec of ['new', 'cross', 'repl']){
+              for (const id of idsBySection[sec]){
+                if (!seenIds[sec].has(id)){
+                  seenIds[sec].add(id);
+                  allIdsBySection[sec].push({ id, date });
+                }
+              }
+            }
+          } catch (e){
+            console.warn(`Failed to load ${date}:`, e);
+          }
+        }
 
         const counts = {
-          new: idsBySection.new.length,
-          cross: idsBySection.cross.length,
-          repl: idsBySection.repl.length
-        };
-
-        const limited = {
-          new: idsBySection.new.slice(0, maxResults),
-          cross: idsBySection.cross.slice(0, maxResults),
-          repl: idsBySection.repl.slice(0, maxResults)
+          new: allIdsBySection.new.length,
+          cross: allIdsBySection.cross.length,
+          repl: allIdsBySection.repl.length
         };
 
         const papersBySection = { new: [], cross: [], repl: [] };
         const shownCounts = {
-          new: enabled.new ? limited.new.length : 0,
-          cross: enabled.cross ? limited.cross.length : 0,
-          repl: enabled.repl ? limited.repl.length : 0
+          new: enabled.new ? allIdsBySection.new.length : 0,
+          cross: enabled.cross ? allIdsBySection.cross.length : 0,
+          repl: enabled.repl ? allIdsBySection.repl.length : 0
         };
 
         for (const sec of ['new', 'cross', 'repl']){
           if (!enabled[sec]) continue;
-          if (!limited[sec].length) continue;
+          if (!allIdsBySection[sec].length) continue;
 
-          setStatus(`Loading metadata: ${sec} (${limited[sec].length})…`);
-          const byAbsId = await fetchPapersForIds(limited[sec]);
+          setStatus(`Loading metadata: ${sec} (${allIdsBySection[sec].length})…`);
+          const ids = allIdsBySection[sec].map(item => item.id);
+          const byAbsId = await fetchPapersForIds(ids);
 
           const ordered = [];
-          for (const id of limited[sec]){
-            const p = byAbsId.get(normalizeId(id));
-            if (p) ordered.push(p);
+          for (const item of allIdsBySection[sec]){
+            const p = byAbsId.get(normalizeId(item.id));
+            if (p) {
+              p.catchupDate = item.date;
+              ordered.push(p);
+            }
           }
           papersBySection[sec] = ordered;
         }
@@ -1035,23 +1432,18 @@ function setPreviewPaper(paper){
         const renderMeta = {
           category: selectedCategory,
           date: selectedYmd,
-          catchupUrl,
+          dateRange: dateList,
           enabled,
           counts,
           shownCounts,
           papersBySection
         };
 
-        if (redirectInfo){
-          renderMeta.redirectedFrom = redirectInfo.from;
-          renderMeta.redirectedDayName = redirectInfo.dayName;
-        }
-
         window.__LAST_RENDER_META__ = renderMeta;
 
         renderSections(renderMeta);
-      } finally{
-        loadBtn.disabled = false;
+      } catch(e) {
+        console.error('Load failed:', e);
       }
     }
 
@@ -1084,9 +1476,11 @@ function setPreviewPaper(paper){
 
     window.onload = () => {
       try{
-        renderCategoryBar();
+        // Load saved settings first
+        const savedSettings = loadSettings();
+        
+        renderCategoryTabs();
         setupDateInput();
-        setupColumnsSelector();
 
         const d = new Date();
         let initialDate = `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`;
@@ -1097,10 +1491,13 @@ function setPreviewPaper(paper){
         }
         
         document.getElementById('day').value = initialDate;
-        document.getElementById('selectedCat').textContent = selectedCategory;
-
-        document.getElementById('maxResults').addEventListener('change', loadPapers);
         document.getElementById('day').addEventListener('change', loadPapers);
+
+        // Apply saved settings after DOM is ready
+        if (savedSettings) {
+          applySettings(savedSettings);
+          renderCategoryTabs(); // Re-render with saved category
+        }
 
         updateBackToTop();
         setTimeout(loadPapers, 250);
