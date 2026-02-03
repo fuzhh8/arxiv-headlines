@@ -773,6 +773,109 @@
       height: 16px;
       cursor: pointer;
     }
+    /* ---------------------------
+   Mobile responsive overrides
+   --------------------------- */
+
+/* Use a safer viewport unit on mobile */
+:root{
+  /* English comment: Helps on mobile browsers with dynamic toolbars */
+  --safe-vh: 100vh;
+}
+@supports (height: 100dvh){
+  :root{ --safe-vh: 100dvh; }
+}
+
+/* Tablet and below */
+@media (max-width: 1150px){
+  /* English comment: Disable sticky preview on small screens to avoid jumping */
+  .preview-panels{
+    position: static;
+    height: auto;
+    max-height: none;
+  }
+}
+
+/* Phone */
+@media (max-width: 768px){
+  body{ padding: 10px; }
+
+  .header{
+    padding: 14px 10px;
+    margin-bottom: 10px;
+  }
+  .header h1{ font-size: 2.0em; }
+  .header p{ font-size: 0.95em; }
+
+  /* English comment: Tabs should scroll horizontally on phones */
+  .category-tabs{
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+  .category-tab{ flex: 0 0 auto; }
+
+  /* English comment: Controls stack vertically */
+  .controls{
+    padding: 12px;
+    gap: 10px;
+  }
+  .controls .group{
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  /* English comment: Range buttons wrap nicely */
+  .range-toggle{ flex-wrap: wrap; }
+  .range-btn{
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 90px;
+  }
+
+  /* English comment: Main split becomes vertical (list first, then preview) */
+  .content-split{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* English comment: Always 1 column grid for cards on phone */
+  .papers-grid.cols-2{
+    grid-template-columns: 1fr !important;
+  }
+
+  .paper-card{ padding: 16px; }
+  .paper-title{ font-size: 1.0em; }
+
+  /* English comment: Preview panels become normal blocks */
+  .abstract-card,
+  .pdf-card{
+    padding: 12px;
+  }
+
+  /* English comment: Make PDF preview usable on phone */
+  .pdf-viewer-container{
+    height: calc(var(--safe-vh) * 0.55);
+    min-height: 320px;
+  }
+
+  /* English comment: Back-to-top button slightly smaller */
+  .back-to-top{
+    width: 46px;
+    height: 46px;
+    left: 12px;
+    bottom: 12px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px){
+  .header h1{ font-size: 1.7em; }
+  .category-tab{ padding: 10px 14px; }
+  .pdf-viewer-container{ min-height: 280px; }
+}
+
   </style>
 </head>
 
