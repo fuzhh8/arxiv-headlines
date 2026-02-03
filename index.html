@@ -774,40 +774,17 @@
       cursor: pointer;
     }
     /* ---------------------------
-   Mobile responsive overrides
+   Mobile: list-only responsive layout
    --------------------------- */
-
-/* Use a safer viewport unit on mobile */
-:root{
-  /* English comment: Helps on mobile browsers with dynamic toolbars */
-  --safe-vh: 100vh;
-}
-@supports (height: 100dvh){
-  :root{ --safe-vh: 100dvh; }
-}
-
-/* Tablet and below */
-@media (max-width: 1150px){
-  /* English comment: Disable sticky preview on small screens to avoid jumping */
-  .preview-panels{
-    position: static;
-    height: auto;
-    max-height: none;
-  }
-}
-
-/* Phone */
 @media (max-width: 768px){
   body{ padding: 10px; }
 
-  .header{
-    padding: 14px 10px;
-    margin-bottom: 10px;
-  }
+  /* English comment: Header shrink */
+  .header{ padding: 14px 10px; margin-bottom: 10px; }
   .header h1{ font-size: 2.0em; }
   .header p{ font-size: 0.95em; }
 
-  /* English comment: Tabs should scroll horizontally on phones */
+  /* English comment: Tabs scroll horizontally */
   .category-tabs{
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -817,63 +794,28 @@
   .category-tab{ flex: 0 0 auto; }
 
   /* English comment: Controls stack vertically */
-  .controls{
-    padding: 12px;
-    gap: 10px;
-  }
-  .controls .group{
-    flex: 1 1 100%;
-    min-width: 0;
-  }
+  .controls{ gap: 10px; padding: 12px; }
+  .controls .group{ flex: 1 1 100%; min-width: 0; }
 
-  /* English comment: Range buttons wrap nicely */
-  .range-toggle{ flex-wrap: wrap; }
-  .range-btn{
-    width: auto;
-    flex: 1 1 auto;
-    min-width: 90px;
-  }
+  /* English comment: Hide PDF toggle on mobile (since preview is disabled) */
+  .pdf-toggle{ display: none !important; }
 
-  /* English comment: Main split becomes vertical (list first, then preview) */
+  /* English comment: List-only: remove right preview column */
   .content-split{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 12px;
   }
+  .preview-panels{
+    display: none !important;
+  }
 
-  /* English comment: Always 1 column grid for cards on phone */
+  /* English comment: Force 1 column cards */
   .papers-grid.cols-2{
     grid-template-columns: 1fr !important;
   }
 
   .paper-card{ padding: 16px; }
   .paper-title{ font-size: 1.0em; }
-
-  /* English comment: Preview panels become normal blocks */
-  .abstract-card,
-  .pdf-card{
-    padding: 12px;
-  }
-
-  /* English comment: Make PDF preview usable on phone */
-  .pdf-viewer-container{
-    height: calc(var(--safe-vh) * 0.55);
-    min-height: 320px;
-  }
-
-  /* English comment: Back-to-top button slightly smaller */
-  .back-to-top{
-    width: 46px;
-    height: 46px;
-    left: 12px;
-    bottom: 12px;
-  }
-}
-
-/* Small phones */
-@media (max-width: 420px){
-  .header h1{ font-size: 1.7em; }
-  .category-tab{ padding: 10px 14px; }
-  .pdf-viewer-container{ min-height: 280px; }
 }
 
   </style>
@@ -931,6 +873,11 @@
   <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">↑</button>
 
   <script>
+    function isMobileMode(){
+  // English comment: Treat <=768px as mobile mode
+      return window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    }
+
     const PROXY_SERVICES = [
       url => `https://corsproxy.io/?${encodeURIComponent(url)}`,
       url => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
@@ -1391,7 +1338,8 @@
       listPane.innerHTML = listHtml;
 
       const firstPaper = (meta.papersBySection.new?.[0] || meta.papersBySection.cross?.[0] || meta.papersBySection.repl?.[0] || null);
-      if (firstPaper) setPreviewPaper(firstPaper);
+      if (firstPaper && !isMobileMode()) setPreviewPaper(firstPaper);
+
       
       if (window.MathJax) {
         MathJax.typesetPromise([listPane]).catch(err => console.log('MathJax error:', err));
@@ -1556,7 +1504,7 @@
       const absId = card.getAttribute('data-absid') || '';
       if (!absId) return;
       const p = window.__PAPER_BY_ID__?.get?.(absId);
-      if (p) setPreviewPaper(p);
+      if (p && !isMobileMode()) setPreviewPaper(p);
     });
 
     document.addEventListener('focusin', (e) => {
@@ -1564,7 +1512,7 @@
       if (!card) return;
       const absId = card.getAttribute('data-absid') || '';
       const p = window.__PAPER_BY_ID__?.get?.(absId);
-      if (p) setPreviewPaper(p);
+      if (p && !isMobileMode()) setPreviewPaper(p);
     });
 
     const backToTopBtn = document.getElementById('backToTop');
@@ -1600,6 +1548,14 @@
         if (savedSettings) {
           applySettings(savedSettings);
           renderCategoryTabs(); // Re-render with saved category
+        }
+        // English comment: On mobile, disable preview and force PDF off
+        if (isMobileMode()){
+          const toggle = document.getElementById('pdfPreviewToggle');
+          if (toggle){
+            toggle.checked = false;
+          }
+          saveSettings();
         }
 
         updateBackToTop();
