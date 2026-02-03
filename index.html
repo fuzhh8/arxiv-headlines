@@ -779,85 +779,120 @@
 /* ---------------------------
    Mobile: truly responsive sizing
    --------------------------- */
-@media (max-width: 768px){
+  @media (max-width: 768px){
 
-  /* English comment: Reduce global scale a bit */
-  html{ font-size: 14px; }
-  body{ padding: 10px; }
+    /* English comment: Reduce global scale a bit */
+    html{ font-size: 14px; }
+    body{ padding: 10px; }
 
-  /* English comment: Header smaller */
-  .header{ padding: 12px 10px; margin-bottom: 10px; }
-  .header h1{ font-size: 2.0em; }
-  .header p{ font-size: 0.95em; }
+    /* English comment: Header smaller */
+    .header{ padding: 12px 10px; margin-bottom: 10px; }
+    .header h1{ font-size: 2.0em; }
+    .header p{ font-size: 0.95em; }
 
-  /* English comment: Tabs scroll instead of wrapping huge */
-  .category-tabs{
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    gap: 6px;
-    padding-bottom: 6px;
+    /* English comment: Tabs scroll instead of wrapping huge */
+    .category-tabs{
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      gap: 6px;
+      padding-bottom: 6px;
+    }
+    .category-tab{
+      flex: 0 0 auto;
+      padding: 10px 14px;
+      font-size: 0.9em;
+    }
+
+    /* English comment: Controls must not be forced wide by min-width */
+    .controls{
+      padding: 12px;
+      gap: 10px;
+    }
+    .controls .group{
+      flex: 1 1 100% !important;
+      min-width: 0 !important;      /* overrides 200px */
+      max-width: none !important;
+    }
+
+    /* English comment: Override inline min-width/max-width on groups */
+    .controls .group[style]{
+      min-width: 0 !important;
+      max-width: none !important;
+      width: 100% !important;
+    }
+
+    label{ font-size: 0.9em; }
+
+    /* English comment: Inputs smaller */
+    select, input[type="date"]{
+      padding: 9px 12px;
+      font-size: 0.95em;
+    }
+
+    /* English comment: Buttons smaller and not too wide */
+    button{
+      padding: 9px 12px;
+      font-size: 0.95em;
+      min-width: 0 !important;      /* overrides 120px */
+    }
+
+    .range-toggle{ flex-wrap: wrap; }
+    .range-btn{
+      min-width: 0 !important;      /* overrides 80px */
+      width: auto;
+      flex: 1 1 auto;
+      padding: 9px 10px;
+      font-size: 0.9em;
+    }
+
+    /* English comment: List-only layout (if你已经按前面隐藏预览了，可保留) */
+    .content-split{ grid-template-columns: 1fr !important; gap: 12px; }
+    .preview-panels{ display: none !important; }
+    .pdf-toggle{ display: none !important; }
+
+    /* English comment: Cards 1 column and tighter */
+    .papers-grid.cols-2{ grid-template-columns: 1fr !important; }
+    .paper-card{ padding: 14px 14px 12px 18px; }
+    .paper-title{ font-size: 1.0em; }
+    .paper-authors{ font-size: 0.85em; }
+    .paper-date{ font-size: 0.8em; }
   }
-  .category-tab{
-    flex: 0 0 auto;
-    padding: 10px 14px;
-    font-size: 0.9em;
+  /* ---------------------------
+   Mobile overflow fix (must be at very end)
+   --------------------------- */
+  html, body{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* English comment: Prevent horizontal overflow forcing zoomed layout */
   }
 
-  /* English comment: Controls must not be forced wide by min-width */
-  .controls{
-    padding: 12px;
-    gap: 10px;
-  }
-  .controls .group{
-    flex: 1 1 100% !important;
-    min-width: 0 !important;      /* overrides 200px */
-    max-width: none !important;
+  /* English comment: Ensure flex/grid children can shrink */
+  .layout, .main, .controls, .content-split, #content, #listPane, .section, .papers-grid, .paper-card{
+    min-width: 0;
+    max-width: 100%;
   }
 
-  /* English comment: Override inline min-width/max-width on groups */
-  .controls .group[style]{
-    min-width: 0 !important;
-    max-width: none !important;
-    width: 100% !important;
+  /* English comment: Inputs on iOS can be "stubborn"; force them to fit */
+  @media (max-width: 768px){
+    input[type="date"], select{
+      max-width: 100% !important;
+      min-width: 0 !important;
+    }
+
+    /* English comment: Let button text wrap instead of forcing width */
+    button{
+      max-width: 100% !important;
+      white-space: normal;
+    }
+
+    /* English comment: Make links never force horizontal scroll */
+    .paper-footer{ min-width: 0; }
+    .paper-link{
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
   }
-
-  label{ font-size: 0.9em; }
-
-  /* English comment: Inputs smaller */
-  select, input[type="date"]{
-    padding: 9px 12px;
-    font-size: 0.95em;
-  }
-
-  /* English comment: Buttons smaller and not too wide */
-  button{
-    padding: 9px 12px;
-    font-size: 0.95em;
-    min-width: 0 !important;      /* overrides 120px */
-  }
-
-  .range-toggle{ flex-wrap: wrap; }
-  .range-btn{
-    min-width: 0 !important;      /* overrides 80px */
-    width: auto;
-    flex: 1 1 auto;
-    padding: 9px 10px;
-    font-size: 0.9em;
-  }
-
-  /* English comment: List-only layout (if你已经按前面隐藏预览了，可保留) */
-  .content-split{ grid-template-columns: 1fr !important; gap: 12px; }
-  .preview-panels{ display: none !important; }
-  .pdf-toggle{ display: none !important; }
-
-  /* English comment: Cards 1 column and tighter */
-  .papers-grid.cols-2{ grid-template-columns: 1fr !important; }
-  .paper-card{ padding: 14px 14px 12px 18px; }
-  .paper-title{ font-size: 1.0em; }
-  .paper-authors{ font-size: 0.85em; }
-  .paper-date{ font-size: 0.8em; }
-}
 
   </style>
 </head>
