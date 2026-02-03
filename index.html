@@ -773,7 +773,6 @@
       height: 16px;
       cursor: pointer;
     }
-  
   </style>
 </head>
 
@@ -829,11 +828,6 @@
   <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">↑</button>
 
   <script>
-    function isMobileMode(){
-  // English comment: Treat <=768px as mobile mode
-      return window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
-    }
-
     const PROXY_SERVICES = [
       url => `https://corsproxy.io/?${encodeURIComponent(url)}`,
       url => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
@@ -1294,8 +1288,7 @@
       listPane.innerHTML = listHtml;
 
       const firstPaper = (meta.papersBySection.new?.[0] || meta.papersBySection.cross?.[0] || meta.papersBySection.repl?.[0] || null);
-      if (firstPaper && !isMobileMode()) setPreviewPaper(firstPaper);
-
+      if (firstPaper) setPreviewPaper(firstPaper);
       
       if (window.MathJax) {
         MathJax.typesetPromise([listPane]).catch(err => console.log('MathJax error:', err));
@@ -1460,7 +1453,7 @@
       const absId = card.getAttribute('data-absid') || '';
       if (!absId) return;
       const p = window.__PAPER_BY_ID__?.get?.(absId);
-      if (p && !isMobileMode()) setPreviewPaper(p);
+      if (p) setPreviewPaper(p);
     });
 
     document.addEventListener('focusin', (e) => {
@@ -1468,7 +1461,7 @@
       if (!card) return;
       const absId = card.getAttribute('data-absid') || '';
       const p = window.__PAPER_BY_ID__?.get?.(absId);
-      if (p && !isMobileMode()) setPreviewPaper(p);
+      if (p) setPreviewPaper(p);
     });
 
     const backToTopBtn = document.getElementById('backToTop');
@@ -1504,14 +1497,6 @@
         if (savedSettings) {
           applySettings(savedSettings);
           renderCategoryTabs(); // Re-render with saved category
-        }
-        // English comment: On mobile, disable preview and force PDF off
-        if (isMobileMode()){
-          const toggle = document.getElementById('pdfPreviewToggle');
-          if (toggle){
-            toggle.checked = false;
-          }
-          saveSettings();
         }
 
         updateBackToTop();
