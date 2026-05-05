@@ -829,11 +829,11 @@
 
   <script>
     const PROXY_SERVICES = [
+      url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
       url => `https://corsproxy.io/?${encodeURIComponent(url)}`,
-      url => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
-      url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
+      url => `https://thingproxy.freeboard.io/fetch/${encodeURIComponent(url)}`,
+      url => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`
     ];
-
 
 
     const CATEGORIES = [
@@ -1450,11 +1450,16 @@
         window.__LAST_RENDER_META__ = renderMeta;
 
         renderSections(renderMeta);
-      } catch(e) {
-        console.error('Load failed:', e);
-      }
-    }
+        } catch(e) {
+          console.error('Load failed:', e);
+          document.getElementById('content').innerHTML = `
+            <div class="error">
+              ❌ Failed to load papers: ${escapeHtml(e.message)}<br/>
+              This is usually a CORS/proxy issue. Try refreshing or switching networks.
+            </div>`;
+        }
 
+    }
     document.addEventListener('click', (e) => {
       const card = e.target?.closest?.('.paper-card');
       if (!card) return;
