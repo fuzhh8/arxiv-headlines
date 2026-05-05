@@ -829,10 +829,15 @@
 
   <script>
     const PROXY_SERVICES = [
-      url => `https://corsproxy.io/?${encodeURIComponent(url)}`,
-      url => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`
+      // Most reliable in 2025 — supports raw response
+      url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+      // corsproxy.io — note the NEW url= param format (old ? format still works)
+      url => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
+      // codetabs as fallback
+      url => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+      // cors-lol as last resort
+      url => `https://cors.sh/${url}`
     ];
-
 
     const CATEGORIES = [
       { code: 'astro-ph', label: 'Astrophysics (all)' },
@@ -992,7 +997,7 @@
 
       try{
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 10000);
+        const timeoutId = setTimeout(() => controller.abort(), 20000);
 
         const resp = await fetch(proxyUrl, {
           method: 'GET',
