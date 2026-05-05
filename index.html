@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>arXiv Headlines</title>
+
+  <!-- MathJax config MUST be before the CDN script -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-purple">
+  <div class="layout">
+    <main class="main">
+
+      <div class="header">
+        <h1>arXiv Headlines</h1>
+        <p> </p>
+      </div>
+
+      <!-- Tab-style category selector -->
+      <div class="category-tabs" id="categoryTabs"></div>
+
+      <div class="controls">
+        <div class="group" style="max-width: 280px;">
+          <label for="day">Date</label>
+          <input id="day" type="date" />
+        </div>
+
+        <div class="group" style="min-width: 240px;">
+          <label>Range</label>
+          <div class="range-toggle">
+            <button class="range-btn active" data-range="1" onclick="setDateRange(1)">Today</button>
+            <button class="range-btn" data-range="3" onclick="setDateRange(3)">3 Days</button>
+            <button class="range-btn" data-range="7" onclick="setDateRange(7)">1 Week</button>
+          </div>
+        </div>
+
+        <div class="group" style="min-width: 240px;">
+          <label>Theme</label>
+          <div class="theme-selector">
+            <div class="theme-dot purple active" onclick="setTheme('purple')" title="Purple"></div>
+            <div class="theme-dot ocean"         onclick="setTheme('ocean')"  title="Ocean"></div>
+            <div class="theme-dot sunset"        onclick="setTheme('sunset')" title="Sunset"></div>
+            <div class="theme-dot forest"        onclick="setTheme('forest')" title="Forest"></div>
+            <div class="theme-dot night"         onclick="setTheme('night')"  title="Night"></div>
+            <div class="theme-dot rose"          onclick="setTheme('rose')"   title="Rose"></div>
+            <div class="theme-dot dark"          onclick="setTheme('dark')"   title="Dark"></div>
+          </div>
+        </div>
+
+        <label class="pdf-toggle">
+          <input type="checkbox" id="pdfPreviewToggle" checked />
+          <span>PDF Preview</span>
+        </label>
+      </div>
+
+      <div id="content"></div>
+
+    </main>
+  </div>
+
+  <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">↑</button>
+
+  <!-- app.js must be at end of body -->
+  <script src="app.js"></script>
+</body>
+</html>
