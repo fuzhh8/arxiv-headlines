@@ -1,0 +1,33 @@
+name: Fetch arXiv Papers
+
+on:
+  schedule:
+    - cron: '0 1 * * 1-5'   # UTC 01:00, Mon–Fri only
+  workflow_dispatch:          # allow manual trigger from Actions tab
+
+permissions:
+  contents: write             # needed to push data/ files
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run fetch script
+        run: node scripts/fetch-arxiv.mjs
+
+      - name: Commit & push data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          # Only commit if there are actual changes
+          git diff --cached --quiet || git commit -m "chore: update arXiv data $(date -u +%Y-%m-%d)"
+          git push
