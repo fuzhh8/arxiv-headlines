@@ -613,9 +613,6 @@
   function defaultArxivDate() {
     const d = new Date();
 
-    // Use yesterday by default because today's arXiv list may not be ready yet.
-    d.setDate(d.getDate() - 1);
-
     let ymd = `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
 
     if (isWeekend(ymd)) {
