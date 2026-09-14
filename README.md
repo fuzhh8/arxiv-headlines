@@ -4,7 +4,10 @@ Cache-first arXiv headlines site. A scheduled GitHub Action fetches each
 category once per weekday and stores same-origin JSON under `data/`. When the
 site is run with its Node server, selecting an uncached date automatically
 fetches that category from arXiv, stores the result locally, and reloads it into
-the page. Concurrent requests for the same category/date share one fetch.
+the page. The paper list is returned first; research figures continue through a
+rate-limited background queue with live progress in the page and are merged into
+the cards when ready. Concurrent requests for the same category/date share one
+fetch, and pending figure work resumes after a page or server restart.
 
 The browser-only live/CORS-proxy path remains as a fallback for static hosting.
 The latest valid cached date is selected automatically. When an arXiv HTML

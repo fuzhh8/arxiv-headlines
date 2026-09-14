@@ -1266,6 +1266,97 @@
     return result;
   }
 
+  const figureWatchers = new Map();
+
+  function setBackgroundFigureStatus(message, state = 'working') {
+    const content = document.getElementById('content');
+    if (!content) return;
+    let status = document.getElementById('backgroundFigureStatus');
+    if (!status) {
+      status = document.createElement('div');
+      status.id = 'backgroundFigureStatus';
+      status.className = 'info';
+      content.prepend(status);
+    }
+    status.dataset.state = state;
+    status.textContent = message;
+  }
+
+  async function refreshFiguresFromCache(category, date, generation) {
+    const payload = await fetchStaticDay(category, date);
+    if (!payload || generation !== loadGeneration || selectedCategory !== category) return;
+
+    const enrichedById = new Map();
+    for (const section of SECTIONS) {
+      for (const paper of payload.papersBySection[section]) {
+        if (paper?.absId) enrichedById.set(paper.absId, paper);
+      }
+    }
+
+    const meta = window.__LAST_RENDER_META__;
+    if (!meta) return;
+    for (const section of SECTIONS) {
+      for (const paper of meta.papersBySection[section]) {
+        const enriched = enrichedById.get(paper.absId);
+        if (!enriched) continue;
+        paper.figures = enriched.figures || [];
+        paper.thumbnailUrl = enriched.thumbnailUrl || '';
+        paper.thumbnailAlt = enriched.thumbnailAlt || '';
+      }
+    }
+
+    const selectedId = currentSelectedCard?.getAttribute('data-absid') || '';
+    rerenderCurrentView(selectedId);
+  }
+
+  async function watchFigureEnrichment(category, date, generation) {
+    const key = `${category}/${date}`;
+    if (figureWatchers.has(key)) return figureWatchers.get(key);
+
+    const task = (async () => {
+      while (generation === loadGeneration && selectedCategory === category) {
+        let response;
+        try {
+          response = await fetch(
+            `/api/fetch/status?category=${encodeURIComponent(category)}&date=${encodeURIComponent(date)}`,
+            { headers: { Accept: 'application/json' }, cache: 'no-store' }
+          );
+        } catch (_) {
+          return;
+        }
+        if (!response.ok) return;
+
+        const result = await response.json();
+        const figures = result?.figures;
+        if (!figures) return;
+
+        if (figures.phase === 'queued') {
+          setBackgroundFigureStatus(`🛰 Paper list ready. Figures for ${date} are queued…`);
+        } else if (figures.phase === 'figures') {
+          const pct = figures.total ? Math.round((figures.processed / figures.total) * 100) : 100;
+          setBackgroundFigureStatus(
+            `🛰 Paper list ready · figures ${figures.processed}/${figures.total} (${pct}%) · found ${figures.found}`
+          );
+        } else if (figures.phase === 'complete') {
+          await refreshFiguresFromCache(category, date, generation);
+          setBackgroundFigureStatus(`✅ Figures ready for ${date}: ${figures.found}/${figures.total}`, 'complete');
+          setTimeout(() => document.getElementById('backgroundFigureStatus')?.remove(), 5000);
+          return;
+        } else if (figures.phase === 'failed') {
+          setBackgroundFigureStatus(`⚠ Figure extraction failed for ${date}: ${figures.error || 'unknown error'}`, 'failed');
+          return;
+        } else {
+          return;
+        }
+
+        await delay(1500);
+      }
+    })().finally(() => figureWatchers.delete(key));
+
+    figureWatchers.set(key, task);
+    return task;
+  }
+
   async function fetchLatestStatic(category) {
     if (!category || SAVED_TAB_CODES.has(category)) return null;
     const dir = categoryToDataDir(category);
@@ -2179,10 +2270,27 @@
       let cachedPayloads = staticPayloads.filter(Boolean);
       let missingDates = dateList.filter((_, index) => !staticPayloads[index]);
       let onDemandFetched = 0;
+      const backgroundFigureDates = [];
+
+      // Resume figure jobs left pending by a page reload or server restart.
+      for (let index = 0; index < staticPayloads.length; index++) {
+        if (staticPayloads[index]?.figuresStatus !== 'pending') continue;
+        const pendingDate = dateList[index];
+        try {
+          const result = await requestOnDemandDay(selectedCategory, pendingDate);
+          if (generation !== loadGeneration) return;
+          if (['queued', 'figures'].includes(result?.figures?.phase)) {
+            backgroundFigureDates.push(pendingDate);
+          }
+        } catch (error) {
+          console.warn(`Could not resume figures for ${pendingDate}:`, error);
+          break;
+        }
+      }
 
       // The Node preview server can create a missing cache file on demand. Do
-      // this before the browser-only proxy fallback so the result (including
-      // figures) persists and the next visit opens instantly.
+      // this before the browser-only proxy fallback. Metadata is persisted and
+      // displayed first; figure extraction continues in the server queue.
       for (const missingDate of [...missingDates]) {
         const loadStatus = document.getElementById('loadStatus');
         if (loadStatus) {
@@ -2190,8 +2298,11 @@
         }
 
         try {
-          await requestOnDemandDay(selectedCategory, missingDate);
+          const result = await requestOnDemandDay(selectedCategory, missingDate);
           if (generation !== loadGeneration) return;
+          if (['queued', 'figures'].includes(result?.figures?.phase)) {
+            backgroundFigureDates.push(missingDate);
+          }
 
           const index = dateList.indexOf(missingDate);
           staticPayloads[index] = await fetchStaticDay(selectedCategory, missingDate);
@@ -2221,6 +2332,9 @@
         window.__LAST_RENDER_META__ = renderMeta;
         setProgress(100);
         renderSections(renderMeta);
+        backgroundFigureDates.forEach(date => {
+          watchFigureEnrichment(selectedCategory, date, generation);
+        });
         return;
       }
 
@@ -2322,6 +2436,9 @@
 
       setProgress(100);
       renderSections(renderMeta);
+      backgroundFigureDates.forEach(date => {
+        watchFigureEnrichment(selectedCategory, date, generation);
+      });
 
     } catch (e) {
       if (generation !== loadGeneration) return;

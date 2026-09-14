@@ -252,10 +252,13 @@ async function fetchPaperThumbnail(paper) {
   return task;
 }
 
-async function enrichWithThumbnails(papers) {
+async function enrichWithThumbnails(papers, options = {}) {
   const queue = [...papers.values()].filter(paper => paper.htmlUrl);
   let cursor = 0;
   let found = 0;
+  let processed = 0;
+
+  options.onProgress?.({ processed, total: queue.length, found });
 
   async function worker() {
     while (cursor < queue.length) {
@@ -265,6 +268,8 @@ async function enrichWithThumbnails(papers) {
         Object.assign(paper, thumbnail);
         found++;
       }
+      processed++;
+      options.onProgress?.({ processed, total: queue.length, found });
       await sleep(250);
     }
   }
@@ -273,10 +278,11 @@ async function enrichWithThumbnails(papers) {
     Array.from({ length: Math.min(THUMBNAIL_WORKERS, queue.length) }, () => worker())
   );
   console.log(`  🖼 Thumbnails: ${found}/${queue.length} HTML papers`);
+  return { processed, total: queue.length, found };
 }
 
 // ── Process one category for one date ────────────────────────────────────────
-async function fetchCategory(catCode, ymd) {
+async function fetchCategory(catCode, ymd, options = {}) {
   console.log(`  📡 Fetching ${catCode} / ${ymd}`);
   const url = `https://arxiv.org/catchup/${encodeURIComponent(catCode)}/${encodeURIComponent(ymd)}?abs=True`;
 
@@ -331,7 +337,12 @@ async function fetchCategory(catCode, ymd) {
     );
   }
 
-  await enrichWithThumbnails(metaMap);
+  let figureCounts = { processed: 0, total: 0, found: 0 };
+  if (options.includeFigures !== false) {
+    figureCounts = await enrichWithThumbnails(metaMap, { onProgress: options.onProgress });
+  } else {
+    figureCounts.total = [...metaMap.values()].filter(paper => paper.htmlUrl).length;
+  }
 
   const papersBySection = { new: [], cross: [], repl: [] };
   for (const sec of ['new', 'cross', 'repl']) {
@@ -348,6 +359,8 @@ async function fetchCategory(catCode, ymd) {
     category:        catCode,
     date:            ymd,
     generatedAt:     new Date().toISOString(),
+    figuresStatus:   options.includeFigures === false ? 'pending' : 'complete',
+    figureCounts,
     counts: {
       new:   papersBySection.new.length,
       cross: papersBySection.cross.length,
@@ -408,7 +421,10 @@ async function fetchAndStoreCategory(catCode, ymd, options = {}) {
   const outDir = join(dataRoot, categoryToDir(catCode));
   mkdirSync(outDir, { recursive: true });
 
-  const result = await fetchCategory(catCode, ymd);
+  const result = await fetchCategory(catCode, ymd, {
+    includeFigures: options.includeFigures,
+    onProgress: options.onProgress
+  });
   if (!result) {
     throw new Error(`arXiv did not return data for ${catCode}/${ymd}`);
   }
@@ -427,6 +443,55 @@ async function fetchAndStoreCategory(catCode, ymd, options = {}) {
 
   if (options.prune !== false) pruneOldFiles(outDir, KEEP_DAYS);
   return result;
+}
+
+async function enrichAndStoreCategoryFigures(catCode, ymd, options = {}) {
+  validateFetchTarget(catCode, ymd);
+
+  const dataRoot = options.dataRoot || DATA_ROOT;
+  const outDir = join(dataRoot, categoryToDir(catCode));
+  const dated = join(outDir, `${ymd}.json`);
+  const payload = JSON.parse(readFileSync(dated, 'utf8'));
+
+  if (payload?.category !== catCode || payload?.date !== ymd || !payload?.papersBySection) {
+    throw new Error(`Invalid cached payload for ${catCode}/${ymd}`);
+  }
+
+  const uniquePapers = new Map();
+  for (const section of ['new', 'cross', 'repl']) {
+    for (const paper of payload.papersBySection[section] || []) {
+      if (paper?.absId && !uniquePapers.has(paper.absId)) uniquePapers.set(paper.absId, { ...paper });
+    }
+  }
+
+  const figureCounts = await enrichWithThumbnails(uniquePapers, { onProgress: options.onProgress });
+
+  for (const section of ['new', 'cross', 'repl']) {
+    payload.papersBySection[section] = (payload.papersBySection[section] || []).map(paper => {
+      const enriched = uniquePapers.get(paper.absId);
+      if (!enriched) return paper;
+      return {
+        ...paper,
+        ...(enriched.figures ? { figures: enriched.figures } : {}),
+        ...(enriched.thumbnailUrl ? { thumbnailUrl: enriched.thumbnailUrl } : {}),
+        ...(enriched.thumbnailAlt ? { thumbnailAlt: enriched.thumbnailAlt } : {})
+      };
+    });
+  }
+
+  payload.figuresStatus = 'complete';
+  payload.figureCounts = figureCounts;
+  payload.figuresGeneratedAt = new Date().toISOString();
+  writeFileSync(dated, JSON.stringify(payload, null, 2), 'utf8');
+  console.log(`  ✅ Added figures to ${dated}`);
+
+  const latest = join(outDir, 'latest.json');
+  if (shouldUpdateLatest(latest, ymd)) {
+    writeFileSync(latest, JSON.stringify(payload, null, 2), 'utf8');
+    console.log('  ✅ Updated latest.json figures');
+  }
+
+  return payload;
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -450,6 +515,7 @@ async function main() {
 export {
   CATEGORIES,
   categoryToDir,
+  enrichAndStoreCategoryFigures,
   fetchAndStoreCategory,
   parseCatchupHtml,
   parseCatchupPapers,

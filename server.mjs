@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import {
   CATEGORIES,
   categoryToDir,
+  enrichAndStoreCategoryFigures,
   fetchAndStoreCategory,
   validateFetchTarget
 } from './scripts/fetch-arxiv.mjs';
@@ -72,23 +73,91 @@ async function readCachedPayload(dataRoot, category, date) {
   }
 }
 
-function createOnDemandFetcher({ dataRoot, fetcher }) {
-  const inFlight = new Map();
+function createOnDemandFetcher({ dataRoot, fetcher, enricher }) {
+  const metadataInFlight = new Map();
+  const figureJobs = new Map();
+  let figureQueue = Promise.resolve();
 
-  return async function ensureCached(category, date) {
-    validateFetchTarget(category, date);
-    const cached = await readCachedPayload(dataRoot, category, date);
-    if (cached) return { source: 'cache', payload: cached };
+  function publicFigureStatus(job, payload = null) {
+    if (job) {
+      return {
+        phase: job.phase,
+        processed: job.processed,
+        total: job.total,
+        found: job.found,
+        ...(job.error ? { error: job.error } : {})
+      };
+    }
+
+    if (payload?.figuresStatus === 'pending') {
+      return { phase: 'queued', processed: 0, total: payload.figureCounts?.total || 0, found: 0 };
+    }
+    return {
+      phase: payload ? 'complete' : 'missing',
+      processed: payload?.figureCounts?.processed || 0,
+      total: payload?.figureCounts?.total || 0,
+      found: payload?.figureCounts?.found || 0
+    };
+  }
+
+  function startFigureJob(category, date, payload) {
+    if (payload?.figuresStatus !== 'pending') return null;
 
     const key = `${category}/${date}`;
-    let task = inFlight.get(key);
+    if (figureJobs.has(key)) return figureJobs.get(key);
+
+    const job = {
+      phase: 'queued',
+      processed: 0,
+      total: payload.figureCounts?.total || 0,
+      found: 0,
+      error: ''
+    };
+    figureJobs.set(key, job);
+
+    const run = figureQueue.then(async () => {
+      job.phase = 'figures';
+      const enriched = await enricher(category, date, {
+        dataRoot,
+        onProgress(progress) {
+          job.processed = progress.processed;
+          job.total = progress.total;
+          job.found = progress.found;
+        }
+      });
+      job.phase = 'complete';
+      job.processed = enriched.figureCounts?.processed || job.processed;
+      job.total = enriched.figureCounts?.total || job.total;
+      job.found = enriched.figureCounts?.found || job.found;
+    }).catch(error => {
+      job.phase = 'failed';
+      job.error = error instanceof Error ? error.message : String(error);
+      console.error(`[figures] ${category}/${date}: ${job.error}`);
+    });
+
+    job.promise = run;
+    figureQueue = run;
+    return job;
+  }
+
+  async function ensureCached(category, date) {
+    validateFetchTarget(category, date);
+    const cached = await readCachedPayload(dataRoot, category, date);
+    if (cached) {
+      const job = startFigureJob(category, date, cached);
+      return { source: 'cache', payload: cached, figures: publicFigureStatus(job, cached) };
+    }
+
+    const key = `${category}/${date}`;
+    let task = metadataInFlight.get(key);
     if (!task) {
       task = fetcher(category, date, {
         dataRoot,
         prune: true,
-        updateLatest: true
+        updateLatest: true,
+        includeFigures: false
       });
-      inFlight.set(key, task);
+      metadataInFlight.set(key, task);
     }
 
     try {
@@ -96,18 +165,32 @@ function createOnDemandFetcher({ dataRoot, fetcher }) {
       if (!isValidCachedPayload(payload, category, date)) {
         throw new Error('Fetcher returned an invalid cache payload');
       }
-      return { source: 'fetched', payload };
+      const job = startFigureJob(category, date, payload);
+      return { source: 'fetched', payload, figures: publicFigureStatus(job, payload) };
     } finally {
-      if (inFlight.get(key) === task) inFlight.delete(key);
+      if (metadataInFlight.get(key) === task) metadataInFlight.delete(key);
     }
-  };
+
+  }
+
+  async function getStatus(category, date) {
+    validateFetchTarget(category, date);
+    const key = `${category}/${date}`;
+    const job = figureJobs.get(key);
+    if (job) return publicFigureStatus(job);
+    const cached = await readCachedPayload(dataRoot, category, date);
+    return publicFigureStatus(null, cached);
+  }
+
+  return { ensureCached, getStatus };
 }
 
 export function createArxivServer(options = {}) {
   const root = resolve(options.root || DEFAULT_ROOT);
   const dataRoot = resolve(options.dataRoot || join(root, 'data'));
   const fetcher = options.fetcher || fetchAndStoreCategory;
-  const ensureCached = createOnDemandFetcher({ dataRoot, fetcher });
+  const enricher = options.enricher || enrichAndStoreCategoryFigures;
+  const onDemand = createOnDemandFetcher({ dataRoot, fetcher, enricher });
 
   return createServer(async (req, res) => {
     const requestUrl = new URL(req.url || '/', 'http://127.0.0.1');
@@ -131,14 +214,27 @@ export function createArxivServer(options = {}) {
         const body = await readJsonBody(req);
         const category = String(body.category || '');
         const date = String(body.date || '');
-        const result = await ensureCached(category, date);
+        const result = await onDemand.ensureCached(category, date);
         sendJson(res, 200, {
           ok: true,
           source: result.source,
           category,
           date,
-          counts: result.payload.counts
+          counts: result.payload.counts,
+          figures: result.figures
         });
+        return;
+      }
+
+      if (requestUrl.pathname === '/api/fetch/status') {
+        if (req.method !== 'GET') {
+          sendJson(res, 405, { ok: false, error: 'Method not allowed' });
+          return;
+        }
+        const category = String(requestUrl.searchParams.get('category') || '');
+        const date = String(requestUrl.searchParams.get('date') || '');
+        const figures = await onDemand.getStatus(category, date);
+        sendJson(res, 200, { ok: true, category, date, figures });
         return;
       }
 

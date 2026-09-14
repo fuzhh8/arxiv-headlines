@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { once } from 'node:events';
@@ -23,13 +23,13 @@ function payloadFor(category, date) {
   };
 }
 
-async function withServer(run) {
+async function withServer(run, overrides = {}) {
   const root = mkdtempSync(join(tmpdir(), 'arxiv-headlines-server-'));
   const dataRoot = join(root, 'data');
   writeFileSync(join(root, 'index.html'), '<h1>test</h1>', 'utf8');
   let fetchCalls = 0;
 
-  const fakeFetcher = async (category, date, options) => {
+  const fakeFetcher = overrides.fetcher || (async (category, date, options) => {
     fetchCalls++;
     await new Promise(resolve => setTimeout(resolve, 30));
     const payload = payloadFor(category, date);
@@ -37,16 +37,21 @@ async function withServer(run) {
     mkdirSync(dir, { recursive: true });
     writeFileSync(join(dir, `${date}.json`), JSON.stringify(payload), 'utf8');
     return payload;
-  };
+  });
 
-  const server = createArxivServer({ root, dataRoot, fetcher: fakeFetcher });
+  const server = createArxivServer({
+    root,
+    dataRoot,
+    fetcher: fakeFetcher,
+    ...(overrides.enricher ? { enricher: overrides.enricher } : {})
+  });
   server.listen(0, '127.0.0.1');
   await once(server, 'listening');
   const address = server.address();
   const baseUrl = `http://127.0.0.1:${address.port}`;
 
   try {
-    await run({ baseUrl, getFetchCalls: () => fetchCalls });
+    await run({ baseUrl, dataRoot, getFetchCalls: () => fetchCalls });
   } finally {
     server.close();
     await once(server, 'close');
@@ -101,4 +106,65 @@ test('rejects unsupported categories and invalid dates', async () => {
     assert.equal((await response.json()).ok, false);
     assert.equal(getFetchCalls(), 0);
   });
+});
+
+test('returns metadata first and reports background figure progress', async () => {
+  let enrichCalls = 0;
+  let testDataRoot = '';
+
+  const fetcher = async (category, date, options) => {
+    assert.equal(options.includeFigures, false);
+    const payload = {
+      ...payloadFor(category, date),
+      figuresStatus: 'pending',
+      figureCounts: { processed: 0, total: 2, found: 0 }
+    };
+    const dir = join(options.dataRoot, category.replaceAll('.', '-'));
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(join(dir, `${date}.json`), JSON.stringify(payload), 'utf8');
+    return payload;
+  };
+
+  const enricher = async (category, date, options) => {
+    enrichCalls++;
+    options.onProgress({ processed: 0, total: 2, found: 0 });
+    await new Promise(resolve => setTimeout(resolve, 20));
+    options.onProgress({ processed: 1, total: 2, found: 1 });
+    await new Promise(resolve => setTimeout(resolve, 20));
+    options.onProgress({ processed: 2, total: 2, found: 2 });
+
+    const path = join(options.dataRoot, category.replaceAll('.', '-'), `${date}.json`);
+    const payload = JSON.parse(readFileSync(path, 'utf8'));
+    payload.figuresStatus = 'complete';
+    payload.figureCounts = { processed: 2, total: 2, found: 2 };
+    writeFileSync(path, JSON.stringify(payload), 'utf8');
+    return payload;
+  };
+
+  await withServer(async ({ baseUrl, dataRoot }) => {
+    testDataRoot = dataRoot;
+    const response = await fetch(`${baseUrl}/api/fetch`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ category: 'astro-ph', date: '2026-09-16' })
+    }).then(result => result.json());
+
+    assert.equal(response.ok, true);
+    assert.ok(['queued', 'figures'].includes(response.figures.phase));
+
+    let status;
+    for (let attempt = 0; attempt < 20; attempt++) {
+      status = await fetch(`${baseUrl}/api/fetch/status?category=astro-ph&date=2026-09-16`)
+        .then(result => result.json());
+      if (status.figures.phase === 'complete') break;
+      await new Promise(resolve => setTimeout(resolve, 10));
+    }
+
+    assert.equal(status.figures.phase, 'complete');
+    assert.equal(status.figures.processed, 2);
+    assert.equal(status.figures.found, 2);
+  }, { fetcher, enricher });
+
+  assert.equal(enrichCalls, 1);
+  assert.ok(testDataRoot);
 });
