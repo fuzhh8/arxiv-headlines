@@ -28,6 +28,24 @@ node server.mjs
 
 `npm start` is an equivalent shortcut when npm is installed.
 
+## Run the fetch service on the web
+
+GitHub Pages can only serve the cached static files; it cannot run the
+`/api/fetch` backend. Deploy this repository as a Render **Web Service** to make
+date-triggered fetching available from the public website:
+
+1. Open [Render](https://dashboard.render.com/) and choose **New → Blueprint**.
+2. Connect `fuzhh8/arxiv-headlines` and select the `main` branch.
+3. Render reads `render.yaml`; confirm the `arxiv-headlines` web service.
+4. After deployment, use the generated `https://...onrender.com` address as the
+   website URL. The page and fetch API then run on the same origin.
+
+The included Blueprint uses Render's free plan. Free services can sleep while
+idle and use an ephemeral filesystem, so on-demand cache files can disappear
+after a restart or redeploy. The repository's committed cache remains. For
+durable runtime caches, attach a persistent disk on a paid plan or move cache
+storage to an external object store.
+
 Then open <http://127.0.0.1:8000/>. Opening `index.html` directly is not
 supported because browsers block the JSON cache requests from `file://` pages.
 Do not use `python -m http.server` if you want automatic on-demand fetching;

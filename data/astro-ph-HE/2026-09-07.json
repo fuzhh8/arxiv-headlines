@@ -1,14 +1,871 @@
 {
+  "schemaVersion": 1,
+  "status": "ok",
+  "source": "arxiv-catchup",
   "category": "astro-ph.HE",
   "date": "2026-09-07",
+  "generatedAt": "2026-09-14T14:33:40.019Z",
+  "figuresStatus": "complete",
+  "figureCounts": {
+    "processed": 24,
+    "total": 24,
+    "found": 14
+  },
   "counts": {
-    "new": 0,
-    "cross": 0,
-    "repl": 0
+    "new": 12,
+    "cross": 6,
+    "repl": 6
   },
   "papersBySection": {
-    "new": [],
-    "cross": [],
-    "repl": []
+    "new": [
+      {
+        "absId": "2609.04307",
+        "title": "Nebular Spectra of the Extremely Metal-Poor SN II 2023ufx Over a Year After Explosion: A Massive Progenitor and Unique Circumstellar Environment",
+        "summary": "We present new observations of the metal-poor ($< 0.1$ $\\rm Z_\\odot$) Type II supernova 2023ufx and its host galaxy. The deep nebular spectrum, obtained roughly a year after explosion, has a triple-peaked [O I] emission profile suggesting an asymmetric explosion. Comparison to nebular spectra models suggests a zero-age main sequence mass of $ M_{\\rm ZAMS} \\sim 25-35$ $\\rm M_\\odot$, which is supported by the low [Ca II]/[O I] emission-line ratio of $\\approx0.4$. The diminishing, broad, boxy H$\\alpha$ emission and flattening of the light curve in the late ($\\sim2$ yr) photometry suggest a complex mass-loss history in the centuries to millennia before explosion. New optical and near-infrared imaging of the host galaxy confirms that it is a dwarf, with a stellar mass of $10^{6.6\\pm0.1}$ $\\rm M_\\odot$ and a SFR of $10^{-2.5\\pm0.1}$ $\\rm M_\\odot$/yr. Results from both SED fitting and galaxy stellar mass-metallicity scaling relations all lead to an environmental metallicity estimate of $0.02-0.07$ $\\rm Z_\\odot$. Taken together, these observations confirm that SN 2023ufx is the explosion of a very metal-poor, heavily stripped red supergiant.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04307",
+        "htmlUrl": "https://arxiv.org/html/2609.04307v1",
+        "authors": [
+          "Evan Jennerjahn",
+          "Michael A. Tucker",
+          "Christopher S. Kochanek",
+          "Luc Dessart",
+          "Willem B. Hoogendam",
+          "Benjamin J. Shappee"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.GA",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04307v1/HostZoomInFig.png",
+            "caption": "U ​ B ​ I UBI image of the host galaxy of SN 2023ufx with bright saturated star trails masked out. Blue is U U , Green is B B , and Red is I I . A crosshair in the right panel marks the location of the supernova."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04307v1/HostZoomInFig.png",
+        "thumbnailAlt": "U ​ B ​ I UBI image of the host galaxy of SN 2023ufx with bright saturated star trails masked out. Blue is U U , Green is B B , and Red is I I . A crosshair in the right panel marks the location of the supernova.",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04310",
+        "title": "A Swift X-ray view of the SMS4 sample - III: Deeper insight into previously undetected sources",
+        "summary": "We update the X-ray information given in Maselli et al. (2024) for five bright radio sources in the SMS4 catalog, thanks to additional observations with the X-Ray Telescope (XRT) on board the Neil Gehrels Swift Observatory (hereafter Swift) carried out through February 2026. X-ray emission from MRC B1754-597, previously based only on data from the eROSITA-DE DR1 catalogs, is now detected also by Swift, which yields a more precise positional uncertainty. Thanks to ~7 ks of additional exposure with Swift we are now able to detect MRC B1817-391, a source for which no X-ray counterpart is found in eROSITA-DE DR1. Another source that is not detected in the eROSITA-DE DR1 catalogs, and that was not observed by Swift earlier than 2025, is MRC B1827-360: with a ~6 ks X-ray observation, the source is detected. Finally, based on ~8 ks of additional exposure, we detect X-ray emission for MRC B2032-350, a source that lies out of the DR1 footprint. In contrast, additional exposure (~2 ks) just gives an upper limit on the X-ray emission of MRC B1814-519. The analysis of the extent and the hardness ratio of the four detected X-ray sources suggests the presence of soft, diffuse X-ray emission as expected from galaxy group cores or hot galaxy coronae. Using the positional uncertainty of the X-ray detections to constrain the search for counterparts at lower energies, we provide a new infrared/optical counterpart for MRC B1817-391 and confirm the counterparts previously reported in the literature for the three remaining sources.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04310",
+        "htmlUrl": "https://arxiv.org/html/2609.04310v1",
+        "authors": [
+          "Alessandro Maselli",
+          "William R. Forman",
+          "Christine Jones",
+          "Ralph P. Kraft",
+          "Matteo Perri"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04310v1/2032_extent.png",
+            "caption": ": Example of regions used to test sources for extent: Infrared, optical, and X-ray maps, matched in scale (N is up and E is to the left) and centered at the position of the X-ray detection for MRC B2032 − - 350 (G4Jy 1640). The infrared map (left side) in the W ​ 1 W1 filter (3.4 μ \\mu m) is from AllWISE; the optical map (center) in the r r filter is from DSS2; the X-ray map in the 0.3–10 keV band is from Swift -XRT and is binned by 4x4 pixels. The black dotted circles mark the positional uncertainty of the examined X-ray detections, including the unrelated sources marked as I I and I ​ I II (see the text for further details). Three colored circles with radii of five (green), ten (orange), and twenty (red) pixels (1 pixel = 2″.36), respectively, overlay the maps to display the extraction regions (circle C C and annulus A A ) used to evaluate the extent of the X-ray emission, not only for MRC B2032 − - 350 but for all the sources in Table 4 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04310v1/2032_extent.png",
+        "thumbnailAlt": ": Example of regions used to test sources for extent: Infrared, optical, and X-ray maps, matched in scale (N is up and E is to the left) and centered at the position of the X-ray detection for MRC B2032 − - 350 (G4Jy 1640). The infrared map (left side) in the W ​ 1 W1 filter (3.4 μ \\mu m) is from Al",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04316",
+        "title": "A Kinematic Measurement of the Effective Viscosity of the Intracluster Medium: The Cold Front of A3667 Seen by XRISM",
+        "summary": "Constraints on the effective viscosity of the intracluster medium (ICM) come almost exclusively from imaging: the power spectrum of X-ray surface brightness fluctuations, and the morphology of Kelvin-Helmholtz rolls at cold fronts. Both indicate a viscosity below the isotropic Spitzer value. XRISM/Resolve opens a complementary, purely kinematic route, in which the viscosity is inferred from the thickness of the viscous shear layer that develops at a sliding contact discontinuity. We apply it to the prototypical cold front of A3667. The interface is the classical Rayleigh problem, in which momentum diffuses to a depth d in a time T, giving a kinematic viscosity \\nu ~ d^2/(4T). The XRISM velocity map shows a line-of-sight velocity jump of 535 km/s across the front, completed within the 100 kpc-wide region immediately inside it, the only region with an anomalously broad line. Hence d ~< 100 kpc. Adopting interaction times set by the sizes of the interacting regions divided by this velocity, we obtain dynamic viscosities of 5.2 x 10^3 and 3.3 x 10^3 g/cm/s for the cool and the hot side of the front, or 6.4 and 0.72 times the Spitzer value. Because d is limited by the angular resolution of XRISM, and the viscosity scales as its square, these are upper limits. The kinematic constraint is consistent with, and independent of, the imaging results.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04316",
+        "htmlUrl": "https://arxiv.org/html/2609.04316v1",
+        "authors": [
+          "Yutaka Fujita",
+          "Yuki Omiya"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.GA"
+        ],
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04491",
+        "title": "Preferential accretion onto eccentric and unequal binary black holes",
+        "summary": "Supermassive binary black holes (SMBBHs) are expected to be surrounded by circumbinary disks (CBDs) which affect the binary through gravitational forces and accretion. It has been reported that the binary can experience ``preferential accretion'' where one black hole (BH) out-accretes the other for hundreds of orbits, but this asymmetry has yet to be fully described or understood. In this work, we utilize a suite of 80 SMBBH hydrodynamical simulations with varying mass ratios ($q_b$) and eccentricity ($e_b$) in order to robustly delineate the behavior of preferential accretion, determine its relationship to the structure of the CBD, and study its observational consequences. We characterize the accretion-rate ratio $\\lambda(t) \\equiv \\dot{M}_2(t)/\\dot{M}_1(t)$ and the mass-ratio rate of change $\\dot{q}_b \\equiv d/dt(M_2/M_1)$ across the suite. We confirm that the secondary tends to out-accrete the primary ($\\lambda \\geq 1$), and find this preference to be strongest for low-$e_b$, low-$q_b$ binaries and increasingly time-variable toward high $e_b$. We also find that (i) the time-variability of $\\lambda$ tracks the precession of the CBD, (ii) there can be sub- and super-Eddington accretion in a single binary, and (iii) the gas-driven approach toward equal mass becomes particularly slow for highly eccentric, high $q_b$ binaries, suggesting that some binaries may not reach $q_b=1$ within the $30\\,\\mathrm{Myr}$ lifetime of a quasar and therefore allowing LISA to constrain the accretion history of SMBBHs. Our findings also suggest that periodically flickering jets are a potential observable signature of many binaries.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04491",
+        "htmlUrl": "https://arxiv.org/html/2609.04491v1",
+        "authors": [
+          "Stanislav DeLaurentiis",
+          "Zoltán Haiman",
+          "Magdalena Siwek"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04491v1/cavity_snapshot_eb0.6_qb0.1.png",
+            "caption": "Representative instantaneous surface-density map from the simulation suite, for the ( e b , q b ) = ( 0.6 , 0.1 ) (e_{b},q_{b})=(0.6,0.1) binary at apocenter (after ≈ 4000 {\\approx}\\,4000 binary orbits, well past the initial transient). The color scale is the surface density on a logarithmic scale, normalized to a fiducial outer-disk value Σ 0 \\Sigma_{0} . The binary clears an eccentric, lopsided cavity; the two black holes (the bright, compact minidiscs near the center) accrete through narrow streams that cross the cavity and sit at unequal distances from the cavity wall. Axes are in units of the binary semi-major axis a b a_{b} , centered on the binary’s center of mass."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04491v1/lambda_fixed_magda_ratio_0_10000.png",
+            "caption": "The accretion-rate ratio λ ⁡ ( t ) ≡ M ˙ 2 ​ ( t ) / M ˙ 1 ​ ( t ) \\lambda(t)\\equiv\\dot{M}_{2}(t)/\\dot{M}_{1}(t) for the entire 80-simulation suite. Each panel is a unique ( e b , q b ) (e_{b},q_{b}) simulation, with λ ⁡ ( t ) \\lambda(t) on the y-axis and time on the x-axis (in units of binary orbital period τ b \\tau_{b} ). The panel’s position on the larger grid signifies its binary parameters: e b e_{b} is constant along columns and increases left-to-right; q b q_{b} is constant along rows and increases bottom-to-top. λ ⁡ ( t ) \\lambda(t) divides cleanly into time-stable and time-varying regimes across the suite, as illustrated in Table 1 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04491v1/lambda_std_colormap.png",
+            "caption": "Heat-map of σ λ \\sigma_{\\lambda} , the standard deviation of λ ⁡ ( t ) \\lambda(t) evaluated over 7000 ​ τ b 7000\\tau_{b} . Larger values (brighter) indicate stronger time-variability of preferential accretion. The variability peaks broadly in the high- e b e_{b} , high- q b q_{b} region of parameter space."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04491v1/a_e_cavity_heatmap_joint.png",
+            "caption": "The semi-major axis (top) and eccentricity (bottom) of the cavity for our simulations with varying binary eccentricity and mass ratio, characterized by the m = 1 m=1 Fourier mode of the CBD surface density Σ ⁡ ( r , θ ) \\Sigma(r,\\theta) (adapted from DeLaurentiis & Rafikov, in preparation). The cavity eccentricity grows with e b e_{b} , just as σ λ \\sigma_{\\lambda} , as depicted in Fig. 3 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04491v1/magda_fig2.png",
+            "caption": "Time-averaged accretion-rate ratio ⟨ λ ⟩ = ⟨ M ˙ 2 / M ˙ 1 ⟩ \\langle\\lambda\\rangle=\\langle\\dot{M}_{2}/\\dot{M}_{1}\\rangle as a function of q b q_{b} (x-axis) and e b e_{b} (line color). The gray-shaded region marks ⟨ λ ⟩ > 1 \\langle\\lambda\\rangle>1 , where the simulation labelled “secondary” accretes preferentially. The dashed green line is the q b − 0.9 q_{b}^{-0.9} power-law fit reported by S23 for circular binaries. Preferential accretion is always onto the secondary, with low- e b e_{b} binaries following the q b − 0.9 q_{b}^{-0.9} trend."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04491v1/lambda_mean_colormap.png",
+            "caption": "Heat-map of the time-averaged accretion-rate ratio ⟨ λ ⟩ = ⟨ M ˙ 2 / M ˙ 1 ⟩ \\langle\\lambda\\rangle=\\langle\\dot{M}_{2}/\\dot{M}_{1}\\rangle across the simulation suite. The x-axis is the binary eccentricity e b e_{b} and the y-axis is the binary mass-ratio q b q_{b} ; in-cell labels show ⟨ λ ⟩ \\langle\\lambda\\rangle . Preferential accretion is strongest for low- e b e_{b} , low- q b q_{b} binaries and weakest for high- e b e_{b} , high- q b q_{b} binaries."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04491v1/rmin_lambda_peak_ratio._paper_ready.png",
+            "caption": "The ratio of the period of preferential-accretion variability ( τ λ \\tau_{\\lambda} ) to the period of the CBD precession ( τ r 1 \\tau_{r_{1}} ). The x-axis is the binary eccentricity, the y-axis the binary mass-ratio, and the cell colour the ratio of the two periods. Uncoloured cells are those where no clear period could be determined for r 1 r_{1} or λ \\lambda : either because the signal is time-stable (a locked CBD) or because it is too irregular for a single dominant Fourier peak to be believably identified. Where both periods are defined they are nearly always equal (ratio ≈ 1 {\\approx}1 ), tying the λ ⁡ ( t ) \\lambda(t) variability to the cavity precession."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04491v1/qdot_heatmap_new.png",
+            "caption": "The time-averaged rate of change of the binary mass-ratio, ⟨ q ˙ b ⟩ \\langle\\dot{q}_{b}\\rangle , for the simulation suite, in M ˙ b / M b \\dot{M}_{b}/M_{b} units. The x-axis is the binary eccentricity e b e_{b} and the y-axis is the binary mass-ratio q b q_{b} . The diverging colormap is centered at ⟨ q ˙ b ⟩ = 0 \\langle\\dot{q}_{b}\\rangle=0 : red cells indicate the binary evolves toward q = 1 q=1 (positive ⟨ q ˙ b ⟩ \\langle\\dot{q}_{b}\\rangle ), blue cells away from q = 1 q=1 . Most q b < 1 q_{b}<1 cells are positive (driven toward equal mass); the q b = 1 q_{b}=1 row is mostly consistent with zero, with notable exceptions at e b = 0.2 e_{b}=0.2 and 0.3 0.3 where the binary evolves away from unity (see § 3.2 for discussion)."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04491v1/cavity_snapshot_eb0.6_qb0.1.png",
+        "thumbnailAlt": "Representative instantaneous surface-density map from the simulation suite, for the ( e b , q b ) = ( 0.6 , 0.1 ) (e_{b},q_{b})=(0.6,0.1) binary at apocenter (after ≈ 4000 {\\approx}\\,4000 binary orbits, well past the initial transient). The color scale is the surface density on a logarithmic scale, ",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04695",
+        "title": "A Differentiable Neural Surrogate for Photon Propagation in Neutrino Telescopes",
+        "summary": "Large-volume neutrino telescopes infer neutrino properties from Cherenkov light, but simulating the transport of billions of photons through highly scattering ice or water is computationally costly. We introduce candela, a differentiable SIREN neural field that learns the photon Green's function of the IceCube Neutrino Observatory, a cubic-kilometer detector embedded in Antarctic glacial ice. Given a point-like energy deposit and sensor, it predicts the expected photon yield and full arrival-time distribution at the sensor. Complete events are simulated by decomposing charged-particle energy deposits into point-like sources and superposing their predicted sensor responses. Trained on Monte-Carlo simulations, candela generates events $50$--$100\\times$ faster than existing methods, with cost scaling only weakly with neutrino energy. It keeps median yields within $2\\%$ of the MC expectation and timing distributions at the MC statistical floor across six photon-count decades. The model also provides end-to-end gradients with respect to event parameters and opens a path toward optimizing scattering-medium properties, which often dominate systematic uncertainties in neutrino telescopes.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04695",
+        "htmlUrl": "https://arxiv.org/html/2609.04695v1",
+        "authors": [
+          "Felix J. Yu",
+          "Berthy T. Feng",
+          "Nicholas Kamp",
+          "Carlos A. Argüelles"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "cs.LG",
+          "hep-ex"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04695v1/event_display_compare.png",
+            "caption": ": Event-level agreement for a 100 ​ TeV 100\\,\\mathrm{TeV} ν μ \\nu_{\\mu} charged-current event. Top: PPC (left) and candela (right) realizations of identical energy losses. The size and color encode photon count and first-hit time. Bottom: candela timing densities versus high-statistics PPC histograms at saturated, near-, and far-track sensors. Agreement spans both the prompt peak(s) and scattering tails."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04695v1/reco_demo_energy_dep.png",
+            "caption": ": Demonstration of deposited energy reconstruction using the fully differentiable candela ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04695v1/event_display_compare.png",
+        "thumbnailAlt": ": Event-level agreement for a 100 ​ TeV 100\\,\\mathrm{TeV} ν μ \\nu_{\\mu} charged-current event. Top: PPC (left) and candela (right) realizations of identical energy losses. The size and color encode photon count and first-hit time. Bottom: candela timing densities versus high-statistics PPC histogram",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04731",
+        "title": "Evidence of Orbital Evolution of Gigahertz-Peaked Spectra in Binary Millisecond Pulsar",
+        "summary": "We present the first systematic investigation of the continuous orbital evolution of the Gigahertz-Peaked Spectum turnover frequency ($\\nu_{peak}$) in the binary millisecond pulsar, PSR J2144$-$5237. Using approximately 50 hours of densely sampled observations spanning the $\\sim10$-day orbit with the Parkes Ultra-Wideband Low frequency receiver, we obtained continuous frequency coverage from 704 MHz to 4 GHz, enabling robust measurements of the spectral evolution throughout the binary orbit. We detect a clear and systematic modulation of the turnover frequency with orbital phase for both the $1^{st}$ pulse and $2^{nd}$ pulse components, with both emission components exhibiting remarkably similar evolutionary trends despite originating from distinct emission regions within the pulsar magnetosphere. The correlated evolution of the two pulse components strongly suggests that the observed spectral variability is governed by propagation through the intra-binary environment. The large orbital modulation of turnover frequency can be explained by cyclotron resonance absorption in magnetized plasma associated with the companion, while alternative absorption mechanisms are unable to reproduce the observed behaviour. Modelling the orbital evolution of the turnover frequency within the cyclotron absorption framework, can constrain the electron density distribution in the pulsar wind, estimate the magnetic field strength of the companion, and place limits on the geometry of the absorbing plasma and the binary system. This study establish orbital evolution of the Gigahertz Peaked Spectum as a powerful new diagnostic of the magnetized intra-binary medium and provide a hitherto unexplored probe of pulsar wind-companion interactions in eclipsing millisecond pulsar binaries.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04731",
+        "htmlUrl": "https://arxiv.org/html/2609.04731v1",
+        "authors": [
+          "Rahul Sharan",
+          "Bhaswati Bhattacharyya"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04731v1/Profile_J2144.png",
+            "caption": ": The figure contains the average profile with 1 s ​ t 1^{st} and 2 n ​ d 2^{nd} components marked in the orange and green colored dots for the observing epoch 2023–06–22."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04731v1/plot_fit_with_error.png",
+            "caption": "(a)"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04731v1/corner_plots.png",
+            "caption": "(b)"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04731v1/plot_fit_with_error_misfit.png",
+            "caption": ": The figure shows the model being too simplistic to capture the spectral features of a 20 minutes averaged data observed at orbital phase of 0.23 (observing epoch 2025–11–23)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04731v1/plot_fit_with_error_main.png",
+            "caption": "(a) GPS spectral fit for the 1 s ​ t 1^{st} component."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04731v1/corner_plots_main.png",
+            "caption": "(b) Corner plot for the 1 s ​ t 1^{st} component."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04731v1/plot_fit_with_error_interpulse.png",
+            "caption": "(c) GPS spectral fit for the 2 n ​ d 2^{nd} component."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04731v1/corner_plots_interpulse.png",
+            "caption": "(d) Corner plot for the 2 n ​ d 2^{nd} component."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04731v1/Profile_J2144.png",
+        "thumbnailAlt": ": The figure contains the average profile with 1 s ​ t 1^{st} and 2 n ​ d 2^{nd} components marked in the orange and green colored dots for the observing epoch 2023–06–22.",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04765",
+        "title": "Through a glass, darkly: a combined framework for estimating fast radio burst host galaxy and population properties in an era of uncertain host identification",
+        "summary": "The identification of fast radio burst (FRB) host galaxies, and subsequently their redshifts ($z$), has allowed the FRB dispersion measure (DM) to be used to probe the cosmological distribution of ionised gas, and study the properties of the FRB population itself. However, current methods cannot account for FRBs with uncertain host galaxy associations, leading to underutilisation of data, and potential biases towards nearby, bright hosts. In this work, we develop a methodology which can. We do so by combining three ingredients - the zDM code, for modelling the Macquart relation; PATH, for statistical host galaxy identification; and a set of models able to describe the intrinsic FRB host galaxy distribution - into a single formalism. We prove the fidelity of our formalism by using a synthetic set of FRB observations, with simulated hosts sampled from galaxy catalogues, and show that it reproduces intrinsic host galaxy properties even for FRB localisation uncertainties of 30\", where a traditional PATH analysis produces no confidant host associations. When applied to a sample of FRBs localised by the Australian Square Kilometre Array Pathfinder, we confirm previous results showing that FRBs prefer host galaxies fainter than that predicted by star-formation, consistent with an exponential surface density scaling as $0.41^{+0.13}_{-0.09}$ times the half-light radius. We encourage the application of this formalism to data-sets from other FRB-hunting instruments.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04765",
+        "htmlUrl": "https://arxiv.org/html/2609.04765v1",
+        "authors": [
+          "C.W. James",
+          "B.C. Andersen",
+          "L. Marnoch",
+          "J.L. Hoffmann",
+          "N. Loudas",
+          "J.X. Prochaska",
+          "S.D. Ryder",
+          "M. Woodland"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04765v1/Figures/pz.png",
+            "caption": "P ⁡ ( s | z , B , w , DM ) P(s|z,B,w,{\\rm DM}) for FRB 20190611B, and the two components by which it is calculated: p ⁡ ( z , DM ) p(z,{\\rm DM}) , and p ( s , B , w | z , D M ) p(s,B,w|z,DM) , as a function of redshift. Thick lines use width and scattering distributions from CHIME/FRB Collaboration et al. (2021) ; thin lines from James et al. (2026b) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04765v1/Figures/pmr.png",
+            "caption": "Prior on host galaxy magnitude m r m_{r} , for the case of FRB 20190611B, using the Marnoch23 model. P ⁡ ( O | DM EG ) P(O|{\\rm DM}_{\\rm EG}) and P ⁡ ( m r | DM EG ) P(m_{r}|{\\rm DM}_{\\rm EG}) respectively do and do not account for the chance of not identifying galaxies in an image."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04765v1/Figures/pzgmr.png",
+            "caption": "Probabilities of redshift P ⁡ ( z | m r ) P(z|m_{r}) for both FRB hosts predicted by the Marnoch23 model, P ⁡ ( z | 𝐱 rad , m r ) P(z|\\mathbf{x}_{\\rm rad},m_{r}) , and field galaxies, P F ​ ( z | m r ) P_{F}(z|m_{r}) , for the most probable host of FRB 20190611B, with magnitude m r = 19.63 m_{r}=19.63 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04765v1/Figures/pzgm_field.png",
+            "caption": "Example distributions of P ⁡ ( z | F , m r ) P(z|F,m_{r}) for field galaxies (see text for method)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04765v1/Figures/pm.png",
+            "caption": "Comparison of r-band magnitude distributions of field galaxies, P ⁡ ( m r ) P(m_{r}) , calculated as Eq. 39 , with the result from Driver et al. (2016) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04765v1/Figures/pzgu.png",
+            "caption": "Probability of the redshift of FRB 20190611B, given that the true host is unseen in hypothetical images taken with different instruments/surveys, with sensitivity characterised as per James et al. (2026a) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04765v1/FRB20190611B_PATH_FRB20190611B_VLT-FORS2_R-SPECIAL_combined_PU_0.1.png",
+            "caption": "R-band image of the FRB20190611B field, taken with FORS2 on the VLT. The FRB 1 σ \\sigma localisation region is shown with a white circle, while the centroids of identified galaxies are given by crosses. Candidate galaxies A (J212258.0-792350) and B (J212259.0-792352) are marked."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04765v1/Figures/pz_190611.png",
+            "caption": "Predicted redshift distributions for the host galaxy of FRB 20190611B. Shown is the predicted redshift based on observed radio properties, P ⁡ ( z | 𝐱 rad ) P(z|\\mathbf{x}_{\\rm rad}) ; distributions given a specific host galaxy magnitude, P ⁡ ( z | 𝐱 rad , m ) P(z|\\mathbf{x}_{\\rm rad},m) , for magnitudes corresponding the two host galaxy candidates, J212258.0-792350 (‘Galaxy A’) and J212259.0-792352 (‘Galaxy B’); and the predicted redshift distributions of these galaxies if they are field galaxies, P F ​ ( z | m ) P_{F}(z|m) . The detected redshift of Galaxy A, z = 0.378 z=0.378 , is also indicated."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04765v1/Figures/pz.png",
+        "thumbnailAlt": "P ⁡ ( s | z , B , w , DM ) P(s|z,B,w,{\\rm DM}) for FRB 20190611B, and the two components by which it is calculated: p ⁡ ( z , DM ) p(z,{\\rm DM}) , and p ( s , B , w | z , D M ) p(s,B,w|z,DM) , as a function of redshift. Thick lines use width and scattering distributions from CHIME/FRB Collaboration ",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04776",
+        "title": "The angular structure of the GW170817 jet from prompt emission alone",
+        "summary": "We determine the angular structure of the GW170817 jet by the prompt emission alone, without afterglow fitting, circumburst density or microphysical parameters. We assume that GRB 090510 and GW170817 have outflows of the same kind, observed respectively on-axis and at the interferometric viewing angle of $20^\\circ$. We support this assumption with independent gravitational-wave data showing compatible binary masses and radiated energies. We show that for an observer whose beaming cone is filled with outflow, the point-source Doppler scalings do not apply: $E_{\\rm iso}=4\\pi\\epsilon(\\theta_v)$, with $\\epsilon$ the energy radiated per unit solid angle along the line of sight, while the peak energy follows $E_{\\rm p,i}\\propto\\Gamma(\\theta_v)$. We obtain $n={\\rm d}\\ln\\epsilon/{\\rm d}\\ln\\Gamma = 3.76\\pm0.29$ from the ratio of the two bursts, with no free parameter and no assumed angle. This excludes four structures in common use at $4.7\\sigma$ to $13\\sigma$; three remain above $4\\sigma$ across the full reported range of the peak energy of the GW170817 jet. Two prompt spectra fix no angular scale; supplying it with the core Lorentz factor of GRB 090510 and the viewing angle gives $\\epsilon\\propto\\theta^{-7.4}$ outside a core of $2^\\circ$--$5^\\circ$, in agreement with the width inferred from $367$ short bursts, the outflow remaining relativistic at $\\Gamma=33$ on the line of sight. The exponent exceeds what the Lorentz boost of a uniform comoving flow can produce, so the structure is intrinsic to the outflow and not a consequence of the boost. The same structure fixes the emission radius, which contributes $0.41$~s of the $1.74$~s delay between the gravitational-wave signal and the gamma-rays, the remainder being the launch and breakout of the jet, with no free parameters. We conclude that the faintness lies in the structure of the GW170817 jet, not in the de-beaming of a bright core.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04776",
+        "htmlUrl": "https://arxiv.org/html/2609.04776v1",
+        "authors": [
+          "R. Moradi",
+          "R. Ruffini"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04776v1/f1.png",
+            "caption": "The geometry, to scale in polar angle. Colour gives the bulk Lorentz factor for a core half-angle θ c = 3 ∘ \\theta_{c}=3^{\\circ} and profile index a = 1.90 a=1.90 . Both observers lie inside the outflow, each receiving light from material on its own line of sight that moves head-on (white arrows), and for GW170817 the core is beamed away entirely. The hatched band is the interferometric viewing angle, 19 ∘ 19^{\\circ} – 25 ∘ 25^{\\circ} ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04776v1/f1.png",
+        "thumbnailAlt": "The geometry, to scale in polar angle. Colour gives the bulk Lorentz factor for a core half-angle θ c = 3 ∘ \\theta_{c}=3^{\\circ} and profile index a = 1.90 a=1.90 . Both observers lie inside the outflow, each receiving light from material on its own line of sight that moves head-on (white arrows), a",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04998",
+        "title": "The October 2022 flare in OJ 287 and the mass of its primary black hole",
+        "summary": "The bright blazar OJ~287 has demonstrated a sequence of flares, which are well explained by a quasi-Keplerian orbit model. The flares are associated with the impact of the secondary on the accretion disk of the primary. The orbit must precess in order to produce the correct sequence of flares, and from the precession rate we calculate the mass of the primary. This precession rate gives the mass of the primary $M_{BH} = (18.35\\pm0.05) \\times 10^9 M_{\\odot}$. Two kinds of flares have been identified: direct flares from the impacts, and tidal flares arising from an increased accretion flow into the jet. The precession rate and the primary black hole mass may be independently determined from both sets of flares; the tidal flare of October 2022 was recommended for an intense campaign for this reason. This paper describes these observations over a wide spectral range. We show that the October 2022 flare fits the expectations for a tidal flare and thus supports the earlier determination of the mass of the binary black hole system in OJ 287. The mass of the primary may also be deduced from secondary indicators such as the correlation with the hydrogen line strength and the black hole mass. These studies require that the mass is above $M_{BH} \\sim 10^{10} M_{\\odot}$, but do not specify the value more exactly.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04998",
+        "htmlUrl": "https://arxiv.org/html/2609.04998v1",
+        "authors": [
+          "Mauri J. Valtonen",
+          "Staszek Zola",
+          "Manpreet Singh",
+          "Andrei V. Berdyugin",
+          "Kari Nilsson",
+          "A. Gopakumar",
+          "Alok C. Gupta",
+          "Tapio Pursimo",
+          "Alexandr E. Volvach",
+          "Marek Drozdz",
+          "Waldemar Ogloza",
+          "Rene Hudec",
+          "Martin Jel\\'ınek",
+          "Jan Štrobl",
+          "Michal Zejmo",
+          "Stefano Ciprini",
+          "Daniel E. Reichart",
+          "Vladimir V. Kouprianov",
+          "Alberto Sadun",
+          "Markus Mugrauer",
+          "Katsura Matsumoto",
+          "Ryo Imazawa",
+          "Makoto Uemura",
+          "Lankeswar Dey"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04998v1/Diagram12.png",
+            "caption": "The binary model of OJ 287. This is an edge-on view of the accretion disc surrounding primary black hole at the coordinate origin. The thin disc is shown in red, and it is surrounded by a corona (violet). The orbit of the secondary is perpendicular to the disc, and is displayed from year 2000 to year 2023. Twin-jets arise from both black holes, the primary jets shown in yellow, and the secondary jets in green. During disc impacts bubbles of shocked gas are blown out of the disc (shown in orange), and they produce short-lived prominent flares that act as markers of the progress of the orbital motion. The system is viewed close to the rotation axis of the disc, from above. The figure has appeared previously in Valtonen et al., The Astrophysical Journal Letters, Vol. 968, p. L17-L25."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04998v1/boxesPhFig.png",
+            "caption": "R-band observations during 2022 and 2023 flares in one day bins (points) compared with the 2013 model calculation (line). In general outline, we expected two components in the light curve: the first one from August 28 to November 16, 2022, peaking at October 17, and the second one from September 12, 2023 to January 10, 2024, peaking at November 11, 2023. The observed points confirmed the first peak while the second one came a month earlier than expected. Notice that the position of the second theoretical peak is influenced by small-number statistics, and within statistical fluctuations, it agrees with observations. The light curves of the two components are shown in greater detail in Figures 5 and 6."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04998v1/new_spectral_index_and_rbnd.png",
+            "caption": "Spectral index α \\alpha (top panels) and R-band flux (bottom panels) in 2005 and 2022. These two flares arise at apocenter impacts and should correspond to each other. Both flares show spectral flattening (small value of − α -\\alpha ) near the peak flux."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04998v1/Diagram12.png",
+        "thumbnailAlt": "The binary model of OJ 287. This is an edge-on view of the accretion disc surrounding primary black hole at the coordinate origin. The thin disc is shown in red, and it is surrounded by a corona (violet). The orbit of the secondary is perpendicular to the disc, and is displayed from year 2000 to yea",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05035",
+        "title": "Nonstationary Stochastic Timing Signatures in the Prompt Gamma-Ray Light Curve of GRB 170817A",
+        "summary": "We investigate time-dependent stochastic structure in the weak prompt gamma-ray emission of GRB 170817A using change-point and deep-kernel Gaussian-process (GP) models. The analysis is based on the 10-300 keV Fermi/GBM light curve with 0.10 s time resolution. Two change-point configurations identify similar covariance transitions at 0.269 and 0.237 s after the gravitational-wave merger, with 10-90% transition widths of 0.441 and 0.393 s, respectively. At the representative gate-defined boundary of t_tr = 0.27 s, all four fixed-split assignments yield positive evidence gains over the full-exposure stationary Matern-3/2 reference. The largest gain is Delta ln Z_split = 5.72 +/- 0.16 for the Matern-3/2 to Matern-3/2 assignment, while the gate-matched damped random walk (DRW) to Matern-3/2 assignment gives Delta ln Z_split = 5.50 +/- 0.16. The fixed-split comparison therefore supports segment-specific covariance evolution without requiring a change of covariance family. The deep-kernel models recover localized time-deformation features peaking at 1.65 and 1.75 s after the merger for DRW and Matern-3/2 base kernels, respectively. Their offsets from the adopted gamma-ray onset at 1.74 s are -0.09 and +0.01 s, both within the 0.10 s sampling resolution. The full-band timing features remain stable when the bin width is changed from 0.10 to 0.12 s, whereas energy subdivision produces larger shifts in gate locations than in warp peaks. Residual diagnostics show that the models reproduce the dominant temporal structure, although localized residual dependence remains. We interpret the gate-defined covariance transition and the localized time-deformation feature as model-dependent phenomenological timing diagnostics. Further simulation calibration and count-level modelling are needed to assess the statistical robustness and physical origin of the recovered nonstationary structure.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05035",
+        "htmlUrl": "https://arxiv.org/html/2609.05035v1",
+        "authors": [
+          "Lin Xie",
+          "Dahai Yan"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05209",
+        "title": "Exploring the connection between Fast Radio Bursts and binary neutron star mergers",
+        "summary": "Fast Radio Bursts (FRBs) are highly energetic radio sources whose duration is of the order of milliseconds. The physical origin of these sources is still unknown. Many models suggest magnetars as possible progenitors of FRBs, and this is supported by the association between FRBs and the Galactic magnetar SGR 1935+2154; other proposed progenitors include binary neutron star (BNS) mergers, that are themselves linked to magnetar formation. In this work we investigate the possible connection between FRBs and BNS mergers, including magnetars that might be produced in such events, by comparing the detection rates inferred from synthetic BNS and associated FRB populations with the rates observed by CHIME. We produce a synthetic catalog of BNS mergers by combining recent theoretically predicted BNS merger rate as a function of redshift and the neutron star mass distribution inferred from measurements of Galactic BNSs. Using this catalog we predict the number of BNS systems ending as magnetars (stable or supramassive neutron star) or black holes (formed promptly or after the collapse of a hypermassive neutron star) for different equations of state. We then simulate for each BNS (and therefore for each magnetar remnant) an associated FRB and estimate how many of them can be potentially detected by CHIME. We find that the rate of BNS mergers and the rate of magnetars produced after BNS represents a non-negligible fraction of the FRBs detected by CHIME, both repeating and non-repeating. Although additional formation channels need to be considered to account for the entire population of FRBs, the existence of a fraction of FRBs that might genuinely be associated to BNS mergers has profound implications in the context of multi- messenger astronomy, supporting the systematic searches of coincident detections of FRBs and GWs from a BNS merger with current and future facilities.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05209",
+        "htmlUrl": "https://arxiv.org/html/2609.05209v1",
+        "authors": [
+          "Barbara Patricelli",
+          "Maria Grazia Bernardini",
+          "Cecilia Sgalletta",
+          "Michela Mapelli"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05350",
+        "title": "Electromagnetic alignment and jet precession around supermassive black holes: Quasi-periodic oscillations in tidal disruption events",
+        "summary": "We evaluate quasi-periodic oscillations and jet formation in tidal disruption events using the covariant formulation of electromagnetic angular-momentum transfer. General-relativistic frame-dragging tears apart misaligned transient accretion flows, forming an isolated inner mini-disk. The accumulation of magnetic flux on the event horizon powers a relativistic jet via the Blandford-Znajek mechanism. Because the magnetic field anchors to the precessing mini-disk, the jet axis rotates, generating geometric modulations in the observed X-ray and radio fluxes. To ensure physical consistency with the force-free magnetosphere required to launch a Blandford-Znajek jet, we model the electromagnetic back-reaction using a split-monopole magnetic field topology. By performing a small-spin expansion of the Noether current density over the event horizon, we derive a closed-form analytical reaction torque exerted by the electromagnetic field on the accretion plasma. We evaluate the resulting kinematics to show that the electromagnetic back-reaction induces a retrograde precession of the mini-disk, coupling with the prograde Lense-Thirring precession to dictate the global oscillation frequency. We formulate explicit predictions for observable transient signals and predict a monotonic attenuation of the peak-to-trough flux ratio as the mini-disk aligns, as well as a specific frequency drift signature characterized by an initial lengthening followed by an asymptotic shortening of the time interval between consecutive flares. We establish an analytical mechanism where magnetic flux depletion stalls alignment, predicting a constant residual modulation amplitude at late times. We formulate a methodology to extract the black hole spin and the magnetic flux density directly from the temporal derivatives of this predicted frequency drift, operating independently of spectral continuum fitting.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05350",
+        "htmlUrl": "https://arxiv.org/html/2609.05350v1",
+        "authors": [
+          "Pau Amaro-Seoane",
+          "Leif Lui",
+          "Alejandro Torres-Orjuela",
+          "Xian Chen"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "gr-qc"
+        ],
+        "catchupDate": "2026-09-07"
+      }
+    ],
+    "cross": [
+      {
+        "absId": "2609.04308",
+        "title": "Supernova microlensing as a probe of ultracompact minihalos and primordial cosmology",
+        "summary": "We propose using supernova microlensing to search for ultracompact minihalos and other extended dark structures seeded by enhanced primordial small-scale power. Unlike conventional microlensing searches, which are often optimized for primordial black holes, cosmological supernovae are sensitive to lenses with physical sizes comparable to their Einstein radii (up to $\\sim {\\rm pc}\\left(M/10^4M_\\odot\\right)^{1/2}$ scale), opening a qualitatively different region of dark object parameter space. We compute the extended object detection efficiency relative to point lenses. We then show how projected limits on the abundance of ultracompact minihalos can be mapped, in benchmark formation scenarios, onto constraints on the primordial power spectrum. With the Vera C. Rubin Observatory expected to deliver an unprecedented LSST supernova sample, supernova microlensing is poised to become a timely and complementary probe of small-scale structure and the physics of the early Universe.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04308",
+        "htmlUrl": "https://arxiv.org/html/2609.04308v1",
+        "authors": [
+          "Djuna Croon",
+          "Sergio Sevillano Muñoz",
+          "Miguel Zumalacarregui"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "astro-ph.HE",
+          "hep-ph"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04308v1/figs/epsilon_ucmhFS.jpg",
+            "caption": "Efficiency as calculated in ( 7 ) with lens profile ρ ∝ r − 3 / 2 \\rho\\propto r^{-3/2} and μ th = 2 \\mu_{\\rm th}=2 . For finite lenses, the extended source can increase the efficiency beyond the point-lens limit set by μ max \\mu_{\\rm max} ( r S / R E < 1.15 r_{S}/R_{E}<1.15 here) because part of the source overlaps with the caustics of the extended lens."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04308v1/figs/epsilon_ucmhFS.jpg",
+        "thumbnailAlt": "Efficiency as calculated in ( 7 ) with lens profile ρ ∝ r − 3 / 2 \\rho\\propto r^{-3/2} and μ th = 2 \\mu_{\\rm th}=2 . For finite lenses, the extended source can increase the efficiency beyond the point-lens limit set by μ max \\mu_{\\rm max} ( r S / R E < 1.15 r_{S}/R_{E}<1.15 here) because part of the",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04317",
+        "title": "Super-Eddington Accretion and Early-Stage Feedback in Ton S180",
+        "summary": "Narrow-line Seyfert 1 (NLSy1) galaxies are key laboratories for studying rapid supermassive black hole (SMBH) growth and active galactic nucleus (AGN) feedback at high accretion rates. We investigate the nearby NLSy1 Ton S180 with VLT-MUSE optical integral field spectroscopy to connect its nuclear accretion properties with the spatially resolved ionized gas and host-galaxy kinematics. We modeled the unresolved nuclear spectrum and applied a custom point spread function subtraction to recover the host-galaxy emission on kiloparsec scales. The nuclear spectrum requires a complex permitted-line decomposition and a blueshifted [O III] outflow component. Single-epoch estimators and the stellar velocity dispersion imply black hole masses in the range $\\log(M_{\\rm BH}/M_\\odot) = 6.5 - 7.7$. Combined with the observed luminosity, this implies a dimensionless mass accretion rate of $\\dot{M} / \\dot{M}_{\\rm Edd} = 4.1 - 980$, confirming the extreme accretion regime. The host galaxy shows a circumnuclear ring, an inner elongated structure consistent with a bar, and rotation-dominated gas and stellar kinematics. Simple inflow models do not significantly better reproduce the observed velocity field. We detect a resolved ionized outflow extending about 2 kpc west of the nucleus, with mildly blueshifted velocities (with a maximum of $v_{\\rm max} \\sim 340$ km s$^{-1}$). Its mass outflow rate is only $\\sim 4.2 \\times 10^{-4}\\,M_\\odot\\,\\mathrm{yr}^{-1}$, whereas the unresolved nuclear outflow reaches $v_{\\rm max} \\sim 1140$ km s$^{-1}$ and $\\dot{M}_{\\rm out} > 1.5\\,M_\\odot\\,\\mathrm{yr}^{-1}$. This contrast may reflect either weak ionized coupling from nuclear to galactic scales or different episodes of AGN activity over time. These results show that Ton S180 is undergoing rapid SMBH growth, while the observed ionized outflow remains confined to the inner few kiloparsecs and is weak on host-galaxy scales.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04317",
+        "htmlUrl": "https://arxiv.org/html/2609.04317v1",
+        "authors": [
+          "Pierpaolo Condò",
+          "Giacomo Venturi",
+          "Eleonora Parlanti",
+          "Marco Berton",
+          "Enrico Congiu",
+          "Alessia Tortosa",
+          "Stefano Carniani",
+          "Francesco Tombesi",
+          "Tommaso Zana",
+          "Claudio Ricci",
+          "Ezequiel Treister",
+          "Luis C. Ho",
+          "Enrico Piconcelli",
+          "Miguel Coloma Puga",
+          "Emilia Järvelä",
+          "Luca Crepaldi",
+          "Amelia Vietri",
+          "Benedetta Dalla Barba"
+        ],
+        "categories": [
+          "astro-ph.GA",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04317v1/galimage.png",
+            "caption": "MUSE white-light image of Ton S180. The centroid of the bright AGN nucleus is marked with a cross. In the left corner we report the average PSF FWHM of 0.6 arcsec over the 4750 − 9350 4750-9350 Å spectral range. The white bar in the bottom left corner indicates a scale of 5 kpc at the redshift of the target. The dashed box marks the 100 × \\times 100 pixels sub-cube used for the galaxy analysis in this work. The field star marked with a green circle was used to construct the PSF model for the aperture correction of the nuclear spectrum (Appendix B )."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04317v1/fluxmaps.png",
+            "caption": "From left to right: original H α \\alpha flux map, AGN-subtracted H α \\alpha flux map, and AGN-subtracted [N ii ] and [O iii ] flux maps. The second panel has the contours of the AGN-subtracted [O iii ] flux map overlaid for reference, while the third and fourth panels show the contours of the AGN-subtracted H α \\alpha flux map. The circle marks the position of the nuclear emission peak; the four central spaxels used to define the nuclear template are masked in the residual maps, as they are assumed to be entirely dominated by unresolved AGN emission. The original H α \\alpha map is dominated by the AGN PSF, which obscures the underlying galaxy structure. After subtraction, the H α \\alpha map reveals a circumnuclear ring that connects the spiral arms and an elongated east–west structure within the ring that could trace a bar. The [N ii ] map has a morphology overlapping with that of H α \\alpha . The [O iii ] map is more compact and shows a clear westward skew relative to the nucleus, likely tracing the narrow-line region."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04317v1/bpt.png",
+            "caption": "Bottom panels: [O iii ] λ ​ 5007 \\lambda 5007 /H β \\beta versus [N ii ] λ ​ 6583 \\lambda 6583 /H α \\alpha (left) and [S ii ] λ ​ λ ​ 6716 , 6731 \\lambda\\lambda 6716,6731 /H α \\alpha (right) spatially resolved diagnostic diagrams for the AGN-subtracted data cube, considering the narrow components only (i.e. without the broad component observed in [O iii ]). In the [N II] diagram, the curves from Kewley et al. (2001, solid) and Kauffmann et al. (2003, dashed-dot) mark the theoretical maximal and the empirical star-forming boundaries, respectively, while the Schawinski et al. (2007, dashed) line separates Seyfert-like and LINER-like excitation in the AGN regime. In the [S II] diagram, the Kewley et al. (2001, solid) curve separates star-forming from AGN-like ionization, and the Kewley et al. (2006, dashed) line divides Seyfert-like and LINER-like excitation. Most bins fall in the composite or star-forming regions, while bins on the west side of the nucleus, shown in red, are AGN-dominated. Top panels: spatial distribution of the bins color-coded by their classification in the corresponding BPT diagram. The white cross marks the location of the unresolved nuclear emission, the gray contour indicates the outflow extraction region. The discrete colors identify the BPT classes, while the transparency of each bin scales with the [O iii ] peak amplitude, as traced by the colorbars."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04317v1/outflow1.png",
+            "caption": "(Top) [O iii ] outflow maximum velocity map ( v max = | v off | + 2 ​ σ out v_{\\rm max}=|v_{\\rm off}|+2\\sigma_{\\rm out} ) derived from the second Gaussian component in the two-component fit of the binned cube, which we associate with the spatially resolved ionized outflow. Only bins where the second component is required with Δ ​ BIC > 10 \\Delta\\mathrm{BIC}>10 are shown. The black dot marks the location of the unresolved nuclear emission as traced by the spatial peak of the broad Balmer lines and the continuum. The red contour indicates the area where the integrated spectrum (bottom panel) was extracted to derive the average outflow properties, while the dashed black circle marks a projected galactocentric radius of 2 kpc, which we adopted as the maximum outflow radius. (Bottom) Integrated spectrum of the outflow region (black) with the best-fit model (red) and its decomposition into core (green) and outflowing (blue) components for the [O iii ] emission. The vertical dashed lines indicate the [O iii ] transitions at the systemic velocity of the galaxy and its associated error as derived from the kinematic modeling zero point velocity (see Sect. 4.6 ) A second broad component is required to reproduce the blueshifted wing of the [O iii ] line, confirming the presence of an extended ionized outflow."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04317v1/kinematic_maps.png",
+            "caption": "Maps of host galaxy kinematics derived from the AGN-subtracted data cube. The top row displays the ionized gas line-of-sight velocity (left) and velocity dispersion (right). The middle row presents the best-fit kinematic models assuming pure circular motion, with residuals shown in the bottom row. The kinematic center is marked by the white cross, whose major axis is aligned to the kinematic position angle and minor axis length is scaled by cos ⁡ ( i ) \\cos(i) to reflect the galaxy inclination to the line of sight. The velocity field is reproduced well by circular rotation, while residuals reaching ∼ 50 \\sim 50 km s -1 along the spiral-arm region suggest non-axisymmetric streaming motions."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04317v1/stars_kinematic_maps.png",
+            "caption": "(Top) Stellar velocity (left) and velocity dispersion (right) maps of the host galaxy derived from the fit of the Ca ii triplet absorption features ( λ ​ λ ​ 8498 , 8542 , 8662 \\lambda\\lambda 8498,8542,8662 Å). Only the bins with χ 2 / d . o . f . < 3 {\\chi}^{2}/{\\rm d.o.f.}<3 are shown to exclude unreliable fits. The white cross marks the kinematic center and is oriented according to the position angle and inclination derived from the kinematic modeling shown in Fig. 6 . The black circle marks the projected aperture used to average the stellar velocity dispersion for the M BH M_{\\rm BH} – σ ⋆ \\sigma_{\\star} estimate. (Bottom) Example of the stellar kinematic fit for a Voronoi bin located about 1.5 kpc northeast of the nucleus. Although the spectrum (black solid line) at red wavelengths is noisy and has forests of sky line subtraction residuals, the Ca ii triplet absorption features are robustly detected and fitted with stellar population templates (red), allowing us to derive the stellar velocity and velocity dispersion in each bin. The inset shows a zoom-in on the Ca ii triplet region. The best-fit model yields a stellar velocity of v ⋆ ≈ − 90 v_{\\star}\\approx-90 km s -1 and a velocity dispersion of σ ⋆ ≈ 60 \\sigma_{\\star}\\approx 60 km s -1 . The gray shaded regions indicate the masked ranges containing sky line subtraction residuals that were excluded from the fit."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04317v1/subtraction_example.png",
+            "caption": "AGN PSF subtraction example for a spaxel located ∼ 2 \\sim 2 kpc from the nucleus. The inset shows a zoomed-in image of the galaxy with the reference nuclear region highlighted as a gray cross box and the spaxel of interest marked with a white rectangle. The top plot shows the observed H α \\alpha complex dominated by the AGN PSF wing in black with the nucleus subtraction model in red. The dashed line shows the reference nuclear spectrum scaled by the B-spline modulation to match the PSF contribution in this spaxel ( S nucl ​ ( λ ) × B-Spline 3 S_{\\rm{nucl}}(\\lambda)\\times\\text{B-Spline}_{3} in Eq. 10 ). The dotted line shows the smooth polynomial component accounting for the host-galaxy continuum ( P 3 ​ ( λ ) P_{3}(\\lambda) in Eq. 10 ). The bottom panel displays the residual spectrum with its error after subtraction, revealing the underlying galaxy emission lines, which are then fitted with Gaussian profiles (green)."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04317v1/galimage.png",
+        "thumbnailAlt": "MUSE white-light image of Ton S180. The centroid of the bright AGN nucleus is marked with a cross. In the left corner we report the average PSF FWHM of 0.6 arcsec over the 4750 − 9350 4750-9350 Å spectral range. The white bar in the bottom left corner indicates a scale of 5 kpc at the redshift of th",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04322",
+        "title": "AGN-DB: A Unified Multi-Wavelength Database of Active Galactic Nuclei",
+        "summary": "We present the Active Galactic Nuclei Database (AGN-DB), a comprehensive, multi-wavelength catalog compiled from more than 100 publicly available AGN catalogs and samples released by the end of 2025, spanning radio to $\\gamma$-ray wavelengths. The database contains approximately 8.1 million unique sources, approximately 7.8 million of which remain after flagging stellar contaminants, and approximately 6.8 million of these are classified as AGN. Source cross-matching across catalogs is performed using Lyra, a Bayesian likelihood-ratio framework that jointly considers positional uncertainties, source densities, and photometric information to compute posterior match probabilities. The resulting catalog provides astrometric coordinates, redshifts, photometry, and classifications for each unique source. All multi-catalog provenance is preserved. For every property, we store the full array of values and originating catalog identifiers, enabling multi-epoch and multi-survey analyses. In this paper, we describe the AGN-DB pipeline, including the cross-matching methodology, and present the statistical properties of the v1.0 catalog. AGN-DB is designed to enable population studies, spectral energy distribution modeling, AGN classification, and variability analyses at an unprecedented scale. Its pipeline is designed to facilitate the integration of new catalogs, allowing AGN-DB to be updated regularly, with releases planned at least annually.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04322",
+        "htmlUrl": "https://arxiv.org/html/2609.04322v1",
+        "authors": [
+          "Alessandro Peca",
+          "Nico Cappelluti",
+          "C. Megan Urry",
+          "Zhongtian Hu",
+          "Jerry R. Bonnell",
+          "Jack McKeown",
+          "Giulia Cerini",
+          "Xulei Sun",
+          "Fabio Pacucci",
+          "Tracey Jane Turner",
+          "Peter G. Boorman",
+          "Aritra Ghosh",
+          "Connor Auge",
+          "Rebeka L. Böttger",
+          "Adi Foord",
+          "Massimiliano Galeazzi",
+          "Jeyhan S. Kartaltepe",
+          "Iver Warburton Kilmarrin",
+          "Allison Kirkpatrick",
+          "Michael J. Koss",
+          "Stephanie LaMassa",
+          "Md Mahmudunnobe",
+          "Stefano Marchesi",
+          "Lea Marcotulli",
+          "Isaac Moskowitz",
+          "Priyamvada Natarajan",
+          "Mitsunori Ogihara",
+          "Meredith Powell",
+          "David Sanders",
+          "Dominic Sicilian",
+          "Chuan Tian",
+          "Ezequiel Treister"
+        ],
+        "categories": [
+          "astro-ph.GA",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04322v1/sky_density_no_count.png",
+            "caption": "Sky density of AGN-DB sources in Aitoff projection (equatorial coordinates). The 7,790,749 7{,}790{,}749 sources of the reference sample (flagged stellar contaminants excluded, Section IV.1 ) are shown. The color scale indicates the number of sources per 0.1 ​ ° × 0.1 ​ ° 0.1\\arcdeg\\times 0.1\\arcdeg pixel on a logarithmic scale. The line crossing the map traces the Galactic plane. The broad survey boundaries explicitly outlined and labeled are Pan-STARRS [ 19 , δ ≥ − 30 ​ ° \\delta\\geq-30\\arcdeg ;] and the eROSITA-DE hemisphere [ 63 ] . Highlighted survey fields include Stripe 82 [ 6 , 48 , 72 ] and the smaller deep fields COSMOS [ 90 , 21 , 60 ] , CDF-S [ 54 ] , CDF-N [ 2 ] , XMM-LSS [ 20 ] , Lockman Hole [ 16 ] , Boötes [ 65 ] , and ELAIS-S1 [ 69 ] ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04322v1/pipeline_scheme.png",
+            "caption": "Schematic overview of the AGN-DB data processing pipeline, from catalog ingestion through catalog standardization, Bayesian cross-matching with Lyra , and final catalog generation."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04322v1/match_separations.png",
+            "caption": "Distribution of all pairwise angular separations between catalog sources associated with the same unique source by Lyra . The dashed vertical line marks the median separation of 0 ​ . ′′ ​ 041 0\\farcs 041 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04322v1/redshift_distributions.png",
+            "caption": "Redshift distributions in AGN-DB . The top-left panel shows spectroscopic redshifts ( z spec z_{\\mathrm{spec}} ), the top-right panel shows photometric redshifts ( z phot z_{\\mathrm{phot}} ), the bottom-left panel shows generic redshifts ( z z ), and the bottom-right panel shows the best redshifts (priority-selected, Section III.4 ). Dashed lines indicate the median."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04322v1/band_coverage.png",
+            "caption": "Photometric content of the AGN-DB reference sample (i.e., with stars removed) by wavelength regime: UV ( 0.13 0.13 – 0.3 ​ μ 0.3\\,\\mu m), Optical ( 0.3 0.3 – 1 ​ μ 1\\,\\mu m), Near-IR ( 1 1 – 2.5 ​ μ 2.5\\,\\mu m), Mid-IR ( 3 3 – 25 ​ μ 25\\,\\mu m), Far-IR/sub-mm ( 250 250 – 500 ​ μ 500\\,\\mu m), Radio ( 1.5 1.5 cm– 2 2 m), and X-ray and γ \\gamma -ray ( 0.1 0.1 keV– 100 100 GeV). Left: total number of valid measurements, summed over all merged bands of each regime, so that a source measured in several bands of the same regime contributes one count per band. Right: fraction of sources with at least one valid measurement in the regime. The contrast between the two panels in the X-rays reflects the many X-ray quantities (e.g., fluxes, counts, hardness ratios) stored per source."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04322v1/magnitude_distributions.png",
+            "caption": "Distributions of the merged magnitudes in the most populated photometric bands in AGN-DB , where each merged value is obtained by averaging all valid measurements for a given source. Each panel shows the corresponding magnitude distribution, together with its median value as a dashed line."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04322v1/flux_distributions.png",
+            "caption": "Same as Figure 7 , but for fluxes. The numbered labels of the X-ray and infrared-to-radio bands correspond to the catalog column names, and their associated energy ranges and wavelengths are listed in Table 4 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04322v1/best_class_pie.png",
+            "caption": "Main classification categories of the AGN-DB reference sample (i.e., after removing flagged stars), according to the labels each source carries across the five classification schemes (Section II.2 ). Sources with at least one AGN-type label in any scheme ( 87.5 % 87.5\\% ) are split into generic_agn ( 86.3 % 86.3\\% ) and explicitly typed AGN ( type1 , type2 , blazar , ∼ 1.2 % {\\sim}1.2\\% ). The remainder consists of sources with only a galaxy or cluster classification ( 3.3 % 3.3\\% ) and sources with no usable classification ( 9.2 % 9.2\\% , gray), which groups sources whose labels are all unknown with sources that have no classification entry at all. An additional 17 17 X-ray-rescued stellar candidates without an assigned category are not shown here."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04322v1/sky_density_no_count.png",
+        "thumbnailAlt": "Sky density of AGN-DB sources in Aitoff projection (equatorial coordinates). The 7,790,749 7{,}790{,}749 sources of the reference sample (flagged stellar contaminants excluded, Section IV.1 ) are shown. The color scale indicates the number of sources per 0.1 ​ ° × 0.1 ​ ° 0.1\\arcdeg\\times 0.1\\arcdeg",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04340",
+        "title": "Waveform models for the gravitational-wave memory effect: III. Phenomenological frequency-domain model for nonspinning binaries",
+        "summary": "We present a phenomenological frequency-domain model for the gravitational-wave (GW) memory signal from nonspinning binary-black-hole mergers on quasicircular orbits. We develop separate amplitude and phase models for the dominant $(l,m)=(2,0)$ spherical-harmonic mode of the GW memory signal. The amplitude and phase models are built from superpositions of elementary and transcendental functions, which can be evaluated efficiently. Both portions of the model are calibrated against a numerical-relativity surrogate model over mass ratios from one to eight. Their accuracy is assessed by computing their mismatch with the numerical-relativity models using the Advanced LIGO sensitivity curve from the fourth observing run. The mismatches are of the order $10^{-4}\\unicode{x2013}10^{-3}$ over the parameter space of total mass covered by LIGO. The resulting frequency-domain model is a more computationally efficient waveform model for the GW memory signal than a related time-domain model earlier produced by the authors. An open-access implementation of both the time-domain and frequency-domain models is provided in the Python package GWMemoryModel, which can be used for relevant analyses of nonspinning binary black holes.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04340",
+        "htmlUrl": "https://arxiv.org/html/2609.04340v1",
+        "authors": [
+          "Arwa Elhashash",
+          "David A. Nichols"
+        ],
+        "categories": [
+          "gr-qc",
+          "astro-ph.HE"
+        ],
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05118",
+        "title": "Probing Neutron Star Equation of State Universality with Gravitational Waves",
+        "summary": "Current neutron star equation-of-state inferences assume that a common equation of state describes all neutron stars. However, {poorly understood dense-matter physics may give rise to distinct long-lived stellar subpopulations following different mass--tidal-deformability relations, invalidating this assumption. In this Letter, we demonstrate that next-generation gravitational-wave observatories enable neutron star equation-of-state universality to be transformed from an assumption into a testable hypothesis. By combining hierarchical Bayesian inference with a piecewise-polytropic parametrization of the neutron star equation of state, we establish a framework for testing equation-of-state universality with next-generation gravitational-wave observatories. We find that about 30 (50) loud binary neutron star mergers with network SNRs above 100 are sufficient to provide compelling evidence for departures from equation-of-state universality, even if only 20% (10%) of the population exhibits one of the representative non-universality parametrizations considered here.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05118",
+        "htmlUrl": "https://arxiv.org/html/2609.05118v1",
+        "authors": [
+          "Praveer Tiwari",
+          "Ajit Kumar Mehta",
+          "K. G. Arun"
+        ],
+        "categories": [
+          "gr-qc",
+          "astro-ph.HE",
+          "nucl-th"
+        ],
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05128",
+        "title": "Can isolated binaries form unequal-mass binary black-hole mergers with a high-spin primary black hole?",
+        "summary": "GWTC-5 has revealed a subpopulation of merging binary black holes (BBHs) with a high-spin primary black hole (BH) and possibly unequal BH masses. GW241110 additionally exhibits a large spin-orbit misalignment, which suggests a hierarchical-merger origin. However, other formation scenarios are possible or even likely, especially for events without constraints on spin-orbit misalignment. As an alternative to hierarchical mergers, we investigate whether binary evolution can produce unequal-mass BBH mergers with a high-spin primary BH. Rather than performing comprehensive population-synthesis calculations, we examine the evolutionary pathways of forming merging BBHs and assess their uncertainties. We identify two possible pathways for producing unequal-mass BBHs with a high-spin primary. In initially wide binaries, mass-ratio reversal can make the tidally spun-up second-born BH both more massive and more rapidly rotating than the first-born BH; alternatively, in an initially close, unequal-mass binary, the primary star may evolve chemically homogeneously, while the secondary star evolves normally, producing a high-spin first-born BH that is more massive than its companion. Generally, large spin-orbit misalignment can be produced by large natal kicks or tertiary-induced nodal precession and/or Zeipel-Lidov-Kozai oscillations. We conclude that hierarchical mergers are not uniquely required to produce unequal-mass BBHs with a high-spin primary BH, although each isolated-binary pathway faces important theoretical constraints. Future detections of more merger events with primary BH spins around 0.7 would discriminate between binary evolution and hierarchical merger origin.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05128",
+        "htmlUrl": "https://arxiv.org/html/2609.05128v1",
+        "authors": [
+          "Xiao-Tian Xu",
+          "Dong Lai",
+          "Bin Liu"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.GA",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05128v1/Close-CHE.png",
+            "caption": "Formation path of merging binary black holes in initially close binaries if both stars evolve chemically homogeneously. The system begins with (1) a close binary containing two main-sequence (MS) stars of (near-)equal mass. Due to tidal spin-up and deformation, strong mixing occurs in both stars causing them to enter the chemically homogeneous evolution (CHE). The system evolves into (2) a double helium (He)-star binary. Then, it evolves through (3) the first core-collapse (CC) event, (4) a BH+He binary stage, and (5) the second CC event to produce (6) a BBH containing two high-spin BHs with (near-)equal masses. Finally, the BBH (7) merges within the Hubble time. The values in grey parentheses show the component masses, in M ⊙ M_{\\odot} , for an evolutionary example (see text), except that ‘1 d’ indicates the initial orbital period. Here, M BH , 1 ​ s ​ t M_{\\rm BH,1st} and M BH , 2 ​ n ​ d M_{\\rm BH,2nd} denote the masses of the first- and second-born BHs, and the ranges of M BH , 2 ​ n ​ d / M BH , 1 ​ s ​ t M_{\\rm BH,2nd}/M_{\\rm BH,1st} are intended only as approximate references. We refer to Marchant et al. [56] for detailed binary evolution models on this channel and Mandel and de Mink [51] for population synthesis predictions."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05128v1/Close-CHE-unequal.png",
+            "caption": "Formation path of merging binary black holes in initially close binaries if only the primary star evolves chemically homogeneously. The system begins with (1) a close binary containing two main-sequence (MS) stars of unequal masses. The efficiency of rotational mixing varies with stellar mass, allowing the primary star to enter the chemically homogeneous evolution (CHE) while the secondary star evolves normally. Since the primary star does not expand, the system evolves into (3) a close helium (He)-star+MS binary without mass transfer. Then, the He star can form (4) a high-spin first-born BH. Since the orbital period is still below 10 d, the expansion of the initial secondary star triggers (5) Case A MT onto the first-born BH, during which orbital widening occurs, as the BH is likely more massive than the mass donor. After that, the system evolves into (6) a relatively wide BH+He binary. Through (7) the second CC event, the He star produces a low-spin second-born BH or a neutron star (NS). If the second CC is associated with a suitably oriented natal kick, the resulting BBH may merge within the Hubble time. The values in grey parentheses show the component masses, in M ⊙ M_{\\odot} , and orbital period for an evolutionary example (see text). Here, M BH , 1 ​ s ​ t M_{\\rm BH,1st} and M BH , 2 ​ n ​ d M_{\\rm BH,2nd} denote the masses of the first- and second-born BHs, and this formation path gives M BH , 2 ​ n ​ d / M BH , 1 ​ s ​ t ≲ 0.4 M_{\\rm BH,2nd}/M_{\\rm BH,1st}\\lesssim 0.4 . We refer to Marchant et al. [55] for detailed binary evolution models on this channel and Xu et al. [100] for population synthesis predictions for the BH+MS stage expected by this channel."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05128v1/Close-CHE.png",
+        "thumbnailAlt": "Formation path of merging binary black holes in initially close binaries if both stars evolve chemically homogeneously. The system begins with (1) a close binary containing two main-sequence (MS) stars of (near-)equal mass. Due to tidal spin-up and deformation, strong mixing occurs in both stars cau",
+        "catchupDate": "2026-09-07"
+      }
+    ],
+    "repl": [
+      {
+        "absId": "2603.05588",
+        "title": "Radiation GRMHD Models of Accretion onto Stellar-Mass Black Holes: III. Near-Eddington Accretion",
+        "summary": "We present a comprehensive analysis of four near-Eddington black hole accretion models from GRMHD simulations with full radiation transport. This study investigates the dynamical effects of magnetic field topology and black hole spin using two representative choices of each. Two stable near-Eddington solutions emerge in these models: a thin thermal disk embedded within a magnetic envelope when sufficient net vertical magnetic flux is present (e.g., vertical field $\\gtrsim 5\\times10^5$ G at $20r_g$), and a magnetically elevated disk when the net vertical flux is weak or absent. One model initialized without net vertical flux evolves into the thin disk solution, as strong, anisotropic radiation feedback at high accretion rates promotes the accumulation of vertical magnetic flux in the inner disk. In the thin thermal disk, accretion is driven primarily by mean-field Maxwell stress and proceeds largely within the magnetic envelope, while heat dissipation is spatially decoupled and concentrated near the midplane. However, in the magnetically elevated disk, accretion occurs throughout the disk body and is comparably driven by mean-field and turbulent stresses; heat dissipation therefore occurs locally through turbulence. Radiation transport is diffusion-dominated, enabling efficient radiative cooling ($\\sim$4-10%). An optically thin wind is launched from the disk surface by combined radiative and magnetic forces, with stronger winds found in models with larger vertical magnetic flux and higher spin. Both strong and weak jets are produced: strong jets are persistent, highly relativistic, and magnetically driven, while weak jets are intermittent, mildly relativistic, and powered by a combination of magnetic and radiative forces.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2603.05588",
+        "htmlUrl": "https://arxiv.org/html/2603.05588v5",
+        "authors": [
+          "Lizhong Zhang",
+          "James M. Stone",
+          "Shane W. Davis",
+          "Yan-Fei Jiang",
+          "Patrick D. Mullen",
+          "Christopher J. White"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2603.05588v5/img/hst_compare.jpg",
+            "caption": "Time evolution of the mass accretion rate M ˙ 3 \\dot{M}_{3} (top) and normalized magnetic flux φ 3 \\varphi_{3} (bottom) measured at r = 3 ​ r g r=3r_{g} ; the subscript ‘3’ denotes quantities evaluated at this radius. The accretion rate is expressed in units of the Eddington accretion rate, assuming a 10% radiative efficiency. The definitions of all quantities are provided in Section 3.1 of 47 . The left panels show models with low black hole spin, while the right panels correspond to high-spin cases. Each time series is smoothed using a moving boxcar with a time window of 800 ​ r g / c 800r_{g}/c and shaded in the same color to indicate the 1 ​ σ 1\\sigma variation within the local time window. Line colors represent different accretion rates, as indicated in the legend. Low-resolution counterparts, where applicable, are shown by dashed lines. The black dotted lines in the lower panels denote the non-radiative single-loop counterparts (see NoRad-a3 and NoRad-a9 in 48 ). Color-shaded time intervals mark the epochs used for time-averaged analysis of the steady-state structure, with orange for model E07-a3-DL and gray for the others."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.05588v5/img/timestream.jpg",
+            "caption": "Time evolution of gas density, toroidal magnetic field, and midplane vertical magnetic field measured at a cylindrical radius of 20 ​ r g 20r_{g} . In the space-time diagrams of gas density (top) and toroidal magnetic field (middle), gray dashed lines mark the scattering photosphere. In the time series of the midplane vertical magnetic field (bottom), gray lines show the raw data sampled at Δ ​ t = 10 ​ r g / c \\Delta t=10r_{g}/c , and blue lines show the moving-boxcar average with a time window of 100 ​ r g / c 100r_{g}/c . The vertical dashed lines in E07-a3-DL marks the time ( t = 17000 ​ r g / c t=17000r_{g}/c ) when the system evolves from a magnetically elevated flow into a steady thin thermal disk as vertical magnetic flux accumulates."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.05588v5/img/turb_compare.jpg",
+            "caption": "Comparison of radial gas density flow (colormap) and magnetic field lines (streamlines) between an instantaneous snapshot (top) and the time-averaged structure (bottom) in the steady state, using model E08-a9 as an example. The left panels show the global view, while the right panels present the zoomed-in regions outlined by yellow dashed boxes. Red indicates gas moving radially outward and blue indicates gas flowing inward. Both the gas flow and magnetic field are highly turbulent in the snapshot but well organized in the time average. Other near-Eddington models exhibit similar behavior."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.05588v5/img/profile2d.jpg",
+            "caption": "2D profiles of the two stead-steady solutions in the near-Eddington regime, showing gas density (upper left and middle), fluid-frame radiation energy density (upper right), magnetic-to-thermal pressure ratio (lower left and middle), and magnetization (lower right). The thermal pressure includes both gas and radiation contributions. Each panel presents a side-by-side comparison between the thin thermal disk (left half) and the magnetically elevated disk (right half), using models E08-a3 and E09-a3-DL as examples, respectively. The left column shows instantaneous snapshots at t = 60000 ​ r g / c t=60000r_{g}/c , while the middle and right columns show the time-averaged profiles over t = 50000 t=50000 - 60000 ​ r g / c 60000r_{g}/c . Different streamlines are overlaid on the time-averaged panels: velocity in the density panels, magnetic field in the pressure-ratio panels, coordinate-frame radiation flux in the radiation-energy panel, and fluid-frame radiation flux in the magnetization panel. The mesh block configuration is outlined with gray solid lines in the density snapshot. Auxiliary lines help distinguish different regions: orange lines mark jet boundaries, solid gray lines trace the scattering photosphere, and gray dashed lines denote disk boundaries defined by zero Bernoulli parameter. All related definitions are provided in Section 3.2 of 48 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.05588v5/img/hori_compare.jpg",
+            "caption": "Radial profiles of two representative near-Eddington models in time- and azimuthal average. The left column corresponds to the thin thermal disk embedded within a magnetic envelope, and the right column to the magnetically elevated disk. The gray shaded region marks the plunging region. The first row shows the disk optical depths: scattering (solid) and effective (dot-dashed). The remaining rows present density, pressure, temperature, radial angular momentum flux, and effective viscosity, each measured as disk averages (solid) or at the midplane (dashed, where applicable). Gas, magnetic, and radiation components in the pressure and temperature panels are shown in black, blue, and red, respectively. In the angular momentum flux and effective viscosity panels, turbulent Reynolds, Maxwell, and radiation diffusion stresses are likewise shown in black, blue, and red. Details on how these quantities are computed are provided in Section 3.3 and 3.5 of 48 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.05588v5/img/vert_compare.jpg",
+            "caption": "Vertical profiles of two representative near-Eddington models in time- and azimuthal average. The left column corresponds to the thin thermal disk embedded within a magnetic envelope, and the right column to the magnetically elevated disk. From top to bottom, the rows show density, radial velocity, temperature, pressure, and vertical forces, measured at horizontal distances of 20 ​ r g 20r_{g} (solid) or 4 ​ r g 4r_{g} (dashed, where applicable), with the corresponding gravitationally bounded disk region highlighted in yellow or gray, respectively. Gas, magnetic, and radiation components are plotted in black, blue, and red, respectively. The horizontal dotted line in the velocity panel marks zero velocity. In the bottom row, the frame force (dominated by gravity) is plotted with its sign inverted ( − f frame -f_{\\mathrm{frame}} ) as gray dot-dashed lines for comparison. Details on the computation of four-forces are provided in Section 3.4 of 48 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.05588v5/img/vert_support.jpg",
+            "caption": "Percentage contributions to the vertical support from gas (black), magnetic fields (blue), and radiation (red) in the thin thermal disk model E08-a3, measured at a horizontal distance of 20 ​ r g 20r_{g} using time- and azimuthal averages. For each four-force component that provides support against gravity, we compute its contribution as a percentage of the total vertical support. The definitions of the four-force terms ( f gas f_{\\mathrm{gas}} for gas pressure force, f pmag + f tmag f_{\\mathrm{pmag}}+f_{\\mathrm{tmag}} for the total magnetic force, and f rad f_{\\mathrm{rad}} for the radiation force) are given in Section 3.4 of 48 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.05588v5/img/angmom2d.jpg",
+            "caption": "2D radial angular momentum flux components of two representative near-Eddington models in time- and azimuthal average. The top row corresponds to the thin thermal disk embedded within a magnetic envelope, and the bottom row to the magnetically elevated disk. From left to right column, the columns show the mean-field Maxwell stress, turbulent Maxwell stress, turbulent Reynolds stress, and radiation diffusion stress. Auxiliary lines mark the scattering photosphere (black) and disk surface (cyan). Detailed definitions of each component are provided in Section 3.5.1 of 48 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2603.05588v5/img/hst_compare.jpg",
+        "thumbnailAlt": "Time evolution of the mass accretion rate M ˙ 3 \\dot{M}_{3} (top) and normalized magnetic flux φ 3 \\varphi_{3} (bottom) measured at r = 3 ​ r g r=3r_{g} ; the subscript ‘3’ denotes quantities evaluated at this radius. The accretion rate is expressed in units of the Eddington accretion rate, assuming",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2606.17496",
+        "title": "Effects of Rotation on the Gravitational Momentum Transfer in Neutron-Star Kicks and Implications for Spin-Kick Alignment",
+        "summary": "Neutron stars are often born with large recoil velocities, or natal kicks, whose physical origin remains an open question in core-collapse supernova theory. Observations suggest that the spin-kick angle distribution is not isotropic but skewed toward a spin-kick vector alignment. One possible kick mechanism is the gravitational tug-boat effect, in which anisotropic ejecta gravitationally accelerate the proto-neutron star over a timescale of seconds after shock revival, although the long-term importance of this effect relative to other hydrodynamic forces remains debated. Previous derivations of the tug-boat mechanism do not include the effect of initial stellar rotation. Here we derive a minimalist extension to assess how rotation of the expanding asymmetric mass distribution influences spin-kick alignment of gravitational momentum transfer. We show that the spin-kick angle is determined by the product of two factors, one that depends on the ratio of shock expansion time to the rotation period and the other which depends on the orientation of the asymmetric mass distribution with respect to the spin-axis. For fast enough rotation, the first factor amounts to axially averaging out non-axisymmetry thereby suppressing the perpendicular tug and leaving only a spin-aligned force. However, the rotation speed required for this effect would be unrealistically large unless magnetic fields could transport angular momentum from the core to the outflow efficiently. Spin-kick alignment by the tug-boat mechanism would otherwise require the second factor, namely a preferentially spin-aligned mass flux asymmetry. The rotational-averaging framework developed here suggests that, in general, for any kick mechanism that is not sourced by rotation, including rotation will have some tendency to spin-align the kick, but reduce the kick magnitude.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2606.17496",
+        "htmlUrl": "https://arxiv.org/html/2606.17496v3",
+        "authors": [
+          "Yiming Lu",
+          "Eric G. Blackman"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.SR"
+        ],
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2606.20201",
+        "title": "Dependences of radio pulsar parameters on the kick velocity",
+        "summary": "According to several studies, analysis of observational data and theoretical modeling favor a bimodal distribution of the natal velocity kick of neutron stars. We analyze this proposal by using available data on radio pulsars. For $\\sim200$ normal isolated radio pulsars with well-measured spin and kinematic parameters, we determine if they belong to the low- or high-velocity mode of such a distribution by applying the parametrization proposed by Igoshev (2020). Our results demonstrate that about $23\\%$ belong to the low-velocity mode. We then analyze the differences in the properties of the two sets of pulsars belonging to the two modes. For some parameters (characteristic ages and distances), we see a clear difference between the two modes. However, for these quantities, it can be attributed to selection bias. For those parameters that are not subject to strong selection, such as pulse width, we do not observe any difference. Interestingly, we detect a notable difference in the magnetic field distribution between the two modes. Lower-field pulsars ($B\\lesssim 10^{12}$~G) are overabundant among objects from the low-velocity mode. Among pulsars with low fields ($\\lesssim 10^{11}$~G), we do not identify any objects from the high-velocity mode of the kick distribution. The origin of this discrepancy is not clear, and we discuss several possibilities. Our analysis demonstrates that, most probably, this feature can be explained by selection effects. Thus, we conclude that there is no robust bimodality in physical parameters of radio pulsars that can be related to the proposed bimodality of the kick velocity. This can be considered as an indirect argument against the hypothetical bimodality in the NS kick distribution. (abridged)",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2606.20201",
+        "htmlUrl": "https://arxiv.org/html/2606.20201v3",
+        "authors": [
+          "Anton D. Lazarev",
+          "Sergei B. Popov"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2606.20201v3/images/orbits/o_TZ_J0157+6212.png",
+            "caption": "(a) PSR J0157+6212"
+          },
+          {
+            "url": "https://arxiv.org/html/2606.20201v3/images/orbits/o_TZ_J0820-1350.png",
+            "caption": "(b) PSR J0820-1350"
+          },
+          {
+            "url": "https://arxiv.org/html/2606.20201v3/images/orbits/o_TZ_J2018+2839.png",
+            "caption": "(c) PSR J2018+2839"
+          },
+          {
+            "url": "https://arxiv.org/html/2606.20201v3/images/orbits/o_TZ_J1841-0425.png",
+            "caption": "(d) PSR J1841-0425"
+          },
+          {
+            "url": "https://arxiv.org/html/2606.20201v3/images/manual/kicks_all.png",
+            "caption": "(a) All pulsars in our sample"
+          },
+          {
+            "url": "https://arxiv.org/html/2606.20201v3/images/manual/kicks_young.png",
+            "caption": "(b) Pulsars with τ c ≤ 10 \\tau_{c}\\leq 10 Myr"
+          },
+          {
+            "url": "https://arxiv.org/html/2606.20201v3/images/extra/PPdot_mixed.png",
+            "caption": "The P − P ˙ P-\\dot{P} diagram. Pulsars from the low- and high-velocity distribution modes are represented by dark blue and orange circles, respectively. Grey points represent all sources from the ATNF Pulsar Catalogue with measured P P and P ˙ \\dot{P} ."
+          },
+          {
+            "url": "https://arxiv.org/html/2606.20201v3/images/CDFs_95/AGE_CDF_95.png",
+            "caption": "(a) Spin-down age"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2606.20201v3/images/orbits/o_TZ_J0157+6212.png",
+        "thumbnailAlt": "(a) PSR J0157+6212",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.01109",
+        "title": "Complex Lags from Simple Physics",
+        "summary": "X-ray timing information produced through Fourier analysis from the variable emission of black hole X-ray binaries has been used for several decades to provide key insights into the physical setup of these systems not measurable with spectroscopy. In particular, quasi-periodic oscillations within these systems have been of particular interest and remain the source of great debate on how they come about. We investigate the timing products of simple toy models of QPO variability to provide more intuition when thinking about signals produced by these sources. We simulate simple physical setups and show how phase lags and coherence of the signals change in these different setups. We first focus on properties of QPO like signals under a single driving signal assumption. We then investigate the case of multiple oscillations in a signal. Finally, we investigate how timing products change when QPOs are produced by time dependent modulation of periodic signals. Many simple physical setups with common driving signals are able to reproduce complex non-linear phase lags that resemble those present in the data. The changes in physical setup aligns with experience in the data, such as differing power spectra but fall short of reproducing the data as expected. Multiple incoherent processes present in the signal struggle to reproduce behaviour present in the data. Coherence seems to be a more useful tool for differentiating between setups. Fourier analysis with complicated data like that produced by X-ray binaries can lead one to be tempted to invoke exotic lag mechanisms without the appropriate framing. This paper attempts to help provide tools and intuition as to how different phenomena in signals (particularly relating to QPOs) can result in non-linear phase lags with explicit structure.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.01109",
+        "htmlUrl": "https://arxiv.org/html/2609.01109v2",
+        "authors": [
+          "Benjamin Ricketts",
+          "Gregoire Marcel"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2510.26621",
+        "title": "Study of neutrino spin oscillations in a gravitational field with a differential equations method",
+        "summary": "In this work, we employ Ordinary Differential Equation solution method to study neutrino spin oscillations in the case when they are gravitationally scattered off a rotating Kerr black hole. Previously, this problem involved the integral solution of the Hamilton-Jacobi equation. We analyze the consistency of these two methods.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2510.26621",
+        "htmlUrl": "https://arxiv.org/html/2510.26621v2",
+        "authors": [
+          "Mridupawan Deka",
+          "Maxim Dvornikov"
+        ],
+        "categories": [
+          "hep-ph",
+          "astro-ph.HE",
+          "gr-qc"
+        ],
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.03016",
+        "title": "Strong Constraints on Line Signals from Dark Matter Annihilation in a Nearby Subhalo",
+        "summary": "We present a dedicated search for monochromatic gamma-ray emission from a recently proposed nearby dark matter subhalo candidate. Using nearly 15 years of Fermi-LAT Pass 8 data, we perform a sliding-window search for gamma-ray lines between 10 and 300 GeV. We do not find any statistically significant evidence for a line signal. The largest excess occurs at $E_\\gamma \\simeq 28 \\, {\\rm GeV}$ with a local significance of $2.5\\sigma$. We therefore derive 95% confidence level upper limits on the annihilation cross section for $\\chi\\chi \\rightarrow \\gamma\\gamma$. Under the assumed NFW subhalo model, the resulting constraints are stronger than existing Galactic Center line limits over much of the explored mass range. We further translate these line constraints into bounds on well-motivated WIMP models, such as Higgs-portal and Wino dark matter scenarios, restricting previously open parameter regions consistent with thermal freeze-out as well as models associated with dark matter interpretations of the Galactic Center Excess.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.03016",
+        "htmlUrl": "https://arxiv.org/html/2609.03016v2",
+        "authors": [
+          "Asier Salces Pérez",
+          "Thong T.Q. Nguyen",
+          "Pedro De la Torre Luque",
+          "Tim Linden"
+        ],
+        "categories": [
+          "hep-ph",
+          "astro-ph.HE"
+        ],
+        "catchupDate": "2026-09-07"
+      }
+    ]
   }
 }

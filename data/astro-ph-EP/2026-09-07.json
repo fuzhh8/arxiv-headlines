@@ -1,14 +1,1359 @@
 {
+  "schemaVersion": 1,
+  "status": "ok",
+  "source": "arxiv-catchup",
   "category": "astro-ph.EP",
   "date": "2026-09-07",
+  "generatedAt": "2026-09-14T14:33:22.843Z",
+  "figuresStatus": "complete",
+  "figureCounts": {
+    "processed": 27,
+    "total": 27,
+    "found": 26
+  },
   "counts": {
-    "new": 0,
-    "cross": 0,
-    "repl": 0
+    "new": 23,
+    "cross": 2,
+    "repl": 5
   },
   "papersBySection": {
-    "new": [],
-    "cross": [],
-    "repl": []
+    "new": [
+      {
+        "absId": "2609.04318",
+        "title": "Composition gradients in sub-Neptunes: K2-18 b and TOI-270 d as case studies",
+        "summary": "Structure models of sub-Neptunes commonly assume purely adiabatic interiors with distinct layers of homogeneous composition. We assess how allowing for more complex interiors with composition gradients affects the inferred internal structure and bulk compositions of the sub-Neptunes K2-18 b and TOI-270 d. We compare purely adiabatic models with distinct layers against models that include composition gradients and stable non-convective regions. We present solutions that are consistent with the observed masses, radii, and atmospheric boundary conditions. We find that composition gradients significantly increase the range of viable interior structures: For example, the interior degeneracy remains substantial even for fixed mass and radius and the maximum hydrogen-helium (H-He) mass fraction can increase by up to a factor of five for K2-18 b. We further show that correlations, such as those between the H-He abundance and the ice-to-rock or rock-to-iron ratios, can weaken when composition gradients are introduced. For example, the Spearman rank correlation coefficient between the H-He and iron abundances decreases from $\\sim0.7$ to $\\sim0.4$ for TOI-270 d in our models. Purely adiabatic models underestimate the range of plausible compositions and overestimate the impact of more precise measurements, atmosphere models, and host star constraints on a more accurate characterization. We suggest that interior models of sub-Neptunes should by default include more complex interiors, such as composition gradients and non-convective regions, when using data for interpreting the planetary structure, formation, and evolution.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04318",
+        "htmlUrl": null,
+        "authors": [
+          "Luca Morf",
+          "Ravit Helled"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04450",
+        "title": "Circumbinary planets in coplanar triple-star systems: I. Minimum eccentricity variation region",
+        "summary": "We aim to determine the conditions under which Lidov-Kozai oscillations can arise for circumbinary planets in hierarchical triple-star systems, and to identify the orbital regions where competing secular perturbations minimize eccentricity excitation. We analyzed the statistical properties of hierarchical triples from the Multiple Star Catalog to construct representative synthetic configurations. We then performed N-body simulations of circumbinary planets embedded in these systems, systematically exploring their orbital evolution and long-term stability across a range of semimajor axes and inclinations. For representative compact hierarchical triple-star systems with masses $m_0 \\sim m_1 \\approx 0.75\\,{\\rm M}_\\odot$ and $m_2 \\approx 0.6\\,{\\rm M}_\\odot$ and eccentricities $e_1 \\sim 0.1$ and $e_2 \\sim 0.4$, dynamically significant stable circumbinary regions exist only in sufficiently hierarchical configurations, with period ratios $P_2 /P_1 \\gtrsim 10^2$. In this regime, the secular competition between the tertiary perturbations and the apsidal precession induced by the compact inner binary determines both the onset of Lidov-Kozai oscillations beyond a critical distance ($a_{\\rm LK}$) and the location of a region where eccentricity variations are minimized, i.e., the minimum eccentricity variation region (MER). We derived analytical estimates for these dynamical features, showing that the MER is well described by the analytical quantity $a_{\\rm short}$ on short and intermediate timescales, while on secular timescales it converges toward the equilibrium prediction $a_{\\rm ME}$. These analytical estimates agree well with N-body simulations. Application to the observed triple system WDS 08403+1921 confirms that $a_{\\rm LK}$ and $a_{\\rm ME}$ accurately identify the main dynamical features of the stability map.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04450",
+        "htmlUrl": "https://arxiv.org/html/2609.04450v1",
+        "authors": [
+          "Emmanuel Gianuzzi",
+          "Mario Sucerquia",
+          "Nicolás Cuello",
+          "Cristian Giuppone"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04450v1/Figuras/scheme.png",
+            "caption": "Schematic view of the configuration of our scenario study: a circumbinary planet embedded in coplanar hierarchical triple-star system."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04450v1/C2_HD_paper_annotated.png",
+            "caption": "Dynamical maps in the ( P p / P 1 , i p ) (P_{p}/P_{1},i_{p}) plane for a 0.1 ​ M J 0.1\\,\\mathrm{M}_{J} CBP-H3S with configuration C 2 C_{2} (see Table 1 ). The upper horizontal axis shows the ratio between the tertiary and planetary orbital periods. White regions correspond to unstable initial conditions that result in collisions or escape. Top : Maximum eccentricity variation. The vertical dashed lines mark the analytical estimates of a M ​ E a_{ME} (left) and a L ​ K a_{LK} (right), given by Eqs. ( 2 ) and ( 3 ), respectively. The vertical light gray curve indicates the location of a M ​ E ​ R a_{MER} (Eq. 5 ). Middle : Maximum inclination variation. Bottom : MEGNO chaos indicator. Horizontal dashed lines in middle and bottom panels mark the characteristic inclinations discussed in the text."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04450v1/delta_e_annotated.png",
+            "caption": "Dynamical map in the ( P p / P 1 , e ) (P_{p}/P_{1},e) plane for coplanar orbits, constructed using Δ ​ e \\Delta e ( top ), together with the minimum value of Δ ​ e \\Delta e reached at each P p / P 1 P_{p}/P_{1} (bottom) . The light blue, pink, and black curves show e s , CS ​ ( a ) e_{s,\\mathrm{CS}}(a) , e u ​ f , CB ​ ( a ) e_{uf,\\mathrm{CB}}(a) , and e short ​ ( a ) e_{\\rm short}(a) (Eq. 4 ), respectively. The vertical dashed orange line marks the analytical estimate a short a_{\\rm short} , and the vertical dashed blue line indicates the location of a ME a_{\\rm ME} ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04450v1/Figuras/LK_annotated.png",
+            "caption": "Map of KL activity for a planet initially located at 0.411 , au 0.411,\\mathrm{au} , with e p = 0.3 e_{p}=0.3 and i p = 53 ∘ i_{p}=53^{\\circ} , as a function of the period ratios P p / P 1 P_{p}/P_{1} and P 2 / P p P_{2}/P_{p} . Each cell corresponds to a numerical integration of duration ≥ 10 5 ​ yr \\geq 10^{5}\\,\\mathrm{yr} . The dotted and dashed lines indicate the predictions of Eqs. ( 2 ) and ( 3 ), respectively. Black crosses mark the representative systems discussed in Appendix C . A similar secular competition between LK forcing and additional sources of apsidal precession has been discussed by Hamers et al. (2016) and Martin et al. (2022) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04450v1/real_HD_paper_annotated.png",
+            "caption": "Same as Fig. 7 but for the real system WDS 08403+1921. The vertical dashed lines indicate the analytical estimates a M ​ E a_{ME} (left) and a L ​ K a_{LK} (right) given by Eqs. ( 2 ) and ( 3 ). Initial conditions with a p < a L ​ K a_{p}<a_{LK} are expected to be LK-suppressed. Horizontal dashed lines indicate the characteristic inclinations discussed in the text."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04450v1/varpi_difference.png",
+            "caption": "Evolution of the relative apsidal angles between the planet and the inner ( left column ) and outer ( right column ) orbits for the same integrations shown in Fig. 14 . Each row corresponds to a different initial mutual inclination of a planet."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04450v1/Figuras/scheme.png",
+        "thumbnailAlt": "Schematic view of the configuration of our scenario study: a circumbinary planet embedded in coplanar hierarchical triple-star system.",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04562",
+        "title": "A Cross-Laboratory Comparison Study of Titan Haze Analogs: Surface Energy II",
+        "summary": "The organic haze particles on Titan play important roles in atmospheric cloud formation and aerosol-lake interactions. These processes are strongly influenced by the surface energy of the haze particles, which controls cohesion and wetting behavior. This study presents a comparative analysis of 32 laboratory-produced haze analog samples (\"tholins\") synthesized across three laboratories. Using contact angle measurements, we determine the total surface energy and its dispersive and polar components for all samples, systematically evaluating the effects of substrate choice, air exposure, initial N2/CH4 gas mixture, and experimental setup. We find that tholin samples exhibit minimal substrate dependence, whereas exposure to ambient air substantially modifies the surface chemistry, altering the balance between dispersive and polar components. Thus, future Titan-relevant surface property measurements may use any substrate but must keep samples pristine. Surface energies vary weakly across methane concentrations, from 1-10% CH4 in N2, indicating that Titan's hazes formed at different altitudes should exhibit broadly similar cohesiveness. In contrast, experimental conditions such as gas exposure time and energy source produce the dominant differences in surface energy, driven largely by variations in polar components. Despite these differences, tholin samples exhibit high dispersive components, implying that Titan's hazes should act as efficient cloud condensation nuclei for hydrocarbon clouds and should generally sink into Titan's lakes. Given observed ethane ice clouds, we conclude that cold plasma tholins may be better physical analogs for Titan's hazes than samples produced with far-ultraviolet irradiation, though intrinsic surface energies of UV tholins remain uncertain due to film thickness limitations.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04562",
+        "htmlUrl": "https://arxiv.org/html/2609.04562v1",
+        "authors": [
+          "Eric C. Austin",
+          "Xinting Yu",
+          "Chao He",
+          "Cara Pesciotta",
+          "Ella Sciamma-O'Brien",
+          "Joshua A. Sebree",
+          "Jose Raul Montes-Bojorquez",
+          "Adis Husić",
+          "Erik White",
+          "Christopher R. Bond",
+          "Sarah Hörst",
+          "Farid Salama",
+          "Patricia McGuiggan"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04562v1/figures/experimentalSetupDiagrams/setup_UNI_260505.png",
+            "caption": "Figure 1 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04562v1/figures/experimentalSetupDiagrams/setup_JHU_260501.png",
+            "caption": "Figure 2 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04562v1/figures/experimentalSetupDiagrams/setup_ARC_260501.png",
+            "caption": "Figure 3 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04562v1/figures/Picture1.png",
+            "caption": ": Images showing the pristine sample production and handling process with the ARC/COSmIC setup samples as an example (panels a-f) and all the exposed samples (panel g). (a) Custom-built dry N 2 transporting vessel handled in the N 2 glove box. (b) PELCO vacuum desiccator used for sample transportation handled in the N 2 glove box. (c) PELCO vacuum desiccator containing blank substrates prior to sample deposition. (d) Tholin samples being produced in the ARC/COSmIC setup. (e) Tholin sample being handled and packed in an N 2 glove box with an oxygen sensor showing 0.2% vol O 2 level. (f) Packed PELCO vacuum desiccator containing pristine tholin samples under vacuum and ready for shipment. (g) Exposed samples shipped in PELCO SEM pin storage boxes (from left to right: ARC/COSmIC, JHU/PHAZER with UV samples on the top and plasma samples on the bottom, and PAC/UNI). All samples shown were produced using the 5% CH 4 in N 2 gas mixture."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04562v1/figures/NASA_10_diiodo_glass_revised.png",
+            "caption": "Figure 5 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04562v1/figures/NASA_10_water_glass_revised.png",
+            "caption": "Figure 6 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04562v1/figures/figure4_260505_Letters.png",
+            "caption": ": Surface energies of pristine and air-exposed tholins produced from 5% CH 4 in N 2 on glass, quartz, and mica: (a) ARC/COSmIC plasma, (b) JHU/PHAZER plasma, (c) JHU/PHAZER UV, and (d) UNI/PAC UV. Colored bars show total surface energy and identify the substrate; silver and gray segments show the dispersive and polar components, respectively. Black, blue, and red error bars denote 1 σ \\sigma uncertainties in the total, dispersive, and polar values, respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04562v1/figures/figure5_260505_Letters.png",
+            "caption": ": Surface energies of pristine tholins for each gas mixture and experimental setup. Panel (a) shows total surface energy with dispersive (silver) and polar (gray) components; panels (b) and (c) emphasize the dispersive and polar components, respectively. Bar colors denote the initial N 2 /CH 4 gas mixture. Black, red, and blue error bars denote 1 σ \\sigma uncertainties in the total, dispersive, and polar values, respectively."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04562v1/figures/experimentalSetupDiagrams/setup_UNI_260505.png",
+        "thumbnailAlt": "Figure 1 from the paper",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04597",
+        "title": "Retrieving Ocean Glint Reflectance Signatures from Directly Imaged Earth-like Exoplanets",
+        "summary": "Future space telescopes searching for extraterrestrial life require methods to detect environments that can potentially support life. Liquid water is considered essential for life as we know it and its presence is therefore an important observable when characterizing potentially Earth-like exoplanets. Remotely inferring the presence of surface liquid water on a world from spatially unresolved observations is an outstanding challenge where the detection of ocean glint could provide supporting evidence. This study assesses the feasibility of detecting ocean glint from Earth-like exoplanets using simulated data from NASA's Habitable World Observatory (HWO). We conducted retrievals on these simulated observations using a model that included a glint contribution and performed model selection against retrievals that did not include glint. We find that over a range of spectral signal-to-noise ratios from 5 to 25, a phase angle of at least 120 deg is necessary for glint detection. Our results offer the opportunity to shape mission development by providing constraints on key telescope observing requirements.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04597",
+        "htmlUrl": "https://arxiv.org/html/2609.04597v1",
+        "authors": [
+          "Eleanor Cornish",
+          "Tyler D. Robinson"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04597v1/glint_phase_compare_75cloud.png",
+            "caption": ": Phase-dependent (colors) apparent albedo spectra from our updated rfast model for an ocean-covered Earth and assuming 75% cloud coverage (left). The equivalent figure adapted from the high-fidelity Earth simulation data of Ryan & Robinson [23] are shown for comparison (right). All spectra are at a resolving power ( λ / Δ ​ λ \\lambda/\\Delta\\lambda ) of 140. Deeper water bands in the rfast simulations are due to this model only including lower-atmospheric clouds, whereas the Ryan & Robinson [23] simulations include high-altitude clouds that have lower contrast in gas absorption bands (as they obscure the deep atmosphere)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04597v1/with_without_glint_comparison.png",
+            "caption": ": Simulated HWO data and error bars (black) alongside a best-fit glinting model (pink) and non-glinting model (blue) for phase angle of 135 ∘ and SNR of 10. Retrievals that include glint are decisively preferred to the retrievals that do not include glint."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04597v1/snrplot.png",
+            "caption": ": Model selection results (quantified as Δ ​ BIC \\Delta{\\rm BIC} ) as a function of observed phase angle and for different SNRs (colors). Regardless of data quality, the glinting model is preferred to the non-glinting model for phase angles of about 120 ∘ 120^{\\circ} and above."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04597v1/120_glint_comparison.png",
+            "caption": ": Comparison of glinting (pink) and non-glinting (blue) forward models at a phase angle of 120 ∘ 120^{\\circ} . The latter is scaled by 1.5x to best enable the by-eye comparison of the spectral shape."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04597v1/earth_glint_al135_snr10_wgl_corner_copy.png",
+            "caption": ": Example corner plot from SNR 10, phase angle 130 ∘ 130^{\\circ} retrieval, including glint. The vertical line indicates the characteristic “truth” value for Earth. Confidence intervals at the 16/50/84-the percentiles are indicated and provided at the top of the one-dimensional marginal distributions along the diagonal."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04597v1/glint_phase_compare_75cloud.png",
+        "thumbnailAlt": ": Phase-dependent (colors) apparent albedo spectra from our updated rfast model for an ocean-covered Earth and assuming 75% cloud coverage (left). The equivalent figure adapted from the high-fidelity Earth simulation data of Ryan & Robinson [23] are shown for comparison (right). All spectra are at a",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04790",
+        "title": "Signatures of rocky debris accretion in AF-Type planet hosts",
+        "summary": "The gas-giant planet-metallicity correlation plays a fundamental role in our understanding of planet formation. We determine in a homogeneous way the metallicity and individual abundances of a sample of A and early-F stars, with and without known planetary companions, and discuss their abundance distribution and trends. We find that stars with planets generally exhibit higher abundances of both iron-peak and volatile elements compared to stars without known planets although in most cases this tendency is not statistically significant. The $\\rm {C/O}$ ratio remains similar between both samples, while the $\\rm {Mg/Si}$ ratio is shifted towards higher values in the general planet host sample. When the sample is limited to fully radiative stars (spectral type earlier than F5), the statistical significance of carbon overabundances vanishes. In contrast, elements such as O and Ni remain significantly overabundant. The $\\rm {C/O}$ and $\\rm {Mg/Si}$ ratios in this radiative subsample are statistically indistinguishable from that of the comparison sample. The persistent overabundance of O and Ni, combined with $\\rm {C/O}$ and $\\rm {Mg/Si}$ ratios similar to those of stars without planets in fully radiative hosts, points to the ongoing surface pollution by volatile-poor, silicate-rich rocky debris, rather than the accretion of gas giants. These findings might position early-type main-sequence stars as a crucial dynamical missing link in the chemical life-cycle of planetary systems: bridging the initial dust-trapping phase in pre-main sequence transition discs, the dilution of this superficial pollution during the fully convective red giant phase, and the eventual dynamically-driven accretion of asteroid material observed in polluted white dwarfs",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04790",
+        "htmlUrl": "https://arxiv.org/html/2609.04790v1",
+        "authors": [
+          "J. Maldonado",
+          "I. Mendigutía",
+          "S. Barceló Forteza",
+          "G. M. Mirouh",
+          "B. Montesinos",
+          "E. Villaver"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04790v1/TOI1431_corner_logg.png",
+            "caption": "Corner plot of the fit of the Balmer lines for the star TOI-1431."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04790v1/TOI1431_corner_logg.png",
+        "thumbnailAlt": "Corner plot of the fit of the Balmer lines for the star TOI-1431.",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04887",
+        "title": "Habitable-zone Earths at the detection frontier: Measured completeness and false-alarm rate of a transit pipeline for the PLATO M-dwarf sample",
+        "summary": "The PLATO mission will observe its first long-pointing field, LOPS2 (Long-duration Observation Phase, South field), for at least two years, bringing the habitable zones (HZ) of its M-dwarf sample within reach of a transit search. The completeness and false-alarm rate of a pipeline validated on TESS M dwarfs are measured on simulated PLATO photometry and converted into a candidate-level forecast for the LOPS2 M dwarfs. Simulated PLATO light curves (717 d baseline; three stellar cells of the faint half of the sample) were processed end to end in two arms, without and with a pre-launch model of the instrument systematics: 930 in the first (465 realisations, 525 injected planets, 465 noise-only twins) and 790 in the second. Injected planets measure completeness against the expected signal-to-noise ratio (S/N), separately for the long-period regime of the HZ; noise-only twins measure the false-alarm rate against the floor on the red-noise-aware statistic S/N_pink. Completeness reaches 50% at S/N = 7.7 +/- 0.15 over all periods and 8.6 +/- 0.3 in the long-period regime. The false-alarm rate falls from 79 +/- 2% to 0.6% as the S/N_pink floor rises from 6 to 8, and 6 +/- 1% at the adopted floor 7.5 (completeness 54 +/- 2%). In the field, the 50 known transiting objects of interest (19 confirmed planets, 31 candidates) would all be recovered; a transiting HZ planet of 1.0 (1.5) Earth radii would be recovered as a candidate with ~40% (65%) probability, giving about 4 HZ Earths and 7 super-Earths over 16 929 field M dwarfs. The systematics arm shifts the 50% point by +0.54 (+0.27/-0.22) in S/N, a penalty localised on the transition, leaving the floor robust and negligible on the long-period injections that feed the HZ. Habitable-zone Earths around the PLATO M dwarfs sit at the measured detection frontier, where completeness and reliability, both measurable before launch, decide the yield.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04887",
+        "htmlUrl": "https://arxiv.org/html/2609.04887v1",
+        "authors": [
+          "Yohann Tschudi"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04897",
+        "title": "Disk dispersal freezes overstable resonant librations",
+        "summary": "Context. Convergent migration in a gaseous protoplanetary disk can capture a planet pair into mean-motion resonance. Eccentricity damping can subsequently make the resonant libration overstable and drive the pair out of resonance. Most studies of this process, however, assume a static disk. Aims. We examine how the decay of disk torques during dispersal changes this outcome and whether it can freeze an overstable libration before the pair escapes. Methods. We describe disk dispersal by allowing the migration and eccentricity-damping timescales to increase exponentially on a local timescale $\\tau_{\\rm d}$. Integrating the time-dependent growth rate predicts $\\tau_{\\rm d,crit}\\propto\\tau_{e,0}$. We test this scaling with direct $N$-body integrations and relate $\\tau_{\\rm d}$ to the time taken by a photoevaporative cavity edge to cross the local torque-producing region. Results. The simulations recover a linear boundary, $\\tau_{\\rm d,crit}\\simeq S\\tau_{e,0}$, with $S\\simeq3$ over the explored parameter range. In a fiducial minimum-mass solar nebula, faster propagation of the cavity edge shortens the local dispersal time. The ratio $\\tau_{\\rm d}/\\tau_{\\rm d,crit}$ also decreases with orbital radius, so both effects favour resonant survival. Conclusions. When local disk dispersal is sufficiently rapid, the libration amplitude can freeze and the planet pair can remain in resonance instead of escaping through overstability. Late disk evolution can therefore alter the outcome of resonant overstability.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04897",
+        "htmlUrl": "https://arxiv.org/html/2609.04897v1",
+        "authors": [
+          "Linghong Lin",
+          "Beibei Liu"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04897v1/figures/fig1_static_escape_case.jpg",
+            "caption": "Evolution of the same planet pair in a static disk (left) and a dispersing disk (right). The panels show the period ratio, inner-planet eccentricity, resonant angle, and phase-space trajectory. Both cases adopt τ m , 0 = 8 × 10 5 ​ yr \\tau_{\\rm m,0}=8\\times 10^{5}\\,\\mathrm{yr} , τ m , 0 / τ e , 0 = 200 \\tau_{\\rm m,0}/\\tau_{e,0}=200 , and τ e , 0 = 4 × 10 3 ​ yr \\tau_{e,0}=4\\times 10^{3}\\,\\mathrm{yr} . The static case escapes after crossing the separatrix, whereas dispersal with τ d = 2.3 × 10 4 ​ yr \\tau_{\\rm d}=2.3\\times 10^{4}\\,\\mathrm{yr} freezes the libration at a finite amplitude and preserves the resonance."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04897v1/figures/fig2_taue_taudcrit_boundary.jpg",
+            "caption": "Critical dispersal time versus initial eccentricity-damping time for the 2:1 MMR, with m i = 1 ​ M ⊕ m_{\\rm i}=1\\,M_{\\oplus} and m o = 10 ​ M ⊕ m_{\\rm o}=10\\,M_{\\oplus} . Symbols mark the numerical survival–escape boundary for three τ m , 0 \\tau_{\\rm m,0} ; dashed lines are linear fits with slopes of order three."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04897v1/figures/fig3_taud_taudcrit_ratio.png",
+            "caption": "Critical and local clearing times for M p = 10 ​ M ⊕ M_{p}=10\\,M_{\\oplus} . The top panel compares τ d , crit = 3 ​ τ e , 0 \\tau_{\\rm d,crit}=3\\tau_{e,0} with τ d = H / v edge \\tau_{\\rm d}=H/v_{\\rm edge} ; the bottom shows ℛ = τ d / τ d , crit \\mathcal{R}=\\tau_{\\rm d}/\\tau_{\\rm d,crit} . Grey regions mark ℛ < 1 \\mathcal{R}<1 , where libration growth can be frozen before escape."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04897v1/figures/fig1_static_escape_case.jpg",
+        "thumbnailAlt": "Evolution of the same planet pair in a static disk (left) and a dispersing disk (right). The panels show the period ratio, inner-planet eccentricity, resonant angle, and phase-space trajectory. Both cases adopt τ m , 0 = 8 × 10 5 ​ yr \\tau_{\\rm m,0}=8\\times 10^{5}\\,\\mathrm{yr} , τ m , 0 / τ e , 0 = ",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04932",
+        "title": "Multi-Wavelength Post-Perihelion Polarimetry of Interstellar Comet 3I/ATLAS",
+        "summary": "We present new post-perihelion polarimetric observations of the third discovered interstellar object, 3I/ATLAS (C/2025 N1; hereafter 3I), obtained using FORS2 at the Very Large Telescope, ALFOSC at the Nordic Optical Telescope, and FoReRo2 at the 2 m Ritchey-Chrétien-Coudé telescope. The observations span phase angles 1-30$^{\\circ}$, providing the most extensive polarimetric phase angle coverage obtained for an interstellar object to date. The post-perihelion measurements reveal that the unusual polarimetric properties of 3I persist across perihelion and match recent independent post-perihelion observations, indicating no significant evolution in the polarimetric properties. The increased phase angle coverage allowed us to further constrain the minimum polarisation to $-2.9\\%$ at phase angle $5.5^{\\circ}$. Multi-band BVRI observations reveal a wavelength dependence of polarisation, with the negative polarisation branch becoming deeper and shifted toward smaller phase angles at longer wavelengths. The polarimetric colour is predominantly red and increases with phase angle, consistent with behaviour observed in other comets. Imaging and polarimetric maps show a substantially more extended coma after perihelion, while the polarisation distribution itself remains smooth and spatially homogeneous. Numerical modelling suggests that the unusually deep polarisation phase curve originates from moderately porous dust aggregates consisting of weakly absorbing sub-micron monomers, resulting in much brighter dust than that in typical solar system comets.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04932",
+        "htmlUrl": "https://arxiv.org/html/2609.04932v1",
+        "authors": [
+          "Zuri Gray",
+          "Galin Borisov",
+          "Ludmilla Kolokolova",
+          "Johannes Markkanen",
+          "Yuna G. Kwon",
+          "Stefano Bagnulo",
+          "Alberto Cellino",
+          "Rosemary C. Dorsey",
+          "Grigori Fedorets",
+          "Mikael Granvik",
+          "Eric MacLennan",
+          "Antti Penttilä",
+          "Karri Muinonen",
+          "Olga Muñoz",
+          "Philippe Bendjoya",
+          "Maxime Devogèle",
+          "Simone Ieva",
+          "Francisco J. García-Izquierdo"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04932v1/Figure1_PostCurve.png",
+            "caption": "(a) Orbital geometry of 3I projected on to the ecliptic plane (top-down view). The observation windows of Gray et al. [19] , Zheltobryukhov et al. [72] , Choi et al. [10] , and this work have been highlighted with solid-coloured lines on 3I’s path. The beginning and end of the observing windows are indicated with solid stars and triangles, respectively, both on 3I’s and Earth’s paths. (b) R-band polarisation versus phase angle of 3I, plotted with data from the above-mentioned publications. The black and red lines represent the best-fit curves of the pre- and post-perihelion data (our data only) with ± 1 ​ σ \\pm 1\\sigma uncertainty indicated by the shaded areas."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04932v1/Figure2_PolCol.png",
+            "caption": "(a) BVRI-band polarisation versus phase angle of 3I (new dataset only). (b) Polarisation versus wavelength at each phase angle. (c) Polarimetric colour (PC) plotted as a function of phase angle of 3I compared to that of other comets (see Appendix for details). The solid/dashed trends represent a weighted linear fit, i.e., Δ ​ PC ​ ( λ 1 , λ 2 ) / Δ ​ α \\Delta\\rm{PC}(\\lambda_{1},\\lambda_{2})/\\Delta\\alpha , fixed at zero. For display purposes, PC(B,R) (squares) and PC(R,I) (stars) are vertically offset."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04932v1/Figure3_MapsGC_Azi.png",
+            "caption": "Subset of imaging polarimetric data of 3I. First row: R-band imaging maps with isophotes. The arrows indicate the celestial north and east directions, the projected solar direction and projected heliocentric velocity direction. X marks the comet photocentre. Second row: R-band imaging maps after division by azimuthal average. Third to sixth rows : BVRI polarimetric maps. The colour of each pixel represents the value of polarisation, as shown in the scale to the right. Pixels with values outside this colour scale are given in white and are considered noise. Seventh row: BVRI polarisation ( P Q P_{Q} ) measured as a function of aperture radius, increasing in one-pixel increments. The waveband-related colour scheme follows that of Fig 2 a."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04932v1/a0_amin.png",
+            "caption": "Inversion angle as a function of the minimum polarisation angle. Different materials are denoted by different colours whereas aggregate morphologies are indicated by different markers. Marker size indicates the aggregate size. The smallest marker corresponds to 1024 monomers whereas the largest to 65536 monomers. The blue asterisk is the post perihelion value from Table 2 . Zero values indicate the absence of the negative polarization branch."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04932v1/h_Pmin.png",
+            "caption": "Slope of the polarisation curve at the inversion angle with respect to the minimum polarization. The markers and colours are defined in Fig. 4 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04932v1/rtcb.png",
+            "caption": "Modelled polarisation phase curve for aggregates larger than 10 µm consisting of silicate core tholin mantle monomers using RT-CB."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04932v1/Filters.png",
+            "caption": "Transmission curves of filters used for this study. We describe the filters as follows: (Filter name, central wavelength, Full Width Half Maximum). FORS2: (b_HIGH, 440 nm, 103.5 nm); (FILT_485_37, 485 nm, 37 nm); (v_HIGH, 557 nm, 123.5 nm); (R_SPECIAL, 655 nm, 165 nm); (I_BESS, 768 nm, 138 nm); (FILT_834_48, 834 nm, 48 nm). ALFOSC: (r’_SDSS 618_148, 618 nm, 148 nm). FoReRo2: (Rx, 694 nm, 79 nm)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04932v1/FigureAppen_GasCont.png",
+            "caption": "Approximate dust ( top ) and gas ( middle and lower ) maps of 2025 December 26, obtained using image-subtraction technique described in text."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04932v1/Figure1_PostCurve.png",
+        "thumbnailAlt": "(a) Orbital geometry of 3I projected on to the ecliptic plane (top-down view). The observation windows of Gray et al. [19] , Zheltobryukhov et al. [72] , Choi et al. [10] , and this work have been highlighted with solid-coloured lines on 3I’s path. The beginning and end of the observing windows are ",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04944",
+        "title": "The metallicity of giant exoplanets around low-mass stars and how Ariel can help",
+        "summary": "Giant planets orbiting low-mass stars represent a unique population of giant planets that can be studied to constrain planet formation theory. Surveys of transiting giant exoplanets around M-dwarfs (GEMS) allow for measurement of their masses and radii, which in turn can be used to estimate their bulk densities. Coupling these observations to interior structure and evolution models can yield the bulk metallicity of these planets, however there are degeneracies to this that are improved by measurements of atmospheric metallicity. Estimates of bulk metallicity can be crucial to our understanding of planet formation timescales and mass budgets, particularly in these extreme (planet-to-star) mass ratio systems. Here we show that GEMS are expected to have a low bulk metallicity as a natural result of the planet formation process, and the low efficiency of planetesimal capture post-formation. To test this empirically, we need a larger sample of GEMS with atmospheric measurements, which can reduce some of the degeneracies with the interior modelling of planets. Measuring the atmospheric composition of GEMS with JWST and Ariel will be crucial for better understanding this unique planetary type, which sits at the tail of standard planet formation conditions.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04944",
+        "htmlUrl": "https://arxiv.org/html/2609.04944v1",
+        "authors": [
+          "Ravit Helled",
+          "Sho Shibata",
+          "Shubham Kanodia",
+          "Billy Edwards"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04944v1/Ms_Miso2.png",
+            "caption": "Isolation masses as functions of stellar mass. The blue and green lines show the planetesimal and pebble isolation masses, respectively. The solid lines correspond to the typical disk-scaling case with A = 2 A=2 and B = 2 B=2 , while the dashed lines show cases with different scaling parameters. The left and right panels show results for different values of x x , the scaling parameter that determines the core formation location ( Equation 7 ) We adopt L ⋆ = L ⊙ L_{\\star}=L_{\\odot} and M ˙ disk = 10 − 8 ​ M ⊙ ​ yr − 1 \\dot{M}_{\\mathrm{disk}}=10^{-8}M_{\\odot}\\mathrm{yr}^{-1} for the solar-mass case. It is important to emphasize here that the range of isolation masses depicted here for a range of stellar and disk conditions will not all necessarily undergo runaway gaseous accretion. As mentioned earlier, the onset of this is dependent on not just the isolation mass (typically expected to be ∼ \\sim 10 M ⊕ M_{\\oplus} ), but also the grain opacity, cooling rate and formation timescales."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04944v1/log_Fcap_all.png",
+            "caption": "Accretion efficiency of planetesimals as a function of the initial semi-major axis. We shows the cases with typical disk scaling parameter B = 2 B=2 . Each panel shows the results obtained using a different scaling law for the initial position of a growing protoplanet. We divide the range a init = 0.1 a_{\\mathrm{init}}=0.1 – 30 30 au into 50 logarithmically spaced bins. Different colors correspond to simulations with different stellar masses. The vertical dashed lines indicate the initial orbits of planetary cores."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04944v1/Ms_Mcap.png",
+            "caption": "Captured planetesimal mass as a function of the central star’s mass. The blue, green, and orange plots show the results for B = 2 B=2 , 1 1 , and 0 0 , respectively. The circle and cross markers denote for x = 1 x=1 and 1 / 3 1/3 , respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04944v1/ArielGEMS.png",
+            "caption": "Planets with JWST phase curves (solid), show inefficient redistribution (blue) that is discrepant from the almost perfect heat redistribution seen for Jupiter (red). GEMS (orange) bridge the gap between Jupiter and hot Jupiters. Measuring their heat redistribution across this parameter space will also help constrain the factors that influence giant planet climates and energy budgets that can then used to improve bulk metallicity estimates for a large sample of GEMS."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04944v1/Ms_Miso2.png",
+        "thumbnailAlt": "Isolation masses as functions of stellar mass. The blue and green lines show the planetesimal and pebble isolation masses, respectively. The solid lines correspond to the typical disk-scaling case with A = 2 A=2 and B = 2 B=2 , while the dashed lines show cases with different scaling parameters. The",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04946",
+        "title": "Mapping the WISPIT2 Planet-Hosting Cavity at Sub-Hill-Radius scales",
+        "summary": "We present new deep, very high angular resolution observations of the sub-mm continuum (19x13 mas) and 12CO (67x52 mas) emission from the disk surrounding the planet host WISPIT2. Our analysis reveals a clear gas gap carved by WISPIT 2b and an empty cavity within the orbit of WISPIT 2c. We also find a gaseous and optically thin dusty ring located between the orbits of the two planets. Channel maps show a pronounced change in the emission surface height of the disk, which transitions from flat within the cavity to strongly flared beyond the orbit of planet b, producing clear breaks in the velocity channels. A pronounced thunderbolt-shaped feature, identified as a kinematic planetary signature (KPS), is detected at the location of WISPIT 2b, in agreement with predictions from planet-disk interaction simulations. This constitutes the first system with a confirmed kinematic signature associated with a directly imaged planet. By mirroring opposite velocity-channel maps about the systemic velocity, we further investigate the KPS and identify spatially resolved excess emission in the vicinity of WISPIT 2b. We find that this emission is resolved across the full Hill sphere of the planet, significantly exceeding the expected extent of a circumplanetary disk. We therefore suggest that the observed emission arises from a combination of processes, including prominent planet-driven spiral wakes, localized heating induced by the planet and a circumplanetary disk. Although higher spectral resolution is required to disentangle these contributions, our observations demonstrate the potential to directly characterize the birth environment of forming massive planets at scales down to sub-Hill radius.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04946",
+        "htmlUrl": "https://arxiv.org/html/2609.04946v1",
+        "authors": [
+          "Myriam Benisty",
+          "Stefano Facchini",
+          "Richard Teague",
+          "Francesco Zagaria",
+          "Pietro Curone",
+          "Viviana Pezzotta",
+          "Jaehan Bae",
+          "Gabriele Cugno",
+          "Daniel J. Price"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04946v1/QuickLook_cont_CO_Qphi_FOV4p0.png",
+            "caption": "Left: 0.88 ​ mm 0.88\\,{\\rm mm} continuum intensity at a resolution of 19 × 13 ​ mas 19\\times 13\\,{\\rm mas} . Middle: 12 CO J = 3 − 2 J=3-2 peak intensity map, at a resolution of 67 × 52 ​ mas 67\\times 52\\,{\\rm mas} . The beams are shown in the bottom left corner. Right: scattered light H H band SPHERE image [ 75 ] (resolution ∼ 40 ​ mas \\sim 40\\,{\\rm mas} ). The locations of the two planets are marked with white dots."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04946v1/Continuum_3panel_v1.png",
+            "caption": "Left: continuum intensity (med-res) zoomed in the cavity, showing faint surface brightness emission including a faint ring at 0 ​ . ′′ ​ 25 0\\farcs 25 indicated by a dotted ellipse; Middle: corresponding frank model. Right: residuals obtained after subtracting the frank model from the data. The beams are shown in the lower left corner. The locations of the planets are marked with dots, and that of the star with a plus sign."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04946v1/ChannelMaps_taper0.04_67x52_zoom_isovel.png",
+            "caption": "Zoomed-in 12 CO J = 3 − 2 J=3-2 channel maps. Contours are 3, 6 and 10 ​ σ 10\\sigma . The isovelocity contours are calculated with a flat surface. The planet locations are marked with white dots. The beam is given in the bottom right corner while the velocity of the channel is provided in the bottom left corner. Fig. F.5 shows the channel maps over the full extent of the disk."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04946v1/Mirror_ChannelMaps_67x52_n5.png",
+            "caption": "Mirrored 12 CO J = 3 − 2 J=3-2 channel maps zoomed in the cavity. Contours are 3 to 6 ​ σ 6\\sigma . A gallery of mirrored channel maps for all cubes is available in the Appendix Fig. F.6 . Panel (a) is the systemic velocity, panels (b,c) are blueshifted with respect to the planet’s line of sight velocity (see Sect. V.2 ) while panels (d,e) are redshifted. The dotted ellipses indicate the possible coplanar orbits of the planets, and the isovelocity contours are calculated with a flat surface."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04946v1/Fnu_composite_NorthSouth_67x52_thrmask_Fnu.png",
+            "caption": "Composite peak intensity image, with the observed peak intensity map in the north and the residuals obtained by subtracting the northern side from the southern side, in the south. Contours at 3, 4, 5 σ \\sigma are overlaid."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04946v1/WISPIT2_frank_residuals.png",
+            "caption": "Figure F.1: Continuum residuals after subtracting the frank model, imaged using the ‘med-res’ (left) and ‘high-res’ (right) parameters. The gray ellipses indicate the location of the dust rings. The high-res image does not show a clear pattern, while clear features become evident in the med-res image, possibly indicating a low-eccentricity ring or the presence of a spiral."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04946v1/Gallery_Fnu_maps_individual_colorbars.png",
+            "caption": "Figure F.2: Gallery of peak intensity maps for cubes with various angular resolutions."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04946v1/flat_inner_fixinc_fig07.png",
+            "caption": "Figure F.4: Residuals with eddy , obtained by fitting a Keplerian geometrically thin disk to the inner cavity. The large systematic residuals outside the inner mask are dominated by the elevated structure of the disk beyond 0.7 ′′ 0.7^{\\prime\\prime} ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04946v1/QuickLook_cont_CO_Qphi_FOV4p0.png",
+        "thumbnailAlt": "Left: 0.88 ​ mm 0.88\\,{\\rm mm} continuum intensity at a resolution of 19 × 13 ​ mas 19\\times 13\\,{\\rm mas} . Middle: 12 CO J = 3 − 2 J=3-2 peak intensity map, at a resolution of 67 × 52 ​ mas 67\\times 52\\,{\\rm mas} . The beams are shown in the bottom left corner. Right: scattered light H H band SPHE",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.04973",
+        "title": "Updated in-flight calibration of the Hayabusa2/NIRS3 spectrometer: new global near-infrared photometric properties of asteroid (162173) Ryugu",
+        "summary": "The Near InfraRed Spectrometer (NIRS3) onboard Hayabusa2 observed asteroid (162173) Ryugu, searching especially for signatures of water-bearing minerals. However, during the mission, absolute reflectance measured by the Telescopic Optical Navigation Camera (ONC-T) and NIRS3 showed a systematic offset. Additionally, touchdown operations have modified the instrumental response, which has made post-second-touchdown data less reliable. Correction of these issues is crucial to interpret the subtle spectroscopic differences across the surface, better understand the origin and evolution of carbonaceous asteroids, and support the Hayabusa2$\\sharp$ mission's future observations of the asteroids (98943) Torifune and 1998 KY26. We used Ryugu observations at different mission phases for relative calibrations and lunar observations for the absolute calibration. Moon spectra acquired during the first Earth swing-by were compared to simulated ones from photometric models based on lunar orbiter and ground-based data. We then applied the updated calibration to the full Hayabusa2 proximity phase dataset, enabling disk-resolved global and regional photometric analyses. We showed that the data obtained following the first and second touchdowns required downscaled corrections of $5.4 \\pm 1.8 $% and $10.3 \\pm 0.4 $% at 2 $\\mu m$, respectively, while the absolute calibration revealed that NIRS3 reflectance was underestimated by about 8% compared with the original calibration. Our new photometric parameters are consistent with previous studies and indicate a weak east-west dichotomy in phase ratio and phase reddening, pointing to higher surface roughness and higher abundance of fine-grained regolith in Ryugu eastern hemisphere.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04973",
+        "htmlUrl": "https://arxiv.org/html/2609.04973v1",
+        "authors": [
+          "Antonin Wargnier",
+          "Eri Tatsumi",
+          "Koki Yumoto",
+          "Mayumi Ichikawa",
+          "Shin-ya Murakami",
+          "Yuichiro Nagai",
+          "Kazuhiro Honda",
+          "Yasuhiro Yokota",
+          "Toru Kouyama",
+          "Takahiro Iwata",
+          "Moe Matsuoka",
+          "Satoshi Tanaka",
+          "Kohei Kitazato"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04973v1/moon_nirs3_footprint_merged.png",
+            "caption": "Map of the Moon from (a) SP data [ 60 , 61 ] (b) M 3 data, with projected footprints of NIRS3 (in red) during Hayabusa2 Earth swing-by of December 5, 2015."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04973v1/ONC_NIRS3_comp.png",
+            "caption": "(Top) ONC-T image acquired in ul filter from home position ( ∼ \\sim 20 km) on 2018-07-12T06:45:58.00 along with NIRS3 footprint (red square) on 2018-07-12T06:45:59.90. The image is cropped to highlight the position of the NIRS3 footprint. (Bottom) ONC-T radiance factor spectrum (blue circles) integrated from pixels inside the NIRS3 footprint, and NIRS3 radiance factor spectrum after applying calibration factors obtained in this work (red squares)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04973v1/ONC_NIRS3_moon_comp.png",
+            "caption": "(Top) ONC-T image of the Moon acquired in ul filter on 2015-12-05T11:50:43.00 during the Earth swing-by, along with NIRS3 footprint (red square) on 2015-12-05T11:50:38.00. The image is cropped to highlight the position of the NIRS3 footprint. (Bottom) ONC-T radiance factor spectrum (blue circles) integrated from pixels inside the NIRS3 footprint, and NIRS3 radiance factor spectrum after applying calibration factors obtained in this work (red squares). The ROLO spectrum at the geometry of the Hayabusa2 instrument observations is also shown (black triangle)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04973v1/resolved_phase_curve_corr_v05.png",
+            "caption": "(Left) Ryugu phase curve from NIRS3 data acquired during the proximity phase at 2 μ ​ m \\mu m . (Right) Modelled vs NIRS3 radiance factor values at 2 μ ​ m \\mu m . The red solid line represents the y = x y=x straight line."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04973v1/refl_slope_map.png",
+            "caption": "Map of the (left) spectral slope computed from 2.1 and 2.5 μ ​ m \\mu m in μ ​ m − 1 \\mu m^{-1} ; (right) reflectance at 2 μ ​ m \\mu m . The two maps were created using photometrically corrected reflectance data, obtained on 11 July and 19 July 2018. The footprints were rasterized into a 0.1 ​ ° × 0.1 ​ ° 0.1\\degree\\times 0.1\\degree latitude and longitude grid and the median value was computed for each grid element."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04973v1/REDDENING_maps.png",
+            "caption": "Map of the (top) phase ratio I ⁡ ( 5 ​ ° ) / I ⁡ ( 15 ​ ° ) I(5\\degree)/I(15\\degree) at 2.0 μ ​ m \\mu m and (bottom) phase reddening (with spectral slope computed between 2.1 μ ​ m \\mu m and 2.5 μ ​ m \\mu m ). The maps were computed using a 10 ​ ° × 10 ​ ° 10\\degree\\times 10\\degree grid at the Ryugu surface. The particularly high phase ratio and low phase reddening values for some grid elements located at latitude above 10 ° \\degree N are due to a narrower phase angle range (see Appendix F , Fig. 20 ). All grid elements above this latitude were discarded for the computation of the average east and west properties."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04973v1/ill_conditions_NIRS3_binned_v05.png",
+            "caption": "Distribution of the illumination angles (incidence, emission, and phase) for the entire NIRS3 proximity phase dataset."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04973v1/footprint_count_map.png",
+            "caption": "Maps of the number of observations per 10 ​ ° × 10 ​ ° 10\\degree\\times 10\\degree grid element."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04973v1/moon_nirs3_footprint_merged.png",
+        "thumbnailAlt": "Map of the Moon from (a) SP data [ 60 , 61 ] (b) M 3 data, with projected footprints of NIRS3 (in red) during Hayabusa2 Earth swing-by of December 5, 2015.",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05080",
+        "title": "Gravitational instability in planet-forming discs",
+        "summary": "During the earliest phases of star and planet formation, a young star is surrounded by a disc that can become gravitationally unstable. Indeed, if the protoplanetary disc is sufficiently massive, its self-gravity triggers the formation of large scale spiral arms, transporting angular momentum, trapping solid particles and, potentially, collapsing to form sub-stellar companions. In this paper, we review the theoretical and observational advances in the study of gravitational instability in protoplanetary discs over the last 10 years, since the advent of ALMA. These developments have transformed our understanding of gravitational instability, moving beyond its historical role as a theoretical mechanism for giant planet formation toward a physically rich framework that can be directly tested against high-resolution observations.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05080",
+        "htmlUrl": null,
+        "authors": [
+          "Cristiano Longarini",
+          "Giuseppe Lodato"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05105",
+        "title": "Modelling Palomar Transients: Constraints from Reflection Geometry and Orbital Altitude",
+        "summary": "Recent searches of digitised photographic plates from the Palomar Observatory have uncovered tens of thousands of short-lived transients, each visible in only a single exposure. Their morphologies indicate sub-second flashes, consistent with specular reflections from highly reflective objects in near-Earth orbits. In this paper, we present a modelling study using geometric shadow modelling, Monte Carlo simulations, and photometric constraints to infer their physical properties. We examine the observed groupings and alignments, which appear to be consistent with sudden changes in attitude. Assuming a spherical-shell model, the angular profile of the measured transient deficit around the antisolar point is consistent with a population at characteristic altitudes of $\\sim 20,000$--25,000 km. A complementary estimate, based on the altitude dependence of the global Earth-shadow deficit, yields a broader characteristic range of $\\sim$ 20,000--35,000 km above Earth's surface, extending into the geosynchronous orbital (GSO) region. Under simplified geometric and photometric assumptions and assuming $\\sim20{,}000$ to $35{,}786$ km above the Earth's surface, the inferred sizes of the specularly reflecting facets range from centimetre scales up to $\\sim3$ m, with characteristic flash durations of $\\sim320$ ms and slow rotation rates. We explore both natural and non-natural toy models consistent with the data, and provide constraints to guide future observational searches.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05105",
+        "htmlUrl": "https://arxiv.org/html/2609.05105v1",
+        "authors": [
+          "Beatriz Villarroel",
+          "Alina Streblyanska",
+          "Hichem Guergouri",
+          "Brian Doherty",
+          "Matthew Shultz",
+          "Stephen Bruehl"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05105v1/Figure_90-2.png",
+            "caption": "Deficit of transients in the shadow. We show the deficit of transients among the 107,875 transients as a function of angular distance from the antisolar point. Larger positive values indicate a stronger deficit relative to the control sample. A shadow-related signal is expected to be strongest near the antisolar point ( θ ≈ 0 ∘ \\theta\\approx 0^{\\circ} ) and to decrease towards zero at larger angular distances. The observed profile initially follows this expectation, while becoming more complex at larger angular distances, where additional effects may contribute."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05105v1/declination_excess_no_lines.png",
+            "caption": "Relative excess of high-probability transients as a function of declination, compared to the control sample. The analysis is restricted to transients satisfying p > 0.7 p>0.7 , 100 ∘ < R . A . < 250 ∘ 100^{\\circ}<\\mathrm{R.A.}<250^{\\circ} , and Dec . > 3 ∘ \\mathrm{Dec.}>3^{\\circ} . A pronounced excess is observed at low declinations, approximately corresponding to regions near the equatorial plane. A second excess is present around Dec . ∼ 65 ∘ \\mathrm{Dec.}\\sim 65^{\\circ} , followed by a decline towards higher declinations. The origin of this secondary peak is currently unclear. The total number of transients is 11,418. Bootstrap sampling errors are shown. The first bin is sensitive to edge effects in the transient detection near the survey boundary; without the Dec . > 3 ∘ \\mathrm{Dec.}>3^{\\circ} constraint, the excess in this bin approaches zero. At the highest declinations, the number of detected transients decreases relative to the control sample."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05105v1/reflectivity_20k_fig4.png",
+            "caption": "Required reflecting-facet area as a function of observed plate magnitude. The inferred reflecting surface area required to reproduce the observed transient magnitudes is shown for assumed altitudes of (a) 20,000 20,000 km and (b) 35,786 35,786 km (GSO) above the Earth’s surface. Solid lines represent specular reflection and dashed lines diffuse reflection for flash durations of 0.1 0.1 , 0.5 0.5 , and 1 1 s, assuming perfect reflectivity ( r = 1 r=1 ) and a 50-min POSS-I exposure. Diffuse cases are included for comparison but are not expected to produce short-duration flashes under steady illumination."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05105v1/specular_size_band_vs_magnitude.png",
+            "caption": "Equivalent linear size of specularly reflecting facets as a function of observed plate magnitude. The shaded region shows the full range inferred for altitudes of 20,000 20,000 – 35,786 35,786 km above the Earth’s surface, specular reflectivities of r = 0.1 r=0.1 – 1 1 , and flash durations of 0.1 0.1 – 1 1 s, assuming a 50-min POSS-I exposure. The lower boundary corresponds to a perfect reflector ( r = 1 r=1 ) at 20,000 20,000 km with a 1-s flash, while the upper boundary corresponds to a reflector with r = 0.1 r=0.1 at GSO ( 35,786 35,786 km) with a 0.1-s flash. Diffuse reflection is excluded. The full model range extends from centimetre scales up to approximately 3 3 m."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05105v1/FDD.png",
+            "caption": "Flash Duration Distribution. Assuming 1 flash per 50-min plate, and a phase = 20°."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05105v1/SpinVFlash.png",
+            "caption": "Spin Rate vs Flash Duration for two Cube and Icosahedron."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05105v1/Figure_90-2.png",
+        "thumbnailAlt": "Deficit of transients in the shadow. We show the deficit of transients among the 107,875 transients as a function of angular distance from the antisolar point. Larger positive values indicate a stronger deficit relative to the control sample. A shadow-related signal is expected to be strongest near ",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05134",
+        "title": "Stability of circumbinary planets: the role of binary properties and migration scenarios",
+        "summary": "Among the thousands of exoplanets detected to date, only a very small fraction are classified as circumbinary planets, and this number becomes negligible when considering low-mass planets. This rarity may partly result from observational biases, but also from the challenging dynamical environment of binary systems, which can prevent the long-term stability of planetary orbits. It is therefore essential to investigate the conditions that enable the formation and survival of stable circumbinary planets, particularly in the low-mass regime. To this end, we performed N-body simulations coupled with a planet migration prescription to study the post-formation dynamics of two 10 Earth-mass circumbinary planets in a protoplanetary disc. Based on more than 1,000 simulations, we find that inward migration can, in some cases, be halted through resonance capture with the binary. In contrast to some previous purely N-body studies, these configurations appear to remain stable over long timescales. We further find that the binary mass ratio $q_B$ and eccentricity $e_B$ strongly influence the stability of multi-planet systems. Within the explored parameter space, some regions support long-term stability, whereas others are highly unstable. These stability regions are also sensitive to the migration timescales, and therefore to disc properties and planetary masses. Finally, our simulations suggest that systems in which two planets enter resonance while migrating together are more likely to form stable multi-planet configurations, particularly around highly eccentric binaries. These results provide a first step toward identifying binary star systems that are most promising for hosting multiple low-mass circumbinary planets.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05134",
+        "htmlUrl": "https://arxiv.org/html/2609.05134v1",
+        "authors": [
+          "Romain Grane",
+          "Nicolás Cuello",
+          "Mario Sucerquia",
+          "Emmanuel Gianuzzi",
+          "Milenne Ávila-Bravo",
+          "Carolina Charalambous",
+          "Amaury H. M. J. Triaud"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05134v1/Pictures/Results/qB0.6_qP1.0_eB0.50_N1/Figure_mean-motion_ratio_1_qB0.6_qP1.0_eB0.50_N1.png",
+            "caption": ": Evolution of several physical quantities in a simulation with q B = 0.6 q_{B}=0.6 , e B = 0.5 e_{B}=0.5 in the framework of the simultaneous migration scenario. Panel (a): mean-motion ratios between the planets and the binary star. Panel (b): mean-motion ratio between both planets. Panel (c): eccentricity of both planets. Panel (d): resonant angles related to a 2:1 resonance between planets. The purple vertical dashed line represents the moment when both planets enter MMR, and the red vertical dashed line represents the time when Planet 1 enters a 7:1 resonance with the binary."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05134v1/Pictures/Results/qB0.5_qP1.0_eB0.30_N2_sequent/Figure_mean-motion_ratio_1_qB0.5_qP1.0_eB0.30_N2.png",
+            "caption": ": Same as Figure 2 , considering q B = 0.5 q_{B}=0.5 , e B = 0.3 e_{B}=0.3 in the framework of the sequential migration scenario. The red vertical dashed line represents the moment when Planet 1 enters a 6:1 resonance with the binary while the green vertical dashed line represents the time when Planet 2 enters a 6:1 resonance with the binary."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05134v1/Pictures/Results/qB0.7_qP1.0_eB0.20_N2_sequent/Figure_mean-motion_ratio_1_qB0.7_qP1.0_eB0.20_N2.png",
+            "caption": ": Same as Figures 2 and 3 , considering q B = 0.7 q_{B}=0.7 , e B = 0.2 e_{B}=0.2 in the framework of the sequential migration scenario. The red vertical dashed line represents the moment when Planet 1 stops its migration at n B / n 1 n_{B}/n_{1} = 6.2, and the green vertical dashed line represents the time when Planet 2 stops its migration at n B / n 2 n_{B}/n_{2} = 6.2."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05134v1/Pictures/Figure_eBqB_stability/eBqB_stability_new_2_stability_map_sequential_atleastone.png",
+            "caption": ": Panel (a): Stability maps investigating the stability of systems keeping at least one of both planets bound to the binary star. Panel (b): Stability map investigating the stability of systems keeping both planets stable. The x-axis (resp. the y-axis) indicates the binary mass ratio (resp. binary eccentricity) studied. For each q B − e B q_{B}-e_{B} configuration, we consider the ten different simulations run with randomly chosen orbital angles for the planets. All the simulations consider two 10 M ⊕ M_{\\oplus} circumbinary planets that migrate following the sequential migration scenario."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05134v1/Pictures/Figure_eBqB_stability/eBqB_stability_new_2_stability_map_simultaneous_atleastone.png",
+            "caption": ": Same as Figure 5 , considering the simultaneous migration scenario."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05134v1/Pictures/MMR_maps_resonant_angles/eBqB_stability_new_2_MMR_map_sequential_BP_2.png",
+            "caption": ": MMR maps indicating the most frequently occuring resonance between the binary and the inner stable planet. Panel (a): MMR map for systems in the sequential scenario. Panel (b): MMR map for systems in the simultaneous scenario. The x-axis (resp. the y axis) indicates the binary mass ratio (resp. binary eccentricity) considered."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05134v1/Pictures/MMR_maps_resonant_angles/eBqB_stability_new_2_MMR_map_sequential_PP_2.png",
+            "caption": ": MMR maps showing the most frequently occurring resonance between the two surviving planets. Panel (a): MMR map for systems in the sequential scenario. Panel (b): MMR map for systems in the simultaneous scenario. The x-axis (respectively, y-axis) represents the binary mass ratio (resp. binary eccentricity) considered. Cells marked with an “X” correspond to ( q B q_{B} , e B e_{B} ) configurations for which no simulation results in a stable MMR between the two planets."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05134v1/Pictures/Impact_of_migration_timescales/impact_timescales.png",
+            "caption": ": Number of planets remaining bound to the system as a function of the inner planet migration timescale τ a , i \\tau_{a,i} (y-axis) and the ratio of semimajor axis to eccentricity damping timescales K = τ a / τ e K=\\tau_{a}/\\tau_{e} (x-axis). Shaded regions depict capture into 3:2 (dotted) or 2:1 (striped) MMRs. Panels correspond to e B = 0.5 , 0.2 , 0.0 e_{B}=0.5,0.2,0.0 from top to bottom, and q B = 0.2 , 0.6 , 0.9 q_{B}=0.2,0.6,0.9 from left to right."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05134v1/Pictures/Results/qB0.6_qP1.0_eB0.50_N1/Figure_mean-motion_ratio_1_qB0.6_qP1.0_eB0.50_N1.png",
+        "thumbnailAlt": ": Evolution of several physical quantities in a simulation with q B = 0.6 q_{B}=0.6 , e B = 0.5 e_{B}=0.5 in the framework of the simultaneous migration scenario. Panel (a): mean-motion ratios between the planets and the binary star. Panel (b): mean-motion ratio between both planets. Panel (c): ecce",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05230",
+        "title": "Planetary gas gaps and kinematic signatures in the planet forming disk around WISPIT 2",
+        "summary": "The giant planet formation process in disks of gas and dust surrounding young stars is observationally still poorly constrained. Direct detection of protoplanets within the disk remains limited with current facilities. Indirect observational evidence of protoplanets through substructures or deviations from Keplerian rotation in the gas remains ambiguous in absence of detected planets. The lack of the combined detection of substructures and their corresponding planets makes it challenging to connect the planet formation process to the host environment. Observations with the Atacama Large Millimeter Array (ALMA) reveal clear detections of gas gaps and kinematic signatures in the WISPIT 2 protoplanetary disk that are cospatial with the locations of previously detected giant protoplanets. The newly identified gas gaps, observed in both the 12CO integrated intensity map and its rotation curve, correspond with the previously identified gaps in scattered light. Their morphologies are shown to be consistent with eccentric gaps, as expected from planet-disk interaction models of massive planets. The lack of eccentricity in the outer disk can be explained if a third planet is present in the system. The observations of WISPIT 2 provide a long-sought empirical bridge between kinematic signatures, gas gaps and giant planet formation in disks.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05230",
+        "htmlUrl": "https://arxiv.org/html/2609.05230v1",
+        "authors": [
+          "Nienke van der Marel",
+          "Jochen Stadler",
+          "Andres F. Izquierdo",
+          "Ruobing Dong",
+          "Bertram Bitsch",
+          "Jake Byrne",
+          "Richelle van Capelleveen",
+          "Chloe Lawlor",
+          "Christian Ginski",
+          "Matthew Kenworthy"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05230v1/WISPIT2_finalmap.png",
+            "caption": "Overview of the concatenated ALMA images of the 1.3 mm continuum, 12 CO 2–1, and 13 CO 2–1 integrated intensity maps, compared with the H H -band SPHERE image of WISPIT 2 in dual-beam polarimetric imaging (DPI) mode. The star is indicated with a white star sign and the protoplanets with a white square and circle. The ALMA continuum contours in the upper right and lower left panels are shown at 20,30,40 times the rms. The beam of each ALMA image is indicated in the lower left corner."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05230v1/wispit_kinematic_detection.png",
+            "caption": "Kinematic detection of WISPIT 2b in ALMA 12 CO 2–1 data. a) Gaussian line-of-sight centroid velocity map. b) Residuals after subtracting the Keplerian model from the velocity moment map. In the upper panels, the beam-size is shown as gray circles in the lower left corners, and the locations of planets WISPIT 2 b and c are highlighted by white circles and squares, respectively. The black ellipses indicate the locations of IR rings (B33 and B106) and the peak of the continuum (B145), all projected onto the 12 CO emission surface. c) Resulting residual map after additive folding the velocity residual map along the disk minor axis to remove the axisymmetric rotational components. The plot is in the disk reference frame; North is indicated by the dashed black line. d) Map showing the peak velocity residual points detected in the folded map, scaled in size by the magnitude of their deviation. The detected significant clusters in azimuth and radius are highlighted in dark yellow wedge and annulus, respectively (see Methods for details). The inferred localized cluster peak is shown as a green lime cross. Its cluster center is located within one beam size of the black circle that indicates the current on-sky position of WISPIT 2b deprojected to the disk midplane."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05230v1/WISPIT-2_galario_images_wide.png",
+            "caption": "Supplementary Fig. 2: Images of the best fit from the visibility fitting of the double ring model, mapped onto the observed visibilities and imaged with the same parameters as the data. a) Original data. b) Best-fit model at the same color scale as the data. c) Residual at the same color scale as the data. d) Residual divided by rms ( σ \\sigma =0.018 mJy beam -1 ) with the colors rescaled to its own minimum and maximum. The locations of the planets and star are indicated."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05230v1/channel_maps_peakint_wispit2_12co.png",
+            "caption": "Supplementary Fig. 3: 12 CO channel maps gallery. Top: Observations. Middle: discminer model channel maps. The dotted lines trace the disk’s minor and major axes. Bottom: Residuals between data and model channel maps with values masked below 3 ​ σ 3\\,\\sigma ( σ = 2.6 \\sigma=2.6\\, K). The solid and dashed lines indicate the isovelocity contours extracted from the upper and lower surface velocities at the value of the corresponding velocity channel. The leftmost columns show the Gaussian peak brightness temperature maps calculated using the Rayleigh-Jeans approximation for the data, the model, and the residuals."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05230v1/histogram_peak_residuals_velocity_gaussian.png",
+            "caption": "Supplementary Fig. 4: Distribution of peak centroid residual points in azimuth and radius. The points are color-coded to reflect their radial positions within the disk shown in the top-right corner. The locations of the global peak (lime), weighted-mean cluster centers (magenta), WISPIT 2b (black, deprojected from current on-sky position), and continuum ring (grey) are highlighted by colored vertical lines. Peak residual points p p are considered significant once they surpass a 3 ​ σ MAD 3\\sigma_{\\rm MAD} threshold in terms of median absolute deviation ( σ MAD = 1.4826 × median ⁡ ( | p − median ⁡ ( p ) | ) {\\sigma_{\\rm MAD}=1.4826\\times\\mathrm{median}(|p-\\mathrm{median}(p)|)} ), as shown by the horizontal dashed line (see Izquierdo et al., 2026 , for details) . Note that whether a cluster of peak residual points is deemed significant is assessed in terms of the cluster’s velocity variance via the K-means cluster algorithm, see Figure 5 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05230v1/phi_cluster_peaks+variance.png",
+            "caption": "Supplementary Fig. 5: Azimuthal K-means cluster statistics. Left: The yellow contours enclose 33% and 95% of the peak residuals for each azimuthal cluster. The white crosses are the cluster centers determined by the K-means algorithm. Right: The spectral variance of peak residuals is shown for each cluster. In the panel attached on the right, we show 1, 2, and 3 σ \\sigma significance thresholds. Clusters above 3 ​ σ 3\\sigma are considered significant and are highlighted by green crosses at 37 ​ ° 37\\degree and 53 ​ ° 53\\degree with 3.7 ​ σ 3.7\\sigma and 7.8 ​ σ 7.8\\sigma significance, respectively. These can be attributed to the planet b’s perturbation, its azimuthal location indicated by the vertical black line. The yellow line highlights the azimuthal location of the most significant cluster. Note: While the cluster at ∼ − 70 ​ deg \\sim-70\\deg contains a few peak residual points above 3 ​ σ MAD 3\\sigma_{\\rm MAD} (see left panel of Ext. Fig. 4 ), its velocity variance (spread and number of points) is not significant ( ∼ 2 ​ σ \\sim 2\\sigma )."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05230v1/wispit_radprof_Ipeak_vphi_hor.png",
+            "caption": "Supplementary Fig. 6: 12 CO radial profiles: (a) Peak brightness temperature for data and model. (b) Temperature residuals. (c) Rotational velocity of data, model, and background Keplerian. (d) Deviations from Keplerian rotation. The vertical gray and black solid lines show the peaks of the H H -band IR rings and dust continuum ring, respectively. The black dashed-dotted lines show the radial positions of the planets WISPIT 2 b & c. The continuum ring aligns with a negative δ ​ υ ϕ \\delta\\upsilon_{\\phi} -gradient, indicative of a gas-pressure bump."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05230v1/wispit2_h_deproj.png",
+            "caption": "Supplementary Fig. 7: H H -band Q ϕ Q_{\\phi} image of WISPIT 2 with fitted ellipses overlaid (left) and the corresponding deprojected image (right). Rings are shown in rose and gaps in cyan. Both panels use the same logarithmic stretch."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05230v1/WISPIT2_finalmap.png",
+        "thumbnailAlt": "Overview of the concatenated ALMA images of the 1.3 mm continuum, 12 CO 2–1, and 13 CO 2–1 integrated intensity maps, compared with the H H -band SPHERE image of WISPIT 2 in dual-beam polarimetric imaging (DPI) mode. The star is indicated with a white star sign and the protoplanets with a white squa",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05264",
+        "title": "A Homogeneous Survey of JWST MIRI Transmission Spectra of 10 Exoplanets",
+        "summary": "The launch of JWST has enabled unprecedented atmospheric characterization of exoplanets. In particular, the JWST-MIRI instrument in the mid-infrared enables probing of molecular species that are harder to detect in the near-infrared. This has come to the fore with the first MIRI-LRS observation of a candidate hycean world, K2-18 b, with potential signs of dimethyl sulfide in its atmosphere. The statistical significance of this result has been debated in subsequent works, arguing instead for the possibility of random noise, instrumental systematics, or a different molecule. The same applies to similar spectra reported for several other exoplanets using MIRI-LRS and interpreted with similar retrieval architectures. In this work, we distinguish between these possibilities with a homogeneous survey of MIRI-LRS transmission spectra of 10 diverse exoplanets, from temperate sub-Neptunes to hot rocky planets and gas giants. We first perform a comparative assessment of the spectra, considering fits with featureless models and pairwise correlations, followed by extensive atmospheric retrievals. With the retrievals, we search for over 150 trace species in the atmosphere of each planet. We find hints of complex molecules in the temperate sub-Neptunes and candidate hycean worlds K2-18 b, TOI-732 c and TOI-270 d, similar to previous works, but not in the other seven planets. Our results indicate that the observed spectral features are likely due to molecular absorption rather than instrument systematics or noise, and underscore these temperate sub-Neptunes as a unique class of planets. More observations are required to robustly identify the specific molecules and constrain the underlying chemical processes, biotic or abiotic.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05264",
+        "htmlUrl": "https://arxiv.org/html/2609.05264v1",
+        "authors": [
+          "Martin Binet",
+          "Nikku Madhusudhan",
+          "Måns Holmberg",
+          "Subhajit Sarkar"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05264v1/between-planets-corr.png",
+            "caption": "Correlations between transmission spectra of different planets (see section II.2.4 ). Note that here the color map is linear between p = 0 to 0.5, because the p-values are higher than in Figure 2 (as expected for different planets). TOI-270 d and TOI-732 c cannot be compared with WASP-17 b and WASP-39 b because of the different wavelength binning."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05264v1/same-planet-chi2-diff.png",
+            "caption": "χ 2 \\chi^{2} and associated p-values between different reductions of the same planet’s transit observation."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05264v1/between-planets-chi2-diff.png",
+            "caption": "χ 2 \\chi^{2} and associated p-values between different planets’ transit spectra."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05264v1/between-planets-corr.png",
+        "thumbnailAlt": "Correlations between transmission spectra of different planets (see section II.2.4 ). Note that here the color map is linear between p = 0 to 0.5, because the p-values are higher than in Figure 2 (as expected for different planets). TOI-270 d and TOI-732 c cannot be compared with WASP-17 b and WASP-",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05265",
+        "title": "Enabling Metallicity Measurements of Microlensing Lenses through Multi-band Lens Photometry",
+        "summary": "We present the photometric--microlensing metallicity method, which enables metallicity measurements of M-dwarf lenses out to bulge distances by combining their multi-band photometry with the angular Einstein radius. The cool atmospheres of M dwarfs contain abundant molecules, whose broad absorption bands make their positions in an optical--NIR color--absolute magnitude diagram sensitive to metallicity. The angular Einstein radius provides the mass--distance constraint needed to infer the lens absolute magnitude, while the intrinsic M-dwarf locus and reddening vector are non-parallel in color--color space, allowing the lens extinction and intrinsic color to be inferred simultaneously from its multi-band photometry, thereby recovering the lens intrinsic position in the metallicity-sensitive color--absolute magnitude diagram. The method requires three-band lens photometry spanning roughly the R, Z, and K bands, making it particularly well suited to Roman through its high-resolution F062, F087, and F213 imaging. With the planned Roman Galactic Bulge Time-Domain Survey (GBTDS) observations plus an additional $\\sim$8 hr of F062 imaging per field ($\\sim$40 hr in total) roughly a decade after Roman launch, host metallicities could be measured for $\\sim$150 planetary systems under the GBTDS yield forecast, with a typical $1\\sigma$ precision of $\\sim$0.25 dex from our mock-recovery analysis. Applied homogeneously to GBTDS microlensing events with and without detected planets, the method would enable the first measurement of the occurrence--metallicity relation for cold low-mass planets beyond the snow line, constrain the low-metallicity cutoff for their formation, and extend occurrence--metallicity studies into the inner Galaxy.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05265",
+        "htmlUrl": "https://arxiv.org/html/2609.05265v1",
+        "authors": [
+          "Jiyuan Zhang",
+          "Gregory Green",
+          "Weicheng Zang",
+          "Hongjing Yang",
+          "Shude Mao"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.GA",
+          "astro-ph.IM",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05265v1/fig4_color_color_no_MF213_constrain.png",
+            "caption": "Roman ( F ​ 062 − F ​ 087 , F ​ 087 − F ​ 213 ) (F062-F087,\\,F087-F213) color–color diagram without imposing the M F ​ 213 M_{F213} restriction from the microlensing constraints. The colored curves show the intrinsic PARSEC v1.2S dwarf locus, color-coded by metallicity, with approximate F, G, K, and M regimes labeled. The same reddening-vector directions as in Figure 3 are shown, here normalized to A V = 4 A_{V}=4 mag. The figure illustrates two points. First, the FGK-dwarf portion of the locus is nearly aligned with the reddening vectors, whereas the M-dwarf portion forms a larger angle with them. Second, without the M F ​ 213 M_{F213} restriction, each metallicity sequence spans a broad range in color–color space, so loci of different metallicities can overlap and dereddening can allow multiple M F ​ 213 M_{F213} – [ M / H ] [{\\rm M/H}] solutions rather than a unique metallicity. Restricting M F ​ 213 M_{F213} with the microlensing constraints selects only a short slice of this locus, enabling a clear metallicity inference from the dereddening intersection, as shown in Figure 3 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05265v1/fig4_color_color_no_MF213_constrain.png",
+        "thumbnailAlt": "Roman ( F ​ 062 − F ​ 087 , F ​ 087 − F ​ 213 ) (F062-F087,\\,F087-F213) color–color diagram without imposing the M F ​ 213 M_{F213} restriction from the microlensing constraints. The colored curves show the intrinsic PARSEC v1.2S dwarf locus, color-coded by metallicity, with approximate F, G, K, and",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05301",
+        "title": "JWST Excludes Exomoons Down to 0.1 Earth Radii Around a Rocky, Temperate Exoplanet",
+        "summary": "To date, even with JWST, it has not been possible to test for exomoons as small as the Moon. Only two reported searches for exomoons around bound planets have been attempted with JWST, both of which relied on a single JWST transit. We suggest that the below expectation sensitivity to date is, in part, a product of the considerable intrinsic flexibility of the planet+moon transit model when confronted with a single event, and the presence of unanticipated systematic noise. To test this, we present a search around the rocky, temperate-zone exoplanet LP 890-9c using twelve JWST transits. We find no evidence for an exomoon but exclude $0.1R_{\\oplus}$ moons to 95% confidence across the entire Hill region, representing by far the most sensitive search to date. Our limits exclude analogs to many real Solar System moons, such as Europa, Rhea and Umbriel. However, we emphasize that the close-in orbit of LP 890-9c (0.04au) would make any moons larger than ${\\sim}0.1R_{\\oplus}$ unlikely to survive for many Gyr due to tides. Regardless, our study firmly establishes that JWST can indeed probe down to remarkably small moons. Further, we find that even a single transit can deliver impressive limits, with the exception of one epoch that is contaminated by red noise. However, by pairing it with just one cleaner epoch, the sensitivity recovers to a level indistinguishable from any other pairing, which bodes well for a potential second JWST transit of Kepler-167e.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05301",
+        "htmlUrl": "https://arxiv.org/html/2609.05301v1",
+        "authors": [
+          "David Kipping"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05301v1/eureka_reductions.png",
+            "caption": "The twelve transits of LP 890-9 c observed using NIRSpec PRISM and reduced using Eureka! . Each panel shows the unbinned reduced data using gray open circles, and the 30 second binned data with filled circles. The continuous red lines show an example polynomial trend model overlaid at the order denoted in the bottom-right corner of each panel (see Section III.2 for a discussion of how the orders were selected). Note that our full astrophysics fits in fact vary the polynomial coefficients alongside the other parameters. The bottom-left numbers in each panel give the final RMS precision of the binned data."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05301v1/jedi_reductions.png",
+            "caption": "Same as Figure 1 , except the reduction now comes from ExoTiC-JEDI (not Eureka! )."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05301v1/eureka_reductions.png",
+        "thumbnailAlt": "The twelve transits of LP 890-9 c observed using NIRSpec PRISM and reduced using Eureka! . Each panel shows the unbinned reduced data using gray open circles, and the 30 second binned data with filled circles. The continuous red lines show an example polynomial trend model overlaid at the order deno",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05312",
+        "title": "Evidence for LP 890-9d via Transit Timing Variations",
+        "summary": "LP 890-9, also known as SPECULOOS-2 and TOI-4306, is a nearby late-M dwarf hosting two confirmed transiting rocky exoplanets. We analyze 20 JWST/NIRSpec PRISM transits of LP 890-9b and LP 890-9c obtained as part of GO program 7073 and detect statistically significant transit timing variations (TTVs), with peak-to-peak amplitudes of ~17 s and ~35 s, respectively. Using analytic linear TTV theory, we find that the known two-planet configuration cannot reproduce the measured TTV amplitudes or super-period, whereas three-planet models provide substantially better fits. The best-fit configuration places the candidate third planet, LP 890-9d, between planets b and c, with an orbital period of ~4.4 days; however, the current data do not uniquely determine its orbital architecture, and periods spanning 4.0-6.9 days remain plausible. TESS is insensitive to transits of LP 890-9d and we find no evidence for the candidate in JWST observations, although the phase coverage (ranging from ~50% to ~80%) depends strongly on the candidate orbital period. Additional high-precision transit observations of LP 890-9b and LP 890-9c are needed to refine their TTV solutions and further constrain the orbital properties of the third planet.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05312",
+        "htmlUrl": "https://arxiv.org/html/2609.05312v1",
+        "authors": [
+          "Kevin B. Stevenson",
+          "Guangwei Fu",
+          "Kristin S. Sotzen",
+          "E. M. May",
+          "Larissa Palethorpe",
+          "Jacob Lustig-Yaeger",
+          "Ted M. Johnson",
+          "Eric Agol",
+          "Katherine A. Bennett",
+          "Carlos Gascón",
+          "David K. Sing",
+          "Jeff A. Valenti",
+          "Hannah R. Wakeford"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05312v1/figs/river_b_full.png",
+            "caption": "whit-light transit fits and residuals (using Tswift ) for the eight JWST /NIRSpec PRISM transits of LP 890-9b. Each row corresponds to an individual visit. The left panels show the normalized whit-light curves and best-fit transit models; the TTVs are small compared with the transit duration and are therefore not readily apparent by eye. The center panels show residuals after subtracting a model fixed to the linear-ephemeris transit time, while the right panels show residuals after allowing the transit time, t 0 t_{0} , to vary. In comparing the fixed-ephemeris and best-fit- t 0 t_{0} residuals, the TTVs are only apparent due to the slight improvement in the residual structure during ingress and egress (marked by vertical blue bands)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05312v1/figs/river_c_full.png",
+            "caption": "whit-light transit fits and residuals (using Tswift ) for the 12 JWST /NIRSpec PRISM transits of LP 890-9c. See the caption to Figure 1 for a full description."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05312v1/figs/phase_coverage_map.png",
+            "caption": "Orbital-phase coverage of the existing JWST observations for the 26 candidate orbital periods of LP 890-9d. Blue vertical segments mark the orbital phases that fall within at least one archived JWST observing window for each candidate period, assuming that LP 890-9d is transiting. The red points and connecting line show the corresponding phase-coverage fraction. Short-period candidates ( P d = 4 − 7 P_{d}=4-7 days) have coverage fractions of ∼ 0.5 − 0.8 \\sim 0.5-0.8 , implying that a transit would have had a relatively high probability of occurring during the existing observations. The coverage fraction decreases toward longer periods, leaving larger unobserved phase gaps and making non-detections less constraining for solutions exterior to the orbit of LP 890-9c."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05312v1/figs/ttv_comparison_white_v3.png",
+            "caption": "Inferred Eureka! TTVs for LP 890-9b (top) and LP 890-9c (bottom), shown as black squares, compared with the best-fit (MAP) model solutions, shown as colored points connected by lines. The two-planet bc Solution cannot adequately reproduce the observed TTVs. Both the bdc and bcd Solutions provide more reasonable fits to the planet c TTVs; however, only the bdc Solution produces amplitudes large enough to match the planet b TTVs. Although none of the solutions perfectly fits the data, the favored orbital configuration places LP 890-9d between planets b and c. We include a similar figure for Tswift in the Appendix ( Figure 6 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05312v1/figs/TTVFast_TTVs.png",
+            "caption": "Measured Tswift TTVs for LP 890-9b (top) and LP 890-9c (bottom), shown as black squares, compared with the best-fit (MAP) model solutions, shown as colored points connected by lines, using TTVFast."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05312v1/figs/river_b_full.png",
+        "thumbnailAlt": "whit-light transit fits and residuals (using Tswift ) for the eight JWST /NIRSpec PRISM transits of LP 890-9b. Each row corresponds to an individual visit. The left panels show the normalized whit-light curves and best-fit transit models; the TTVs are small compared with the transit duration and are",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05326",
+        "title": "Contrasting C/O ratios in Uranus and Neptune from disequilibrium chemistry: A clue to distinct evolutionary pathways?",
+        "summary": "The formation of Uranus and Neptune remains poorly constrained largely due to uncertain deep elemental abundances. Carbon monoxide (CO), a disequilibrium species in the upper troposphere, provides an indirect constraint on the deep oxygen abundance. We investigate the deep O/H and C/O ratios of the ice giants and their formation history by accounting for meridional variations in atmospheric structure and uncertainties in chemical kinetics. We extended a 1D thermochemical and diffusion model into a pseudo-2D model by including latitudinal variations in key model parameters. The O/H ratio was inferred by matching the modeled upper-tropospheric CO mole fractions to observations, and combined with the deep carbon abundance to derive the C/O ratio. For Uranus, varying tropospheric methane alone yielded O/H $\\sim [47-57] \\times$ protosolar, whereas allowing $K_{zz}$ to vary expanded the range to O/H $\\sim [62-177] \\times$ protosolar. For Neptune, the corresponding ranges are O/H $\\sim [182-215] \\times$ protosolar and O/H $\\sim [222-342] \\times$ protosolar, respectively, supporting lower oxygen enrichment in Uranus than Neptune. Chemical-network uncertainties have a more modest effect, amounting to at most $\\sim 10\\%$ of the retrieved oxygen ranges, comparable to the uncertainty associated with the measured CO abundance on Neptune, but larger on Uranus. We computed C/O latitudinal ranges and found C/O $\\sim [0.06-0.52]$ on Uranus and $\\sim [0.02-0.12]$ on Neptune. Comparison with a protoplanetary disk model suggests different formation or evolutionary pathways for the two planets. Our results highlight the dominant role of vertical mixing in constraining deep oxygen abundance and the importance of accounting for meridional variability and chemical uncertainties. This work also provides a framework for selecting the entry latitude of a future Uranus Orbiter and Probe mission.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05326",
+        "htmlUrl": "https://arxiv.org/html/2609.05326v1",
+        "authors": [
+          "T. Briand",
+          "V. Hue",
+          "O. Mousis",
+          "T. Cavalié",
+          "T. Benest Couzinou",
+          "A. Schneeberger",
+          "M. D. Hofstadter"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05326v1/Figure/spectre_final_60N_CML.png",
+            "caption": ": ALMA observations of Uranus’ CO (3-2) line. Observations were performed on August 19 and October 18, 2022, as part of project 2021.1.01034.S (PI: S. Luszcz-Cook). Sub-observer latitudes range from 60.2 ∘ to 61.3 ∘ between the two observing dates. The best-fit internal CO mole fraction that matches the spectra recorded at the central meridian longitude and 60 ∘ is y C ​ O t ​ o ​ p = 5.6 ± 0.2 × 10 − 9 y_{CO}^{top}=5.6\\pm 0.2\\times 10^{-9} ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05326v1/Kzz_2D_Ura.png",
+            "caption": ": Eddy diffusion coefficient computed on Uranus ( left ) and Neptune ( right ) as a function of pressure and latitude following the prescription of Wang et al. (2015) . The dashed line corresponds to the transition latitude between the fast- and slow-rotating regimes. For each degree of latitude, a different thermal profile was computed with the corresponding value of y C ​ H ​ 4 t ​ o ​ p y_{CH4}^{top} using the fits presented in Sect. 2.4 . This would result in a different deep oxygen abundance required to fit the CO upper tropospheric value depending on latitude. For simplicity, the K z ​ z K_{zz} profiles shown here were computed with the thermal profiles obtained using the deep oxygen abundance derived by Venot et al. (2020) for each planet."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05326v1/Figure/spectre_final_60N_CML.png",
+        "thumbnailAlt": ": ALMA observations of Uranus’ CO (3-2) line. Observations were performed on August 19 and October 18, 2022, as part of project 2021.1.01034.S (PI: S. Luszcz-Cook). Sub-observer latitudes range from 60.2 ∘ to 61.3 ∘ between the two observing dates. The best-fit internal CO mole fraction that matches",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05366",
+        "title": "Dust Substructures and Line Perturbations driven by a Forming Planet in J16120",
+        "summary": "Hints of planet formation have been independently reported within the gap of the disc around 2MASS J16120668-301027 from millimetre continuum, infrared, and H-alpha observations. In this work, we present new evidence for ongoing planet formation based on Atacama Large Millimeter/submillimeter Array (ALMA) Band 7 observations, detecting 0.87 mm dust continuum emission together with 12CO (J=3-2) and 13CO (J=3-2) line emission. Visibility modelling of the continuum data reveals an inner disc and two dust rings peaking at 23 and 75 au. The continuum morphology is better reproduced by an eccentric disc model (e approximately 0.1) than by an axisymmetric disc. We further investigate the gas kinematics through modelling of the 12CO channel maps. The residual line-width map shows a localised increase in velocity dispersion at the position of a previously reported circumplanetary disc candidate (deprojected radius approximately 32 au, position angle approximately 170 degrees) and along its orbit. This signal is spatially coincident with kink-like features and a transition from sub-Keplerian to super-Keplerian velocities. In addition, the velocity residual map exhibits an arc-like structure extending outward from the planet candidate, while the gas kinematics, despite substantial uncertainties, is consistent with inflow towards the candidate's orbital radius. The observed increase in velocity dispersion agrees with predictions from planet-disc interaction simulations, which produce enhanced turbulence both at the planet location and along its orbital path. Taken together, the continuum morphology and gas kinematic signatures provide compelling new evidence for ongoing planet formation within the disc gap.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05366",
+        "htmlUrl": "https://arxiv.org/html/2609.05366v1",
+        "authors": [
+          "Anibal Sierra",
+          "Andrés F. Izquierdo",
+          "Paola Pinilla",
+          "Kan Chen",
+          "Myriam Benisty",
+          "Laura Pérez",
+          "Teresa Paneque-Carreño",
+          "Carolina Agurto-Gangas",
+          "Jaehan Bae",
+          "John Carpenter",
+          "Luca Cieza",
+          "Dingshan Deng",
+          "Stefano Facchini",
+          "Camilo González-Ruilova",
+          "Nicolás Kurtovic",
+          "Aleksandra Kuznetsova",
+          "Carlo F. Manara",
+          "James Miley",
+          "Álvaro Ribas",
+          "Giovanni Rosotti",
+          "Miguel Vioque"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05366v1/Observations.png",
+            "caption": "ALMA Band 7 ( λ = 0.87 \\lambda=0.87 mm) observations of the disc around J16120. First row: Dust continuum map (left), Moment 0 (middle-left), peak intensity (middle-right), and Gaussian velocity map (right) map of the 12 CO emission. Second row: Normalised brightness profiles computed from the integrated Moment 0 maps (left), Moment 0 (middle-left), peak intensity (middle-right), and Gaussian velocity map (right) map of the 13 CO emission. The vertical dashed lines in the left panel show the R 90 R_{90} radius of each tracer."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05366v1/Continuum_Residuals.png",
+            "caption": "Band 7 ( λ = 0.87 \\lambda=0.87 mm) dust continuum residual map after subtracting the best-fit model from Frankenstein (left panel) and eccentric parametric model with Galario (right panel). The green line in both panels shows the spiral structure observed in the residual maps of the best fit model using Band 6 data ( Sierra et al., 2024a ) . The iso-contours show the dust continuum ALMA Band 7 data at 7- σ \\sigma level."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05366v1/Figures/moment+residuals_velocity_gaussian.png",
+            "caption": "Kinematics of the 12 CO emission around J16120. Left: Peak velocity along the line of sight. Middle: Discminer model. Right: Residual map. The position of the inner planet candidate at r = 32 r=32 au is marked by \\textbf{1}⃝, while that of the outer planet candidate at r = 148 r=148 au is marked by \\textbf{2}⃝. The arrows indicate the location of elongated residual substructures."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05366v1/Figures/residuals_deproj_velocity_gaussian_cartesian_co.png",
+            "caption": "De-projected residual maps after subtracting the best fit discminer model. Left: disc velocity residuals. Middle: line width residuals. Right: peak intensity residuals. The position of the inner planet candidate at r = 32 r=32 au is marked by \\textbf{1}⃝, while that of the outer planet candidate at r = 148 r=148 au is marked by \\textbf{2}⃝. A strong positive residual, coinciding with the features observed in the individual channel maps at ∼ 50 \\sim 50 au, is highlighted in the left panel. Note that, in this figure, the north direction is oriented toward the bottom-right. The radial range within one beam width of the disc centre is masked in grey."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05366v1/Continuum_B6_B7.png",
+            "caption": "Central dust continuum emission from the J16120 disc observed in Band 7 (left; this work) and Band 6 ( Sierra et al., 2024a , right;) . Contours are shown at 6, 9, 12, and 15 σ \\sigma for the Band 7 image, and at 3, 6, 9, and 12 σ \\sigma for the Band 6 image. The × \\times and + + markers are the location of the H α \\alpha and K-band point sources in Li et al. (2025) and Ginski et al. (2025) , respectively. The beam sizes are shown in the bottom-left corner of each panel."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05366v1/background_mm.png",
+            "caption": "Extended Band 7 dust continuum emission, within which a sub-millimetre source, potentially a background sub-millimetre galaxy, is detected. Contours indicate the ALMA Band 7 dust continuum emission at the 7- σ \\sigma level."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05366v1/Figures/moment+residuals_velocity_gaussian_13co.png",
+            "caption": "Same as Figure 5 but for 13 CO."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05366v1/combined_model_plot_j16120.png",
+            "caption": "Figure 8 from the paper"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05366v1/Observations.png",
+        "thumbnailAlt": "ALMA Band 7 ( λ = 0.87 \\lambda=0.87 mm) observations of the disc around J16120. First row: Dust continuum map (left), Moment 0 (middle-left), peak intensity (middle-right), and Gaussian velocity map (right) map of the 12 CO emission. Second row: Normalised brightness profiles computed from the integ",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05393",
+        "title": "Ion abundances in the plasma tail of 3I/ATLAS show that it is N2-rich",
+        "summary": "Interstellar objects allow us to compare the early planetary formation process in the Solar System and around other stars. The second and third interstellar objects, 2I/Borisov and 3I/ATLAS, showed visible signs of activity, making it possible to assess their composition via spectroscopic analysis of their gas coma. While neutral volatiles surrounding comets are easily probed by common spectrographs, ion emissions emanate mostly from the tail, making them easier to detect with integral-field units. We present WHT/WEAVE-LIFU observations of 3I/ATLAS, performed post-perihelion on 2025 November 30 and 2025 December 02. We simultaneously detect the ions N2+, CO+, CO2+, H2O+ and CH+ located in an anti-solar tail. Using common fluorescence factors, we determine abundance ratios of these species in the tail. In particular, the N2+/CO+ ratio allows us to constrain the lower-limit N2/CO>0.023+/-0.001, indicating that 3I/ATLAS is N2-rich compared to Solar System comets, a property which can be linked to cold formation conditions. Abundance ratios between other ions cannot directly be used to constrain abundances of neutrals but seem consistent with the fact that 3I/ATLAS is enriched in hypervolatiles. We also investigate whether these ratios vary along the tail, and only detect a marginal decrease of CH+ with cometocentric distance.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05393",
+        "htmlUrl": "https://arxiv.org/html/2609.05393v1",
+        "authors": [
+          "Lea Ferellec",
+          "Cyrielle Opitom",
+          "Colin Snodgrass"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05393v1/3Iallmaps.png",
+            "caption": "CO + ion maps from 2025 November 30 (first panel) and 2025 December 02 (second panel). At Δ \\Delta =1.9au, the 10\" scalebar corresponds to ∼ \\sim 13800km projected at the comet. The ion tail is visible, close to the expected anti-solar direction. Arrows indicate the anti-solar direction (\"-S\") and the direction of motion (\"+V\"). Apertures to extract tailward and sunward spectra are illustrated in the third panel. A dust map (fourth panel) and a CN map (fifth panel) from December 02 show that the dust coma extends into a sunward tail while the gas coma looks more symmetrical. Qualitative contour plots are shown, based on the images smoothed through a Gaussian filter and logarithmic contour levels."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05393v1/3Iallmaps.png",
+        "thumbnailAlt": "CO + ion maps from 2025 November 30 (first panel) and 2025 December 02 (second panel). At Δ \\Delta =1.9au, the 10\" scalebar corresponds to ∼ \\sim 13800km projected at the comet. The ion tail is visible, close to the expected anti-solar direction. Arrows indicate the anti-solar direction (\"-S\") and t",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05413",
+        "title": "Two extremely irradiated volatile-rich sub-Neptunes with companions in the TOI-426 and TOI-1839 systems: Insights into arrival and survival near the lower edge of the Neptunian desert",
+        "summary": "Using TESS photometry and 147 HARPS radial velocities, we confirm two extremely irradiated, volatile-rich sub-Neptunes near the lower edge of the Neptunian desert: TOI-426 b and TOI-1839 b, orbiting the solar-type stars HD 34390 and TYC 304-865-1. We modelled stellar activity with shared-timescale and multidimensional Gaussian processes. The planets have orbital periods of approximately 1.32 and 1.42 days, radii of $2.19\\pm0.09$ and $2.27\\pm0.10$ Earth radii, and masses of $6.7\\pm1.8$ and $7.10\\pm0.78$ Earth masses, respectively. They receive approximately 1700 and 1050 times Earth's irradiation, yet their densities require substantial volatile content. We also detect a transiting sub-Neptune, TOI-1839 c, at approximately 4.02 days and a giant companion, TOI-426 c, with a period of $235.8^{+9.2}_{-8.5}$ days and a minimum mass of $444^{+18}_{-17}$ Earth masses, assuming a circular orbit. Interior-structure and atmospheric-escape models yield mass-loss timescales of 1-100 Myr for hydrogen/helium envelopes, compared with 100-1000 Gyr for water-dominated envelopes, favouring a steam-world interpretation for all three transiting planets. A population analysis reveals a striking excess of detected outer giant companions to low-mass sub-Neptunes near the desert edge, where high-eccentricity tidal migration is expected to circularize surviving planets: 36% (9/25) within the tidal survival band versus 6% (9/148) outside it (Fisher exact test $p=1.4\\times10^{-4}$). This excess is robust to changes in sample selection and companion definitions. The survival of these volatile-rich planets challenges a boundary set solely by evaporation of primordial hydrogen/helium envelopes, while the companion excess supports an important role for high-eccentricity tidal migration in shaping the lower desert edge.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05413",
+        "htmlUrl": null,
+        "authors": [
+          "A. Castro-González",
+          "O. Barragán",
+          "D. J. Armstrong",
+          "A. Aguichine",
+          "V. Bourrier",
+          "D. Ehrenreich",
+          "E. X. Tao",
+          "J. Lillo-Box",
+          "M. R. Standing",
+          "S. G. Sousa",
+          "E. Delgado-Mena",
+          "A. Moya",
+          "V. Adibekyan",
+          "M. Lendl",
+          "C. Hellier",
+          "S. B. Howell",
+          "E. Furlan",
+          "C. Ziegler",
+          "A. C. M. Correia",
+          "K. Cui",
+          "P. Figueira",
+          "J. M. Jenkins",
+          "M. A. Fetzner Keniger",
+          "B. Merín",
+          "A. Osborn",
+          "L. Parc",
+          "F. Pepe",
+          "P. J. Wheatley",
+          "J. N. Winn"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "catchupDate": "2026-09-07"
+      }
+    ],
+    "cross": [
+      {
+        "absId": "2609.04305",
+        "title": "TNFlow: Amortized Posterior Inference for Trans-Neptunian Object Surface Composition",
+        "summary": "We present TNFlow, a transformer and normalizing flow architecture for inferring the surface composition of Trans-Neptunian Objects (TNOs) from their reflectance spectra. TNFlow is trained on synthetic spectra generated by the Shkuratov radiative transfer model to act as its inverse. TNFlow takes ${\\sim}$0.7s to invert one spectrum on a single CPU core, returning a multimodal posterior over simplex-valid compositions and grain sizes. On synthetic spectra, the highest-weight mode achieves a mean total-variation distance of 0.149 from ground truth on the test split, and the model generalizes well to unseen combinations of known components. Qualitative tests on real JWST spectra show blindness or bias towards some materials. We suggest this could be attributed to either simulator fidelity or the training set.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.04305",
+        "htmlUrl": "https://arxiv.org/html/2609.04305v1",
+        "authors": [
+          "Agastya Gaur",
+          "Cristina M. Dalle Ore",
+          "Alessandra Ricca"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.EP",
+          "cs.LG"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.04305v1/figures/pit_histograms.png",
+            "caption": "Probability integral transform (PIT) histograms for composition (top) and grain size (bottom), on the test (left) and OOD (right) splits. A uniform histogram (dashed) indicates calibration. Composition intervals are biased in both splits, with a right-skewed ramp indicating systematic underprediction that worsens OOD; grain intervals are well calibrated throughout."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04305v1/figures/jwst_exemplars.png",
+            "caption": "The three DiSCo-TNOs exemplars, normalized at 0.9 µm. Dotted lines mark the bands discussed in the text."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.04305v1/figures/pit_trace_histograms.png",
+            "caption": "Composition PIT split by target proportion: trace ( ≤ \\leq 0.05, top) and non-trace ( > > 0.05, bottom), on the test (left) and OOD (right) splits. A uniform histogram (dashed) indicates calibration."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.04305v1/figures/pit_histograms.png",
+        "thumbnailAlt": "Probability integral transform (PIT) histograms for composition (top) and grain size (bottom), on the test (left) and OOD (right) splits. A uniform histogram (dashed) indicates calibration. Composition intervals are biased in both splits, with a right-skewed ramp indicating systematic underpredictio",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2609.05208",
+        "title": "Active focal plane phase mask coronagraphy with a discrete pixelated device: I. Study of the theoretical performance trade space",
+        "summary": "Recent advances in high-contrast exoplanet imaging instrumentation have introduced the concept of adaptive coronagraphy. For example, liquid-crystal-on-silicon spatial light modulators can be used as programmable phase masks or digital micro-mirror devices as configurable pupil apodizers. Adaptive coronagraphy offers the ability to adjust in real time to changing observing conditions and science goals, such as switching between blind surveys and follow-ups of known objects, or optimizing observations of multiple star systems including binaries and triples. At the same time, these active devices present challenges: finite spatial sampling, limited phase resolution, and the scalar nature of their modulation can all reduce coronagraphic performance. We look at the performance of a coronagraph utilizing pixelated discrete focal plane masks in function of various key parameters, notably spatial sampling, phase resolution, temporal jitter, and calibration errors. The analysis includes several FPM designs: vortex, four-quadrant phase mask, Roddier and Roddier, dual-zone phase mask, and azimuthal cosine phase mask. Both monochromatic and 20% broadband imaging conditions are considered, along with the absence or presence of a central obstruction from a secondary mirror in the telescope pupil, associated with variations in Lyot stop sizing. Our results identify the main error sources and limiting parameters of scalar, pixelated FPM coronagraphs. Under ideal conditions, performance is mainly limited by spatial sampling and chromaticity of scalar phase modulation. These devices are therefore primarily relevant to ground-based high-contrast imaging rather than the deeper contrast regimes required by future space observatories. Although motivated mainly by SLM implementations, the conclusions should also apply to other discrete pixelated focal-plane phase masks.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05208",
+        "htmlUrl": "https://arxiv.org/html/2609.05208v1",
+        "authors": [
+          "Liurong Lin",
+          "Axel Potier",
+          "Ruben Tandon",
+          "Lucas Marquis",
+          "Jonas G. Kühn"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.05208v1/coro_scheme_full.png",
+            "caption": "Cartoon illustration of light propagation through a coronagraph system. Key optical planes are labeled, including the entrance pupil plane (EPP), coronagraphic focal plane (CFP), Lyot pupil plane (LPP) and science focal plane (SFP). The image illustrates how star light and planet light propagate through each stage. The star light is diffracted and blocked in the LPP by the Lyot Stop (LS), while the planet signal passes through largely unaffected, leading to a high contrast image (HCI) at the SFP. Two key components FPM and LS are labeled at the bottom."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05208v1/masks_spatial_sam_4rows.png",
+            "caption": "Illustration of discrete FPMs with a spatial sampling of 10 pixels/( λ \\lambda /D) in the first and third rows , and ideal case with 100 pixels/( λ \\lambda /D) for comparison in the second and fourth rows . The figure displays the FPM region within ± \\pm 1 λ \\lambda /D of the center. The center of the FPM is defined as the intersection of the four central numerical pixels."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05208v1/zoomed_center_phasemask_plot_wl.png",
+            "caption": "Computed phase shift induced by a vortex with charge 2 (VC2) for incident light at blue-shifted (0.9 λ 0 \\lambda_{0} ) and red-shifted (1.1 λ 0 \\lambda_{0} ) wavelengths."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05208v1/zoomed_center_phasemask_plot_cal.png",
+            "caption": "Computed phase shift induced by a VC2 for calibration error of 0.8 and 1.2, representing large phase calibration under- and over-shooting."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05208v1/Figure/throughput_all_masks_from_existing_txt_None_1_1.png",
+            "caption": "Off-axis throughput as a function of angular separation for the FPMs considered in this work. The curves are computed for a representative configuration with 10 pixels per λ / D \\lambda/D FPM sampling, 8-bit phase quantization, monochromatic light, and an unobstructed entrance pupil. The throughput is normalized to the off-axis PSF obtained without a coronagraph. These throughput curves provide complementary information to the raw-contrast comparisons in Figures 10 and 11 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05208v1/phase_masks_greyscale_2bit_all_masks_zoom50.png",
+            "caption": "Illustration of discrete FPMs with a spatial sampling of 10 pixel/( λ \\lambda /D) and phase resolution of 2-bit."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05208v1/contrast_vc4_vc8_fqpm_fpm10_centers_with_mask_insets.png",
+            "caption": "Azimuthally-averaged raw contrast curves in the SFP for discretized coronagraphic systems. For FQPM, VC4 and VC8, configurations with centers shifted by a fractional pixel (blue) are compared with the original centered configurations (yellow). The analysis assumes monochromatic light, an unobstructed entrance pupil, 10 pixels/( λ \\lambda /D) spatial sampling and 64-bit greyscale phase resolution for the FPMs and no wavefront error."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.05208v1/lyot_plane_appendix_paper.png",
+            "caption": "Illustration of the light distribution in the LPP for nine commonly used FPMs. The entrance pupil includes a 25 % \\% central obstruction and spider arms. The FPM features a spatial sampling of 10 pixels/( λ \\lambda /D) and an 8-bit grayscale phase resolution. Simulations assume monochromatic light and no wavefront errors."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.05208v1/coro_scheme_full.png",
+        "thumbnailAlt": "Cartoon illustration of light propagation through a coronagraph system. Key optical planes are labeled, including the entrance pupil plane (EPP), coronagraphic focal plane (CFP), Lyot pupil plane (LPP) and science focal plane (SFP). The image illustrates how star light and planet light propagate thr",
+        "catchupDate": "2026-09-07"
+      }
+    ],
+    "repl": [
+      {
+        "absId": "2601.20966",
+        "title": "The Third Option: Color Phase Curves to Characterize the Atmospheres of Temperate Rocky Exoplanets",
+        "summary": "Detecting and characterizing the atmospheres of rocky exoplanets has proven to be challenging for JWST. Transit spectroscopy of the TRAPPIST-1 planets has been impacted by the effects of spots and faculae on the host star. Secondary eclipses have detected hot rocks, but evidence for atmospheres has been difficult to obtain. However, there is a third option that we call color phase curves. This method will apply to synchronously rotating non-transiting planets as well as transiting planets. A color phase curve uses photometry at a long-IR wavelength where the planetary thermal emission is strong (e.g., 21 microns) divided by photometry at a shorter wavelength where the star dominates (e.g., 12 microns). We avoid wavelengths having potentially strong molecular absorption (e.g., 15 microns) to minimize degeneracies in the color phase curve, and we aim to detect and characterize the planetary atmosphere via its longitudinal heat transfer. The ratio of two wavelengths observed nearly simultaneously is designed to isolate thermal emission from the planet, discriminate against the star, and largely cancel instrumental systematic effects. Moreover, we show that invoking mass-radius relations, and using self-consistent physical models, will permit the longitudinal heat transfer to be measured independent of the orbital inclination. Radial velocity surveys are detecting many new exoplanets, including temperate rocky worlds with Earth-like masses. Most of those planets will not transit, but color phase curves have the potential to detect and characterize their atmospheres.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2601.20966",
+        "htmlUrl": "https://arxiv.org/html/2601.20966v2",
+        "authors": [
+          "Drake Deming",
+          "Andrew Lincowski",
+          "Laura Kreidberg",
+          "Miles Currie",
+          "Jean-Michel Desert",
+          "Guangwei Fu",
+          "Jacob Lustig-Yaeger",
+          "Victoria Meadows",
+          "Ignas Snellen"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2601.20966v2/color_curves_revised.png",
+            "caption": "Color phase curves (CPCs) for planets ’b’ and ’d’ in the Proxima Centauri system. The CPC (Y-axis) is the ratio of the flux in the 21 μ \\mu m to 12.8 μ \\mu m JWST/MIRI filters, normalized to the stellar flux, with the median value subtracted from the normalized ratio. The time period (X-axis) is a random 20-day interval during JWST’s 2027 visibility window. The leftmost panel shows the ’d’ planet only. Two cases are shown for the ’b’ planet (middle panel): using a hot rock model, and a GCM (see text). The rightmost panel shows the sum of ’b’ and ’d’ for the two ’b’ cases. Planet ’d’ is modeled as a hot rock in both cases."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.20966v2/color_curves2_revised.png",
+            "caption": "Fluxes relative to the host star, and color phase curves (CPCs) for planets ’b’ and ’d’ in the Proxima Centauri system. The left Y-axis scale applies to only the leftmost panel; the right Y-axis scale applies to the center and rightmost panel. The time period (X-axis) is a random 20-day interval during JWST’s 2027 visibility window. The left and center panels plot fluxes relative to the star at both 12.8 μ \\mu m and 21 μ \\mu m. The right panel plots the CPC for the sum of both planets, and for ’b’ separately. Both planets are represented by the two-column model of Lincowski et al. (2023) (see text for description)."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.20966v2/corner1.png",
+            "caption": "Corner plot for multi-variate linear regression results from 50,000 sets of simulated CPC data for the Proxima system. Each data set is based on 25 observations of the CPCs shown in Figure 1 , with 8 ppm error bars (see Table 3 ). The planets are taken to be coplanar, and the regression solves for the CPC amplitudes of planets ’b’ and ’d’, as well as the amplitude of stellar variation. The orbital inclination is varied for each simulated dataset, with the amplitude of variations corresponding to the current observational uncertainties (Table 2 ). The orange crosses and lines mark the values used to generate the simulated data."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.20966v2/corner2.png",
+            "caption": "Corner plot for the sum of Proxima ’d’, and ’b’, using our two-column models for both planets. The red crosses and lines mark the values used to generate the simulated data. The observational parameters for the simulated data are summarized in Table 3 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.20966v2/MRplot_paper_revised.png",
+            "caption": "Possible mass and orbital inclination of Proxima Centauri b as a function of the amplitude of the CPC (21- vs. 12.8 μ \\mu m), where each curve is constrained by a mass radius relation. The phase curve amplitudes (X-axis) are based on the toy models from Kreidberg and Loeb (2016) (see text). We adopt M(R) relations from Otegi et al. (2020) and Müller et al. (2024) in order to show that the result is not critically dependent on the exact form of M(R). Dotted lines show the ± 1 ​ σ \\pm 1\\sigma error ranges due to imprecision in M(R). Because the curves for different values of heat redistribution are nearly vertical, an observed CPC amplitude will intersect only a small range of heat redistribution values (see text)."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.20966v2/flux_plot.png",
+            "caption": "Predicted 21 μ \\mu m flux for both transiting and non-transiting exoplanets, divided by the predicted flux from Proxima b, where the predicted fluxes are based on radii, distances, and equilibrium temperatures from NexSci 2 2 2 https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars . Points on the plot are color-coded by equilibrium temperature, and Proxima b is marked by the green X at the mid- to lower-left. Gray points at the bottom fall below the flux cutoff that we consider (see text). ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2601.20966v2/color_curves_revised.png",
+        "thumbnailAlt": "Color phase curves (CPCs) for planets ’b’ and ’d’ in the Proxima Centauri system. The CPC (Y-axis) is the ratio of the flux in the 21 μ \\mu m to 12.8 μ \\mu m JWST/MIRI filters, normalized to the stellar flux, with the median value subtracted from the normalized ratio. The time period (X-axis) is a r",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2606.18219",
+        "title": "Ice Giants Revisited: Uranus and Neptune as Magma Ocean Worlds",
+        "summary": "Uranus and Neptune are commonly interpreted as volatile-rich \"ice giants\", an assumption that underpins most interior models. Here we show that their observed radii, bulk densities, gravitational harmonics, normalized moments of inertia, intrinsic luminosities, and key features of their atmospheric compositions are consistent with interiors comprising supercritical, hydrogen-rich magma oceans overlain by H2-rich envelopes. Our results, based on three fit parameters for each planet, provide a parsimonious explanation for the structures, thermal states, and atmospheric chemistries of Uranus and Neptune. We find that the Solar System's ice giants are better understood as magma-ocean giants, with origins parallel to those of sub-Neptune gas-dwarf planets. A continuum among gas dwarf planets permits Neptune and Uranus to serve as accessible, data-driven test cases for structure models and material properties used to understand sub-Neptunes.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2606.18219",
+        "htmlUrl": "https://arxiv.org/html/2606.18219v2",
+        "authors": [
+          "Edward D. Young",
+          "Sarah P. Marcum",
+          "Aaron Werlen",
+          "Paula N. Wulff"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2606.18219v2/Magma_giant_schematic.png",
+            "caption": "Schematic showing the layered structure of Neptune and Uranus as proposed here (not to scale)."
+          },
+          {
+            "url": "https://arxiv.org/html/2606.18219v2/Neptune_Uranus.png",
+            "caption": "Models for Neptune and Uranus derived in this study expressed as density versus radius. Contour colors show density. Key elements of the models are labelled. The bright narrow band at the base of the envelope in each case is the boundary region stable against convection, ∼ 120 \\sim 120 km and ∼ 180 \\sim 180 km wide in the cases of Neptune and Uranus, respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2606.18219v2/neptune_analysis_corner_derived.png",
+            "caption": "Corner plot for MCMC search over 1,100 models for the best-fit for Neptune showing the marginalized posterior densities for the parameters of interest. The melt H 2 weight fraction that was not part of the fit is shown for reference. Green dashed lines are target values, and the red squares and red lines show the highest likelihood solution (line for melt H 2 is maximum allowed in search)."
+          },
+          {
+            "url": "https://arxiv.org/html/2606.18219v2/model_TP.png",
+            "caption": "Model temperature-pressure profiles for Neptune and Uranus derived in this study. The regions corresponding to the supercritical silicate-hydrogen-iron magma ocean and the overlying Ledoux-stable layer (boundary layer) in the hydrogen-rich envelope are indicated. The inset shows the upper atmosphere compared with the Voyager 2 observations for both planets."
+          },
+          {
+            "url": "https://arxiv.org/html/2606.18219v2/binodal_path_Neptune_v2.png",
+            "caption": "Plot of the binodal phase boundary in T T , P P , and mole fraction of H 2 space that separates the miscible interior and the outer envelope of Neptune as modeled here. The binodal phase boundary is shown as the blue dome structure. The curves terminating in arrow heads represent the miscible interior (red), H 2 -rich gas (light blue), and liquid silicate rain (violet) with the arrow heads pointing in the direction of greater radial position. The binodal is calculated using the MgSiO 3 -H 2 system [ 26 ] , a reasonable approximation to the ternary MgSiO 3 -Fe-H 2 system for this purpose [ 129 ] ."
+          },
+          {
+            "url": "https://arxiv.org/html/2606.18219v2/uranus_analysis_corner_derived.png",
+            "caption": "Corner plot for MCMC search over 1,008 models for the best-fit for Uranus showing the marginalized posterior densities for the parameters of interest. The melt H 2 weight fraction that was not part of the fit is shown for reference. Green dashed lines are target values, and the red squares and red lines show the highest likelihood solution."
+          },
+          {
+            "url": "https://arxiv.org/html/2606.18219v2/H2_fraction_linear_PDF_multiplanet.png",
+            "caption": "Results of a toy accretion model illustrating the expected relationship between planet mass and hydrogen fraction."
+          },
+          {
+            "url": "https://arxiv.org/html/2606.18219v2/Neptune_evolution_v2.png",
+            "caption": "Calculated evolution of Neptune over the last 4.5 4.5 Gyr. Irreversible processes that predate the present-day structure of the planet are not resolved with this quasi-statical calculation."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2606.18219v2/Magma_giant_schematic.png",
+        "thumbnailAlt": "Schematic showing the layered structure of Neptune and Uranus as proposed here (not to scale).",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2608.00424",
+        "title": "The Non-Principal-Axis Rotation and Convex Shape Model of Earth Quasi-Satellite and the Target of China's Tianwen-2 Mission (469219) Kamo`oalewa",
+        "summary": "(469219) Kamo`oalewa is the most stable Earth quasi-satellite and the target of China's Tianwen-2 asteroid sample return mission. Due to its small size, fast rotation, and the limited observing geometry accessible from the ground, many physical properties of Kamo`oalewa remain poorly constrained, including the rotational state and shape. We obtained three epochs of high-cadence, high signal-to-noise photometric lightcurves of Kamo`oalewa with the Gemini North Telescope from 2026 April to May, supplemented by one lightcurve from the Lowell Discovery Telescope in 2026 May. Our analysis suggests that Kamo`oalewa is in a non-principal-axis rotation with an elongated shape. Four possible solutions exist, including a long-axis mode (LAM) solution and a short-axis mode (SAM) solution, as well as their corresponding mirrored angular momentum directions. The most preferable solution has a LAM model with a precession period $P_\\phi=27.65\\pm0.03~\\text{min}$ and a rotational period $P_\\psi=50.49\\pm0.08~\\text{min}$, and the angular momentum points to ecliptic coordinates $(\\lambda, \\beta) = (226^\\mathrm{o}\\pm20^\\mathrm{o}, -39^\\mathrm{o}\\pm20\\mathrm{o})$, although we cannot rule out other solutions or other close-by periods due to aliasing. We also derived a convex shape inversion for the LAM models with consistent rotational parameters but could not find a satisfactory inversion for the SAM models. The corresponding angular momentum points to $(\\lambda, \\beta)=(225^\\mathrm{o}, -43^\\mathrm{o})$, and the periods are $P_\\phi=27.90~\\text{min}$ and $P_\\psi=49.66~\\text{min}$. The non-principal-axis rotation provides additional constraints on the dynamic history or the internal structure of Kamo`oalewa.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2608.00424",
+        "htmlUrl": "https://arxiv.org/html/2608.00424v3",
+        "authors": [
+          "Xiaoyu Sun",
+          "Zhijun Song",
+          "Hanjie Tan",
+          "Bin Yang",
+          "Josef Ďurech",
+          "Nicholas Moskovitz",
+          "Audrey Thirouin",
+          "Samantha Hemmelgarn",
+          "Wen Bo",
+          "Yang Yu",
+          "Jian-Yang Li"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2608.00424v3/Figure1.png",
+            "caption": ": Observed photometric lightcurves (black symbols with error bars representing the 1 ​ σ 1\\sigma photometric uncertainties) of Kamo‘oalewa from GN on 2026 April 20 (a), April 22 (b), and May 9 (d), and from LDT on May 7 (c). Overplotted are the best-fit models assuming non-principal-axis rotation using a triaxial ellipsoidal shape in LAM (orange solid curve) and SAM (red dashed curve) (see § IV ), and a convex shape in LAM (blue solid curve) (see § V ). All lightcurves are plotted in linear flux scale and normalized to unity at their respective averages."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.00424v3/phasefold_weighted_1.png",
+            "caption": "(a)"
+          },
+          {
+            "url": "https://arxiv.org/html/2608.00424v3/phasefold_weighted_2.png",
+            "caption": "(b)"
+          },
+          {
+            "url": "https://arxiv.org/html/2608.00424v3/Figure3.png",
+            "caption": ": RMS residual maps showing the solutions for the direction of angular momentum for LAM (a) and SAM (b). The color bars indicate the RMS residuals of model fitting. The stars mark the pair of mirrored angular momentum directions for each mode due to the symmetry about the Earth-asteroid-Sun plane."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.00424v3/period_scan_new.png",
+            "caption": ": Period scan for ellipsoidal shape. The colorbar marks the model RMS. For clarity, points with RMS values above 0.25 are not plotted. The best-fit value with the lowest RMS is marked with a red point and corresponds to the values in Table 2 . The pink square marks the second best solution. The two dashed vertical lines mark the two best periods found by the period analysis described in § III . The thick horizontal and vertical lines show the separations Δ ​ P ψ \\Delta P_{\\psi} and Δ ​ P ϕ \\Delta P_{\\phi} between local minima (see the main text)."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.00424v3/model_XZ.png",
+            "caption": ": Convex shape models obtained from lightcurves based on the rotational model described in Table 2 . The top panel show the model with the angular momentum direction ( λ \\lambda , β \\beta ) = ( 225 ° 225\\text{\\,}\\mathrm{\\SIUnitSymbolDegree} , − 43 ° -43\\text{\\,}\\mathrm{\\SIUnitSymbolDegree} ), and the bottom panel show the mirror solution with ( λ \\lambda , β \\beta ) = ( 80 ° 80\\text{\\,}\\mathrm{\\SIUnitSymbolDegree} , − 30 ° -30\\text{\\,}\\mathrm{\\SIUnitSymbolDegree} ). The convex shape models are downloadable from the online journal in a triangulated plate format."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.00424v3/LAM_GN_0420_frame.png",
+            "caption": "(a)"
+          },
+          {
+            "url": "https://arxiv.org/html/2608.00424v3/LAM_GN_0422_frame.png",
+            "caption": "(b)"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2608.00424v3/Figure1.png",
+        "thumbnailAlt": ": Observed photometric lightcurves (black symbols with error bars representing the 1 ​ σ 1\\sigma photometric uncertainties) of Kamo‘oalewa from GN on 2026 April 20 (a), April 22 (b), and May 9 (d), and from LDT on May 7 (c). Overplotted are the best-fit models assuming non-principal-axis rotation us",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2608.05885",
+        "title": "Exploration of Exoplanet Atmospheres with the James Webb Space Telescope",
+        "summary": "The James Webb Space Telescope (JWST) is providing transformative characterization capabilities for the study of both transiting and directly imaged extrasolar planets. Observations deep into the infrared in the form of both spectroscopy and coronagraphic imaging means that JWST is uniquely sensitive to most of the physical processes that dictate the properties of exoplanetary atmospheres. The observatory's thermal and pointing stability directly translates into the extreme photometric precision needed for exquisite transiting exoplanet photometry, as well as highly sensitive coronagraphic observations. Over the mission's 20-25 year lifetime, roughly 10$^4$ hours will be dedicated to observations of exoplanet atmospheres, providing a legacy data archive that will allow population-level characterization of exoplanet atmospheres spanning terrestrial planets, sub-Neptunes and gas giants. This effort will also assess the prevalence of atmospheres of rocky planets and thus the degree to which such planets may have conditions conducive to habitability.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2608.05885",
+        "htmlUrl": "https://arxiv.org/html/2608.05885v3",
+        "authors": [
+          "Sasha Hinkley",
+          "David K. Sing"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2608.05885v3/Fig_orbit.png",
+            "caption": "Top: Exoplanet orbital geometry for the transiting WASP-121A,b system. Plotted to scale. The dotted line traces the whole 1.27 day planetary orbit ( a / R s ​ t ​ a ​ r a/R_{star} =3.8), with the planet depicted during transit at ingress and secondary eclipse as it passes behind the star. Bottom : The total flux ( z z -axis) over the planetary orbit is plotted with the JWST NIRSpec/NRS2 phase curve data of WASP-121 b from [ 221 , 101 ] (black data), with the planet (light red dashed line) and stellar (gold dashed line) contributions indicated. The photometric data is pre-detrending/cleaning, so includes both photon and systematic noise, illustrating JWST’s exquisite photometric precision. The planetary dayside flux is measured at eclipse, while the nightside flux is visible by-eye in the raw photometry as the planet flux during transit rises noticeably above the stellar flux level."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.05885v3/Carter_figure.png",
+            "caption": "A figure adapted from [ 61 ] showing JWST images of the planet-hosting star HIP 65426 at 3.6 μ \\mu m using JWST/NIRCam (top row) and the MIRI instrument at 11.4 μ \\mu m (bottom row). In both of the left panels the coronagraphic mask is in place in the center of the image, and the residual uncorrected starlight can be clearly seen. The right panels show the same data following the post-processing removal of this residual scattered starlight revealing detections of the exoplanet to the lower left of the coronagraphic mask."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.05885v3/vhs1256.png",
+            "caption": "The full spectrum of the planetary mass companion VHS 1256b [ 222 ] obtained as part of the JWST Early Release Science Program for direct observations of exoplanetary systems [ 144 ] . This is the first spectrum of a planetary mass companion extending in wavelength to ∼ \\sim 20 μ \\mu m, and covering the full luminous range of the object."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.05885v3/Eps_Indi_figure.png",
+            "caption": "A figure adapted from [ 213 ] showing images of the ϵ \\epsilon Indi Ab system at 10.65 and 15.50 μ \\mu m obtained with the MIRI Four Quadrant Phase Mask coronagraph. The location of the host star is indicated by the orange star symbol, and the exoplanet is clearly resolved to the Northeast, corresponding to a projected orbital separation of ∼ \\sim 15 AU. The top and bottom scale bars in the right panel indicate 2.75 and 2.0 arcseconds, respectively ( ∼ \\sim 10 and ∼ \\sim 7.3 AU)."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.05885v3/escape_velocity_vs_xuv_fig10_v2.png",
+            "caption": "From [ 245 ] . Escape velocity versus historic XUV influence for terrestrial exoplanets ( R pl < 1.8 R_{\\rm pl}<1.8 R ⊕ ; orange circles), compared to Solar System bodies. The dashed line represents the “cosmic shoreline” calibrated to pass through Mars, following the relation I XUV ∝ v esc 4 I_{\\rm XUV}\\propto v_{\\rm esc}^{4} . For context, two sub-Neptunes (blue circles) known to have primary atmospheres (H/He-rich) are also shown."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2608.05885v3/Fig_orbit.png",
+        "thumbnailAlt": "Top: Exoplanet orbital geometry for the transiting WASP-121A,b system. Plotted to scale. The dotted line traces the whole 1.27 day planetary orbit ( a / R s ​ t ​ a ​ r a/R_{star} =3.8), with the planet depicted during transit at ingress and secondary eclipse as it passes behind the star. Bottom : T",
+        "catchupDate": "2026-09-07"
+      },
+      {
+        "absId": "2607.01666",
+        "title": "Periodic Radio Technosignature Search toward 3I/ATLAS with FAST",
+        "summary": "3I/ATLAS, the third confirmed interstellar object discovered in the Solar System, provides a unique opportunity for targeted technosignature searches. We report a periodic radio technosignature search toward 3I/ATLAS using the Five-hundred-meter Aperture Spherical Telescope (FAST) L-band multibeam receiver. To search for periodically modulated signals and distinguish center-beam-dominated candidates from multibeam radio-frequency interference, we apply canonical polyadic decomposition (CPD) to the multibeam dynamic spectra. CPD factorizes the multibeam data tensor into a set of separable components, with associated time, frequency, and beam signatures. Candidate components are then selected through periodogram and autocorrelation diagnostics. We find no credible artificial periodic radio technosignature above 0.146 W is detected from the direction of 3I/ATLAS. This search expands the range of signal types explored for this target by including periodic modulated signal, and illustrates that CPD is a promising framework for multibeam periodic technosignature searches.",
+        "published": "2026-09-07T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2607.01666",
+        "htmlUrl": "https://arxiv.org/html/2607.01666v2",
+        "authors": [
+          "Jian-Kang Li",
+          "Zhen-Zhao Tao",
+          "Tong-Jie Zhang",
+          "Men-Quan Liu"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.EP",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2607.01666v2/ATLAS_0105_StokesV_1050_1140_r0055.png",
+            "caption": "Candidate component r55 with period of P 0 = 18.87 P_{0}=18.87 s in 1050–1140 MHz (a) and r952 with period of P 0 = 16.58 P_{0}=16.58 s 1300–1450 MHz (b) in our search. The layout of the two panels are the same as Figure 1 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.01666v2/period_snr_scatter.png",
+            "caption": "Distribution of components for Stokes I ​ Q ​ U ​ V IQUV polarization channels in our observation. The central beam dominant components are denoted in blue triangle, and the three potential candidates are highlighted in red star."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2607.01666v2/ATLAS_0105_StokesV_1050_1140_r0055.png",
+        "thumbnailAlt": "Candidate component r55 with period of P 0 = 18.87 P_{0}=18.87 s in 1050–1140 MHz (a) and r952 with period of P 0 = 16.58 P_{0}=16.58 s 1300–1450 MHz (b) in our search. The layout of the two panels are the same as Figure 1 .",
+        "catchupDate": "2026-09-07"
+      }
+    ]
   }
 }
