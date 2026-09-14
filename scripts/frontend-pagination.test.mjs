@@ -30,14 +30,15 @@ test('static frontend routes cache and fetch requests through its configured API
   assert.match(html, /fetch\(apiUrl\('\/api\/fetch'\)/);
 });
 
-test('mobile figure gallery keeps two controls outside the clipped dialog', () => {
+test('mobile figure gallery contains the full image and uses only the bottom close control', () => {
   assert.match(html, /height:\s*100dvh/);
-  assert.match(html, /<div class="figure-modal"[^>]*>\s*<button class="figure-mobile-close" id="figureCloseMobile"/);
+  assert.doesNotMatch(html, /id="figureCloseMobile"/);
   assert.match(html, /<\/div>\s*<button class="figure-mobile-close-bottom" id="figureCloseBottom"/);
-  assert.match(html, /\.figure-mobile-close\s*\{[\s\S]*?width:\s*50px;[\s\S]*?height:\s*50px;/);
+  assert.match(html, /\.figure-stage img\s*\{[\s\S]*?position:\s*absolute;[\s\S]*?width:\s*100%;[\s\S]*?height:\s*100%;[\s\S]*?object-fit:\s*contain;/);
+  assert.match(html, /\.figure-modal-title\s*\{\s*display:\s*none;/);
   assert.match(html, /\.figure-mobile-close-bottom\s*\{[\s\S]*?bottom:\s*max\(10px, env\(safe-area-inset-bottom\)\)/);
   assert.match(html, /safe-area-inset-top/);
-  assert.match(html, /\['figureClose', 'figureCloseMobile', 'figureCloseBottom'\]/);
+  assert.match(html, /\['figureClose', 'figureCloseBottom'\]/);
 });
 
 function loadPagination(pageSize = 24, currentPage = 1) {

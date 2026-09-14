@@ -740,13 +740,12 @@
     }
     .figure-modal-head { position: relative; z-index: 2; display: flex; align-items: center; gap: 12px; }
     .figure-modal-title { min-width: 0; flex: 1; color: var(--ink); font-weight: 850; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .figure-stage { min-height: 0; display: grid; place-items: center; overflow: hidden; border-radius: 10px; background: #f5f6fa; }
+    .figure-stage { min-width: 0; min-height: 0; display: grid; place-items: center; overflow: hidden; border-radius: 10px; background: #f5f6fa; }
     .figure-stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
     .figure-modal-foot { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 14px; }
     .figure-caption { color: #c7d8e7; line-height: 1.5; max-height: 7.5em; overflow: auto; }
     .figure-nav { min-width: 42px; padding: 9px; }
     #figureClose { flex: 0 0 auto; touch-action: manipulation; }
-    .figure-mobile-close,
     .figure-mobile-close-bottom { display: none; }
     .figure-position { color: var(--cyan); font-size: .78em; white-space: nowrap; }
 
@@ -782,25 +781,29 @@
       .figure-dialog {
         position: absolute; inset: 0;
         width: 100%; height: 100%; max-height: none;
-        padding: max(68px, calc(env(safe-area-inset-top) + 58px)) max(10px, env(safe-area-inset-right))
+        grid-template-rows: minmax(0, 1fr) auto;
+        padding: max(10px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right))
                  max(76px, calc(env(safe-area-inset-bottom) + 66px)) max(10px, env(safe-area-inset-left));
         border-radius: 0;
       }
-      .figure-modal-head { min-height: 38px; }
-      .figure-stage img { width: 100%; height: 100%; }
+      .figure-modal-head {
+        position: absolute; top: max(16px, env(safe-area-inset-top)); left: 16px; z-index: 2;
+        min-height: 0; padding: 4px 8px; border-radius: 999px;
+        background: rgba(5,16,35,.82); pointer-events: none;
+      }
+      .figure-modal-title { display: none; }
+      .figure-stage { position: relative; width: 100%; height: 100%; }
+      .figure-stage img {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        max-width: none; max-height: none; object-fit: contain; object-position: center;
+      }
+      .figure-modal-foot { min-width: 0; gap: 8px; }
+      .figure-caption { max-height: 3em; overflow-wrap: anywhere; font-size: .78rem; }
       #figureClose { display: none; }
-      .figure-mobile-close,
       .figure-mobile-close-bottom {
         position: absolute; z-index: 10; touch-action: manipulation;
         border: 1px solid var(--cyan); background: rgba(5,16,35,.98);
         color: var(--ink); box-shadow: 0 0 18px rgba(117,231,255,.25);
-      }
-      .figure-mobile-close {
-        display: flex; align-items: center; justify-content: center;
-        top: max(10px, env(safe-area-inset-top));
-        right: max(10px, env(safe-area-inset-right));
-        width: 50px; height: 50px; padding: 0; border-radius: 50%;
-        font-size: 1.2rem;
       }
       .figure-mobile-close-bottom {
         display: flex; align-items: center; justify-content: center;
@@ -926,7 +929,6 @@
 <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">↑</button>
 
 <div class="figure-modal" id="figureModal" hidden role="dialog" aria-modal="true" aria-labelledby="figureModalTitle">
-  <button class="figure-mobile-close" id="figureCloseMobile" type="button" aria-label="Close figure gallery">✕</button>
   <div class="figure-dialog">
     <div class="figure-modal-head">
       <div class="figure-position" id="figurePosition"></div>
@@ -1866,7 +1868,7 @@
     document.getElementById('figureModal').hidden = false;
     document.body.style.overflow = 'hidden';
     const closeButton = window.matchMedia('(max-width: 650px)').matches
-      ? document.getElementById('figureCloseMobile')
+      ? document.getElementById('figureCloseBottom')
       : document.getElementById('figureClose');
     closeButton.focus({ preventScroll: true });
   }
@@ -2720,7 +2722,7 @@
 
   /* Figure gallery */
 
-  ['figureClose', 'figureCloseMobile', 'figureCloseBottom'].forEach(id => {
+  ['figureClose', 'figureCloseBottom'].forEach(id => {
     document.getElementById(id).addEventListener('click', closeFigureGallery);
   });
   document.getElementById('figurePrev').addEventListener('click', () => {
