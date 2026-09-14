@@ -733,17 +733,19 @@
     .figure-dialog {
       width: min(1180px, 96vw); height: min(850px, 92vh); display: grid;
       grid-template-rows: auto minmax(0, 1fr) auto; gap: 12px; padding: 16px;
+      position: relative; overflow: hidden;
       border: 1px solid var(--line-bright); border-radius: 14px;
       background: linear-gradient(155deg, rgba(11,22,47,.99), rgba(3,8,20,.99));
       box-shadow: 0 0 55px color-mix(in srgb, var(--c1) 22%, transparent);
     }
-    .figure-modal-head { display: flex; align-items: center; gap: 12px; }
+    .figure-modal-head { position: relative; z-index: 2; display: flex; align-items: center; gap: 12px; }
     .figure-modal-title { min-width: 0; flex: 1; color: var(--ink); font-weight: 850; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .figure-stage { min-height: 0; display: grid; place-items: center; overflow: hidden; border-radius: 10px; background: #f5f6fa; }
     .figure-stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
     .figure-modal-foot { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 14px; }
     .figure-caption { color: #c7d8e7; line-height: 1.5; max-height: 7.5em; overflow: auto; }
     .figure-nav { min-width: 42px; padding: 9px; }
+    #figureClose { flex: 0 0 auto; touch-action: manipulation; }
     .figure-position { color: var(--cyan); font-size: .78em; white-space: nowrap; }
 
     ::-webkit-scrollbar { width: 10px; height: 10px; }
@@ -770,8 +772,25 @@
       .range-toggle { width: 100%; }
       .range-btn { flex: 1; min-width: 0; padding-inline: 8px; }
       .filters-button { width: 100%; }
-      .figure-modal { padding: 7px; }
-      .figure-dialog { width: 100%; height: 96vh; padding: 10px; }
+      .figure-modal {
+        padding: 0; place-items: stretch; overflow: hidden;
+        overscroll-behavior: contain;
+      }
+      .figure-dialog {
+        width: 100%; height: 100vh; height: 100dvh; max-height: 100dvh;
+        padding: max(10px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right))
+                 max(10px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
+        border-radius: 0;
+      }
+      .figure-modal-head { min-height: 50px; padding-right: 54px; }
+      #figureClose {
+        position: fixed;
+        top: max(10px, env(safe-area-inset-top));
+        right: max(10px, env(safe-area-inset-right));
+        z-index: 1002; width: 48px; height: 48px; padding: 0;
+        border-color: var(--cyan); background: rgba(5,16,35,.96);
+        color: var(--ink); font-size: 1.15rem;
+      }
     }
   </style>
 </head>

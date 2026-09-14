@@ -30,6 +30,12 @@ test('static frontend routes cache and fetch requests through its configured API
   assert.match(html, /fetch\(apiUrl\('\/api\/fetch'\)/);
 });
 
+test('mobile figure gallery keeps a viewport-fixed close control', () => {
+  assert.match(html, /height:\s*100dvh/);
+  assert.match(html, /#figureClose\s*\{[\s\S]*?position:\s*fixed;[\s\S]*?width:\s*48px;[\s\S]*?height:\s*48px;/);
+  assert.match(html, /safe-area-inset-top/);
+});
+
 function loadPagination(pageSize = 24, currentPage = 1) {
   return new Function('pageSize', 'currentPage', `
     ${paginationSource}
