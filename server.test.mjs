@@ -110,6 +110,7 @@ test('rejects unsupported categories and invalid dates', async () => {
 
 test('returns metadata first and reports background figure progress', async () => {
   let enrichCalls = 0;
+  let observedPriorityIds = [];
   let testDataRoot = '';
 
   const fetcher = async (category, date, options) => {
@@ -129,6 +130,7 @@ test('returns metadata first and reports background figure progress', async () =
     enrichCalls++;
     options.onProgress({ processed: 0, total: 2, found: 0 });
     await new Promise(resolve => setTimeout(resolve, 20));
+    observedPriorityIds = options.getPriorityIds();
     options.onProgress({ processed: 1, total: 2, found: 1 });
     await new Promise(resolve => setTimeout(resolve, 20));
     options.onProgress({ processed: 2, total: 2, found: 2 });
@@ -152,6 +154,18 @@ test('returns metadata first and reports background figure progress', async () =
     assert.equal(response.ok, true);
     assert.ok(['queued', 'figures'].includes(response.figures.phase));
 
+    const prioritized = await fetch(`${baseUrl}/api/fetch/prioritize`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        category: 'astro-ph',
+        date: '2026-09-16',
+        ids: ['2609.00002v3', 'invalid', '2609.00001']
+      })
+    }).then(result => result.json());
+    assert.equal(prioritized.ok, true);
+    assert.equal(prioritized.accepted, true);
+
     let status;
     for (let attempt = 0; attempt < 20; attempt++) {
       status = await fetch(`${baseUrl}/api/fetch/status?category=astro-ph&date=2026-09-16`)
@@ -166,5 +180,6 @@ test('returns metadata first and reports background figure progress', async () =
   }, { fetcher, enricher });
 
   assert.equal(enrichCalls, 1);
+  assert.deepEqual(observedPriorityIds, ['2609.00002', '2609.00001']);
   assert.ok(testDataRoot);
 });

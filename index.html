@@ -803,11 +803,11 @@
             <div class="settings-switches">
               <label class="settings-switch">
                 <span>Right panel</span>
-                <input type="checkbox" id="previewPanelToggle" checked aria-label="Toggle right panel" />
+                <input type="checkbox" id="previewPanelToggle" aria-label="Toggle right panel" />
               </label>
               <label class="settings-switch" id="pdfPreviewLabel">
                 <span>PDF preview</span>
-                <input type="checkbox" id="pdfPreviewToggle" checked aria-label="Toggle PDF preview" />
+                <input type="checkbox" id="pdfPreviewToggle" aria-label="Toggle PDF preview" />
               </label>
               <label class="settings-select" for="pageSizeSelect">
                 <span>Papers per page</span>
@@ -1090,6 +1090,7 @@
   function saveSettings() {
     try {
       localStorage.setItem('arxivSettings', JSON.stringify({
+        settingsVersion: 2,
         theme: document.body.className.replace('theme-', ''),
         dateRange: currentDateRange,
         sectionColumns,
@@ -1118,8 +1119,10 @@
     if (s.theme) setTheme(s.theme, false);
     if (s.dateRange) setDateRange(s.dateRange, false);
     if (s.sectionColumns) sectionColumns = s.sectionColumns;
-    if (s.pdfPreview != null) document.getElementById('pdfPreviewToggle').checked = s.pdfPreview;
-    if (s.previewPanel != null) document.getElementById('previewPanelToggle').checked = s.previewPanel;
+    if (Number(s.settingsVersion) >= 2) {
+      if (s.pdfPreview != null) document.getElementById('pdfPreviewToggle').checked = s.pdfPreview;
+      if (s.previewPanel != null) document.getElementById('previewPanelToggle').checked = s.previewPanel;
+    }
     if (s.selectedCategory) selectedCategory = s.selectedCategory;
     if (['date-desc', 'date-asc', 'title'].includes(s.sortMode)) sortMode = s.sortMode;
     if (s.categoryFilter) categoryFilter = s.categoryFilter;
@@ -1284,7 +1287,7 @@
 
   async function refreshFiguresFromCache(category, date, generation) {
     const payload = await fetchStaticDay(category, date);
-    if (!payload || generation !== loadGeneration || selectedCategory !== category) return;
+    if (!payload || generation !== loadGeneration || selectedCategory !== category) return 0;
 
     const enrichedById = new Map();
     for (const section of SECTIONS) {
@@ -1294,19 +1297,48 @@
     }
 
     const meta = window.__LAST_RENDER_META__;
-    if (!meta) return;
+    if (!meta) return 0;
+    let updatedVisibleCards = 0;
     for (const section of SECTIONS) {
       for (const paper of meta.papersBySection[section]) {
         const enriched = enrichedById.get(paper.absId);
         if (!enriched) continue;
+        const previousFigureCount = paperFigures(paper).length;
         paper.figures = enriched.figures || [];
         paper.thumbnailUrl = enriched.thumbnailUrl || '';
         paper.thumbnailAlt = enriched.thumbnailAlt || '';
+        const card = document.querySelector(`.paper-card[data-absid="${CSS.escape(paper.absId)}"]`);
+        if (card && paperFigures(paper).length > previousFigureCount) {
+          const visual = card.querySelector('.paper-visual');
+          if (visual) {
+            visual.outerHTML = renderPaperVisual(paper);
+            updatedVisibleCards++;
+          }
+        }
       }
     }
+    return updatedVisibleCards;
+  }
 
-    const selectedId = currentSelectedCard?.getAttribute('data-absid') || '';
-    rerenderCurrentView(selectedId);
+  async function prioritizeCurrentPageFigures(category, date) {
+    const ids = [...document.querySelectorAll('.paper-card[data-absid]')]
+      .map(card => card.getAttribute('data-absid'))
+      .filter(id => {
+        const paper = window.__PAPER_BY_ID__?.get(id);
+        return paper && (paper.catchupDate || paper.published?.toISOString?.().slice(0, 10)) === date;
+      });
+    if (!ids.length) return '';
+
+    const signature = ids.join(',');
+    try {
+      await fetch('/api/fetch/prioritize', {
+        method: 'POST',
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        cache: 'no-store',
+        body: JSON.stringify({ category, date, ids })
+      });
+    } catch (_) {}
+    return signature;
   }
 
   async function watchFigureEnrichment(category, date, generation) {
@@ -1314,7 +1346,20 @@
     if (figureWatchers.has(key)) return figureWatchers.get(key);
 
     const task = (async () => {
+      let lastPrioritySignature = '';
+      let lastRefreshedAt = 0;
       while (generation === loadGeneration && selectedCategory === category) {
+        const visibleIds = [...document.querySelectorAll('.paper-card[data-absid]')]
+          .map(card => card.getAttribute('data-absid'))
+          .filter(id => {
+            const paper = window.__PAPER_BY_ID__?.get(id);
+            return paper && (paper.catchupDate || paper.published?.toISOString?.().slice(0, 10)) === date;
+          })
+          .join(',');
+        if (visibleIds && visibleIds !== lastPrioritySignature) {
+          lastPrioritySignature = await prioritizeCurrentPageFigures(category, date) || visibleIds;
+        }
+
         let response;
         try {
           response = await fetch(
@@ -1334,6 +1379,10 @@
           setBackgroundFigureStatus(`🛰 Paper list ready. Figures for ${date} are queued…`);
         } else if (figures.phase === 'figures') {
           const pct = figures.total ? Math.round((figures.processed / figures.total) * 100) : 100;
+          if (figures.processed - lastRefreshedAt >= 2) {
+            await refreshFiguresFromCache(category, date, generation);
+            lastRefreshedAt = figures.processed;
+          }
           setBackgroundFigureStatus(
             `🛰 Paper list ready · figures ${figures.processed}/${figures.total} (${pct}%) · found ${figures.found}`
           );
@@ -1779,6 +1828,24 @@
 
   /* Render card */
 
+  function renderPaperVisual(p) {
+    const figures = paperFigures(p);
+    const thumbnailUrl = figures[0]?.url || '';
+    const thumbnailAlt = p.thumbnailAlt || `First figure from ${p.title}`;
+    const categoryLabel = p.categories?.[0] || 'arXiv';
+
+    return `
+      <div class="paper-visual${thumbnailUrl ? ' has-image' : ''}"
+           ${thumbnailUrl ? `onclick="event.stopPropagation();openFigureGallery('${escapeHtml(p.absId)}')" title="Open figure gallery"` : ''}>
+        ${thumbnailUrl ? `<img src="${escapeHtml(thumbnailUrl)}"
+          alt="${escapeHtml(thumbnailAlt)}"
+          loading="lazy" decoding="async" referrerpolicy="no-referrer"
+          onerror="this.parentElement.classList.add('image-error');this.remove()" />` : ''}
+        <span class="paper-visual-placeholder">${escapeHtml(categoryLabel)}</span>
+        ${figures.length ? `<span class="figure-count">▧ ${figures.length}</span>` : ''}
+      </div>`;
+  }
+
   function renderPaperCard(p, sec) {
     const isFav = favorites.has(p.absId);
     const readingState = readingStates.get(p.absId) || 'unread';
@@ -1791,21 +1858,8 @@
       ? p.published.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
       : '';
 
-    const figures = paperFigures(p);
-    const thumbnailUrl = figures[0]?.url || '';
-    const thumbnailAlt = p.thumbnailAlt || `First figure from ${p.title}`;
-    const categoryLabel = p.categories?.[0] || 'arXiv';
     const adsUrl = `https://ui.adsabs.harvard.edu/abs/${encodeURIComponent(`arXiv:${p.absId}`)}/abstract`;
-    const visual = `
-      <div class="paper-visual${thumbnailUrl ? ' has-image' : ''}"
-           ${thumbnailUrl ? `onclick="event.stopPropagation();openFigureGallery('${escapeHtml(p.absId)}')" title="Open figure gallery"` : ''}>
-        ${thumbnailUrl ? `<img src="${escapeHtml(thumbnailUrl)}"
-          alt="${escapeHtml(thumbnailAlt)}"
-          loading="lazy" decoding="async" referrerpolicy="no-referrer"
-          onerror="this.parentElement.classList.add('image-error');this.remove()" />` : ''}
-        <span class="paper-visual-placeholder">${escapeHtml(categoryLabel)}</span>
-        ${figures.length ? `<span class="figure-count">▧ ${figures.length}</span>` : ''}
-      </div>`;
+    const visual = renderPaperVisual(p);
 
     return `
       <div class="paper-card${isFav ? ' favorited' : ''}${searchQuery ? ' search-match' : ''}"

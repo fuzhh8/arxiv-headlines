@@ -6,8 +6,11 @@ site is run with its Node server, selecting an uncached date automatically
 fetches that category from arXiv, stores the result locally, and reloads it into
 the page. The paper list is returned first; research figures continue through a
 rate-limited background queue with live progress in the page and are merged into
-the cards when ready. Concurrent requests for the same category/date share one
-fetch, and pending figure work resumes after a page or server restart.
+the cards incrementally. Papers visible on the current pagination page are moved
+to the front of the figure queue; the cache checkpoints every two papers, so
+available images appear without waiting for the whole date to finish. Concurrent
+requests for the same category/date share one fetch, and pending figure work
+resumes after a page or server restart.
 
 The browser-only live/CORS-proxy path remains as a fallback for static hosting.
 The latest valid cached date is selected automatically. When an arXiv HTML
@@ -18,7 +21,8 @@ The interface also includes advanced sorting/filtering, dedicated favorite/
 to-read/read views, click-to-load PDF review, and direct arXiv, PDF, and NASA ADS
 links. Paper lists are paginated (24 per page by default, configurable to 12 or
 48) so week-long feeds do not render hundreds of cards, figures, and MathJax
-expressions at once. User states stay in browser `localStorage`.
+expressions at once. The right detail panel and PDF preview are off by default;
+both can be enabled under Settings. User states stay in browser `localStorage`.
 
 Run locally from this directory (Node.js 18 or newer):
 
@@ -45,6 +49,13 @@ idle and use an ephemeral filesystem, so on-demand cache files can disappear
 after a restart or redeploy. The repository's committed cache remains. For
 durable runtime caches, attach a persistent disk on a paid plan or move cache
 storage to an external object store.
+
+For an always-fast static shell, deploy `index.html` and committed `data/` on
+GitHub Pages (or a Render Static Site), keep only the fetch API on a web service,
+and store new JSON in durable object storage such as an S3-compatible bucket.
+That split needs three additions that are intentionally not hard-coded here: a
+public API base URL for the static page, CORS rules on the API, and storage
+credentials on the server. Never put storage credentials in browser JavaScript.
 
 Then open <http://127.0.0.1:8000/>. Opening `index.html` directly is not
 supported because browsers block the JSON cache requests from `file://` pages.

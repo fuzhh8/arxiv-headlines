@@ -12,6 +12,18 @@ const end = html.indexOf('/* Saved-paper views */', start);
 assert.ok(start >= 0 && end > start, 'pagination source block should exist');
 const paginationSource = html.slice(start, end);
 
+test('inline browser scripts parse as JavaScript', () => {
+  const inlineScripts = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)];
+  assert.ok(inlineScripts.length >= 2);
+  for (const [, source] of inlineScripts) new Function(source);
+});
+
+test('right panel and PDF preview are off by default', () => {
+  assert.doesNotMatch(html, /id="previewPanelToggle"[^>]*\bchecked\b/);
+  assert.doesNotMatch(html, /id="pdfPreviewToggle"[^>]*\bchecked\b/);
+  assert.match(html, /settingsVersion:\s*2/);
+});
+
 function loadPagination(pageSize = 24, currentPage = 1) {
   return new Function('pageSize', 'currentPage', `
     ${paginationSource}

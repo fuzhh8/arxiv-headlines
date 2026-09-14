@@ -111,7 +111,8 @@ function createOnDemandFetcher({ dataRoot, fetcher, enricher }) {
       processed: 0,
       total: payload.figureCounts?.total || 0,
       found: 0,
-      error: ''
+      error: '',
+      priorityIds: []
     };
     figureJobs.set(key, job);
 
@@ -119,6 +120,7 @@ function createOnDemandFetcher({ dataRoot, fetcher, enricher }) {
       job.phase = 'figures';
       const enriched = await enricher(category, date, {
         dataRoot,
+        getPriorityIds: () => job.priorityIds,
         onProgress(progress) {
           job.processed = progress.processed;
           job.total = progress.total;
@@ -182,7 +184,20 @@ function createOnDemandFetcher({ dataRoot, fetcher, enricher }) {
     return publicFigureStatus(null, cached);
   }
 
-  return { ensureCached, getStatus };
+  function prioritize(category, date, ids) {
+    validateFetchTarget(category, date);
+    const key = `${category}/${date}`;
+    const job = figureJobs.get(key);
+    if (!job) return false;
+    job.priorityIds = [...new Set(
+      (Array.isArray(ids) ? ids : [])
+        .map(id => String(id || '').trim().replace(/v\d+$/i, ''))
+        .filter(id => /^\d{4}\.\d{4,5}$|^[a-z-]+(?:\.[A-Z]+)?\/\d{7}$/i.test(id))
+    )].slice(0, 100);
+    return true;
+  }
+
+  return { ensureCached, getStatus, prioritize };
 }
 
 export function createArxivServer(options = {}) {
@@ -235,6 +250,19 @@ export function createArxivServer(options = {}) {
         const date = String(requestUrl.searchParams.get('date') || '');
         const figures = await onDemand.getStatus(category, date);
         sendJson(res, 200, { ok: true, category, date, figures });
+        return;
+      }
+
+      if (requestUrl.pathname === '/api/fetch/prioritize') {
+        if (req.method !== 'POST') {
+          sendJson(res, 405, { ok: false, error: 'Method not allowed' });
+          return;
+        }
+        const body = await readJsonBody(req);
+        const category = String(body.category || '');
+        const date = String(body.date || '');
+        const accepted = onDemand.prioritize(category, date, body.ids);
+        sendJson(res, 200, { ok: true, accepted, category, date });
         return;
       }
 

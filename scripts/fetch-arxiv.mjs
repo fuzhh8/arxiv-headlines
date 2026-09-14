@@ -1,4 +1,4 @@
-import { writeFileSync, mkdirSync, readdirSync, unlinkSync, readFileSync } from 'fs';
+import { writeFileSync, mkdirSync, readdirSync, unlinkSync, readFileSync, renameSync } from 'fs';
 import { join, dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -254,22 +254,38 @@ async function fetchPaperThumbnail(paper) {
 
 async function enrichWithThumbnails(papers, options = {}) {
   const queue = [...papers.values()].filter(paper => paper.htmlUrl);
-  let cursor = 0;
+  const pending = new Map(queue.map(paper => [paper.absId, paper]));
   let found = 0;
   let processed = 0;
 
   options.onProgress?.({ processed, total: queue.length, found });
 
+  function takeNextPaper() {
+    const priorityIds = options.getPriorityIds?.() || [];
+    for (const id of priorityIds) {
+      if (!pending.has(id)) continue;
+      const paper = pending.get(id);
+      pending.delete(id);
+      return paper;
+    }
+
+    const next = pending.entries().next();
+    if (next.done) return null;
+    pending.delete(next.value[0]);
+    return next.value[1];
+  }
+
   async function worker() {
-    while (cursor < queue.length) {
-      const paper = queue[cursor++];
+    while (pending.size > 0) {
+      const paper = takeNextPaper();
+      if (!paper) return;
       const thumbnail = await fetchPaperThumbnail(paper);
       if (thumbnail) {
         Object.assign(paper, thumbnail);
         found++;
       }
       processed++;
-      options.onProgress?.({ processed, total: queue.length, found });
+      options.onProgress?.({ processed, total: queue.length, found, absId: paper.absId });
       await sleep(250);
     }
   }
@@ -414,6 +430,12 @@ function shouldUpdateLatest(latestPath, ymd) {
   }
 }
 
+function writeJsonAtomic(path, value) {
+  const temporary = `${path}.${process.pid}.tmp`;
+  writeFileSync(temporary, JSON.stringify(value, null, 2), 'utf8');
+  renameSync(temporary, path);
+}
+
 async function fetchAndStoreCategory(catCode, ymd, options = {}) {
   validateFetchTarget(catCode, ymd);
 
@@ -464,25 +486,48 @@ async function enrichAndStoreCategoryFigures(catCode, ymd, options = {}) {
     }
   }
 
-  const figureCounts = await enrichWithThumbnails(uniquePapers, { onProgress: options.onProgress });
-
-  for (const section of ['new', 'cross', 'repl']) {
-    payload.papersBySection[section] = (payload.papersBySection[section] || []).map(paper => {
-      const enriched = uniquePapers.get(paper.absId);
-      if (!enriched) return paper;
-      return {
-        ...paper,
-        ...(enriched.figures ? { figures: enriched.figures } : {}),
-        ...(enriched.thumbnailUrl ? { thumbnailUrl: enriched.thumbnailUrl } : {}),
-        ...(enriched.thumbnailAlt ? { thumbnailAlt: enriched.thumbnailAlt } : {})
-      };
-    });
+  function mergeEnrichedPapers() {
+    for (const section of ['new', 'cross', 'repl']) {
+      payload.papersBySection[section] = (payload.papersBySection[section] || []).map(paper => {
+        const enriched = uniquePapers.get(paper.absId);
+        if (!enriched) return paper;
+        return {
+          ...paper,
+          ...(enriched.figures ? { figures: enriched.figures } : {}),
+          ...(enriched.thumbnailUrl ? { thumbnailUrl: enriched.thumbnailUrl } : {}),
+          ...(enriched.thumbnailAlt ? { thumbnailAlt: enriched.thumbnailAlt } : {})
+        };
+      });
+    }
   }
 
+  let lastCheckpoint = 0;
+  const figureCounts = await enrichWithThumbnails(uniquePapers, {
+    getPriorityIds: options.getPriorityIds,
+    onProgress(progress) {
+      const shouldCheckpoint = progress.processed > 0 &&
+        (progress.processed - lastCheckpoint >= 2 || progress.processed === progress.total);
+      if (shouldCheckpoint) {
+        mergeEnrichedPapers();
+        payload.figuresStatus = 'pending';
+        payload.figureCounts = {
+          processed: progress.processed,
+          total: progress.total,
+          found: progress.found
+        };
+        payload.figuresUpdatedAt = new Date().toISOString();
+        writeJsonAtomic(dated, payload);
+        lastCheckpoint = progress.processed;
+      }
+      options.onProgress?.(progress);
+    }
+  });
+
+  mergeEnrichedPapers();
   payload.figuresStatus = 'complete';
   payload.figureCounts = figureCounts;
   payload.figuresGeneratedAt = new Date().toISOString();
-  writeFileSync(dated, JSON.stringify(payload, null, 2), 'utf8');
+  writeJsonAtomic(dated, payload);
   console.log(`  ✅ Added figures to ${dated}`);
 
   const latest = join(outDir, 'latest.json');
