@@ -180,7 +180,7 @@
     }
     button:disabled { background: #b7b7b7; border-color: #b7b7b7; cursor: not-allowed; }
 
-    .range-toggle { display: flex; gap: 8px; align-items: center; }
+    .range-toggle { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .range-btn {
       padding: 10px 16px; border-radius: 10px;
       border: 2px solid var(--c1); background: #fff;
@@ -189,6 +189,12 @@
     }
     .range-btn:hover { background: #f2f5ff; }
     .range-btn.active { background: var(--c1); color: #fff; }
+    .custom-start-wrap {
+      display: flex; flex: 1 0 100%; align-items: center; gap: 8px; padding: 4px 0 0;
+      color: var(--muted); font-size: .82em;
+    }
+    .custom-start-wrap[hidden] { display: none; }
+    .custom-start-wrap input { min-width: 145px; }
 
     .pdf-toggle {
       display: inline-flex; align-items: center; gap: 6px;
@@ -770,9 +776,14 @@
       body { padding: 6px; overflow-x: hidden; }
       .main { padding: 6px; }
       .controls > .group { flex: 1 1 100% !important; min-width: 0 !important; max-width: none !important; }
-      .range-toggle { width: 100%; }
+      .range-toggle { width: 100%; flex-wrap: wrap; }
       .range-btn { flex: 1; min-width: 0; padding-inline: 8px; }
+      .custom-start-wrap { flex: 1 0 100%; }
+      .custom-start-wrap input { flex: 1; min-width: 0; }
       .filters-button { width: 100%; }
+    }
+    @media (max-width: 650px),
+           (orientation: landscape) and (max-width: 950px) and (max-height: 520px) {
       .figure-modal {
         width: 100%; height: 100%; height: 100dvh;
         padding: 0; place-items: stretch; overflow: hidden;
@@ -816,6 +827,26 @@
         right: max(10px, env(safe-area-inset-right));
         bottom: max(10px, env(safe-area-inset-bottom));
         min-height: 48px; border-radius: 10px; font-weight: 850;
+      }
+    }
+    @media (orientation: landscape) and (max-width: 950px) and (max-height: 520px) {
+      .figure-dialog {
+        grid-template-rows: minmax(0, 1fr);
+        padding: max(8px, env(safe-area-inset-top))
+                 max(108px, calc(env(safe-area-inset-right) + 98px))
+                 max(8px, env(safe-area-inset-bottom))
+                 max(8px, env(safe-area-inset-left));
+      }
+      .figure-modal-foot {
+        position: absolute; top: max(8px, env(safe-area-inset-top));
+        right: max(10px, env(safe-area-inset-right)); bottom: 66px;
+        width: 82px; display: flex; flex-direction: column; justify-content: center;
+      }
+      .figure-modal-foot .figure-nav { width: 100%; min-height: 46px; }
+      .figure-caption { display: none; }
+      .figure-mobile-close-bottom {
+        left: auto; right: max(10px, env(safe-area-inset-right));
+        width: 82px; min-height: 48px; padding-inline: 6px;
       }
     }
   </style>
@@ -876,12 +907,17 @@
         <label for="day">Date</label>
         <input id="day" type="date" aria-label="Select date" />
       </div>
-      <div class="group" style="min-width:240px;">
+      <div class="group" style="min-width:380px;">
         <label>Range</label>
         <div class="range-toggle" role="group" aria-label="Date range">
           <button class="range-btn active" data-range="1" onclick="setDateRange(1)">Today</button>
           <button class="range-btn"        data-range="3" onclick="setDateRange(3)">3 Days</button>
           <button class="range-btn"        data-range="7" onclick="setDateRange(7)">1 Week</button>
+          <button class="range-btn"        data-range="custom" onclick="setDateRange('custom')">Custom start</button>
+          <label class="custom-start-wrap" id="customStartWrap" for="rangeStart" hidden>
+            Start
+            <input id="rangeStart" type="date" aria-label="Custom range start date" />
+          </label>
         </div>
       </div>
       <div class="group search-wrap" style="min-width:220px;">
@@ -1003,6 +1039,7 @@
   let selectedCategory = 'astro-ph';
   let currentSelectedCard = null;
   let currentDateRange = 1;
+  let customStartDate = '';
   let sectionColumns = { new: 2, cross: 2, repl: 2 };
   let searchQuery = '';
   let favorites = new Set();
@@ -1142,6 +1179,7 @@
         settingsVersion: 2,
         theme: document.body.className.replace('theme-', ''),
         dateRange: currentDateRange,
+        customStartDate,
         sectionColumns,
         pdfPreview: document.getElementById('pdfPreviewToggle').checked,
         previewPanel: document.getElementById('previewPanelToggle').checked,
@@ -1166,6 +1204,10 @@
   function applySettings(s) {
     if (!s) return;
     if (s.theme) setTheme(s.theme, false);
+    if (/^\d{4}-\d{2}-\d{2}$/.test(s.customStartDate || '')) {
+      customStartDate = s.customStartDate;
+      document.getElementById('rangeStart').value = customStartDate;
+    }
     if (s.dateRange) setDateRange(s.dateRange, false);
     if (s.sectionColumns) sectionColumns = s.sectionColumns;
     if (Number(s.settingsVersion) >= 2) {
@@ -1203,12 +1245,26 @@
 
   /* Date range */
 
-  function setDateRange(days, save = true) {
-    currentDateRange = days;
+  function offsetDate(ymd, dayOffset) {
+    const dt = new Date(`${ymd}T00:00:00`);
+    dt.setDate(dt.getDate() + dayOffset);
+    return `${dt.getFullYear()}-${pad2(dt.getMonth() + 1)}-${pad2(dt.getDate())}`;
+  }
+
+  function setDateRange(range, save = true) {
+    currentDateRange = range === 'custom' ? 'custom' : Number(range);
 
     document.querySelectorAll('.range-btn').forEach(btn => {
-      btn.classList.toggle('active', parseInt(btn.dataset.range) === days);
+      btn.classList.toggle('active', btn.dataset.range === String(currentDateRange));
     });
+
+    const customWrap = document.getElementById('customStartWrap');
+    const startInput = document.getElementById('rangeStart');
+    customWrap.hidden = currentDateRange !== 'custom';
+    if (currentDateRange === 'custom' && !startInput.value) {
+      startInput.value = offsetDate(document.getElementById('day').value || defaultArxivDate(), -6);
+      customStartDate = startInput.value;
+    }
 
     if (save) {
       saveSettings();
@@ -1216,11 +1272,27 @@
     }
   }
 
-  function getDateList(endDate, days) {
+  function getDateList(endDate, range, startDate = '') {
     const dates = [];
     const dt = new Date(`${endDate}T00:00:00`);
+    if (range === 'custom') {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(startDate)) {
+        throw new Error('Please select a custom start date.');
+      }
+      const start = new Date(`${startDate}T00:00:00`);
+      if (start > dt) throw new Error('The custom start date must not be after the selected date.');
+      for (let i = 0; i < 90; i++) {
+        const date = offsetDate(endDate, -i);
+        if (date < startDate) break;
+        dates.push(date);
+      }
+      if (dates.at(-1) !== startDate) {
+        throw new Error('A custom date range can include at most 90 days.');
+      }
+      return dates;
+    }
 
-    for (let i = 0; i < days; i++) {
+    for (let i = 0; i < Number(range); i++) {
       dates.push(`${dt.getFullYear()}-${pad2(dt.getMonth() + 1)}-${pad2(dt.getDate())}`);
       dt.setDate(dt.getDate() - 1);
     }
@@ -2369,7 +2441,7 @@
     }
 
     try {
-      const dateList = getDateList(selectedYmd, currentDateRange);
+      const dateList = getDateList(selectedYmd, currentDateRange, customStartDate);
 
       document.getElementById('content').innerHTML = `
         <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar"></div></div>
@@ -2783,13 +2855,31 @@
     const latestCategory = SAVED_TAB_CODES.has(selectedCategory) ? 'astro-ph' : selectedCategory;
     const latestPayload = await fetchLatestStatic(latestCategory);
     document.getElementById('day').value = latestPayload?.date || defaultArxivDate();
+    const rangeStartInput = document.getElementById('rangeStart');
+    rangeStartInput.max = document.getElementById('day').value;
+    if (currentDateRange === 'custom' && !rangeStartInput.value) {
+      rangeStartInput.value = offsetDate(document.getElementById('day').value, -6);
+      customStartDate = rangeStartInput.value;
+    }
 
     document.getElementById('day').addEventListener('change', function () {
       if (isWeekend(this.value)) {
         this.value = prevFriday(this.value);
       }
 
+      rangeStartInput.max = this.value;
+      if (rangeStartInput.value > this.value) {
+        rangeStartInput.value = this.value;
+        customStartDate = this.value;
+      }
+
       loadPapers();
+    });
+
+    rangeStartInput.addEventListener('change', function () {
+      customStartDate = this.value;
+      saveSettings();
+      if (currentDateRange === 'custom') loadPapers();
     });
 
     loadPapers();

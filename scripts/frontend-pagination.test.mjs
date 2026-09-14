@@ -8,9 +8,13 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const html = readFileSync(join(root, 'index.html'), 'utf8');
 const start = html.indexOf('function paginationItems');
 const end = html.indexOf('/* Saved-paper views */', start);
+const dateStart = html.indexOf('function offsetDate');
+const dateEnd = html.indexOf('function categoryToDataDir', dateStart);
 
 assert.ok(start >= 0 && end > start, 'pagination source block should exist');
+assert.ok(dateStart >= 0 && dateEnd > dateStart, 'date range source block should exist');
 const paginationSource = html.slice(start, end);
+const dateSource = html.slice(dateStart, dateEnd);
 
 test('inline browser scripts parse as JavaScript', () => {
   const inlineScripts = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)];
@@ -42,6 +46,28 @@ test('mobile figure gallery supports touch panning and uses only the bottom clos
   assert.match(html, /\.figure-mobile-close-bottom\s*\{[\s\S]*?bottom:\s*max\(10px, env\(safe-area-inset-bottom\)\)/);
   assert.match(html, /safe-area-inset-top/);
   assert.match(html, /\['figureClose', 'figureCloseBottom'\]/);
+});
+
+test('landscape phones reserve a compact control rail for the figure gallery', () => {
+  assert.match(html, /orientation:\s*landscape[\s\S]*?max-height:\s*520px/);
+  assert.match(html, /\.figure-dialog\s*\{[\s\S]*?padding:[\s\S]*?108px/);
+  assert.match(html, /\.figure-modal-foot\s*\{[\s\S]*?position:\s*absolute;[\s\S]*?width:\s*82px;/);
+  assert.match(html, /\.figure-mobile-close-bottom\s*\{[\s\S]*?width:\s*82px;/);
+});
+
+test('custom start date builds an inclusive range and enforces safe bounds', () => {
+  const { getDateList } = new Function('pad2', 'defaultArxivDate', `
+    ${dateSource}
+    return { getDateList };
+  `)(value => String(value).padStart(2, '0'), () => '2026-09-14');
+
+  assert.deepEqual(getDateList('2026-09-14', 'custom', '2026-09-10'), [
+    '2026-09-14', '2026-09-13', '2026-09-12', '2026-09-11', '2026-09-10'
+  ]);
+  assert.throws(() => getDateList('2026-09-14', 'custom', '2026-09-15'), /must not be after/);
+  assert.throws(() => getDateList('2026-09-14', 'custom', '2026-01-01'), /at most 90 days/);
+  assert.match(html, /data-range="custom"/);
+  assert.match(html, /id="rangeStart" type="date"/);
 });
 
 function loadPagination(pageSize = 24, currentPage = 1) {
