@@ -30,10 +30,14 @@ test('static frontend routes cache and fetch requests through its configured API
   assert.match(html, /fetch\(apiUrl\('\/api\/fetch'\)/);
 });
 
-test('mobile figure gallery keeps a viewport-fixed close control', () => {
+test('mobile figure gallery keeps two controls outside the clipped dialog', () => {
   assert.match(html, /height:\s*100dvh/);
-  assert.match(html, /#figureClose\s*\{[\s\S]*?position:\s*fixed;[\s\S]*?width:\s*48px;[\s\S]*?height:\s*48px;/);
+  assert.match(html, /<div class="figure-modal"[^>]*>\s*<button class="figure-mobile-close" id="figureCloseMobile"/);
+  assert.match(html, /<\/div>\s*<button class="figure-mobile-close-bottom" id="figureCloseBottom"/);
+  assert.match(html, /\.figure-mobile-close\s*\{[\s\S]*?width:\s*50px;[\s\S]*?height:\s*50px;/);
+  assert.match(html, /\.figure-mobile-close-bottom\s*\{[\s\S]*?bottom:\s*max\(10px, env\(safe-area-inset-bottom\)\)/);
   assert.match(html, /safe-area-inset-top/);
+  assert.match(html, /\['figureClose', 'figureCloseMobile', 'figureCloseBottom'\]/);
 });
 
 function loadPagination(pageSize = 24, currentPage = 1) {
