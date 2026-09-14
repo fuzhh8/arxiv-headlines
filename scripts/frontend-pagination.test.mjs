@@ -30,11 +30,14 @@ test('static frontend routes cache and fetch requests through its configured API
   assert.match(html, /fetch\(apiUrl\('\/api\/fetch'\)/);
 });
 
-test('mobile figure gallery contains the full image and uses only the bottom close control', () => {
+test('mobile figure gallery supports touch panning and uses only the bottom close control', () => {
   assert.match(html, /height:\s*100dvh/);
   assert.doesNotMatch(html, /id="figureCloseMobile"/);
   assert.match(html, /<\/div>\s*<button class="figure-mobile-close-bottom" id="figureCloseBottom"/);
-  assert.match(html, /\.figure-stage img\s*\{[\s\S]*?position:\s*absolute;[\s\S]*?width:\s*100%;[\s\S]*?height:\s*100%;[\s\S]*?object-fit:\s*contain;/);
+  assert.match(html, /\.figure-stage\s*\{[\s\S]*?overflow:\s*auto;[\s\S]*?touch-action:\s*pan-x pan-y pinch-zoom;/);
+  assert.match(html, /\.figure-stage img\s*\{[\s\S]*?width:\s*auto;[\s\S]*?height:\s*auto;[\s\S]*?max-width:\s*none;[\s\S]*?max-height:\s*none;/);
+  assert.match(html, /id="figureStage"/);
+  assert.match(html, /figureStage\.scrollLeft\s*=\s*0;[\s\S]*?figureStage\.scrollTop\s*=\s*0;/);
   assert.match(html, /\.figure-modal-title\s*\{\s*display:\s*none;/);
   assert.match(html, /\.figure-mobile-close-bottom\s*\{[\s\S]*?bottom:\s*max\(10px, env\(safe-area-inset-bottom\)\)/);
   assert.match(html, /safe-area-inset-top/);

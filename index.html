@@ -792,10 +792,15 @@
         background: rgba(5,16,35,.82); pointer-events: none;
       }
       .figure-modal-title { display: none; }
-      .figure-stage { position: relative; width: 100%; height: 100%; }
+      .figure-stage {
+        position: relative; display: block; width: 100%; height: 100%;
+        overflow: auto; overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x pan-y pinch-zoom;
+      }
       .figure-stage img {
-        position: absolute; inset: 0; width: 100%; height: 100%;
-        max-width: none; max-height: none; object-fit: contain; object-position: center;
+        position: static; display: block; width: auto; height: auto; min-width: 100%;
+        max-width: none; max-height: none; object-fit: initial;
       }
       .figure-modal-foot { min-width: 0; gap: 8px; }
       .figure-caption { max-height: 3em; overflow-wrap: anywhere; font-size: .78rem; }
@@ -935,7 +940,7 @@
       <div class="figure-modal-title" id="figureModalTitle"></div>
       <button class="figure-nav" id="figureClose" type="button" aria-label="Close figure gallery">✕</button>
     </div>
-    <div class="figure-stage"><img id="figureImage" alt="" referrerpolicy="no-referrer" /></div>
+    <div class="figure-stage" id="figureStage"><img id="figureImage" alt="" referrerpolicy="no-referrer" /></div>
     <div class="figure-modal-foot">
       <button class="figure-nav" id="figurePrev" type="button" aria-label="Previous figure">←</button>
       <div class="figure-caption" id="figureCaption"></div>
@@ -1881,6 +1886,9 @@
     document.getElementById('figurePosition').textContent = `${galleryIndex + 1} / ${figures.length}`;
     document.getElementById('figureImage').src = figure.url;
     document.getElementById('figureImage').alt = figure.caption || `Figure ${galleryIndex + 1}`;
+    const figureStage = document.getElementById('figureStage');
+    figureStage.scrollLeft = 0;
+    figureStage.scrollTop = 0;
     document.getElementById('figureCaption').textContent = figure.caption || 'No caption available.';
     document.getElementById('figurePrev').disabled = galleryIndex === 0;
     document.getElementById('figureNext').disabled = galleryIndex === figures.length - 1;
