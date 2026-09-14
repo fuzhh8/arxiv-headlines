@@ -1,0 +1,74 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - config.js
+      - data/**
+      - scripts/build-static.mjs
+      - .github/workflows/deploy-pages.yml
+  workflow_dispatch:
+  workflow_run:
+    workflows: [Fetch arXiv Papers]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Verify Render API URL
+        env:
+          ARXIV_API_BASE_URL: ${{ vars.ARXIV_API_BASE_URL }}
+        run: |
+          if [ -z "$ARXIV_API_BASE_URL" ]; then
+            echo "::error::Set the repository variable ARXIV_API_BASE_URL to your Render web service URL."
+            exit 1
+          fi
+
+      - name: Test
+        run: npm test
+
+      - name: Build static site
+        env:
+          ARXIV_API_BASE_URL: ${{ vars.ARXIV_API_BASE_URL }}
+        run: node scripts/build-static.mjs
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

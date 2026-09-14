@@ -32,13 +32,14 @@ node server.mjs
 
 `npm start` is an equivalent shortcut when npm is installed.
 
-## Static site + fetch API + durable R2 cache
+## GitHub Pages + Render API + durable R2 cache
 
-The included Render Blueprint now creates two services:
+The production split uses three services:
 
-- `arxiv-headlines-static`: the static UI and repository cache on Render's CDN.
-- `arxiv-headlines`: the Node fetch API, which wakes only for uncached dates or
-  ongoing figure extraction.
+- GitHub Pages hosts the static UI and repository cache.
+- Render runs `arxiv-headlines`, the Node fetch API, which wakes only for
+  uncached dates or ongoing figure extraction.
+- Cloudflare R2 preserves runtime cache JSON across Render restarts.
 
 Cloudflare R2 is the durable source of truth for runtime JSON caches. The API
 reads R2 after a restart, mirrors the selected entry to its temporary local
@@ -54,32 +55,42 @@ The R2 bucket can remain private because browsers read it through `/api/cache`.
 3. Copy the Access Key ID, Secret Access Key, and S3 endpoint. The endpoint is
    `https://<ACCOUNT_ID>.r2.cloudflarestorage.com` and the R2 region is `auto`.
 
-### 2. Configure and deploy Render
+### 2. Configure the Render API
 
-1. Open [Render](https://dashboard.render.com/) and choose **New → Blueprint**.
-2. Connect `fuzhh8/arxiv-headlines` and select the `main` branch.
-3. Render reads `render.yaml`; confirm both services.
-4. On the `arxiv-headlines` web service, set these secret environment variables:
+1. Open [Render](https://dashboard.render.com/) and choose **New → Blueprint**,
+   or keep the existing `arxiv-headlines` web service.
+2. Connect `fuzhh8/arxiv-headlines`, select `main`, and use `render.yaml`.
+3. On the `arxiv-headlines` web service, set these secret environment variables:
 
    - `CACHE_S3_ENDPOINT`
    - `CACHE_S3_BUCKET`
    - `CACHE_S3_ACCESS_KEY_ID`
    - `CACHE_S3_SECRET_ACCESS_KEY`
 
-5. Redeploy the web service once after saving the secrets. Open the
-   `arxiv-headlines-static` URL for normal use.
+4. Redeploy once after saving the secrets. Verify
+   `https://YOUR-SERVICE.onrender.com/api/health` returns `"cache":"s3"`.
 
-The static build receives the API's generated Render URL automatically and
-writes it to public `config.js`; credentials are never exposed to the browser.
-`GET /api/health` reports `"cache":"s3"` when all four variables are present.
+### 3. Configure GitHub Pages
+
+1. In the GitHub repository, open **Settings → Secrets and variables → Actions
+   → Variables**.
+2. Create the repository variable `ARXIV_API_BASE_URL` with the value
+   `https://YOUR-SERVICE.onrender.com` (no trailing slash).
+3. Open **Settings → Pages** and select **GitHub Actions** as the source.
+4. Open **Actions → Deploy GitHub Pages → Run workflow** once.
+5. Use `https://fuzhh8.github.io/arxiv-headlines/` as the normal website URL.
+
+The Pages workflow builds `dist/`, injects the public Render API URL into
+`config.js`, and deploys the artifact. It also republishes after the scheduled
+`Fetch arXiv Papers` workflow completes successfully. R2 credentials remain
+only on Render and are never exposed to GitHub Pages.
 
 The API still works without R2 and falls back to the local filesystem, which is
 convenient for development but not durable on a free Render web service.
 
-To use GitHub Pages instead of the Render static site, set `apiBaseUrl` in
-`config.js` to the public `https://...onrender.com` API URL before publishing.
 The API includes CORS headers for this split deployment. Never place R2
-credentials in `config.js` or any other browser file.
+credentials in `config.js`, GitHub repository variables, or browser files; the
+only GitHub variable is the public Render URL.
 
 Then open <http://127.0.0.1:8000/>. Opening `index.html` directly is not
 supported because browsers block the JSON cache requests from `file://` pages.

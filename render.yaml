@@ -24,26 +24,3 @@ services:
         value: auto
       - key: CACHE_S3_PREFIX
         value: arxiv-headlines/
-
-  - type: web
-    name: arxiv-headlines-static
-    runtime: static
-    buildCommand: node scripts/build-static.mjs
-    staticPublishPath: ./dist
-    autoDeployTrigger: commit
-    envVars:
-      - key: ARXIV_API_BASE_URL
-        fromService:
-          name: arxiv-headlines
-          type: web
-          envVarKey: RENDER_EXTERNAL_URL
-    headers:
-      - path: /index.html
-        name: Cache-Control
-        value: no-cache
-      - path: /config.js
-        name: Cache-Control
-        value: no-cache
-      - path: /data/*
-        name: Cache-Control
-        value: no-cache
