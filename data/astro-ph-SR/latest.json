@@ -1,14 +1,960 @@
 {
+  "schemaVersion": 1,
+  "status": "ok",
+  "source": "arxiv-catchup",
   "category": "astro-ph.SR",
   "date": "2026-09-14",
+  "generatedAt": "2026-09-14T13:01:54.664Z",
   "counts": {
-    "new": 0,
-    "cross": 0,
-    "repl": 0
+    "new": 7,
+    "cross": 6,
+    "repl": 8
   },
   "papersBySection": {
-    "new": [],
-    "cross": [],
-    "repl": []
+    "new": [
+      {
+        "absId": "2609.12034",
+        "title": "An unresolved extreme warm infrared excess toward a nearby low-mass star",
+        "summary": "Gaia DR3 2981818948336660224 is a nearby low-mass star with a substantial warm mid-infrared excess. Identified in a Gaia-2MASS-WISE search, it lies at approximately 127 pc and has an AllWISE W3 signal-to-noise ratio of 33.1. We recover the emission in all 16 available cryogenic exposures over 1.26 d; removing any one exposure leaves the signal intact. The W3 emission is centred close to the propagated stellar position, and the known neighbour 6.1 arcsec away fails to reproduce its morphology. Nominal scene fits place 97-98 per cent of the W3 flux at the target position. This provides strong spatial support for association, although template uncertainty and a nearly coincident hidden source prevent a definitive decomposition. The excess can be described by a roughly 300-350 K component with L_IR/L_star ~ 0.022, assuming stellar association and retaining the weaker W4 detection. If produced by circumstellar dust, it falls in the extreme warm-debris regime around a dwarf with no established evidence of youth. Its origin remains unresolved. The repeatable excess and close spatial association make this a useful target for subarcsecond MIR imaging and spectroscopy to test the warm-dust interpretation.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12034",
+        "htmlUrl": "https://arxiv.org/html/2609.12034v1",
+        "authors": [
+          "Sahin Torlakcik"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12034v1/fig2_w3_association.png",
+            "caption": "W3 image and residuals from the tested source models. The orange plus marks the propagated Gaia position, the cyan cross the 6.1-arcsec neighbour and the white circle the measured centroid. Placing the source only at the neighbour leaves a strong central residual; models containing a source at the target position perform much better. All residual panels share a scale. The fits use a pole-coadd PSF and diagonal pixel errors, so their statistics are diagnostic. A source exactly coincident with Gaia would have the same image template."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12034v1/fig2_w3_association.png",
+        "thumbnailAlt": "W3 image and residuals from the tested source models. The orange plus marks the propagated Gaia position, the cyan cross the 6.1-arcsec neighbour and the white circle the measured centroid. Placing the source only at the neighbour leaves a strong central residual; models containing a source at the t",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.12215",
+        "title": "Plasma Heating and Energization in Hot-Onset Flare Precursor Events",
+        "summary": "Recent observations of solar flares have revealed a distinct 'hot onset' phase preceding the impulsive phase, characterized by elevated plasma temperature (>10 MK), a steady increase in emission measure, and the absence of detectable nonthermal emission. The standard flare model attributes the formation of hot flare plasma to chromospheric evaporation driven by energy deposition from nonthermal electrons, and therefore does not naturally explain why thermal heating precedes nonthermal emission. Motivated by recent observations of guide-field evolution in two-ribbon flares and by large-scale MHD simulations, we investigate hot-onset energization using simulations of magnetic reconnection with the kinetic macroscale model kglobal initialized with a spatially non-uniform guide field. Because the efficiency of electron non-thermal energy production from Fermi acceleration decreases with guide-field strength, the evolving guide field produces two distinct energization regimes. During the initial high-guide-field phase, the bulk electron temperature rises to approximately twice its initial value, while non-thermal particle production remains weak. Upon entering the low-guide-field regime, energetic particle production is significantly enhanced, with the population of high-energy electrons growing rapidly. These findings provide a self-consistent physical explanation for the hot onset, demonstrating that the macroscopic evolution of the guide field naturally bridges the hot-onset and impulsive phases of solar flares without requiring a separate trigger mechanism.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12215",
+        "htmlUrl": "https://arxiv.org/html/2609.12215v1",
+        "authors": [
+          "H. Da",
+          "J. F. Drake",
+          "M. Swisdak"
+        ],
+        "categories": [
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12215v1/profile.png",
+            "caption": "(a):Initial profiles of the reconnecting component ( B x B_{x} ) and the guide field component ( B z B_{z} ) of the magnetic field as a function of y y . (b):The evolution of the guide field B z B_{z} and the formation of islands overplotted with magnetic field lines at t / τ A = 4.5 , 9.5 , 13.5 , 17 t/\\tau_{A}=4.5,9.5,13.5,17 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12215v1/te_ti_2cols_tight2.png",
+            "caption": "In (a) : The evolution of the particle electron temperature T e T_{e} . In (b): The evolution of the proton particle temperature T i T_{i} at t / τ A = 4.5 , 9.5 , 13.5 , 17 t/\\tau_{A}=4.5,9.5,13.5,17 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12215v1/HeatingPower2.png",
+            "caption": "The heating rate by different sources integrated over the entire domain for both electrons (a) and protons (b). From Equation ( 3 ); the heating rate from the parallel electric field (red), the curvature drift (blue)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12215v1/emission_stack.png",
+            "caption": "(a): The average temperature of electrons and protons within the outermost magnetic separatrix versus time. (b): The number fraction of electrons and protons that have energy exceeding 3 times of the late-time peak thermal energy of the bulk plasma (the last data point in (a) for each of two species). (c) The emission measure, which is integrated over the hot electrons within the outmost magnetic separatrix. The dashed lines are drawn at the four times shown in Figure 2."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12215v1/combined_vertical.png",
+            "caption": "In (a):The electron and proton distribution function versus energy. The initial spectrum (blue) for the electron and proton are the same as they share the same temperature. Solid curves are the electron spectrum and dashed curves are proton spectrum at the t / τ A = 9.5 , 13.5 t/\\tau_{A}=9.5,13.5 and 17 17 . In (b): The locations of electrons with energy exceeding 1.0 m i ​ C A 2 m_{i}C_{A}^{2} and protons with energy exceeding 10.0 m i ​ C A 2 m_{i}C_{A}^{2} ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12215v1/profile.png",
+        "thumbnailAlt": "(a):Initial profiles of the reconnecting component ( B x B_{x} ) and the guide field component ( B z B_{z} ) of the magnetic field as a function of y y . (b):The evolution of the guide field B z B_{z} and the formation of islands overplotted with magnetic field lines at t / τ A = 4.5 , 9.5 , 13.5 , ",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.12461",
+        "title": "Superoutbursts and Superhumps of Cataclysmic Variables observed with TESS",
+        "summary": "Superoutbursts and superhumps are characteristic signatures of SU UMa-type cataclysmic variables, yet the full diversity of superhump evolutionary behaviour remains poorly constrained owing to the limitations of ground-based photometric monitoring. Here we report a systematic analysis of 30 SU UMa-type dwarf novae observed with the Transiting Exoplanet Survey Satellite, covering 37 superoutburst events. We detect coherent superhump signals in 29 systems-including five first-time detections-and determine or refine orbital periods for 13 objects. The high-cadence light curves clearly resolve the canonical three-stage (A-B-C) superhump period evolution. Using Stage A periods, we derive dynamical mass ratios for 18 systems, consistent with established cataclysmic variable evolutionary tracks. The measured Stage B period derivatives match the range of values from ground-based campaigns, with prominent positive drifts concentrated in short-period, low-mass-ratio systems. Repeated superoutbursts yield consistent evolutionary patterns, demonstrating that superhump morphology is an intrinsic, repeatable property. Two systems break the standard template: RZ LMi shows an inverted stage sequence inconsistent with classical precession theory, while ASASSN-14kj exhibits no stage evolution but a coherent long-period modulation. Persistent superhumps during normal outbursts in three systems provide direct evidence that eccentric disk structures can survive beyond their parent superoutbursts, revealing a decoupling between thermal accretion and tidal eccentricity cycles. These results demonstrate the power of space-borne photometry for probing accretion disk dynamics and testing precession models across the cataclysmic variable parameter space.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12461",
+        "htmlUrl": "https://arxiv.org/html/2609.12461v1",
+        "authors": [
+          "Qi-Bin Sun",
+          "Sheng-Bang Qian",
+          "Li-Ying Zhu",
+          "Qin-Mei Li",
+          "Wen-Ping Liao",
+          "Fu-Xing Li",
+          "Wen-Xu Lin",
+          "Min-Yu Li",
+          "Ping Li",
+          "Fang-Zhou Yan",
+          "Zi-Mo Li",
+          "Tao Wang",
+          "Mao-Han Zhang"
+        ],
+        "categories": [
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12461v1/fig/BEOct.png",
+            "caption": "(a) BE Oct"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12461v1/fig/ASASSN-14eq.png",
+            "caption": "(b) ASASSN-14eq"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12461v1/fig/GXCas.png",
+            "caption": "(c) GX Cas"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12461v1/fig/FOAnd.png",
+            "caption": "(d) FO And"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12461v1/fig/WXHyi.png",
+            "caption": "(e) WX Hyi"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12461v1/fig/EC05200-5205.png",
+            "caption": "(f) EC 05200-5205"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12461v1/fig/V1434Tau.png",
+            "caption": "(a) V1434 Tau"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12461v1/fig/MASTEROTJ055845.png",
+            "caption": "(b) MASTER OT J055845.55+391533.4"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12461v1/fig/BEOct.png",
+        "thumbnailAlt": "(a) BE Oct",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.12467",
+        "title": "Magnetic Fields and Asymmetric Accretion in the Class 0 Protostellar System L1527 IRS",
+        "summary": "Magnetic fields play a crucial role in regulating the collapse of dense molecular clouds, shaping the early stages of protostellar evolution. We present polarization observations in submillimeter wavelengths with the SCUBA-2/POL-2 instrument on James Clerk Maxwell Telescope toward the Class 0 protostellar system L1527 IRS (IRAS 04368+2557). The magnetic field morphology varies across the core of L1527 IRS. Magnetic fields in the eastern region are perpendicular to the outflow axis, while those in the western region show a pinched morphology, overall aligned with the outflow cavity. These distinct bipolar outflow regions also have a clear color difference in near infrared observed by James Webb Space Telescope. In addition, the spectral index derived from 450 {\\mu}m and 850 {\\mu}m observations reveals that the northwestern region of the protostellar system is colder and denser compared to the southeastern region. Furthermore, in the large-scale structures and magnetic fields revealed by Herschel and Planck, we find a ~0.1 pc scale filamentary structure parallel to the large-scale magnetic fields in the eastern region and a relatively isotropic mass distribution in the western region. Based on these results, we propose an accretion scenario of the protostellar system in which an asymmetric mass distribution causes the distinct features observed in near-infrared and submillimeter wavelengths.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12467",
+        "htmlUrl": "https://arxiv.org/html/2609.12467v1",
+        "authors": [
+          "Hanju Nam",
+          "Woojin Kwon",
+          "Youngwoo Choi",
+          "Ian W. Stephens",
+          "Leslie W. Looney"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12467v1/Figure1.png",
+            "caption": "Top : 850 μ \\mu m intensity map overlaid with B-field orientations. The circle in the bottom-right corner indicates the effective beam size. The lowest contour corresponds to the 3 σ \\sigma level with contour intervals of 20 σ \\sigma . The B-field orientations were obtained by rotating the polarization orientations by 90 ∘ 90^{\\circ} and are normalized to be the same size. Cyan segments satisfy I / σ I > 3 I/\\sigma_{I}>3 and P ​ I / σ P ​ I > 3 PI/\\sigma_{PI}>3 , while yellow segments satisfy I / σ I > 3 I/\\sigma_{I}>3 and 2 < P ​ I / σ P ​ I ≤ 3 2<PI/\\sigma_{PI}\\leq 3 . The regions are divided into four parts by the white dash-dotted lines based on the outflow cavity [ 53 , e.g.,] . E out \\text{E}_{\\text{out}} and W out \\text{W}_{\\text{out}} correspond to the bipolar outflow regions, while N env \\text{N}_{\\text{env}} and S env \\text{S}_{\\text{env}} are the envelope regions. Bottom : Stokes I I , Q Q , and U U maps at 850 μ \\mu m with a pixel size of 4 ′′ × 4 ′′ 4^{\\prime\\prime}\\times 4^{\\prime\\prime} (from the left). The I I map is overlaid with polarization orientations scaled by polarization fraction. The Q Q and U U maps are averaged over a 3 × 3 3\\times 3 pixel box to illustrate the significance of the binned Stokes Q Q and U U values used to derive the B-field orientations. The left colorbar is for the Stokes I I , and the right is for the Stokes Q Q and U U ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12467v1/Figure2.png",
+            "caption": "Results of deviation test for the four regions. Horizontal and vertical axes represent θ p \\theta_{p} and σ θ p \\sigma_{\\theta_{p}} , respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12467v1/Figure3.png",
+            "caption": "JWST NIRCam RGB-composited color image overlaid with the B-field orientations in Figure 1 . F200W (2 μ \\mu m, blue), F335M (3.3 μ \\mu m, green), and F444W (4.4 μ \\mu m, red) filters are combined."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12467v1/Figure4.png",
+            "caption": "Intensity maps of L1527 observed with JCMT SCUBA-2/POL-2. The left and right panels show 850 μ \\mu m and 450 μ \\mu m intensity maps, respectively. In each panel, the red cross marks the central protostellar position, and the circle of the bottom-right corner indicates the effective beam size. The lowest contour in both images corresponds to the 3 σ \\sigma level. Contour intervals are 20 σ \\sigma for the 850 μ \\mu m and 10 σ \\sigma for the 450 μ \\mu m. The white dashed line indicates the boundary between NW core \\text{NW}_{\\text{core}} and SE core \\text{SE}_{\\text{core}} , where the intensity distribution appears symmetric."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12467v1/Figure5.png",
+            "caption": "Broken power-law fitting results for the 850 μ \\mu m ( top ) and 450 μ \\mu m ( bottom ) intensity profiles. Blue and red dots represent the data points of the southeastern ( SE core \\text{SE}_{\\text{core}} ) and northwestern ( NW core \\text{NW}_{\\text{core}} ) regions, respectively. The red dashed horizontal line indicates the 5 σ \\sigma noise level. The solid symbols indicate the intensity local maxima used for the broken power-law fitting. γ \\gamma denotes the index of the power-law function."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12467v1/Figure6.png",
+            "caption": "Left : Spectral index map derived from the 450 μ \\mu m and 850 μ \\mu m data. Middle : Dust temperature map calculated from the spectral index under the assumption of optically thin emission. Right : Molecular hydrogen column density map derived from the intensity and temperature maps. The central circle in all panels indicates a diameter of 29.2 ′′ (twice the beam diameter), marking the region potentially affected by optically thick emission from the central protostellar disk."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12467v1/Figure7.png",
+            "caption": "Left : JWST NIRCam 2 μ \\mu m intensity map. Right : JWST NIRCam 4.4 μ \\mu m intensity map. Both images are shown in the same intensity unit, MJy sr -1 . The white dashed regions indicate E out \\text{E}_{\\text{out}} and W out \\text{W}_{\\text{out}} , excluding the optically thick central hole in Figure 6 . The cross marks the location of the L1527 protostar. The mean intensities within E out \\text{E}_{\\text{out}} and W out \\text{W}_{\\text{out}} are 1.16 MJy sr -1 and 0.66 MJy sr -1 at 2 μ \\mu m, and 1.93 MJy sr -1 and 1.80 MJy sr -1 at 4.4 μ \\mu m, respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12467v1/Figure8.png",
+            "caption": "Left : log 10 ⁡ ( R c ​ u ​ r ​ v / R l ​ i ​ m ) \\log_{10}(R_{curv}/R_{lim}) map derived from the smoothed B-fields orientations. White boxes indicates the pixels whose R c ​ u ​ r ​ v R_{curv} is smaller than R l ​ i ​ m R_{lim} . Blue and white B-field segments indicate the background and observed B-field orientations. White and black circle in the bottom-left corner are the observed and smoothed beam sizes, respectively. Dotted lines indicate the boundaries between regions defined in Section III.1 . Middle : Angular difference map between the observed and background magnetic field orientations. Right : FWHM map of the C 18 ​ O \\mathrm{C}^{18}\\mathrm{O} ( J = 3 ​ – ​ 2 J=3\\text{--}2 ) emission line derived from 1D Gaussian fitting. The white solid line shows the regional mask where the angular dispersion was estimated. The black dashed circle indicates the central region where the line emission may be optically thick and affected by rotational motion."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12467v1/Figure1.png",
+        "thumbnailAlt": "Top : 850 μ \\mu m intensity map overlaid with B-field orientations. The circle in the bottom-right corner indicates the effective beam size. The lowest contour corresponds to the 3 σ \\sigma level with contour intervals of 20 σ \\sigma . The B-field orientations were obtained by rotating the polarizat",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.12644",
+        "title": "Large-Scale Latitude-time Relationships Between the Green-Line Corona and Sunspot Activity During Solar Cycles 18-24",
+        "summary": "We investigate the latitude-time relationship between the solar green-line corona and sunspot activity during Solar Cycles 18-24 using homogeneous coronal observations and a Gaussian representation of sunspot activity fields. The activity-field model is constructed from individual sunspot areas and latitudes in order to describe the large-scale spatial organization of solar magnetic activity more realistically than traditional sunspot number or sunspot area indices. The analysis reveals a stable double-peaked latitude-dependent correlation structure centered on the active-region belts, where the strongest corona-sunspot correlations are observed. The latitude profiles remain remarkably similar from cycle to cycle, indicating that the large-scale relationship between coronal emission and photospheric activity is largely independent of cycle amplitude and parity. The lag-correlation profiles exhibit broad positive lag plateaus in most cycles. Although formal lag-correlation maxima occur at positive lags, surrogate-data tests indicate that these maxima are generally not statistically distinguishable from neighboring lag values. The results therefore suggest temporal persistence and memory of large-scale coronal magnetic structures rather than a precisely defined physical delay. The Gaussian activity-field representation produces substantially stronger and more coherent correlations with the green-line corona than conventional sunspot measures, supporting the interpretation that the large-scale distribution of magnetic activity, rather than individual sunspots alone, governs the evolution of the large-scale corona.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12644",
+        "htmlUrl": "https://arxiv.org/html/2609.12644v1",
+        "authors": [
+          "Jouni J. Takalo"
+        ],
+        "categories": [
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12644v1/Figure_1.png",
+            "caption": "Latitude-dependent correlation between the green-line corona and four different sunspot activity representations for Solar Cycle 19. The black, blue, and green curves correspond to correlations obtained using sunspot counts, sunspot areas, and square-root area weighting, respectively. The red curve shows the correlation derived from the Gaussian sunspot activity field, constructed by applying spatial and temporal Gaussian kernels to the square-root weighted sunspot areas. The Gaussian representation produces substantially stronger and more coherent correlations over the active-latitude belts, demonstrating that a distributed activity field provides a more realistic description of the large-scale coronal response than localized sunspot occurrence alone."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12644v1/Figure_2.png",
+            "caption": "Latitude–time fields for Solar Cycle 19. (a) Smoothed green-line coronal intensity field derived from daily observations of the Homogeneous Coronal Data Set (HCDS). (b) Gaussian sunspot activity field constructed from individual sunspot areas and latitudes using spatial and temporal Gaussian kernels. The vertical dashed line marks the approximate epoch of solar maximum. Both fields exhibit a similar butterfly-like equatorward migration pattern associated with the evolution of active regions throughout the solar cycle. The coronal emission is spatially broader and more diffuse than the sunspot activity field, reflecting the large-scale magnetic connectivity and extended structure of the solar corona."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12644v1/Figure_3.png",
+            "caption": "Universal latitude-dependent correlation profile between the green-line corona and the Gaussian sunspot activity field for Solar Cycles 18–24. The red curve shows the mean correlation profile averaged over all analyzed cycles, while the gray shaded region indicates the corresponding ± 1 ​ σ \\pm 1\\sigma cycle-to-cycle variability. Correlations were calculated without temporal lag between the coronal and sunspot activity fields. The profile exhibits a stable double-peaked structure with maxima located within the active-latitude belts near ± 10 ∘ \\pm 10^{\\circ} – 20 ∘ 20^{\\circ} . Correlations decrease toward both the equator and higher latitudes, indicating that the strongest coupling between coronal emission and photospheric activity occurs within the core active-region belts. The relatively small cycle-to-cycle variability demonstrates that this latitude-dependent structure is a persistent feature of Solar Cycles 18–24."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12644v1/Figure_4.png",
+            "caption": "Lag-correlation profiles between the green-line corona and the Gaussian sunspot activity field ( σ t = 11 \\sigma_{t}=11 d) for Solar Cycles 18–24. Red symbols indicate the formal correlation maxima. Although positive-lag maxima are present in most cycles, the profiles exhibit broad plateaus extending over tens of days rather than narrow isolated peaks. The corresponding 95 % lag intervals are listed in Table 1 . Several cycles also exhibit weak quasi-periodic fluctuations with a characteristic spacing comparable to one solar rotation ( ∼ 27 \\sim 27 days)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12644v1/Figure_5.png",
+            "caption": "Evolution of active-latitude ( 5 ∘ 5^{\\circ} – 40 ∘ 40^{\\circ} ) green-line coronal intensity during Solar Cycles 18–23. The vertical dashed lines indicate the epochs of maximum smoothed sunspot activity. In several cycles, the strongest coronal emission occurs months after the formal sunspot maximum, indicating that large-scale coronal magnetic structures persist beyond the peak phase of photospheric activity. The morphology of the maximum phase varies substantially from cycle to cycle, ranging from relatively distinct local reductions in coronal intensity to broad multi-peaked maxima. No unique coronal signature associated with the Gnevyshev-gap phenomenon is evident across all cycles."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12644v1/Figure_1.png",
+        "thumbnailAlt": "Latitude-dependent correlation between the green-line corona and four different sunspot activity representations for Solar Cycle 19. The black, blue, and green curves correspond to correlations obtained using sunspot counts, sunspot areas, and square-root area weighting, respectively. The red curve ",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.12699",
+        "title": "Plasmoid-Trapped Condensation Associated with a Transient Thermal-Instability-Like Process in Chromospheric Magnetic Reconnection",
+        "summary": "We perform high-resolution 2.5D single-fluid magnetohydrodynamic (MHD) simulations to explore the development of cool-dense structures within plasmoids during chromospheric magnetic reconnection. The model incorporates temperature-dependent ionization degrees of hydrogen and helium, resulting in improved diffusivities and viscosity, as well as adequate radiative cooling. The numerical results show that plasma is significantly hot with temperatures reaching several tens of thousands of Kelvin in newly developed plasmoids in the low initial plasma-$\\beta$ cases, $\\beta_0$ = 0.05. Later, the localized accumulation of plasma and decreasing temperature result in an explosive much stronger radiative cooling process. Radiative cooling peaks over the temperature range 8000 K$-$20,000 K. The co-spatial density enhancement, substantial radiative cooling, shorter radiative cooling timescales, and a significant temperature decrease support the existence of thermal-instability-like condensation within the plasmoids. Similar cool-dense structures are identified in all low-$\\beta_0$ cases at different chromospheric altitudes, suggesting that this occurrence is not limited to a single chromospheric layer. In contrast, in the high initial plasma-$\\beta$, $\\beta_0$ = 0.5 case, the maximum temperature inside the dense plasmoids is only about 8000 K. Therefore, the radiative cooling has never entered into the explosive increasing stage and the thermal-instability-like condensation does not happen. These findings reveal that plasmoid-trapped condensation may develop in chromospheric reconnection once radiative losses become self-amplifying under low-$\\beta_0$ conditions.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12699",
+        "htmlUrl": "https://arxiv.org/html/2609.12699v1",
+        "authors": [
+          "Abdullah Zafar",
+          "Lei Ni",
+          "Samrat Sen",
+          "Yuhao Chen",
+          "Mohamed Sedik",
+          "Mehdi Yousefzadeh",
+          "Jun Lin"
+        ],
+        "categories": [
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12699v1/fig1a.jpg",
+            "caption": "Global view of the distribution of temperature in the top panels and density in the bottom panels at two different times during magnetic reconnection at the bottom of the chromosphere ( Z = 600 Z=600 km) with initial plasma- β \\beta of 0.05. White lines indicate magnetic field lines. The red box in the density panels outlines the region of interest analyzed in detail in Figures 2 and 3 . The white arrow in the right temperature panel marks the location of the newly born plasmoid, later denoted as P1."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12699v1/fig2a.jpg",
+            "caption": "The evolution of the zoomed-in region within the red dotted box in Figure 1 . For each time, the top, middle, and bottom panels show temperature (T), density ( ρ \\rho ), and radiative cooling ( Q r ​ a ​ d Q_{rad} ), respectively. The red arrows mark the first newly formed plasmoid P1, while the yellow arrows mark the second small plasmoid P2 that appears later to the right of P1. An animation of this figure is available in the online version of the article. The animation spans the simulation interval from t t = 39.149 s to 40.673 s and shows the evolution of dense patches within plasmoids P1 and P2, including the later expansion-dominated cooling stage. The playback duration is ∼ \\sim 2 s. (An animation of this figure is available.)"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12699v1/fig3a.jpg",
+            "caption": "One-dimensional profiles along y = 0 y=0 in the zoomed region shown in Figure 2 . For each time, the upper panel shows the distributions of radiative cooling (Q rad ), expansion-driven cooling (Q exp-cooling ), other heating (Q other-heating ) and compression heating (Q comp ), while the lower panel shows the radiative cooling timescale ( τ r ​ a ​ d \\tau_{rad} ) and absolute expansion cooling timescale ( | τ e ​ x ​ p | |\\tau_{exp}| ). The red and yellow arrows point to P1 and P2, respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12699v1/fig4a.jpg",
+            "caption": "Time evolution of temperature, density, radiative cooling, and total heating (Q comp + + Q other-heating ) at the maximum-density location within the dense patches inside two plasmoids. Panel (a) corresponds to the results of the dense structure in P1, and panel (b) corresponds to those in P2. At each time, the maximum-density grid point is determined, and the corresponding values of T, ρ \\rho , Q rad , and Q total-heating are extracted at the same grid point."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12699v1/fig5a.jpg",
+            "caption": "Representative evolution of dense structures within the plasmoid at the middle chromospheric altitude of Z = 1400 Z=1400 km with initial plasma- β = 0.05 \\beta=0.05 . Panel (a) shows the global distributions of temperature T in the top panel and density ρ \\rho in the bottom panel; white lines indicate magnetic field lines. The red dotted box marks the selected region shown in the zoomed-in panels. Panels (b)-(d) show the zoomed-in evolution of the region of interest. At each time, the top, middle, and bottom panels show temperature T, density ρ \\rho , and radiative cooling Q rad , respectively. The zoomed-in panels show localized density enhancement, temperature decrease, and enhanced radiative cooling associated with plasmoid evolution. An animation of this figure is available in the online version of the article. The animation covers the simulation interval from t t = 35.484 s to 39.053 s and shows the evolution of localized dense, cool structures within the plasmoid. The playback duration is ∼ \\sim 1 s. (An animation of this figure is available.)"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12699v1/fig6.jpg",
+            "caption": "Temporal evolution of T, ρ \\rho , P, Q rad , and Q total-heating at the maximum-density grid point within the dense structure at Z = 1400 Z=1400 km with β 0 = 0.05 \\beta_{0}=0.05 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12699v1/fig7a.jpg",
+            "caption": "Evolution of plasmoid-associated density enhancement and cooling in the high- β 0 \\beta_{0} simulation of 0.5 at Z = 600 Z=600 km. Panel (a) shows the global distributions of temperature (top panel) and density(bottom panel), with white lines indicating magnetic field lines. The red dotted box marks the selected region shown in the zoomed-in panels. Panels (b)-(d) show the zoomed-in evolution of this region at selected times. For each time, the top, middle, and bottom panels show temperature, density, and radiative cooling, respectively. The black arrows mark dense patches inside the plasmoid. Although localized density enhancement and cooling are present, the dense structures remain relatively cool from the beginning and do not show the catastrophic temperature decrease found in the low- β 0 = 0.05 \\beta_{0}=0.05 case."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12699v1/fig8a.jpg",
+            "caption": "Diagnostic profiles and temporal evolution of the dense patch in the β 0 = 0.5 \\beta_{0}=0.5 simulation case at Z = 600 Z=600 km. Panels (a)-(b) show one-dimensional profiles along y = 0 y=0 at the selected times shown in Figure 7 (c, d). For each time, the upper panel shows radiative cooling Q rad , expansion cooling Q exp-cooling , other heating Q other-heating and compressional heating Q comp , while the lower panel shows the radiative cooling timescale τ r ​ a ​ d \\tau_{rad} and the absolute expansion cooling timescale | τ e ​ x ​ p | |\\tau_{exp}| . The black arrows mark the dense-patch locations identified in Figure 7 . Panel (c) shows the temporal evolution of T, ρ \\rho , P, Q rad , and Q total-heating at the maximum-density grid point within the dense core of the plasmoid. In contrast to the low- β 0 = 0.05 \\beta_{0}=0.05 case, T and Q rad decrease together, indicating gradual cooling rather than an approximately isobaric runaway-cooling phase."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12699v1/fig1a.jpg",
+        "thumbnailAlt": "Global view of the distribution of temperature in the top panels and density in the bottom panels at two different times during magnetic reconnection at the bottom of the chromosphere ( Z = 600 Z=600 km) with initial plasma- β \\beta of 0.05. White lines indicate magnetic field lines. The red box in ",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.12981",
+        "title": "Late-Time Evolution of the Massive Stellar Merger M101 OT2015-1",
+        "summary": "Luminous red novae (LRNe) are astronomical transients arising from unstable mass transfer and common envelope phases in close binary systems, culminating in stellar mergers. Their cold, expanding ejecta provide the ideal conditions for molecule and dust formation. We investigate the late-time dust and molecular evolution of the LRN M101 OT2015-1, a high-mass LRN progenitor ($18\\pm 1$M$_\\odot$), using multi-band near-infrared (NIR) and mid-infrared (MIR) observations spanning up to ~5 years post-outburst. Archival and unpublished photometry from NEOWISE, Spitzer, Keck NIRC2 and MOSFIRE, are interpolated via 2D Gaussian process regression. Spectral energy distributions (SEDs) are modelled with 1D spherical radiative transfer models to track the evolution of dust mass, dust temperature, and central source properties. At +150d post-peak, the SED is well-fit by a pure stellar blackbody ($T_{\\rm eff}=3330$K) with negligible dust (log$M_{\\rm dust}/$M$_\\odot<-6.36$). Rapid dust condensation begins around day +200 ($T_{\\rm dust}=1591$K), with dust mass increasing to log$M_{\\rm dust}/$M$_\\odot =-3.65$ and optical depth reaching $\\tau_V =64$ by +1300d. A prominent NIR re-brightening at ~600d ($M_K=-12.04$), accompanied by a dust reheating bump ($T_{\\rm dust}=1567$K), highlights a second phase of dust nucleation likely driven by shock interactions. Low-resolution NIR MOSFIRE spectra are analysed for line identification and also using an LTE isothermal slab model to characterise CO molecular features. The MOSFIRE spectra reveal an O-rich environment with photospheric expansion velocities of ~$430-530$km s$^{-1}$, as measured in the Pa$\\beta$ emission line, and high CO column densities (log$N_{\\rm CO}$/cm$^{-2}=20.9$ and $20.7$ at +142d and +197d, respectively). These results confirm that LRNe from massive progenitors are prolific producers of cosmic dust and are efficient molecular factories.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12981",
+        "htmlUrl": "https://arxiv.org/html/2609.12981v1",
+        "authors": [
+          "Marco A. Gómez-Muñoz",
+          "Nadejda Blagorodnova",
+          "Tomasz Kamiński",
+          "Gerard Garcia-Moreno",
+          "Maxime Wavasseur",
+          "Hugo Tranin",
+          "Grace Katusiime",
+          "Jacob E. Jencson",
+          "Mansi M. Kasliwal"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12981v1/figure2.png",
+            "caption": ": Colour composite of J (blue), H (green), and K (red) bands of the LRN M101-OT for the latest epoch obtained with the Adaptive Optics NIRC2 instrument (+1746 d). The white circle indicates the position of M101-OT."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12981v1/figure2.png",
+        "thumbnailAlt": ": Colour composite of J (blue), H (green), and K (red) bands of the LRN M101-OT for the latest epoch obtained with the Adaptive Optics NIRC2 instrument (+1746 d). The white circle indicates the position of M101-OT.",
+        "catchupDate": "2026-09-14"
+      }
+    ],
+    "cross": [
+      {
+        "absId": "2609.11967",
+        "title": "The Role of the Core in Setting Massive Neutron-Star Radii",
+        "summary": "Recent observations by the Neutron Star Interior Composition Explorer (NICER) indicate that the massive pulsar PSR J0740+6620 ($2.08\\,M_{\\odot}$) has a radius comparable to those inferred for stars near $1.4\\,M_{\\odot}$, as shown by PSR J0030+0451 and updated analyses. Such near-vertical mass-radius behavior is difficult to obtain unless the high-density equation of state (EOS) stiffens strongly. We show that, for massive pulsars, the leading radial scale can be set by a relativistic, high-sound-velocity core beginning near twice the nuclear saturation scale, while the outer low-density layer, comprising the true crust and outer core, supplies only a subdominant correction. The key evidence comes from radius decomposition: replacing the low-density branch below the matching point with unified EOS models spanning a factor of two in transition pressure changes the $2.08\\,M_{\\odot}$ core radius by only $\\sim160$ m, about half the variation of the total radius. This convergence is genuinely a high-mass phenomenon: at $1.4\\,M_{\\odot}$ the core radius remains more branch-sensitive, varying by about $0.5$ km. Fixed-fraction comparisons confirm that core dominance emerges systematically as the star grows more massive, where the traditional separation between ``radius physics'' and ``maximum-mass physics'' breaks down. We establish this picture by combining analytical Tolman VII profiles and thin-crust matching, numerical Tolman-Oppenheimer-Volkoff integration with a piecewise EOS, and direct-grid Bayesian inference using NICER and GW170817 constraints under causal and mass-support filters. Data modestly constrain the transition stiffness but leave the quadratic stiffening governed mainly by causality. A comparison with a constant-sound-speed core remains inconclusive: both descriptions produce comparable core-dominated radii, leaving a degeneracy that sub-kilometre radius measurements can break.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.11967",
+        "htmlUrl": "https://arxiv.org/html/2609.11967v1",
+        "authors": [
+          "R.V. Lobato",
+          "J.E. Horvath",
+          "M. Malheiro"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.11967v1/fig-posterior-mmax.png",
+            "caption": "Posterior support and maximum-mass landscape for the piecewise SLy4-quadratic EOS. Background colors encode the maximum mass M max M_{\\max} , while the solid white and dashed yellow curves mark M max = 2.08 ​ M ⊙ M_{\\max}=2.08\\,M_{\\odot} and 2.35 ​ M ⊙ 2.35\\,M_{\\odot} , respectively. The orange region above the red boundary violates causality ( s max > 1 s_{\\max}>1 ). Solid and dotted black contours enclose the 68 % 68\\% and 95 % 95\\% Bayesian credible regions obtained from the combined NICER and GW170817 inference; they are terminated at the causal boundary, against which they are cut rather than closed by the data. The black cross marks the posterior median and the gold star the fiducial calibration used for the representative stellar sequence. Note that the b b coordinate of the cross is not an observational determination: the marginal posterior for b b is set by causality, and its 95 % 95\\% upper limit differs by about 3 % 3\\% from that of the admissible prior alone."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.11967v1/fig-posterior-mmax.png",
+        "thumbnailAlt": "Posterior support and maximum-mass landscape for the piecewise SLy4-quadratic EOS. Background colors encode the maximum mass M max M_{\\max} , while the solid white and dashed yellow curves mark M max = 2.08 ​ M ⊙ M_{\\max}=2.08\\,M_{\\odot} and 2.35 ​ M ⊙ 2.35\\,M_{\\odot} , respectively. The orange regi",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.12494",
+        "title": "Terminal instability of the Solar System triggered by stochastic solar mass loss",
+        "summary": "From its birth, celestial mechanics has been deeply intertwined with the question of the Solar System's dynamical stability. For the inner planets, this question is now statistically settled: Mercury's orbit carries a $\\sim$1% chance of destabilization before the Sun leaves the main sequence. The outer Solar System has seemed more secure, with its intrinsic dynamical lifetime estimated at $\\sim10^{18}$ years. Even accounting for the Sun's mass loss and stellar flybys, the orbital architecture of the giant planets had been expected to persist for $\\sim$100 Gyr. Here we show that these estimates rest on the assumption that solar mass loss is smooth. The recently measured white dwarf recoil demands asymmetric mass loss that is most readily attributed to discrete, independently directed ejections that impulsively perturb stellar motion. As the Sun sheds its envelope in such parcels, the planets' orbits random-walk with amplitude set by the mass-loss granularity. At a coarseness corresponding to observationally permitted kicks, this stochastic forcing restructures the outer Solar System concurrently with the Sun's death. In particular, our numerical experiments reveal that orbit crossings can commence on the red giant branch, with $\\sim$40% of realizations undergoing disruption or violent scattering before the white dwarf forms and $\\sim$90% self-destructing within 3 Gyr. The outer Solar System's dynamical lifetime thus collapses from $10^{18}$ years to approximately a gigayear after white dwarf formation.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12494",
+        "htmlUrl": "https://arxiv.org/html/2609.12494v1",
+        "authors": [
+          "Konstantin Batygin",
+          "Jim Fuller",
+          "Fred C. Adams"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12494v1/fig1_period_ratio_col.png",
+            "caption": "Episodic mass loss randomizes the giant planets’ period ratios. Evolution of P S / P J P_{\\rm S}/P_{\\rm J} , P U / P S P_{\\rm U}/P_{\\rm S} , and P N / P U P_{\\rm N}/P_{\\rm U} through the mass-loss epoch for the four decade-spaced ejection masses M ej = 10 − 7 M_{\\rm ej}=10^{-7} , 10 − 6 10^{-6} , 10 − 5 10^{-5} , and 10 − 4 ​ M ⊙ 10^{-4}\\,M_{\\odot} (color scale; twelve realizations each, all-phases variant), against the adiabatic track (black), which conserves all three ratios. Right margins: final-ratio distributions (48 realizations per M ej M_{\\rm ej} ); horizontal bars mark cell medians, count-bearing triangles tally seeds beyond the plotted range, and gray crosses count realizations whose ratio is undefined after an ejection leaves an orbit unbound. Gray bands: the 5:2 libration domain in panel A and the 2:1 domain in panel C, mapped at the final stellar mass 0.54 ​ M ⊙ 0.54\\,M_{\\odot} at adiabatic eccentricities; dotted lines mark the commensurabilities. Across this range of M ej M_{\\rm ej} the accumulated stellar kick speed 𝒟 v 1 / 2 \\mathcal{D}_{v}^{1/2} spans 0.018–0.58 km s -1 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12494v1/fig3_instabilities_4panel.png",
+            "caption": "Instabilities unfolding. Semimajor axes and perihelion–aphelion envelopes for four representative disintegrations: during the mass-loss epoch (orbit crossing while the Sun is still losing mass); promptly after white dwarf formation (Saturn scattered and ejected within 2.5 Myr, leaving Uranus and Neptune locked in a phase-protected 2:1 resonance); delayed by 0.2 Gyr (Uranus–Neptune crossings from ∼ \\sim 0.1 Gyr; Neptune ejected at 0.2 Gyr); and delayed by 1.2 Gyr (Uranus–Neptune exchange at 1.24 Gyr, Neptune ejected at 1.32 Gyr)."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12494v1/fig1_period_ratio_col.png",
+        "thumbnailAlt": "Episodic mass loss randomizes the giant planets’ period ratios. Evolution of P S / P J P_{\\rm S}/P_{\\rm J} , P U / P S P_{\\rm U}/P_{\\rm S} , and P N / P U P_{\\rm N}/P_{\\rm U} through the mass-loss epoch for the four decade-spaced ejection masses M ej = 10 − 7 M_{\\rm ej}=10^{-7} , 10 − 6 10^{-6} , 10",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.12726",
+        "title": "Experimental Ni II Oscillator Strengths for Transitions from $3d^84d$ to $3d^84p$ Levels Measured Using High-resolution Fourier Transform Spectroscopy",
+        "summary": "We present the first experimentally measured oscillator strengths for Ni II 3d$^8$4d - 3d$^8$4p transitions. High-resolution Fourier transform spectra were recorded of Ni-He hollow cathode lamps, and intensity calibrated using deuterium standard lamps to determine relative intensities of Ni II emission lines between 200 and 395 nm. Branching fractions were determined for observed lines from 35 3d$^8$4d upper levels in total, and account for at least 95% of the predicted transition probability for 31 of these levels, with sufficient completeness to give reliable branching fractions. Combining our measured branching fractions with four experimental and 27 theoretically calculated energy level lifetimes provided absolute oscillator strengths for 174 lines, for which no previous experimental values exist. We compare the results with three sets of previously published theoretical calculations, illustrating the improvement of laboratory measurements for these atomic data. Please note: The transition probability datasets are withheld from this pre-print to ensure that only the peer-reviewed, definitive versions are released. This approach prevents the propagation of duplicate or inconsistent data across widely used atomic databases and modelling frameworks.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12726",
+        "htmlUrl": "https://arxiv.org/html/2609.12726v1",
+        "authors": [
+          "Ruijie Chen",
+          "Christian P. Clear",
+          "Gillian Nave",
+          "Juliet C. Pickering"
+        ],
+        "categories": [
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12726v1/Figure1.png",
+            "caption": "Normalised spectrometer response curves for the spectra measured in this work. The shaded regions indicate the spectral ranges over which the spectra could be accurately intensity calibrated and which were used in the subsequent determination of branching fractions."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12726v1/Figure1.png",
+        "thumbnailAlt": "Normalised spectrometer response curves for the spectra measured in this work. The shaded regions indicate the spectral ranges over which the spectra could be accurately intensity calibrated and which were used in the subsequent determination of branching fractions.",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.12907",
+        "title": "The influence of free-free absorption on the radio spectrum of Particle-Accelerating Colliding-Wind Binaries",
+        "summary": "The study of massive stars in binary and higher-multiplicity systems that participate in particle acceleration is a key topic at the crossroads of massive star physics, shock physics, and galactic cosmic ray astrophysics. From an observational perspective, radio measurements are our pri- mary tool for identifying these systems through their synchrotron radio emission. Out of the 54 such systems known to date, all but two have been discovered via their non-thermal radio emission. However, identifying these systems is not straightforward. The main challenge lies in free-free absorption, which can obscure the synchrotron signature and hinder detection. This paper summarizes recent developments in our understanding of these systems, with a particular focus on the strong observational bias introduced by free-free absorption. This bias significantly limits our ability to determine the true fraction of particle accelerators among colliding-wind binaries.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12907",
+        "htmlUrl": "https://arxiv.org/html/2609.12907v1",
+        "authors": [
+          "Michaël De Becker",
+          "Agustina Belen Blanco",
+          "Mathilde Tasseroul",
+          "Anandmayee Tej",
+          "Anindya Saha",
+          "Paula Benaglia",
+          "Santiago del Palacio"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12907v1/FFA-i-f.png",
+            "caption": "Illustration of a PACWB where the wind of Star 1 dominates that of Star 2, leading to a bow-shape interaction region partly folded about the position of Star 2. The dashed blue arrows represent some wind flow lines heading to the shocks. The red arrow illustrates a specific optical path of synchrotron radiation produced at the position marked with the red dot. The fraction of optical path outside the synchrotron emission (green area) region is responsible for f-FFA, while the wind material spatially coincident with the NT emission region leads to i-FFA."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12907v1/SEDfFFA.png",
+            "caption": "Generic radio spectral energy distribution of a PACWB where the low-frequency part is severely attenuated by foreground FFA. For illustration purposes, red and blue vertical strips illustrate the bandpass covered by the GMRT and other radio facilities at GHz frequencies, respectively. The red arrow points to the position of the turnover frequency that is slightly lower than that of the peak of the spectrum. Figure adapted from Blanco et al. (2024) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12907v1/WR147.png",
+            "caption": "Upper panel: radio spectral energy distribution of WR 147 fitted by a composite internally free-free absorbed model. In the legend, TGSS stands for TIFR GMRT Sky Survey. The red arrow is located at the position of the turnover frequency for i-FFA as obtained by Tasseroul et al. (2025) . Lower panel: normalized residuals in the sense data minus model. Figure based on the data published by Tasseroul et al. (2025) ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12907v1/FFA-i-f.png",
+        "thumbnailAlt": "Illustration of a PACWB where the wind of Star 1 dominates that of Star 2, leading to a bow-shape interaction region partly folded about the position of Star 2. The dashed blue arrows represent some wind flow lines heading to the shocks. The red arrow illustrates a specific optical path of synchrotr",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.12943",
+        "title": "XMST: An Extended Minimum Spanning Tree Framework with Objective Fracture-Scale Selection",
+        "summary": "We present XMST, an extended minimum spanning tree framework for identifying spatially coherent stellar structures using an objective, data-driven fracture-scale criterion. XMST combines percolation analysis with Jenks Natural Breaks optimisation, restricting the MST edge-length distribution to the subcritical regime before determining the final fracture scale. The method was validated using 1000 controlled Monte Carlo realisations containing eight empirical stellar-association templates, including a deliberately overlapping pair. The Percolation-Jenks fracture scale was highly reproducible, with a median of 17.028 pc and a between-realisation standard deviation of 0.066 pc. The injected structures were recovered with a mean completeness of 0.9996 and mean purity of 0.7413, while alternative CDF and Mean Edge criteria selected substantially larger fracture scales and produced markedly lower purities. Propagation of the published distance uncertainties through 10,000 additional XMST reconstructions produced a median absolute fracture-scale change of only 0.282 pc. Under these perturbations, mean completeness was 0.8605 and mean purity 0.7126, while 99.30 per cent of injected-template cases continued to satisfy the adopted detection criterion. Individual membership was less stable, with peripheral and locally sparse members showing lower persistence than structural cores. The deliberately overlapping pair was resolved spatially in only 15 of 1000 realisations; a reddening-based post-processing diagnostic increased this to 446, although with a corresponding completeness-purity trade-off. XMST therefore provides a robust method for identifying candidate stellar structures and their stable cores, while detailed outer membership and strongly overlapping populations require additional astrophysical information.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12943",
+        "htmlUrl": "https://arxiv.org/html/2609.12943v1",
+        "authors": [
+          "Mark Gallaway"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12943v1/Flow.png",
+            "caption": "Flow chart of the XMST analysis pipeline, from construction of the global MST to fracture-scale selection and recovery of candidate stellar structures."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12943v1/Plot1.png",
+            "caption": "Convergence of the mean global purity across the 1000 Monte Carlo realisations."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12943v1/Plot2.png",
+            "caption": "Convergence of the mean Jenks fracture scale across the 1000 Monte Carlo realisations, showing rapid stabilisation near 17.01 pc."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12943v1/Plot3.png",
+            "caption": "Distribution of the Jenks fracture scale across 1000 Monte Carlo realisations. The median fracture scale is 17.028 pc, with a small lower-scale tail."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12943v1/Plot4.png",
+            "caption": "Convergence of the mean global completeness across the 1000 Monte Carlo realisations, stabilising at approximately 0.9996."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12943v1/Flow.png",
+        "thumbnailAlt": "Flow chart of the XMST analysis pipeline, from construction of the global MST to fracture-scale selection and recovery of candidate stellar structures.",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.12989",
+        "title": "Magnetized interstellar molecular clouds - III. Filament Collisions and Core Formation: Insights into Substructures and Evolution",
+        "summary": "We present the results of a driven, ideal magnetohydrodynamics simulation of a molecular cloud to study the formation of filamentary structures in molecular clouds and their fragmentation into dense cloud cores. Shock compression results in the formation of sub-parsec long filamentary structures. Large-scale supersonic flows push these small filaments together and form massive filamentary clouds. The main filament that forms stretches across the full 4.4 pc length of the simulation and has a median FWHM of 0.075 pc, similar to that observed in many molecular clouds. Subfilaments inside the main filament have a median FWHM of 0.03-0.04 pc, similar to the ``fibers\" observed in molecular lines. The collision and merger of subcritical subfilaments is an important mechanism for the formation of prestellar cores. Colliding subfilaments and the resulting core at their intersection is a hub-filament system similar to that associated with massive star formation, but on a smaller scale. Core mergers can be significant in the growth of pre-stellar cores and may play a role in the formation of binary stars.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.12989",
+        "htmlUrl": "https://arxiv.org/html/2609.12989v1",
+        "authors": [
+          "Pak Shing Li",
+          "Christopher F. McKee",
+          "Richard I. Klein"
+        ],
+        "categories": [
+          "astro-ph.GA",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.12989v1/filament_cloud.png",
+            "caption": "Three snapshots (1 pc length box) of an enlarged portion of the main filament simulated at three different times, showing the internal subfilaments at different densities (blue to yellow) and dense cores (red). The white arrows indicate the direction of the large-scale turbulent flow. See animation A1 for visualizing the evolution of this part of the main filament starting from the time when gravity is activated. The animation associated with this figure is available in the online version of the published article on ApJ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12989v1/map+skeletons.png",
+            "caption": "The black-colored skeletons identified by getsf using w ch = 0.15 w_{\\rm ch}=0.15 pc (left) and 0.02 pc (right) are plotted on the column density map in the z z -projection at half the free-fall time, t = 0.5 ​ t ff = t=0.5t_{\\rm ff}= 700 kyr. The labels of the segments of the main filament in the left panel correspond to the numbering of the column density profiles in Figure 3 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12989v1/profiles.png",
+            "caption": "The column density profiles normal to the skeleton in z z projection at t = 0.5 ​ t ff t=0.5t_{\\rm ff} averaged along each of the eight segments of the main filament cloud shown in the left panel of Figure 2 , which has w ch = 0.15 w_{\\rm ch}=0.15 pc. The panel number here is the segment number in Figure 2 . The panel in the middle is the average profile of all eight segments and fitted with a Plummer profile (dashed curve) with the best fitted FWHM W P W_{\\rm P} and the index p p shown in the figure panel."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12989v1/fwhm_wch.png",
+            "caption": "The median FWHM of features identified by getsf as a function of w ch w_{\\rm ch} . For small w ch w_{\\rm ch} , these are subfilaments; for w ch ≳ 2 ​ W P = 0.15 w_{\\rm ch}\\gtrsim 2W_{\\rm P}=0.15 , they are segments of the main filament."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12989v1/hist_28as.png",
+            "caption": "Histograms of physical properties of subfilaments identifed by getsf using w ch = 0.02 w_{\\rm ch}=0.02 pc as the characteristic width for the background measurement. The column density map is smoothed by a θ = 0.0066 \\theta=0.0066 pc beam. The first row shows the histograms at time 0.3 ​ t ff 0.3t_{\\rm ff} by viewing along the y-axis. The second row shows the histograms at time 0.3 ​ t ff 0.3t_{\\rm ff} but viewing along the z-axis. The third and forth rows are the same except at time 0.5 ​ t ff 0.5t_{\\rm ff} . The columns of panels from left to right are length ( L L ), FWHM, aspect ratio ( a = L / a=L/ FWHM), mass, ( M M ), line mass, ( M ℓ M_{\\ell} ), and the central column density, ( N H ​ c N_{{\\rm H}c} ). The deeper color of the histograms in the last three columns is to highlight the fact that the horizontal axes are on a logarithmic scale."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12989v1/hist_221as.png",
+            "caption": "Same as Figure 5 but using w ch = 0.15 w_{\\rm ch}=0.15 pc for the background measurement. With this choice of w ch w_{\\rm ch} , the focus is on segments of the main filament."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12989v1/filament_Bfield.png",
+            "caption": "The central part of the figure shows the isosurface density plot of the entire simulation region, focusing on the density range n H = 4 × 10 4 n_{\\rm H}=4\\times 10^{4} cm -3 to 10 5 10^{5} cm -3 . Four isolated filaments with magnetic fields are enlarged and plotted around the central image."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.12989v1/A2.png",
+            "caption": "Magnetic field structures of subfilaments at time 348 kyr inside a crowded region of the filament cloud in the simulation. The animation A2 shows the evolution of the subfilaments and magnetic fields in this 0.27 pc region starting from 225 kyr to the end of the simulation. The animation associated with this figure is available in the online version of the published article on ApJ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.12989v1/filament_cloud.png",
+        "thumbnailAlt": "Three snapshots (1 pc length box) of an enlarged portion of the main filament simulated at three different times, showing the internal subfilaments at different densities (blue to yellow) and dense cores (red). The white arrows indicate the direction of the large-scale turbulent flow. See animation ",
+        "catchupDate": "2026-09-14"
+      }
+    ],
+    "repl": [
+      {
+        "absId": "2606.06141",
+        "title": "Mass-Orbital Period Distribution of Massive White Dwarfs Formed Through Stable Mass Transfer",
+        "summary": "White dwarfs (WDs) in binaries can form through either the stable mass-transfer process or common envelope evolution (CEE). Compared to CEE, the stable mass-transfer process can lead to a distinct mass$-$orbital period ($M_{ \\mathrm{WD}}$-$P_{ \\mathrm{orb}}$) relation. Thus, this relation of WDs contains the information about the evolution channels. We can study the relation in WD binary systems to determine whether their progenitors undergo a CEE. We use the stellar evolution code MESA as our primary computational tool and adopt the quasi-adiabatic criterion to ensure that our models satisfy the conditions for stable mass transfer. Our study considers different mass-transfer schemes, varying metallicities, and the relation for both low-mass and intermediate-mass progenitors. Previous studies have focused on the relation for low-mass progenitors, which cannot explain some long-period, high-mass WD binaries. Our results show that the $M_{ \\mathrm{WD}}$-$P_{ \\mathrm{orb}}$ distribution for intermediate-mass progenitors whose cores remain nondegenerate prior to central helium burning can account for the formation channels of long-period and massive WD binaries.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2606.06141",
+        "htmlUrl": "https://arxiv.org/html/2606.06141v3",
+        "authors": [
+          "Rizhong Zheng",
+          "Hongwei Ge",
+          "Christopher A Tout",
+          "Hailiang Chen",
+          "Zhenwei Li",
+          "Dengkai Jiang",
+          "Chengyuan Li",
+          "Zhijia Tian",
+          "Bo Ma",
+          "Lifu Zhang",
+          "Jian Mou",
+          "Xuefei Chen",
+          "Zhanwen Han"
+        ],
+        "categories": [
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2606.06141v3/fig/fig1.png",
+            "caption": ": Evolution in the H-R diagram of the donor star for binary models with an initial donor mass of 1.0 ​ M ⊙ 1.0\\,M_{\\odot} , an initial accretor mass of 1.4 ​ M ⊙ 1.4\\,M_{\\odot} , and an initial metallicity of Z ⊙ Z_{\\odot} . The tracks illustrate the complete evolutionary path for various initial orbital periods, starting from the ZAMS through the mass-transfer phases and ending at the WD cooling stage. Circles and star symbols denote the onset and termination of the mass-transfer phase for each model, respectively. The upper-left panel provides a zoomed-in view of the evolutionary tracks during the mass-transfer stage."
+          },
+          {
+            "url": "https://arxiv.org/html/2606.06141v3/fig/fig-dm.png",
+            "caption": ": Similar to Figure 1 , but for models with different initial donor masses ( M d i M_{\\mathrm{d}}^{\\mathrm{i}} ) and the same initial orbital period ( P orb i P_{\\mathrm{orb}}^{\\mathrm{i}} ) of 950 days."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2606.06141v3/fig/fig1.png",
+        "thumbnailAlt": ": Evolution in the H-R diagram of the donor star for binary models with an initial donor mass of 1.0 ​ M ⊙ 1.0\\,M_{\\odot} , an initial accretor mass of 1.4 ​ M ⊙ 1.4\\,M_{\\odot} , and an initial metallicity of Z ⊙ Z_{\\odot} . The tracks illustrate the complete evolutionary path for various initial or",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2607.22060",
+        "title": "Population synthesis of delta Scuti stars: the instability strip, period-luminosity relation, and large-separation distribution",
+        "summary": "Interpreting the observed properties of intermediate-mass stars requires accounting for rotation, binarity, intrinsic population diversity, and measurement uncertainty. We combine these effects in population-synthesis models of 1.4-2.5 M$_{\\odot}$ stars that include pulsation properties of $\\delta$ Sct variables. The synthetic populations successfully reproduce the distributions of stars observed in young associations, validating the mapping between intrinsic and observed stellar properties. Using these models, we infer a semi-empirical $\\delta$ Sct instability strip by matching synthetic and observed populations. The resulting instability strip is systematically hotter than widely used theoretical prescriptions, implying that $\\delta$ Sct stars are on average 0.1 M$_{\\odot}$ more massive than previously assumed, with 95% of the population spanning approximately 1.50-2.30 M$_{\\odot}$. We then investigate the $\\delta$ Sct period-luminosity relation and reproduce its recently identified second ridge with mixture models in which roughly one-third of stars have the fifth or sixth radial overtone as their dominant mode; the fraction increases in younger populations. In contrast, unresolved binarity does not account for the second ridge. Finally, we predict the population-wide distribution of asteroseismic large separations, $\\Delta\\nu$, finding a peak between 6 and 7 d$^{-1}$, in agreement with recent observations. We also demonstrate that $\\Delta\\nu$ is most reliably measured with the échelle technique, while autocorrelation methods can produce spurious detections when used in isolation. These results show that population synthesis provides a powerful framework for interpreting populations of $\\delta$ Sct stars and for linking stellar evolution, pulsation, and observation.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2607.22060",
+        "htmlUrl": "https://arxiv.org/html/2607.22060v2",
+        "authors": [
+          "Simon J. Murphy",
+          "Anuj Gautam"
+        ],
+        "categories": [
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2607.22060v2/pure_strip_original_HRD_v4a.png",
+            "caption": "(a) The observed position of pulsators (orange circles) and non-pulsators (grey dots), if all stars whose model parameters place them inside the Dupret et al. (2005) instability strip (solid red/blue lines) are pulsating, and all stars outside are not pulsating. (b) The contour plot of pulsator fraction corresponding to panel a, with the Murphy et al. (2019) ‘20% lines’ added as dashed white lines. Areas with low star counts are greyed out. The line colour of the blue edge has been changed to cyan for visibility. (c) As panel a, but with a new intrinsic instability strip (dashed coloured lines), which produces an observed pulsator fraction that matches the ‘20% lines’ from Murphy et al. (2019) (dashed black lines). (d) The contour plot of pulsator fraction corresponding to panel c, with the intrinsic edges (dashed red/cyan lines) and the Murphy et al. (2019) ‘20% lines’ (dashed white lines) added. Notice that the 20% lines now align with the contours corresponding to a pulsator fraction of 0.2."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.22060v2/PL_diagram_teff_v4.png",
+            "caption": "The relationship between the period of the fundamental radial mode and the stellar luminosity for models of δ \\delta Sct stars. Values used are the ‘original’ values, without rotation, binarity, or observational uncertainty. Points are coloured by T eff T_{\\rm eff} . The calculated period–luminosity relation is shown as a dashed grey line. The solid and dotted grey lines are the convex hull and the robust convex hull of the data. The period range of the plot is extended to match the observational equivalent in ( Barac et al., 2022 ) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.22060v2/P-rho_diagram_v4.png",
+            "caption": "The relationship between the period of the fundamental radial mode and the mean stellar density for models of δ \\delta Sct stars. Although original values are used, rotation does not significantly alter this relation. Points are coloured by age, with pre-MS stars in the upper left and post-MS stars at the bottom right. The calculated P P – ρ \\rho relation is shown as a dashed grey line, whose equation is given."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.22060v2/figs/169464993_ft_popsynth.png",
+            "caption": "Fourier transform of the TESS 2-min light curve (top), autocorrelation of the amplitude spectrum (middle) and échelle diagram (bottom) for TIC 169464993 in the Cep–Her Complex, as a well-behaved example with two clear ridges. The Fourier amplitudes are convolved with a Gaussian of width 0.05 d -1 before calculation of the autocorrelation and échelle. Dashed grey lines in the autocorrelation plot indicate the bounds of the uniform prior on Δ ​ ν \\Delta\\nu . Note that Δ ​ ν / 2 \\Delta\\nu/2 is also evident, but double-peaked in this case. The value of Δ ​ ν \\Delta\\nu from the échelle is similar (although not within the standard ± \\pm 0.02 d -1 uncertainty of the échelle method) and indicated with the dashed blue line. The plot area to the right of this line is mirrored from the left-hand side, which is helpful when the dipole ridge crosses the Δ ​ ν \\Delta\\nu line, as in Fig. 13 . The shaded background corresponds to Fourier amplitude, and red symbols identify the observed radial and dipole modes. Open black symbols are model frequencies from the model grid in Murphy et al. (2023) . The x-value of the radial mode ridge is 4/7.32 (or 0.55, hence ϵ = 1.55 \\epsilon=1.55 ) for this star, but such information is not discernible from the autocorrelation."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.22060v2/figs/295893690_ft_popsynth.png",
+            "caption": "As Fig. 11 , but for TIC 295893690 in the Cep–Her Complex."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.22060v2/figs/171591531_ft_popsynth.png",
+            "caption": "As Fig. 11 , but for TIC 171591531 in the Cep–Her Complex."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2607.22060v2/pure_strip_original_HRD_v4a.png",
+        "thumbnailAlt": "(a) The observed position of pulsators (orange circles) and non-pulsators (grey dots), if all stars whose model parameters place them inside the Dupret et al. (2005) instability strip (solid red/blue lines) are pulsating, and all stars outside are not pulsating. (b) The contour plot of pulsator frac",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2607.25824",
+        "title": "Solar Wind Proton Heating and its Effect on Temperature Anisotropy Evolution between 0.05 and 1 au",
+        "summary": "This study focuses on the radial evolution of the solar wind proton adiabatic invariants and temperature anisotropies in the inner heliosphere. More specifically, we study in-situ measurements provided by the Parker Solar Probe, between 0.05 au and 0.25 au from the Sun, and Solar Orbiter spacecraft between 0.3 au and 1 au. Throughout the studied range of radial distances, we observe a significant average heating in the direction perpendicular to the local magnetic field for both fast and slow solar wind populations. On the other hand, there is no clear deviation from adiabaticity in the parallel direction regardless of the wind speed. The perpendicular heating is enough to significantly reduce the generation of the temperature anisotropy expected from a double adiabatic evolution. Despite the heating, an important portion of the solar wind (especially the slower wind streams) develops substantial anisotropies with higher parallel temperatures, which eventually become constrained by kinetic firehose instabilities.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2607.25824",
+        "htmlUrl": "https://arxiv.org/html/2607.25824v2",
+        "authors": [
+          "Etienne Berriot",
+          "Arnaud Zaslavsky",
+          "Olga Alexandrova",
+          "Pascal Démoulin",
+          "Petr Hellinger",
+          "Lorenzo Matteini"
+        ],
+        "categories": [
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2607.25824v2/invariants_PSP-SolO.png",
+            "caption": ": Radial evolution of the proton adiabatic invariants’ logarithm ln C p ∥ \\ln C_{p\\parallel} (a) and ln ⁡ C p ⟂ \\ln C_{p\\perp} (b) measured by PSP for R ∈ [ 0.05 , 0.25 ] R\\in[0.05,0.25] au and SolO for R ∈ [ 0.3 , 1 ] R\\in[0.3,1] au. The invariants are normalized by values C 0 ∥ = 1 C_{0\\parallel}=1 K.nT 2 .cm 6 and C 0 ⟂ = 1 C_{0\\perp}=1 K.nT -1 . Grey dots are measurements averaged over a 1 min time interval. Blue and red colors are associated to faster and slower solar wind speeds. Plain curves are averages over radial bins of 10 − 2 10^{-2} au for PSP data 2 × 10 − 2 2\\times 10^{-2} au for SolO data; the standard deviation of the two distributions are overlaid in semi-transparent colors."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.25824v2/T_ani_PSP-SolO.png",
+            "caption": ": Radial evolution of the solar wind proton temperature anisotropy ratio T p ⟂ / T p ∥ T_{p\\perp}/T_{p\\parallel} measured by PSP. The data and format are the same as in Figure 1 . The dashed-dotted curves represent the expected evolution from an adiabatic-CGL spherically expanding steady-state plasma."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.25824v2/Ur_PSP-SolO.png",
+            "caption": ": Radial evolution of u p , R u_{p,R} , the proton radial speed. The observation times and format are the same as in Figures 1 and 3 . The colored dashed curves indicate the upper and lower thresholds (3 and 33%) used for defining the solar wind populations."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.25824v2/invariants_PSP-SolO_alfvenicity.png",
+            "caption": ": Radial evolution of the proton adiabatic invariants depending on the alfvénicity degree in the slow solar wind (see Section B for the wind speed selection). Local averages and standard deviations of the alfvénic slow wind measurements (with σ c | > 0.9 \\sigma_{c}|>0.9 ) are in purple, and those of the non-alfvénic slow wind measurements (with σ c | < 0.6 \\sigma_{c}|<0.6 ) are in green. Otherwise the format is the same as in Figure 1 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2607.25824v2/invariants_PSP-SolO.png",
+        "thumbnailAlt": ": Radial evolution of the proton adiabatic invariants’ logarithm ln C p ∥ \\ln C_{p\\parallel} (a) and ln ⁡ C p ⟂ \\ln C_{p\\perp} (b) measured by PSP for R ∈ [ 0.05 , 0.25 ] R\\in[0.05,0.25] au and SolO for R ∈ [ 0.3 , 1 ] R\\in[0.3,1] au. The invariants are normalized by values C 0 ∥ = 1 C_{0\\parallel}=",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2608.26315",
+        "title": "Active nests at solar maximum: How nested flux emergence dominated flaring activity and structured the heliosphere",
+        "summary": "Multi-viewpoint observations from near-Earth satellites and ESA's Solar Orbiter enable a global view of the Sun. This continuous coverage is essential for characterising active nests. We investigated how the formation of active nests during the maximum of solar cycle 25 affected the Sun's flaring activity and large-scale magnetic field. Active nests were identified from their persistent activity in Carrington coordinates. For each nest, we monitored the evolution of their photospheric magnetic field, extreme ultraviolet emission, and associated solar flares. Their impact on the solar corona was explored through potential field source surface extrapolations and coronagraph observations. These results were then compared with in-situ measurements of solar wind speed and magnetic field polarity. During 156 days of global monitoring in 2024, nearly 80% of all solar flares originated from three active nests in the southern hemisphere. Two of the nests converged over several months, colliding with a burst of activity in October 2024. The third nest was linked to the emergence of NOAA active region AR13664 in May 2024. Magnetically complex NOAA active regions were more prevalent within active nests. During 2024, 28% of the 147 nested active regions were complex, compared to just 16% of the 181 regions elsewhere. In January 2025, two active nests emerged from the collision site, and a new active nest appeared in the north. This reinforced a tilted dipole topology throughout 2025. Active nests modulated global solar activity in 2024 and shaped the solar corona and wind in 2025. Nearly continuous tracking was used to isolate their flaring and flux emergence rates. Active nest migration was driven by the emergence of magnetic flux, implying a coherent sub-surface origin. By anchoring the coronal magnetic field, active nests created more favourable source regions for solar wind connectivity studies.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2608.26315",
+        "htmlUrl": "https://arxiv.org/html/2608.26315v2",
+        "authors": [
+          "Adam J. Finley",
+          "Allan Sacha Brun",
+          "Antoine Strugarek",
+          "Barbara Perri",
+          "Daniel Müller",
+          "Miho Janvier",
+          "Andy S H To",
+          "Henrik Eklund"
+        ],
+        "categories": [
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2608.26315v2/Figure2.png",
+            "caption": "Summary of the multi-viewpoint observations from 2024. Top : Solar surface area coverage obtained from the combined viewpoints. Bottom : Solar Orbiter’s position in the Earth-Sun reference frame. A threshold of 90% coverage was used to define the nearly continuous monitoring window."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.26315v2/Figure1.png",
+            "caption": "Overview of solar activity in Carrington coordinates for 2024. Top left : Averaged SDO/AIA 304 Å emission. Bottom left : Locations of all solar flares observed by GOES. First column : Time-evolution of EUV emission in the southern hemisphere. Second column : Time-evolution of the solar flares. Time progresses from top to bottom in both columns. The EUV emission and flares associated with active nests AN1, AN2, and AN3 are coloured red, blue, and yellow, respectively. The collision product of AN1 and AN2 is coloured purple."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.26315v2/Figure4.png",
+            "caption": "Longitudinal distribution of EUV emission (background grey scale) and solar flares (circle markers) in the southern hemisphere in 2024. Each CR is split to show data from near-Earth and Solar Orbiter. When the observations from Solar Orbiter provide no additional information, the data are masked by black bars."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.26315v2/Figure5.png",
+            "caption": "Summary of solar flares observed by GOES and STIX in 2024. Top : Histogram of all flares as a function of classification and time. Flares that triggered the insertion of the STIX attenuator are highlighted in magenta; their classifications have not been corrected. Bottom : Fraction of flares occurring within AN1, AN2, and AN3, irrespective of classification. The total fraction of flares originating in the southern hemisphere is indicated by the thick black line. Vertical dashed lines mark the bounds of the nearly continuous monitoring window between Earth and Solar Orbiter (with at least 90% of the solar surface visible)."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.26315v2/Figure9.png",
+            "caption": "Fraction of flaring NOAA active regions in 2024 with simple ( α \\alpha and β \\beta ) or complex ( β ​ γ \\beta\\gamma , β ​ δ \\beta\\delta , and β ​ γ ​ δ \\beta\\gamma\\delta ) magnetic classifications. Top : Total number of simple and complex active regions located within nests versus elsewhere. Bottom : Detailed breakdown of α \\alpha , β \\beta , β ​ γ \\beta\\gamma , β ​ δ \\beta\\delta , and β ​ γ ​ δ \\beta\\gamma\\delta active regions inside each active nest compared to those outside of nests."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.26315v2/Figure6.png",
+            "caption": "Evolution of flaring activity observed by GOES and STIX for the active nests in 2024, with values for AN1 and AN2 combined. Left : Number of flares in each GOES class. Flares affected by the STIX attenuator are plotted alongside X-class events, though the former likely include strong M-class events. Epochs with elevated activity are denoted (a) to (f). Dashed arrows highlight steadily increasing or decreasing activity. The unsigned magnetic flux for each active nest (blue lines) was calculated during central meridian crossings for both SDO and Solar Orbiter. The light grey background and vertical dashed lines denote the window of nearly continuous monitoring. Right : Power-law fits to the monthly flare distributions as a function of peak flux."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.26315v2/Figure7.png",
+            "caption": "Magnetic flux emergence events within AN1 and AN2 from July to August ( left ) and September to October ( right ) that correspond to the increased activity periods denoted by (c) and (d) in Fig. 6 . Each photospheric magnetogram was captured when the midpoint between the two nests (190 ∘ Carrington longitude) crossed the central meridian from the perspective of either Earth or Solar Orbiter. The locations of flares occurring within one week of each magnetogram are overplotted, with marker sizes and colours scaled by their GOES classifications. Distinct flux emergence events in each period are highlighted within the inset boxes."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.26315v2/Figure8.png",
+            "caption": "Same as Fig. 7 but for the burst of activity in AN3 denoted by (e) in Fig. 6 . The black contour outlines the emerged magnetic field from NOAA AR13664 on 7 May 2024."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2608.26315v2/Figure2.png",
+        "thumbnailAlt": "Summary of the multi-viewpoint observations from 2024. Top : Solar surface area coverage obtained from the combined viewpoints. Bottom : Solar Orbiter’s position in the Earth-Sun reference frame. A threshold of 90% coverage was used to define the nearly continuous monitoring window.",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2608.29649",
+        "title": "Origin of small-scale evaporation flows deep in the chromosphere during a solar flare",
+        "summary": "Flares are caused by an abrupt release of magnetic energy in the solar atmosphere. Plasma heated to well over 10 MK filling the post-flare corona originates from a rapid heating and ablation of the cooler chromospheric material. This chromospheric evaporation is thought to be facilitated primarily by nonthermal electrons impinging on to the lower atmosphere. Questions on when and where in the chromosphere these upflows originate, however, are not fully resolved. Here we report on unprecedented high-resolution observations of an M-class flare recorded by the Sunrise Ultraviolet Spectropolarimeter and Imager on board the balloon-borne SUNRISE observatory, that reveal highly structured upflows on spatial scales of ~100 km originating deep in the chromosphere. The flows even precede the onset of nonthermal electrons by about 10 minutes and last through the impulsive phase of the flare. Our observations shed new light on the lower atmospheric heating and mass circulation in flares that are challenging to reconcile with the standard solar flare model.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2608.29649",
+        "htmlUrl": "https://arxiv.org/html/2608.29649v2",
+        "authors": [
+          "L. P. Chitta",
+          "H. N. Smitha",
+          "F. A. Iglesias",
+          "T. L. Riethmüller",
+          "A. Feller",
+          "W. Chen",
+          "A. Lagg",
+          "A. Gandorfer",
+          "J. Hölken",
+          "S. K. Solanki",
+          "J. C. del Toro Iniesta",
+          "Y. Katsukawa",
+          "P. Bernasconi",
+          "T. Berkefeld",
+          "A. Álvarez-Herrero",
+          "M. Kubo",
+          "D. Orozco Suárez",
+          "B. Grauf",
+          "M. Carpenter",
+          "A. Bell",
+          "Valentín Martínez Pillet",
+          "F. J. Bailén",
+          "J. Blanco Rodríguez",
+          "J. Sebastián Castellanos Durán",
+          "E. Harnes",
+          "R. T. Ishikawa",
+          "Y. Kawabata",
+          "T. Matsumoto",
+          "T. Oba",
+          "A. L. Siu-Tapia",
+          "H. Strecker",
+          "D. Vukadinović"
+        ],
+        "categories": [
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2608.29649v2/susi_lc.png",
+            "caption": "Lower atmospheric small-scale response in the pre- and impulsive phases of the flare. Left: SUSI slit-jaw image covering a footpoint region of the flare. The various colored boxes point to locations of flare ribbons. Right: Normalized emission as a function of time, averaged over the corresponding colored boxes identified in the left panel. The gray curve is the background-subtracted ASO-S/HXI hard X-ray flux in the 26 keV to 34 keV energy range. In the inset we show the zoomed-in view of the yellow and orange light curves."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.29649v2/susi_hxi_goes.png",
+            "caption": "Multi-wavelength signatures in the early phase of the flare. Disk-integrated GOES soft X-ray flux (black) and Fermi/GBM hard X-ray flux in three energy bins (shades of blue) are plotted as a function of time. The maroon-colored light curves are the early flare-related impulses that SUSI captured (same as the yellow and orange curves in Fig. 1 ). In the inset, ASO-S/HXI background-subtracted spectrogram (energy vs. time) is shown along with an overlay of the time series of GOES X-ray flux (black). The two vertical dashed lines in the inset mark the temporal boundaries of the main plot."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.29649v2/susi_spect_325.png",
+            "caption": "Lower atmospheric imprints of flare ribbons. Pseudo-continuum (a), blue wing map (b), red wing map (c) around the Fe ii 325.59 nm line are displayed. The blue (red) colored contours enclose regions with enhanced blue (red) wing enhancements. In panel (b) the timestamps mark the beginning and end of the displayed raster, while the scan direction is indicated by the arrow. Sample spectral lines from regions showing blue (d), and red (e) wing enhancements are plotted as a function of Doppler shift. These profiles are normalized to their local continua. Spatial locations of the profiles are marked with the respective colored boxes, separately, in panels (b) and (c). The black curve in both panels is the same, showing the average quiet-Sun spectral profile, normalized to the continuum."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.29649v2/susi_spect_329.png",
+            "caption": "Same as Fig. 3 but plotted for the spectral window covering the Fe ii 329.58 nm line."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.29649v2/rh_plots.png",
+            "caption": "Spectral lines synthesized from RADYN flare atmospheres. Upper panels: Fe ii 325.59 nm spectral lines synthesized from a grid of RADYN simulations, normalized to the continuum level. The colors index the temporal progression from 0 s to 50 s in the model. Spectral indices ( δ \\delta ) and low-energy cutoffs ( E c E_{\\rm c} ) of the considered models are quoted. Lower panels are for the Fe ii 329.58 nm spectral line."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.29649v2/rh_cfn.png",
+            "caption": "Spectral line formation with height. Contribution functions, normalized to the initial quiet-Sun values, as a function of height are plotted for the grid of RADYN simulations (upper panels: Fe ii 325.59 nm line core; lower panels: Fe ii 329.58 nm line core). The colors have the same meaning as in Fig. 7 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2608.29649v2/susi_lc.png",
+        "thumbnailAlt": "Lower atmospheric small-scale response in the pre- and impulsive phases of the flare. Left: SUSI slit-jaw image covering a footpoint region of the flare. The various colored boxes point to locations of flare ribbons. Right: Normalized emission as a function of time, averaged over the corresponding c",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2511.14790",
+        "title": "On the Theory of Bulk Viscosity of Cold Plasmas and Thermodynamics of Alkali-Noble Gas Cocktails",
+        "summary": "By solving the kinetic equation for ionization-recombination processes in cold plasmas for temperatures much lower than the first ionization potentials, we derive an explicit expression for the complex polytropic index, as well as bulk viscosity. The obtained result for the ionization-recombination relaxation time reveals that the Mandelstam-Leontovich approximation for the frequency dependence of the bulk viscosity is actually an exact solution in the case of cold plasmas. We systemize also explicit general formulae for the thermodynamics of the alkali-noble cocktails in the same low temperature plasma approximation, allowing the Schwarzschild criterion on convectional instability to be derived, too. All these general results are applicable for cold stellar, interstellar and laboratory plasmas. Additionally, the wave heating of the inner solar atmosphere up to the solar transition region is studied thoroughly, and it is found that the magnetic diffusivity, heat conductivity, shear- and bulk viscosities all play an almost equally important part in the wave damping, therefore none of them can be omitted in realistic considerations of heating of the solar atmosphere.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2511.14790",
+        "htmlUrl": "https://arxiv.org/html/2511.14790v5",
+        "authors": [
+          "Albert M. Varonov",
+          "Todor M. Mishonov"
+        ],
+        "categories": [
+          "astro-ph.SR"
+        ],
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2601.11704",
+        "title": "Hedorah, the first yellow supergiant Kaiju star candidate at $z=3.7$ revealed by JWST behind AS1063",
+        "summary": "We present a new free-form lens model for the $z=0.348$ galaxy cluster AS1063, based on previously spectroscopically confirmed lensed galaxies and new JWST images from the GLIMPSE program. We use the ultra-deep JWST data to identify new counterimages for previously confirmed (spectroscopically) lensed systems. We use the full set of spectroscopically confirmed systems to derive a new lens model, which is later used to confirm many of the previous lensed system candidates and discover new lensed system candidates in the JWST images. We compute the geometric redshifts, time delays, and magnification for all counterimages (confirmed and not confirmed). Among the new systems, and based on photometry, we find a peculiar multiply lensed galaxy with a strong emission line at $\\approx 4\\, \\mu$m that likely corresponds to H$-\\beta$ and/or OIII at $z\\approx 7.5$. This galaxy could be a little-red-dot or an extreme emission line galaxy. We also identify a yellow supergiant lensed star candidate at $z\\approx 3.7$. This star shows some similarities with previous Kaiju stars and we nickname it \"Hedorah\", in honor of the famous yellow-eyed Kaiju. Previous lensed stars at $z>0.1$ are either blue supergiants or red supergiants, making Hedorah the first yellow supergiant discovered beyond $z=0.1$ and confirming that, despite their rarity, they can also be found at these redshifts. Since many Cepheid stars are yellow supergiants, we consider the possibility that Hedorah could also be the first Cepheid discovered at cosmological distances, but we conclude that Hedorah is more likely a hypergiant yellow star approaching the end of its life. Alternatively, Hedorah could be a small group of stars, although this is less likely based on Hedorah's peculiar colors and additionally may require the more exotic fuzzy dark matter to help explain the lack of counterimage.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2601.11704",
+        "htmlUrl": "https://arxiv.org/html/2601.11704v2",
+        "authors": [
+          "J.M. Diego",
+          "J.M. Palencia",
+          "C. Goolsby",
+          "C.J. Conselice",
+          "D. Perera",
+          "L.L.R. Williams",
+          "D.J. Lagattuta",
+          "G. Mahler",
+          "J. Richard",
+          "K. Sharon",
+          "M. Struble"
+        ],
+        "categories": [
+          "astro-ph.GA",
+          "astro-ph.CO",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2601.11704v2/Figs/AS1063_MyStretch2_RankAB_CC_Zoom0p5_V2.png",
+            "caption": "Central region of AS1063 ( 2 ′ ​ .25 × 2 ′ ​ .25 2^{\\prime}.25\\times 2^{\\prime}.25 ) combining 12 HST and JWST filters (range 0.4–5 micron). Yellow circles show the spectroscopically confirmed lensing constraints, or rank A constraints (see Table 1 ), used to derive the lens model. Cyan dots show the rank B constraints (Table 1 ) not used in the lens model but highly consistent with it and for which we also derive geometric redshifts, time delays and magnification. The critical curve corresponds to z s = 3 z_{s}=3 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.11704v2/GiantArc_CritCurves.png",
+            "caption": "The giant arc in the north west. Lack of counterimages for this arc and large magnification can be explained only if the arc lies in a narrow redshift range around z = 1.85 z=1.85 . The critical curve for this redshift is shown as a yellow curve, and in white for a slightly larger redshift of z = 1.9 z=1.9 , or red for z = 3 z=3 , where counterimages start to form. The predicted magnification at different points along the giant arc is marked with yellow arrows and numbers. The source plane reconstruction is shown in the bottom-right corner. The entire arc delenses into a merging galaxy system less than 1\" in length. South of the giant arc the lens model predicts another unconfirmed system to be at z ≈ 3 z\\approx 3 (white ellipses) with two symmetric images on each side of the critical curve at z = 3 z=3 (red curve)."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.11704v2/ArcZ0p73.png",
+            "caption": "Color image of the caustic crossing arc at z = 0.73 z=0.73 (system 19). The top panel shows the color image after combining F090W, F150W and F200W. We mark with arrows a multiply lensed feature in the arc and with two circles regions where we find point sources with distinctive colors (when compared to the surrounding point sources, most of them globular clusters in the galaxy cluster). The bottom image is a color version using a high-pass filter version image of the bands F090W, F150W and F200W to maximize the color difference of point sources in the area. We show the cluster CC at z = 0.73 z=0.73 as a white curve and mark with small circles candidate red supergiant lensed stars. The yellow ellipse shows a region where the macromodel magnification alone exceeds 700. The parity of the images is indicated in the bottom panel with plus and minus symbols."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.11704v2/ELG_gal_System78.png",
+            "caption": "Multiply lensed ELG (new system 78) found after searching for high-z lensed galaxies near the z = 10 z=10 CC. The galaxy is not detected in F090W and shows prominent emission in F410M. The three counterimages are consistent in color an predicted position if z ≈ 7.5 z\\approx 7.5 . The predicted magnification at this redshift is also consistent with the flux ratio specially if one accounts for the possibly biased low magnification of image c. At this redshift, the emission observed in F410M would correspond to H β \\beta –OIII."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.11704v2/Figs/Hedora_CCz3p72_Filtered.png",
+            "caption": "Hedorah (RA=342.1796997, DEC=-44.5391334), marked with an H, a candidate microlensing event of a lensed yellow supergiant star at z ≈ 3.7 z\\approx 3.7 . The color image shows the combination of the high-pass filtered version of the RGB image F090W+F150W+F200W. The white line marks the CC at z = 3.72 z=3.72 . The green circle labeled G1 is a possible clump in the lensed galaxy, but more consistent with being a GC in AS1063. The remaining green circles show eight randomly selected GCs used to derive their photometry and compare it with Hedorah’s (see Fig. 8 )"
+          },
+          {
+            "url": "https://arxiv.org/html/2601.11704v2/MillilensHedorah_V2.png",
+            "caption": "Caustics of a compact 10 4 ​ M ⊙ 10^{4}\\,{\\rm M}_{\\odot} millilens in the lens near the CC with macromodel magnification μ = 360 \\mu=360 . For presentation purposes, the caustic region has been compressed a factor 8 in the vertical direction which spans 9 mas. A small R = 0.3 R=0.3 pc cluster of stars is shown (in projection) by the millilens caustic on the side of the CC with positive parity (left) and negative parity (right). Typical magnification factors, μ \\mu , are marked."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.11704v2/MIcrolensHedorah_V2.png",
+            "caption": "Lightcurves of stars crossing a cusp region of a 0.3 ​ M ☉ 0.3\\,\\hbox{M${}_{\\sun}$} microlens in the galaxy cluster and along the line of sight to Hedorah. The bottom panel shows a portion of the caustic region with tracks of two stars of radii R = 1500 ​ R ☉ R=1500\\,\\hbox{R${}_{\\sun}$} . The corresponding light curves are shown in the main panel in red (and orange). In both cases, the tangential component of the velocity of both stars is 500 km s -1 . For comparison we show in blue the magnification of a smaller star following the same trajectories but with diameter equal to the pixel size of the simulation (1 nas or R = 160 ​ R ☉ R=160\\,\\hbox{R${}_{\\sun}$} ). The small scale fluctuations are an artifact from the inverse ray shooting."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.11704v2/PDFMu_WaveDM_Fcorr0p05_Mu360.png",
+            "caption": "Probability of magnification for ψ \\psi DM at the position of Hedorah (POS) and its counterimage (NEG). The inset shows the magnification in the source plane at the position of Hedorah’s counterimage. For reference, a small circular structure with radius 0.1 pc is shown as a yellow circle. For this model λ dB = 10 \\lambda_{\\rm dB}=10 pc. The vertical dashed line marks the macromodel magnification which coincides with the average value of the simulation after adding the ψ \\psi DM fluctuations."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2601.11704v2/Figs/AS1063_MyStretch2_RankAB_CC_Zoom0p5_V2.png",
+        "thumbnailAlt": "Central region of AS1063 ( 2 ′ ​ .25 × 2 ′ ​ .25 2^{\\prime}.25\\times 2^{\\prime}.25 ) combining 12 HST and JWST filters (range 0.4–5 micron). Yellow circles show the spectroscopically confirmed lensing constraints, or rank A constraints (see Table 1 ), used to derive the lens model. Cyan dots show th",
+        "catchupDate": "2026-09-14"
+      },
+      {
+        "absId": "2609.11555",
+        "title": "Testing Chemical Tagging with LAMOST: Intrinsic Abundance Dispersion of Subgiant Stars in the Galactic Disk",
+        "summary": "The scatter in elemental abundances among stars of similar age and metallicity reflects chemical inhomogeneity in their birth environments, making abundance scatter a key observable for chemical-tagging studies of Galactic formation and evolution. Using a large sample of subgiant stars with precise ages and elemental abundances derived from LAMOST low-resolution spectra, we investigate the intrinsic chemical abundance scatter of the low-$\\alpha$ thin disk near the solar neighborhood ($7 < R < 10$ kpc). We model the abundance ratio [X/Fe], for each of the 19 elements of concern, as a function of age, [Fe/H], and [Mg/Fe], and deduce the intrinsic dispersions with a forward modelling technique. Our results confirm previous findings that the intrinsic scatters are small, typically $\\lesssim0.05$~dex, for light elements (C, Al), $\\alpha$-elements (O, Mg, Si, Ca, Ti), and iron-peak elements (Mn, Ni). A dedicated analysis of M67 yields similarly small scatter values for these elements, implying limited discriminatory power from light-element abundances alone. In contrast, neutron-capture elements exhibit substantially larger scatters, typically $\\gtrsim$0.1 dex, which are significantly larger than those of M67 member stars ($\\sim$0.07~dex). In particular, our analysis suggests that the abundance variations of individual neutron-capture elements cannot be explained by a single tracer such as [Ba/Fe]. These findings clarify the utility of neutron-capture elements for chemical tagging and highlight the potential of low-resolution spectroscopy in such studies.",
+        "published": "2026-09-14T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.11555",
+        "htmlUrl": "https://arxiv.org/html/2609.11555v2",
+        "authors": [
+          "Wu Yaqian",
+          "Xiang Maosheng",
+          "Zhao Gang",
+          "Jiang Ruizheng",
+          "Li Zhuohan",
+          "Bi Shaolan",
+          "Zhang Meng"
+        ],
+        "categories": [
+          "astro-ph.GA",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.11555v2/fig1.png",
+            "caption": "Distributions of the sub-giant stars sample stars in the [ α \\alpha /Fe]–[Fe/ H {\\rm H} ] plane. The red lines delineate the demarcation of the chemical thin and thick disc sequences. The contours indicates 50,70,90, and 99 per cent of the sample stars."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11555v2/fig2.png",
+            "caption": "Properties of the final low- α \\alpha thin-disc subgiant sample. Panel (a) shows the fractional age uncertainty as a function of age. Panels (b) and (c) present the age and metallicity distributions, respectively. Panel (d) displays the age–metallicity distribution, with contours enclosing 50, 70, 90, and 99 per cent of the stars. The red dashed box highlights stars with 10 < age < 13 10<{\\rm age}<13 Gyr and − 0.1 < [ Fe / H ] < 0.1 -0.1<{\\rm[Fe/H]}<0.1 , containing 468 stars."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11555v2/fig3.png",
+            "caption": "Elemental abundance dispersion as a function of signal-to-noise ratio (S/N) for stars with repeat observations in Zhang et al. (2025) . Black squares represent the standard deviations of abundance measurements derived from paired spectra with similar S/N values (S/N ratio between 0.8 and 1.2). Red diamonds indicate the typical abundance uncertainties reported by Zhang et al. (2025) at the corresponding S/N. The number shown in the upper-right corner of each panel is the scaling factor, f = σ duplicate / σ error f=\\sigma_{\\rm duplicate}/\\sigma_{\\rm error} , where σ duplicate \\sigma_{\\rm duplicate} is the scatter measured from repeat observations and σ error \\sigma_{\\rm error} is the corresponding uncertainty reported by Zhang et al. (2025) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11555v2/fig4.png",
+            "caption": "An example of the posterior distributions obtained from the MCMC analysis for the intrinsic dispersion of [C/Fe] for stars in the bin centred 5 < τ < 6 5<\\tau<6 Gyr and − 0.2 < [ Fe / H ] < 0.2 -0.2<{\\rm[Fe/H]}<0.2 dex."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11555v2/fig5.png",
+            "caption": "The distribution of total chemical abundances, measurement errors and intrinsic dispersions of 19 chemical element abundances for metallicity about 0 dex and age about 5 Gyr."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11555v2/fig6-1.png",
+            "caption": "Intrinsic dispersion of elemental abundances as a function of stellar age. The top panel shows the intrinsic dispersion without [Ba/Fe] in the [X/Fe] model. The bottom panel illustrates the relative importance of the intrinsic dispersion compared to the observational uncertainties."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11555v2/fig7-1.png",
+            "caption": "Intrinsic dispersion of elemental abundances as a function of metallicity. The top panel shows the intrinsic dispersion without [Ba/Fe] in the [X/Fe] model. The bottom panel illustrates the relative importance of the intrinsic dispersion compared to the observational uncertainties."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11555v2/fig9-1.png",
+            "caption": "Same as Figure 5, but including [Ba/Fe] in the model."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.11555v2/fig1.png",
+        "thumbnailAlt": "Distributions of the sub-giant stars sample stars in the [ α \\alpha /Fe]–[Fe/ H {\\rm H} ] plane. The red lines delineate the demarcation of the chemical thin and thick disc sequences. The contours indicates 50,70,90, and 99 per cent of the sample stars.",
+        "catchupDate": "2026-09-14"
+      }
+    ]
   }
 }

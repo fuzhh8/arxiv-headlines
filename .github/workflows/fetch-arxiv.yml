@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Test fetch parser
+        run: npm test
+
       - name: Run fetch script
         run: node scripts/fetch-arxiv.mjs
 

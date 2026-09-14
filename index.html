@@ -195,6 +195,12 @@
       font-size: .9em; color: var(--c1); font-weight: 700;
     }
     .pdf-toggle input { width: 16px; height: 16px; cursor: pointer; }
+    .panel-toggle-stack {
+      display: flex; flex-direction: column; align-items: flex-start;
+      gap: 6px; flex: 0 0 auto; padding: 2px 4px;
+    }
+    .pdf-toggle.is-disabled { opacity: .42; cursor: not-allowed; }
+    .pdf-toggle.is-disabled input { cursor: not-allowed; }
 
     .status {
       background: rgba(255,255,255,.22); border: 1px solid rgba(255,255,255,.35);
@@ -255,6 +261,26 @@
       background: rgba(255,220,0,.45); border-radius: 2px; padding: 0 1px;
     }
 
+    .paper-visual {
+      height: 180px; margin: -20px -18px 16px -22px;
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #eef1ff, #f8f4ff);
+      border-bottom: 1px solid #e5e7ef;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .paper-visual img {
+      width: 100%; height: 100%; object-fit: contain;
+      display: block; background: #f7f8fb;
+      transition: transform .3s ease;
+    }
+    .paper-card:hover .paper-visual img { transform: scale(1.025); }
+    .paper-visual-placeholder {
+      color: var(--c1); font-weight: 900; letter-spacing: .04em;
+      font-size: 1.05em;
+    }
+    .paper-visual.has-image .paper-visual-placeholder { display: none; }
+    .paper-visual.has-image.image-error .paper-visual-placeholder { display: block; }
+
     .paper-title   { color: #222; font-size: 1.05em; font-weight: 900; margin-bottom: 10px; line-height: 1.4; }
     .paper-authors { color: #666; font-size: .88em; margin-bottom: 10px; font-style: italic; }
     .paper-date    { color: #999; font-size: .82em; margin-bottom: 10px; font-weight: 600; }
@@ -276,7 +302,21 @@
     }
 
     .content-split { display: grid; grid-template-columns: 5fr 5fr; gap: 16px; align-items: start; }
+    .content-split.panel-hidden { grid-template-columns: minmax(0, 1fr); }
+    .content-split.panel-hidden .preview-panels { display: none; }
+    .content-split.panel-hidden .papers-grid.cols-1,
+    .content-split.panel-hidden .papers-grid.cols-2 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
     @media (max-width: 1150px) { .content-split { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) {
+      .content-split.panel-hidden .papers-grid.cols-1,
+      .content-split.panel-hidden .papers-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .content-split.panel-hidden .papers-grid.cols-1,
+      .content-split.panel-hidden .papers-grid.cols-2 { grid-template-columns: 1fr; }
+    }
 
     .preview-panels {
       display: flex; flex-direction: column; gap: 16px;
@@ -358,6 +398,380 @@
     .fav-empty .fav-empty-icon { font-size: 3em; margin-bottom: 12px; }
     .fav-empty p { font-size: 1.05em; font-weight: 600; }
     .search-no-results { text-align: center; padding: 32px 16px; color: rgba(255,255,255,.75); font-size: 1em; font-weight: 600; }
+
+    /* Cosmic command-deck visual system */
+    :root {
+      --space-0: #02040c;
+      --space-1: #07101f;
+      --space-2: #0b1730;
+      --panel: rgba(7, 15, 34, .78);
+      --panel-strong: rgba(9, 18, 40, .94);
+      --panel-soft: rgba(17, 31, 61, .68);
+      --line: rgba(143, 208, 255, .18);
+      --line-bright: rgba(143, 226, 255, .48);
+      --ink: #edf8ff;
+      --muted: #91a9bd;
+      --cyan: #75e7ff;
+    }
+
+    html { background: var(--space-0); color-scheme: dark; }
+    body {
+      color: var(--ink);
+      background: transparent;
+      letter-spacing: .005em;
+    }
+    body::before {
+      z-index: -2;
+      background:
+        radial-gradient(circle at 12% 18%, color-mix(in srgb, var(--c1) 38%, transparent) 0, transparent 28%),
+        radial-gradient(circle at 88% 8%, color-mix(in srgb, var(--c2) 26%, transparent) 0, transparent 25%),
+        radial-gradient(circle at 70% 78%, color-mix(in srgb, var(--c1) 18%, transparent) 0, transparent 32%),
+        linear-gradient(145deg, #02040c 0%, #071126 45%, #030611 100%);
+    }
+    body::after {
+      content: '';
+      position: fixed; inset: -100px; z-index: -1; pointer-events: none;
+      opacity: .62;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,.9) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(117,231,255,.75) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(177,142,255,.65) 0 1.2px, transparent 1.8px);
+      background-size: 173px 173px, 257px 257px, 389px 389px;
+      background-position: 17px 31px, 91px 143px, 211px 53px;
+      animation: star-drift 90s linear infinite;
+    }
+
+    body.theme-purple { --c1:#8b7cff; --c2:#27d8ff; --card-shadow2:rgba(102,103,255,.34); }
+    body.theme-ocean  { --c1:#3b9dff; --c2:#20f0d0; --card-shadow2:rgba(32,240,208,.28); }
+    body.theme-sunset { --c1:#ff648d; --c2:#ffb34a; --card-shadow2:rgba(255,100,141,.30); }
+    body.theme-forest { --c1:#2ad7a2; --c2:#a0f06b; --card-shadow2:rgba(42,215,162,.28); }
+    body.theme-night  { --c1:#708cff; --c2:#6fe6ff; --card-shadow2:rgba(111,230,255,.27); }
+    body.theme-rose   { --c1:#ff62bd; --c2:#b87cff; --card-shadow2:rgba(255,98,189,.28); }
+    body.theme-dark   { --c1:#91a8c5; --c2:#d6e4f3; --card-shadow2:rgba(145,168,197,.22); }
+
+    .layout { max-width: 1680px; }
+    .header {
+      min-height: 132px; padding: 26px 18px 22px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .header::before {
+      content: ''; position: absolute; left: 50%; top: 50%;
+      width: min(560px, 80vw); height: 82px; transform: translate(-50%, -44%);
+      border: 1px solid color-mix(in srgb, var(--c2) 28%, transparent);
+      border-radius: 50%; opacity: .55; pointer-events: none;
+      box-shadow: 0 0 45px color-mix(in srgb, var(--c1) 16%, transparent);
+    }
+    .header-kicker {
+      color: var(--cyan); font-size: .68em; font-weight: 800;
+      letter-spacing: .34em; text-transform: uppercase; margin-bottom: 8px;
+      text-shadow: 0 0 14px rgba(117,231,255,.55);
+    }
+    .header h1 {
+      position: relative; color: var(--ink); font-size: clamp(2.2em, 5vw, 3.5em);
+      font-weight: 900; letter-spacing: .09em; text-transform: uppercase;
+      text-shadow: 0 0 12px rgba(117,231,255,.28), 0 0 34px color-mix(in srgb, var(--c1) 32%, transparent);
+    }
+    .header h1 span { color: var(--cyan); }
+    .header-subtitle {
+      color: var(--muted); margin-top: 7px; font-size: .8em;
+      letter-spacing: .12em; text-transform: uppercase;
+    }
+
+    .theme-pill, .controls, .section-title, .status {
+      background: linear-gradient(135deg, rgba(16,31,61,.78), rgba(5,12,29,.82));
+      border: 1px solid var(--line);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 12px 40px rgba(0,0,0,.22);
+      backdrop-filter: blur(18px) saturate(135%);
+    }
+    .theme-pill { border-radius: 12px; }
+    .theme-pill:hover { background: rgba(20,38,72,.9); border-color: var(--line-bright); }
+    .theme-pill-label, .status, .section-title { color: var(--ink); }
+    .theme-dot.active {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 2px rgba(117,231,255,.2), 0 0 16px rgba(117,231,255,.6);
+    }
+
+    .category-tabs { gap: 7px; align-items: center; }
+    .category-tab {
+      padding: 10px 16px; border: 1px solid var(--line); border-radius: 8px;
+      background: rgba(7,15,34,.66); color: var(--muted);
+      backdrop-filter: blur(12px); letter-spacing: .035em;
+    }
+    .category-tab:hover {
+      background: rgba(18,35,66,.86); border-color: var(--line-bright);
+      color: var(--ink); box-shadow: 0 0 18px color-mix(in srgb, var(--c2) 18%, transparent);
+    }
+    .category-tab.active {
+      background: linear-gradient(135deg, color-mix(in srgb, var(--c1) 26%, #0b1730), color-mix(in srgb, var(--c2) 18%, #07101f));
+      color: #fff; border-color: color-mix(in srgb, var(--c2) 62%, transparent);
+      box-shadow: inset 0 0 16px rgba(255,255,255,.035), 0 0 20px color-mix(in srgb, var(--c1) 24%, transparent);
+    }
+    .category-tab.active::after { display: none; }
+    .category-tab.fav-tab.active { background: rgba(83,65,16,.8); color: #ffe37a; border-color: rgba(255,215,76,.55); }
+    .category-tab.queue-tab { border-color: rgba(117,231,255,.38); color: #9ceeff; }
+    .category-tab.read-tab { border-color: rgba(87,240,176,.38); color: #8ff0bd; }
+    .category-tab.queue-tab.active { background: rgba(12,67,88,.82); border-color: #75e7ff; }
+    .category-tab.read-tab.active { background: rgba(13,73,53,.82); border-color: #57f0b0; }
+
+    .controls { border-radius: 12px; padding: 14px 16px; }
+    label { color: #a9bed0; }
+    select, input[type="date"], .search-wrap input[type="text"] {
+      color: var(--ink); background: rgba(2,8,20,.82);
+      border: 1px solid var(--line); border-radius: 7px;
+      box-shadow: inset 0 1px 7px rgba(0,0,0,.45);
+    }
+    select:focus, input[type="date"]:focus, .search-wrap input[type="text"]:focus {
+      border-color: var(--cyan); box-shadow: 0 0 0 2px rgba(117,231,255,.10), 0 0 18px rgba(117,231,255,.14);
+    }
+    .search-wrap input::placeholder { color: #607990; }
+    .search-clear, .search-clear:hover { color: var(--muted); }
+    input[type="checkbox"] { accent-color: var(--c2); }
+
+    button, .range-btn {
+      border: 1px solid color-mix(in srgb, var(--c1) 60%, transparent);
+      background: linear-gradient(135deg, color-mix(in srgb, var(--c1) 72%, #0b1730), color-mix(in srgb, var(--c2) 42%, #07101f));
+      color: #fff; border-radius: 7px;
+    }
+    button:hover:not(:disabled), .range-btn:hover {
+      filter: brightness(1.16); box-shadow: 0 0 22px color-mix(in srgb, var(--c2) 26%, transparent);
+    }
+    .range-btn { background: rgba(4,12,28,.84); color: #a9c5dc; }
+    .range-btn.active { color: #fff; border-color: var(--c2); }
+    button:disabled { background: #263244; border-color: #36465d; color: #78889a; }
+    .pdf-toggle { color: #a9c5dc; }
+
+    .section-title { border-radius: 9px; padding: 9px 13px; }
+    .section-title .left { letter-spacing: .045em; text-transform: uppercase; font-size: .88em; }
+    .pill {
+      background: rgba(117,231,255,.08); border-color: rgba(117,231,255,.2);
+      color: var(--cyan); font-size: .84em;
+    }
+
+    .paper-card {
+      background: linear-gradient(155deg, rgba(12,24,51,.96), rgba(5,11,27,.97));
+      border: 1px solid var(--line); border-radius: 11px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.035), 0 12px 32px rgba(0,0,0,.28);
+    }
+    .paper-card::before { width: 2px; box-shadow: 0 0 16px var(--c2); }
+    .paper-card:hover {
+      transform: translateY(-5px); border-color: var(--line-bright);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 18px 42px rgba(0,0,0,.42), 0 0 22px color-mix(in srgb, var(--c1) 15%, transparent);
+    }
+    .paper-card.selected { border-color: var(--c2); box-shadow: 0 0 24px color-mix(in srgb, var(--c2) 25%, transparent); }
+    .paper-visual {
+      background: radial-gradient(circle at 50% 40%, rgba(25,49,87,.9), rgba(4,10,25,.96));
+      border-bottom-color: var(--line);
+    }
+    .paper-visual img { background: #eef1f6; }
+    .paper-visual-placeholder {
+      color: var(--cyan); text-shadow: 0 0 16px rgba(117,231,255,.45);
+      text-transform: uppercase; letter-spacing: .13em;
+    }
+    .paper-title { color: var(--ink); letter-spacing: .012em; }
+    .paper-authors { color: #9bb0c3; }
+    .paper-date { color: #6f899f; }
+    .paper-link { color: var(--cyan); text-shadow: 0 0 12px rgba(117,231,255,.18); }
+    .fav-btn { color: #ffe36e; }
+
+    .abstract-card, .pdf-card {
+      background: linear-gradient(155deg, rgba(11,22,47,.96), rgba(4,10,25,.97));
+      border: 1px solid var(--line-bright); border-radius: 11px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.035), 0 18px 42px rgba(0,0,0,.34), 0 0 24px color-mix(in srgb, var(--c1) 12%, transparent);
+    }
+    .preview-title { color: var(--ink); }
+    .preview-meta, .preview-muted { color: var(--muted); }
+    .preview-abstract { color: #c8d9e6; }
+    .pdf-section-title { color: var(--ink); }
+    .pdf-btn.secondary { background: rgba(117,231,255,.10); color: var(--cyan); border: 1px solid rgba(117,231,255,.22); }
+    .pdf-btn.secondary:hover { background: rgba(117,231,255,.18); }
+    .pdf-viewer-container { border-color: var(--line); background: #07101f; }
+
+    .info { background: rgba(14,48,72,.82); color: #aeeaff; border: 1px solid rgba(117,231,255,.2); }
+    .error { background: rgba(82,20,38,.88); color: #ffc3d0; border: 1px solid rgba(255,105,139,.3); }
+    .progress-bar { background: linear-gradient(90deg, var(--c1), var(--cyan)); box-shadow: 0 0 14px var(--cyan); }
+    .skeleton-card { background: var(--panel-strong); border: 1px solid var(--line); }
+    .skeleton { background: linear-gradient(90deg,#101c34 25%,#1d3152 50%,#101c34 75%); background-size: 600px 100%; }
+    .back-to-top { border-color: var(--line-bright); background: rgba(5,13,30,.82); color: var(--cyan); }
+    .back-to-top:hover { background: rgba(16,34,62,.94); box-shadow: 0 0 20px rgba(117,231,255,.24); }
+
+    .settings-wrap { position: absolute; top: 16px; right: 16px; z-index: 30; }
+    .settings-button {
+      min-width: 0; padding: 8px 12px;
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(7,15,34,.82); border: 1px solid var(--line-bright);
+      color: var(--ink); font-size: .8em; letter-spacing: .06em;
+      backdrop-filter: blur(16px);
+    }
+    .settings-button[aria-expanded="true"] {
+      border-color: var(--cyan); box-shadow: 0 0 20px rgba(117,231,255,.22);
+    }
+    .settings-panel {
+      position: absolute; top: calc(100% + 9px); right: 0;
+      width: min(300px, calc(100vw - 36px)); padding: 14px;
+      border-radius: 11px; text-align: left;
+      background: linear-gradient(155deg, rgba(13,27,55,.98), rgba(4,10,25,.98));
+      border: 1px solid var(--line-bright);
+      box-shadow: 0 22px 60px rgba(0,0,0,.52), 0 0 26px color-mix(in srgb, var(--c1) 16%, transparent);
+      backdrop-filter: blur(22px) saturate(140%);
+    }
+    .settings-panel[hidden] { display: none; }
+    .settings-section + .settings-section {
+      margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--line);
+    }
+    .settings-heading {
+      margin-bottom: 9px; color: #7892aa; font-size: .65em;
+      font-weight: 900; letter-spacing: .18em; text-transform: uppercase;
+    }
+    .settings-theme-grid { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .settings-panel .theme-dot {
+      min-width: 0; width: 24px; height: 24px; padding: 0;
+      border: 2px solid transparent; border-radius: 50%; box-shadow: none;
+    }
+    .settings-panel .theme-dot:hover { transform: scale(1.16); box-shadow: 0 0 13px currentColor; }
+    .settings-panel .theme-dot.active { border-color: #fff; }
+    .settings-switches { display: grid; gap: 10px; }
+    .settings-switch {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 14px; color: #bdd0de; font-size: .84em; cursor: pointer;
+    }
+    .settings-switch input {
+      appearance: none; width: 34px; height: 18px; flex: 0 0 auto;
+      border-radius: 999px; background: #26364b; border: 1px solid #415873;
+      position: relative; cursor: pointer; transition: .2s ease;
+    }
+    .settings-switch input::after {
+      content: ''; position: absolute; width: 12px; height: 12px;
+      left: 2px; top: 2px; border-radius: 50%; background: #8fa5b8;
+      transition: .2s ease;
+    }
+    .settings-switch input:checked {
+      background: color-mix(in srgb, var(--c1) 72%, #152440);
+      border-color: var(--cyan); box-shadow: 0 0 12px color-mix(in srgb, var(--c2) 28%, transparent);
+    }
+    .settings-switch input:checked::after { transform: translateX(16px); background: #fff; }
+    .settings-switch.is-disabled { opacity: .4; cursor: not-allowed; }
+    .settings-switch.is-disabled input { cursor: not-allowed; }
+    .settings-select {
+      display: grid; gap: 6px; color: #bdd0de; font-size: .84em;
+    }
+    .settings-select select {
+      width: 100%; padding: 8px 10px; border: 1px solid #415873;
+      border-radius: 8px; color: var(--ink); background: #0a1629;
+      font-size: .95em;
+    }
+
+    .filters-button { min-width: 0; align-self: end; padding: 10px 14px; white-space: nowrap; }
+    .filter-count {
+      display: inline-grid; place-items: center; min-width: 20px; height: 20px;
+      margin-left: 5px; padding: 0 5px; border-radius: 999px;
+      color: #06101e; background: var(--cyan); font-size: .78em; font-weight: 900;
+    }
+    .filter-count:empty { display: none; }
+    .filter-panel {
+      flex: 1 0 100%; display: grid;
+      grid-template-columns: repeat(4, minmax(140px, 1fr)) auto;
+      align-items: end; gap: 12px; padding-top: 13px; margin-top: 2px;
+      border-top: 1px solid var(--line);
+    }
+    .filter-panel[hidden] { display: none; }
+    .filter-panel .group { min-width: 0; }
+    .filter-panel select { width: 100%; }
+    .filter-action { min-width: 0; padding: 10px 12px; white-space: nowrap; }
+    @media (max-width: 1050px) { .filter-panel { grid-template-columns: repeat(2, minmax(150px, 1fr)); } }
+    @media (max-width: 560px) { .filter-panel { grid-template-columns: 1fr; } }
+
+    .card-actions { display: flex; gap: 4px; margin-left: auto; align-items: center; }
+    .icon-btn {
+      min-width: 30px; height: 30px; padding: 0 7px; display: inline-grid; place-items: center;
+      border: 1px solid var(--line); background: rgba(117,231,255,.06); color: var(--muted);
+      box-shadow: none; font-size: .8em; line-height: 1;
+    }
+    .icon-btn:hover { color: var(--cyan); }
+    .icon-btn.active { color: #06101e; background: var(--cyan); border-color: var(--cyan); }
+    .state-btn { width: auto; min-width: 0; white-space: nowrap; padding-inline: 8px; }
+    .fav-btn.icon-btn { margin-left: 0; font-size: 1em; opacity: .55; }
+    .fav-btn.icon-btn.active { color: #ffe36e; background: rgba(255,227,110,.12); }
+    .figure-count {
+      position: absolute; right: 8px; bottom: 8px; z-index: 2; min-width: 0;
+      padding: 5px 8px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px;
+      background: rgba(2,7,18,.78); color: #fff; font-size: .72em; font-weight: 800;
+      backdrop-filter: blur(8px);
+    }
+    .paper-visual.has-image { cursor: zoom-in; }
+    .preview-actions { display: flex; flex-wrap: wrap; gap: 7px; margin: 12px 0; }
+    .preview-action { min-width: 0; padding: 7px 10px; font-size: .78em; }
+    .preview-action.active { color: #06101e; background: var(--cyan); border-color: var(--cyan); }
+    .pdf-load-state {
+      flex: 1; min-height: 180px; display: grid; place-items: center; text-align: center;
+      padding: 24px; border: 1px dashed var(--line-bright); border-radius: 9px;
+      background: radial-gradient(circle, rgba(117,231,255,.08), transparent 65%);
+    }
+    .pdf-load-state p { color: var(--muted); margin: 0 0 14px; line-height: 1.5; }
+
+    .pagination {
+      display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+      gap: 7px; margin: 18px 0 24px; padding: 12px;
+      border: 1px solid var(--line); border-radius: 12px;
+      background: rgba(5,14,31,.72); backdrop-filter: blur(12px);
+    }
+    .pagination-summary { color: var(--muted); font-size: .82em; margin-right: 5px; }
+    .page-button {
+      min-width: 34px; height: 34px; padding: 0 9px; border: 1px solid var(--line-bright);
+      color: var(--muted); background: rgba(117,231,255,.05); box-shadow: none;
+      font-size: .82em;
+    }
+    .page-button.active { color: #06101e; background: var(--cyan); border-color: var(--cyan); }
+    .page-button:hover:not(:disabled) { color: var(--ink); box-shadow: 0 0 12px rgba(117,231,255,.16); }
+    .page-ellipsis { color: var(--muted); padding: 0 2px; }
+
+    .figure-modal {
+      position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center;
+      padding: 22px; background: rgba(0,3,12,.9); backdrop-filter: blur(18px);
+    }
+    .figure-modal[hidden] { display: none; }
+    .figure-dialog {
+      width: min(1180px, 96vw); height: min(850px, 92vh); display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto; gap: 12px; padding: 16px;
+      border: 1px solid var(--line-bright); border-radius: 14px;
+      background: linear-gradient(155deg, rgba(11,22,47,.99), rgba(3,8,20,.99));
+      box-shadow: 0 0 55px color-mix(in srgb, var(--c1) 22%, transparent);
+    }
+    .figure-modal-head { display: flex; align-items: center; gap: 12px; }
+    .figure-modal-title { min-width: 0; flex: 1; color: var(--ink); font-weight: 850; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .figure-stage { min-height: 0; display: grid; place-items: center; overflow: hidden; border-radius: 10px; background: #f5f6fa; }
+    .figure-stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .figure-modal-foot { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 14px; }
+    .figure-caption { color: #c7d8e7; line-height: 1.5; max-height: 7.5em; overflow: auto; }
+    .figure-nav { min-width: 42px; padding: 9px; }
+    .figure-position { color: var(--cyan); font-size: .78em; white-space: nowrap; }
+
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: #040916; }
+    ::-webkit-scrollbar-thumb { background: #223b5a; border: 2px solid #040916; border-radius: 999px; }
+    ::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, var(--c1) 55%, #223b5a); }
+
+    @keyframes star-drift {
+      from { transform: translate3d(0, 0, 0); }
+      to { transform: translate3d(-90px, 70px, 0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+    }
+    @media (max-width: 900px) {
+      .header { min-height: 160px; }
+      .header::before { width: 88vw; }
+      .settings-wrap { top: 10px; right: 10px; }
+    }
+    @media (max-width: 650px) {
+      body { padding: 6px; overflow-x: hidden; }
+      .main { padding: 6px; }
+      .controls > .group { flex: 1 1 100% !important; min-width: 0 !important; max-width: none !important; }
+      .range-toggle { width: 100%; }
+      .range-btn { flex: 1; min-width: 0; padding-inline: 8px; }
+      .filters-button { width: 100%; }
+      .figure-modal { padding: 7px; }
+      .figure-dialog { width: 100%; height: 96vh; padding: 10px; }
+    }
   </style>
 </head>
 
@@ -365,16 +779,47 @@
 <div class="layout">
   <main class="main">
     <header class="header">
-      <h1>arXiv Headlines</h1>
-      <div class="theme-pill" role="group" aria-label="Color theme">
-        <span class="theme-pill-label">Theme</span>
-        <div class="theme-dot purple active" onclick="setTheme('purple')" title="Purple" role="button" tabindex="0"></div>
-        <div class="theme-dot ocean"         onclick="setTheme('ocean')"  title="Ocean"  role="button" tabindex="0"></div>
-        <div class="theme-dot sunset"        onclick="setTheme('sunset')" title="Sunset" role="button" tabindex="0"></div>
-        <div class="theme-dot forest"        onclick="setTheme('forest')" title="Forest" role="button" tabindex="0"></div>
-        <div class="theme-dot night"         onclick="setTheme('night')"  title="Night"  role="button" tabindex="0"></div>
-        <div class="theme-dot rose"          onclick="setTheme('rose')"   title="Rose"   role="button" tabindex="0"></div>
-        <div class="theme-dot dark"          onclick="setTheme('dark')"   title="Dark"   role="button" tabindex="0"></div>
+      <div class="header-kicker">Deep Space Research Feed</div>
+      <h1><span>arXiv</span> Headlines</h1>
+      <div class="header-subtitle">Signal stream from the scientific frontier</div>
+      <div class="settings-wrap" id="settingsWrap">
+        <button class="settings-button" id="settingsButton" type="button"
+                aria-expanded="false" aria-controls="settingsPanel">⚙ Settings</button>
+        <div class="settings-panel" id="settingsPanel" hidden>
+          <div class="settings-section">
+            <div class="settings-heading">Color signal</div>
+            <div class="settings-theme-grid" role="group" aria-label="Color theme">
+              <button class="theme-dot purple active" type="button" onclick="setTheme('purple')" title="Purple" aria-label="Purple theme"></button>
+              <button class="theme-dot ocean" type="button" onclick="setTheme('ocean')" title="Ocean" aria-label="Ocean theme"></button>
+              <button class="theme-dot sunset" type="button" onclick="setTheme('sunset')" title="Sunset" aria-label="Sunset theme"></button>
+              <button class="theme-dot forest" type="button" onclick="setTheme('forest')" title="Forest" aria-label="Forest theme"></button>
+              <button class="theme-dot night" type="button" onclick="setTheme('night')" title="Night" aria-label="Night theme"></button>
+              <button class="theme-dot rose" type="button" onclick="setTheme('rose')" title="Rose" aria-label="Rose theme"></button>
+              <button class="theme-dot dark" type="button" onclick="setTheme('dark')" title="Dark" aria-label="Dark theme"></button>
+            </div>
+          </div>
+          <div class="settings-section">
+            <div class="settings-heading">Display systems</div>
+            <div class="settings-switches">
+              <label class="settings-switch">
+                <span>Right panel</span>
+                <input type="checkbox" id="previewPanelToggle" checked aria-label="Toggle right panel" />
+              </label>
+              <label class="settings-switch" id="pdfPreviewLabel">
+                <span>PDF preview</span>
+                <input type="checkbox" id="pdfPreviewToggle" checked aria-label="Toggle PDF preview" />
+              </label>
+              <label class="settings-select" for="pageSizeSelect">
+                <span>Papers per page</span>
+                <select id="pageSizeSelect" aria-label="Papers per page">
+                  <option value="12">12</option>
+                  <option value="24" selected>24</option>
+                  <option value="48">48</option>
+                </select>
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -398,10 +843,42 @@
         <input type="text" id="searchInput" placeholder="Search title / author…" autocomplete="off" aria-label="Search papers" />
         <button class="search-clear" id="searchClear" title="Clear search" aria-label="Clear search">✕</button>
       </div>
-      <label class="pdf-toggle">
-        <input type="checkbox" id="pdfPreviewToggle" checked aria-label="Toggle PDF preview" />
-        <span>PDF Preview</span>
-      </label>
+      <button class="filters-button" id="filtersButton" type="button" aria-expanded="false" aria-controls="filterPanel">
+        ⛭ Filters <span class="filter-count" id="filterCount"></span>
+      </button>
+      <div class="filter-panel" id="filterPanel" hidden>
+        <div class="group">
+          <label for="sortMode">Sort</label>
+          <select id="sortMode">
+            <option value="date-desc">Newest first</option>
+            <option value="date-asc">Oldest first</option>
+            <option value="title">Title A–Z</option>
+          </select>
+        </div>
+        <div class="group">
+          <label for="categoryFilter">Subject</label>
+          <select id="categoryFilter"><option value="all">All subjects</option></select>
+        </div>
+        <div class="group">
+          <label for="readingFilter">Reading state</label>
+          <select id="readingFilter">
+            <option value="all">All papers</option>
+            <option value="unread">Unread</option>
+            <option value="queue">To read</option>
+            <option value="read">Read</option>
+            <option value="favorite">Favorites</option>
+          </select>
+        </div>
+        <div class="group">
+          <label for="imageFilter">Figures</label>
+          <select id="imageFilter">
+            <option value="all">All papers</option>
+            <option value="with">Has figures</option>
+            <option value="without">No figure</option>
+          </select>
+        </div>
+        <button class="filter-action" id="resetFilters" type="button">Reset</button>
+      </div>
     </div>
 
     <div id="content" role="main"></div>
@@ -409,6 +886,22 @@
 </div>
 
 <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">↑</button>
+
+<div class="figure-modal" id="figureModal" hidden role="dialog" aria-modal="true" aria-labelledby="figureModalTitle">
+  <div class="figure-dialog">
+    <div class="figure-modal-head">
+      <div class="figure-position" id="figurePosition"></div>
+      <div class="figure-modal-title" id="figureModalTitle"></div>
+      <button class="figure-nav" id="figureClose" type="button" aria-label="Close figure gallery">✕</button>
+    </div>
+    <div class="figure-stage"><img id="figureImage" alt="" referrerpolicy="no-referrer" /></div>
+    <div class="figure-modal-foot">
+      <button class="figure-nav" id="figurePrev" type="button" aria-label="Previous figure">←</button>
+      <div class="figure-caption" id="figureCaption"></div>
+      <button class="figure-nav" id="figureNext" type="button" aria-label="Next figure">→</button>
+    </div>
+  </div>
+</div>
 
 <script>
   /* Constants */
@@ -451,7 +944,11 @@
   const SECTIONS = ['new', 'cross', 'repl'];
   const MAX_CHUNK = 200;
   const FETCH_TIMEOUT = 12000;
+  const STATIC_DATA_SCHEMA = 1;
   const FAV_TAB_CODE = '__favorites__';
+  const TO_READ_TAB_CODE = '__to_read__';
+  const READ_TAB_CODE = '__read__';
+  const SAVED_TAB_CODES = new Set([FAV_TAB_CODE, TO_READ_TAB_CODE, READ_TAB_CODE]);
 
   /* State */
 
@@ -461,6 +958,16 @@
   let sectionColumns = { new: 2, cross: 2, repl: 2 };
   let searchQuery = '';
   let favorites = new Set();
+  let readingStates = new Map();
+  let sortMode = 'date-desc';
+  let categoryFilter = 'all';
+  let readingFilter = 'all';
+  let imageFilter = 'all';
+  let pageSize = 24;
+  let currentPage = 1;
+  let galleryPaper = null;
+  let galleryIndex = 0;
+  let loadGeneration = 0;
 
   let lastGoodProxyIdx = 0;
   const fetchCache = new Map();
@@ -475,6 +982,31 @@
     const d = document.createElement('div');
     d.textContent = text ?? '';
     return d.innerHTML;
+  }
+
+  function safeArxivImageUrl(value) {
+    try {
+      const url = new URL(value);
+      return url.protocol === 'https:' &&
+        url.hostname === 'arxiv.org' &&
+        url.pathname.startsWith('/html/')
+        ? url.href
+        : '';
+    } catch (_) {
+      return '';
+    }
+  }
+
+  function paperFigures(paper) {
+    const figures = Array.isArray(paper?.figures) ? paper.figures : [];
+    const valid = figures.map(figure => ({
+      url: safeArxivImageUrl(figure?.url),
+      caption: cleanText(figure?.caption || '')
+    })).filter(figure => figure.url);
+
+    if (valid.length) return valid;
+    const thumbnailUrl = safeArxivImageUrl(paper?.thumbnailUrl);
+    return thumbnailUrl ? [{ url: thumbnailUrl, caption: cleanText(paper.thumbnailAlt || '') }] : [];
   }
 
   function extractIdFromAbsUrl(url) {
@@ -526,6 +1058,31 @@
     });
 
     renderCategoryTabs();
+    if (readingFilter === 'favorite' || selectedCategory === FAV_TAB_CODE) rerenderCurrentView();
+  }
+
+  /* Reading states */
+
+  function loadReadingStates() {
+    try {
+      const stored = JSON.parse(localStorage.getItem('arxivReadingStates') || '{}');
+      readingStates = new Map(Object.entries(stored).filter(([, state]) => state === 'queue' || state === 'read'));
+    } catch (_) {
+      readingStates = new Map();
+    }
+  }
+
+  function saveReadingStates() {
+    try { localStorage.setItem('arxivReadingStates', JSON.stringify(Object.fromEntries(readingStates))); } catch (_) {}
+  }
+
+  function setReadingState(absId, nextState) {
+    const current = readingStates.get(absId) || 'unread';
+    if (current === nextState || nextState === 'unread') readingStates.delete(absId);
+    else readingStates.set(absId, nextState);
+    saveReadingStates();
+    renderCategoryTabs();
+    rerenderCurrentView(absId);
   }
 
   /* Settings */
@@ -537,7 +1094,13 @@
         dateRange: currentDateRange,
         sectionColumns,
         pdfPreview: document.getElementById('pdfPreviewToggle').checked,
-        selectedCategory
+        previewPanel: document.getElementById('previewPanelToggle').checked,
+        selectedCategory,
+        sortMode,
+        categoryFilter,
+        readingFilter,
+        imageFilter,
+        pageSize
       }));
     } catch (_) {}
   }
@@ -556,7 +1119,25 @@
     if (s.dateRange) setDateRange(s.dateRange, false);
     if (s.sectionColumns) sectionColumns = s.sectionColumns;
     if (s.pdfPreview != null) document.getElementById('pdfPreviewToggle').checked = s.pdfPreview;
+    if (s.previewPanel != null) document.getElementById('previewPanelToggle').checked = s.previewPanel;
     if (s.selectedCategory) selectedCategory = s.selectedCategory;
+    if (['date-desc', 'date-asc', 'title'].includes(s.sortMode)) sortMode = s.sortMode;
+    if (s.categoryFilter) categoryFilter = s.categoryFilter;
+    if (s.readingFilter) readingFilter = s.readingFilter;
+    if (s.imageFilter) imageFilter = s.imageFilter;
+    if ([12, 24, 48].includes(Number(s.pageSize))) pageSize = Number(s.pageSize);
+    document.getElementById('pageSizeSelect').value = String(pageSize);
+  }
+
+  function syncPreviewPanelVisibility() {
+    const visible = document.getElementById('previewPanelToggle')?.checked ?? true;
+    const pdfToggle = document.getElementById('pdfPreviewToggle');
+    const pdfLabel = document.getElementById('pdfPreviewLabel');
+    document.querySelectorAll('.content-split').forEach(layout => {
+      layout.classList.toggle('panel-hidden', !visible);
+    });
+    if (pdfToggle) pdfToggle.disabled = !visible;
+    pdfLabel?.classList.toggle('is-disabled', !visible);
   }
 
   /* Theme */
@@ -593,6 +1174,154 @@
     }
 
     return dates;
+  }
+
+  function categoryToDataDir(code) {
+    return code.replaceAll('.', '-');
+  }
+
+  function emptyStaticPayload(category, date) {
+    return {
+      schemaVersion: STATIC_DATA_SCHEMA,
+      status: 'ok',
+      source: 'weekend',
+      category,
+      date,
+      counts: { new: 0, cross: 0, repl: 0 },
+      papersBySection: { new: [], cross: [], repl: [] }
+    };
+  }
+
+  function isValidStaticPayload(payload, category, date) {
+    return payload?.schemaVersion === STATIC_DATA_SCHEMA &&
+      payload?.status === 'ok' &&
+      payload?.category === category &&
+      payload?.date === date &&
+      SECTIONS.every(sec => Array.isArray(payload?.papersBySection?.[sec]));
+  }
+
+  function revivePaper(paper, fallbackDate) {
+    return {
+      ...paper,
+      published: paper?.published ? new Date(paper.published) : null,
+      updated: paper?.updated ? new Date(paper.updated) : null,
+      catchupDate: paper?.catchupDate || fallbackDate
+    };
+  }
+
+  async function fetchStaticDay(category, date) {
+    // arXiv has no weekend announcement files, so weekends are known-empty and
+    // should not force the browser onto the slow live-proxy path.
+    if (isWeekend(date)) return emptyStaticPayload(category, date);
+
+    const dir = categoryToDataDir(category);
+    const url = `data/${encodeURIComponent(dir)}/${encodeURIComponent(date)}.json`;
+
+    try {
+      const resp = await fetch(url, {
+        headers: { Accept: 'application/json' },
+        cache: 'no-cache'
+      });
+
+      if (!resp.ok) return null;
+
+      const payload = await resp.json();
+      return isValidStaticPayload(payload, category, date) ? payload : null;
+    } catch (e) {
+      console.warn(`Static data unavailable for ${category}/${date}:`, e);
+      return null;
+    }
+  }
+
+  async function requestOnDemandDay(category, date) {
+    let resp;
+    try {
+      resp = await fetch('/api/fetch', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        cache: 'no-store',
+        body: JSON.stringify({ category, date })
+      });
+    } catch (error) {
+      const unavailable = new Error('Local on-demand fetch service is unavailable');
+      unavailable.serviceUnavailable = true;
+      unavailable.cause = error;
+      throw unavailable;
+    }
+
+    let result = null;
+    try {
+      result = await resp.json();
+    } catch (_) {}
+
+    if (!resp.ok || !result?.ok) {
+      const error = new Error(result?.error || `On-demand fetch failed (HTTP ${resp.status})`);
+      error.serviceUnavailable = [404, 405, 501].includes(resp.status);
+      throw error;
+    }
+
+    return result;
+  }
+
+  async function fetchLatestStatic(category) {
+    if (!category || SAVED_TAB_CODES.has(category)) return null;
+    const dir = categoryToDataDir(category);
+    try {
+      const resp = await fetch(`data/${encodeURIComponent(dir)}/latest.json`, {
+        headers: { Accept: 'application/json' },
+        cache: 'no-cache'
+      });
+      if (!resp.ok) return null;
+      const payload = await resp.json();
+      return /^\d{4}-\d{2}-\d{2}$/.test(payload?.date || '') &&
+        isValidStaticPayload(payload, category, payload.date) ? payload : null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function mergeStaticPayloads(payloads, category, selectedDate, dateList, options = {}) {
+    const papersBySection = Object.fromEntries(SECTIONS.map(sec => [sec, []]));
+    const seen = Object.fromEntries(SECTIONS.map(sec => [sec, new Set()]));
+
+    for (const payload of payloads) {
+      for (const sec of SECTIONS) {
+        for (const rawPaper of payload.papersBySection[sec]) {
+          const paper = revivePaper(rawPaper, payload.date);
+          if (!paper.absId || seen[sec].has(paper.absId)) continue;
+          seen[sec].add(paper.absId);
+          papersBySection[sec].push(paper);
+        }
+      }
+    }
+
+    const counts = Object.fromEntries(SECTIONS.map(sec => [sec, papersBySection[sec].length]));
+
+    return {
+      category,
+      date: selectedDate,
+      dateRange: dateList,
+      enabled: { new: true, cross: true, repl: true },
+      counts,
+      shownCounts: { ...counts },
+      papersBySection,
+      fallbackUsed: Boolean(options.fallbackUsed),
+      cacheMissDates: options.cacheMissDates || [],
+      dataSource: options.dataSource || 'static'
+    };
+  }
+
+  function indexPapers(papersBySection) {
+    window.__PAPER_BY_ID__ = new Map();
+
+    for (const sec of SECTIONS) {
+      for (const paper of papersBySection[sec]) {
+        if (paper?.absId) window.__PAPER_BY_ID__.set(paper.absId, paper);
+      }
+    }
   }
 
   function isWeekend(ymd) {
@@ -889,26 +1618,79 @@
   /* Filter */
 
   function filterPapers(papers) {
-    if (!searchQuery) return papers;
-
-    if (window.__semanticResults__) {
-      const ids = new Set(window.__semanticResults__);
-      return papers.filter(p => ids.has(p.absId));
-    }
-
+    const semanticIds = window.__semanticResults__ ? new Set(window.__semanticResults__) : null;
     const q = searchQuery.toLowerCase();
 
-    return papers.filter(p =>
-      p.title?.toLowerCase().includes(q) ||
-      p.authors?.some(a => a.toLowerCase().includes(q)) ||
-      p.summary?.toLowerCase().includes(q)
-    );
+    const filtered = papers.filter(p => {
+      const state = readingStates.get(p.absId) || 'unread';
+      const matchesSearch = !q || (semanticIds
+        ? semanticIds.has(p.absId)
+        : p.title?.toLowerCase().includes(q) ||
+          p.authors?.some(a => a.toLowerCase().includes(q)) ||
+          p.summary?.toLowerCase().includes(q));
+      const matchesCategory = categoryFilter === 'all' || p.categories?.includes(categoryFilter);
+      const matchesReading = readingFilter === 'all' ||
+        (readingFilter === 'favorite' ? favorites.has(p.absId) : state === readingFilter);
+      const hasFigure = paperFigures(p).length > 0;
+      const matchesImage = imageFilter === 'all' ||
+        (imageFilter === 'with' ? hasFigure : !hasFigure);
+      return matchesSearch && matchesCategory && matchesReading && matchesImage;
+    });
+
+    return filtered.sort((a, b) => {
+      if (sortMode === 'title') return (a.title || '').localeCompare(b.title || '');
+      const aDate = a.catchupDate || a.published?.toISOString?.() || '';
+      const bDate = b.catchupDate || b.published?.toISOString?.() || '';
+      return sortMode === 'date-asc' ? aDate.localeCompare(bDate) : bDate.localeCompare(aDate);
+    });
+  }
+
+  function rerenderCurrentView(preferredAbsId = '') {
+    if (SAVED_TAB_CODES.has(selectedCategory)) renderSavedView(selectedCategory);
+    else if (window.__LAST_RENDER_META__) renderSections(window.__LAST_RENDER_META__);
+    if (preferredAbsId) {
+      const paper = window.__PAPER_BY_ID__?.get(preferredAbsId);
+      if (paper && document.querySelector(`.paper-card[data-absid="${CSS.escape(preferredAbsId)}"]`)) setPreviewPaper(paper);
+    }
+  }
+
+  function openFigureGallery(absId, index = 0) {
+    const paper = window.__PAPER_BY_ID__?.get(absId);
+    const figures = paperFigures(paper);
+    if (!paper || !figures.length) return;
+    galleryPaper = paper;
+    galleryIndex = Math.max(0, Math.min(index, figures.length - 1));
+    updateFigureGallery();
+    document.getElementById('figureModal').hidden = false;
+    document.body.style.overflow = 'hidden';
+    document.getElementById('figureClose').focus();
+  }
+
+  function updateFigureGallery() {
+    const figures = paperFigures(galleryPaper);
+    if (!figures.length) return;
+    const figure = figures[galleryIndex];
+    document.getElementById('figureModalTitle').textContent = galleryPaper.title || 'Paper figures';
+    document.getElementById('figurePosition').textContent = `${galleryIndex + 1} / ${figures.length}`;
+    document.getElementById('figureImage').src = figure.url;
+    document.getElementById('figureImage').alt = figure.caption || `Figure ${galleryIndex + 1}`;
+    document.getElementById('figureCaption').textContent = figure.caption || 'No caption available.';
+    document.getElementById('figurePrev').disabled = galleryIndex === 0;
+    document.getElementById('figureNext').disabled = galleryIndex === figures.length - 1;
+  }
+
+  function closeFigureGallery() {
+    document.getElementById('figureModal').hidden = true;
+    document.getElementById('figureImage').removeAttribute('src');
+    document.body.style.overflow = '';
+    galleryPaper = null;
   }
 
   /* Render card */
 
   function renderPaperCard(p, sec) {
     const isFav = favorites.has(p.absId);
+    const readingState = readingStates.get(p.absId) || 'unread';
 
     const authors = p.authors?.length
       ? `${p.authors.slice(0, 3).join(', ')}${p.authors.length > 3 ? ' et al.' : ''}`
@@ -918,27 +1700,55 @@
       ? p.published.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
       : '';
 
+    const figures = paperFigures(p);
+    const thumbnailUrl = figures[0]?.url || '';
+    const thumbnailAlt = p.thumbnailAlt || `First figure from ${p.title}`;
+    const categoryLabel = p.categories?.[0] || 'arXiv';
+    const adsUrl = `https://ui.adsabs.harvard.edu/abs/${encodeURIComponent(`arXiv:${p.absId}`)}/abstract`;
+    const visual = `
+      <div class="paper-visual${thumbnailUrl ? ' has-image' : ''}"
+           ${thumbnailUrl ? `onclick="event.stopPropagation();openFigureGallery('${escapeHtml(p.absId)}')" title="Open figure gallery"` : ''}>
+        ${thumbnailUrl ? `<img src="${escapeHtml(thumbnailUrl)}"
+          alt="${escapeHtml(thumbnailAlt)}"
+          loading="lazy" decoding="async" referrerpolicy="no-referrer"
+          onerror="this.parentElement.classList.add('image-error');this.remove()" />` : ''}
+        <span class="paper-visual-placeholder">${escapeHtml(categoryLabel)}</span>
+        ${figures.length ? `<span class="figure-count">▧ ${figures.length}</span>` : ''}
+      </div>`;
+
     return `
       <div class="paper-card${isFav ? ' favorited' : ''}${searchQuery ? ' search-match' : ''}"
            tabindex="0" data-absid="${escapeHtml(p.absId)}"
            data-sec="${escapeHtml(sec)}" role="article"
            aria-label="${escapeHtml(p.title)}">
+        ${visual}
         <div class="paper-title">${highlightText(p.title, searchQuery)}</div>
         <div class="paper-authors">${highlightText(authors, searchQuery)}</div>
         ${dateStr ? `<div class="paper-date">📅 ${escapeHtml(dateStr)}</div>` : ''}
         <div class="paper-footer">
           <a class="paper-link" href="${escapeHtml(p.link)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Open arXiv</a>
           <a class="paper-link" href="https://arxiv.org/pdf/${escapeHtml(p.absId)}.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation()">Open PDF</a>
-          <button class="fav-btn${isFav ? ' active' : ''}"
+          <a class="paper-link" href="${escapeHtml(adsUrl)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">NASA ADS</a>
+          <div class="card-actions">
+          <button class="icon-btn state-btn${readingState === 'queue' ? ' active' : ''}"
+                  title="${readingState === 'queue' ? 'Remove from to-read' : 'Add to to-read'}"
+                  aria-label="Toggle to-read"
+                  onclick="event.stopPropagation();setReadingState('${escapeHtml(p.absId)}','queue')">⌛ To read</button>
+          <button class="icon-btn state-btn${readingState === 'read' ? ' active' : ''}"
+                  title="${readingState === 'read' ? 'Mark unread' : 'Mark read'}"
+                  aria-label="Toggle read"
+                  onclick="event.stopPropagation();setReadingState('${escapeHtml(p.absId)}','read')">✓ Read</button>
+          <button class="fav-btn icon-btn${isFav ? ' active' : ''}"
                   title="${isFav ? 'Remove from favorites' : 'Add to favorites'}"
                   aria-label="${isFav ? 'Remove from favorites' : 'Add to favorites'}"
                   onclick="event.stopPropagation();toggleFavorite('${escapeHtml(p.absId)}')">⭐</button>
+          </div>
         </div>
       </div>`;
   }
 
-  function renderPapersGrid(papers, sec) {
-    const filtered = filterPapers(papers);
+  function renderPapersGrid(papers, sec, alreadyFiltered = false) {
+    const filtered = alreadyFiltered ? papers : filterPapers(papers);
 
     if (!filtered.length) {
       if (searchQuery) {
@@ -953,17 +1763,99 @@
     return `<div class="papers-grid cols-${cols}">${filtered.map(p => renderPaperCard(p, sec)).join('')}</div>`;
   }
 
-  /* Favorites view */
+  function paginationItems(page, totalPages) {
+    const visible = new Set([1, totalPages]);
+    for (let n = page - 2; n <= page + 2; n++) {
+      if (n >= 1 && n <= totalPages) visible.add(n);
+    }
 
-  async function renderFavoritesView() {
+    const items = [];
+    let previous = 0;
+    for (const value of [...visible].sort((a, b) => a - b)) {
+      if (previous && value - previous > 1) items.push('ellipsis');
+      items.push(value);
+      previous = value;
+    }
+    return items;
+  }
+
+  function renderPagination(totalItems) {
+    const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
+    currentPage = Math.min(Math.max(1, currentPage), totalPages);
+    if (totalItems <= pageSize) return '';
+
+    const first = (currentPage - 1) * pageSize + 1;
+    const last = Math.min(totalItems, currentPage * pageSize);
+    const pageButtons = paginationItems(currentPage, totalPages).map(item => {
+      if (item === 'ellipsis') return '<span class="page-ellipsis" aria-hidden="true">…</span>';
+      const active = item === currentPage;
+      return `<button class="page-button${active ? ' active' : ''}" type="button"
+        ${active ? 'aria-current="page"' : ''} aria-label="Go to page ${item}"
+        onclick="setPage(${item})">${item}</button>`;
+    }).join('');
+
+    return `
+      <nav class="pagination" aria-label="Paper pages">
+        <span class="pagination-summary">${first}–${last} of ${totalItems}</span>
+        <button class="page-button" type="button" aria-label="Previous page"
+          onclick="setPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>←</button>
+        ${pageButtons}
+        <button class="page-button" type="button" aria-label="Next page"
+          onclick="setPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>→</button>
+      </nav>`;
+  }
+
+  function sliceSectionGroups(groups) {
+    const totalItems = groups.reduce((sum, group) => sum + group.papers.length, 0);
+    const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
+    currentPage = Math.min(Math.max(1, currentPage), totalPages);
+
+    const start = (currentPage - 1) * pageSize;
+    const end = Math.min(totalItems, start + pageSize);
+    let offset = 0;
+
+    const visibleGroups = groups.map(group => {
+      const localStart = Math.max(0, start - offset);
+      const localEnd = Math.min(group.papers.length, end - offset);
+      const papers = localStart < localEnd ? group.papers.slice(localStart, localEnd) : [];
+      offset += group.papers.length;
+      return { ...group, visiblePapers: papers };
+    }).filter(group => group.visiblePapers.length > 0);
+
+    return { totalItems, visibleGroups };
+  }
+
+  function setPage(page) {
+    currentPage = Math.max(1, Number(page) || 1);
+    rerenderCurrentView();
+    requestAnimationFrame(() => {
+      document.getElementById('listPane')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  /* Saved-paper views */
+
+  function savedViewConfig(code) {
+    if (code === TO_READ_TAB_CODE) {
+      return { icon: '⌛', label: 'To read', empty: 'No papers in your reading queue yet.', ids: [...readingStates].filter(([, state]) => state === 'queue').map(([id]) => id) };
+    }
+    if (code === READ_TAB_CODE) {
+      return { icon: '✓', label: 'Read', empty: 'No papers marked as read yet.', ids: [...readingStates].filter(([, state]) => state === 'read').map(([id]) => id) };
+    }
+    return { icon: '⭐', label: 'Favorites', empty: 'No favorites yet.', ids: [...favorites] };
+  }
+
+  async function renderSavedView(code) {
     const content = document.getElementById('content');
+    const view = savedViewConfig(code);
+    window.MathJax?.typesetClear?.([content]);
 
-    if (favorites.size === 0) {
-      content.innerHTML = `<div class="fav-empty"><div class="fav-empty-icon">⭐</div><p>No favorites yet.<br/>Click the ⭐ on any paper card to save it here.</p></div>`;
+    if (view.ids.length === 0) {
+      content.innerHTML = `<div class="fav-empty"><div class="fav-empty-icon">${view.icon}</div><p>${escapeHtml(view.empty)}<br/>Use the matching button on any paper card to add one.</p></div>`;
       return;
     }
 
-    const missingIds = [...favorites].filter(id => !window.__PAPER_BY_ID__?.has(id));
+    const missingIds = view.ids.filter(id => !window.__PAPER_BY_ID__?.has(id));
 
     if (missingIds.length > 0) {
       content.innerHTML = `<div class="status">⏳ Loading ${missingIds.length} saved paper(s)…</div>`;
@@ -978,12 +1870,17 @@
         }
 
       } catch (e) {
-        content.innerHTML = `<div class="error">❌ Failed to load favorites: ${escapeHtml(e.message)}</div>`;
+        content.innerHTML = `<div class="error">❌ Failed to load saved papers: ${escapeHtml(e.message)}</div>`;
         return;
       }
     }
 
-    const favPapers = [...favorites].map(id => window.__PAPER_BY_ID__?.get(id)).filter(Boolean);
+    const allSavedPapers = view.ids.map(id => window.__PAPER_BY_ID__?.get(id)).filter(Boolean);
+    const savedPapers = filterPapers(allSavedPapers);
+    const totalPages = Math.max(1, Math.ceil(savedPapers.length / pageSize));
+    currentPage = Math.min(Math.max(1, currentPage), totalPages);
+    const pageStart = (currentPage - 1) * pageSize;
+    const visiblePapers = savedPapers.slice(pageStart, pageStart + pageSize);
     const cols = sectionColumns.new || 2;
 
     content.innerHTML = `
@@ -991,11 +1888,12 @@
         <div id="listPane">
           <div class="section">
             <div class="section-title">
-              <div class="left">⭐ Favorites <span class="pill">${favPapers.length} saved</span></div>
+              <div class="left">${view.icon} ${escapeHtml(view.label)} <span class="pill">matched ${savedPapers.length} / ${allSavedPapers.length}</span></div>
             </div>
-            ${favPapers.length === 0
-              ? '<div class="info">Could not load paper data.</div>'
-              : `<div class="papers-grid cols-${cols}">${favPapers.map(p => renderPaperCard(p, 'fav')).join('')}</div>`}
+            ${savedPapers.length === 0
+              ? '<div class="info">No saved papers match the current filters.</div>'
+              : `<div class="papers-grid cols-${cols}">${visiblePapers.map(p => renderPaperCard(p, 'saved')).join('')}</div>`}
+            ${renderPagination(savedPapers.length)}
           </div>
         </div>
         <div class="preview-panels">
@@ -1004,8 +1902,10 @@
         </div>
       </div>`;
 
-    if (favPapers.length > 0) {
-      setPreviewPaper(favPapers[0]);
+    syncPreviewPanelVisibility();
+
+    if (visiblePapers.length > 0) {
+      setPreviewPaper(visiblePapers[0]);
     }
 
     window.MathJax?.typesetPromise?.([document.getElementById('listPane')]).catch(() => {});
@@ -1025,10 +1925,17 @@
 
     const authors = (paper.authors || []).filter(Boolean);
     const authorsFull = authors.length <= 6 ? authors.join(', ') : `${authors.slice(0, 6).join(', ')}, et al.`;
+    const figures = paperFigures(paper);
+    const readingState = readingStates.get(paper.absId) || 'unread';
 
     abstractPane.innerHTML = `
       <div class="preview-title">${highlightText(paper.title || '', searchQuery)}</div>
       <div class="preview-meta">${escapeHtml(authorsFull || 'Unknown')}</div>
+      <div class="preview-actions">
+        ${figures.length ? `<button class="preview-action" type="button" onclick="openFigureGallery('${escapeHtml(paper.absId)}')">▧ Figures (${figures.length})</button>` : ''}
+        <button class="preview-action${readingState === 'queue' ? ' active' : ''}" type="button" onclick="setReadingState('${escapeHtml(paper.absId)}','queue')">⌛ To read</button>
+        <button class="preview-action${readingState === 'read' ? ' active' : ''}" type="button" onclick="setReadingState('${escapeHtml(paper.absId)}','read')">✓ Read</button>
+      </div>
       <div class="preview-abstract">${highlightText(paper.summary || '', searchQuery)}</div>`;
 
     const showPdf = document.getElementById('pdfPreviewToggle').checked;
@@ -1048,9 +1955,14 @@
             <a class="pdf-btn secondary" href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener">Open in New Tab</a>
           </div>
         </div>
-        <div class="pdf-viewer-container">
-          <iframe class="pdf-iframe" src="${escapeHtml(pdfUrl)}#view=FitH" title="PDF Preview" loading="lazy"></iframe>
+        <div class="pdf-load-state">
+          <div>
+            <p>PDF is paused to keep browsing fast.<br/>Load it only when you want to review this paper.</p>
+            <button class="pdf-btn" type="button" onclick="loadPdfPreview('${escapeHtml(paper.absId)}')">Load PDF Preview</button>
+          </div>
         </div>`;
+    } else {
+      pdfPane.innerHTML = '<div class="preview-muted">PDF preview is disabled in Settings.</div>';
     }
 
     window.MathJax?.typesetPromise?.([abstractPane]).catch(() => {});
@@ -1059,16 +1971,19 @@
   /* Render sections */
 
   function renderSections(meta) {
-    if (selectedCategory === FAV_TAB_CODE) {
-      renderFavoritesView();
+    if (SAVED_TAB_CODES.has(selectedCategory)) {
+      renderSavedView(selectedCategory);
       return;
     }
 
     const content = document.getElementById('content');
+    window.MathJax?.typesetClear?.([content]);
     let html = '';
 
     if (meta.fallbackUsed) {
-      html += `<div class="info">⚠️ Catchup page could not be read. Showing arXiv API fallback results instead. Section labels may not match arXiv's New/Cross/Replacement lists.</div>`;
+      html += `<div class="info">⚠️ Some uncached dates used the arXiv API fallback. Section labels for those results may not match arXiv's New/Cross/Replacement lists.</div>`;
+    } else if (meta.cacheMissDates?.length) {
+      html += `<div class="info">📡 Cache kept ${meta.dateRange.length - meta.cacheMissDates.length} day(s); only ${meta.cacheMissDates.length} missing day(s) were fetched live.</div>`;
     }
 
     if (meta.dateRange?.length > 1) {
@@ -1080,33 +1995,35 @@
         <div id="listPane"></div>
         <div class="preview-panels">
           <div class="abstract-card" id="abstractPane"><div class="preview-muted">Click on a paper card to see the abstract here.</div></div>
-          <div class="pdf-card" id="pdfPane"><div class="preview-muted">PDF will appear here when you select a paper.</div></div>
+          <div class="pdf-card" id="pdfPane"><div class="preview-muted">Select a paper, then choose Load PDF Preview.</div></div>
         </div>
       </div>`;
 
     content.innerHTML = html;
+    syncPreviewPanelVisibility();
 
     const listPane = document.getElementById('listPane');
+    const groups = SECTIONS.filter(sec => meta.enabled[sec]).map(sec => ({
+      sec,
+      title: meta.fallbackUsed && sec === 'new' ? 'Submissions' : SECTION_LABELS[sec],
+      papers: filterPapers(meta.papersBySection[sec]),
+      unfilteredCount: meta.counts[sec]
+    }));
+    const { totalItems, visibleGroups } = sliceSectionGroups(groups);
 
-    listPane.innerHTML = SECTIONS.filter(sec => meta.enabled[sec]).map(sec => {
-      const filtered = filterPapers(meta.papersBySection[sec]);
-      const title = meta.fallbackUsed && sec === 'new' ? 'Submissions' : SECTION_LABELS[sec];
-
-      return `
-        <div class="section">
-          <div class="section-title">
-            <div class="left">${escapeHtml(title)}
-              <span class="pill">showing ${filtered.length} / ${escapeHtml(String(meta.counts[sec]))}</span>
+    listPane.innerHTML = totalItems === 0
+      ? '<div class="info">No papers match the current search and filters.</div>'
+      : visibleGroups.map(group => `
+          <div class="section">
+            <div class="section-title">
+              <div class="left">${escapeHtml(group.title)}
+                <span class="pill">page ${group.visiblePapers.length} · matched ${group.papers.length} / ${escapeHtml(String(group.unfilteredCount))}</span>
+              </div>
             </div>
-          </div>
-          ${renderPapersGrid(meta.papersBySection[sec], sec)}
-        </div>`;
-    }).join('');
+            ${renderPapersGrid(group.visiblePapers, group.sec, true)}
+          </div>`).join('') + renderPagination(totalItems);
 
-    const first =
-      filterPapers(meta.papersBySection.new)?.[0] ||
-      filterPapers(meta.papersBySection.cross)?.[0] ||
-      filterPapers(meta.papersBySection.repl)?.[0];
+    const first = visibleGroups[0]?.visiblePapers?.[0];
 
     if (first) setPreviewPaper(first);
 
@@ -1117,8 +2034,8 @@
     sectionColumns[sec] = cols;
     saveSettings();
 
-    if (selectedCategory === FAV_TAB_CODE) {
-      renderFavoritesView();
+    if (SAVED_TAB_CODES.has(selectedCategory)) {
+      renderSavedView(selectedCategory);
       return;
     }
 
@@ -1145,6 +2062,7 @@
 
       tab.onclick = () => {
         selectedCategory = cat.code;
+        currentPage = 1;
         saveSettings();
         renderCategoryTabs();
         loadPapers();
@@ -1153,28 +2071,36 @@
       container.appendChild(tab);
     }
 
-    const favTab = document.createElement('button');
+    const savedTabs = [
+      { code: TO_READ_TAB_CODE, icon: '⌛', label: 'To read', className: 'queue-tab', count: [...readingStates.values()].filter(state => state === 'queue').length },
+      { code: READ_TAB_CODE, icon: '✓', label: 'Read', className: 'read-tab', count: [...readingStates.values()].filter(state => state === 'read').length },
+      { code: FAV_TAB_CODE, icon: '⭐', label: 'Favorites', className: 'fav-tab', count: favorites.size }
+    ];
 
-    favTab.className = `category-tab fav-tab${selectedCategory === FAV_TAB_CODE ? ' active' : ''}`;
-    favTab.setAttribute('aria-pressed', selectedCategory === FAV_TAB_CODE);
-    favTab.innerHTML = `⭐ Favorites <span class="fav-count-badge">${favorites.size}</span>`;
-
-    favTab.onclick = () => {
-      selectedCategory = FAV_TAB_CODE;
-      renderCategoryTabs();
-      renderFavoritesView();
-    };
-
-    container.appendChild(favTab);
+    for (const item of savedTabs) {
+      const tab = document.createElement('button');
+      tab.className = `category-tab ${item.className}${selectedCategory === item.code ? ' active' : ''}`;
+      tab.setAttribute('aria-pressed', selectedCategory === item.code);
+      tab.innerHTML = `${item.icon} ${item.label} <span class="fav-count-badge">${item.count}</span>`;
+      tab.onclick = () => {
+        selectedCategory = item.code;
+        currentPage = 1;
+        saveSettings();
+        renderCategoryTabs();
+        renderSavedView(item.code);
+      };
+      container.appendChild(tab);
+    }
   }
 
   function applySearch(query) {
     searchQuery = query.trim();
+    currentPage = 1;
 
     document.getElementById('searchClear')?.classList.toggle('visible', searchQuery.length > 0);
 
-    if (selectedCategory === FAV_TAB_CODE) {
-      renderFavoritesView();
+    if (SAVED_TAB_CODES.has(selectedCategory)) {
+      renderSavedView(selectedCategory);
       return;
     }
 
@@ -1183,14 +2109,37 @@
     }
   }
 
+  function applyAdvancedFilters() {
+    sortMode = document.getElementById('sortMode').value;
+    categoryFilter = document.getElementById('categoryFilter').value;
+    readingFilter = document.getElementById('readingFilter').value;
+    imageFilter = document.getElementById('imageFilter').value;
+    currentPage = 1;
+    const count = [categoryFilter !== 'all', readingFilter !== 'all', imageFilter !== 'all', sortMode !== 'date-desc'].filter(Boolean).length;
+    document.getElementById('filterCount').textContent = count ? String(count) : '';
+    saveSettings();
+    rerenderCurrentView();
+  }
+
+  function syncAdvancedFilterControls() {
+    document.getElementById('sortMode').value = sortMode;
+    document.getElementById('categoryFilter').value = categoryFilter;
+    document.getElementById('readingFilter').value = readingFilter;
+    document.getElementById('imageFilter').value = imageFilter;
+    const count = [categoryFilter !== 'all', readingFilter !== 'all', imageFilter !== 'all', sortMode !== 'date-desc'].filter(Boolean).length;
+    document.getElementById('filterCount').textContent = count ? String(count) : '';
+  }
+
   /* Main load */
 
   async function loadPapers() {
-    if (selectedCategory === FAV_TAB_CODE) {
-      renderFavoritesView();
+    currentPage = 1;
+    if (SAVED_TAB_CODES.has(selectedCategory)) {
+      renderSavedView(selectedCategory);
       return;
     }
 
+    const generation = ++loadGeneration;
     const dateInput = document.getElementById('day');
     const selectedYmd = dateInput.value;
 
@@ -1199,8 +2148,6 @@
       return;
     }
 
-    const enabled = { new: true, cross: true, repl: true };
-
     try {
       const dateList = getDateList(selectedYmd, currentDateRange);
 
@@ -1208,7 +2155,7 @@
         <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar"></div></div>
         <div class="content-split">
           <div>
-            <div class="status">⏳ Fetching ${escapeHtml(String(dateList.length))} day(s)…</div>
+            <div class="status" id="loadStatus">⏳ Loading cached data…</div>
             <div class="papers-grid cols-2">${renderSkeletons(6)}</div>
           </div>
           <div class="preview-panels">
@@ -1217,18 +2164,82 @@
           </div>
         </div>`;
 
+      syncPreviewPanelVisibility();
+
       setProgress(5);
+
+      // Same-origin static files are fast, cacheable and do not need a CORS
+      // proxy. Load every requested date concurrently.
+      let staticPayloads = await Promise.all(
+        dateList.map(date => fetchStaticDay(selectedCategory, date))
+      );
+
+      if (generation !== loadGeneration) return;
+
+      let cachedPayloads = staticPayloads.filter(Boolean);
+      let missingDates = dateList.filter((_, index) => !staticPayloads[index]);
+      let onDemandFetched = 0;
+
+      // The Node preview server can create a missing cache file on demand. Do
+      // this before the browser-only proxy fallback so the result (including
+      // figures) persists and the next visit opens instantly.
+      for (const missingDate of [...missingDates]) {
+        const loadStatus = document.getElementById('loadStatus');
+        if (loadStatus) {
+          loadStatus.textContent = `📡 ${missingDate} is not cached. Fetching it from arXiv…`;
+        }
+
+        try {
+          await requestOnDemandDay(selectedCategory, missingDate);
+          if (generation !== loadGeneration) return;
+
+          const index = dateList.indexOf(missingDate);
+          staticPayloads[index] = await fetchStaticDay(selectedCategory, missingDate);
+          if (staticPayloads[index]) onDemandFetched++;
+        } catch (error) {
+          console.warn(`On-demand cache unavailable for ${missingDate}:`, error);
+          // A plain static server or GitHub Pages has no API endpoint. Stop
+          // probing it and retain the existing browser fallback below.
+          if (error.serviceUnavailable) break;
+        }
+      }
+
+      if (generation !== loadGeneration) return;
+      cachedPayloads = staticPayloads.filter(Boolean);
+      missingDates = dateList.filter((_, index) => !staticPayloads[index]);
+
+      if (missingDates.length === 0) {
+        const renderMeta = mergeStaticPayloads(
+          cachedPayloads,
+          selectedCategory,
+          selectedYmd,
+          dateList,
+          { dataSource: onDemandFetched ? 'on-demand-cache' : 'static' }
+        );
+
+        indexPapers(renderMeta.papersBySection);
+        window.__LAST_RENDER_META__ = renderMeta;
+        setProgress(100);
+        renderSections(renderMeta);
+        return;
+      }
+
+      const loadStatus = document.getElementById('loadStatus');
+      if (loadStatus) {
+        loadStatus.textContent = `⏳ Keeping ${cachedPayloads.length} cached day(s); fetching ${missingDates.length} missing day(s)…`;
+      }
 
       const allIdsBySection = { new: [], cross: [], repl: [] };
       const seenIds = { new: new Set(), cross: new Set(), repl: new Set() };
 
       // Fetch catchup pages sequentially to avoid overwhelming public proxies.
-      for (let i = 0; i < dateList.length; i++) {
-        const date = dateList[i];
+      for (let i = 0; i < missingDates.length; i++) {
+        const date = missingDates[i];
         const url = `https://arxiv.org/catchup/${encodeURIComponent(selectedCategory)}/${encodeURIComponent(date)}?abs=False`;
 
         try {
           const html = await fetchWithProxy(url, 'text/html');
+          if (generation !== loadGeneration) return;
           const ids = parseCatchupByHeadings(html);
 
           for (const sec of SECTIONS) {
@@ -1244,7 +2255,7 @@
           console.warn(`Skipped ${date}:`, e);
         }
 
-        setProgress(5 + Math.round(((i + 1) / dateList.length) * 30));
+        setProgress(5 + Math.round(((i + 1) / missingDates.length) * 30));
       }
 
       setProgress(35);
@@ -1253,112 +2264,67 @@
         return sum + allIdsBySection[sec].length;
       }, 0);
 
-      // Fallback to arXiv API if the catchup page cannot be read.
+      let livePapersBySection = Object.fromEntries(SECTIONS.map(sec => [sec, []]));
+      let fallbackUsed = false;
+
+      // Fallback to arXiv API only for the dates that were absent from cache.
       if (totalCatchupIds === 0) {
         console.warn('Catchup returned 0 papers. Using arXiv API fallback.');
 
         setProgress(45);
 
-        const fallbackPapers = await fetchPapersByApiFallback(selectedCategory, dateList);
+        const fallbackPapers = await fetchPapersByApiFallback(selectedCategory, missingDates);
+        if (generation !== loadGeneration) return;
+        livePapersBySection.new = fallbackPapers;
+        fallbackUsed = true;
+      } else {
+        // Fetch unique metadata in one batched pass, then distribute it back to
+        // the three sections. This avoids three independent proxy sequences.
+        const uniqueIds = [...new Set(
+          SECTIONS.flatMap(sec => allIdsBySection[sec].map(item => normalizeId(item.id)))
+        )];
+        const byId = await fetchPapersForIds(uniqueIds);
+        if (generation !== loadGeneration) return;
 
-        const papersBySection = {
-          new: fallbackPapers,
-          cross: [],
-          repl: []
-        };
+        for (const sec of SECTIONS) {
+          for (const item of allIdsBySection[sec]) {
+            const p = byId.get(normalizeId(item.id));
 
-        const counts = {
-          new: fallbackPapers.length,
-          cross: 0,
-          repl: 0
-        };
-
-        const shownCounts = {
-          new: fallbackPapers.length,
-          cross: 0,
-          repl: 0
-        };
-
-        window.__PAPER_BY_ID__ = new Map();
-
-        for (const p of fallbackPapers) {
-          if (p?.absId) {
-            window.__PAPER_BY_ID__.set(p.absId, p);
-          }
-        }
-
-        const renderMeta = {
-          category: selectedCategory,
-          date: selectedYmd,
-          dateRange: dateList,
-          enabled: {
-            new: true,
-            cross: false,
-            repl: false
-          },
-          counts,
-          shownCounts,
-          papersBySection,
-          fallbackUsed: true
-        };
-
-        window.__LAST_RENDER_META__ = renderMeta;
-
-        setProgress(100);
-        renderSections(renderMeta);
-        return;
-      }
-
-      const counts = Object.fromEntries(SECTIONS.map(s => [s, allIdsBySection[s].length]));
-      const shownCounts = Object.fromEntries(SECTIONS.map(s => [s, enabled[s] ? allIdsBySection[s].length : 0]));
-      const papersBySection = Object.fromEntries(SECTIONS.map(s => [s, []]));
-
-      // Fetch metadata section by section to reduce public proxy failures.
-      for (const sec of SECTIONS) {
-        if (!enabled[sec] || !allIdsBySection[sec].length) continue;
-
-        const ids = allIdsBySection[sec].map(i => i.id);
-        const byId = await fetchPapersForIds(ids);
-
-        for (const item of allIdsBySection[sec]) {
-          const p = byId.get(normalizeId(item.id));
-
-          if (p) {
-            p.catchupDate = item.date;
-            papersBySection[sec].push(p);
+            if (p) {
+              p.catchupDate = item.date;
+              livePapersBySection[sec].push(p);
+            }
           }
         }
       }
 
       setProgress(95);
 
-      window.__PAPER_BY_ID__ = new Map();
-
-      for (const sec of SECTIONS) {
-        for (const p of papersBySection[sec]) {
-          if (p?.absId) {
-            window.__PAPER_BY_ID__.set(p.absId, p);
-          }
-        }
-      }
-
-      const renderMeta = {
+      const livePayload = {
         category: selectedCategory,
         date: selectedYmd,
-        dateRange: dateList,
-        enabled,
-        counts,
-        shownCounts,
-        papersBySection,
-        fallbackUsed: false
+        papersBySection: livePapersBySection
       };
+      const renderMeta = mergeStaticPayloads(
+        [...cachedPayloads, livePayload],
+        selectedCategory,
+        selectedYmd,
+        dateList,
+        {
+          fallbackUsed,
+          cacheMissDates: missingDates,
+          dataSource: cachedPayloads.length ? 'partial-cache' : 'live'
+        }
+      );
 
+      indexPapers(renderMeta.papersBySection);
       window.__LAST_RENDER_META__ = renderMeta;
 
       setProgress(100);
       renderSections(renderMeta);
 
     } catch (e) {
+      if (generation !== loadGeneration) return;
       console.error('Load failed:', e);
 
       document.getElementById('content').innerHTML = `
@@ -1403,6 +2369,51 @@
     if (p) setPreviewPaper(p);
   });
 
+  /* Settings panel */
+
+  const settingsWrap = document.getElementById('settingsWrap');
+  const settingsButton = document.getElementById('settingsButton');
+  const settingsPanel = document.getElementById('settingsPanel');
+
+  function setSettingsOpen(open) {
+    settingsPanel.hidden = !open;
+    settingsButton.setAttribute('aria-expanded', String(open));
+  }
+
+  function loadPdfPreview(absId) {
+    const paper = window.__PAPER_BY_ID__?.get(absId);
+    const pdfPane = document.getElementById('pdfPane');
+    if (!paper || !pdfPane) return;
+    const pdfUrl = `https://arxiv.org/pdf/${paper.absId}.pdf`;
+    pdfPane.innerHTML = `
+      <div class="pdf-section-title">
+        <span>📄 PDF Preview</span>
+        <div class="pdf-actions">
+          <a class="pdf-btn secondary" href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener">Open in New Tab</a>
+        </div>
+      </div>
+      <div class="pdf-viewer-container">
+        <iframe class="pdf-iframe" src="${escapeHtml(pdfUrl)}#view=FitH" title="PDF Preview"></iframe>
+      </div>`;
+  }
+
+  settingsButton.addEventListener('click', () => {
+    setSettingsOpen(settingsPanel.hidden);
+  });
+
+  document.addEventListener('click', e => {
+    if (!settingsPanel.hidden && !settingsWrap.contains(e.target)) {
+      setSettingsOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !settingsPanel.hidden) {
+      setSettingsOpen(false);
+      settingsButton.focus();
+    }
+  });
+
   /* PDF toggle */
 
   document.getElementById('pdfPreviewToggle').addEventListener('change', () => {
@@ -1412,6 +2423,20 @@
       const p = window.__PAPER_BY_ID__?.get?.(currentSelectedCard.getAttribute('data-absid'));
       if (p) setPreviewPaper(p);
     }
+  });
+
+  document.getElementById('previewPanelToggle').addEventListener('change', () => {
+    syncPreviewPanelVisibility();
+    saveSettings();
+  });
+
+  document.getElementById('pageSizeSelect').addEventListener('change', event => {
+    const nextSize = Number(event.target.value);
+    if (![12, 24, 48].includes(nextSize)) return;
+    pageSize = nextSize;
+    currentPage = 1;
+    saveSettings();
+    rerenderCurrentView();
   });
 
   /* Search */
@@ -1431,6 +2456,51 @@
     searchInput.focus();
   });
 
+  /* Advanced filters */
+
+  const filtersButton = document.getElementById('filtersButton');
+  const filterPanel = document.getElementById('filterPanel');
+
+  filtersButton.addEventListener('click', () => {
+    const open = filterPanel.hidden;
+    filterPanel.hidden = !open;
+    filtersButton.setAttribute('aria-expanded', String(open));
+  });
+
+  ['sortMode', 'categoryFilter', 'readingFilter', 'imageFilter'].forEach(id => {
+    document.getElementById(id).addEventListener('change', applyAdvancedFilters);
+  });
+
+  document.getElementById('resetFilters').addEventListener('click', () => {
+    sortMode = 'date-desc';
+    categoryFilter = 'all';
+    readingFilter = 'all';
+    imageFilter = 'all';
+    currentPage = 1;
+    syncAdvancedFilterControls();
+    saveSettings();
+    rerenderCurrentView();
+  });
+
+  /* Figure gallery */
+
+  document.getElementById('figureClose').addEventListener('click', closeFigureGallery);
+  document.getElementById('figurePrev').addEventListener('click', () => {
+    if (galleryIndex > 0) { galleryIndex--; updateFigureGallery(); }
+  });
+  document.getElementById('figureNext').addEventListener('click', () => {
+    if (galleryIndex < paperFigures(galleryPaper).length - 1) { galleryIndex++; updateFigureGallery(); }
+  });
+  document.getElementById('figureModal').addEventListener('click', e => {
+    if (e.target.id === 'figureModal') closeFigureGallery();
+  });
+  document.addEventListener('keydown', e => {
+    if (document.getElementById('figureModal').hidden) return;
+    if (e.key === 'Escape') closeFigureGallery();
+    if (e.key === 'ArrowLeft' && galleryIndex > 0) { galleryIndex--; updateFigureGallery(); }
+    if (e.key === 'ArrowRight' && galleryIndex < paperFigures(galleryPaper).length - 1) { galleryIndex++; updateFigureGallery(); }
+  });
+
   /* Back to top */
 
   const backToTopBtn = document.getElementById('backToTop');
@@ -1445,15 +2515,26 @@
 
   /* Init */
 
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('DOMContentLoaded', async () => {
     loadFavorites();
+    loadReadingStates();
 
     const saved = loadSettings();
+    if (saved) applySettings(saved);
 
+    const categorySelect = document.getElementById('categoryFilter');
+    for (const cat of CATEGORIES.slice(1)) {
+      const option = document.createElement('option');
+      option.value = cat.code;
+      option.textContent = cat.label;
+      categorySelect.appendChild(option);
+    }
+    syncAdvancedFilterControls();
     renderCategoryTabs();
 
-    let ymd = defaultArxivDate();
-    document.getElementById('day').value = ymd;
+    const latestCategory = SAVED_TAB_CODES.has(selectedCategory) ? 'astro-ph' : selectedCategory;
+    const latestPayload = await fetchLatestStatic(latestCategory);
+    document.getElementById('day').value = latestPayload?.date || defaultArxivDate();
 
     document.getElementById('day').addEventListener('change', function () {
       if (isWeekend(this.value)) {
@@ -1463,12 +2544,7 @@
       loadPapers();
     });
 
-    if (saved) {
-      applySettings(saved);
-      renderCategoryTabs();
-    }
-
-    setTimeout(loadPapers, 250);
+    loadPapers();
   });
 </script>
 </body>

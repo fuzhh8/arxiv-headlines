@@ -1,5 +1,5 @@
-import { writeFileSync, mkdirSync, readdirSync, unlinkSync } from 'fs';
-import { join, dirname } from 'path';
+import { writeFileSync, mkdirSync, readdirSync, unlinkSync, readFileSync } from 'fs';
+import { join, dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
 // ── Config ──────────────────────────────────────────────────────────────────
@@ -13,10 +13,12 @@ const CATEGORIES = [
   'astro-ph.SR',
 ];
 
-const MAX_CHUNK    = 200;   // arXiv API max IDs per request
 const KEEP_DAYS    = 180;   // days of history to retain
 const RETRY_MAX    = 3;     // retries per request
-const RETRY_DELAY  = 2000;  // ms between retries
+const RETRY_DELAY  = 5000;  // base delay for API throttling/backoff
+const USER_AGENT   = 'arxiv-headlines-bot/1.0 (https://github.com/fuzhh8/arxiv-headlines)';
+const THUMBNAIL_WORKERS = 2;
+const thumbnailCache = new Map();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_ROOT = join(__dirname, '..', 'data');
@@ -25,6 +27,27 @@ const DATA_ROOT = join(__dirname, '..', 'data');
 const pad2      = n  => String(n).padStart(2, '0');
 const sleep     = ms => new Promise(r => setTimeout(r, ms));
 const cleanText = s  => (s ?? '').replace(/\s+/g, ' ').trim();
+
+function decodeHtml(text) {
+  const named = {
+    amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' '
+  };
+
+  return (text ?? '')
+    .replace(/&#(x[0-9a-f]+|\d+);/gi, (_, value) => {
+      const codePoint = value[0].toLowerCase() === 'x'
+        ? parseInt(value.slice(1), 16)
+        : parseInt(value, 10);
+      return Number.isFinite(codePoint) ? String.fromCodePoint(codePoint) : _;
+    })
+    .replace(/&([a-z]+);/gi, (entity, name) => named[name.toLowerCase()] ?? entity);
+}
+
+function textFromHtml(html) {
+  return cleanText(decodeHtml(
+    (html ?? '').replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, ' ')
+  ));
+}
 
 function normalizeId(id) {
   return (id || '').trim().replace(/v\d+$/i, '');
@@ -57,13 +80,25 @@ function categoryToDir(code) {
 // ── Fetch with retry ─────────────────────────────────────────────────────────
 async function fetchWithRetry(url, options = {}, attempt = 0) {
   try {
-    const resp = await fetch(url, { ...options, signal: AbortSignal.timeout(30000) });
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const resp = await fetch(url, {
+      ...options,
+      headers: { 'User-Agent': USER_AGENT, ...options.headers },
+      signal: AbortSignal.timeout(30000)
+    });
+
+    if (!resp.ok) {
+      const error = new Error(`HTTP ${resp.status}`);
+      error.retryAfter = Number(resp.headers.get('retry-after')) || 0;
+      throw error;
+    }
+
     return resp;
   } catch (e) {
     if (attempt < RETRY_MAX - 1) {
       console.warn(`  ↻ Retry ${attempt + 1}/${RETRY_MAX - 1} for ${url.slice(0, 80)}…`);
-      await sleep(RETRY_DELAY * (attempt + 1));
+      const retryAfterMs = (Number(e.retryAfter) || 0) * 1000;
+      const backoff = Math.max(retryAfterMs, RETRY_DELAY * (attempt + 1));
+      await sleep(backoff);
       return fetchWithRetry(url, options, attempt + 1);
     }
     throw e;
@@ -77,7 +112,10 @@ function parseCatchupHtml(html) {
 
   // Split by <h3> tags
   const h3Pattern = /<h3[^>]*>([\s\S]*?)<\/h3>/gi;
-  const absPattern = /href="\/abs\/([^"?#]+)"/gi;
+  // arXiv currently emits links such as `href ="/abs/2609.10622"`.
+  // Allow whitespace around `=` and either quote style so harmless markup
+  // changes do not silently turn a full catchup page into an empty result.
+  const absPattern = /href\s*=\s*["']\/abs\/([^"'?#]+)["']/gi;
 
   // Find all h3 positions and their text
   const sections = [];
@@ -106,78 +144,141 @@ function parseCatchupHtml(html) {
   return out;
 }
 
-// ── Parse arXiv API XML ───────────────────────────────────────────────────────
-function parseArxivXml(xml) {
-  const entries = [];
-  const entryPattern = /<entry>([\s\S]*?)<\/entry>/g;
-  let em;
-  while ((em = entryPattern.exec(xml)) !== null) {
-    const block = em[1];
-    const get   = tag => {
-      const r = new RegExp(`<${tag}[^>]*>([\s\S]*?)<\/${tag}>`, 'i').exec(block);
-      return r ? cleanText(r[1]) : '';
-    };
-    const idUrl  = get('id');
-    const title  = get('title');
-    const summary = get('summary');
-    if (!idUrl || !title || !summary) continue;
+// ── Parse paper metadata embedded by catchup?abs=True ─────────────────────────
+function parseCatchupPapers(html, ymd) {
+  const map = new Map();
+  const entryPattern = /<dt\b[^>]*>([\s\S]*?)<\/dt>\s*<dd\b[^>]*>([\s\S]*?)<\/dd>/gi;
+  let entryMatch;
 
-    // Authors
+  while ((entryMatch = entryPattern.exec(html)) !== null) {
+    const heading = entryMatch[1];
+    const body = entryMatch[2];
+    const absMatch = heading.match(/href\s*=\s*["']\/abs\/([^"'?#]+)["']/i);
+    const htmlMatch = heading.match(/href\s*=\s*["'](https:\/\/arxiv\.org\/html\/[^"']+)["']/i);
+    const absId = normalizeId(absMatch?.[1]);
+    const htmlUrl = htmlMatch?.[1] ? decodeHtml(htmlMatch[1]) : null;
+    const titleMatch = body.match(/class\s*=\s*["'][^"']*\blist-title\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i);
+    const authorsMatch = body.match(/class\s*=\s*["'][^"']*\blist-authors\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i);
+    const subjectsMatch = body.match(/class\s*=\s*["'][^"']*\blist-subjects\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i);
+    const summaryMatch = body.match(/<p\b[^>]*class\s*=\s*["'][^"']*\bmathjax\b[^"']*["'][^>]*>([\s\S]*?)<\/p>/i);
+
+    const title = textFromHtml(titleMatch?.[1]).replace(/^Title:\s*/i, '');
+    const summary = textFromHtml(summaryMatch?.[1]);
+    if (!absId || !title || !summary) continue;
+
     const authors = [];
-    const authorPattern = /<name>([\s\S]*?)<\/name>/g;
-    let am2;
-    while ((am2 = authorPattern.exec(block)) !== null) authors.push(cleanText(am2[1]));
+    const authorPattern = /<a\b[^>]*>([\s\S]*?)<\/a>/gi;
+    let authorMatch;
+    while ((authorMatch = authorPattern.exec(authorsMatch?.[1] || '')) !== null) {
+      const author = textFromHtml(authorMatch[1]);
+      if (author) authors.push(author);
+    }
 
-    // Categories
-    const cats = [];
-    const catPattern = /<category[^>]+term="([^"]+)"/g;
-    let cm;
-    while ((cm = catPattern.exec(block)) !== null) cats.push(cm[1]);
+    const subjectText = textFromHtml(subjectsMatch?.[1]).replace(/^Subjects:\s*/i, '');
+    const categories = [...subjectText.matchAll(/\(([a-z-]+(?:\.[A-Z]+)?)\)/g)].map(match => match[1]);
 
-    // Dates
-    const published = get('published');
-    const updated   = get('updated');
-
-    entries.push({
-      absId:      extractIdFromAbsUrl(idUrl),
+    map.set(absId, {
+      absId,
       title,
       summary,
-      published:  published || null,
-      updated:    updated   || null,
-      link:       idUrl,
+      published: `${ymd}T00:00:00.000Z`,
+      updated: null,
+      link: `https://arxiv.org/abs/${absId}`,
+      htmlUrl,
       authors,
-      categories: cats,
+      categories
     });
   }
-  return entries;
+
+  return map;
 }
 
-// ── Fetch metadata for a list of IDs ─────────────────────────────────────────
-async function fetchMetaForIds(ids) {
-  const map = new Map();
-  const chunks = [];
-  for (let i = 0; i < ids.length; i += MAX_CHUNK)
-    chunks.push(ids.slice(i, i + MAX_CHUNK));
+function extractFigures(html, htmlUrl, limit = 8) {
+  const figurePattern = /<figure\b[^>]*>([\s\S]*?)<\/figure>/gi;
+  const figures = [];
+  const seen = new Set();
+  let figureMatch;
 
-  for (const chunk of chunks) {
-    const url = `https://export.arxiv.org/api/query?id_list=${encodeURIComponent(chunk.join(','))}&start=0&max_results=${chunk.length}`;
+  while ((figureMatch = figurePattern.exec(html)) !== null && figures.length < limit) {
+    const figure = figureMatch[1];
+    const imageMatch = figure.match(/<img\b(?=[^>]*\bltx_graphics\b)[^>]*\bsrc\s*=\s*["']([^"']+)["'][^>]*>/i);
+    if (!imageMatch) continue;
+
+    const captionMatch = figure.match(/<figcaption\b[^>]*>([\s\S]*?)<\/figcaption>/i);
+    const caption = textFromHtml(captionMatch?.[1]).replace(/^Figure\s+\d+[:.]?\s*/i, '');
+
     try {
-      const resp = await fetchWithRetry(url);
-      const xml  = await resp.text();
-      for (const p of parseArxivXml(xml))
-        if (p.absId) map.set(p.absId, p);
-    } catch (e) {
-      console.warn(`  ⚠ API chunk failed: ${e.message}`);
-    }
-    await sleep(500); // be polite to arXiv
+      const imageUrl = new URL(decodeHtml(imageMatch[1]), htmlUrl).href;
+      const parsed = new URL(imageUrl);
+      if (parsed.protocol !== 'https:' || parsed.hostname !== 'arxiv.org') continue;
+      if (seen.has(imageUrl)) continue;
+
+      seen.add(imageUrl);
+      figures.push({
+        url: imageUrl,
+        caption: (caption || `Figure ${figures.length + 1} from the paper`).slice(0, 2000)
+      });
+    } catch (_) {}
   }
-  return map;
+
+  return figures;
+}
+
+function extractFirstFigure(html, htmlUrl) {
+  const figures = extractFigures(html, htmlUrl, 8);
+  if (!figures.length) return null;
+  return {
+    figures,
+    thumbnailUrl: figures[0].url,
+    thumbnailAlt: figures[0].caption.slice(0, 300)
+  };
+}
+
+async function fetchPaperThumbnail(paper) {
+  if (!paper.htmlUrl) return null;
+  if (thumbnailCache.has(paper.absId)) return thumbnailCache.get(paper.absId);
+
+  const task = (async () => {
+    try {
+      const resp = await fetchWithRetry(paper.htmlUrl);
+      return extractFirstFigure(await resp.text(), paper.htmlUrl);
+    } catch (e) {
+      console.warn(`  ⚠ Thumbnail unavailable for ${paper.absId}: ${e.message}`);
+      return null;
+    }
+  })();
+
+  thumbnailCache.set(paper.absId, task);
+  return task;
+}
+
+async function enrichWithThumbnails(papers) {
+  const queue = [...papers.values()].filter(paper => paper.htmlUrl);
+  let cursor = 0;
+  let found = 0;
+
+  async function worker() {
+    while (cursor < queue.length) {
+      const paper = queue[cursor++];
+      const thumbnail = await fetchPaperThumbnail(paper);
+      if (thumbnail) {
+        Object.assign(paper, thumbnail);
+        found++;
+      }
+      await sleep(250);
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: Math.min(THUMBNAIL_WORKERS, queue.length) }, () => worker())
+  );
+  console.log(`  🖼 Thumbnails: ${found}/${queue.length} HTML papers`);
 }
 
 // ── Process one category for one date ────────────────────────────────────────
 async function fetchCategory(catCode, ymd) {
   console.log(`  📡 Fetching ${catCode} / ${ymd}`);
-  const url = `https://arxiv.org/catchup/${encodeURIComponent(catCode)}/${encodeURIComponent(ymd)}?abs=False`;
+  const url = `https://arxiv.org/catchup/${encodeURIComponent(catCode)}/${encodeURIComponent(ymd)}?abs=True`;
 
   let html;
   try {
@@ -195,14 +296,42 @@ async function fetchCategory(catCode, ymd) {
     ...idsBySection.repl,
   ])];
 
+  const declaredTotalMatch = html.match(/Total of\s+(\d+)\s+entr(?:y|ies)/i);
+  if (!declaredTotalMatch) {
+    throw new Error(`Invalid catchup response for ${catCode}/${ymd}: entry total not found`);
+  }
+
+  const declaredTotal = Number(declaredTotalMatch[1]);
+  if (declaredTotal > 0 && allIds.length === 0) {
+    throw new Error(
+      `Catchup parser found 0 IDs for ${catCode}/${ymd}, but arXiv reports ${declaredTotal} entries`
+    );
+  }
+
   if (allIds.length === 0) {
     console.log(`  ℹ No papers found for ${catCode}/${ymd}`);
-    return { category: catCode, date: ymd, counts: { new:0, cross:0, repl:0 }, papersBySection: { new:[], cross:[], repl:[] } };
+    return {
+      schemaVersion: 1,
+      status: 'ok',
+      source: 'arxiv-catchup',
+      category: catCode,
+      date: ymd,
+      generatedAt: new Date().toISOString(),
+      counts: { new:0, cross:0, repl:0 },
+      papersBySection: { new:[], cross:[], repl:[] }
+    };
   }
 
   console.log(`  📄 ${catCode}/${ymd}: new=${idsBySection.new.length} cross=${idsBySection.cross.length} repl=${idsBySection.repl.length}`);
 
-  const metaMap = await fetchMetaForIds(allIds);
+  const metaMap = parseCatchupPapers(html, ymd);
+  if (metaMap.size === 0) {
+    throw new Error(
+      `Catchup metadata parser returned 0 of ${allIds.length} papers for ${catCode}/${ymd}; refusing to overwrite cached data`
+    );
+  }
+
+  await enrichWithThumbnails(metaMap);
 
   const papersBySection = { new: [], cross: [], repl: [] };
   for (const sec of ['new', 'cross', 'repl']) {
@@ -213,6 +342,9 @@ async function fetchCategory(catCode, ymd) {
   }
 
   return {
+    schemaVersion:    1,
+    status:           'ok',
+    source:           'arxiv-catchup',
     category:        catCode,
     date:            ymd,
     generatedAt:     new Date().toISOString(),
@@ -246,32 +378,68 @@ function pruneOldFiles(dir, keepDays) {
   if (pruned > 0) console.log(`  🗑 Pruned ${pruned} old file(s) from ${dir}`);
 }
 
+function validateFetchTarget(catCode, ymd) {
+  if (!CATEGORIES.includes(catCode)) {
+    throw new Error(`Unsupported arXiv category: ${catCode}`);
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(ymd)) {
+    throw new Error('Date must use YYYY-MM-DD format');
+  }
+
+  const parsed = new Date(`${ymd}T00:00:00Z`);
+  if (Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== ymd) {
+    throw new Error(`Invalid calendar date: ${ymd}`);
+  }
+}
+
+function shouldUpdateLatest(latestPath, ymd) {
+  try {
+    const current = JSON.parse(readFileSync(latestPath, 'utf8'));
+    return !current?.date || ymd >= current.date;
+  } catch (_) {
+    return true;
+  }
+}
+
+async function fetchAndStoreCategory(catCode, ymd, options = {}) {
+  validateFetchTarget(catCode, ymd);
+
+  const dataRoot = options.dataRoot || DATA_ROOT;
+  const outDir = join(dataRoot, categoryToDir(catCode));
+  mkdirSync(outDir, { recursive: true });
+
+  const result = await fetchCategory(catCode, ymd);
+  if (!result) {
+    throw new Error(`arXiv did not return data for ${catCode}/${ymd}`);
+  }
+
+  const dated = join(outDir, `${ymd}.json`);
+  writeFileSync(dated, JSON.stringify(result, null, 2), 'utf8');
+  console.log(`  ✅ Saved ${dated}`);
+
+  const latest = join(outDir, 'latest.json');
+  if (options.updateLatest !== false && shouldUpdateLatest(latest, ymd)) {
+    writeFileSync(latest, JSON.stringify(result, null, 2), 'utf8');
+    console.log('  ✅ Updated latest.json');
+  } else if (options.updateLatest !== false) {
+    console.log('  ℹ Kept newer latest.json');
+  }
+
+  if (options.prune !== false) pruneOldFiles(outDir, KEEP_DAYS);
+  return result;
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 async function main() {
-  let ymd = todayYmd();
+  let ymd = process.argv[2] || todayYmd();
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(ymd)) {
+    throw new Error('Optional date must use YYYY-MM-DD format');
+  }
   ymd = prevWeekday(ymd);
   console.log(`\n🚀 arXiv fetch started — target date: ${ymd}\n`);
 
   for (const catCode of CATEGORIES) {
-    const dirName = categoryToDir(catCode);
-    const outDir  = join(DATA_ROOT, dirName);
-    mkdirSync(outDir, { recursive: true });
-
-    const result = await fetchCategory(catCode, ymd);
-    if (!result) continue;
-
-    // Write dated file
-    const dated = join(outDir, `${ymd}.json`);
-    writeFileSync(dated, JSON.stringify(result, null, 2), 'utf8');
-    console.log(`  ✅ Saved ${dated}`);
-
-    // Write latest.json (symlink-free copy)
-    const latest = join(outDir, 'latest.json');
-    writeFileSync(latest, JSON.stringify(result, null, 2), 'utf8');
-    console.log(`  ✅ Updated latest.json`);
-
-    // Prune old files
-    pruneOldFiles(outDir, KEEP_DAYS);
+    await fetchAndStoreCategory(catCode, ymd);
 
     await sleep(1000); // rate-limit between categories
   }
@@ -279,4 +447,18 @@ async function main() {
   console.log('\n✨ All done!\n');
 }
 
-main().catch(e => { console.error('Fatal:', e); process.exit(1); });
+export {
+  CATEGORIES,
+  categoryToDir,
+  fetchAndStoreCategory,
+  parseCatchupHtml,
+  parseCatchupPapers,
+  extractFigures,
+  extractFirstFigure,
+  validateFetchTarget
+};
+
+const isMain = process.argv[1] && resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url));
+if (isMain) {
+  main().catch(e => { console.error('Fatal:', e); process.exit(1); });
+}

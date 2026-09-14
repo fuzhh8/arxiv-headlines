@@ -1,14 +1,676 @@
 {
+  "schemaVersion": 1,
+  "status": "ok",
+  "source": "arxiv-catchup",
   "category": "astro-ph.EP",
   "date": "2026-09-11",
+  "generatedAt": "2026-09-14T13:30:05.177Z",
   "counts": {
-    "new": 0,
-    "cross": 0,
-    "repl": 0
+    "new": 8,
+    "cross": 4,
+    "repl": 3
   },
   "papersBySection": {
-    "new": [],
-    "cross": [],
-    "repl": []
+    "new": [
+      {
+        "absId": "2609.10688",
+        "title": "Energy deposition in planetary and exoplanetary atmospheres induced by cosmic rays",
+        "summary": "Cosmic rays can significantly alter the abundances of certain species in the upper layers of planetary atmospheres, especially in terms of their biosignatures. To fully understand the extent of this effect, it is essential to accurately model the interactions of cosmic rays with planetary magnetic fields. We used the CosmicTransmutation code to study the effect of a planetary magnetic field on the flux of galactic cosmic rays and stellar energetic particles. We found that both particle sources are significantly affected by magnetic fields, even though the effects are different due to the varying energy ranges that characterize each source. The stellar energetic particle energy flux is significantly higher for an Earth-like planet with no magnetic field, but with a magnetic field of 30\\,$\\mu$T or higher, the energy flux of the two sources becomes comparable. We find that the atmospheric pressures the cosmic rays reach are significantly lower than those found in previous studies using simpler models and that the effect of the atmospheric composition on this outcome is small. We found similar results using the model for the exoplanet K2-18b, even though the radius is significantly larger than Earth's. Because the two cosmic ray sources cover different energy ranges and are affected by the magnetic field in different ways as a result, both sources should be considered. Future studies should focus on combining an accurate modelling procedure of the interaction between cosmic rays and planetary magnetic fields with atmospheric chemistry models. This will require general circulation models to capture the latitudinal and longitudinal dependencies in full.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.10688",
+        "htmlUrl": "https://arxiv.org/html/2609.10688v1",
+        "authors": [
+          "Jesse Polman",
+          "Ingo Leya"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.HE"
+        ],
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.10695",
+        "title": "Sorting a mess I: Addressing velocity-axis correlation of cross-correlation functions. A census of atomic and ionised species in KELT-9b's atmosphere",
+        "summary": "Ultra-hot Jupiters (UHJs) are the most extreme class of close-in gas giants. We combine 13 transit observations of KELT-9b from six high-resolution spectrographs spanning 316-960 nm to conduct a census of atomic and ionised species in its atmosphere using cross-correlation. We introduce an agnostic strategy to mitigate velocity-axis correlation bias in parameter uncertainties. A forward model of the cross-correlation function (CCF) and a Monte Carlo bootstrap of flux uncertainties measure the CCF-derived velocity profiles of individual species and assess their time dependence. The stellar reference frame is determined, yielding Vsys = -17.99 +/- 0.04 km s^-1 and v sin i = 110.54 +/- 0.05 km s^-1. All previously reported species are recovered except Tb II; the combined analysis detects 29 species, including C I, Si I, K I, V II, Co I, Zr II, La II, Pr II, and Nd II. All 29 recovered species exceed the conventional 5 sigma threshold in the bootstrap Mahalanobis significance test. The collective Doppler shifts show a blueshift of Delta Voffset = -8.02 +/- 0.17 km s^-1 relative to the stellar rest frame, indicating a net day-to-night wind, with no explicit time dependence when all species are homogenised. These results provide a catalogue of detections and retrieved Doppler parameters for a companion study of KELT-9b.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.10695",
+        "htmlUrl": "https://arxiv.org/html/2609.10695v1",
+        "authors": [
+          "Nicholas W. Borsato",
+          "Brian Thorsbro",
+          "Jens Hoeijmakers",
+          "Daniel B. Zucker",
+          "Stefan Pelletier",
+          "Bibiana Prinoth"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.10695v1/DE_cross_correlation_detections_part1.png",
+            "caption": ": Velocity–velocity ( K p K_{p} , V sys V_{\\rm sys} ) maps of the gas species analysed in this study are shown here. Each panel presents the two-dimensional cross-correlation function (CCF), where colours denote signal strength in standard deviation units. Dashed lines mark the expected orbital velocity and systemic velocity of the system and planet. The species are arranged in order of increasing atomic number. For readability, the detections are split across two figure panels; this panel shows H I, C I, O I, Na I, Mg I, Si I, K I, Ca I, Ca II, Sc II, Ti I, Ti II, V I, V II, Cr I, and Cr II."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10695v1/DE_cross_correlation_detections_part2.png",
+            "caption": ": Continued velocity–velocity ( K p K_{p} , V sys V_{\\rm sys} ) maps for the remaining gas species analysed in this study. The plotting conventions are the same as in Fig. 4 . This panel shows Mn I, Fe I, Fe II, Co I, Ni I, Ni II, Sr II, Y II, Zr II, Ba II, La II, Pr II, and Nd II."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10695v1/CR_corner_plot_of_fits.png",
+            "caption": ": Corner plot showing the distribution and pairwise covariances of best-fit parameters retrieved from the full census of statistically significant species detections. The parameters include the constant and time-dependent amplitudes ( A 0 A_{0} , A 1 A_{1} ), systemic velocity ( v sys v_{\\text{sys}} ), orbital semi-amplitude and its phase variation ( K p K_{p} , K p , 1 K_{p,1} ), and Gaussian widths ( σ 0 \\sigma_{0} , σ 1 \\sigma_{1} ). One-dimensional histograms along the diagonal show the distribution of each parameter, while the off-diagonal panels reveal correlations across the ensemble of species. This figure summarises the diversity of line profiles and kinematic structures observed across the atmosphere of KELT-9b."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10695v1/Ref_3_2_3_CARMENES.png",
+            "caption": ": CARMENES masking diagnostic for the representative high masked-pixel fraction case. Panel A shows the wavelength coverage of each CARMENES VIS order for the second CARMENES night, which has the largest CARMENES masked fraction in Table 2 . Panels B–E show representative order-level examples; the left panels show the average extracted flux counts for the selected order, while the right panels show the corresponding exposure-by-exposure flux counts."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10695v1/Ref_3_2_3_HIRES.png",
+            "caption": ": HIRES masking diagnostic and representative examples of the order-level structures discussed in Sect. 2.5 . Panel A shows the wavelength coverage of each HIRES order, with masked regions highlighted in red. Panels B–E show representative order-level examples; the left panels show the average extracted flux counts for the selected order, while the right panels show the corresponding exposure-by-exposure flux counts."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10695v1/CL_cleaning_steps_applied.png",
+            "caption": ": A step-by-step illustration of the CCF cleaning pipeline applied to one night of HARPS-N observations of KELT-9b. Panels (A)–(J) show: (A) initial raw CCFs; (B) normalised CCFs; (C) low-frequency structure removed by the high-pass filter; (D) high-pass–filtered CCFs; (E) final flux-weighted CCFs; (F) StarRotator Doppler-shadow model; (G) StarRotator -subtracted CCFs; (H) planetary mask; (I) vertical detrending matrix; and (J) final cleaned CCFs. Panels (B)–(J) are shown in units of σ \\sigma , while Panel (A) is shown in flux counts. The shaded gray regions in Panels E and J highlight the excluded planet–Rossiter–McLaughlin overlap phase interval ( − 0.015 ≤ ϕ ≤ 0.001 -0.015\\leq\\phi\\leq 0.001 ). Absorption is shown in blue and emission in green."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10695v1/REF_IN_combined_negative_Kp_cleaning.png",
+            "caption": ": Negative- K p K_{p} model-injection control for Fe I. The dashed, dotted, and dash-dotted lines mark the injected negative- K p K_{p} track ( K p = − 234 K_{p}=-234 km s -1 ), the expected positive- K p K_{p} track, and the systemic velocity, respectively."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.10695v1/DE_cross_correlation_detections_part1.png",
+        "thumbnailAlt": ": Velocity–velocity ( K p K_{p} , V sys V_{\\rm sys} ) maps of the gas species analysed in this study are shown here. Each panel presents the two-dimensional cross-correlation function (CCF), where colours denote signal strength in standard deviation units. Dashed lines mark the expected orbital velo",
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.10719",
+        "title": "WASP-43b TESS Phase Curve Mapping: Evidence for a Hot Interior",
+        "summary": "Phase-curve mapping probes various atmospheric properties depending on wavelength: thermal phase curves are dominated by atmospheric emission, while visible and near-infrared phase curves include reflected light. The measured planetary phase curve offset--the longitudinal offset of the hemisphere of peak brightness from the substellar point--is therefore sensitive to differing atmospheric processes in emission-dominated vs. reflection-dominated bands. In particular, planets with partial western-dayside reflective cloud coverage show a westward reflected-light phase-curve offset relative to the thermal wavelengths. In this work, we analyze five sectors of TESS phase curve observations of the hot Jupiter WASP-43b and compare to previous published multi-band analyses to investigate dayside cloud coverage. We measure a mid-eclipse depth of 130 $\\pm$ 34 ppm, indicating excess TESS planetary brightness above expectations based on observed and modeled thermal emission. Attributing this excess flux to reflection, we estimate a low geometric albedo of $A_g$ $\\approx$ 0.05 - 0.10. These findings support previous conclusions that WASP-43b lacks any significant cloud coverage on its dayside. Phase-curve mapping reveals a large eastward phase curve offset of 44 $\\pm$ 18 degrees, significantly eastward of offsets measured at longer wavelengths with JWST, providing evidence for a cloud-free dayside. Both the detection of excess emission in the TESS band and the large measured eastward phase-curve offset support the conclusion that WASP-43b has a hot deep atmosphere that is probed at short wavelengths.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.10719",
+        "htmlUrl": "https://arxiv.org/html/2609.10719v1",
+        "authors": [
+          "Maura Lally",
+          "Ryan C. Challener",
+          "Elspeth Lee",
+          "Nikole Lewis"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.10719v1/figs/pre-process1-waterfall.png",
+            "caption": "Data processing steps illustrated for each TESS sector, with an offset applied to sectors 35, 62, 89 and 100 for visibility. In this schematic, all data flagged by the TESS PDCSAP pipeline have been removed. Left: PDCSAP TESS data is shown in gray. In-transit data is removed, and data is split into sub-sections to avoid gaps longer than 3 transit durations. Sub-sections shorter than one orbital period are discarded (this happens in one case, shown in sector 35). Each subset of remaining data (shown in color) is fit with a cubic spline with a knot spacing equal to one orbital period (black). Right: TESS data (as processed in the left panel) with the spline fit removed is shown in gray. 3 ​ σ 3\\sigma outliers of this spline-flattened data are removed (results shown in color). Spline fitting and sigma-clipping steps are iterated until no outliers are identified."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10719v1/figs/lightcurve_gcm5.png",
+            "caption": "Phase curve ThERESA fit result. Black points show the TESS data, phase folded and binned to 50 data points. Red line shows the N = 2 N=2 model fit (reduced χ 2 = 1.008 \\chi^{2}=1.008 ) .TESS wavelength phase curves are also shown for the three GCM scenarios described in Section III . This direct comparison of our observed phase curve to a sample of emission-only GCMs shows the clear presence of excess flux in the TESS band relative to expectations from modeled emission."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10719v1/figs/map.png",
+            "caption": "Top: Map of our N = 2 N=2 fit. Vertical black dotted line shows the longitude of peak brightness. Note that while this map shows latitude as well, our N = 2 N=2 fit is not sensitive to latitudinal variations, only longitudinal offsets. Therefore, the latitudinal stucture shown in the figure is drawn from the spherical harmonic model fitting, and is not driven by the data. Bottom: Latitudinally averaged flux of the planet. The blue curves correspond to 100 draws from our MCMC posteriors of our N = 2 N=2 map. The red curve corresponds to the median model solution. Shown in black is the longitude of peak flux, with 1 σ \\sigma uncertainty shown as the gray shaded region. We present a 3 ​ σ 3\\sigma detection of an eastward peak flux offset of 44 ± 18 44\\pm 18 degrees."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10719v1/figs/literature_vals.png",
+            "caption": "Wavelength dependence of WASP-43b peak flux offsets, with comparisons to previous analyses using data from TESS [ 43 ] , HST [ 53 ] , Spitzer [ 54 , 35 , 36 , 34 ] , MIRI [ 2 ] , and NIRSpec [ 8 ] . All positive offsets are east of the substellar point. The strong wavelength dependence of the peak flux offset, with lower wavelengths showing higher offsets, indicates sensitivity to differing dynamical processes across vertical layers of the atmosphere."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.10719v1/figs/pre-process1-waterfall.png",
+        "thumbnailAlt": "Data processing steps illustrated for each TESS sector, with an offset applied to sectors 35, 62, 89 and 100 for visibility. In this schematic, all data flagged by the TESS PDCSAP pipeline have been removed. Left: PDCSAP TESS data is shown in gray. In-transit data is removed, and data is split into ",
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.10809",
+        "title": "Fast and Furious: Long-term orbit integrations with collocation integrator Lobbie",
+        "summary": "Efficient and accurate numerical integration methods are fundamental to studying long-term solar system dynamics, where numerical errors can accumulate over billions of orbital periods. In this work, we investigate the performance of our modification of Lobbie, a Lobatto collocation integrator for long-term simulations of the Solar System. We compare Lobbie against the widely used WHFast symplectic integrator and the high-order adaptive collocation integrator IAS15 implementations in the Rebound package. The performance of the integrator is evaluated using five benchmark problems: a circular two-body orbit integrated over 100 Myrs, two-body orbits with eccentricities up to 1-10^{-6} to test the adaptive step size control during repeated close encounters, the full eight-planet Solar System integrated over 100 Myrs, the four giant planets integrated over 10 Gyrs, and the eight-planet Solar System together with 50 asteroids on Aten-like orbits integrated over 1Myr to test the integrator's consistency in a chaotic, close-encounter-rich environment. Across all tests, Lobbie demonstrates excellent long-term stability and competitive computational performance. For full Solar System integrations, Lobbie achieves relative energy conservation at the level of 10^{-14} while outperforming IAS15 in computational efficiency and approaching the speed of WHFast at comparable accuracy. In the Solar System plus asteroids test, Lobbie also keeps different realizations of Jupiter's orbit consistent with each other to within about 1.5 km after 1 Myr of integration, two orders of magnitude better than IAS15, being twice faster. Our results demonstrate that Lobbie provides a powerful universal alternative to traditional symplectic mappings or Gauss-Radau collocation methods for long-term dynamical simulations in celestial mechanics.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.10809",
+        "htmlUrl": "https://arxiv.org/html/2609.10809v1",
+        "authors": [
+          "Dmitrii E. Vavilov",
+          "Siegfried Eggl",
+          "Sarah Greenstreet"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.10850",
+        "title": "Constraining Tidal Migration with the Hot Jupiter Population",
+        "summary": "Hot Jupiters with orbital periods shorter than a few days have probably been affected by tidal orbital migration. We develop an analytical framework for constraining tidal migration from the present-day hot Jupiter period distribution, taking into account the uncertain rate and period distribution of hot Jupiters produced by mechanisms such as high-eccentricity migration or disk-driven migration. Assuming the tidal migration timescale is proportional to $P^{\\chi_\\tau}$, solutions with $\\chi_\\tau \\simeq 3, 1.7,$ and 5.6 are all compatible with the present-day period distribution. The $\\chi_\\tau \\simeq 3$ solution is consistent with equilibrium tides with suppression of dissipation at short periods, and implies that newly circularized hot Jupiters have periods concentrated near $3-4$ days, as predicted in some high-eccentricity migration models. The $\\chi_\\tau \\simeq 1.7$ solution is also compatible with the $3-4$ day peak but has no clear counterpart in existing tidal theories and is more finely tuned. The $\\chi_\\tau \\simeq 5.6$ solution is compatible with enhanced short-period equilibrium tidal dissipation or weakly nonlinear gravity-wave dissipation, but requires circularization at unexpectedly short periods. Thus, we find the model with $\\chi_\\tau \\simeq 3$ most appealing. Transit timing of individual systems and observational constraints on the rate of hot Jupiter engulfment provide additional constraints, which are presently inconclusive but should improve with future data. Improved measurements of the occurrence of short-period planets as a function of planet mass and system age could also help to sharpen the constraints on tidal migration.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.10850",
+        "htmlUrl": "https://arxiv.org/html/2609.10850v1",
+        "authors": [
+          "Linhao Ma",
+          "Yubo Su",
+          "Samuel W. Yee",
+          "Caleb Lammers",
+          "Eliot Quataert",
+          "Joshua N. Winn"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.10850v1/power_law_s_evolve.png",
+            "caption": "Numerical solutions of the log-space planet number density n ~ = P ​ n ​ ( P , t ) \\tilde{n}=Pn(P,t) for different values of P mig / P cut P_{\\mathrm{mig}}/P_{\\mathrm{cut}} , assuming a tidal migration timescale proportional to P χ τ P^{\\chi_{\\tau}} and a power-law source function proportional to P χ S P^{\\chi_{S}} with a lower truncation at P cut P_{\\mathrm{cut}} (Equation 9 ). P mig P_{\\mathrm{mig}} is the orbital period below which tidal migration has substantially modified the population at time t t . When expressed in terms of P / P cut P/P_{\\mathrm{cut}} , the shape of n ~ \\tilde{n} is solely determined by P mig / P cut P_{\\mathrm{mig}}/P_{\\mathrm{cut}} , which increases with time. The left panel shows the case χ S < − 1 \\chi_{S}<-1 , with an inset panel showing more detail where 0.5 < P / P cut < 2 0.5<P/P_{\\mathrm{cut}}<2 . The right panel shows the case χ S ≥ − 1 \\chi_{S}\\geq-1 . When P mig ≪ P cut P_{\\mathrm{mig}}\\ll P_{\\mathrm{cut}} (gold curves), hot Jupiters are generated beyond the period where migration is significant, hence the number density resembles the source function integrated over time. When P mig ≈ P cut P_{\\mathrm{mig}}\\approx P_{\\mathrm{cut}} (dark brown curves, more easily seen in the inset panel), some planets that are sourced just above the truncation period P cut P_{\\mathrm{cut}} migrate to shorter periods, creating a steep and non-power-law drop in number density toward shorter periods. When P mig ≫ P cut P_{\\mathrm{mig}}\\gg P_{\\mathrm{cut}} (blue curves), planets migrate significantly from a wider range of initial periods. The number density develops into a broken power-law function with two or three zones, depending on whether χ S < − 1 \\chi_{S}<-1 or χ S ≳ − 1 \\chi_{S}\\gtrsim-1 . The power-law indices are generally linear combinations of χ τ \\chi_{\\tau} and χ S \\chi_{S} , as labeled near the curves and derived in Appendix C.2.1 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10850v1/corner_all_1.png",
+            "caption": "Corner plots showing the MCMC posteriors. The quoted parameter ranges correspond to the 16th, 50th, and 84th percentiles. The maximum-likelihood parameters are identified with colored open circles, horizontal lines, and vertical lines. All three solutions yield acceptable χ 2 \\chi^{2} values. Solution 1 gives only a lower limit on P mig P_{\\rm mig} ; the posterior extends to the imposed cutoff of 10 ​ days 10\\;\\mathrm{days} . In solution 2, χ τ \\chi_{\\tau} is not well constrained, and the constraint P cut ≈ P mig P_{\\rm cut}\\approx P_{\\rm mig} is visible as a correlation in the 2-d posterior. In solution 3, P cut P_{\\rm cut} is not well constrained; the posterior extends to the imposed cutoff of 0.4 ​ days 0.4\\;\\mathrm{days} ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.10850v1/power_law_s_evolve.png",
+        "thumbnailAlt": "Numerical solutions of the log-space planet number density n ~ = P ​ n ​ ( P , t ) \\tilde{n}=Pn(P,t) for different values of P mig / P cut P_{\\mathrm{mig}}/P_{\\mathrm{cut}} , assuming a tidal migration timescale proportional to P χ τ P^{\\chi_{\\tau}} and a power-law source function proportional to P ",
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.11453",
+        "title": "Lava Tube Exploration with LunarLeaper",
+        "summary": "Lunar pits, some of which are interpreted as collapse features into underlying lava tubes, expose otherwise inaccessible stratigraphy and may provide entry points to subsurface voids that preserve records of lunar volcanism and offer potential sites for future human exploration. We synthesize the current state of knowledge on lunar pits and lava tubes, covering their morphological characteristics, classification, proposed formation mechanisms, mechanical stability, and detection from orbit. We then review the open science questions that pit and pit-wall investigation is uniquely placed to address, spanning the volcanic stratigraphy of the lunar maria, the structure and lateral variability of the regolith, and the dimensions and accessibility of subsurface conduits. To evaluate how these questions can be tackled in situ, we assess the feasibility and expected performance of geophysical and remote-sensing investigations for subsurface voids and surface exposures, mainly focusing on gravity measurements, ground-penetrating radar, high-resolution imaging, and spectroscopy. Building on this, we present LunarLeaper, a small legged robot mission concept combining a gravimeter, ground-penetrating radar, high-resolution imager, spectrometer, and leg-based geomechanical experiments to deliver the first in situ investigation of a mare pit. The concept targets the Marius Hills Pit and its associated rille, with a mobility architecture optimized for the rugged terrain encountered at pit edges and funnel slopes.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.11453",
+        "htmlUrl": "https://arxiv.org/html/2609.11453v1",
+        "authors": [
+          "Anna Mittelholz",
+          "Simon C. Stähler",
+          "Valentin T. Bickel",
+          "Jordan Aaron",
+          "Aurelie Cocheril",
+          "Alessandro Ghirotto",
+          "Matthias Grott",
+          "Svein-Erik Hamran",
+          "Ozgur Karaketin",
+          "Alessandro Maturilli",
+          "Birgit Ritter",
+          "Alexis Shakas"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.11453v1/Figures/pit.png",
+            "caption": "Oblique orbital images taken of exposed pit walls of (a+b) Mare Tranquillitatis Pit, (c) Mare Ingenii Pit and (d) Marius Hills Pit; key morphological characteristics of pits are highlighted. (b) shows mapping of individual layers and their approximate thickness in meters. Modified from Robinson et al. (2012) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11453v1/Pits_Overview.png",
+            "caption": "The global distribution of known pits, a total of 279 pits from Wagner, R V and Robinson (2021) with the updated selection of 5 highland and 16 mare pits mapped by Wagner and Robinson (2022) , plotted on a global LRO WAC basemap; mare regions are highlighted in red. Note that many pits are directly co-located, leading to overlapping markers on the map."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11453v1/Quickmap_MHP.png",
+            "caption": "(a) The Marius Hills Pit and its surroundings including the 10s of km long rille structure. The image is a LRO WAC / NAC mosaic overlain by the dynamic Terrain Height DEM from quickmap. Transects across the pit are plotted in (b) according to colors in (a). They show demeaned topography centered at their minimum value. (c+d) Zoom-in on the pit where (c) the slope map highlights the rille structure. (d) LRO WAC / NAC mosaic. Note that the circles in a,c,d show a 500 m radius circle centered on the Marius Hills Pit."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11453v1/Figures/DiffParametersV2_new.png",
+            "caption": "Gravity simulation of a tube with different horizontal diameters “W”, depths to ceiling “d”, vertical diameters “H”, and host rock densities “ ρ \\rho ”. Default values are shown at the top of the figure. We show the gravity responses δ ​ g z \\delta g_{z} as a function of varying (a) horizontal diameters, (b) depths, (c) vertical diameters and (d) densities."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11453v1/Figures/HMC_gravmagLL.png",
+            "caption": "Selected model and data at iteration 9820 of 10000 from the 2D joint inversion of gravity and magnetic anomaly data collected in the “Cueva de Los Naturalistas”, Lanzarote ( Ghirotto et al., 2026 ) . (a) Magnetic anomaly data (black), calculated responses from the model at the selected iteration (red) and the starting mode (orange), respectively. (b) The same as a) but for gravity data. (c) Polygonal bodies: the polygonal cross-section traced along the 2D data profile of the lava tube serving as reference model (black), obtained via a Laser Scanner; note that this is the only cave and the additional small anomalies on the right side of the panels (a)-(b) are from local higher porosity and lower magnetization of basaltic rocks. The starting models are represented by the central prominent lava tube and the aforementioned stratigraphic heterogeneity (orange); the model polygonal bodies at the selected iteration (red). (d) Position of the polygons across the iterations during (cyan) and after (red) the burn-in phase (i.e., initial 500 iterations). (e) Probability of each horizontal diameter explored during the inversion. The highest probable values range between 15 and 17 m and the actual value measured is ∼ \\sim 15 m."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11453v1/Figures/LunarLeaper_GPR_figure.png",
+            "caption": "Simulating the electromagnetic wave propagation for the Lunar Leaper antenna. a) The conceptual model used to run the simulations, along with a snapshot of the electromagnetic field with the rover at roughly the middle of its trajectory. b) The \"raw\" simulated data. Here, we only applied a linear time gain with an exponent of 2 to make late arrivals visible. The insert shows an A-scan along the rover’s path. c) The post-processed and migrated data. d) A power comparison between the two simulations, showcasing the increased signal obtained when the antenna is closer to the ground. Note that the rover’s trajectory for the simulation, and hence the GPR profiles, ends at the brink of the pit (where the \"regolith\" arrow points)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11453v1/LL_camera_view.png",
+            "caption": "Graphic impression of LunarLeaper observing the near-vertical stratigraphic column of a pit. Not to scale."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11453v1/mSpec.png",
+            "caption": "Left: Perspective view of a CAD model of the Fabry-Perot Spectrometer. Right: Cut view of the spectrometer showing (from left to right) the baffle and lens barrel (black), germanium lens (yellow), order selection filter (dark red), Fabry-Perot MEMS interferometer (cyan) and thermopile detector (light brown)."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.11453v1/Figures/pit.png",
+        "thumbnailAlt": "Oblique orbital images taken of exposed pit walls of (a+b) Mare Tranquillitatis Pit, (c) Mare Ingenii Pit and (d) Marius Hills Pit; key morphological characteristics of pits are highlighted. (b) shows mapping of individual layers and their approximate thickness in meters. Modified from Robinson et a",
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.11798",
+        "title": "Planetary Accretion Is Less Frequent in Wide Binaries: Evidence from Metal-Enriched White Dwarfs in DESI DR1",
+        "summary": "Binary stars are common in the Galaxy, and understanding how stellar binarity influences the formation and evolution of planetary systems is an active area of research. In this study, we use metal-enriched white dwarfs in wide binaries as tracers of long-lived planetary systems. With Data Release 1 from the Dark Energy Spectroscopic Instrument (DESI), we find that the fraction of cool metal-enriched white dwarfs in wide binaries is 9.8\\,$\\pm$\\,2.1\\%, significantly lower (4.7\\,$\\sigma$) than the 20.5\\,$\\pm$\\,0.9\\% in a control sample of single systems. Furthermore, we identify a tentative dependence of metal enrichment on projected separation and white dwarf effective temperature, where enrichment fraction decreases at smaller separations and lower temperatures. These findings indicate that, compared to single stars, binary systems either start with smaller initial planetary reservoirs due to suppressed planetesimal formation or undergo more rapid depletion of planetary material during the initial part of the white dwarf stage.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.11798",
+        "htmlUrl": "https://arxiv.org/html/2609.11798v1",
+        "authors": [
+          "Siyi Xu",
+          "Laura. K. Rogers",
+          "Joan Najita",
+          "Boris T. Gänsicke",
+          "Paula Izquierdo",
+          "Sergey E. Koposov",
+          "Christopher J. Manser",
+          "Andrew Swan",
+          "Sandford Nathan",
+          "Wang Wenting",
+          "J. Aguilar",
+          "S. Ahlen",
+          "C. Allende Prieto",
+          "D. Bianchi",
+          "D. Brooks",
+          "T. Claybaugh",
+          "A. de la Macorra",
+          "J. E. Forero-Romero",
+          "Satya Gontcho A Gontcho",
+          "G. Gutierrez",
+          "R. Joyce",
+          "M. Landriau",
+          "L. Le Guillou",
+          "A. Meisner",
+          "R. Miquel",
+          "W. J. Percival",
+          "F. Prada",
+          "I. Pérez-Ràfols",
+          "G. Rossi",
+          "E. Sanchez",
+          "D. Schlegel",
+          "J. Silber",
+          "G. Tarlé",
+          "B. A. Weaver",
+          "R. Zhou"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.11798v1/GG_4_DR1_Plot_HR_Diagram.png",
+            "caption": "Gaia HR diagram of cool helium-dominated white dwarfs (WD) and their binary companion (cmp). For the white dwarf–white dwarf binaries, we color code the one with a DESI spectrum as light blue, and the other without a DESI spectrum as orange. The metal-enriched systems are shown in darker colors and are connected to their companions by lines."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11798v1/GG_4_DR1_Plot_BinaryComp_phot_g_mean_mag_WD.png",
+            "caption": "Cumulative distributions of properties for metal-enriched (in pink) and non-enriched (in yellow) wide binary systems. The result of the KS test is listed in each panel and the two samples are statistically indistinguishable. The parameters include the Gaia apparent G magnitude of the white dwarfs (D=0.323, p=0.029), the signal-to-noise ratio in the DESI blue arm (D=0.097, p=0.986), white dwarf temperature (D=0.209, p=0.331), surface gravity (D=0.257, p=0.137), projected separation (D=0.226, p=0.247), and the BP-RP color of the companions (D=0.143, p=0.776)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11798v1/GG_4_DR1_Plot_BinaryCompB_phot_g_mean_mag_WD.png",
+            "caption": "Cumulative distributions of metal-enriched white dwarfs in wide binaries (in pink) and single systems (in green). The KS test results are shown in each panel. The parameters include Gaia apparent G magnitude (D=0.197, p=0.361), the signal-to-noise ration in the DESI blue arm (D=0.149, p=0.707), white dwarf temperature (D=0.094, p=0.987), and surface gravity (D=0.218, p=0.253). These two samples are statistically indistinguishable in these parameters."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11798v1/GG_4c_sep_log.png",
+            "caption": "Enrichment fraction in wide binaries as a function of projected separation. The fractions are 4/81 (100–1,000 AU), 15/121 (1,000–10,000 AU), and 2/15 ( > > 10,000 AU). The enrichment fraction of single white dwarfs is shown as the grey shaded area. The number of white dwarfs in each binary separation bin is listed in the figure. White dwarfs in wide binaries have a lower enrichment fraction compared to their single star counterparts. Furthermore, enrichment rate appears to be further suppressed around wide binaries with a projected separation less than ≈ \\approx 1000 AU."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.11798v1/GG_4_DR1_Plot_HR_Diagram.png",
+        "thumbnailAlt": "Gaia HR diagram of cool helium-dominated white dwarfs (WD) and their binary companion (cmp). For the white dwarf–white dwarf binaries, we color code the one with a DESI spectrum as light blue, and the other without a DESI spectrum as orange. The metal-enriched systems are shown in darker colors and ",
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.11925",
+        "title": "The Mysterious Inspiral of WASP-12b: Why Obliquity Tides Cannot Drive Orbital Decay",
+        "summary": "WASP-12b's orbit is decaying, for unknown reasons. The planet's period is shrinking more rapidly than can be attributed to equilibrium tides or dynamical tides in a main-sequence star. Planetary obliquity tides could be sufficiently dissipative to drive WASP-12b's inspiral, but would also damp the planet's obliquity, halting the decay. Millholland & Laughlin proposed that a nearby, low-mass planet ($\\sim 10$ M$_\\oplus$) is maintaining a large obliquity for WASP-12b, sustaining the dissipation. We re-evaluated this hypothesis, finding that the companion must be more massive than originally proposed ($\\gtrsim 65$ M$_\\oplus$) to absorb WASP-12b's orbital angular momentum. Radial velocity data allowed us to rule out a companion of this type. Any companions within $3$ AU have $K \\lesssim 14$ m/s at $95$% confidence.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.11925",
+        "htmlUrl": "https://arxiv.org/html/2609.11925v1",
+        "authors": [
+          "Caleb Lammers",
+          "Yubo Su",
+          "Joshua N. Winn"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.11925v1/perturber_params.png",
+            "caption": "Constraints on the hypothetical planet in the obliquity-tide scenario, under assumptions that lend the hypothesis maximum credence. RV amplitudes are indicated by the background color (assuming i 2 = 90 ∘ i_{2}\\,{=}\\,90^{\\circ} ). The blue line shows the minimum a 2 a_{2} compatible with Hill stability, and the white line is the lower limit imposed by angular-momentum conservation, leaving the brightly colored region as the parameter space allowed by the theory. The green line is the upper limit imposed by the RV data, which excludes all of the allowed parameter space."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11925v1/folded_RVs.png",
+            "caption": "First panel: WASP-12’s RV dataset, folded with respect to the period of WASP-12 b (transits occur at t = 0 t\\,{=}\\,0 ). The best-fitting “WASP-12 b + tidal bulge” model is plotted in black. Second panel: Tidal RV signal, obtained by subtracting the RV model with K tide = 0 K_{\\mathrm{tide}}\\,{=}\\,0 . The 6 6 m/s modulation due to the star’s tidal bulge is detected, illustrating the sensitivity of the dataset to low-amplitude signals. Third panel: RV residuals. All error bars show formal uncertainties, before inflation with jitter terms (Table 1 ). The residuals appear randomly distributed around zero, with underestimated uncertainties but no obvious trends."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11925v1/companion_constraints.png",
+            "caption": "RV constraints on companions of WASP-12 b. The color conveys the fraction of injected signals that were recovered with Δ ​ BIC > 25 \\Delta\\mathrm{BIC}\\,{>}\\,25 . The green contour traces the 95 95 % recovery fraction limit. Companions with a 2 ≈ 0.06 a_{2}\\,{\\approx}\\,0.06 AU must have M 2 sin i 2 ≲ 46 M ⊕ M_{2}\\sin i_{2}\\,{\\lesssim}\\,46\\,\\mathrm{M_{\\oplus}} (i.e., K ≲ 14 K\\,{\\lesssim}\\,14 m/s). Separately, any companions with M 2 sin i 2 ≳ 13 M J M_{2}\\sin i_{2}\\,{\\gtrsim}\\,13\\,\\mathrm{M_{J}} must be located beyond 10 10 AU."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.11925v1/perturber_params.png",
+        "thumbnailAlt": "Constraints on the hypothetical planet in the obliquity-tide scenario, under assumptions that lend the hypothesis maximum credence. RV amplitudes are indicated by the background color (assuming i 2 = 90 ∘ i_{2}\\,{=}\\,90^{\\circ} ). The blue line shows the minimum a 2 a_{2} compatible with Hill stabil",
+        "catchupDate": "2026-09-11"
+      }
+    ],
+    "cross": [
+      {
+        "absId": "2609.10663",
+        "title": "Small-Body Science with the Nautilus Space Observatory: From Cislunar Space Resilience to Mapping the Kuiper-Belt-to-Oort-Cloud Transition",
+        "summary": "A new generation of space-based observatories can transform small-body science from the local Earth-Moon environment to the Solar System's dynamical frontier, where planetary control gives way to Galactic tides and stellar encounters. Mapping this frontier would reveal how planetesimals were scattered during giant-planet formation, how many primordial bodies survived in distant reservoirs, and whether large objects remain undiscovered in the inner Oort Cloud. At the same time, meter- to decameter-scale natural objects traversing the Earth-Moon system are frequent but poorly characterized. As human and robotic activity expands, their operational relevance depends not simply on abundance but on object size, encounter geometry, exposed infrastructure, warning time, and available response. Lunar impacts and impact-generated ejecta provide one class of events, while fading objects with unresolved Earth or lunar impact probabilities provide another. Here, we explore a two-layer small-body program combining a 4.0 m-diameter Nautilus Quattro Imaging (NQI) unit with an illustrative distributed cislunar layer of ~50 cm-class wide-field optical telescopes. The cislunar layer would characterize the nearby natural-object population, support rapid classification and selective custody of high-interest objects, and monitor lunar impacts and ejecta; the NQI deep-search layer would provide precise astrometry and synthetic tracking for faint-object recovery and distant-Solar-System surveys. Together, the two layers would constrain the small-impactor population, resolve fading planetary-defense targets, and survey the distant Solar System to Vmag ~30, enabling tests of the Kuiper-Belt-to-Oort-Cloud transition while advancing Earth-Moon space resilience.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.10663",
+        "htmlUrl": "https://arxiv.org/html/2609.10663v1",
+        "authors": [
+          "J. de Wit",
+          "A. Y. Burdanov",
+          "P. McGill",
+          "D. Apai",
+          "S. N. Hasler",
+          "S. Cambioni"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.10663v1/Fig1.jpg",
+            "caption": "Population and operational motivation for a two-layer Nautilus small-body program. Left (A): Cumulative annual rates of natural objects as a function of diameter. The Earth-impact curve follows Brown et al. [3] ; the lunar-impact curve applies an Earth–Moon collision-rate scaling, while the upper curve gives the estimated physical rate of passages within one lunar distance (LD) of Earth. The gray band illustrates a possible cislunar follow-up and orbit-closure workload if approximately 1–10% of physical passages require continued processing; this fraction is a sensitivity range rather than an empirical workload measurement. The blue band shows the distinct alert-closure workload associated with fading potential Earth impactors whose nonzero impact probabilities require deeper recovery and orbit refinement. As demonstrated by 2024 YR4, such objects can become inaccessible from the ground while retaining nonzero impact probabilities [ 7 ] . Illustratively, if only a few true decameter-scale Earth impactors occur during the twenty-first century, a follow-up load ∼ 10 \\sim 10 – 100 × 100\\times the true-impact rate would imply deep recovery and orbit closure for tens to hundreds of ultimately non-impacting candidates—an operational cadence of up to several targets per year rather than one per decade. The multiplier is a sensitivity range rather than an empirical workload measurement. Horizontal asset markers summarize preliminary size ranges over which lunar-impact monitoring may become relevant to LLO, local surface/EVA, and Earth-orbit operations. These are illustrative sensitivities, not hard hazard thresholds, and their vertical positions carry no rate information. Shading emphasizes regimes combining potential operational relevance with event frequency over a century-scale planning horizon. Actual relevance depends on impact geometry, ejecta properties, asset vulnerability, object-characterization uncertainty, and survey/follow-up performance. The position of 2024 Y"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10663v1/Fig2.png",
+            "caption": "First-order sensitivity reach and representative design cases for the two observing layers. Left (A): Minimum detectable diameter for an approaching cislunar object as a function of time before encounter, shown for motion-compensated limiting apparent magnitudes of V lim = 22 V_{\\rm lim}=22 and 24. The calculation assumes a geometric albedo of p V = 0.10 p_{V}=0.10 , heliocentric distance r = 1 r=1 au, opposition geometry, and a representative closing speed of 20 km s -1 to convert observer–object range into warning time. The horizontal line and shaded region mark an illustrative 1 m / 6–12 hr Layer-1 design case motivated by local lunar and low-lunar-orbit applications rather than a universal operational threshold. Under these idealized assumptions, a 1 m object would be detectable approximately 12 hr before encounter at V lim = 22 V_{\\rm lim}=22 and approximately 30 hr before encounter at V lim = 24 V_{\\rm lim}=24 ; the vertical reference line marks the time corresponding to a range of one lunar distance at the adopted closing speed. Right (B): Minimum detectable diameter in the distant Solar System for a shifted-and-stacked apparent-magnitude depth of V = 30 V=30 and representative geometric albedos of p V = 0.04 p_{V}=0.04 , 0.10, and 0.20, assuming the observer–object distance is approximately equal to the heliocentric distance. Shaded regions indicate the main sampled trans-Neptunian regime, the Kuiper–Oort transition, and the inner-Oort distance regime. The vertical line marks 2018 AG37 (FarFarOut) at approximately 132 au, while horizontal guides mark diameters of 100 km, Charon, and Pluto. For the representative p V = 0.10 p_{V}=0.10 case, the corresponding idealized reaches are approximately 150 au for a 100 km object, 500 au for a Charon-size object, and 750 au for a Pluto-size object. Both panels show idealized reflected-light sensitivity; they are photometric-reach estimates rather than end-to-end survey-yield predictions."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.10663v1/Fig1.jpg",
+        "thumbnailAlt": "Population and operational motivation for a two-layer Nautilus small-body program. Left (A): Cumulative annual rates of natural objects as a function of diameter. The Earth-impact curve follows Brown et al. [3] ; the lunar-impact curve applies an Earth–Moon collision-rate scaling, while the upper cu",
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.10786",
+        "title": "UX Men: Detached Eclipsing Binary as a Benchmark Candidate",
+        "summary": "We present ultra-precise fundamental parameters for the detached eclipsing binary UX Men based on 31 TESS sectors ($\\sim$882 d) and radial velocities from HARPS, FEROS, CORALIE, and UCLES. The light curves were detrended for spot-induced variability and modelled independently with JKTEBOP and ALLESFITTER, while radial velocities were extracted via TODCOR and fitted with a Keplerian orbit. Spectral disentangling yielded individual component spectra analysed with iSpec to determine $T_{\\rm eff}$ and $\\mathrm{[M/H]}$. Multi-band photometry was used to determine the fluxes, flux ratios and ultimately to measure photometric $T_{\\rm eff}$. We obtain the masses $M_{\\rm A}$ = $1.2300 \\pm{0.0012}$ M$_{\\odot}$, $M_{\\rm B}$ = $1.1946\\pm{0.0012}$ M$_{\\odot}$ and radii $R_{\\rm A}$ = $1.3605\\pm{0.0031}$ R$_{\\odot}$, $R_{\\rm B}$ = $1.2801\\pm{0.0069}$ R$_{\\odot}$ with sub-percent precision. Uncertainties were found to be dominated by systematic effects coming from (weak) stellar activity. $T_{\\rm eff,A}$ = $6302\\pm{77}$, $T_{\\rm eff,B}$ = $6292\\pm65$ \\& Metallicity estimates are $[M/H]_{\\rm A} = 0.02\\pm{0.13}$ dex and $[M/H]_{\\rm B}= 0.07\\pm{0.10}$ dex. Isochrone fitting yields a consistent age of $\\tau$ = $2.75\\pm{0.13}$ Gyr. The system exhibits a $\\sim$ 673-day periodicity in eclipse-timing variations, likely due to stellar activity, with no evidence for a third body. Results are independent of the modelling code used, but without proper treatment of activity-induced systematics the uncertainties would be underestimated. UX Men is a high-precision benchmark binary providing stringent tests of stellar models and a robust calibration source for PLATO. Expanding the sample of well-characterised detached eclipsing binaries will strengthen the empirical foundations for stellar physics and the calibration of future photometric missions",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.10786",
+        "htmlUrl": "https://arxiv.org/html/2609.10786v1",
+        "authors": [
+          "Ganesh N. Pawar",
+          "Krzysztof G. Hełminiak",
+          "Nicola J. Miller",
+          "Frédéric Marcadon",
+          "Ayush Moharana",
+          "Tilaksingh B. Pawar",
+          "Anish Kalsi",
+          "Maciej Konacki"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.10786v1/LC_sec.png",
+            "caption": "Normalised TESS light curve of UX Men obtained from all 31 observed sectors, colour - coded by sector."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10786v1/UX_Mentpf.png",
+            "caption": "TESS target - pixel file for sector 29 with the customised photometric aperture used to extract the light curve. The aperture in the red mask isolates UX Men and excludes flux from the nearby contaminating star. The faint field stars (V-mag = 13+) are present but invisible on this scale; “contamination” here refers chiefly to scattered light from nearby bright Solar-System bodies, which the custom aperture is designed to suppress."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10786v1/light_curve_with_model_and_residuals.png",
+            "caption": "The phase light - curve model fit for TESS sector 29 (single - sector view). The top panel displays the data points in black overlaid with the best-fit model in magenta. The bottom panel shows the residuals of the fit, with dotted black lines as the 1-sigma range. The light curve is the same detrended, normalised data as in Fig. 1 , converted here in magnitudes ( jktebop ’s working unit); the magnitude zero-point is arbitrary."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10786v1/UXMen_RV.png",
+            "caption": "RV measurements of UX Men plotted over the Keplerian orbital solution for the primary (triangle) and secondary (open square). The lower panel displays the residuals of the fit for both components. The phase 0 is set on T 0 T_{0} , i.e. the primary eclipse mid-time."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10786v1/uxmen_disentangling_spectra.png",
+            "caption": "The composite observed HARPS-HAM spectrum from JD = 2455811.878 (blue), and the disentangled spectra of the primary (orange) and secondary (green), along with the model spectra (black). The disentangled spectra were shifted in RV to match the observed one above."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.10786v1/params_overtime_combined.png",
+            "caption": "Parameters over each TESS sector from LC modelling. The top panels show the fractional radii of the primary and secondary, the surface - brightness ratio (J) and the orbital inclination ( i i ) obtained independently with jktebop (blue squares) and allesfitter (red triangles) for each sector."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.10786v1/LC_sec.png",
+        "thumbnailAlt": "Normalised TESS light curve of UX Men obtained from all 31 observed sectors, colour - coded by sector.",
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.11827",
+        "title": "The Dyn-Atmo Survey: High-contrast Imaging Spectroscopy of the Substellar Companion HD 13724 B with the JWST NIRSpec IFU",
+        "summary": "We present the first spectral analysis from the JWST Cycle 3 GO Program #6362, the Dyn-Atmo Survey of dynamical-atmospheric benchmarks, characterizing the atmospheres of directly-imaged companions with dynamical masses and measured orbits. This program has obtained moderate-resolution spectra (R$\\sim$2700, 3-5$\\mu$m) using the NIRSpec/G395H IFU. We observe the T4-dwarf companion, HD 13724 B, companion to a G-type star at a projected angular separation of 0''2. Updated orbital monitoring constrains the mass to $38.3\\pm0.6~M_{\\rm{Jup}}$, which we use as a Gaussian prior when inferring the atmospheric state. We fit the continuum-subtracted spectrum using the BT-SETTL, Sonora Diamondback, Sonora Flame Skimmer, and NEWERA-PHOENIX self-consistent model grids, together with petitRADTRANS atmospheric retrievals. We adopt bulk parameter values of $T_\\mathrm{eff}$=$1150\\pm$195 K, $\\log g$=5.1$\\pm0.3$ dex, [M/H]=0.4$\\pm$0.4, $\\log_{10}(K_{zz})$=6.33$_{-2.22}^{+2.59}$, and C/O=$0.50\\pm0.13$ using a bayesian average across model grids. We find degeneracies in the models between surface gravity, metallicity, and $K_{zz}$ for Sonora Diamondback and Flame Skimmer. The Flame Skimmer and NEWERA-PHOENIX vertical mixing strengths are incompatible, with Flame Skimmer finding a systematically lower value. The retrievals favor an atmosphere in chemical equilibrium, with enhanced metallicity and a solar C/O ratio, but with no detection of disequilibrium chemistry, and no detection of trace gases other than CH$_4$, CO$_{2}$, $^{12}$CO and H$_{2}$O. Ultimately, we identify critical challenges in forward modeling continuum-subtracted G395H spectra in the low signal-to-noise regime. We find that including independent dynamical mass measurements better constrains atmospheric parameters, but degeneracies between self-consistent model parameters limit accurate atmospheric parameter inferences.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.11827",
+        "htmlUrl": null,
+        "authors": [
+          "Kielan K. W. Hoch",
+          "Alex Madurowicz",
+          "Evert Nasedkin",
+          "Emily Rickman",
+          "Daniella C. Bardalez Gagliuffi",
+          "James Mang",
+          "Caroline V. Morley",
+          "Christopher A. Theissen",
+          "William O. Balmer",
+          "Brendan P. Bowler",
+          "Emily Calamari",
+          "Henry Dennen",
+          "Jacqueline K. Faherty",
+          "Kyle Franson",
+          "Mark R. Giovinazzi",
+          "Lisseth Gonzales Quevedo",
+          "Elena Manjavacas",
+          "Piper Lentz",
+          "Klara Matuszewska",
+          "Ashley Messier",
+          "Marshall Perrin",
+          "Laurent Pueyo",
+          "Jean-Baptiste Ruffio",
+          "Kimberly Ward-Duong",
+          "Jerry W. Xuan"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.11828",
+        "title": "The Dyn-Atmo Survey: JWST/NIRSpec spectroscopy of dynamical benchmark GJ 758 B",
+        "summary": "We present new JWST/NIRSpec IFU high contrast spectroscopic observations of the brown dwarf companion GJ 758 B. Extensive radial velocity monitoring of the primary has enabled high-precision measurements of the companion mass through characterization of their joint orbital dynamics. The combination of prior space- and ground-based photometry and spectroscopic observations in concert with a spectral model-independent mass makes this target an ideal benchmark for calibrating evolutionary models with known mass-age-luminosity degeneracies. A template-matching analysis on the NIRSpec/IFU data (F290LP,G395H; $\\lambda \\in$ [2.87-5.27] $\\mu$m) detects the companion at the expected orbital position with incredible significance (265.2$\\sigma$). Comprehensive spectral analysis including published datasets over a variety of different spectral model families reveal that an inference using a uniform radius prior is plagued by inaccurate posteriors. The atmospheric model degeneracy between metallicity, gravity, and clouds pull the inferred mass/gravity/radius to an unphysical portion of parameter space for all model families tested. A constrained inference with a gaussian prior on the mass can mitigate this issue but models without clouds still struggle to accurately reproduce the K-band photometry and result in mass inferences which are inconsistent with the dynamics. We explore modifying the spectral models with custom post-processed clouds and molecular abundance perturbations of ammonia and hydrogen sulfide. We find the best-fitting model includes clouds with no patchiness (hole fraction f$_\\mathrm{hole}$ = 0), a small fractional depletion in ammonia and moderate enhancement in hydrogen sulfide.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.11828",
+        "htmlUrl": "https://arxiv.org/html/2609.11828v1",
+        "authors": [
+          "Alexander Madurowicz",
+          "Emily Rickman",
+          "Daniella Bardalez Gagliuffi",
+          "James Mang",
+          "Kim Ward-Duong",
+          "William O. Balmer",
+          "Brendan P. Bowler",
+          "Emily Calamari",
+          "Henry Dennen",
+          "Jacqueline K Faherty",
+          "Kyle Franson",
+          "Mark R. Giovinazzi",
+          "Lisseth Gonzales Quevedo",
+          "Kielan K. W. Hoch",
+          "Piper Lentz",
+          "Elena Manjavacas",
+          "Klara Matuszewska",
+          "Ashley Messier",
+          "Caroline V. Morley",
+          "Evert Nasedkin",
+          "Marshall Perrin",
+          "Laurent Pueyo",
+          "Jean-Baptiste Ruffio",
+          "Christopher A. Theissen",
+          "Jerry W. Xuan"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.11828v1/Unknown-539.png",
+            "caption": "Template matching analysis on NIRSpec data detects GJ 758 B at 256 σ \\sigma at the expected position. (Left) Point cloud interpolation of the non-starlight-subtracted flux with a logarithmic colormap to highlight the detailed JWST PSF structure. The position of GJ 758 A is indicated with the gray pentagram marker while the predicted position of the companion is indicated with a white cross. The elliptical region bounds the 20 σ \\sigma uncertainty on the orbital position for visibility. The central IFU trace is saturated due to excessive starlight resulting in a white bar shaped region running through the origin due to NaNs in the interpolation. The edge of the detector region is also visible in the very upper left corner. (Right) Template-matching based detection map in image coordinates highlighting the extreme sensitivity of JWST/NIRSpec to high contrast companions with spectrally resolved molecular features."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11828v1/Unknown-671.png",
+            "caption": "Estimating the empirical error covariance from sampling empty spectra inside the noise annulus. (Far Left) The detection map in image coordinates behind the “noise annulus” visible in orange which is defined as a 0.20” wide annulus with a 15 ∘ sector centered at the position of the companion removed. (Center Left) A collection of 42 randomly selected spectral samples from inside the noise annulus demonstrating the spectral properties of residual empty sky in the fifth wavelength subset region from λ ∈ \\lambda\\in [4.321,4.641] μ \\mu m. (Center Right) One dimensional auto-correlation profile computed on the noise samples using Equation 2 . (Far Right) Resulting two dimensional covariance matrix computed from the error vector and the correlation matrix in a logarithmic color scale to showcase fine details."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11828v1/Unknown-674.png",
+            "caption": "Comparing the mass sensitivity of NIRSpec IFU template matching to MIRI coronagraphic imaging . The MIRI mass sensitivity curves are computed from the flux contrast curves in (Ward-Duong in review. 2026). The flux contrast is enhanced by the square root of the exposure time ratio to put the observations on equal footing while the Flameskimmer evolution model is used to transform flux contrast into mass contrast given the system age. (Left) Mass sensitivity with respect to angular separation (units of arcseconds) (Right) with respect to relative separation (units of λ / \\lambda/ D). While NIRSpec is superior at small angular separation, the performance is similar in units of relative separation. The first order NIRSpec curve is based on rescaling the sensitivity of a single inference using a 600 K template, while the second order curve includes the effect of changing sensitivity as a function of template temperature."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11828v1/Unknown-62.png",
+            "caption": "Best Flameskimmer+VIRGA atmosphere model with chemical abundance multiplier perturbations. The VIRGA clouds were essential in reproducing the correct fit to the K band photometry, which was consistently underestimated in model fits which did not include clouds."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11828v1/Unknown-725.png",
+            "caption": "Comparing posterior distributions for different atmospheric model families and prior assumptions. Each row corresponds to a unique model family: (Row 1) coolTLUSTY clear NEQ [ 64 ] (Row 2) Exo-REM high resolution [ 31 ] (Row 3) Sonora Flameskimmer [ 74 ] (Row 4) Sonora Elf Owl [ 80 ] , while each column corresponds to a particular model parameter. Blank axes indicate that parameter is not included in the corresponding model family. Blue histograms correspond to the inference with a uniform radius prior while orange histograms correspond to the inference with a gaussian prior on the mass from the dynamical analysis of the companion orbit. The dashed orange/blue histograms in the radius/mass columns correspond to the inferred radius/mass from combing the sampled gravity with the sampled mass/radius since the three total parameters provide only two effective degrees of freedom. Model inferences with a uniform prior on the companion radius consistently find anomalously low values for both gravity and metallicity while the constrained inference using the dynamical mass prior obtains more reasonable values."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11828v1/Unknown-26.png",
+            "caption": "Expected cloud compounds whose condensation curves cross the best fit temperature-pressure profile. (Left) Orange-Purple condensation curves correspond to the database of compounds in the VIRGA cloud model [ 17 ] , while the light blue dashed curve for ADP is taken from [ 118 ] . The black line corresponds to the TP profile of a 550 K Sonora model with log g = 5 and solar metallicity and C/O. (Right) Background contains the Contribution Function computed using picaso.justplotit.thermal_contribution [ 16 ] across λ ∈ \\lambda\\in [0.6,.6] μ \\mu m with a logarithmic color scale. On top a horizontal line indicates the pressure altitude where cloud condensates would be expected to form. Salt and Sulfide clouds are expected in the deeper parts of the photosphere while ADP could plausibly form around 200 mbar. Water condensation around 2 mbar is plausible but very sensitive to the exact atmospheric PT profile which other clouds could influence through radiative feedback."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11828v1/Unknown-66.png",
+            "caption": "Influence of perturbed NH 3 and H 2 S abundance degrees of freedom on the best fit model spectrum. (Left) Perturbing ammonia within the narrow NIRSpec opacity window at 3 micron. The interaction between the ammonia opacity and water opacity results in a flattened feature when ammonia is relatively abundant, and a sharper peak when at low abundance. The visible feature is due to water absorption, which is revealed when the ammonia opacity is missing and veiled by its presence. (Center) Perturbing ammonia in the MIRI mid-IR wavelengths. Since ammonia is the dominant opacity source at these wavelengths, the ammonia multiplier parameter provides a similar flexibility as the radius parameter does, effectively rescaling the emergent flux for only the mid IR. (Right) Perturbing hydrogen sulfide in the NIRSpec wavelengths. While difficult to see by eye, the addition of extra sulfur slightly inhibits the depth of features around the 4 micron peak of flux which is dominated by methane opacity on the left edge and CO 2 opacity on the right edge."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.11828v1/Unknown-63.png",
+            "caption": "Posterior distributions and likelihood contours for NH 3 and H 2 S abundance multiplier parameters. (Upper Left) The posterior distribution for the log ammonia multiplier is consistent with zero within 1-2 σ \\sigma . (Upper Right) The posterior distribution for the log hydrogen sulfide multiplier suggests a strong enhancement around 4 × \\times is the best fit to the data. (Lower Left) A slice through the log likelihood surface with all values fixed except the abundance multiplier shows that large negative log x NH 3 {}_{\\mathrm{NH_{3}}} is strongly ruled out (blue), providing convincing evidence for molecular detection. While the likelihood contour for large negative x H 2 ​ S {}_{\\mathrm{H_{2}S}} is significantly flatter (orange). (Lower Right) A vertically stretched version of the same panel from the lower left, with points at each specific value the to highlight the sampling."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.11828v1/Unknown-539.png",
+        "thumbnailAlt": "Template matching analysis on NIRSpec data detects GJ 758 B at 256 σ \\sigma at the expected position. (Left) Point cloud interpolation of the non-starlight-subtracted flux with a logarithmic colormap to highlight the detailed JWST PSF structure. The position of GJ 758 A is indicated with the gray pe",
+        "catchupDate": "2026-09-11"
+      }
+    ],
+    "repl": [
+      {
+        "absId": "2609.00147",
+        "title": "The Venus Benchmark: Resolving Degeneracies in Terrestrial Exoplanet Spectra with DAVINCI",
+        "summary": "The characterization of terrestrial exoplanets with thick, CO$_2$-dominated atmospheres via transmission and emission spectroscopy is limited by degeneracies between atmospheric composition, cloud structure, and surface conditions. These degeneracies are particularly acute for planets in or near the Venus Zone, where sulfuric acid aerosol layers and deep-atmosphere opacity render the lower atmosphere and surface spectroscopically inaccessible via many optical/IR wavelengths. Venus provides the only accessible analog to such worlds, yet current knowledge of its full atmospheric profile relies on decades-old in situ data with known limitations. Here we demonstrate that the forthcoming DAVINCI (Deep Atmosphere Venus Investigation of Noble gases, Chemistry, and Imaging) mission will provide the comprehensive, high-fidelity atmospheric profile data necessary to resolve many of these degeneracies. We quantify how atmospheric profile uncertainties translate into uncertainties in modeled transmission and thermal emission spectra of CO$_2$-dominated terrestrial worlds, and show that the spread in the modeled Venus benchmark spectrum arising from current atmospheric profile uncertainties will decrease by factors of $\\sim$4--5 for transmission and $\\sim$5--15$\\times$ for thermal emission after DAVINCI, providing a correspondingly improved benchmark and prior for the modeling of exoplanets with Venus-like atmospheres. We further demonstrate that these improvement factors are larger for the cloud-free atmospheric case, where the opacity floor is set by gas-phase processes rather than aerosols, because the pre-DAVINCI data are most discrepant in the sub-cloud region. Our results highlight the importance of Venus for the atmospheric characterization of rocky exoplanets in the JWST and HWO era, and demonstrate how DAVINCI measurements will directly improve exoplanet atmospheric modeling.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.00147",
+        "htmlUrl": "https://arxiv.org/html/2609.00147v2",
+        "authors": [
+          "Stephen R. Kane",
+          "David S. Alexander",
+          "Shahid Aslam",
+          "Giada N. Arney",
+          "James B. Garvin",
+          "Stephanie A. Getty",
+          "Amy E. Hofmann",
+          "Noam R. Izenberg",
+          "Natasha M. Johnson",
+          "Erika Kohler",
+          "Emma L. Miles"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.00147v2/fig_venatm.png",
+            "caption": "Schematic of the Venus atmospheric structure and its implications for exoplanet spectroscopic characterization. Shown altitude-dependent regions are as follows: the deep atmosphere (0–12 km, dark orange), the sub-cloud region (12–48 km, medium orange), the H 2 SO 4 cloud deck (48–70 km, gold), the upper haze (70–90 km, pale yellow), and the upper atmosphere ( > > 90 km, pale blue). Atmospheric boundaries are from the Venus International Reference Atmosphere [ 65 ] and the cloud structure of Knollenberg & Gilland [35] . The red line at ∼ \\sim 70 km marks the transmission spectroscopy opacity floor set by the H 2 SO 4 haze layer [ 13 , 3 ] . This corresponds to a pressure of ∼ \\sim 0.03 bar, meaning that less than 0.03% of the total atmospheric mass is spectroscopically accessible. The blue arrow indicates the DAVINCI descent sphere trajectory from the upper cloud deck to the near-surface. The four labeled boxes identify the degeneracies described in Section II.3 , located at the altitudes where each degeneracy originates. The approximate pressure scale on the right axis is derived from the VIRA profile [ 65 , 70 ] ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.00147v2/fig_venprec.png",
+            "caption": "Improvement factors for key atmospheric profile parameters, defined as the ratio of pre-DAVINCI to projected DAVINCI measurement uncertainty, plotted on a log 10 \\log_{10} scale. The integer annotation to the right of each bar gives the improvement factor. Pre-DAVINCI uncertainties are from legacy in situ and remote sensing data [ 65 , 49 , 48 , 70 ] ; DAVINCI projections are from Garvin et al. [16] . The largest gains are for the pressure–temperature profile ( ∼ \\sim 20 × \\times and ∼ \\sim 50 × \\times , respectively), where DAVINCI’s VASI instrument will replace sparse, decades-old probe data with continuous measurements at ∼ \\sim 10 m vertical resolution. Trace gas improvements of ∼ \\sim 7–15 × \\times reflect the transition from order-of-magnitude sub-cloud ambiguities [ 48 ] to ± \\pm 10–20% precision. Noble gas and D/H ratio improvements ( ∼ \\sim 9–10 × \\times ) reflect the gain from ± \\pm 10–50% to ± \\pm 1–5% precision."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.00147v2/fig_ventran.png",
+            "caption": "Illustrative transit depth and analytical uncertainty envelopes for a Venus twin ( R p = 0.95 ​ R ⊕ R_{p}=0.95~R_{\\oplus} ) transiting an M4V host ( R ⋆ = 0.2 ​ R ⊙ R_{\\star}=0.2~R_{\\odot} ). The black curve shows the baseline transit depth computed from an illustrative opacity model with Gaussian absorption band profiles for CO 2 (2.0, 2.7, 4.3, and 15 μ \\mu m), H 2 O (6.3 μ \\mu m), and SO 2 (7.3 and 8.7 μ \\mu m), plus H 2 SO 4 haze and CO 2 Rayleigh scattering. The red envelope shows the 1 ​ σ 1\\sigma model systematic from pre-DAVINCI atmospheric profile knowledge, computed from Equations 6 – 8 with σ T = 10 \\sigma_{T}=10 K and above-cloud trace gas uncertainties of σ ln ⁡ x ≈ 0.4 \\sigma_{\\ln x}\\approx 0.4 , appropriate to the cloudy transmission case in which only abundances above the ∼ \\sim 70 km opacity floor are probed. The blue envelope shows the DAVINCI-calibrated uncertainty ( σ T = 0.5 \\sigma_{T}=0.5 K, σ ln ⁡ x ≈ 0.15 \\sigma_{\\ln x}\\approx 0.15 ). The wider red pre-DAVINCI envelope ( ± \\pm 2 ppm) and the narrower blue DAVINCI envelope ( ± \\pm 0.5 ppm) are both visible around the black baseline, illustrating the factor of ∼ \\sim 4 reduction in the modeled benchmark uncertainty for the cloudy transmission case."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.00147v2/fig_venimp.png",
+            "caption": "DAVINCI improvement factors for key atmospheric parameters, evaluated at the cloudy opacity floor (70 km, ∼ \\sim 0.03 bar; gold bars) and the cloud-free opacity floor (35 km, ∼ \\sim 5 bar; teal bars), using the uncertainties appropriate to each altitude level. At the cloudy floor, the above-cloud trace gas uncertainties are modest ( σ ln ⁡ x ∼ 0.4 \\sigma_{\\ln x}\\sim 0.4 ), so the temperature improvement dominates. At the cloud-free floor, the sub-cloud trace gas uncertainties are much larger ( σ ln ⁡ x ∼ 1.6 \\sigma_{\\ln x}\\sim 1.6 –2.3, corresponding to factor-of-5 to order-of-magnitude ambiguities), and the DAVINCI improvement in trace gas constraints becomes the dominant contribution. This demonstrates that DAVINCI’s value for constraining exoplanet atmospheric models is robust regardless of cloud properties, and is most consequential for the sub-cloud atmospheric region where current data are poorest."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.00147v2/fig_venatm.png",
+        "thumbnailAlt": "Schematic of the Venus atmospheric structure and its implications for exoplanet spectroscopic characterization. Shown altitude-dependent regions are as follows: the deep atmosphere (0–12 km, dark orange), the sub-cloud region (12–48 km, medium orange), the H 2 SO 4 cloud deck (48–70 km, gold), the u",
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.05413",
+        "title": "Two extremely irradiated volatile-rich sub-Neptunes with companions in the TOI-426 and TOI-1839 systems: Insights into arrival and survival near the lower edge of the Neptunian desert",
+        "summary": "Using TESS photometry and 147 HARPS radial velocities, we confirm two extremely irradiated, volatile-rich sub-Neptunes near the lower edge of the Neptunian desert: TOI-426 b and TOI-1839 b, orbiting the solar-type stars HD 34390 and TYC 304-865-1. We modelled stellar activity with shared-timescale and multidimensional Gaussian processes. The planets have orbital periods of approximately 1.32 and 1.42 days, radii of $2.19\\pm0.09$ and $2.27\\pm0.10$ Earth radii, and masses of $6.7\\pm1.8$ and $7.10\\pm0.78$ Earth masses, respectively. They receive approximately 1700 and 1050 times Earth's irradiation, yet their densities require substantial volatile content. We also detect a transiting sub-Neptune, TOI-1839 c, at approximately 4.02 days and a giant companion, TOI-426 c, with a period of $235.8^{+9.2}_{-8.5}$ days and a minimum mass of $444^{+18}_{-17}$ Earth masses, assuming a circular orbit. Interior-structure and atmospheric-escape models yield mass-loss timescales of 1-100 Myr for hydrogen/helium envelopes, compared with 100-1000 Gyr for water-dominated envelopes, favouring a steam-world interpretation for all three transiting planets. A population analysis reveals a striking excess of detected outer giant companions to low-mass sub-Neptunes near the desert edge, where high-eccentricity tidal migration is expected to circularize surviving planets: 36% (9/25) within the tidal survival band versus 6% (9/148) outside it (Fisher exact test $p=1.4\\times10^{-4}$). This excess is robust to changes in sample selection and companion definitions. The survival of these volatile-rich planets challenges a boundary set solely by evaporation of primordial hydrogen/helium envelopes, while the companion excess supports an important role for high-eccentricity tidal migration in shaping the lower desert edge.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.05413",
+        "htmlUrl": null,
+        "authors": [
+          "A. Castro-González",
+          "O. Barragán",
+          "D. J. Armstrong",
+          "A. Aguichine",
+          "V. Bourrier",
+          "D. Ehrenreich",
+          "E. X. Tao",
+          "J. Lillo-Box",
+          "M. R. Standing",
+          "S. G. Sousa",
+          "E. Delgado-Mena",
+          "A. Moya",
+          "V. Adibekyan",
+          "M. Lendl",
+          "C. Hellier",
+          "S. B. Howell",
+          "E. Furlan",
+          "C. Ziegler",
+          "A. C. M. Correia",
+          "K. Cui",
+          "P. Figueira",
+          "J. M. Jenkins",
+          "M. A. Fetzner Keniger",
+          "B. Merín",
+          "A. Osborn",
+          "L. Parc",
+          "F. Pepe",
+          "P. J. Wheatley",
+          "J. N. Winn"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "catchupDate": "2026-09-11"
+      },
+      {
+        "absId": "2609.08979",
+        "title": "TEMPUS: Relativistic coordinate time scales for any solar-system body from arbitrary ephemerides",
+        "summary": "Precise time-scale transformations between solar-system bodies are an essential requirement for deep-space science and solar system navigation. The post-Newtonian relativistic expression relating a body-centered coordinate time TCX to the Barycentric Coordinate Time TCB depends on the gravitational environment and velocity of the target body, and must be evaluated consistently with the chosen planetary ephemerides. So far only INPOP has provided such a solution as part of its ephemerides releases, albeit only for Earth with TCG-TCB. We present TEMPUS, a tool that numerically integrates the IAU 2000 time-transformation for any solar-system body using positions and velocities from an arbitrary ephemerides. We provide a validated, ephemerides-agnostic implementation of TCX-TCB and assess its accuracy against published independent solutions. The rate $d\\,\\mathrm{TCX}/d\\,\\mathrm{TCB}$ is integrated with an Adams-Moulton order-12 predictor-corrector. The gravitational potential sum tested here includes the Sun, eight planets, Pluto, up to 343 main-belt asteroids, and 30 trans-Neptunian objects. Outputs can be stored in readable format tables of sampled values or as Chebyshev coefficient files. Comparisons are performed against the TU Dresden Klioner time solutions, the TCG-TCB solution provided with INPOP19a and INPOP21a, and the LTE440 lunar solution. For the planetary bodies TEMPUS agrees with Klioner at the $10^{-21} s\\,s^{-1}$ level over 200 yr. Against the INPOP19a released TCG-TCB we also agree to the same level. The main-belt asteroids as well as the trans-Neptunian objects shift the planetary time scales at the $10^{-18} s\\,s^{-1}$ level, and the choice of planetary and lunar ephemerides contributes differences on the $10^{-18} s\\,s^{-1}$ level as well. TEMPUS provides a validated, ephemeris-agnostic post-Newtonian time-transformation for any solar-system body.",
+        "published": "2026-09-11T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.08979",
+        "htmlUrl": "https://arxiv.org/html/2609.08979v2",
+        "authors": [
+          "Yan Seyffert",
+          "Agnès Fienga"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.08979v2/figures/dPA_TCL+int.png",
+            "caption": "Differences between TCL and TDB time derivatives of the orientation angles ψ \\psi , θ \\theta , ϕ \\phi (left-hand side, in mas/d) and their linear integration over δ ​ t \\delta t (right-hand side, in mas). The Euler angles are ψ \\psi , the precession angle, θ \\theta , the nutation angle, and ϕ \\phi , the free rotation angle."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.08979v2/figures/dPA_TCL+int.png",
+        "thumbnailAlt": "Differences between TCL and TDB time derivatives of the orientation angles ψ \\psi , θ \\theta , ϕ \\phi (left-hand side, in mas/d) and their linear integration over δ ​ t \\delta t (right-hand side, in mas). The Euler angles are ψ \\psi , the precession angle, θ \\theta , the nutation angle, and ϕ \\phi ,",
+        "catchupDate": "2026-09-11"
+      }
+    ]
   }
 }
