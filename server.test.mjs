@@ -43,7 +43,8 @@ async function withServer(run, overrides = {}) {
     root,
     dataRoot,
     fetcher: fakeFetcher,
-    ...(overrides.enricher ? { enricher: overrides.enricher } : {})
+    ...(overrides.enricher ? { enricher: overrides.enricher } : {}),
+    ...(overrides.cacheStore ? { cacheStore: overrides.cacheStore } : {})
   });
   server.listen(0, '127.0.0.1');
   await once(server, 'listening');
@@ -106,6 +107,44 @@ test('rejects unsupported categories and invalid dates', async () => {
     assert.equal((await response.json()).ok, false);
     assert.equal(getFetchCalls(), 0);
   });
+});
+
+test('serves a durable object-cache entry to a cross-origin static site', async () => {
+  const date = '2026-09-17';
+  const remotePayload = {
+    ...payloadFor('astro-ph', date),
+    figuresStatus: 'complete',
+    figureCounts: { processed: 1, total: 1, found: 1 }
+  };
+  const writes = [];
+  const cacheStore = {
+    enabled: true,
+    kind: 's3',
+    async read(category, requestedDate) {
+      return category === 'astro-ph' && requestedDate === date ? remotePayload : null;
+    },
+    async write(payload) {
+      writes.push(payload);
+      return true;
+    }
+  };
+
+  await withServer(async ({ baseUrl, dataRoot }) => {
+    const response = await fetch(`${baseUrl}/api/cache?category=astro-ph&date=${date}`, {
+      headers: { Origin: 'https://static.example' }
+    });
+    assert.equal(response.status, 200);
+    assert.equal(response.headers.get('access-control-allow-origin'), '*');
+    assert.equal((await response.json()).date, date);
+
+    const localMirror = JSON.parse(readFileSync(join(dataRoot, 'astro-ph', `${date}.json`), 'utf8'));
+    assert.equal(localMirror.figureCounts.found, 1);
+
+    const preflight = await fetch(`${baseUrl}/api/fetch`, { method: 'OPTIONS' });
+    assert.equal(preflight.status, 204);
+  }, { cacheStore });
+
+  assert.deepEqual(writes, []);
 });
 
 test('returns metadata first and reports background figure progress', async () => {

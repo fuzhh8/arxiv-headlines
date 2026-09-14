@@ -1,7 +1,8 @@
 import { createServer } from 'node:http';
-import { readFile, stat } from 'node:fs/promises';
+import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { dirname, extname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createObjectCacheStore } from './cache-store.mjs';
 import {
   CATEGORIES,
   categoryToDir,
@@ -63,7 +64,7 @@ function isValidCachedPayload(payload, category, date) {
     ['new', 'cross', 'repl'].every(section => Array.isArray(payload?.papersBySection?.[section]));
 }
 
-async function readCachedPayload(dataRoot, category, date) {
+async function readLocalCachedPayload(dataRoot, category, date) {
   const path = join(dataRoot, categoryToDir(category), `${date}.json`);
   try {
     const payload = JSON.parse(await readFile(path, 'utf8'));
@@ -73,7 +74,49 @@ async function readCachedPayload(dataRoot, category, date) {
   }
 }
 
-function createOnDemandFetcher({ dataRoot, fetcher, enricher }) {
+async function writeLocalCachedPayload(dataRoot, payload) {
+  const dir = join(dataRoot, categoryToDir(payload.category));
+  await mkdir(dir, { recursive: true });
+  await writeFile(join(dir, `${payload.date}.json`), JSON.stringify(payload, null, 2), 'utf8');
+}
+
+function cacheProgress(payload) {
+  const complete = payload?.figuresStatus === 'complete' ? 1 : 0;
+  const processed = Number(payload?.figureCounts?.processed || 0);
+  const timestamp = Date.parse(payload?.figuresUpdatedAt || payload?.figuresGeneratedAt || payload?.generatedAt || 0) || 0;
+  return [complete, processed, timestamp];
+}
+
+function newerPayload(local, remote) {
+  if (!local) return remote;
+  if (!remote) return local;
+  const left = cacheProgress(local);
+  const right = cacheProgress(remote);
+  for (let index = 0; index < left.length; index++) {
+    if (left[index] !== right[index]) return right[index] > left[index] ? remote : local;
+  }
+  return local;
+}
+
+async function readCachedPayload(dataRoot, category, date, cacheStore) {
+  const localPromise = readLocalCachedPayload(dataRoot, category, date);
+  let remote = null;
+  if (cacheStore.enabled) {
+    try {
+      remote = await cacheStore.read(category, date);
+      if (!isValidCachedPayload(remote, category, date)) remote = null;
+    } catch (error) {
+      console.warn(`[cache] Could not read ${category}/${date} from ${cacheStore.kind}: ${error.message}`);
+    }
+  }
+
+  const local = await localPromise;
+  const selected = newerPayload(local, remote);
+  if (selected === remote && remote) await writeLocalCachedPayload(dataRoot, remote);
+  return selected;
+}
+
+function createOnDemandFetcher({ dataRoot, fetcher, enricher, cacheStore }) {
   const metadataInFlight = new Map();
   const figureJobs = new Map();
   let figureQueue = Promise.resolve();
@@ -112,7 +155,8 @@ function createOnDemandFetcher({ dataRoot, fetcher, enricher }) {
       total: payload.figureCounts?.total || 0,
       found: 0,
       error: '',
-      priorityIds: []
+      priorityIds: [],
+      persistQueue: Promise.resolve()
     };
     figureJobs.set(key, job);
 
@@ -125,8 +169,20 @@ function createOnDemandFetcher({ dataRoot, fetcher, enricher }) {
           job.processed = progress.processed;
           job.total = progress.total;
           job.found = progress.found;
+          const checkpointReady = progress.processed > 0 &&
+            (progress.processed % 2 === 0 || progress.processed === progress.total);
+          if (cacheStore.enabled && checkpointReady) {
+            job.persistQueue = job.persistQueue.then(async () => {
+              const checkpoint = await readLocalCachedPayload(dataRoot, category, date);
+              if (checkpoint) await cacheStore.write(checkpoint);
+            }).catch(error => {
+              console.warn(`[cache] Could not persist figure checkpoint for ${category}/${date}: ${error.message}`);
+            });
+          }
         }
       });
+      await job.persistQueue;
+      if (cacheStore.enabled) await cacheStore.write(enriched);
       job.phase = 'complete';
       job.processed = enriched.figureCounts?.processed || job.processed;
       job.total = enriched.figureCounts?.total || job.total;
@@ -144,7 +200,7 @@ function createOnDemandFetcher({ dataRoot, fetcher, enricher }) {
 
   async function ensureCached(category, date) {
     validateFetchTarget(category, date);
-    const cached = await readCachedPayload(dataRoot, category, date);
+    const cached = await readCachedPayload(dataRoot, category, date, cacheStore);
     if (cached) {
       const job = startFigureJob(category, date, cached);
       return { source: 'cache', payload: cached, figures: publicFigureStatus(job, cached) };
@@ -167,6 +223,13 @@ function createOnDemandFetcher({ dataRoot, fetcher, enricher }) {
       if (!isValidCachedPayload(payload, category, date)) {
         throw new Error('Fetcher returned an invalid cache payload');
       }
+      if (cacheStore.enabled) {
+        try {
+          await cacheStore.write(payload);
+        } catch (error) {
+          console.warn(`[cache] Could not persist metadata for ${category}/${date}: ${error.message}`);
+        }
+      }
       const job = startFigureJob(category, date, payload);
       return { source: 'fetched', payload, figures: publicFigureStatus(job, payload) };
     } finally {
@@ -180,8 +243,17 @@ function createOnDemandFetcher({ dataRoot, fetcher, enricher }) {
     const key = `${category}/${date}`;
     const job = figureJobs.get(key);
     if (job) return publicFigureStatus(job);
-    const cached = await readCachedPayload(dataRoot, category, date);
+    const cached = await readCachedPayload(dataRoot, category, date, cacheStore);
     return publicFigureStatus(null, cached);
+  }
+
+  async function getCached(category, date) {
+    validateFetchTarget(category, date);
+    const job = figureJobs.get(`${category}/${date}`);
+    if (job && ['queued', 'figures'].includes(job.phase)) {
+      return readLocalCachedPayload(dataRoot, category, date);
+    }
+    return readCachedPayload(dataRoot, category, date, cacheStore);
   }
 
   function prioritize(category, date, ids) {
@@ -197,7 +269,7 @@ function createOnDemandFetcher({ dataRoot, fetcher, enricher }) {
     return true;
   }
 
-  return { ensureCached, getStatus, prioritize };
+  return { ensureCached, getStatus, getCached, prioritize };
 }
 
 export function createArxivServer(options = {}) {
@@ -205,18 +277,53 @@ export function createArxivServer(options = {}) {
   const dataRoot = resolve(options.dataRoot || join(root, 'data'));
   const fetcher = options.fetcher || fetchAndStoreCategory;
   const enricher = options.enricher || enrichAndStoreCategoryFigures;
-  const onDemand = createOnDemandFetcher({ dataRoot, fetcher, enricher });
+  const cacheStore = options.cacheStore || createObjectCacheStore(options.env || process.env);
+  const corsOrigin = options.corsOrigin ?? process.env.CORS_ORIGIN ?? '*';
+  const onDemand = createOnDemandFetcher({ dataRoot, fetcher, enricher, cacheStore });
 
   return createServer(async (req, res) => {
     const requestUrl = new URL(req.url || '/', 'http://127.0.0.1');
 
     try {
+      if (requestUrl.pathname.startsWith('/api/')) {
+        res.setHeader('Access-Control-Allow-Origin', corsOrigin);
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept');
+        res.setHeader('Vary', 'Origin');
+        if (req.method === 'OPTIONS') {
+          res.writeHead(204);
+          res.end();
+          return;
+        }
+      }
+
       if (requestUrl.pathname === '/api/health') {
         if (req.method !== 'GET') {
           sendJson(res, 405, { ok: false, error: 'Method not allowed' });
           return;
         }
-        sendJson(res, 200, { ok: true, service: 'arxiv-headlines', categories: CATEGORIES });
+        sendJson(res, 200, {
+          ok: true,
+          service: 'arxiv-headlines',
+          categories: CATEGORIES,
+          cache: cacheStore.kind
+        });
+        return;
+      }
+
+      if (requestUrl.pathname === '/api/cache') {
+        if (req.method !== 'GET' && req.method !== 'HEAD') {
+          sendJson(res, 405, { ok: false, error: 'Method not allowed' });
+          return;
+        }
+        const category = String(requestUrl.searchParams.get('category') || '');
+        const date = String(requestUrl.searchParams.get('date') || '');
+        const payload = await onDemand.getCached(category, date);
+        if (!payload) {
+          sendJson(res, 404, { ok: false, error: 'Cache entry not found' });
+          return;
+        }
+        sendJson(res, 200, payload);
         return;
       }
 

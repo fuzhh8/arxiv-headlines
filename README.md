@@ -32,30 +32,54 @@ node server.mjs
 
 `npm start` is an equivalent shortcut when npm is installed.
 
-## Run the fetch service on the web
+## Static site + fetch API + durable R2 cache
 
-GitHub Pages can only serve the cached static files; it cannot run the
-`/api/fetch` backend. Deploy this repository as a Render **Web Service** to make
-date-triggered fetching available from the public website:
+The included Render Blueprint now creates two services:
+
+- `arxiv-headlines-static`: the static UI and repository cache on Render's CDN.
+- `arxiv-headlines`: the Node fetch API, which wakes only for uncached dates or
+  ongoing figure extraction.
+
+Cloudflare R2 is the durable source of truth for runtime JSON caches. The API
+reads R2 after a restart, mirrors the selected entry to its temporary local
+filesystem, and writes metadata plus progressive figure checkpoints back to R2.
+The R2 bucket can remain private because browsers read it through `/api/cache`.
+
+### 1. Create the R2 bucket and token
+
+1. In Cloudflare, open **Storage & databases → R2 → Overview** and create a
+   bucket such as `arxiv-headlines`.
+2. Under **Manage R2 API Tokens**, create an Object Read & Write token scoped to
+   that bucket only.
+3. Copy the Access Key ID, Secret Access Key, and S3 endpoint. The endpoint is
+   `https://<ACCOUNT_ID>.r2.cloudflarestorage.com` and the R2 region is `auto`.
+
+### 2. Configure and deploy Render
 
 1. Open [Render](https://dashboard.render.com/) and choose **New → Blueprint**.
 2. Connect `fuzhh8/arxiv-headlines` and select the `main` branch.
-3. Render reads `render.yaml`; confirm the `arxiv-headlines` web service.
-4. After deployment, use the generated `https://...onrender.com` address as the
-   website URL. The page and fetch API then run on the same origin.
+3. Render reads `render.yaml`; confirm both services.
+4. On the `arxiv-headlines` web service, set these secret environment variables:
 
-The included Blueprint uses Render's free plan. Free services can sleep while
-idle and use an ephemeral filesystem, so on-demand cache files can disappear
-after a restart or redeploy. The repository's committed cache remains. For
-durable runtime caches, attach a persistent disk on a paid plan or move cache
-storage to an external object store.
+   - `CACHE_S3_ENDPOINT`
+   - `CACHE_S3_BUCKET`
+   - `CACHE_S3_ACCESS_KEY_ID`
+   - `CACHE_S3_SECRET_ACCESS_KEY`
 
-For an always-fast static shell, deploy `index.html` and committed `data/` on
-GitHub Pages (or a Render Static Site), keep only the fetch API on a web service,
-and store new JSON in durable object storage such as an S3-compatible bucket.
-That split needs three additions that are intentionally not hard-coded here: a
-public API base URL for the static page, CORS rules on the API, and storage
-credentials on the server. Never put storage credentials in browser JavaScript.
+5. Redeploy the web service once after saving the secrets. Open the
+   `arxiv-headlines-static` URL for normal use.
+
+The static build receives the API's generated Render URL automatically and
+writes it to public `config.js`; credentials are never exposed to the browser.
+`GET /api/health` reports `"cache":"s3"` when all four variables are present.
+
+The API still works without R2 and falls back to the local filesystem, which is
+convenient for development but not durable on a free Render web service.
+
+To use GitHub Pages instead of the Render static site, set `apiBaseUrl` in
+`config.js` to the public `https://...onrender.com` API URL before publishing.
+The API includes CORS headers for this split deployment. Never place R2
+credentials in `config.js` or any other browser file.
 
 Then open <http://127.0.0.1:8000/>. Opening `index.html` directly is not
 supported because browsers block the JSON cache requests from `file://` pages.

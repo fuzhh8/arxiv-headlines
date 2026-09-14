@@ -11,6 +11,7 @@
     };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+  <script src="config.js"></script>
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -949,6 +950,7 @@
   const TO_READ_TAB_CODE = '__to_read__';
   const READ_TAB_CODE = '__read__';
   const SAVED_TAB_CODES = new Set([FAV_TAB_CODE, TO_READ_TAB_CODE, READ_TAB_CODE]);
+  const API_BASE_URL = String(window.ARXIV_HEADLINES_CONFIG?.apiBaseUrl || '').trim().replace(/\/+$/, '');
 
   /* State */
 
@@ -977,6 +979,7 @@
   const pad2 = n => String(n).padStart(2, '0');
   const cleanText = s => (s ?? '').replace(/\s+/g, ' ').trim();
   const normalizeId = id => (id || '').trim().replace(/v\d+$/i, '');
+  const apiUrl = path => API_BASE_URL ? `${API_BASE_URL}${path}` : path;
 
   function escapeHtml(text) {
     const d = document.createElement('div');
@@ -1212,10 +1215,29 @@
     };
   }
 
-  async function fetchStaticDay(category, date) {
+  async function fetchApiCachedDay(category, date) {
+    try {
+      const resp = await fetch(
+        apiUrl(`/api/cache?category=${encodeURIComponent(category)}&date=${encodeURIComponent(date)}`),
+        { headers: { Accept: 'application/json' }, cache: 'no-store' }
+      );
+      if (!resp.ok) return null;
+      const payload = await resp.json();
+      return isValidStaticPayload(payload, category, date) ? payload : null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  async function fetchStaticDay(category, date, options = {}) {
     // arXiv has no weekend announcement files, so weekends are known-empty and
     // should not force the browser onto the slow live-proxy path.
     if (isWeekend(date)) return emptyStaticPayload(category, date);
+
+    if (options.preferApi) {
+      const remote = await fetchApiCachedDay(category, date);
+      if (remote) return remote;
+    }
 
     const dir = categoryToDataDir(category);
     const url = `data/${encodeURIComponent(dir)}/${encodeURIComponent(date)}.json`;
@@ -1226,20 +1248,21 @@
         cache: 'no-cache'
       });
 
-      if (!resp.ok) return null;
+      if (!resp.ok) return fetchApiCachedDay(category, date);
 
       const payload = await resp.json();
-      return isValidStaticPayload(payload, category, date) ? payload : null;
+      if (isValidStaticPayload(payload, category, date)) return payload;
+      return fetchApiCachedDay(category, date);
     } catch (e) {
       console.warn(`Static data unavailable for ${category}/${date}:`, e);
-      return null;
+      return fetchApiCachedDay(category, date);
     }
   }
 
   async function requestOnDemandDay(category, date) {
     let resp;
     try {
-      resp = await fetch('/api/fetch', {
+      resp = await fetch(apiUrl('/api/fetch'), {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -1286,7 +1309,7 @@
   }
 
   async function refreshFiguresFromCache(category, date, generation) {
-    const payload = await fetchStaticDay(category, date);
+    const payload = await fetchStaticDay(category, date, { preferApi: true });
     if (!payload || generation !== loadGeneration || selectedCategory !== category) return 0;
 
     const enrichedById = new Map();
@@ -1331,7 +1354,7 @@
 
     const signature = ids.join(',');
     try {
-      await fetch('/api/fetch/prioritize', {
+      await fetch(apiUrl('/api/fetch/prioritize'), {
         method: 'POST',
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
         cache: 'no-store',
@@ -1363,7 +1386,7 @@
         let response;
         try {
           response = await fetch(
-            `/api/fetch/status?category=${encodeURIComponent(category)}&date=${encodeURIComponent(date)}`,
+            apiUrl(`/api/fetch/status?category=${encodeURIComponent(category)}&date=${encodeURIComponent(date)}`),
             { headers: { Accept: 'application/json' }, cache: 'no-store' }
           );
         } catch (_) {

@@ -24,6 +24,12 @@ test('right panel and PDF preview are off by default', () => {
   assert.match(html, /settingsVersion:\s*2/);
 });
 
+test('static frontend routes cache and fetch requests through its configured API', () => {
+  assert.match(html, /ARXIV_HEADLINES_CONFIG\?\.apiBaseUrl/);
+  assert.match(html, /apiUrl\(`\/api\/cache\?/);
+  assert.match(html, /fetch\(apiUrl\('\/api\/fetch'\)/);
+});
+
 function loadPagination(pageSize = 24, currentPage = 1) {
   return new Function('pageSize', 'currentPage', `
     ${paginationSource}
