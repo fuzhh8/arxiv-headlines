@@ -49,6 +49,15 @@ function textFromHtml(html) {
   ));
 }
 
+function captionLatexFromHtml(html) {
+  const withMath = (html ?? '').replace(/<math\b([^>]*)>[\s\S]*?<\/math>/gi, (markup, attributes) => {
+    const match = attributes.match(/\balttext\s*=\s*(?:"([^"]*)"|'([^']*)')/i);
+    const latex = decodeHtml(match?.[1] ?? match?.[2] ?? '').trim();
+    return latex ? ` $${latex}$ ` : ' ';
+  });
+  return textFromHtml(withMath);
+}
+
 function normalizeId(id) {
   return (id || '').trim().replace(/v\d+$/i, '');
 }
@@ -206,6 +215,7 @@ function extractFigures(html, htmlUrl, limit = 8) {
 
     const captionMatch = figure.match(/<figcaption\b[^>]*>([\s\S]*?)<\/figcaption>/i);
     const caption = textFromHtml(captionMatch?.[1]).replace(/^Figure\s+\d+[:.]?\s*/i, '');
+    const captionLatex = captionLatexFromHtml(captionMatch?.[1]).replace(/^Figure\s+\d+[:.]?\s*/i, '');
 
     try {
       const imageUrl = new URL(decodeHtml(imageMatch[1]), htmlUrl).href;
@@ -214,10 +224,14 @@ function extractFigures(html, htmlUrl, limit = 8) {
       if (seen.has(imageUrl)) continue;
 
       seen.add(imageUrl);
-      figures.push({
+      const item = {
         url: imageUrl,
         caption: (caption || `Figure ${figures.length + 1} from the paper`).slice(0, 2000)
-      });
+      };
+      if (captionLatex && captionLatex !== caption && /[$\\]/.test(captionLatex)) {
+        item.captionLatex = captionLatex.slice(0, 2000);
+      }
+      figures.push(item);
     } catch (_) {}
   }
 

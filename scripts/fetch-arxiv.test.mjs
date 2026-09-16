@@ -47,12 +47,18 @@ test('figure parser extracts several unique arXiv figures and captions', () => {
   const html = `
     <figure><img class="ltx_graphics" src="x1.png"><figcaption>Figure 1: First result</figcaption></figure>
     <figure><img class='plot ltx_graphics' src='/html/2609.01234/x2.png'><figcaption>Figure 2. Second result</figcaption></figure>
+    <figure><img class="ltx_graphics" src="x3.png"><figcaption>Figure 3: Radius <math alttext="R_\\star"><mi>R</mi></math>.</figcaption></figure>
     <figure><img class="ltx_graphics" src="https://example.com/no.png"></figure>
   `;
   const figures = extractFigures(html, 'https://arxiv.org/html/2609.01234/');
   assert.deepEqual(figures, [
     { url: 'https://arxiv.org/html/2609.01234/x1.png', caption: 'First result' },
-    { url: 'https://arxiv.org/html/2609.01234/x2.png', caption: 'Second result' }
+    { url: 'https://arxiv.org/html/2609.01234/x2.png', caption: 'Second result' },
+    {
+      url: 'https://arxiv.org/html/2609.01234/x3.png',
+      caption: 'Radius R .',
+      captionLatex: 'Radius $R_\\star$ .'
+    }
   ]);
   assert.equal(extractFirstFigure(html, 'https://arxiv.org/html/2609.01234/').thumbnailUrl, figures[0].url);
 });

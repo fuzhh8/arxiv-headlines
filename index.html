@@ -97,10 +97,14 @@
     }
 
     .category-tabs {
-      display: flex; gap: 4px; flex-wrap: wrap;
-      align-items: flex-end; margin-bottom: 12px;
+      display: flex; gap: 4px; flex-wrap: nowrap; overflow-x: auto;
+      align-items: flex-end; margin-bottom: 12px; padding-bottom: 3px;
+      scrollbar-width: none; overscroll-behavior-inline: contain;
+      scroll-snap-type: x proximity;
     }
+    .category-tabs::-webkit-scrollbar { display: none; }
     .category-tab {
+      flex: 0 0 auto; scroll-snap-align: start;
       background: rgba(255,255,255,.15); backdrop-filter: blur(8px);
       border: 2px solid rgba(255,255,255,.25); border-bottom: none;
       border-radius: 12px 12px 0 0; padding: 12px 20px;
@@ -129,10 +133,11 @@
     .controls {
       background: #fff; padding: 14px; border-radius: 16px;
       box-shadow: 0 5px 15px rgba(0,0,0,.10);
-      margin-bottom: 12px; display: flex; gap: 12px;
-      flex-wrap: wrap; align-items: center;
+      margin-bottom: 12px; display: grid; gap: 12px;
+      grid-template-columns: minmax(230px, 280px) minmax(610px, 1fr) minmax(240px, 340px) auto;
+      align-items: center;
     }
-    .controls .group { display: flex; gap: 10px; align-items: center; flex: 1; min-width: 180px; }
+    .controls .group { display: flex; gap: 10px; align-items: center; min-width: 0; }
     label { color: #555; font-size: .95em; font-weight: 700; white-space: nowrap; }
 
     select, input[type="date"] {
@@ -180,7 +185,7 @@
     }
     button:disabled { background: #b7b7b7; border-color: #b7b7b7; cursor: not-allowed; }
 
-    .range-toggle { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .range-toggle { display: flex; flex-wrap: nowrap; gap: 8px; align-items: center; min-width: 0; }
     .range-btn {
       padding: 10px 16px; border-radius: 10px;
       border: 2px solid var(--c1); background: #fff;
@@ -190,7 +195,7 @@
     .range-btn:hover { background: #f2f5ff; }
     .range-btn.active { background: var(--c1); color: #fff; }
     .custom-start-wrap {
-      display: flex; flex: 1 0 100%; align-items: center; gap: 8px; padding: 4px 0 0;
+      display: flex; flex: 1 1 220px; align-items: center; gap: 8px; padding: 0;
       color: var(--muted); font-size: .82em;
     }
     .custom-start-wrap[hidden] { display: none; }
@@ -307,6 +312,28 @@
     .preview-abstract mark, .preview-title mark {
       background: rgba(255,220,0,.45); border-radius: 2px; padding: 0 1px;
     }
+
+    .paper-quickview {
+      position: fixed; inset: 0; z-index: 900; display: grid; place-items: center;
+      padding: 24px; background: rgba(0,3,12,.72); backdrop-filter: blur(12px);
+    }
+    .paper-quickview[hidden] { display: none; }
+    .paper-quickview-dialog {
+      width: min(780px, calc(100vw - 32px)); max-height: min(760px, calc(100dvh - 48px));
+      display: flex; flex-direction: column; overflow: hidden;
+      border: 1px solid var(--line-bright); border-radius: 16px;
+      background: linear-gradient(155deg, rgba(11,22,47,.99), rgba(3,8,20,.99));
+      box-shadow: 0 28px 80px rgba(0,0,0,.58), 0 0 42px color-mix(in srgb, var(--c1) 18%, transparent);
+    }
+    .paper-quickview-head {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 13px 16px; border-bottom: 1px solid var(--line);
+      color: var(--cyan); font-size: .78em; font-weight: 850; letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .paper-quickview-close { min-width: 40px; padding: 8px; }
+    .paper-quickview-body { padding: 20px; overflow: auto; overscroll-behavior: contain; }
+    .paper-quickview-links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 16px; }
 
     .content-split { display: grid; grid-template-columns: 5fr 5fr; gap: 16px; align-items: start; }
     .content-split.panel-hidden { grid-template-columns: minmax(0, 1fr); }
@@ -498,11 +525,11 @@
       box-shadow: 0 0 0 2px rgba(117,231,255,.2), 0 0 16px rgba(117,231,255,.6);
     }
 
-    .category-tabs { gap: 7px; align-items: center; }
+    .category-tabs { gap: 5px; align-items: center; }
     .category-tab {
-      padding: 10px 16px; border: 1px solid var(--line); border-radius: 8px;
+      padding: 9px 9px; border: 1px solid var(--line); border-radius: 8px;
       background: rgba(7,15,34,.66); color: var(--muted);
-      backdrop-filter: blur(12px); letter-spacing: .035em;
+      backdrop-filter: blur(12px); letter-spacing: .025em; font-size: .82em;
     }
     .category-tab:hover {
       background: rgba(18,35,66,.86); border-color: var(--line-bright);
@@ -746,14 +773,19 @@
     }
     .figure-modal-head { position: relative; z-index: 2; display: flex; align-items: center; gap: 12px; }
     .figure-modal-title { min-width: 0; flex: 1; color: var(--ink); font-weight: 850; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .figure-stage { min-width: 0; min-height: 0; display: grid; place-items: center; overflow: hidden; border-radius: 10px; background: #f5f6fa; }
-    .figure-stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
-    .figure-modal-foot { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 14px; }
+    .figure-stage { position: relative; min-width: 0; min-height: 0; display: grid; place-items: center; overflow: hidden; border-radius: 10px; background: #f5f6fa; }
+    .figure-stage img { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
+    .figure-stage.is-fit { overflow: hidden; }
+    .figure-stage.is-fit img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; }
+    .figure-stage.is-actual { display: block; overflow: auto; overscroll-behavior: contain; touch-action: pan-x pan-y pinch-zoom; }
+    .figure-stage.is-actual img { width: auto; height: auto; min-width: 100%; max-width: none; max-height: none; object-fit: initial; }
+    .figure-modal-foot { display: grid; grid-template-columns: auto auto minmax(0,1fr) auto; align-items: center; gap: 14px; }
     .figure-caption { color: #c7d8e7; line-height: 1.5; max-height: 7.5em; overflow: auto; }
     .figure-nav { min-width: 42px; padding: 9px; }
     #figureClose { flex: 0 0 auto; touch-action: manipulation; }
     .figure-mobile-close-bottom { display: none; }
     .figure-position { color: var(--cyan); font-size: .78em; white-space: nowrap; }
+    .figure-zoom-toggle { min-width: 70px; padding: 8px 10px; white-space: nowrap; }
 
     ::-webkit-scrollbar { width: 10px; height: 10px; }
     ::-webkit-scrollbar-track { background: #040916; }
@@ -772,12 +804,23 @@
       .header::before { width: 88vw; }
       .settings-wrap { top: 10px; right: 10px; }
     }
+    @media (max-width: 1250px) {
+      .controls { grid-template-columns: minmax(220px, 280px) minmax(220px, 1fr) auto; }
+      .date-control { grid-column: 1; grid-row: 1; }
+      .search-wrap { grid-column: 2; grid-row: 1; }
+      .filters-button { grid-column: 3; grid-row: 1; }
+      .range-control { grid-column: 1 / -1; grid-row: 2; }
+    }
     @media (max-width: 650px) {
       body { padding: 6px; overflow-x: hidden; }
       .main { padding: 6px; }
-      .controls > .group { flex: 1 1 100% !important; min-width: 0 !important; max-width: none !important; }
+      .category-tabs { margin-inline: -6px; padding-inline: 6px; }
+      .controls { grid-template-columns: minmax(0, 1fr); }
+      .controls > .group, .date-control, .range-control, .search-wrap, .filters-button {
+        grid-column: 1; grid-row: auto; width: 100%; min-width: 0; max-width: none;
+      }
       .range-toggle { width: 100%; flex-wrap: wrap; }
-      .range-btn { flex: 1; min-width: 0; padding-inline: 8px; }
+      .range-btn { flex: 1 1 calc(50% - 4px); min-width: 0; padding-inline: 8px; }
       .custom-start-wrap { flex: 1 0 100%; }
       .custom-start-wrap input { flex: 1; min-width: 0; }
       .filters-button { width: 100%; }
@@ -805,16 +848,21 @@
       .figure-modal-title { display: none; }
       .figure-stage {
         position: relative; display: block; width: 100%; height: 100%;
-        overflow: auto; overscroll-behavior: contain;
+        overscroll-behavior: contain;
         -webkit-overflow-scrolling: touch;
-        touch-action: pan-x pan-y pinch-zoom;
       }
-      .figure-stage img {
+      .figure-stage.is-fit { display: grid; overflow: hidden; touch-action: pinch-zoom; }
+      .figure-stage.is-fit img {
+        position: absolute; inset: 0; width: 100%; height: 100%; min-width: 0; max-width: 100%; max-height: 100%; object-fit: contain;
+      }
+      .figure-stage.is-actual { overflow: auto; touch-action: pan-x pan-y pinch-zoom; }
+      .figure-stage.is-actual img {
         position: static; display: block; width: auto; height: auto; min-width: 100%;
         max-width: none; max-height: none; object-fit: initial;
       }
       .figure-modal-foot { min-width: 0; gap: 8px; }
       .figure-caption { max-height: 3em; overflow-wrap: anywhere; font-size: .78rem; }
+      .figure-zoom-toggle { min-width: 58px; padding-inline: 7px; }
       #figureClose { display: none; }
       .figure-mobile-close-bottom {
         position: absolute; z-index: 10; touch-action: manipulation;
@@ -843,11 +891,20 @@
         width: 82px; display: flex; flex-direction: column; justify-content: center;
       }
       .figure-modal-foot .figure-nav { width: 100%; min-height: 46px; }
+      .figure-modal-foot .figure-zoom-toggle { width: 100%; min-height: 42px; }
       .figure-caption { display: none; }
       .figure-mobile-close-bottom {
         left: auto; right: max(10px, env(safe-area-inset-right));
         width: 82px; min-height: 48px; padding-inline: 6px;
       }
+    }
+    @media (max-width: 650px) {
+      .paper-quickview { place-items: end center; padding: 0; }
+      .paper-quickview-dialog {
+        width: 100%; max-height: 88dvh; border-radius: 18px 18px 0 0;
+        border-left: 0; border-right: 0; border-bottom: 0;
+      }
+      .paper-quickview-body { padding: 17px; }
     }
   </style>
 </head>
@@ -903,11 +960,11 @@
     <nav class="category-tabs" id="categoryTabs" aria-label="arXiv categories"></nav>
 
     <div class="controls" role="toolbar" aria-label="Filter controls">
-      <div class="group" style="max-width:280px;">
+      <div class="group date-control">
         <label for="day">Date</label>
         <input id="day" type="date" aria-label="Select date" />
       </div>
-      <div class="group" style="min-width:380px;">
+      <div class="group range-control">
         <label>Range</label>
         <div class="range-toggle" role="group" aria-label="Date range">
           <button class="range-btn active" data-range="1" onclick="setDateRange(1)">Today</button>
@@ -920,7 +977,7 @@
           </label>
         </div>
       </div>
-      <div class="group search-wrap" style="min-width:220px;">
+      <div class="group search-wrap">
         <span class="search-icon">🔍</span>
         <input type="text" id="searchInput" placeholder="Search title / author…" autocomplete="off" aria-label="Search papers" />
         <button class="search-clear" id="searchClear" title="Clear search" aria-label="Clear search">✕</button>
@@ -969,6 +1026,16 @@
 
 <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">↑</button>
 
+<div class="paper-quickview" id="paperQuickView" hidden role="dialog" aria-modal="true" aria-labelledby="paperQuickViewTitle">
+  <div class="paper-quickview-dialog">
+    <div class="paper-quickview-head">
+      <span>Paper briefing</span>
+      <button class="paper-quickview-close" id="paperQuickViewClose" type="button" aria-label="Close paper details">✕</button>
+    </div>
+    <div class="paper-quickview-body" id="paperQuickViewBody"></div>
+  </div>
+</div>
+
 <div class="figure-modal" id="figureModal" hidden role="dialog" aria-modal="true" aria-labelledby="figureModalTitle">
   <div class="figure-dialog">
     <div class="figure-modal-head">
@@ -979,6 +1046,7 @@
     <div class="figure-stage" id="figureStage"><img id="figureImage" alt="" referrerpolicy="no-referrer" /></div>
     <div class="figure-modal-foot">
       <button class="figure-nav" id="figurePrev" type="button" aria-label="Previous figure">←</button>
+      <button class="figure-nav figure-zoom-toggle" id="figureZoomToggle" type="button" aria-label="Show figure at original size">1:1</button>
       <div class="figure-caption" id="figureCaption"></div>
       <button class="figure-nav" id="figureNext" type="button" aria-label="Next figure">→</button>
     </div>
@@ -1052,6 +1120,8 @@
   let currentPage = 1;
   let galleryPaper = null;
   let galleryIndex = 0;
+  let galleryZoomMode = 'fit';
+  let quickViewReturnFocus = null;
   let loadGeneration = 0;
 
   let lastGoodProxyIdx = 0;
@@ -1087,7 +1157,7 @@
     const figures = Array.isArray(paper?.figures) ? paper.figures : [];
     const valid = figures.map(figure => ({
       url: safeArxivImageUrl(figure?.url),
-      caption: cleanText(figure?.caption || '')
+      caption: cleanText(figure?.captionLatex || figure?.caption || '')
     })).filter(figure => figure.url);
 
     if (valid.length) return valid;
@@ -1110,11 +1180,82 @@
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
+  function normalizeSearchText(value) {
+    return String(value || '')
+      .normalize('NFKD')
+      .replace(/\p{M}/gu, '')
+      .replace(/\\[a-zA-Z]+/g, ' ')
+      .toLowerCase()
+      .replace(/[^a-z0-9\u3400-\u9fff]+/g, ' ')
+      .trim();
+  }
+
+  function editDistanceWithin(left, right, limit) {
+    if (Math.abs(left.length - right.length) > limit) return false;
+    let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+    for (let row = 1; row <= left.length; row++) {
+      const current = [row];
+      let rowMin = row;
+      for (let column = 1; column <= right.length; column++) {
+        const cost = left[row - 1] === right[column - 1] ? 0 : 1;
+        current[column] = Math.min(
+          current[column - 1] + 1,
+          previous[column] + 1,
+          previous[column - 1] + cost
+        );
+        rowMin = Math.min(rowMin, current[column]);
+      }
+      if (rowMin > limit) return false;
+      previous = current;
+    }
+    return previous[right.length] <= limit;
+  }
+
+  function fuzzyTokenMatch(searchText, token) {
+    if (searchText.includes(token)) return true;
+    if (token.length < 3) return false;
+    const limit = token.length >= 7 ? 2 : 1;
+    return searchText.split(' ').some(word =>
+      (token.length >= 3 && word.startsWith(token)) || editDistanceWithin(word, token, limit)
+    );
+  }
+
+  function paperMatchesSearch(paper, query) {
+    const tokens = normalizeSearchText(query).split(' ').filter(Boolean);
+    if (!tokens.length) return true;
+    const searchText = normalizeSearchText([
+      paper?.title,
+      ...(paper?.authors || []),
+      paper?.summary,
+      ...(paper?.categories || []),
+      paper?.absId
+    ].filter(Boolean).join(' '));
+    return tokens.every(token => fuzzyTokenMatch(searchText, token));
+  }
+
   function highlightText(text, query) {
-    if (!query) return escapeHtml(text);
     const escaped = escapeHtml(text);
-    const safeQ = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return escaped.replace(new RegExp(`(${safeQ})`, 'gi'), '<mark>$1</mark>');
+    const tokens = String(query || '').trim().split(/\s+/).filter(token => token.length > 1);
+    if (!tokens.length) return escaped;
+    const pattern = tokens
+      .map(token => token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+      .sort((a, b) => b.length - a.length)
+      .join('|');
+    return escaped.replace(new RegExp(`(${pattern})`, 'gi'), '<mark>$1</mark>');
+  }
+
+  function captionWithLatex(text) {
+    const source = cleanText(text || 'No caption available.');
+    if (!source) return 'No caption available.';
+    return source.split(/(\s+)/).map(part => {
+      if (!part || /^\s+$/.test(part) || (!part.includes('\\') && !/[_^]\{/.test(part))) {
+        return escapeHtml(part);
+      }
+      const leading = part.match(/^[“‘"']+/)?.[0] || '';
+      const trailing = part.match(/[,.;:!?]+$/)?.[0] || '';
+      const core = part.slice(leading.length, trailing ? -trailing.length : undefined);
+      return `${escapeHtml(leading)}\\(${escapeHtml(core)}\\)${escapeHtml(trailing)}`;
+    }).join('');
   }
 
   /* Favorites */
@@ -1900,15 +2041,12 @@
 
   function filterPapers(papers) {
     const semanticIds = window.__semanticResults__ ? new Set(window.__semanticResults__) : null;
-    const q = searchQuery.toLowerCase();
 
     const filtered = papers.filter(p => {
       const state = readingStates.get(p.absId) || 'unread';
-      const matchesSearch = !q || (semanticIds
+      const matchesSearch = !searchQuery || (semanticIds
         ? semanticIds.has(p.absId)
-        : p.title?.toLowerCase().includes(q) ||
-          p.authors?.some(a => a.toLowerCase().includes(q)) ||
-          p.summary?.toLowerCase().includes(q));
+        : paperMatchesSearch(p, searchQuery));
       const matchesCategory = categoryFilter === 'all' || p.categories?.includes(categoryFilter);
       const matchesReading = readingFilter === 'all' ||
         (readingFilter === 'favorite' ? favorites.has(p.absId) : state === readingFilter);
@@ -1939,6 +2077,7 @@
     const paper = window.__PAPER_BY_ID__?.get(absId);
     const figures = paperFigures(paper);
     if (!paper || !figures.length) return;
+    closePaperQuickView(false);
     galleryPaper = paper;
     galleryIndex = Math.max(0, Math.min(index, figures.length - 1));
     updateFigureGallery();
@@ -1958,12 +2097,27 @@
     document.getElementById('figurePosition').textContent = `${galleryIndex + 1} / ${figures.length}`;
     document.getElementById('figureImage').src = figure.url;
     document.getElementById('figureImage').alt = figure.caption || `Figure ${galleryIndex + 1}`;
-    const figureStage = document.getElementById('figureStage');
-    figureStage.scrollLeft = 0;
-    figureStage.scrollTop = 0;
-    document.getElementById('figureCaption').textContent = figure.caption || 'No caption available.';
+    setFigureZoomMode('fit');
+    const caption = document.getElementById('figureCaption');
+    window.MathJax?.typesetClear?.([caption]);
+    caption.innerHTML = captionWithLatex(figure.caption);
+    window.MathJax?.typesetPromise?.([caption]).catch(() => {});
     document.getElementById('figurePrev').disabled = galleryIndex === 0;
     document.getElementById('figureNext').disabled = galleryIndex === figures.length - 1;
+  }
+
+  function setFigureZoomMode(mode) {
+    galleryZoomMode = mode === 'actual' ? 'actual' : 'fit';
+    const figureStage = document.getElementById('figureStage');
+    const toggle = document.getElementById('figureZoomToggle');
+    figureStage.classList.toggle('is-fit', galleryZoomMode === 'fit');
+    figureStage.classList.toggle('is-actual', galleryZoomMode === 'actual');
+    figureStage.scrollLeft = 0;
+    figureStage.scrollTop = 0;
+    toggle.textContent = galleryZoomMode === 'fit' ? '1:1' : 'Fit';
+    toggle.setAttribute('aria-label', galleryZoomMode === 'fit'
+      ? 'Show figure at original size'
+      : 'Fit entire figure to screen');
   }
 
   function closeFigureGallery() {
@@ -1971,6 +2125,45 @@
     document.getElementById('figureImage').removeAttribute('src');
     document.body.style.overflow = '';
     galleryPaper = null;
+  }
+
+  function openPaperQuickView(paper, trigger = document.activeElement) {
+    if (!paper) return;
+    setPreviewPaper(paper);
+    const modal = document.getElementById('paperQuickView');
+    const body = document.getElementById('paperQuickViewBody');
+    const authors = (paper.authors || []).filter(Boolean).join(', ') || 'Unknown authors';
+    const figures = paperFigures(paper);
+    const date = paper.published
+      ? paper.published.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+      : '';
+    const adsUrl = `https://ui.adsabs.harvard.edu/abs/${encodeURIComponent(`arXiv:${paper.absId}`)}/abstract`;
+    quickViewReturnFocus = trigger?.closest?.('.paper-card') || null;
+    window.MathJax?.typesetClear?.([body]);
+    body.innerHTML = `
+      <div class="preview-title" id="paperQuickViewTitle">${highlightText(paper.title || '', searchQuery)}</div>
+      <div class="preview-meta">${escapeHtml(authors)}${date ? ` · ${escapeHtml(date)}` : ''}${paper.categories?.length ? ` · ${escapeHtml(paper.categories.join(', '))}` : ''}</div>
+      <div class="preview-abstract">${highlightText(paper.summary || 'No abstract available.', searchQuery)}</div>
+      <div class="paper-quickview-links">
+        ${figures.length ? `<button class="preview-action" type="button" onclick="openFigureGallery('${escapeHtml(paper.absId)}')">▧ Figures (${figures.length})</button>` : ''}
+        <a class="preview-action" href="${escapeHtml(paper.link)}" target="_blank" rel="noopener">arXiv</a>
+        <a class="preview-action" href="https://arxiv.org/pdf/${escapeHtml(paper.absId)}.pdf" target="_blank" rel="noopener">PDF</a>
+        <a class="preview-action" href="${escapeHtml(adsUrl)}" target="_blank" rel="noopener">NASA ADS</a>
+      </div>`;
+    body.scrollTop = 0;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    window.MathJax?.typesetPromise?.([body]).catch(() => {});
+    document.getElementById('paperQuickViewClose').focus({ preventScroll: true });
+  }
+
+  function closePaperQuickView(restoreFocus = true) {
+    const modal = document.getElementById('paperQuickView');
+    if (!modal || modal.hidden) return;
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (restoreFocus) quickViewReturnFocus?.focus?.({ preventScroll: true });
+    quickViewReturnFocus = null;
   }
 
   /* Render card */
@@ -2658,13 +2851,13 @@
   /* Event delegation */
 
   document.addEventListener('click', e => {
-    if (e.target?.closest?.('.fav-btn')) return;
+    if (e.target?.closest?.('a, button, .paper-visual')) return;
 
     const card = e.target?.closest?.('.paper-card');
     if (!card) return;
 
     const p = window.__PAPER_BY_ID__?.get?.(card.getAttribute('data-absid'));
-    if (p) setPreviewPaper(p);
+    if (p) openPaperQuickView(p, card);
   });
 
   document.addEventListener('focusin', e => {
@@ -2684,7 +2877,12 @@
     e.preventDefault();
 
     const p = window.__PAPER_BY_ID__?.get?.(card.getAttribute('data-absid'));
-    if (p) setPreviewPaper(p);
+    if (p) openPaperQuickView(p, card);
+  });
+
+  document.getElementById('paperQuickViewClose').addEventListener('click', () => closePaperQuickView());
+  document.getElementById('paperQuickView').addEventListener('click', event => {
+    if (event.target.id === 'paperQuickView') closePaperQuickView();
   });
 
   /* Settings panel */
@@ -2811,12 +3009,18 @@
   document.getElementById('figureNext').addEventListener('click', () => {
     if (galleryIndex < paperFigures(galleryPaper).length - 1) { galleryIndex++; updateFigureGallery(); }
   });
+  document.getElementById('figureZoomToggle').addEventListener('click', () => {
+    setFigureZoomMode(galleryZoomMode === 'fit' ? 'actual' : 'fit');
+  });
   document.getElementById('figureModal').addEventListener('click', e => {
     if (e.target.id === 'figureModal') closeFigureGallery();
   });
   document.addEventListener('keydown', e => {
-    if (document.getElementById('figureModal').hidden) return;
-    if (e.key === 'Escape') closeFigureGallery();
+    const figureModalOpen = !document.getElementById('figureModal').hidden;
+    const quickViewOpen = !document.getElementById('paperQuickView').hidden;
+    if (e.key === 'Escape' && figureModalOpen) closeFigureGallery();
+    else if (e.key === 'Escape' && quickViewOpen) closePaperQuickView();
+    if (!figureModalOpen) return;
     if (e.key === 'ArrowLeft' && galleryIndex > 0) { galleryIndex--; updateFigureGallery(); }
     if (e.key === 'ArrowRight' && galleryIndex < paperFigures(galleryPaper).length - 1) { galleryIndex++; updateFigureGallery(); }
   });

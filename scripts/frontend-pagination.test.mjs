@@ -10,11 +10,15 @@ const start = html.indexOf('function paginationItems');
 const end = html.indexOf('/* Saved-paper views */', start);
 const dateStart = html.indexOf('function offsetDate');
 const dateEnd = html.indexOf('function categoryToDataDir', dateStart);
+const searchStart = html.indexOf('function normalizeSearchText');
+const searchEnd = html.indexOf('function highlightText', searchStart);
 
 assert.ok(start >= 0 && end > start, 'pagination source block should exist');
 assert.ok(dateStart >= 0 && dateEnd > dateStart, 'date range source block should exist');
+assert.ok(searchStart >= 0 && searchEnd > searchStart, 'search helper source block should exist');
 const paginationSource = html.slice(start, end);
 const dateSource = html.slice(dateStart, dateEnd);
+const searchSource = html.slice(searchStart, searchEnd);
 
 test('inline browser scripts parse as JavaScript', () => {
   const inlineScripts = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)];
@@ -34,18 +38,51 @@ test('static frontend routes cache and fetch requests through its configured API
   assert.match(html, /fetch\(apiUrl\('\/api\/fetch'\)/);
 });
 
-test('mobile figure gallery supports touch panning and uses only the bottom close control', () => {
+test('figure gallery fits the whole image first and offers optional touch panning at 1:1', () => {
   assert.match(html, /height:\s*100dvh/);
   assert.doesNotMatch(html, /id="figureCloseMobile"/);
   assert.match(html, /<\/div>\s*<button class="figure-mobile-close-bottom" id="figureCloseBottom"/);
-  assert.match(html, /\.figure-stage\s*\{[\s\S]*?overflow:\s*auto;[\s\S]*?touch-action:\s*pan-x pan-y pinch-zoom;/);
-  assert.match(html, /\.figure-stage img\s*\{[\s\S]*?width:\s*auto;[\s\S]*?height:\s*auto;[\s\S]*?max-width:\s*none;[\s\S]*?max-height:\s*none;/);
+  assert.match(html, /\.figure-stage\.is-fit img\s*\{[\s\S]*?width:\s*100%;[\s\S]*?height:\s*100%;[\s\S]*?object-fit:\s*contain;/);
+  assert.match(html, /\.figure-stage\.is-actual\s*\{[\s\S]*?overflow:\s*auto;[\s\S]*?touch-action:\s*pan-x pan-y pinch-zoom;/);
+  assert.match(html, /\.figure-stage\.is-actual img\s*\{[\s\S]*?width:\s*auto;[\s\S]*?height:\s*auto;[\s\S]*?max-width:\s*none;[\s\S]*?max-height:\s*none;/);
   assert.match(html, /id="figureStage"/);
-  assert.match(html, /figureStage\.scrollLeft\s*=\s*0;[\s\S]*?figureStage\.scrollTop\s*=\s*0;/);
+  assert.match(html, /id="figureZoomToggle"/);
+  assert.match(html, /setFigureZoomMode\('fit'\)/);
   assert.match(html, /\.figure-modal-title\s*\{\s*display:\s*none;/);
   assert.match(html, /\.figure-mobile-close-bottom\s*\{[\s\S]*?bottom:\s*max\(10px, env\(safe-area-inset-bottom\)\)/);
   assert.match(html, /safe-area-inset-top/);
   assert.match(html, /\['figureClose', 'figureCloseBottom'\]/);
+});
+
+test('search is tokenized, partial, accent-insensitive, and typo tolerant', () => {
+  const { normalizeSearchText, paperMatchesSearch } = new Function(`
+    ${searchSource}
+    return { normalizeSearchText, paperMatchesSearch };
+  `)();
+  const paper = {
+    absId: '2609.12345',
+    title: 'Neutron-star radii in cosmological simulations',
+    authors: ['José García'],
+    summary: 'A precision analysis of dense matter.',
+    categories: ['astro-ph.HE']
+  };
+  assert.equal(normalizeSearchText('José'), 'jose');
+  assert.equal(paperMatchesSearch(paper, 'neutr radii'), true);
+  assert.equal(paperMatchesSearch(paper, 'neutrn cosmologicla'), true);
+  assert.equal(paperMatchesSearch(paper, 'jose dense'), true);
+  assert.equal(paperMatchesSearch(paper, 'exoplanet'), false);
+});
+
+test('card clicks open an accessible floating paper panel', () => {
+  assert.match(html, /id="paperQuickView"[^>]*role="dialog"[^>]*aria-modal="true"/);
+  assert.match(html, /if \(p\) openPaperQuickView\(p, card\)/);
+  assert.match(html, /paper-quickview-dialog/);
+});
+
+test('figure captions preserve and typeset LaTeX', () => {
+  assert.match(html, /captionWithLatex\(figure\.caption\)/);
+  assert.match(html, /MathJax\?\.typesetPromise\?\.\(\[caption\]\)/);
+  assert.match(html, /figure\?\.captionLatex \|\| figure\?\.caption/);
 });
 
 test('landscape phones reserve a compact control rail for the figure gallery', () => {
@@ -53,6 +90,15 @@ test('landscape phones reserve a compact control rail for the figure gallery', (
   assert.match(html, /\.figure-dialog\s*\{[\s\S]*?padding:[\s\S]*?108px/);
   assert.match(html, /\.figure-modal-foot\s*\{[\s\S]*?position:\s*absolute;[\s\S]*?width:\s*82px;/);
   assert.match(html, /\.figure-mobile-close-bottom\s*\{[\s\S]*?width:\s*82px;/);
+});
+
+test('navigation and filter controls keep a stable responsive layout', () => {
+  assert.match(html, /\.category-tabs\s*\{[\s\S]*?flex-wrap:\s*nowrap;[\s\S]*?overflow-x:\s*auto;/);
+  assert.match(html, /\.controls\s*\{[\s\S]*?display:\s*grid;[\s\S]*?grid-template-columns:/);
+  assert.match(html, /@media \(max-width:\s*1250px\)[\s\S]*?\.range-control\s*\{[\s\S]*?grid-column:\s*1 \/ -1;/);
+  assert.match(html, /@media \(max-width:\s*650px\)[\s\S]*?\.range-btn\s*\{[\s\S]*?calc\(50% - 4px\)/);
+  assert.match(html, /class="group date-control"/);
+  assert.match(html, /class="group range-control"/);
 });
 
 test('custom start date builds an inclusive range and enforces safe bounds', () => {
