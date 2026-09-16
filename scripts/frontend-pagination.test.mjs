@@ -121,13 +121,20 @@ test('landscape phones reserve a compact control rail for the figure gallery', (
 test('navigation and filter controls keep a stable responsive layout', () => {
   assert.match(html, /\.category-tabs\s*\{[\s\S]*?flex-wrap:\s*nowrap;[\s\S]*?overflow-x:\s*auto;/);
   assert.match(html, /id="savedTabs"[^>]*aria-label="Reading lists"/);
-  assert.match(html, /\.saved-tabs\s*\{[\s\S]*?position:\s*sticky;/);
+  assert.match(html, /\.saved-tabs\s*\{[\s\S]*?position:\s*static;/);
   assert.match(html, /savedContainer\.appendChild\(tab\)/);
   assert.match(html, /\.controls\s*\{[\s\S]*?display:\s*grid;[\s\S]*?grid-template-columns:/);
   assert.match(html, /@media \(max-width:\s*1250px\)[\s\S]*?\.range-control\s*\{[\s\S]*?grid-column:\s*1 \/ -1;/);
   assert.match(html, /@media \(max-width:\s*650px\)[\s\S]*?\.range-btn\s*\{[\s\S]*?calc\(50% - 4px\)/);
   assert.match(html, /class="group date-control"/);
   assert.match(html, /class="group range-control"/);
+});
+
+test('newspaper is the default format and reading lists scroll normally', () => {
+  assert.match(html, /<body class="format-newspaper theme-newspaper">/);
+  assert.match(html, /let selectedFormat = 'newspaper';/);
+  assert.match(html, /class="format-option active" data-format="newspaper"/);
+  assert.doesNotMatch(html, /\.saved-tabs\s*\{[\s\S]*?position:\s*sticky;/);
 });
 
 test('custom start date builds an inclusive range and enforces safe bounds', () => {

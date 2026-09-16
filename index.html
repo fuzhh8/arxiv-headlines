@@ -549,7 +549,7 @@
     .category-tab.read-tab.active { background: rgba(13,73,53,.82); border-color: #57f0b0; }
     #categoryTabs { margin-bottom: 6px; }
     .saved-tabs {
-      position: sticky; top: 8px; z-index: 24; justify-content: flex-end;
+      position: static; justify-content: flex-end;
       min-height: 50px; padding: 7px 9px; overflow: visible;
       border: 1px solid var(--line); border-radius: 10px;
       background: rgba(5,14,31,.9); box-shadow: 0 10px 30px rgba(0,0,0,.28);
@@ -945,7 +945,7 @@
       .main { padding: 6px; }
       .category-tabs { margin-inline: -6px; padding-inline: 6px; }
       .saved-tabs {
-        top: 4px; margin-inline: 0; padding: 6px; gap: 5px;
+        margin-inline: 0; padding: 6px; gap: 5px;
         justify-content: stretch; overflow: visible;
       }
       .saved-tabs .category-tab { flex: 1 1 0; min-width: 0; padding: 8px 5px; font-size: .74em; }
@@ -1046,7 +1046,7 @@
   </style>
 </head>
 
-<body class="format-cosmic theme-purple">
+<body class="format-newspaper theme-newspaper">
 <div class="layout">
   <main class="main">
     <header class="header">
@@ -1060,8 +1060,8 @@
           <div class="settings-section">
             <div class="settings-heading">Format</div>
             <div class="settings-format-grid" role="group" aria-label="Visual format">
-              <button class="format-option active" data-format="cosmic" type="button" onclick="setFormat('cosmic')" aria-pressed="true">Cosmic</button>
-              <button class="format-option" data-format="newspaper" type="button" onclick="setFormat('newspaper')" aria-pressed="false">Newspaper</button>
+              <button class="format-option" data-format="cosmic" type="button" onclick="setFormat('cosmic')" aria-pressed="false">Cosmic</button>
+              <button class="format-option active" data-format="newspaper" type="button" onclick="setFormat('newspaper')" aria-pressed="true">Newspaper</button>
             </div>
           </div>
           <div class="settings-section">
@@ -1257,7 +1257,7 @@
   let customStartDate = '';
   let sectionColumns = { new: 2, cross: 2, repl: 2 };
   let selectedColorTheme = 'purple';
-  let selectedFormat = 'cosmic';
+  let selectedFormat = 'newspaper';
   let searchQuery = '';
   let favorites = new Set();
   let readingStates = new Map();
@@ -1558,7 +1558,7 @@
   }
 
   function setFormat(format, save = true) {
-    selectedFormat = FORMATS.has(format) ? format : 'cosmic';
+    selectedFormat = FORMATS.has(format) ? format : 'newspaper';
     applyAppearance();
     if (save) saveSettings();
   }
