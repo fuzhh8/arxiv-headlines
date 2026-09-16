@@ -154,7 +154,7 @@
       transform: translateY(-50%); font-size: 1em; pointer-events: none; opacity: .5;
     }
     .search-wrap input[type="text"] {
-      padding: 10px 36px 10px 36px; border-radius: 10px;
+      padding: 10px 74px 10px 36px; border-radius: 10px;
       border: 2px solid var(--c1); font-size: 1em;
       background: #fff; width: 100%; font-weight: 500;
       transition: border-color .2s, box-shadow .2s;
@@ -164,7 +164,7 @@
       box-shadow: 0 0 0 3px rgba(102,126,234,.15);
     }
     .search-clear {
-      position: absolute; right: 10px; top: 50%;
+      position: absolute; right: 39px; top: 50%;
       transform: translateY(-50%);
       background: none; border: none; cursor: pointer;
       font-size: 1em; color: #aaa; padding: 2px 4px;
@@ -172,6 +172,28 @@
     }
     .search-clear:hover { color: #555; transform: translateY(-50%); box-shadow: none; }
     .search-clear.visible { display: block; }
+    .search-help {
+      position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+      width: 26px; height: 26px; min-width: 0; padding: 0; border-radius: 50%;
+      border: 1px solid color-mix(in srgb, var(--c1) 65%, transparent);
+      background: color-mix(in srgb, var(--c1) 12%, #fff); color: var(--c1);
+      font: 800 .82rem/1 system-ui, sans-serif; z-index: 2;
+    }
+    .search-help:hover:not(:disabled) { transform: translateY(-50%); box-shadow: none; }
+    .search-help-panel {
+      position: absolute; z-index: 40; top: calc(100% + 9px); right: 0;
+      width: min(420px, calc(100vw - 28px)); padding: 14px 16px;
+      border: 1px solid color-mix(in srgb, var(--c1) 55%, #fff);
+      border-radius: 12px; background: rgba(5,15,32,.97); color: #dcecff;
+      box-shadow: 0 16px 42px rgba(0,0,0,.35); line-height: 1.55;
+    }
+    .search-help-panel[hidden] { display: none; }
+    .search-help-panel strong { display: block; margin-bottom: 6px; color: #fff; }
+    .search-help-panel p { margin: 5px 0; font-size: .86rem; color: #b9cce2; }
+    .search-help-panel code {
+      display: inline-block; padding: 1px 5px; border: 1px solid #35506e;
+      border-radius: 4px; background: #071426; color: #92eaff; font-size: .82rem;
+    }
 
     button {
       padding: 10px 14px; border-radius: 10px;
@@ -867,6 +889,20 @@
       box-shadow: inset 0 -1px 0 #777; font-family: Georgia, "Times New Roman", serif;
     }
     body.theme-newspaper .search-wrap input::placeholder { color: #686862; }
+    body.theme-newspaper .search-help {
+      color: #111; background: #f8f4e9; border: 1px solid #111; border-radius: 50%;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    body.theme-newspaper .search-help-panel {
+      color: #111; background: #fffdf7; border: 1px solid #111;
+      border-radius: 0; box-shadow: 4px 4px 0 #111;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    body.theme-newspaper .search-help-panel strong,
+    body.theme-newspaper .search-help-panel p { color: #111; }
+    body.theme-newspaper .search-help-panel code {
+      color: #111; background: #eee9dc; border-color: #777; border-radius: 0;
+    }
     body.theme-newspaper :is(button, .range-btn, .preview-action, .page-button) {
       color: #111; background: #f8f4e9; border: 1px solid #111; border-radius: 0;
       box-shadow: none; font-family: Georgia, "Times New Roman", serif;
@@ -1124,8 +1160,18 @@
       </div>
       <div class="group search-wrap">
         <span class="search-icon">🔍</span>
-        <input type="text" id="searchInput" placeholder="Search title / author…" autocomplete="off" aria-label="Search papers" />
+        <input type="text" id="searchInput" placeholder='Topic, "exact phrase", title:, -exclude…' autocomplete="off" aria-label="Search papers" />
         <button class="search-clear" id="searchClear" title="Clear search" aria-label="Clear search">✕</button>
+        <button class="search-help" id="searchHelpButton" type="button" title="Advanced search help" aria-label="Advanced search help" aria-expanded="false" aria-controls="searchHelpPanel">?</button>
+        <div class="search-help-panel" id="searchHelpPanel" role="tooltip" hidden>
+          <strong>Advanced search</strong>
+          <p>All words: <code>black hole merger</code></p>
+          <p>Exact phrase: <code>"dark matter"</code></p>
+          <p>Fields: <code>title:planet</code> <code>author:smith</code> <code>abstract:dust</code> <code>cat:astro-ph.ga</code> <code>id:2609</code></p>
+          <p>Exclude: <code>-review</code> or <code>-title:survey</code></p>
+          <p>Either term: <code>exoplanet OR biosignature</code></p>
+          <p>Abbreviations such as <code>GW</code>, <code>BH</code>, <code>SMBH</code>, <code>DM</code>, <code>CMB</code>, <code>NS</code> and <code>AGN</code> are expanded automatically.</p>
+        </div>
       </div>
       <button class="filters-button" id="filtersButton" type="button" aria-expanded="false" aria-controls="filterPanel">
         ⛭ Filters <span class="filter-count" id="filterCount"></span>
@@ -1339,6 +1385,62 @@
       .trim();
   }
 
+  const SEARCH_FIELD_ALIASES = Object.freeze({
+    summary: 'abstract',
+    cat: 'category'
+  });
+
+  const SEARCH_ABBREVIATIONS = Object.freeze({
+    gw: ['gravitational wave', 'gravitational waves'],
+    bh: ['black hole', 'black holes'],
+    smbh: ['supermassive black hole', 'supermassive black holes'],
+    dm: ['dark matter'],
+    cmb: ['cosmic microwave background'],
+    ns: ['neutron star', 'neutron stars'],
+    eos: ['equation of state'],
+    agn: ['active galactic nucleus', 'active galactic nuclei'],
+    sn: ['supernova', 'supernovae']
+  });
+
+  const SEARCH_FIELD_WEIGHTS = Object.freeze({
+    title: 6,
+    author: 4,
+    abstract: 1.6,
+    category: 3,
+    id: 4.5
+  });
+
+  const paperSearchIndexCache = new WeakMap();
+
+  function parseAdvancedQuery(query) {
+    const groups = [[]];
+    const excludes = [];
+    const expression = /(-)?(?:(title|author|abstract|summary|cat|category|id):)?(?:"([^"]+)"|(\S+))/gi;
+    let match;
+
+    while ((match = expression.exec(String(query || '')))) {
+      const [, negative, rawField, quotedValue, bareValue] = match;
+      const rawValue = quotedValue ?? bareValue ?? '';
+      if (!negative && !rawField && quotedValue === undefined && /^OR$/i.test(rawValue)) {
+        if (groups.at(-1).length) groups.push([]);
+        continue;
+      }
+      const normalized = normalizeSearchText(rawValue);
+      if (!normalized) continue;
+      const field = SEARCH_FIELD_ALIASES[rawField?.toLowerCase()] || rawField?.toLowerCase() || 'all';
+      const term = {
+        field,
+        value: rawValue,
+        normalized,
+        phrase: quotedValue !== undefined
+      };
+      if (negative) excludes.push(term);
+      else groups.at(-1).push(term);
+    }
+
+    return { groups: groups.filter(group => group.length), excludes };
+  }
+
   function editDistanceWithin(left, right, limit) {
     if (Math.abs(left.length - right.length) > limit) return false;
     let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
@@ -1360,31 +1462,80 @@
     return previous[right.length] <= limit;
   }
 
-  function fuzzyTokenMatch(searchText, token) {
-    if (searchText.includes(token)) return true;
-    if (token.length < 3) return false;
-    const limit = token.length >= 7 ? 2 : 1;
-    return searchText.split(' ').some(word =>
-      (token.length >= 3 && word.startsWith(token)) || editDistanceWithin(word, token, limit)
-    );
+  function scoreSearchText(searchText, term) {
+    if (!searchText || !term) return 0;
+    const variants = [term, ...(SEARCH_ABBREVIATIONS[term] || [])];
+    let best = 0;
+
+    for (const variant of variants) {
+      if (searchText === variant) best = Math.max(best, 18);
+      else if (variant.includes(' ') && searchText.includes(variant)) best = Math.max(best, 15);
+      else {
+        const words = searchText.split(' ');
+        if (words.includes(variant)) best = Math.max(best, 12);
+        else if (variant.length >= 3 && searchText.includes(variant)) best = Math.max(best, 9);
+        else if (variant.length >= 3 && words.some(word => word.startsWith(variant))) best = Math.max(best, 7);
+        else if (variant.length >= 3) {
+          const limit = variant.length >= 7 ? 2 : 1;
+          if (words.some(word => editDistanceWithin(word, variant, limit))) best = Math.max(best, 4);
+        }
+      }
+    }
+    return best;
+  }
+
+  function getPaperSearchIndex(paper) {
+    if (paper && typeof paper === 'object' && paperSearchIndexCache.has(paper)) {
+      return paperSearchIndexCache.get(paper);
+    }
+    const index = {
+      title: normalizeSearchText(paper?.title),
+      author: normalizeSearchText((paper?.authors || []).join(' ')),
+      abstract: normalizeSearchText(paper?.summary),
+      category: normalizeSearchText((paper?.categories || []).join(' ')),
+      id: normalizeSearchText(paper?.absId)
+    };
+    if (paper && typeof paper === 'object') paperSearchIndexCache.set(paper, index);
+    return index;
+  }
+
+  function scorePaperTerm(index, term) {
+    if (term.field !== 'all') {
+      return scoreSearchText(index[term.field] || '', term.normalized) * (SEARCH_FIELD_WEIGHTS[term.field] || 1);
+    }
+    return Object.entries(SEARCH_FIELD_WEIGHTS).reduce((best, [field, weight]) => (
+      Math.max(best, scoreSearchText(index[field], term.normalized) * weight)
+    ), 0);
+  }
+
+  function paperSearchScore(paper, queryOrParsed) {
+    const parsed = typeof queryOrParsed === 'string' ? parseAdvancedQuery(queryOrParsed) : queryOrParsed;
+    if (!parsed) return 1;
+    const index = getPaperSearchIndex(paper);
+    if (parsed.excludes.some(term => scorePaperTerm(index, term) > 0)) return 0;
+    if (!parsed.groups.length) return 1;
+
+    let bestGroupScore = 0;
+    for (const group of parsed.groups) {
+      const scores = group.map(term => scorePaperTerm(index, term));
+      if (scores.every(score => score > 0)) {
+        bestGroupScore = Math.max(bestGroupScore, scores.reduce((sum, score) => sum + score, 0) + group.length * 2);
+      }
+    }
+    return bestGroupScore;
   }
 
   function paperMatchesSearch(paper, query) {
-    const tokens = normalizeSearchText(query).split(' ').filter(Boolean);
-    if (!tokens.length) return true;
-    const searchText = normalizeSearchText([
-      paper?.title,
-      ...(paper?.authors || []),
-      paper?.summary,
-      ...(paper?.categories || []),
-      paper?.absId
-    ].filter(Boolean).join(' '));
-    return tokens.every(token => fuzzyTokenMatch(searchText, token));
+    if (!String(query || '').trim()) return true;
+    return paperSearchScore(paper, query) > 0;
   }
 
   function highlightText(text, query) {
     const escaped = escapeHtml(text);
-    const tokens = String(query || '').trim().split(/\s+/).filter(token => token.length > 1);
+    const tokens = parseAdvancedQuery(query).groups
+      .flat()
+      .flatMap(term => term.phrase ? [term.value] : term.value.split(/\s+/))
+      .filter(token => token.length > 1);
     if (!tokens.length) return escaped;
     const pattern = tokens
       .map(token => token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
@@ -2219,13 +2370,13 @@
   /* Filter */
 
   function filterPapers(papers) {
-    const semanticIds = window.__semanticResults__ ? new Set(window.__semanticResults__) : null;
-
-    const filtered = papers.filter(p => {
+    const parsedSearch = searchQuery ? parseAdvancedQuery(searchQuery) : null;
+    const filtered = papers.map(p => ({
+      paper: p,
+      searchScore: parsedSearch ? paperSearchScore(p, parsedSearch) : 0
+    })).filter(({ paper: p, searchScore }) => {
       const state = readingStates.get(p.absId) || 'unread';
-      const matchesSearch = !searchQuery || (semanticIds
-        ? semanticIds.has(p.absId)
-        : paperMatchesSearch(p, searchQuery));
+      const matchesSearch = !searchQuery || searchScore > 0;
       const matchesCategory = categoryFilter === 'all' || p.categories?.includes(categoryFilter);
       const matchesReading = readingFilter === 'all' ||
         (readingFilter === 'favorite' ? favorites.has(p.absId) : state === readingFilter);
@@ -2235,12 +2386,17 @@
       return matchesSearch && matchesCategory && matchesReading && matchesImage;
     });
 
-    return filtered.sort((a, b) => {
+    return filtered.sort((aEntry, bEntry) => {
+      if (searchQuery && bEntry.searchScore !== aEntry.searchScore) {
+        return bEntry.searchScore - aEntry.searchScore;
+      }
+      const a = aEntry.paper;
+      const b = bEntry.paper;
       if (sortMode === 'title') return (a.title || '').localeCompare(b.title || '');
       const aDate = a.catchupDate || a.published?.toISOString?.() || '';
       const bDate = b.catchupDate || b.published?.toISOString?.() || '';
       return sortMode === 'date-asc' ? aDate.localeCompare(bDate) : bDate.localeCompare(aDate);
-    });
+    }).map(entry => entry.paper);
   }
 
   function rerenderCurrentView(preferredAbsId = '') {
@@ -3140,7 +3296,14 @@
 
   const searchInput = document.getElementById('searchInput');
   const searchClear = document.getElementById('searchClear');
+  const searchHelpButton = document.getElementById('searchHelpButton');
+  const searchHelpPanel = document.getElementById('searchHelpPanel');
   let searchDebounce = null;
+
+  function setSearchHelpOpen(open) {
+    searchHelpPanel.hidden = !open;
+    searchHelpButton.setAttribute('aria-expanded', String(open));
+  }
 
   searchInput.addEventListener('input', () => {
     clearTimeout(searchDebounce);
@@ -3151,6 +3314,20 @@
     searchInput.value = '';
     applySearch('');
     searchInput.focus();
+  });
+
+  searchHelpButton.addEventListener('click', event => {
+    event.stopPropagation();
+    setSearchHelpOpen(searchHelpPanel.hidden);
+  });
+
+  searchHelpPanel.addEventListener('click', event => event.stopPropagation());
+  document.addEventListener('click', () => setSearchHelpOpen(false));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !searchHelpPanel.hidden) {
+      setSearchHelpOpen(false);
+      searchHelpButton.focus();
+    }
   });
 
   /* Advanced filters */

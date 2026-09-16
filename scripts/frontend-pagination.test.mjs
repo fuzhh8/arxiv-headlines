@@ -59,9 +59,9 @@ test('figure gallery fits the whole image first and offers optional touch pannin
 });
 
 test('search is tokenized, partial, accent-insensitive, and typo tolerant', () => {
-  const { normalizeSearchText, paperMatchesSearch } = new Function(`
+  const { normalizeSearchText, paperMatchesSearch, paperSearchScore } = new Function(`
     ${searchSource}
-    return { normalizeSearchText, paperMatchesSearch };
+    return { normalizeSearchText, paperMatchesSearch, paperSearchScore };
   `)();
   const paper = {
     absId: '2609.12345',
@@ -75,6 +75,38 @@ test('search is tokenized, partial, accent-insensitive, and typo tolerant', () =
   assert.equal(paperMatchesSearch(paper, 'neutrn cosmologicla'), true);
   assert.equal(paperMatchesSearch(paper, 'jose dense'), true);
   assert.equal(paperMatchesSearch(paper, 'exoplanet'), false);
+
+  assert.equal(paperMatchesSearch(paper, 'title:neutrn'), true);
+  assert.equal(paperMatchesSearch(paper, 'author:garcia'), true);
+  assert.equal(paperMatchesSearch(paper, 'abstract:"dense matter"'), true);
+  assert.equal(paperMatchesSearch(paper, 'cat:astro-ph.he'), true);
+  assert.equal(paperMatchesSearch(paper, 'id:2609'), true);
+  assert.equal(paperMatchesSearch(paper, 'neutron -cosmological'), false);
+  assert.equal(paperMatchesSearch(paper, 'exoplanet OR neutron'), true);
+  assert.equal(paperMatchesSearch(paper, 'NS'), true);
+  assert.equal(paperMatchesSearch({ title: 'Constraints on galaxy formation' }, 'NS'), false);
+
+  const abstractOnly = {
+    absId: '2609.54321',
+    title: 'Precision constraints from new observations',
+    authors: ['A. Researcher'],
+    summary: 'We determine the neutron star radius.',
+    categories: ['astro-ph.HE']
+  };
+  assert.ok(
+    paperSearchScore(paper, 'neutron') > paperSearchScore(abstractOnly, 'neutron'),
+    'title matches should rank above abstract-only matches'
+  );
+});
+
+test('advanced search help documents supported query syntax', () => {
+  assert.match(html, /id="searchHelpButton"/);
+  assert.match(html, /id="searchHelpPanel"/);
+  assert.match(html, /title:planet/);
+  assert.match(html, /author:smith/);
+  assert.match(html, /exoplanet OR biosignature/);
+  assert.match(html, /function parseAdvancedQuery/);
+  assert.match(html, /searchScore/);
 });
 
 test('card clicks open an accessible floating paper panel', () => {
