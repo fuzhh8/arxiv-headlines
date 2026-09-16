@@ -105,6 +105,7 @@ test('settings include a persistent monochrome newspaper format', () => {
   assert.match(html, /body\.theme-newspaper/);
   assert.match(html, /THEMES = new Set\([^;]*'newspaper'/);
   assert.match(html, /body\.theme-newspaper \.paper-card/);
+  assert.match(html, /body\.theme-newspaper \.paper-visual img\s*\{\s*filter:\s*none;/);
 });
 
 test('landscape phones reserve a compact control rail for the figure gallery', () => {
