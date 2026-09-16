@@ -12,13 +12,17 @@ const dateStart = html.indexOf('function offsetDate');
 const dateEnd = html.indexOf('function categoryToDataDir', dateStart);
 const searchStart = html.indexOf('function normalizeSearchText');
 const searchEnd = html.indexOf('function highlightText', searchStart);
+const captionStart = html.indexOf('function escapeLatexText');
+const captionEnd = html.indexOf('/* Favorites */', captionStart);
 
 assert.ok(start >= 0 && end > start, 'pagination source block should exist');
 assert.ok(dateStart >= 0 && dateEnd > dateStart, 'date range source block should exist');
 assert.ok(searchStart >= 0 && searchEnd > searchStart, 'search helper source block should exist');
+assert.ok(captionStart >= 0 && captionEnd > captionStart, 'caption helper source block should exist');
 const paginationSource = html.slice(start, end);
 const dateSource = html.slice(dateStart, dateEnd);
 const searchSource = html.slice(searchStart, searchEnd);
+const captionSource = html.slice(captionStart, captionEnd);
 
 test('inline browser scripts parse as JavaScript', () => {
   const inlineScripts = [...html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi)];
@@ -83,6 +87,24 @@ test('figure captions preserve and typeset LaTeX', () => {
   assert.match(html, /captionWithLatex\(figure\.caption\)/);
   assert.match(html, /MathJax\?\.typesetPromise\?\.\(\[caption\]\)/);
   assert.match(html, /figure\?\.captionLatex \|\| figure\?\.caption/);
+
+  const { captionWithLatex } = new Function('cleanText', 'escapeHtml', `
+    ${captionSource}
+    return { captionWithLatex };
+  `)(value => String(value || '').replace(/\s+/g, ' ').trim(), value => String(value));
+  const rendered = captionWithLatex('Radius R = $2.08\\,M_{\\odot}$ from data.');
+  assert.match(rendered, /\\\(\\text\{Radius\}\\\)/);
+  assert.match(rendered, /\\\(R\\\)/);
+  assert.match(rendered, /\\\(=\\\)/);
+  assert.match(rendered, /\\\(2\.08\\,M_\{\\odot\}\\\)/);
+  assert.match(rendered, /\\\(\\text\{from\}\\\)/);
+});
+
+test('settings include a persistent monochrome newspaper format', () => {
+  assert.match(html, /setTheme\('newspaper'\)/);
+  assert.match(html, /body\.theme-newspaper/);
+  assert.match(html, /THEMES = new Set\([^;]*'newspaper'/);
+  assert.match(html, /body\.theme-newspaper \.paper-card/);
 });
 
 test('landscape phones reserve a compact control rail for the figure gallery', () => {
