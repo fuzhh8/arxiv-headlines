@@ -547,6 +547,15 @@
     .category-tab.read-tab { border-color: rgba(87,240,176,.38); color: #8ff0bd; }
     .category-tab.queue-tab.active { background: rgba(12,67,88,.82); border-color: #75e7ff; }
     .category-tab.read-tab.active { background: rgba(13,73,53,.82); border-color: #57f0b0; }
+    #categoryTabs { margin-bottom: 6px; }
+    .saved-tabs {
+      position: sticky; top: 8px; z-index: 24; justify-content: flex-end;
+      min-height: 50px; padding: 7px 9px; overflow: visible;
+      border: 1px solid var(--line); border-radius: 10px;
+      background: rgba(5,14,31,.9); box-shadow: 0 10px 30px rgba(0,0,0,.28);
+      backdrop-filter: blur(18px) saturate(135%);
+    }
+    .saved-tabs .category-tab { padding: 8px 13px; }
 
     .controls { border-radius: 12px; padding: 14px 16px; }
     label { color: #a9bed0; }
@@ -657,6 +666,9 @@
       margin-bottom: 9px; color: #7892aa; font-size: .65em;
       font-weight: 900; letter-spacing: .18em; text-transform: uppercase;
     }
+    .settings-format-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .format-option { min-width: 0; padding: 8px 10px; font-size: .78em; }
+    .format-option.active { color: #06101e; background: var(--cyan); border-color: var(--cyan); }
     .settings-theme-grid { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .settings-panel .theme-dot {
       min-width: 0; width: 24px; height: 24px; padding: 0;
@@ -821,11 +833,7 @@
       font-weight: 950; letter-spacing: .035em; text-shadow: none;
     }
     body.theme-newspaper .header h1 span { color: #111; }
-    body.theme-newspaper .theme-dot.newspaper {
-      border-radius: 2px; background: linear-gradient(90deg, #111 0 50%, #f8f4e9 50%);
-      border-color: #8c887f;
-    }
-    body.theme-newspaper .settings-panel .theme-dot:not(.newspaper) { border-radius: 50%; }
+    body.theme-newspaper .settings-panel .theme-dot { border-radius: 50%; }
     body.theme-newspaper .theme-dot.purple { background: linear-gradient(135deg,#667eea,#764ba2); }
     body.theme-newspaper .theme-dot.ocean  { background: linear-gradient(135deg,#2E3192,#1BFFFF); }
     body.theme-newspaper .theme-dot.sunset { background: linear-gradient(135deg,#FF512F,#F09819); }
@@ -847,6 +855,10 @@
     body.theme-newspaper .category-tab.queue-tab.active,
     body.theme-newspaper .category-tab.read-tab.active {
       color: #fff; background: #111; border-color: #111; box-shadow: none;
+    }
+    body.theme-newspaper .saved-tabs {
+      background: #f7f3e9; border: 1px solid #111; border-radius: 0;
+      box-shadow: 3px 3px 0 #111; backdrop-filter: none;
     }
     body.theme-newspaper label,
     body.theme-newspaper :is(.settings-switch, .settings-select, .settings-heading) { color: #222; }
@@ -875,7 +887,7 @@
       transform: translate(-2px,-2px); border-color: #111; box-shadow: 7px 7px 0 #111;
     }
     body.theme-newspaper .paper-visual { background: #eeeae0; border-bottom-color: #111; }
-    body.theme-newspaper .paper-visual img { filter: none; }
+    body.theme-newspaper .paper-visual img { filter: none !important; opacity: 1; mix-blend-mode: normal; }
     body.theme-newspaper :is(.paper-title, .preview-title) {
       color: #111; font-family: Georgia, "Times New Roman", serif; letter-spacing: 0;
     }
@@ -887,6 +899,7 @@
     body.theme-newspaper .pill { color: #111; background: transparent; border-color: #111; }
     body.theme-newspaper :is(.info, .error) { color: #111; background: #f0ece2; border-color: #111; }
     body.theme-newspaper .settings-button { color: #fff; background: #111; border-color: #111; backdrop-filter: none; }
+    body.theme-newspaper .format-option.active { color: #fff; background: #111; border-color: #111; }
     body.theme-newspaper .settings-panel .theme-dot.active { border-color: #111; outline: 2px solid #fffdf7; outline-offset: -4px; }
     body.theme-newspaper .settings-switch input { background: #fff; border-color: #111; }
     body.theme-newspaper .settings-switch input:checked { background: #111; border-color: #111; box-shadow: none; }
@@ -931,6 +944,11 @@
       body { padding: 6px; overflow-x: hidden; }
       .main { padding: 6px; }
       .category-tabs { margin-inline: -6px; padding-inline: 6px; }
+      .saved-tabs {
+        top: 4px; margin-inline: 0; padding: 6px; gap: 5px;
+        justify-content: stretch; overflow: visible;
+      }
+      .saved-tabs .category-tab { flex: 1 1 0; min-width: 0; padding: 8px 5px; font-size: .74em; }
       .controls { grid-template-columns: minmax(0, 1fr); }
       .controls > .group, .date-control, .range-control, .search-wrap, .filters-button {
         grid-column: 1; grid-row: auto; width: 100%; min-width: 0; max-width: none;
@@ -1028,7 +1046,7 @@
   </style>
 </head>
 
-<body class="theme-purple">
+<body class="format-cosmic theme-purple">
 <div class="layout">
   <main class="main">
     <header class="header">
@@ -1040,8 +1058,15 @@
                 aria-expanded="false" aria-controls="settingsPanel">⚙ Settings</button>
         <div class="settings-panel" id="settingsPanel" hidden>
           <div class="settings-section">
-            <div class="settings-heading">Color signal</div>
-            <div class="settings-theme-grid" role="group" aria-label="Color theme">
+            <div class="settings-heading">Format</div>
+            <div class="settings-format-grid" role="group" aria-label="Visual format">
+              <button class="format-option active" data-format="cosmic" type="button" onclick="setFormat('cosmic')" aria-pressed="true">Cosmic</button>
+              <button class="format-option" data-format="newspaper" type="button" onclick="setFormat('newspaper')" aria-pressed="false">Newspaper</button>
+            </div>
+          </div>
+          <div class="settings-section">
+            <div class="settings-heading">Cosmic accent color</div>
+            <div class="settings-theme-grid" role="group" aria-label="Cosmic accent color">
               <button class="theme-dot purple active" type="button" onclick="setTheme('purple')" title="Purple" aria-label="Purple theme"></button>
               <button class="theme-dot ocean" type="button" onclick="setTheme('ocean')" title="Ocean" aria-label="Ocean theme"></button>
               <button class="theme-dot sunset" type="button" onclick="setTheme('sunset')" title="Sunset" aria-label="Sunset theme"></button>
@@ -1049,7 +1074,6 @@
               <button class="theme-dot night" type="button" onclick="setTheme('night')" title="Night" aria-label="Night theme"></button>
               <button class="theme-dot rose" type="button" onclick="setTheme('rose')" title="Rose" aria-label="Rose theme"></button>
               <button class="theme-dot dark" type="button" onclick="setTheme('dark')" title="Dark" aria-label="Dark theme"></button>
-              <button class="theme-dot newspaper" type="button" onclick="setTheme('newspaper')" title="Newspaper" aria-label="Black and white newspaper theme"></button>
             </div>
           </div>
           <div class="settings-section">
@@ -1078,6 +1102,7 @@
     </header>
 
     <nav class="category-tabs" id="categoryTabs" aria-label="arXiv categories"></nav>
+    <nav class="category-tabs saved-tabs" id="savedTabs" aria-label="Reading lists"></nav>
 
     <div class="controls" role="toolbar" aria-label="Filter controls">
       <div class="group date-control">
@@ -1220,7 +1245,8 @@
   const TO_READ_TAB_CODE = '__to_read__';
   const READ_TAB_CODE = '__read__';
   const SAVED_TAB_CODES = new Set([FAV_TAB_CODE, TO_READ_TAB_CODE, READ_TAB_CODE]);
-  const THEMES = new Set(['purple', 'ocean', 'sunset', 'forest', 'night', 'rose', 'dark', 'newspaper']);
+  const COLOR_THEMES = new Set(['purple', 'ocean', 'sunset', 'forest', 'night', 'rose', 'dark']);
+  const FORMATS = new Set(['cosmic', 'newspaper']);
   const API_BASE_URL = String(window.ARXIV_HEADLINES_CONFIG?.apiBaseUrl || '').trim().replace(/\/+$/, '');
 
   /* State */
@@ -1230,6 +1256,8 @@
   let currentDateRange = 1;
   let customStartDate = '';
   let sectionColumns = { new: 2, cross: 2, repl: 2 };
+  let selectedColorTheme = 'purple';
+  let selectedFormat = 'cosmic';
   let searchQuery = '';
   let favorites = new Set();
   let readingStates = new Map();
@@ -1447,8 +1475,9 @@
   function saveSettings() {
     try {
       localStorage.setItem('arxivSettings', JSON.stringify({
-        settingsVersion: 2,
-        theme: document.body.className.replace('theme-', ''),
+        settingsVersion: 3,
+        theme: selectedColorTheme,
+        format: selectedFormat,
         dateRange: currentDateRange,
         customStartDate,
         sectionColumns,
@@ -1474,7 +1503,9 @@
 
   function applySettings(s) {
     if (!s) return;
-    if (s.theme) setTheme(s.theme, false);
+    const legacyNewspaper = s.theme === 'newspaper';
+    setTheme(COLOR_THEMES.has(s.theme) ? s.theme : 'purple', false);
+    setFormat(FORMATS.has(s.format) ? s.format : legacyNewspaper ? 'newspaper' : 'cosmic', false);
     if (/^\d{4}-\d{2}-\d{2}$/.test(s.customStartDate || '')) {
       customStartDate = s.customStartDate;
       document.getElementById('rangeStart').value = customStartDate;
@@ -1507,11 +1538,28 @@
 
   /* Theme */
 
+  function applyAppearance() {
+    const visualTheme = selectedFormat === 'newspaper' ? 'newspaper' : selectedColorTheme;
+    document.body.className = `format-${selectedFormat} theme-${visualTheme}`;
+    document.querySelectorAll('.theme-dot').forEach(dot => {
+      dot.classList.toggle('active', dot.classList.contains(selectedColorTheme));
+    });
+    document.querySelectorAll('.format-option').forEach(option => {
+      const active = option.dataset.format === selectedFormat;
+      option.classList.toggle('active', active);
+      option.setAttribute('aria-pressed', String(active));
+    });
+  }
+
   function setTheme(theme, save = true) {
-    const nextTheme = THEMES.has(theme) ? theme : 'purple';
-    document.body.className = `theme-${nextTheme}`;
-    document.querySelectorAll('.theme-dot').forEach(d => d.classList.remove('active'));
-    document.querySelector(`.theme-dot.${nextTheme}`)?.classList.add('active');
+    selectedColorTheme = COLOR_THEMES.has(theme) ? theme : 'purple';
+    applyAppearance();
+    if (save) saveSettings();
+  }
+
+  function setFormat(format, save = true) {
+    selectedFormat = FORMATS.has(format) ? format : 'cosmic';
+    applyAppearance();
     if (save) saveSettings();
   }
 
@@ -2664,10 +2712,12 @@
 
   function renderCategoryTabs() {
     const container = document.getElementById('categoryTabs');
+    const savedContainer = document.getElementById('savedTabs');
 
-    if (!container) return;
+    if (!container || !savedContainer) return;
 
     container.innerHTML = '';
+    savedContainer.innerHTML = '';
 
     for (const cat of CATEGORIES) {
       const tab = document.createElement('button');
@@ -2705,7 +2755,7 @@
         renderCategoryTabs();
         renderSavedView(item.code);
       };
-      container.appendChild(tab);
+      savedContainer.appendChild(tab);
     }
   }
 

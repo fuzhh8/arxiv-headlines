@@ -33,7 +33,7 @@ test('inline browser scripts parse as JavaScript', () => {
 test('right panel and PDF preview are off by default', () => {
   assert.doesNotMatch(html, /id="previewPanelToggle"[^>]*\bchecked\b/);
   assert.doesNotMatch(html, /id="pdfPreviewToggle"[^>]*\bchecked\b/);
-  assert.match(html, /settingsVersion:\s*2/);
+  assert.match(html, /settingsVersion:\s*3/);
 });
 
 test('static frontend routes cache and fetch requests through its configured API', () => {
@@ -101,11 +101,14 @@ test('figure captions preserve and typeset LaTeX', () => {
 });
 
 test('settings include a persistent monochrome newspaper format', () => {
-  assert.match(html, /setTheme\('newspaper'\)/);
+  assert.match(html, /setFormat\('newspaper'\)/);
+  assert.match(html, /setFormat\('cosmic'\)/);
   assert.match(html, /body\.theme-newspaper/);
-  assert.match(html, /THEMES = new Set\([^;]*'newspaper'/);
+  assert.match(html, /FORMATS = new Set\(\['cosmic', 'newspaper'\]\)/);
+  assert.doesNotMatch(html, /class="theme-dot newspaper"/);
+  assert.match(html, /Cosmic accent color/);
   assert.match(html, /body\.theme-newspaper \.paper-card/);
-  assert.match(html, /body\.theme-newspaper \.paper-visual img\s*\{\s*filter:\s*none;/);
+  assert.match(html, /body\.theme-newspaper \.paper-visual img\s*\{\s*filter:\s*none\s*!important;/);
 });
 
 test('landscape phones reserve a compact control rail for the figure gallery', () => {
@@ -117,6 +120,9 @@ test('landscape phones reserve a compact control rail for the figure gallery', (
 
 test('navigation and filter controls keep a stable responsive layout', () => {
   assert.match(html, /\.category-tabs\s*\{[\s\S]*?flex-wrap:\s*nowrap;[\s\S]*?overflow-x:\s*auto;/);
+  assert.match(html, /id="savedTabs"[^>]*aria-label="Reading lists"/);
+  assert.match(html, /\.saved-tabs\s*\{[\s\S]*?position:\s*sticky;/);
+  assert.match(html, /savedContainer\.appendChild\(tab\)/);
   assert.match(html, /\.controls\s*\{[\s\S]*?display:\s*grid;[\s\S]*?grid-template-columns:/);
   assert.match(html, /@media \(max-width:\s*1250px\)[\s\S]*?\.range-control\s*\{[\s\S]*?grid-column:\s*1 \/ -1;/);
   assert.match(html, /@media \(max-width:\s*650px\)[\s\S]*?\.range-btn\s*\{[\s\S]*?calc\(50% - 4px\)/);
