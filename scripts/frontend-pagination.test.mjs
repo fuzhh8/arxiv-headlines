@@ -42,6 +42,14 @@ test('static frontend routes cache and fetch requests through its configured API
   assert.match(html, /fetch\(apiUrl\('\/api\/fetch'\)/);
 });
 
+test('startup targets today instead of a stale latest cache snapshot', () => {
+  assert.match(
+    html,
+    /document\.getElementById\('day'\)\.value\s*=\s*defaultArxivDate\(\);/
+  );
+  assert.doesNotMatch(html, /latestPayload\?\.date\s*\|\|\s*defaultArxivDate\(\)/);
+});
+
 test('figure gallery fits the whole image first and offers optional touch panning at 1:1', () => {
   assert.match(html, /height:\s*100dvh/);
   assert.doesNotMatch(html, /id="figureCloseMobile"/);

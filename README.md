@@ -13,9 +13,11 @@ requests for the same category/date share one fetch, and pending figure work
 resumes after a page or server restart.
 
 The browser-only live/CORS-proxy path remains as a fallback for static hosting.
-The latest valid cached date is selected automatically. When an arXiv HTML
-version is available, the server stores up to eight research figures and their
-captions for lazy-loaded card previews and the full figure gallery.
+Each opening targets the current arXiv announcement day (or Friday on a
+weekend); when that cache entry is missing, the on-demand service fetches and
+stores it before rendering. When an arXiv HTML version is available, the server
+stores up to eight research figures and their captions for lazy-loaded card
+previews and the full figure gallery.
 
 The interface also includes advanced sorting/filtering, dedicated favorite/
 to-read/read views, click-to-load PDF review, and direct arXiv, PDF, and NASA ADS

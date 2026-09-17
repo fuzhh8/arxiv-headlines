@@ -1086,9 +1086,7 @@
 <div class="layout">
   <main class="main">
     <header class="header">
-      <div class="header-kicker">Deep Space Research Feed</div>
       <h1><span>arXiv</span> Headlines</h1>
-      <div class="header-subtitle">Signal stream from the scientific frontier</div>
       <div class="settings-wrap" id="settingsWrap">
         <button class="settings-button" id="settingsButton" type="button"
                 aria-expanded="false" aria-controls="settingsPanel">⚙ Settings</button>
@@ -2016,23 +2014,6 @@
 
     figureWatchers.set(key, task);
     return task;
-  }
-
-  async function fetchLatestStatic(category) {
-    if (!category || SAVED_TAB_CODES.has(category)) return null;
-    const dir = categoryToDataDir(category);
-    try {
-      const resp = await fetch(`data/${encodeURIComponent(dir)}/latest.json`, {
-        headers: { Accept: 'application/json' },
-        cache: 'no-cache'
-      });
-      if (!resp.ok) return null;
-      const payload = await resp.json();
-      return /^\d{4}-\d{2}-\d{2}$/.test(payload?.date || '') &&
-        isValidStaticPayload(payload, category, payload.date) ? payload : null;
-    } catch (_) {
-      return null;
-    }
   }
 
   function mergeStaticPayloads(payloads, category, selectedDate, dateList, options = {}) {
@@ -3414,9 +3395,11 @@
     syncAdvancedFilterControls();
     renderCategoryTabs();
 
-    const latestCategory = SAVED_TAB_CODES.has(selectedCategory) ? 'astro-ph' : selectedCategory;
-    const latestPayload = await fetchLatestStatic(latestCategory);
-    document.getElementById('day').value = latestPayload?.date || defaultArxivDate();
+    // Always open on the current arXiv announcement day.  `latest.json` is a
+    // cache snapshot and can legitimately lag behind today; selecting it here
+    // prevented loadPapers() from asking the on-demand service for new papers.
+    // A missing current-day cache is fetched and stored by loadPapers().
+    document.getElementById('day').value = defaultArxivDate();
     const rangeStartInput = document.getElementById('rangeStart');
     rangeStartInput.max = document.getElementById('day').value;
     if (currentDateRange === 'custom' && !rangeStartInput.value) {
