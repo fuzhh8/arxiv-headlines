@@ -24,7 +24,18 @@ to-read/read views, click-to-load PDF review, and direct arXiv, PDF, and NASA AD
 links. Paper lists are paginated (24 per page by default, configurable to 12 or
 48) so week-long feeds do not render hundreds of cards, figures, and MathJax
 expressions at once. The right detail panel and PDF preview are off by default;
-both can be enabled under Settings. User states stay in browser `localStorage`.
+both can be enabled under Settings. Custom date ranges are limited to the three
+calendar months ending on the selected date, and the control shows its earliest
+valid start date. Cache reads are concurrency-limited so broad ranges do not
+issue an unbounded burst of browser requests.
+
+Favorites, To read, and Read remain available locally by default. In Settings,
+users can opt into cross-device sync: the site generates a private sync code,
+which must be copied to the other device. The code is the access credential, so
+it should not be shared publicly. The Render API hashes it before selecting the
+stored record. When R2 is configured, these records are durable; otherwise they
+use only the server's local development storage. The same Settings panel also
+has an optional feedback form; feedback is saved to the configured R2 bucket.
 
 Run locally from this directory (Node.js 18 or newer):
 
@@ -81,6 +92,7 @@ The R2 bucket can remain private because browsers read it through `/api/cache`.
 3. Open **Settings → Pages** and select **GitHub Actions** as the source.
 4. Open **Actions → Deploy GitHub Pages → Run workflow** once.
 5. Use `https://fuzhh8.github.io/arxiv-headlines/` as the normal website URL.
+
 
 The Pages workflow builds `dist/`, injects the public Render API URL into
 `config.js`, and deploys the artifact. It also republishes after the scheduled

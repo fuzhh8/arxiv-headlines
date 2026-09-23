@@ -222,6 +222,7 @@
     }
     .custom-start-wrap[hidden] { display: none; }
     .custom-start-wrap input { min-width: 145px; }
+    .custom-range-hint { flex: 1 0 100%; color: var(--muted); font-size: .76em; line-height: 1.35; }
 
     .pdf-toggle {
       display: inline-flex; align-items: center; gap: 6px;
@@ -685,9 +686,17 @@
       margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--line);
     }
     .settings-heading {
-      margin-bottom: 9px; color: #7892aa; font-size: .65em;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      margin-bottom: 0; color: #7892aa; font-size: .65em;
       font-weight: 900; letter-spacing: .18em; text-transform: uppercase;
+      cursor: pointer; list-style: none;
     }
+    .settings-heading::-webkit-details-marker { display: none; }
+    .settings-heading::after { content: '+'; color: var(--cyan); font-size: 1.35em; line-height: 1; }
+    .settings-section[open] .settings-heading { margin-bottom: 9px; }
+    .settings-section[open] .settings-heading::after { content: '−'; }
+    .settings-subheading { margin-top: 14px !important; cursor: default; }
+    .settings-subheading::after { display: none; }
     .settings-format-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .format-option { min-width: 0; padding: 8px 10px; font-size: .78em; }
     .format-option.active { color: #06101e; background: var(--cyan); border-color: var(--cyan); }
@@ -728,6 +737,19 @@
       border-radius: 8px; color: var(--ink); background: #0a1629;
       font-size: .95em;
     }
+    .settings-note { margin: 0 0 9px; color: #8fa8bd; font-size: .76em; line-height: 1.45; }
+    .settings-contact { color: var(--cyan); font-size: .86em; font-weight: 700; overflow-wrap: anywhere; }
+    .settings-contact:hover { text-decoration: underline; }
+    .settings-input { display: grid; gap: 6px; color: #bdd0de; font-size: .84em; }
+    .settings-input input, .settings-input textarea {
+      width: 100%; padding: 8px 10px; border: 1px solid #415873; border-radius: 8px;
+      color: var(--ink); background: #0a1629; font: inherit;
+    }
+    .settings-input textarea { min-height: 76px; resize: vertical; line-height: 1.45; }
+    .settings-actions { display: flex; gap: 7px; margin-top: 8px; }
+    .settings-actions button { min-width: 0; flex: 1; padding: 8px 9px; font-size: .76em; }
+    .settings-status { min-height: 1.3em; margin-top: 8px; color: #8fa8bd; font-size: .75em; line-height: 1.4; }
+    .settings-status.error { margin: 8px 0 0; padding: 0; background: none; border: 0; color: #ffabc0; }
 
     .filters-button { min-width: 0; align-self: end; padding: 10px 14px; white-space: nowrap; }
     .filter-count {
@@ -1091,15 +1113,13 @@
         <button class="settings-button" id="settingsButton" type="button"
                 aria-expanded="false" aria-controls="settingsPanel">⚙ Settings</button>
         <div class="settings-panel" id="settingsPanel" hidden>
-          <div class="settings-section">
-            <div class="settings-heading">Format</div>
+          <details class="settings-section">
+            <summary class="settings-heading">Format &amp; cosmic color</summary>
             <div class="settings-format-grid" role="group" aria-label="Visual format">
               <button class="format-option" data-format="cosmic" type="button" onclick="setFormat('cosmic')" aria-pressed="false">Cosmic</button>
               <button class="format-option active" data-format="newspaper" type="button" onclick="setFormat('newspaper')" aria-pressed="true">Newspaper</button>
             </div>
-          </div>
-          <div class="settings-section">
-            <div class="settings-heading">Cosmic accent color</div>
+            <div class="settings-heading settings-subheading">Cosmic accent color</div>
             <div class="settings-theme-grid" role="group" aria-label="Cosmic accent color">
               <button class="theme-dot purple active" type="button" onclick="setTheme('purple')" title="Purple" aria-label="Purple theme"></button>
               <button class="theme-dot ocean" type="button" onclick="setTheme('ocean')" title="Ocean" aria-label="Ocean theme"></button>
@@ -1109,9 +1129,9 @@
               <button class="theme-dot rose" type="button" onclick="setTheme('rose')" title="Rose" aria-label="Rose theme"></button>
               <button class="theme-dot dark" type="button" onclick="setTheme('dark')" title="Dark" aria-label="Dark theme"></button>
             </div>
-          </div>
-          <div class="settings-section">
-            <div class="settings-heading">Display systems</div>
+          </details>
+          <details class="settings-section">
+            <summary class="settings-heading">Display systems</summary>
             <div class="settings-switches">
               <label class="settings-switch">
                 <span>Right panel</span>
@@ -1130,7 +1150,35 @@
                 </select>
               </label>
             </div>
-          </div>
+          </details>
+          <details class="settings-section">
+            <summary class="settings-heading">Sync reading lists</summary>
+            <p class="settings-note">Sync favorites, To read, and Read across devices with a private sync code. Keep the code somewhere safe.</p>
+            <label class="settings-input" for="syncCodeInput">
+              <span>Sync code</span>
+              <input id="syncCodeInput" type="text" autocomplete="off" spellcheck="false" placeholder="Create or paste a sync code" aria-describedby="syncStatus" />
+            </label>
+            <div class="settings-actions">
+              <button id="syncEnableButton" type="button">Enable sync</button>
+              <button id="syncCopyButton" type="button">Copy code</button>
+            </div>
+            <div class="settings-status" id="syncStatus" role="status"></div>
+          </details>
+          <details class="settings-section">
+            <summary class="settings-heading">Feedback</summary>
+            <p class="settings-note">Tell us what would make arXiv Headlines more useful.</p>
+            <label class="settings-input" for="feedbackMessage">
+              <span>Your feedback</span>
+              <textarea id="feedbackMessage" maxlength="2000" placeholder="Feature request, bug report, or idea…"></textarea>
+            </label>
+            <div class="settings-actions"><button id="feedbackSubmitButton" type="button">Send feedback</button></div>
+            <div class="settings-status" id="feedbackStatus" role="status"></div>
+          </details>
+          <details class="settings-section">
+            <summary class="settings-heading">Contact</summary>
+            <p class="settings-note">For questions or direct feedback, email</p>
+            <a class="settings-contact" href="mailto:zhfu@mpia.de">zhfu@mpia.de</a>
+          </details>
         </div>
       </div>
     </header>
@@ -1153,6 +1201,7 @@
           <label class="custom-start-wrap" id="customStartWrap" for="rangeStart" hidden>
             Start
             <input id="rangeStart" type="date" aria-label="Custom range start date" />
+            <span class="custom-range-hint" id="customRangeHint">Custom range is limited to 3 months.</span>
           </label>
         </div>
       </div>
@@ -1283,6 +1332,9 @@
 
   const SECTIONS = ['new', 'cross', 'repl'];
   const MAX_CHUNK = 200;
+  const EARLIEST_ARXIV_DATE = '1991-08-14';
+  const CUSTOM_RANGE_MONTHS = 3;
+  const STATIC_FETCH_CONCURRENCY = 8;
   const FETCH_TIMEOUT = 12000;
   const STATIC_DATA_SCHEMA = 1;
   const FAV_TAB_CODE = '__favorites__';
@@ -1305,6 +1357,10 @@
   let searchQuery = '';
   let favorites = new Set();
   let readingStates = new Map();
+  let syncCode = '';
+  let syncTimer = null;
+  let syncSaveInFlight = false;
+  let syncSaveQueued = false;
   let sortMode = 'date-desc';
   let categoryFilter = 'all';
   let readingFilter = 'all';
@@ -1367,6 +1423,19 @@
     const out = [];
     for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
     return out;
+  }
+
+  async function mapWithConcurrency(values, limit, mapper) {
+    const results = new Array(values.length);
+    let nextIndex = 0;
+    const workers = Array.from({ length: Math.min(limit, values.length) }, async () => {
+      while (nextIndex < values.length) {
+        const index = nextIndex++;
+        results[index] = await mapper(values[index], index);
+      }
+    });
+    await Promise.all(workers);
+    return results;
   }
 
   function delay(ms) {
@@ -1571,6 +1640,7 @@
     try {
       localStorage.setItem('arxivFavorites', JSON.stringify([...favorites]));
     } catch (_) {}
+    scheduleSavedListSync();
   }
 
   function loadFavorites() {
@@ -1608,6 +1678,7 @@
 
   function saveReadingStates() {
     try { localStorage.setItem('arxivReadingStates', JSON.stringify(Object.fromEntries(readingStates))); } catch (_) {}
+    scheduleSavedListSync();
   }
 
   function setReadingState(absId, nextState) {
@@ -1617,6 +1688,132 @@
     saveReadingStates();
     renderCategoryTabs();
     rerenderCurrentView(absId);
+  }
+
+  /* Optional cross-device saved-list sync */
+
+  function savedListsPayload() {
+    return {
+      favorites: [...favorites],
+      readingStates: Object.fromEntries(readingStates)
+    };
+  }
+
+  function setSettingsStatus(id, message, isError = false) {
+    const element = document.getElementById(id);
+    if (!element) return;
+    element.textContent = message;
+    element.classList.toggle('error', isError);
+  }
+
+  function validSyncCode(value) {
+    return /^[A-Za-z0-9_-]{20,128}$/.test(String(value || '').trim());
+  }
+
+  function createSyncCode() {
+    const bytes = new Uint8Array(24);
+    crypto.getRandomValues(bytes);
+    return btoa(String.fromCharCode(...bytes)).replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '');
+  }
+
+  async function postApiJson(path, payload) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+    try {
+      const response = await fetch(apiUrl(path), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: controller.signal
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) throw new Error(result.error || `Request failed (HTTP ${response.status})`);
+      return result;
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
+  function mergeSavedLists(remote) {
+    if (!remote) return;
+    for (const id of Array.isArray(remote.favorites) ? remote.favorites : []) favorites.add(id);
+    for (const [id, state] of Object.entries(remote.readingStates || {})) {
+      const localState = readingStates.get(id);
+      readingStates.set(id, localState === 'read' || state === 'read' ? 'read' : 'queue');
+    }
+    try {
+      localStorage.setItem('arxivFavorites', JSON.stringify([...favorites]));
+      localStorage.setItem('arxivReadingStates', JSON.stringify(Object.fromEntries(readingStates)));
+    } catch (_) {}
+    renderCategoryTabs();
+    if (SAVED_TAB_CODES.has(selectedCategory)) rerenderCurrentView();
+  }
+
+  async function pushSavedLists() {
+    if (!validSyncCode(syncCode)) return;
+    if (syncSaveInFlight) {
+      syncSaveQueued = true;
+      return;
+    }
+    syncSaveInFlight = true;
+    try {
+      const result = await postApiJson('/api/user-state/save', { syncCode, state: savedListsPayload() });
+      setSettingsStatus('syncStatus', result.durable ? 'Synced across devices.' : 'Saved locally on this server; configure R2 for durable sync.');
+    } catch (error) {
+      setSettingsStatus('syncStatus', 'Saved locally on this device; sync is temporarily unavailable.', true);
+      console.warn('Could not sync saved lists:', error);
+    } finally {
+      syncSaveInFlight = false;
+      if (syncSaveQueued) {
+        syncSaveQueued = false;
+        scheduleSavedListSync();
+      }
+    }
+  }
+
+  function scheduleSavedListSync() {
+    if (!validSyncCode(syncCode)) return;
+    clearTimeout(syncTimer);
+    syncTimer = setTimeout(() => { pushSavedLists(); }, 500);
+  }
+
+  async function enableSavedListSync() {
+    const input = document.getElementById('syncCodeInput');
+    const candidate = String(input?.value || '').trim() || createSyncCode();
+    if (!validSyncCode(candidate)) {
+      setSettingsStatus('syncStatus', 'Use a sync code with at least 20 letters, numbers, _ or -.', true);
+      return;
+    }
+
+    syncCode = candidate;
+    input.value = syncCode;
+    try { localStorage.setItem('arxivSyncCode', syncCode); } catch (_) {}
+    setSettingsStatus('syncStatus', 'Connecting your saved lists…');
+    try {
+      const result = await postApiJson('/api/user-state/load', { syncCode });
+      if (result.state) mergeSavedLists(result.state);
+      await pushSavedLists();
+      if (!result.state) setSettingsStatus('syncStatus', 'Sync enabled. Copy this code before using another device.');
+    } catch (error) {
+      setSettingsStatus('syncStatus', 'Saved lists stay local; the sync service is unavailable.', true);
+      console.warn('Could not enable saved-list sync:', error);
+    }
+  }
+
+  async function restoreSavedListSync() {
+    try { syncCode = String(localStorage.getItem('arxivSyncCode') || '').trim(); } catch (_) {}
+    if (!validSyncCode(syncCode)) return;
+    const input = document.getElementById('syncCodeInput');
+    if (input) input.value = syncCode;
+    try {
+      const result = await postApiJson('/api/user-state/load', { syncCode });
+      if (result.state) mergeSavedLists(result.state);
+      setSettingsStatus('syncStatus', result.durable ? 'Synced across devices.' : 'Sync is using temporary server storage.');
+      scheduleSavedListSync();
+    } catch (error) {
+      setSettingsStatus('syncStatus', 'Saved lists stay local; sync will retry after the next change.', true);
+      console.warn('Could not restore saved-list sync:', error);
+    }
   }
 
   /* Settings */
@@ -1720,6 +1917,23 @@
     return `${dt.getFullYear()}-${pad2(dt.getMonth() + 1)}-${pad2(dt.getDate())}`;
   }
 
+  function monthsBefore(ymd, months) {
+    const [year, month, day] = String(ymd).split('-').map(Number);
+    const target = new Date(year, month - 1 - months, 1);
+    const lastDay = new Date(target.getFullYear(), target.getMonth() + 1, 0).getDate();
+    return `${target.getFullYear()}-${pad2(target.getMonth() + 1)}-${pad2(Math.min(day, lastDay))}`;
+  }
+
+  function updateCustomRangeLimit(endDate) {
+    const startInput = document.getElementById('rangeStart');
+    const hint = document.getElementById('customRangeHint');
+    if (!startInput || !/^\d{4}-\d{2}-\d{2}$/.test(endDate || '')) return;
+    const earliest = monthsBefore(endDate, CUSTOM_RANGE_MONTHS);
+    startInput.min = earliest > EARLIEST_ARXIV_DATE ? earliest : EARLIEST_ARXIV_DATE;
+    startInput.max = endDate;
+    if (hint) hint.textContent = `Up to 3 months: ${startInput.min} to ${endDate}.`;
+  }
+
   function setDateRange(range, save = true) {
     currentDateRange = range === 'custom' ? 'custom' : Number(range);
 
@@ -1730,6 +1944,11 @@
     const customWrap = document.getElementById('customStartWrap');
     const startInput = document.getElementById('rangeStart');
     customWrap.hidden = currentDateRange !== 'custom';
+    updateCustomRangeLimit(document.getElementById('day').value || defaultArxivDate());
+    if (startInput.value && startInput.value < startInput.min) {
+      startInput.value = startInput.min;
+      customStartDate = startInput.min;
+    }
     if (currentDateRange === 'custom' && !startInput.value) {
       startInput.value = offsetDate(document.getElementById('day').value || defaultArxivDate(), -6);
       customStartDate = startInput.value;
@@ -1750,14 +1969,10 @@
       }
       const start = new Date(`${startDate}T00:00:00`);
       if (start > dt) throw new Error('The custom start date must not be after the selected date.');
-      for (let i = 0; i < 90; i++) {
-        const date = offsetDate(endDate, -i);
-        if (date < startDate) break;
-        dates.push(date);
+      if (startDate < monthsBefore(endDate, CUSTOM_RANGE_MONTHS)) {
+        throw new Error('A custom date range can include at most 3 months.');
       }
-      if (dates.at(-1) !== startDate) {
-        throw new Error('A custom date range can include at most 90 days.');
-      }
+      for (let date = endDate; date >= startDate; date = offsetDate(date, -1)) dates.push(date);
       return dates;
     }
 
@@ -2971,10 +3186,12 @@
 
       setProgress(5);
 
-      // Same-origin static files are fast, cacheable and do not need a CORS
-      // proxy. Load every requested date concurrently.
-      let staticPayloads = await Promise.all(
-        dateList.map(date => fetchStaticDay(selectedCategory, date))
+      // Limit parallel cache reads so a long custom range remains usable
+      // without creating thousands of browser requests at once.
+      let staticPayloads = await mapWithConcurrency(
+        dateList,
+        STATIC_FETCH_CONCURRENCY,
+        date => fetchStaticDay(selectedCategory, date)
       );
 
       if (generation !== loadGeneration) return;
@@ -3264,6 +3481,46 @@
     saveSettings();
   });
 
+  document.getElementById('syncEnableButton').addEventListener('click', enableSavedListSync);
+  document.getElementById('syncCopyButton').addEventListener('click', async () => {
+    const code = String(document.getElementById('syncCodeInput').value || '').trim();
+    if (!validSyncCode(code)) {
+      setSettingsStatus('syncStatus', 'Enable sync first to create a sync code.', true);
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(code);
+      setSettingsStatus('syncStatus', 'Sync code copied. Paste it in Settings on your other device.');
+    } catch (_) {
+      const input = document.getElementById('syncCodeInput');
+      input.focus();
+      input.select();
+      setSettingsStatus('syncStatus', 'Select and copy the sync code, then paste it on your other device.');
+    }
+  });
+
+  document.getElementById('feedbackSubmitButton').addEventListener('click', async () => {
+    const button = document.getElementById('feedbackSubmitButton');
+    const messageInput = document.getElementById('feedbackMessage');
+    const message = String(messageInput.value || '').trim();
+    if (message.length < 3) {
+      setSettingsStatus('feedbackStatus', 'Please add a little more detail before sending.', true);
+      return;
+    }
+    button.disabled = true;
+    setSettingsStatus('feedbackStatus', 'Sending feedback…');
+    try {
+      const result = await postApiJson('/api/feedback', { message });
+      messageInput.value = '';
+      setSettingsStatus('feedbackStatus', result.durable ? 'Thanks — your feedback was received.' : 'Feedback received by this server.');
+    } catch (error) {
+      setSettingsStatus('feedbackStatus', 'Could not send feedback right now. Please try again later.', true);
+      console.warn('Could not submit feedback:', error);
+    } finally {
+      button.disabled = false;
+    }
+  });
+
   document.getElementById('pageSizeSelect').addEventListener('change', event => {
     const nextSize = Number(event.target.value);
     if (![12, 24, 48].includes(nextSize)) return;
@@ -3384,6 +3641,7 @@
 
     const saved = loadSettings();
     if (saved) applySettings(saved);
+    await restoreSavedListSync();
 
     const categorySelect = document.getElementById('categoryFilter');
     for (const cat of CATEGORIES.slice(1)) {
@@ -3401,7 +3659,7 @@
     // A missing current-day cache is fetched and stored by loadPapers().
     document.getElementById('day').value = defaultArxivDate();
     const rangeStartInput = document.getElementById('rangeStart');
-    rangeStartInput.max = document.getElementById('day').value;
+    updateCustomRangeLimit(document.getElementById('day').value);
     if (currentDateRange === 'custom' && !rangeStartInput.value) {
       rangeStartInput.value = offsetDate(document.getElementById('day').value, -6);
       customStartDate = rangeStartInput.value;
@@ -3412,7 +3670,11 @@
         this.value = prevFriday(this.value);
       }
 
-      rangeStartInput.max = this.value;
+      updateCustomRangeLimit(this.value);
+      if (rangeStartInput.value < rangeStartInput.min) {
+        rangeStartInput.value = rangeStartInput.min;
+        customStartDate = rangeStartInput.min;
+      }
       if (rangeStartInput.value > this.value) {
         rangeStartInput.value = this.value;
         customStartDate = this.value;

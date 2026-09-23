@@ -10,6 +10,14 @@ function cacheKey(prefix, category, date) {
   return `${prefix}${dir}/${date}.json`;
 }
 
+function objectKey(prefix, key) {
+  const clean = String(key || '').replace(/^\/+/, '');
+  if (!clean || clean.split('/').some(part => !part || part === '.' || part === '..')) {
+    throw new Error('Invalid object-store key');
+  }
+  return `${prefix}${clean}`;
+}
+
 async function bodyToString(body) {
   if (!body) return '';
   if (typeof body.transformToString === 'function') return body.transformToString();
@@ -79,6 +87,35 @@ export function createObjectCacheStore(env = process.env) {
         Body: JSON.stringify(payload),
         ContentType: 'application/json; charset=utf-8',
         CacheControl: 'no-cache'
+      }));
+      return true;
+    },
+
+    async readObject(key) {
+      if (!enabled) return null;
+      const { client, GetObjectCommand } = await sdk();
+      try {
+        const result = await client.send(new GetObjectCommand({
+          Bucket: env.CACHE_S3_BUCKET,
+          Key: objectKey(prefix, key)
+        }));
+        return JSON.parse(await bodyToString(result.Body));
+      } catch (error) {
+        const status = error?.$metadata?.httpStatusCode;
+        if (status === 404 || error?.name === 'NoSuchKey' || error?.Code === 'NoSuchKey') return null;
+        throw error;
+      }
+    },
+
+    async writeObject(key, value) {
+      if (!enabled) return false;
+      const { client, PutObjectCommand } = await sdk();
+      await client.send(new PutObjectCommand({
+        Bucket: env.CACHE_S3_BUCKET,
+        Key: objectKey(prefix, key),
+        Body: JSON.stringify(value),
+        ContentType: 'application/json; charset=utf-8',
+        CacheControl: 'no-store'
       }));
       return true;
     }

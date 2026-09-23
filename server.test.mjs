@@ -109,6 +109,56 @@ test('rejects unsupported categories and invalid dates', async () => {
   });
 });
 
+test('syncs saved lists by a private sync code and accepts feedback', async () => {
+  const syncCode = 'this_is_a_private_sync_code_12345';
+  const objects = new Map();
+  const cacheStore = {
+    enabled: true,
+    kind: 's3',
+    async readObject(key) { return objects.get(key) || null; },
+    async writeObject(key, value) { objects.set(key, value); return true; }
+  };
+  await withServer(async ({ baseUrl }) => {
+    const saved = await fetch(`${baseUrl}/api/user-state/save`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        syncCode,
+        state: {
+          favorites: ['2609.00001v2'],
+          readingStates: { '2609.00002': 'queue', 'not-an-arxiv-id': 'read' }
+        }
+      })
+    });
+    assert.equal(saved.status, 200);
+    const savedBody = await saved.json();
+    assert.equal(savedBody.durable, true);
+    assert.deepEqual(savedBody.state.favorites, ['2609.00001']);
+    assert.deepEqual(savedBody.state.readingStates, { '2609.00002': 'queue' });
+    assert.match(savedBody.state.updatedAt, /^\d{4}-\d{2}-\d{2}T/);
+
+    const loaded = await fetch(`${baseUrl}/api/user-state/load`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ syncCode })
+    });
+    assert.equal(loaded.status, 200);
+    assert.deepEqual((await loaded.json()).state.favorites, ['2609.00001']);
+
+    const feedback = await fetch(`${baseUrl}/api/feedback`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: 'Please add an export option.', email: 'reader@example.com' })
+    });
+    assert.equal(feedback.status, 201);
+    const feedbackBody = await feedback.json();
+    assert.equal(feedbackBody.ok, true);
+    assert.equal(feedbackBody.durable, true);
+  }, { cacheStore });
+  assert.equal([...objects.keys()].filter(key => key.startsWith('user-state/')).length, 1);
+  assert.equal([...objects.keys()].filter(key => key.startsWith('feedback/')).length, 1);
+});
+
 test('serves a durable object-cache entry to a cross-origin static site', async () => {
   const date = '2026-09-17';
   const remotePayload = {

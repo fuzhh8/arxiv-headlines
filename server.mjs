@@ -3,6 +3,7 @@ import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { dirname, extname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createObjectCacheStore } from './cache-store.mjs';
+import { createUserStore, validateUserState } from './user-store.mjs';
 import {
   CATEGORIES,
   categoryToDir,
@@ -62,6 +63,26 @@ function isValidCachedPayload(payload, category, date) {
     payload?.category === category &&
     payload?.date === date &&
     ['new', 'cross', 'repl'].every(section => Array.isArray(payload?.papersBySection?.[section]));
+}
+
+function validateSyncCode(value) {
+  const syncCode = String(value || '').trim();
+  if (!/^[A-Za-z0-9_-]{20,128}$/.test(syncCode)) {
+    throw new Error('Sync code is invalid');
+  }
+  return syncCode;
+}
+
+function validateFeedback(payload) {
+  const message = String(payload?.message || '').trim();
+  const email = String(payload?.email || '').trim();
+  if (message.length < 3 || message.length > 2000) {
+    throw new Error('Feedback must be between 3 and 2000 characters');
+  }
+  if (email.length > 254 || (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))) {
+    throw new Error('Feedback email is invalid');
+  }
+  return { message, ...(email ? { email } : {}) };
 }
 
 async function readLocalCachedPayload(dataRoot, category, date) {
@@ -278,6 +299,7 @@ export function createArxivServer(options = {}) {
   const fetcher = options.fetcher || fetchAndStoreCategory;
   const enricher = options.enricher || enrichAndStoreCategoryFigures;
   const cacheStore = options.cacheStore || createObjectCacheStore(options.env || process.env);
+  const userStore = options.userStore || createUserStore({ root, cacheStore });
   const corsOrigin = options.corsOrigin ?? process.env.CORS_ORIGIN ?? '*';
   const onDemand = createOnDemandFetcher({ dataRoot, fetcher, enricher, cacheStore });
 
@@ -306,8 +328,44 @@ export function createArxivServer(options = {}) {
           ok: true,
           service: 'arxiv-headlines',
           categories: CATEGORIES,
-          cache: cacheStore.kind
+          cache: cacheStore.kind,
+          userState: userStore.kind
         });
+        return;
+      }
+
+      if (requestUrl.pathname === '/api/user-state/load') {
+        if (req.method !== 'POST') {
+          sendJson(res, 405, { ok: false, error: 'Use POST to load saved lists' });
+          return;
+        }
+        const body = await readJsonBody(req);
+        const syncCode = validateSyncCode(body.syncCode);
+        const state = await userStore.loadState(syncCode);
+        sendJson(res, 200, { ok: true, state, durable: userStore.durable });
+        return;
+      }
+
+      if (requestUrl.pathname === '/api/user-state/save') {
+        if (req.method !== 'POST') {
+          sendJson(res, 405, { ok: false, error: 'Use POST to save reading lists' });
+          return;
+        }
+        const body = await readJsonBody(req);
+        const syncCode = validateSyncCode(body.syncCode);
+        const state = await userStore.saveState(syncCode, validateUserState(body.state));
+        sendJson(res, 200, { ok: true, state, durable: userStore.durable });
+        return;
+      }
+
+      if (requestUrl.pathname === '/api/feedback') {
+        if (req.method !== 'POST') {
+          sendJson(res, 405, { ok: false, error: 'Use POST to submit feedback' });
+          return;
+        }
+        const body = await readJsonBody(req);
+        const result = await userStore.saveFeedback(validateFeedback(body));
+        sendJson(res, 201, { ok: true, ...result });
         return;
       }
 
@@ -387,6 +445,10 @@ export function createArxivServer(options = {}) {
       }
 
       const requested = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
+      if (requested === '.private-state' || requested.startsWith('.private-state/')) {
+        sendJson(res, 403, { ok: false, error: 'Forbidden path' });
+        return;
+      }
       const filePath = resolve(root, requested);
       const rel = relative(root, filePath);
       if (rel.startsWith(`..${sep}`) || rel === '..' || resolve(filePath) === resolve(root)) {
@@ -414,7 +476,7 @@ export function createArxivServer(options = {}) {
       }
 
       const message = error instanceof Error ? error.message : String(error);
-      const isInputError = /^(Unsupported arXiv category|Date must|Invalid calendar date|Request body)/.test(message);
+      const isInputError = /^(Unsupported arXiv category|Date must|Invalid calendar date|Request body|Sync code|Feedback)/.test(message);
       console.error(`[server] ${req.method} ${requestUrl.pathname}: ${message}`);
       sendJson(res, isInputError ? 400 : 502, { ok: false, error: message });
     }

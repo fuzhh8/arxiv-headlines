@@ -177,19 +177,23 @@ test('newspaper is the default format and reading lists scroll normally', () => 
   assert.doesNotMatch(html, /\.saved-tabs\s*\{[\s\S]*?position:\s*sticky;/);
 });
 
-test('custom start date builds an inclusive range and enforces safe bounds', () => {
-  const { getDateList } = new Function('pad2', 'defaultArxivDate', `
+test('custom start date is limited to three calendar months', () => {
+  const { getDateList, monthsBefore } = new Function('pad2', 'defaultArxivDate', 'EARLIEST_ARXIV_DATE', 'CUSTOM_RANGE_MONTHS', `
     ${dateSource}
-    return { getDateList };
-  `)(value => String(value).padStart(2, '0'), () => '2026-09-14');
+    return { getDateList, monthsBefore };
+  `)(value => String(value).padStart(2, '0'), () => '2026-09-14', '1991-08-14', 3);
 
   assert.deepEqual(getDateList('2026-09-14', 'custom', '2026-09-10'), [
     '2026-09-14', '2026-09-13', '2026-09-12', '2026-09-11', '2026-09-10'
   ]);
   assert.throws(() => getDateList('2026-09-14', 'custom', '2026-09-15'), /must not be after/);
-  assert.throws(() => getDateList('2026-09-14', 'custom', '2026-01-01'), /at most 90 days/);
+  assert.equal(monthsBefore('2026-05-31', 3), '2026-02-28');
+  assert.equal(getDateList('2026-09-14', 'custom', '2026-06-14').length, 93);
+  assert.throws(() => getDateList('2026-09-14', 'custom', '2026-06-13'), /at most 3 months/);
   assert.match(html, /data-range="custom"/);
   assert.match(html, /id="rangeStart" type="date"/);
+  assert.match(html, /id="customRangeHint"/);
+  assert.match(html, /Up to 3 months:/);
 });
 
 function loadPagination(pageSize = 24, currentPage = 1) {
