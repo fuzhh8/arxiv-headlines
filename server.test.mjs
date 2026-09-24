@@ -109,7 +109,7 @@ test('rejects unsupported categories and invalid dates', async () => {
   });
 });
 
-test('syncs saved lists by a private sync code and accepts feedback', async () => {
+test('syncs saved lists by a private sync code', async () => {
   const syncCode = 'this_is_a_private_sync_code_12345';
   const objects = new Map();
   const cacheStore = {
@@ -145,18 +145,8 @@ test('syncs saved lists by a private sync code and accepts feedback', async () =
     assert.equal(loaded.status, 200);
     assert.deepEqual((await loaded.json()).state.favorites, ['2609.00001']);
 
-    const feedback = await fetch(`${baseUrl}/api/feedback`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: 'Please add an export option.', email: 'reader@example.com' })
-    });
-    assert.equal(feedback.status, 201);
-    const feedbackBody = await feedback.json();
-    assert.equal(feedbackBody.ok, true);
-    assert.equal(feedbackBody.durable, true);
   }, { cacheStore });
   assert.equal([...objects.keys()].filter(key => key.startsWith('user-state/')).length, 1);
-  assert.equal([...objects.keys()].filter(key => key.startsWith('feedback/')).length, 1);
 });
 
 test('serves a durable object-cache entry to a cross-origin static site', async () => {

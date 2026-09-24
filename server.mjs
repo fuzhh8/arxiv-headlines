@@ -73,18 +73,6 @@ function validateSyncCode(value) {
   return syncCode;
 }
 
-function validateFeedback(payload) {
-  const message = String(payload?.message || '').trim();
-  const email = String(payload?.email || '').trim();
-  if (message.length < 3 || message.length > 2000) {
-    throw new Error('Feedback must be between 3 and 2000 characters');
-  }
-  if (email.length > 254 || (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))) {
-    throw new Error('Feedback email is invalid');
-  }
-  return { message, ...(email ? { email } : {}) };
-}
-
 async function readLocalCachedPayload(dataRoot, category, date) {
   const path = join(dataRoot, categoryToDir(category), `${date}.json`);
   try {
@@ -358,17 +346,6 @@ export function createArxivServer(options = {}) {
         return;
       }
 
-      if (requestUrl.pathname === '/api/feedback') {
-        if (req.method !== 'POST') {
-          sendJson(res, 405, { ok: false, error: 'Use POST to submit feedback' });
-          return;
-        }
-        const body = await readJsonBody(req);
-        const result = await userStore.saveFeedback(validateFeedback(body));
-        sendJson(res, 201, { ok: true, ...result });
-        return;
-      }
-
       if (requestUrl.pathname === '/api/cache') {
         if (req.method !== 'GET' && req.method !== 'HEAD') {
           sendJson(res, 405, { ok: false, error: 'Method not allowed' });
@@ -476,7 +453,7 @@ export function createArxivServer(options = {}) {
       }
 
       const message = error instanceof Error ? error.message : String(error);
-      const isInputError = /^(Unsupported arXiv category|Date must|Invalid calendar date|Request body|Sync code|Feedback)/.test(message);
+      const isInputError = /^(Unsupported arXiv category|Date must|Invalid calendar date|Request body|Sync code)/.test(message);
       console.error(`[server] ${req.method} ${requestUrl.pathname}: ${message}`);
       sendJson(res, isInputError ? 400 : 502, { ok: false, error: message });
     }

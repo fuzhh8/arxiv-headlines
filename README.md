@@ -34,8 +34,7 @@ users can opt into cross-device sync: the site generates a private sync code,
 which must be copied to the other device. The code is the access credential, so
 it should not be shared publicly. The Render API hashes it before selecting the
 stored record. When R2 is configured, these records are durable; otherwise they
-use only the server's local development storage. The same Settings panel also
-has an optional feedback form; feedback is saved to the configured R2 bucket.
+use only the server's local development storage.
 
 Run locally from this directory (Node.js 18 or newer):
 

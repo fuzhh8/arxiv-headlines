@@ -1,4 +1,4 @@
-import { createHash, randomUUID } from 'node:crypto';
+import { createHash } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 
@@ -72,17 +72,5 @@ export function createUserStore({ root, cacheStore }) {
       else await writeLocal(key, value);
       return value;
     },
-
-    async saveFeedback(feedback) {
-      const value = {
-        schemaVersion: 1,
-        submittedAt: new Date().toISOString(),
-        ...feedback
-      };
-      const key = `feedback/${Date.now()}-${randomUUID()}.json`;
-      if (remoteEnabled) await cacheStore.writeObject(key, value);
-      else await writeLocal(key, value);
-      return { durable: remoteEnabled };
-    }
   };
 }

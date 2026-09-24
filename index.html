@@ -1170,18 +1170,8 @@
             <div class="settings-status" id="syncStatus" role="status"></div>
           </details>
           <details class="settings-section">
-            <summary class="settings-heading">Feedback</summary>
-            <p class="settings-note">Tell us what would make arXiv Headlines more useful.</p>
-            <label class="settings-input" for="feedbackMessage">
-              <span>Your feedback</span>
-              <textarea id="feedbackMessage" maxlength="2000" placeholder="Feature request, bug report, or idea…"></textarea>
-            </label>
-            <div class="settings-actions"><button id="feedbackSubmitButton" type="button">Send feedback</button></div>
-            <div class="settings-status" id="feedbackStatus" role="status"></div>
-          </details>
-          <details class="settings-section">
             <summary class="settings-heading">Contact</summary>
-            <p class="settings-note">For questions or direct feedback, email</p>
+            <p class="settings-note">For questions, email</p>
             <a class="settings-contact" href="mailto:zhfu@mpia.de">zhfu@mpia.de</a>
           </details>
         </div>
@@ -3501,28 +3491,6 @@
       input.focus();
       input.select();
       setSettingsStatus('syncStatus', 'Select and copy the sync code, then paste it on your other device.');
-    }
-  });
-
-  document.getElementById('feedbackSubmitButton').addEventListener('click', async () => {
-    const button = document.getElementById('feedbackSubmitButton');
-    const messageInput = document.getElementById('feedbackMessage');
-    const message = String(messageInput.value || '').trim();
-    if (message.length < 3) {
-      setSettingsStatus('feedbackStatus', 'Please add a little more detail before sending.', true);
-      return;
-    }
-    button.disabled = true;
-    setSettingsStatus('feedbackStatus', 'Sending feedback…');
-    try {
-      const result = await postApiJson('/api/feedback', { message });
-      messageInput.value = '';
-      setSettingsStatus('feedbackStatus', result.durable ? 'Thanks — your feedback was received.' : 'Feedback received by this server.');
-    } catch (error) {
-      setSettingsStatus('feedbackStatus', 'Could not send feedback right now. Please try again later.', true);
-      console.warn('Could not submit feedback:', error);
-    } finally {
-      button.disabled = false;
     }
   });
 
