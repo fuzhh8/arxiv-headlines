@@ -1171,6 +1171,7 @@
           </details>
           <details class="settings-section">
             <summary class="settings-heading">Contact</summary>
+            <p class="settings-note">Zhihao Fu</p>
             <p class="settings-note">For questions, email</p>
             <a class="settings-contact" href="mailto:zhfu@mpia.de">zhfu@mpia.de</a>
           </details>
@@ -2676,8 +2677,8 @@
         <a class="preview-action" href="https://arxiv.org/pdf/${escapeHtml(paper.absId)}.pdf" target="_blank" rel="noopener">PDF</a>
         <a class="preview-action" href="${escapeHtml(adsUrl)}" target="_blank" rel="noopener">NASA ADS</a>
       </div>`;
-    body.scrollTop = 0;
     modal.hidden = false;
+    body.scrollTop = 0;
     document.body.style.overflow = 'hidden';
     window.MathJax?.typesetPromise?.([body]).catch(() => {});
     document.getElementById('paperQuickViewClose').focus({ preventScroll: true });
