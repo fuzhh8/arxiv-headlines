@@ -1,0 +1,861 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "source": "arxiv-catchup",
+  "category": "astro-ph.EP",
+  "date": "2026-10-19",
+  "generatedAt": "2026-10-19T05:57:58.131Z",
+  "figuresStatus": "complete",
+  "figureCounts": {
+    "processed": 14,
+    "total": 14,
+    "found": 14
+  },
+  "counts": {
+    "new": 7,
+    "cross": 5,
+    "repl": 2
+  },
+  "papersBySection": {
+    "new": [
+      {
+        "absId": "2610.22487",
+        "title": "Four Which I Knew Not: The Hexadecapole Nearly Cancels the Octupole in Librating Kozai-Lidov Cycles",
+        "summary": "Phenomena requiring close proximity between two bodies, from black-hole mergers to hot Jupiters, may originate in hierarchical triples, in which secular torques from a distant companion drive the inner binary's eccentricity nearly to unity. Population syntheses of these channels commonly integrate the double-averaged (DA) secular equations truncated at octupole order. We show that, for a fixed outer orbit, this truncation fails for the slow evolution on librating Kozai-Lidov cycles, in which the argument of pericenter librates. On these cycles the leading octupole kicks to $j_z$, the component of the inner angular momentum along the outer one, cancel pairwise, and the hexadecapole enters at the order of the surviving octupole torque, with the opposite sign. Strikingly, as the inner mass ratio vanishes the two nearly cancel, and their sum changes sign within the librating window, so octupole-truncated integrations omit part of the leading slow torque on this class. For $|j_z|\\ll1$, the slow dynamics driven by the hexadecapole is approximately solved analytically as a simple pendulum in the doubled azimuth of the eccentricity vector, with closed-form coefficients on rotating and librating cycles. For a circular outer orbit the hexadecapole-modified cycles are solved exactly. For unequal inner masses the octupole adds to the pendulum's torque on librating cycles, where its alternating kick can also flip orbits, and generally dominates rotating ones. DA integrations follow the predicted excursions, periods and flip criteria. Population consequences depend on the validity of the high-eccentricity reduction and on other processes affecting the cycles.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.22487",
+        "htmlUrl": "https://arxiv.org/html/2610.22487v1",
+        "authors": [
+          "Ygal Y. Klein"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.22487v1/fig_chi_both.png",
+            "caption": "The closed-form per-cycle kicks of the hexadecapole on the two KLC classes, χ H lib \\chi_{\\rm H}^{\\text{lib}} on the librating class and χ H rot \\chi_{\\rm H}^{\\text{rot}} on the rotating class (Equations 20 – 21 ).",
+            "captionLatex": "The closed-form per-cycle kicks of the hexadecapole on the two KLC classes, $\\chi_{\\rm H}^{\\text{lib}}$ on the librating class and $\\chi_{\\rm H}^{\\text{rot}}$ on the rotating class (Equations 20 – 21 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22487v1/fig_evolution_jz.png",
+            "caption": "Results of a numerical integration of the DA equations (blue) and a numerical solution of the doubled-angle pendulum (Equations 22 and 24 ; red dashed), whose coefficients and initial state are taken from the initial conditions, one example per class, with the parameters above the panels. Top panel: j z j_{z} versus the normalized time τ \\tau on the librating class. Bottom panel: the same on the rotating class. The green lines mark the predicted extrema ± j z max \\pm j_{z}^{\\max} (Equation 25 ).",
+            "captionLatex": "Results of a numerical integration of the DA equations (blue) and a numerical solution of the doubled-angle pendulum (Equations 22 and 24 ; red dashed), whose coefficients and initial state are taken from the initial conditions, one example per class, with the parameters above the panels. Top panel: $j_{z}$ versus the normalized time $\\tau$ on the librating class. Bottom panel: the same on the rotating class. The green lines mark the predicted extrema $\\pm j_{z}^{\\max}$ (Equation 25 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22487v1/fig_jzminmax_vs_CK.png",
+            "caption": "The extremes j z max j_{z}^{\\max} and j z min j_{z}^{\\min} versus C K 0 C_{K}^{0} for the integrations of Section III.5 , with the parameters above the panel. The measured extrema are shown with black crosses, the frozen-pendulum prediction for each initial condition with open red circles, the envelope ± J env \\pm J_{\\text{env}} (Equation 25 ) with black lines, and the fixed-point ceiling ± J ceil \\pm J_{\\text{ceil}} (Equation 26 ) with green dashed lines.",
+            "captionLatex": "The extremes $j_{z}^{\\max}$ and $j_{z}^{\\min}$ versus $C_{K}^{0}$ for the integrations of Section III.5 , with the parameters above the panel. The measured extrema are shown with black crosses, the frozen-pendulum prediction for each initial condition with open red circles, the envelope $\\pm J_{\\text{env}}$ (Equation 25 ) with black lines, and the fixed-point ceiling $\\pm J_{\\text{ceil}}$ (Equation 26 ) with green dashed lines."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22487v1/fig_flip_plane.png",
+            "caption": "The hexadecapole flip lens in the observable ( Ω 0 , i 0 ) \\left(\\Omega_{0},i_{0}\\right) plane, one value of C K 0 C_{K}^{0} per panel, on the librating class (top four panels) and the rotating class (bottom four), with the parameters above the panels. Red points mark integrations in which j z j_{z} crossed zero and blue points those in which j z j_{z} kept its sign. The gray lens bounded by the black curves is the flip criterion of Section III.6 . At C K 0 = − 1.2 C_{K}^{0}=-1.2 the dashed lines bound the band in which librating cycles exist.",
+            "captionLatex": "The hexadecapole flip lens in the observable $\\left(\\Omega_{0},i_{0}\\right)$ plane, one value of $C_{K}^{0}$ per panel, on the librating class (top four panels) and the rotating class (bottom four), with the parameters above the panels. Red points mark integrations in which $j_{z}$ crossed zero and blue points those in which $j_{z}$ kept its sign. The gray lens bounded by the black curves is the flip criterion of Section III.6 . At $C_{K}^{0}=-1.2$ the dashed lines bound the band in which librating cycles exist."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22487v1/fig_ctot_q.png",
+            "caption": "The combined librating torque coefficient of Equation 27 in units of ϵ oct 2 ​ ( q = 0 ) / 4 \\epsilon^{2}_{\\text{oct}}\\left(q{=}0\\right)/4 (Equation 29 ) versus q q , for an example value of C K C_{K} given above the panel. It equals Λ eff \\Lambda_{\\text{eff}} at q = 0 q=0 and vanishes at q ∗ ≃ 0.038 q^{*}\\simeq 0.038 (dotted).",
+            "captionLatex": "The combined librating torque coefficient of Equation 27 in units of $\\epsilon^{2}_{\\text{oct}}\\left(q{=}0\\right)/4$ (Equation 29 ) versus $q$ , for an example value of $C_{K}$ given above the panel. It equals $\\Lambda_{\\text{eff}}$ at $q=0$ and vanishes at $q^{*}\\simeq 0.038$ (dotted)."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22487v1/fig_qsweep_excursion.png",
+            "caption": "The largest excursion of j z j_{z} versus the inner mass ratio, with the parameters and initial conditions above the panel: max ⁡ | j z | \\max\\left|j_{z}\\right| over initial azimuths on the librating ( C K = − 0.5 C_{K}=-0.5 , blue) and rotating ( C K = + 0.7 C_{K}=+0.7 , red) classes, from numerical integrations of the DA equations (circles), on the librating class also truncated at the octupole (squares), and from the slow equations (crosses): on the librating class Equation 27 from the initial slow momentum J ^ 0 = − b sin Ω 0 \\hat{J}_{0}=-b\\sin\\Omega_{0} of Section IV.2 ( j z , 0 = 0 j_{z,0}=0 ), with the zigzag j z = J ^ ± b ​ sin ⁡ ψ j_{z}=\\hat{J}\\pm b\\sin\\psi , and on the rotating class Equation 22 with the octupole term ⟨ f j ⟩ \\left\\langle f_{j}\\right\\rangle of 32 included.",
+            "captionLatex": "The largest excursion of $j_{z}$ versus the inner mass ratio, with the parameters and initial conditions above the panel: $\\max\\left|j_{z}\\right|$ over initial azimuths on the librating ( $C_{K}=-0.5$ , blue) and rotating ( $C_{K}=+0.7$ , red) classes, from numerical integrations of the DA equations (circles), on the librating class also truncated at the octupole (squares), and from the slow equations (crosses): on the librating class Equation 27 from the initial slow momentum $\\hat{J}_{0}=-b\\sin\\Omega_{0}$ of Section IV.2 ( $j_{z,0}=0$ ), with the zigzag $j_{z}=\\hat{J}\\pm b\\sin\\psi$ , and on the rotating class Equation 22 with the octupole term $\\left\\langle f_{j}\\right\\rangle$ of 32 included."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22487v1/fig_octtrunc_evolution.png",
+            "caption": "Numerical integrations of the DA equations truncated at the octupole (blue) and through the hexadecapole (red), from the same initial conditions, with the shared parameters and initial conditions above the panels and C K C_{K} above each panel. Pale curves show the raw j z j_{z} and solid curves the cleaned slow momentum J ^ \\hat{J} , versus the number of KLCs n n .",
+            "captionLatex": "Numerical integrations of the DA equations truncated at the octupole (blue) and through the hexadecapole (red), from the same initial conditions, with the shared parameters and initial conditions above the panels and $C_{K}$ above each panel. Pale curves show the raw $j_{z}$ and solid curves the cleaned slow momentum $\\hat{J}$ , versus the number of KLCs $n$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22487v1/fig_flip_plane_q0.png",
+            "caption": "The flip window in the observable ( Ω 0 , i 0 ) \\left(\\Omega_{0},i_{0}\\right) plane, in numerical integrations of the DA equations through the hexadecapole, one value of C K 0 C_{K}^{0} per panel, with the shared parameters and initial conditions above the panels. Red points mark integrations in which j z j_{z} crossed zero and blue points those in which it kept its sign. The gray lens bounded by solid curves is the criterion of Equation 30 . The dashed curves are the same criterion without the zigzag terms, the flips of the slow momentum alone.",
+            "captionLatex": "The flip window in the observable $\\left(\\Omega_{0},i_{0}\\right)$ plane, in numerical integrations of the DA equations through the hexadecapole, one value of $C_{K}^{0}$ per panel, with the shared parameters and initial conditions above the panels. Red points mark integrations in which $j_{z}$ crossed zero and blue points those in which it kept its sign. The gray lens bounded by solid curves is the criterion of Equation 30 . The dashed curves are the same criterion without the zigzag terms, the flips of the slow momentum alone."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.22487v1/fig_chi_both.png",
+        "thumbnailAlt": "The closed-form per-cycle kicks of the hexadecapole on the two KLC classes, χ H lib \\chi_{\\rm H}^{\\text{lib}} on the librating class and χ H rot \\chi_{\\rm H}^{\\text{rot}} on the rotating class (Equations 20 – 21 ).",
+        "catchupDate": "2026-10-19"
+      },
+      {
+        "absId": "2610.22503",
+        "title": "An ALMA view on molecular complexity: water, methanol, and methyl formate in the HD 100546 and IRS 48 disks",
+        "summary": "Water and methanol are the fundamental constituents of interstellar and cometary ices: understanding their abundances in disks is therefore of high importance to reveal how this ice reservoir evolves across the timeline of star and planet formation. We present ALMA band 5 line emission observations of water and methanol in the warm Herbig disks of HD 100546 and IRS 48. While the IRS 48 disk is methanol-rich, water vapor is not detected, implying a high methanol-to-water column density ratio >0.2, possibly reflecting a distinct ice composition. Methanol and water are both detected in the HD 100546 disk, leading to a CH3OH/H2O ratio of ~0.02, consistent with the median of the cometary distribution and with the lower edge of the distribution of Young Stellar Objects. We suggest that the gas-phase methanol-to-water ratio in the HD 100546 disk directly reveals the ice reservoir subsequently sublimated in the warm disk stage. Moreover, we report a methyl formate-to-methanol ratio in the IRS 48 disk of ~0.2, consistent with the upper edge of the distribution of Young Stellar Objects. The methyl formate-to-methanol ratio in the HD 100546 disk is ~2, much higher than in younger and older sources, possibly reflecting a chemical enhancement of gas-phase methyl formate. We additionally constrain non-LTE conditions, optical depths, and emitting regions of the methanol lines in both disks. These results offer a new opportunity to probe the chemical trail of molecular complexity in the intermediate disk stage, bridging early and late phases of the star and planet formation history.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.22503",
+        "htmlUrl": "https://arxiv.org/html/2610.22503v1",
+        "authors": [
+          "Luna Rampinelli",
+          "Stefano Facchini",
+          "Marta De Simone",
+          "Margot Leemker",
+          "Alice S. Booth",
+          "Myriam Benisty",
+          "Pietro Curone",
+          "Elizabeth Humphreys",
+          "Leonardo Testi"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.22503v1/CH3OH_H2O_M0.png",
+            "caption": "Integrated intensity maps of the 1.7 mm continuum, 183 GHz water line, and three methanol lines in the HD 100546 (top row) and IRS 48 (bottom row) disks. White contours highlight the inner dust ring of HD 100546 and the asymmetric mm-crescent of IRS 48 from their continuum maps, pink contours show 3, 4, and 5 σ \\sigma levels. The white ellipse in the bottom left of each panel shows the beam.",
+            "captionLatex": "Integrated intensity maps of the 1.7 mm continuum, 183 GHz water line, and three methanol lines in the HD 100546 (top row) and IRS 48 (bottom row) disks. White contours highlight the inner dust ring of HD 100546 and the asymmetric mm-crescent of IRS 48 from their continuum maps, pink contours show 3, 4, and 5 $\\sigma$ levels. The white ellipse in the bottom left of each panel shows the beam."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22503v1/spectra_rotdiag_CH3OH_CH3OCHO.png",
+            "caption": "Left: peak and disk-integrated spectra of the band 5 methanol and methyl formate lines detected in the IRS 48 and HD 100546 disks (from top to bottom), with blue bars indicating the uncertainty for each line spectrum. Right: rotational diagrams of the methanol and methyl formate (from top to bottom). Best fit results are indicated by the dashed lines. For the case of IRS 48 we compare the results using both band 7 and 5 methanol lines (black) and only band 5 transitions (light blue)."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22503v1/LVG_IRS48_HD100546.png",
+            "caption": "Non-LTE LVG fitting results for methanol (CH 3 OH) for HD 100546 (in green) and IRS48 (in blue) using lines from this work and from L. Evans et al. [42] and M. Temmink et al. [115] . Left: χ 2 \\chi^{2} minimization for the total column density N N (CH 3 OH) (A-type plus E-type). Right: density–temperature χ 2 \\chi^{2} contour plots showing 1 σ \\sigma confidence level, assuming the best-fit total column density of 2 × 10 16 \\times 10^{16} and 2 × 10 17 \\times 10^{17} cm -2 , and best-fit source size of 0 ​ . ′′ ​ 12 0\\farcs 12 and 0 ​ . ′′ ​ 05 0\\farcs 05 , for HD 100546 and IRS 48 respectively. The best-fit solutions are marked by red stars.",
+            "captionLatex": "Non-LTE LVG fitting results for methanol (CH 3 OH) for HD 100546 (in green) and IRS48 (in blue) using lines from this work and from L. Evans et al. [42] and M. Temmink et al. [115] . Left: $\\chi^{2}$ minimization for the total column density $N$ (CH 3 OH) (A-type plus E-type). Right: density–temperature $\\chi^{2}$ contour plots showing 1 $\\sigma$ confidence level, assuming the best-fit total column density of 2 $\\times 10^{16}$ and 2 $\\times 10^{17}$ cm -2 , and best-fit source size of $0\\farcs 12$ and $0\\farcs 05$ , for HD 100546 and IRS 48 respectively. The best-fit solutions are marked by red stars."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22503v1/ALMA_IR_upperlimits_IRS48.png",
+            "caption": "Upper limit on the water column density as a function of kinetic temperature, under the assumption of LTE, from ALMA (blue) and Herschel (pink) non-detections [ 47 , 72 ] . Vertical gray and cyan lines indicate the methanol excitation temperature from the RD analysis and the typical water sublimation temperature of ∼ 150 \\sim 150 K.",
+            "captionLatex": "Upper limit on the water column density as a function of kinetic temperature, under the assumption of LTE, from ALMA (blue) and Herschel (pink) non-detections [ 47 , 72 ] . Vertical gray and cyan lines indicate the methanol excitation temperature from the RD analysis and the typical water sublimation temperature of $\\sim 150$ K."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22503v1/MF_methanol_water_ratios_nonLTE.png",
+            "caption": "Methanol-to-water (left) and methyl formate-to-methanol (right) ratios across different stages of star and planet formation. The distributions with the corresponding medians (in red) are shown for clouds, starless (SL) cores, LYSOs, MYSOs, and comets from both ice and gas observations. Individual measurements are displayed for disks, including upper and lower limits, from gas-phase observations (see Appendix E for the corresponding references). Pink circles refer to ratios extracted after applying the non-LTE analysis to the methanol lines."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22503v1/channel_maps_water_IRS48.png",
+            "caption": "Figure A.1: Channel maps of the non-detected water line at 183 GHz. The systemic velocity is 4.55 km s − 1 {}^{-1}\\, . Pink contours show 3 σ \\sigma levels. The cube was imaged with natural weighting and a channel width of 1.2 km s − 1 {}^{-1}\\, .",
+            "captionLatex": "Figure A.1: Channel maps of the non-detected water line at 183 GHz. The systemic velocity is 4.55 km s ${}^{-1}\\,$ . Pink contours show 3 $\\sigma$ levels. The cube was imaged with natural weighting and a channel width of 1.2 km s ${}^{-1}\\,$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22503v1/teardrop_visible_IRS48_H2O.png",
+            "caption": "Figure A.2: Left: water line intensity (non detection) as a function of velocity (x-axis) and radius (y-axis). Right: Filter response to the water spectrum using matched filtering in the u ​ v uv -plane. the dashed cyan lines indicate the systemic velocity of 4.55 km s − 1 {}^{-1}\\, .",
+            "captionLatex": "Figure A.2: Left: water line intensity (non detection) as a function of velocity (x-axis) and radius (y-axis). Right: Filter response to the water spectrum using matched filtering in the $uv$ -plane. the dashed cyan lines indicate the systemic velocity of 4.55 km s ${}^{-1}\\,$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22503v1/teardrops.png",
+            "caption": "Figure A.3: Line intensity as a function of velocity (x-axis) and radius (y-axis) of the three methanol lines, for the two sources analyzed in this work. The vertical light blue line indicates the systemic velocity of 5.7 km s − 1 {}^{-1}\\, and 4.55 km s − 1 {}^{-1}\\, for HD 100546 and IRS 48, respectively.",
+            "captionLatex": "Figure A.3: Line intensity as a function of velocity (x-axis) and radius (y-axis) of the three methanol lines, for the two sources analyzed in this work. The vertical light blue line indicates the systemic velocity of 5.7 km s ${}^{-1}\\,$ and 4.55 km s ${}^{-1}\\,$ for HD 100546 and IRS 48, respectively."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.22503v1/CH3OH_H2O_M0.png",
+        "thumbnailAlt": "Integrated intensity maps of the 1.7 mm continuum, 183 GHz water line, and three methanol lines in the HD 100546 (top row) and IRS 48 (bottom row) disks. White contours highlight the inner dust ring of HD 100546 and the asymmetric mm-crescent of IRS 48 from their continuum maps, pink contours show 3",
+        "catchupDate": "2026-10-19"
+      },
+      {
+        "absId": "2610.22625",
+        "title": "The Occurrence of Circumbinary Planets Around TESS M-dwarf Eclipsing Binaries",
+        "summary": "We present the first determination of the occurrence of transiting circumbinary planets (CBPs) in TESS data. Since tight binaries represent a constrained environment relative to single stars, CBPs contribute to our understanding of planet formation and evolution. We applied our custom single-transit detection algorithm to the recently-published sample of TESS eclipsing binaries containing two M-dwarfs (M\\&Ms), finding only one signal attributable to a new candidate planet-sized object. We further performed sensitivity analysis and applied corrections to account for the TESS window function to arrive at our survey completeness. We find a 95\\% confidence level (CL) upper limit on the occurrence rate of coplanar CBPs with sizes in the range $2-16 R_\\oplus$ and with orbital periods up to 600 days of 33.0\\%. If the mutual inclinations of CBPs are isotropically distributed with respect to the binaries, the occurrence rate upper limit increases to 40.2\\%. Our occurrence rate estimates are limited in part by the misalignment of our short-period binaries relative to the line of sight.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.22625",
+        "htmlUrl": "https://arxiv.org/html/2610.22625v1",
+        "authors": [
+          "Dominic Oddo",
+          "Diana Dragomir",
+          "David V. Martin",
+          "Wata Tubthong",
+          "Te Han"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.22625v1/figures/MMs_skymap.png",
+            "caption": "Top: Sky positions of the TESS M&M sample (shown in a full-sky Mollweide projection), with number of single-sector TESS light curves through Year 6 as colorbar. Bottom: Histogram distribution of the number of single-sector TESS light curves through Year 6 for our M&M sample."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22625v1/figures/CDPP_hist.png",
+            "caption": "Comparison of CDPP of TESS light curves before the de-trending scheme (blue histogram) and after the de-trending scheme (orange histogram). CDPP required to detect a Jupiter, Saturn, Neptune, and super-Earth ( 2 ​ R ⊕ 2R_{\\oplus} sized planet as yellow, red, blue, and green vertical lines, respectively, at our threshold of SNR = 10 =10 orbiting a typical binary.",
+            "captionLatex": "Comparison of CDPP of TESS light curves before the de-trending scheme (blue histogram) and after the de-trending scheme (orange histogram). CDPP required to detect a Jupiter, Saturn, Neptune, and super-Earth ( $2R_{\\oplus}$ sized planet as yellow, red, blue, and green vertical lines, respectively, at our threshold of SNR $=10$ orbiting a typical binary."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22625v1/figures/TIC22457651_S63.png",
+            "caption": "The additional eclipse event identified in the sector 63 light curve of TIC 22457651, demarcated by a green triangle. Another possible eclipse event was identified in the light curve, which is demarcated by the purple triangle, but this event was shown to be off-target by pixel vetting."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22625v1/figures/TIC137809567_S21.png",
+            "caption": "Eclipse events identified in the light curves of TIC 137809567. Sectors 21 (top), 41 (middle), and 75 (bottom) are shown. Eclipse events are demarcated by the green triangles."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22625v1/figures/TIC137809567_OC.png",
+            "caption": "The O - C diagram for TIC 137809567 primary (dark red stars) and secondary (dark blue triangles) eclipses. The times of the three eclipses are marked with green lines, and the ”missing“ eclipse time is marked in red with a vertical line, which nearly coincides with a spike in the primary eclipse timing difference."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22625v1/figures/TIC5012780_candidate.png",
+            "caption": "Sector 22 light curve for TIC 5012780, showing the detected single-transit event (green triangle) in the top panel. In the bottom panel, we zoom in on the detected event and show the best-fit MCMC transit model."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22625v1/figures/inj_rec_all.png",
+            "caption": "Our injection and recovery grid for all injections. Grid cells are colored according to pipeline sensitivity, S ⁡ ( R p , P ) S(R_{p},P) , expressed as a percentage. Each transit injection is counted individually, so sensitivity here is the overall percentage of transits detected in a given period and radius bin.",
+            "captionLatex": "Our injection and recovery grid for all injections. Grid cells are colored according to pipeline sensitivity, $S(R_{p},P)$ , expressed as a percentage. Each transit injection is counted individually, so sensitivity here is the overall percentage of transits detected in a given period and radius bin."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22625v1/figures/inclination_v_period.png",
+            "caption": "Calculated mutual inclinations i bin i_{\\text{bin}} (in degrees) of M&M EBs plotted against orbital period (in days, on a log scale) from eclipse durations and depths.",
+            "captionLatex": "Calculated mutual inclinations $i_{\\text{bin}}$ (in degrees) of M&M EBs plotted against orbital period (in days, on a log scale) from eclipse durations and depths."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.22625v1/figures/MMs_skymap.png",
+        "thumbnailAlt": "Top: Sky positions of the TESS M&M sample (shown in a full-sky Mollweide projection), with number of single-sector TESS light curves through Year 6 as colorbar. Bottom: Histogram distribution of the number of single-sector TESS light curves through Year 6 for our M&M sample.",
+        "catchupDate": "2026-10-19"
+      },
+      {
+        "absId": "2610.22904",
+        "title": "The START mission: Probing the 2029 Apophis Flyby via a Low-Cost Geocentric SmallSat",
+        "summary": "The Student-led Threatening Asteroid Reconnaissance of Tsinghua (START) marks the inaugural mission of the Tianxing Program, a deep-space exploration initiative led by students at Tsinghua University. Conceived as a low-cost, rapid-response small-satellite mission, START will investigate the near-Earth asteroid (99942) Apophis during its close approach to Earth in April 2029, when significant terrestrial tidal forces will offer a rare opportunity to observe the physical and dynamical response of a rubble-pile asteroid in real time. The 300 kg spacecraft is scheduled for rideshare launch into low Earth orbit in early 2028 and will then use solar electric propulsion to transfer to a circular mission orbit with a semimajor axis of approximately 38,000 km and an inclination of 55 degrees. START will execute a high-speed flyby of Apophis from a closest distance of 7 km at the asteroid's closest approach to Earth, to capture its tidal response. The payload suite consists of a high-resolution narrow-field camera, a wide-field navigation camera, and three near-infrared multispectral imagers. By acquiring centimeter-scale imagery and meter-scale reflectance spectra, the mission will characterize the asteroid's surface morphology and composition and monitor immediate tidally induced surface modifications. Ultimately, START will provide geometrically complementary, high-cadence datasets to international flagship missions to Apophis, demonstrating a highly scalable and cost-effective architecture for future planetary defense and small-body exploration.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.22904",
+        "htmlUrl": "https://arxiv.org/html/2610.22904v1",
+        "authors": [
+          "Yixuan Wu",
+          "Yunda Li",
+          "Bowen Zheng",
+          "Jingxiang Xu",
+          "Yuhang Yu",
+          "Wang Sun",
+          "Haozhe Du",
+          "Siyuan Wu",
+          "Zhixuan Zhao",
+          "Rongchenzhong Hu",
+          "Jiantao Liu",
+          "Haoyu Liu",
+          "Yunchong Shen",
+          "Yutong Sun",
+          "Tianchen Wang",
+          "Jing Yu",
+          "Zijie Tang",
+          "Yihong Wu",
+          "Yifei Jiao",
+          "Wen-Yue Dai",
+          "Jialong Song",
+          "Nan Zhang",
+          "Zhaokui Wang",
+          "Tianshu Wang",
+          "Junfeng Li",
+          "Hexi Baoyin",
+          "Bin Cheng"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.22904v1/overview.png",
+            "caption": "Overview of the START Mission"
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22904v1/figs/phase.png",
+            "caption": "Phase angle and phase function value evolution."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22904v1/figs/observation.png",
+            "caption": "Illustration of the flyby observation process at the CA of 7 km 7\\text{\\,}\\mathrm{km}",
+            "captionLatex": "Illustration of the flyby observation process at the CA of $7\\text{\\,}\\mathrm{km}$"
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22904v1/figs/resolution.png",
+            "caption": "Resolution of the NFOV, WFOV and MSIs. Solid lines depict changes in resolution of the NFOV camera, WFOV camera and MSIs during the flyby observation process. Dashed lines mark the timing of key observation events—including instrument power‑on, reaching specified thresholds for resolution or tangential blur. Dotted lines indicate key resolution values during the observation. Note that the data are presented on a log-log scale."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22904v1/figs/picture_a.png",
+            "caption": "Feasible interception solutions: the left panel shows geometry ( Ω \\Omega vs. inclination) colored by relative velocity, while the right panel plots the nodal precession rate ( Ω ˙ \\dot{\\Omega} ). The blue dashed line marks the selected 55 ° 55\\text{\\,}\\mathrm{\\SIUnitSymbolDegree} inclination.",
+            "captionLatex": "Feasible interception solutions: the left panel shows geometry ( $\\Omega$ vs. inclination) colored by relative velocity, while the right panel plots the nodal precession rate ( $\\dot{\\Omega}$ ). The blue dashed line marks the selected $55\\text{\\,}\\mathrm{\\SIUnitSymbolDegree}$ inclination."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22904v1/figs/picture_b.png",
+            "caption": "Equatorial view of the 3D spiral trajectory. The background contours show the modeled electron (blue) and proton (red) flux distributions in Earth’s radiation belts. The orange arrow denotes Apophis at Earth closest approach and its geocentric velocity vector."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22904v1/figs/picture_cd.png",
+            "caption": "Evolution of total ionizing dose (TID) and GaAs displacement damage dose (DDD) during the transfer and in-orbit phases. The orange dashed curve shows the spacecraft altitude. Dashed lines indicate the target orbit and transfer completion. The TID is evaluated for aluminum-equivalent shielding thicknesses of 1.5 mm 1.5\\text{\\,}\\mathrm{mm} , 2.2 mm 2.2\\text{\\,}\\mathrm{mm} , and 3.0 mm 3.0\\text{\\,}\\mathrm{mm} , and the DDD is evaluated for SiO 2 coverglass thicknesses of 100 µ ​ m 100\\text{\\,}\\mathrm{\\SIUnitSymbolMicro m} , 120 µ ​ m 120\\text{\\,}\\mathrm{\\SIUnitSymbolMicro m} , and 150 µ ​ m 150\\text{\\,}\\mathrm{\\SIUnitSymbolMicro m} . The black dashed line marks transfer completion at approximately 262 days, gray bands indicate eclipse-induced propulsion shutdowns, and horizontal dotted lines denote the cumulative dose levels after two years in the target orbit.",
+            "captionLatex": "Evolution of total ionizing dose (TID) and GaAs displacement damage dose (DDD) during the transfer and in-orbit phases. The orange dashed curve shows the spacecraft altitude. Dashed lines indicate the target orbit and transfer completion. The TID is evaluated for aluminum-equivalent shielding thicknesses of $1.5\\text{\\,}\\mathrm{mm}$ , $2.2\\text{\\,}\\mathrm{mm}$ , and $3.0\\text{\\,}\\mathrm{mm}$ , and the DDD is evaluated for SiO 2 coverglass thicknesses of $100\\text{\\,}\\mathrm{\\SIUnitSymbolMicro m}$ , $120\\text{\\,}\\mathrm{\\SIUnitSymbolMicro m}$ , and $150\\text{\\,}\\mathrm{\\SIUnitSymbolMicro m}$ . The black dashed line marks transfer completion at approximately 262 days, gray bands indicate eclipse-induced propulsion shutdowns, and horizontal dotted lines denote the cumulative dose levels after two years in the target orbit."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22904v1/figs/new_spacecraft.png",
+            "caption": "START spacecraft design. Main elements and payloads are indicated."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.22904v1/overview.png",
+        "thumbnailAlt": "Overview of the START Mission",
+        "catchupDate": "2026-10-19"
+      },
+      {
+        "absId": "2610.23176",
+        "title": "Numerical study of multiple scattering intensities obtained from dust grains of different sizes and compositions in an impact-induced ejecta curtain",
+        "summary": "Impact cratering of celestial bodies produces an ejecta plume containing underground material, which helps us understand the properties of subsurface grains and the surface evolution. In most cases, the ejecta plume forms an inverted conical structure so-called ejecta curtain. In-situ measurements of light scattering of ejecta curtain, such as the images taken at the Hayabusa2's impact experiment help to constrain the size and composition of these less-processed grains using Monte-Carlo radiative transfer models. Here, we analyse the variation in the predicted scattered intensities of an ejecta curtain set up after that of Hayabusa2's case and test its sensitivity to different compositions, sizes, and phase function of grains. Initially, the optical depth of the ejecta curtain is assumed to be constant. The intensities are seen to deviate from single scattering expectations, which we attribute to the effect of varying scattering angles and optical depths of the photons. Further, we show the importance of using the phase function reproducing actual grain materials in place of HG phase function in impact plume modelling. The results are compared with different values of optical depth and the study is also extended to incorporate a grain-size distribution. It is observed that there is an increase in the magnitude of the model median scattered intensity with the decrease of the power index of the grain-size distribution. Nevertheless, the overall variation in the profile between the different compositions remained the same as that of the monodisperse case with uniform density across the ejecta cone. Thus, we envisage this study to serve as a useful reference for investigating the subsurface grain properties of planetary bodies via impact plume observations, and to aid in improving available ejecta scattering models and also in the selection of prospective targets for future impact missions.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.23176",
+        "htmlUrl": "https://arxiv.org/html/2610.23176v1",
+        "authors": [
+          "U. Keerthana",
+          "P. Shalima",
+          "Koji Wada",
+          "Johannes Markkanen",
+          "Hiroshi Kimura"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.23176v1/figure1.png",
+            "caption": "Relative 3D distribution of the ejecta curtain, the direction of Sun rays and the detector. The parallel rays of the Sun is simulated by the flat surface light source ( Shalima et al., 2015 , see) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23176v1/figure2.png",
+            "caption": "General framework of scattering radiative transfer model."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23176v1/pfplotsize_corrected.png",
+            "caption": "Variations in phase function values with scattering angle for astronomical silicate grains of sizes, 0.1 μ \\mu m, 1000 μ \\mu m and for size-distribution with power indices -2, -3 and -4.",
+            "captionLatex": "Variations in phase function values with scattering angle for astronomical silicate grains of sizes, 0.1 $\\mu$ m, 1000 $\\mu$ m and for size-distribution with power indices -2, -3 and -4."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23176v1/pfplot.png",
+            "caption": "Variation of phase function values with scattering angle for 1 μ ​ m \\mu m size Mg-rich olivine, astronomical silicate and cometary dust.",
+            "captionLatex": "Variation of phase function values with scattering angle for 1 $\\mu m$ size Mg-rich olivine, astronomical silicate and cometary dust."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23176v1/pfcomparison10.png",
+            "caption": "Variation of phase function vs scattering angle curves for 10 μ ​ m \\mu m size lunar glass dust grains and its comparison with Henyey-Greenstein phase function.",
+            "captionLatex": "Variation of phase function vs scattering angle curves for 10 $\\mu m$ size lunar glass dust grains and its comparison with Henyey-Greenstein phase function."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23176v1/01graphite_scatmap_new.png",
+            "caption": "Ejecta curtain scattered intensity map obtained for 0.1 μ \\mu m size graphite grains.",
+            "captionLatex": "Ejecta curtain scattered intensity map obtained for 0.1 $\\mu$ m size graphite grains."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23176v1/weakabsplot_corrected.png",
+            "caption": "Variation of median scattered intensity in continuum units (1 CU = 1 photons m − 2 ​ s − 1 ​ s ​ r − 1 m^{-2}s^{-1}sr^{-1} Å -1 ) of the ejecta cone with size of the dust grains for different weakly absorbing materials.",
+            "captionLatex": "Variation of median scattered intensity in continuum units (1 CU = 1 photons $m^{-2}s^{-1}sr^{-1}$ Å -1 ) of the ejecta cone with size of the dust grains for different weakly absorbing materials."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23176v1/moderateabsplot_corrected.png",
+            "caption": "Variation of median scattered intensity (in continuum units) of the ejecta cone with size of the dust grains for moderately absorbing materials."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.23176v1/figure1.png",
+        "thumbnailAlt": "Relative 3D distribution of the ejecta curtain, the direction of Sun rays and the detector. The parallel rays of the Sun is simulated by the flat surface light source ( Shalima et al., 2015 , see) .",
+        "catchupDate": "2026-10-19"
+      },
+      {
+        "absId": "2610.23835",
+        "title": "Detecting Exoplanetary Rings with Roman CGI Reflected Light Phase Curve Observations",
+        "summary": "The Nancy Grace Roman Space Telescope's Coronagraph Instrument (CGI) will provide the first opportunity to directly detect mature giant exoplanets in reflected light. However, most known radial-velocity planets lie near CGI's sensitivity limit. In contrast, Saturn-like rings around these planets may be much more accessible: our models show that rings can outshine their host planets by one to two orders of magnitude or more, making them easier to detect than the planets themselves. However, because the planet and rings would be unresolved in reflected light, unrecognized rings could lead to misinterpretation of the planet's intrinsic brightness and physical properties. To disentangle these blended signals, we model reflected-light phase curves of ringed and ringless planets. Ring systems can produce a distinctive phase-curve morphology, often with four extrema rather than the two expected for unringed planets, enabling robust confirmation with multi-epoch CGI observations. We develop an analytical framework for ringed-planet phase curves using a modern, self-consistent coordinate system and use it to illustrate phase curves for a range of ring configurations. We then simulate observations of $\\epsilon$ Eridani b (3.5 AU, 1 M$_{Jup}$), a prime initial CGI target, with a Saturn-like ring system. These simulations show that such a configuration would be detectable and suggest that rings may expand the pool of viable CGI targets to planets previously considered beyond reach. We conclude that CGI is poised to provide the first observational constraints on the prevalence of Saturn-like rings around giant exoplanets.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.23835",
+        "htmlUrl": "https://arxiv.org/html/2610.23835v1",
+        "authors": [
+          "Elizabeth Lane",
+          "Mary Anne Limbach",
+          "Logan Pearce",
+          "Samantha Hasler",
+          "Alexandra Z. Greenbaum"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.23835v1/Figures/ReferenceFrames.png",
+            "caption": "Definition of reference frames and angular parameters. Orbital phase and ring inclination longitude are positive in the counterclockwise direction. Obliquity is defined as the angle between the ring normal (red arrow) and the orbit plane normal (the Z-axis). The inclination is the angle between the sky plane normal and the orbit plane normal. The pictured orbit inclination is negative. Originating from the planet, the red arrow is the ring normal n → \\vec{n} , the blue arrow is the vector r → \\vec{r} pointing toward the star, and the yellow arrow is the vector o → \\vec{o} pointing toward the observer. In the above orientation, the planet’s ring is partially shadowed by the planet. This effect is ignored in our models as our goal is to create a first-order approximation.",
+            "captionLatex": "Definition of reference frames and angular parameters. Orbital phase and ring inclination longitude are positive in the counterclockwise direction. Obliquity is defined as the angle between the ring normal (red arrow) and the orbit plane normal (the Z-axis). The inclination is the angle between the sky plane normal and the orbit plane normal. The pictured orbit inclination is negative. Originating from the planet, the red arrow is the ring normal $\\vec{n}$ , the blue arrow is the vector $\\vec{r}$ pointing toward the star, and the yellow arrow is the vector $\\vec{o}$ pointing toward the observer. In the above orientation, the planet’s ring is partially shadowed by the planet. This effect is ignored in our models as our goal is to create a first-order approximation."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23835v1/Figures/alpha_1.png",
+            "caption": "The illumination angle, the angle between the vector normal to the ring’s surface and the vector pointing from the ring to the star, as a function of orbital phase. When the ring lies in the orbital plane ( i r = 0 ∘ i_{r}=0^{\\circ} ), these vectors are perpendicular at all points in the orbit. At greater obliquities, the range of illumination angles increases.",
+            "captionLatex": "The illumination angle, the angle between the vector normal to the ring’s surface and the vector pointing from the ring to the star, as a function of orbital phase. When the ring lies in the orbital plane ( $i_{r}=0^{\\circ}$ ), these vectors are perpendicular at all points in the orbit. At greater obliquities, the range of illumination angles increases."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23835v1/Figures/Obliquity.png",
+            "caption": "Top: Reflected light phase curves computed with approximate Saturn parameters (Table 2 ) for a range of obliquities relative to the orbit plane for constant values of orbit inclination and ring inclination longitude. The dotted red line represents the ringless planet, and the solid lines represent the ringed planet phase curves. Bottom: Ring configurations plotted above, rendered as they would appear to an observer using the Blender 3D creation software [ 13 ] . Displayed obliquities are i r = 0 ∘ i_{r}=0^{\\circ} (top left), i r = 30 ∘ i_{r}=30^{\\circ} (top right), i r = 60 ∘ i_{r}=60^{\\circ} (bottom left), and i r = 90 ∘ i_{r}=90^{\\circ} (bottom right). The orbital phase is indicated by the planet’s position, with 0 ∘ 0^{\\circ} at the bottom and increasing counterclockwise around a central star (not pictured). The ring’s obliquity causes the distinctive phase curve with four extrema, except when the obliquity is 0 ∘ 0^{\\circ} . At higher obliquities, the maximum contrast increases and the ring’s signature becomes more pronounced. Brightnesses in the illustrations are not precise and should only be used as a visualization of the corresponding ring parameters. Some orientations shown in the illustrations display mutual shadowing and illumination, but this effect is not included in the model or the phase curves above.",
+            "captionLatex": "Top: Reflected light phase curves computed with approximate Saturn parameters (Table 2 ) for a range of obliquities relative to the orbit plane for constant values of orbit inclination and ring inclination longitude. The dotted red line represents the ringless planet, and the solid lines represent the ringed planet phase curves. Bottom: Ring configurations plotted above, rendered as they would appear to an observer using the Blender 3D creation software [ 13 ] . Displayed obliquities are $i_{r}=0^{\\circ}$ (top left), $i_{r}=30^{\\circ}$ (top right), $i_{r}=60^{\\circ}$ (bottom left), and $i_{r}=90^{\\circ}$ (bottom right). The orbital phase is indicated by the planet’s position, with $0^{\\circ}$ at the bottom and increasing counterclockwise around a central star (not pictured). The ring’s obliquity causes the distinctive phase curve with four extrema, except when the obliquity is $0^{\\circ}$ . At higher obliquities, the maximum contrast increases and the ring’s signature becomes more pronounced. Brightnesses in the illustrations are not precise and should only be used as a visualization of the corresponding ring parameters. Some orientations shown in the illustrations display mutual shadowing and illumination, but this effect is not included in the model or the phase curves above."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23835v1/Figures/IncLongitude.png",
+            "caption": "Same as Figure 3 , showing changing ring inclination longitude for constant orbit inclination and ring obliquity. The dotted red line represents the ringless planet, and the solid lines represent the ringed planet phase curves. Displayed ring inclination longitudes are λ r = 0 ∘ \\lambda_{r}=0^{\\circ} (top left), λ r = 30 ∘ \\lambda_{r}=30^{\\circ} (top right), λ r = 60 ∘ \\lambda_{r}=60^{\\circ} (bottom left), and λ r = 90 ∘ \\lambda_{r}=90^{\\circ} (bottom right). By altering the ring inclination longitude, the ring’s contribution to the contrast is shifted along the planet’s phase curve. Consequently, the planet and ring extrema may not happen concurrently. Some orientations shown in the illustrations display mutual shadowing and illumination, but this effect is not included in the model or the phase curves above.",
+            "captionLatex": "Same as Figure 3 , showing changing ring inclination longitude for constant orbit inclination and ring obliquity. The dotted red line represents the ringless planet, and the solid lines represent the ringed planet phase curves. Displayed ring inclination longitudes are $\\lambda_{r}=0^{\\circ}$ (top left), $\\lambda_{r}=30^{\\circ}$ (top right), $\\lambda_{r}=60^{\\circ}$ (bottom left), and $\\lambda_{r}=90^{\\circ}$ (bottom right). By altering the ring inclination longitude, the ring’s contribution to the contrast is shifted along the planet’s phase curve. Consequently, the planet and ring extrema may not happen concurrently. Some orientations shown in the illustrations display mutual shadowing and illumination, but this effect is not included in the model or the phase curves above."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23835v1/Figures/Inclination.png",
+            "caption": "Same as Figure 3 , showing changing orbital inclinations. The dotted red line represents the ringless planet, and the solid lines represent the ringed planet phase curves. Displayed inclinations are i = 30 ∘ i=30^{\\circ} (left), i = 60 ∘ i=60^{\\circ} (middle), and i = 90 ∘ i=90^{\\circ} (right). Increasing the inclination results in an amplification of the planet and ring contrasts. For a face-on orbit ( i = 0 ∘ i=0^{\\circ} ), the planet is always observed at quadrature, producing a flat phase curve. As long as the ring is oblique to the orbital plane ( i r ≠ 0 ∘ i_{r}\\neq 0^{\\circ} ), the ring signature will appear regardless of orbital inclination. Some orientations shown in the illustrations display mutual shadowing and illumination, but this effect is not included in the model or the phase curves above.",
+            "captionLatex": "Same as Figure 3 , showing changing orbital inclinations. The dotted red line represents the ringless planet, and the solid lines represent the ringed planet phase curves. Displayed inclinations are $i=30^{\\circ}$ (left), $i=60^{\\circ}$ (middle), and $i=90^{\\circ}$ (right). Increasing the inclination results in an amplification of the planet and ring contrasts. For a face-on orbit ( $i=0^{\\circ}$ ), the planet is always observed at quadrature, producing a flat phase curve. As long as the ring is oblique to the orbital plane ( $i_{r}\\neq 0^{\\circ}$ ), the ring signature will appear regardless of orbital inclination. Some orientations shown in the illustrations display mutual shadowing and illumination, but this effect is not included in the model or the phase curves above."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23835v1/Figures/OpticalThickness.png",
+            "caption": "Same as Figure 3 , showing changing normal optical thickness for constant orbit inclination, ring obliquity, and ring inclination longitude. The dotted red line represents the ringless planet, and the solid lines represent the ringed planet phase curves. When increasing the normal ring thickness, the transmitted portion of the ringed phase curve is reduced. When the ring is entirely opaque, the second reflected light maxima is lost."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23835v1/Figures/epsErib_revised.png",
+            "caption": "Simulated ϵ \\epsilon Eri b data with (blue) and without (red) a ring compared to optimistic CGI detection limits (SNR=5) and the continuous, modeled phase curve (dashed lines). The observation dates are chosen to display ϵ \\epsilon Eri b’s full period, which extends past CGI’s expected mission length. The uncertainties on simulated Roman contrasts are calculated from the corgietc Roman CGI exposure time calculator [ 53 ] , while the shaded regions represent the uncertainty on the orbit parameters reported in the literature for this planet [ 59 ] , shown in Table 2 . To facilitate comparison between the ringed and ringless case, we artificially assume the central values in Table 2 are known exactly. With a ring, the maximum contrast is two times greater than that of the ringless case. Additionally, the ringed case demonstrates the two maxima per period. Both the unexpected increase in contrast and the four extrema pattern make the presence of a ring apparent. If the possible presence of a ring was ignored after making an observation, the increased contrast could mischaracterize the planet. Additionally, the potential contrast increase provided by a ring could expand CGI’s target list to include objects expected to be below the contrast limit. Note that there are several epochs where the planet without a ring would not be detected (e.g., well below 5 σ \\sigma limit).",
+            "captionLatex": "Simulated $\\epsilon$ Eri b data with (blue) and without (red) a ring compared to optimistic CGI detection limits (SNR=5) and the continuous, modeled phase curve (dashed lines). The observation dates are chosen to display $\\epsilon$ Eri b’s full period, which extends past CGI’s expected mission length. The uncertainties on simulated Roman contrasts are calculated from the corgietc Roman CGI exposure time calculator [ 53 ] , while the shaded regions represent the uncertainty on the orbit parameters reported in the literature for this planet [ 59 ] , shown in Table 2 . To facilitate comparison between the ringed and ringless case, we artificially assume the central values in Table 2 are known exactly. With a ring, the maximum contrast is two times greater than that of the ringless case. Additionally, the ringed case demonstrates the two maxima per period. Both the unexpected increase in contrast and the four extrema pattern make the presence of a ring apparent. If the possible presence of a ring was ignored after making an observation, the increased contrast could mischaracterize the planet. Additionally, the potential contrast increase provided by a ring could expand CGI’s target list to include objects expected to be below the contrast limit. Note that there are several epochs where the planet without a ring would not be detected (e.g., well below 5 $\\sigma$ limit)."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.23835v1/Figures/ReferenceFrames.png",
+        "thumbnailAlt": "Definition of reference frames and angular parameters. Orbital phase and ring inclination longitude are positive in the counterclockwise direction. Obliquity is defined as the angle between the ring normal (red arrow) and the orbit plane normal (the Z-axis). The inclination is the angle between the ",
+        "catchupDate": "2026-10-19"
+      },
+      {
+        "absId": "2610.23850",
+        "title": "Entering the Era of Circumplanetary Ring Detection with Direct Imaging",
+        "summary": "Rings are ubiquitous among the giant planets in the Solar System, yet their presence around exoplanets remains observationally unconstrained. As direct imaging missions such as the Nancy Grace Roman Space Telescope approach first light, understanding the influence of circumplanetary rings on reflected light photometry is critical for the accurate interpretation and follow-up of direct imaging observations. We present a hybrid forward model for reflected light phase curves of ringed exoplanets, coupling a ray casting framework for computing mutual planet-ring shadowing with empirical reflectance spectra from Cassini observations of Saturn's rings. We model Jupiter-like planets with opaque, icy rings spanning 1 - 10x the radial extent of Saturn's A, B, and C rings across a grid of inclinations and ring obliquities. Our simulations show that rings enhance the flux ratios at favorable ring geometries. Saturn-equivalent rings increase peak flux by a factor of 3.1 in the visible, while more extended rings produce enhanced contrasts exceeding an order of magnitude more. The flux contribution of a ring is highly sensitive to obliquity and orbital location. At certain geometries, rings can suppress total system brightness below that of a ringless planet. We highlight multi-band observations as a complementary route for diagnosing the presence of an exoring. We also apply the model to $\\upsilon$ Andromedae d as an observational test case and discuss the implications for exoring detectability with the Roman Coronagraph. Exorings have the potential to bias inferred planetary properties from direct images and must be properly accounted for in observation preparation and interpretation.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.23850",
+        "htmlUrl": "https://arxiv.org/html/2610.23850v1",
+        "authors": [
+          "Samantha N. Hasler",
+          "Alexandra Z. Greenbaum",
+          "Geoffrey Bryden",
+          "Vanessa Bailey",
+          "Jorge Llop-Sayson",
+          "Elizabeth Lane",
+          "Mary Anne Limbach",
+          "Logan Pearce",
+          "James G. Ingalls",
+          "Patrick Lowrance"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.23850v1/figures/reference_frames.png",
+            "caption": "Diagram of the coordinate system used in the ringed planet model. The host star is located at the origin of the coordinate system, with the observer along the Z Z -direction and the ( X , Y ) (X,Y) plane corresponding to the plane of the sky. The planet’s ring is tilted relative to the orbital plane with an obliquity, ϵ \\epsilon , given by the angle between Z ′ Z^{\\prime} and the planet’s spin axis, s ^ \\hat{s} . The true anomaly, ν \\nu , describes the location of the planet along its orbit.",
+            "captionLatex": "Diagram of the coordinate system used in the ringed planet model. The host star is located at the origin of the coordinate system, with the observer along the $Z$ -direction and the $(X,Y)$ plane corresponding to the plane of the sky. The planet’s ring is tilted relative to the orbital plane with an obliquity, $\\epsilon$ , given by the angle between $Z^{\\prime}$ and the planet’s spin axis, $\\hat{s}$ . The true anomaly, $\\nu$ , describes the location of the planet along its orbit."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23850v1/figures/1xSat_incl90_obl26.73_planetModels.png",
+            "caption": "Output of the ringed planet model for different orbital positions ( ν \\nu ) for the base case model, with i = 90 ∘ i=90^{\\circ} and ϵ = 26.73 ∘ \\epsilon=26.73^{\\circ} . Points illuminated with respect to the observer are shown in gold and shadowed points are shown in gray/black. During the second half of the orbit ( ν > 180 ∘ \\nu>180^{\\circ} ), the side of the ring facing the observer is no longer illuminated. The corresponding phase curve is given in Figure 5 .",
+            "captionLatex": "Output of the ringed planet model for different orbital positions ( $\\nu$ ) for the base case model, with $i=90^{\\circ}$ and $\\epsilon=26.73^{\\circ}$ . Points illuminated with respect to the observer are shown in gold and shadowed points are shown in gray/black. During the second half of the orbit ( $\\nu>180^{\\circ}$ ), the side of the ring facing the observer is no longer illuminated. The corresponding phase curve is given in Figure 5 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23850v1/figures/ring_spectra.png",
+            "caption": "Reflectance spectra of Saturn’s A, B, and C rings observed by Cassini/VIMS compared to the spectrum of Jupiter at α = 30 ∘ \\alpha=30^{\\circ} (dashed gray line). We adopt the B ring spectrum in our ring model as it has the highest optical depth of the three sections. The plotting artifacts at λ ≳ 900 \\lambda\\gtrsim 900 nm are due to the overlapping wavelength coverage of the two VIMS channels.",
+            "captionLatex": "Reflectance spectra of Saturn’s A, B, and C rings observed by Cassini/VIMS compared to the spectrum of Jupiter at $\\alpha=30^{\\circ}$ (dashed gray line). We adopt the B ring spectrum in our ring model as it has the highest optical depth of the three sections. The plotting artifacts at $\\lambda\\gtrsim 900$ nm are due to the overlapping wavelength coverage of the two VIMS channels."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23850v1/figures/Brings_v_ringless_spectra_with_filters.png",
+            "caption": "Spectra of Jupiter at full phase with (solid) and without (dashed) icy rings 1 × \\times the size of Saturn’s. The planet spectrum is from [ 29 ] ; the ring spectrum is Saturn’s B ring spectrum from [ 26 ] (average measured phase angle of ∼ 27 ∘ \\sim 27^{\\circ} ). Select CGI filters are overplotted as horizontal bands labeled B1, B2, B3, B3C, and B4 for bandpasses 1, 2, 3, 3C and 4, respectively. CGI filter curves were measured by Materion and are available from the Roman Science Support Center at IPAC 3 3 3 Obtained from IPAC at Caltech, https://roman.ipac.caltech.edu/page/additional-coronagraph-instrument-parameters-model-and-data-html#Color_Filter_Curves , 2024 December. .",
+            "captionLatex": "Spectra of Jupiter at full phase with (solid) and without (dashed) icy rings 1 $\\times$ the size of Saturn’s. The planet spectrum is from [ 29 ] ; the ring spectrum is Saturn’s B ring spectrum from [ 26 ] (average measured phase angle of $\\sim 27^{\\circ}$ ). Select CGI filters are overplotted as horizontal bands labeled B1, B2, B3, B3C, and B4 for bandpasses 1, 2, 3, 3C and 4, respectively. CGI filter curves were measured by Materion and are available from the Roman Science Support Center at IPAC 3 3 3 Obtained from IPAC at Caltech, https://roman.ipac.caltech.edu/page/additional-coronagraph-instrument-parameters-model-and-data-html#Color_Filter_Curves , 2024 December. ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23850v1/figures/phasecurve_ringed_vs_ringless_1-10xRings_wsubPanels_BringOnly.png",
+            "caption": "Phase curves of planets with rings (solid) of varying radial extent (1 – 10 × \\times Saturn’s rings, ϵ = 26.73 ∘ \\epsilon=26.73^{\\circ} , i = 90 ∘ i=90^{\\circ} ) compared to a ringless planet (Lambertian; dashed line) in Roman CGI Band 1. Rings increase the total flux ratio of the system over the first half of the orbit compared to a ringless planet, and alter the morphology of the phase curve through mutual shadowing. Because these models include an opaque ring that does not account for ring scattering properties, the ring is not illuminated with respect to the observer in the second half of the orbit ( ν > 180 ∘ \\nu>180^{\\circ} ) and casts a shadow onto the planet, reducing the total flux ratio. The plot insets show the minor differences in flux ratio in the second half of the orbit due to mutual shadowing by the various ring sizes.",
+            "captionLatex": "Phase curves of planets with rings (solid) of varying radial extent (1 – 10 $\\times$ Saturn’s rings, $\\epsilon=26.73^{\\circ}$ , $i=90^{\\circ}$ ) compared to a ringless planet (Lambertian; dashed line) in Roman CGI Band 1. Rings increase the total flux ratio of the system over the first half of the orbit compared to a ringless planet, and alter the morphology of the phase curve through mutual shadowing. Because these models include an opaque ring that does not account for ring scattering properties, the ring is not illuminated with respect to the observer in the second half of the orbit ( $\\nu>180^{\\circ}$ ) and casts a shadow onto the planet, reducing the total flux ratio. The plot insets show the minor differences in flux ratio in the second half of the orbit due to mutual shadowing by the various ring sizes."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23850v1/figures/5xSat_incl90_obl26.73_planetModels.png",
+            "caption": "Same as Figure 2 for the 5 × 5\\times Saturn model. The corresponding phase curve is shown in Figure 5 .",
+            "captionLatex": "Same as Figure 2 for the $5\\times$ Saturn model. The corresponding phase curve is shown in Figure 5 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23850v1/figures/phase_folded_normalized_withSimObs1e-09uncertainty_3xSat.png",
+            "caption": "Band 1 phase-folded light curves for a ringed exoplanet with a ring 3 × \\times the size of Saturn’s (folded at the point of peak illumination; i = 90 ∘ , ϵ = 26.73 ∘ i=90^{\\circ},\\epsilon=26.73^{\\circ} ). Phase-folding highlights the asymmetries in the phase curve due to mutual shadowing. The solid and dotted lines represent phase ( ν \\nu ) values before and after peak illumination ( ν = 90 ∘ \\nu=90^{\\circ} ), respectively. Simulated observations where the planet would fall within CGI’s HLC B1 field-of-view (FOV; gold) are also shown for 1 ​ e − 9 1{\\rm e-}9 photometric uncertainty. A ring 3 × 3\\times the size of Saturn’s would be large enough to distinguish the minor asymmetries in the phase curve with a photometric uncertainty of 1 ​ e − 9 1{\\rm e-}9 .",
+            "captionLatex": "Band 1 phase-folded light curves for a ringed exoplanet with a ring 3 $\\times$ the size of Saturn’s (folded at the point of peak illumination; $i=90^{\\circ},\\epsilon=26.73^{\\circ}$ ). Phase-folding highlights the asymmetries in the phase curve due to mutual shadowing. The solid and dotted lines represent phase ( $\\nu$ ) values before and after peak illumination ( $\\nu=90^{\\circ}$ ), respectively. Simulated observations where the planet would fall within CGI’s HLC B1 field-of-view (FOV; gold) are also shown for $1{\\rm e-}9$ photometric uncertainty. A ring $3\\times$ the size of Saturn’s would be large enough to distinguish the minor asymmetries in the phase curve with a photometric uncertainty of $1{\\rm e-}9$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23850v1/figures/oblPhaseCurve_w_planetModels.png",
+            "caption": "(Top) CGI Band 1 phase curves of 1 × 1\\times Saturn ringed planets with i = 30 ∘ i=30^{\\circ} for three obliquities compared to a ringless Lambertian planet (dashed line). The obliquity of the ring introduces the distinct shape to the phase curve. At higher obliquities, the shadowing of the ring on the planet becomes more pronounced at certain geometries, and can decrease the overall system flux ratio to less than that of a Lambertian in the first half of the orbit due to the change in projected ring area. (Bottom) Same as Fig. 2 and 6 for the phase curves shown above. Each row corresponds to ϵ = 26.73 ∘ , 45 ∘ \\epsilon=26.73^{\\circ},45^{\\circ} , or 90 ∘ 90^{\\circ} , respectively. Each column corresponds to ν = 10 ∘ , 170 ∘ \\nu=10^{\\circ},170^{\\circ} , or 300 ∘ 300^{\\circ} , respectively.",
+            "captionLatex": "(Top) CGI Band 1 phase curves of $1\\times$ Saturn ringed planets with $i=30^{\\circ}$ for three obliquities compared to a ringless Lambertian planet (dashed line). The obliquity of the ring introduces the distinct shape to the phase curve. At higher obliquities, the shadowing of the ring on the planet becomes more pronounced at certain geometries, and can decrease the overall system flux ratio to less than that of a Lambertian in the first half of the orbit due to the change in projected ring area. (Bottom) Same as Fig. 2 and 6 for the phase curves shown above. Each row corresponds to $\\epsilon=26.73^{\\circ},45^{\\circ}$ , or $90^{\\circ}$ , respectively. Each column corresponds to $\\nu=10^{\\circ},170^{\\circ}$ , or $300^{\\circ}$ , respectively."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.23850v1/figures/reference_frames.png",
+        "thumbnailAlt": "Diagram of the coordinate system used in the ringed planet model. The host star is located at the origin of the coordinate system, with the observer along the Z Z -direction and the ( X , Y ) (X,Y) plane corresponding to the plane of the sky. The planet’s ring is tilted relative to the orbital plane",
+        "catchupDate": "2026-10-19"
+      }
+    ],
+    "cross": [
+      {
+        "absId": "2610.22456",
+        "title": "Pathfinder results for populations of planet-forming discs with SKA",
+        "summary": "Imaging of few-millimetre-sized dust grains (pebbles, on the construction path to planets) in protoplanetary discs has begun. The Planet-Earth Building-Blocks Legacy e-MERLIN Survey is a unique pathfinder for SKAO, imaging a sample of disc-host stars around 4.4 cm wavelength at 55 - 120 mas resolution. PEBBLeS has surveyed 10 flux-ordered fields of the northern sky, and the L1448C-N and HL Tau systems are presented as examples. The prospects for extending this science with SKAO are bright, including shorter integration times and better sensitivity to fainter outer discs. Simulations are presented of how a southern analogue to the HL Tau disc could look to SKA-Mid AA* in bands 5a and 5b. The initial lack of long baselines is suggested to pose a significant risk for imaging of planet-related features in protoplanetary discs.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.22456",
+        "htmlUrl": "https://arxiv.org/html/2610.22456v1",
+        "authors": [
+          "Jane S. Greaves",
+          "Anita M. S. Richards",
+          "Katie Hesterly",
+          "Emmanuel K. Bempong-Manful"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.22456v1/L1448C-N_R0.7T35_SKA.png",
+            "caption": "Left : L1448C-N as imaged by PEBBLeS. The black contours are at 3, 5, 7, and 9 σ rms \\sigma_{\\mathrm{rms}} , where the off-source noise σ rms ≈ 6 \\sigma_{\\mathrm{rms}}\\approx 6 μ \\mu Jy beam -1 with a beam of 82 × 50 82\\times 50 mas (white ellipse). A disc (thick white ellipse) and jets were measured by u ​ v uv -plane fitting. The small 5- σ rms \\sigma_{\\mathrm{rms}} component to the SW is distinct from both disc and jets. The cyan ellipse represent a fit to an ALMA archival image at 233 GHz. Right : Spectral energy distribution of L1448C-N, using only data of comparably high angular resolution to PEBBLeS (central wavelengths and beam sizes in brackets). The points shown come from PEBBLeS, VANDAM, (4.1, 0.9 cm; beams 230, 65 mas) ( Tobin et al., 2016 ; Tychoniec et al., 2018 ) , and the ALMA archive (1.5, 1.3, 0.9, 0.4 mm; beams 160, 150, 220, 150 mas), see Acknowledgements. The regression (blue dashes) has a coefficient R 2 = 0.9976 R^{2}=0.9976 for a power-law index of 2.15.",
+            "captionLatex": "Left : L1448C-N as imaged by PEBBLeS. The black contours are at 3, 5, 7, and 9 $\\sigma_{\\mathrm{rms}}$ , where the off-source noise $\\sigma_{\\mathrm{rms}}\\approx 6$ $\\mu$ Jy beam -1 with a beam of $82\\times 50$ mas (white ellipse). A disc (thick white ellipse) and jets were measured by $uv$ -plane fitting. The small 5- $\\sigma_{\\mathrm{rms}}$ component to the SW is distinct from both disc and jets. The cyan ellipse represent a fit to an ALMA archival image at 233 GHz. Right : Spectral energy distribution of L1448C-N, using only data of comparably high angular resolution to PEBBLeS (central wavelengths and beam sizes in brackets). The points shown come from PEBBLeS, VANDAM, (4.1, 0.9 cm; beams 230, 65 mas) ( Tobin et al., 2016 ; Tychoniec et al., 2018 ) , and the ALMA archive (1.5, 1.3, 0.9, 0.4 mm; beams 160, 150, 220, 150 mas), see Acknowledgements. The regression (blue dashes) has a coefficient $R^{2}=0.9976$ for a power-law index of 2.15."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22456v1/HLTau_R1.5T.04.png",
+            "caption": "e-MERLIN images of HL Tau at 4.4 cm, optimised for sensitivity ( left ), and for resolution ( right ). The black contours are at 3, 5 and 7 σ rms \\sigma_{\\mathrm{rms}} where the off-source noise and restoring beams are 5.5 and 6.8 μ \\mu Jy beam -1 in (204 × \\times 78) and (87 × \\times 56) beams. The disc fitted in the u ​ v uv -plane is overlaid (white outline).",
+            "captionLatex": "e-MERLIN images of HL Tau at 4.4 cm, optimised for sensitivity ( left ), and for resolution ( right ). The black contours are at 3, 5 and 7 $\\sigma_{\\mathrm{rms}}$ where the off-source noise and restoring beams are 5.5 and 6.8 $\\mu$ Jy beam -1 in (204 $\\times$ 78) and (87 $\\times$ 56) beams. The disc fitted in the $uv$ -plane is overlaid (white outline)."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22456v1/HL_Tau_5ab_SKAsim1.png",
+            "caption": "Left : Overlay of original images of HL Tau: e-MERLIN at 6.8 GHz from PEBBLeS in colour scale with green beam (also shown in Fig. 2 ); VLA+Pie Town at 22 GHz ( Greaves et al., 2008 ) , with white contour at 3 × 16 3\\times 16 μ \\mu Jy beam -1 and white beam; ALMA archive data at 344 GHz ( ALMA Partnership et al., 2015 ) with cyan contours at 3 , 6 , 12 ​ … × 24 3,6,12...\\times 24 μ \\mu Jy beam -1 and small solid beam. These images were combined and used as models for AA SKA-Mid simulation with two weightings. Middle : simulation for SKA-Mid at 5a frequency, with colour scale blanked at 3 × 0.5 3\\times 0.5 μ \\mu Jy beam -1 and contours at 3 , 6 , 12 ​ … × 0.6 3,6,12...\\times 0.6 μ \\mu Jy beam -1 . Right : simulation at 5b frequency, with colour scale blanked at 3 × 0.46 3\\times 0.46 μ \\mu Jy beam -1 and contours at 3 , 6 , 9 , 12 ​ … × 0.7 3,6,9,12...\\times 0.7 μ \\mu Jy beam -1 .",
+            "captionLatex": "Left : Overlay of original images of HL Tau: e-MERLIN at 6.8 GHz from PEBBLeS in colour scale with green beam (also shown in Fig. 2 ); VLA+Pie Town at 22 GHz ( Greaves et al., 2008 ) , with white contour at $3\\times 16$ $\\mu$ Jy beam -1 and white beam; ALMA archive data at 344 GHz ( ALMA Partnership et al., 2015 ) with cyan contours at $3,6,12...\\times 24$ $\\mu$ Jy beam -1 and small solid beam. These images were combined and used as models for AA SKA-Mid simulation with two weightings. Middle : simulation for SKA-Mid at 5a frequency, with colour scale blanked at $3\\times 0.5$ $\\mu$ Jy beam -1 and contours at $3,6,12...\\times 0.6$ $\\mu$ Jy beam -1 . Right : simulation at 5b frequency, with colour scale blanked at $3\\times 0.46$ $\\mu$ Jy beam -1 and contours at $3,6,9,12...\\times 0.7$ $\\mu$ Jy beam -1 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22456v1/HLTau_SKA_geom_5ab.png",
+            "caption": "Simulation as for Fig. 3 , but for a simple geometric model of a disc plus an additional clump of pebbles (black contours). The simulated images are shown in colour scale, with blanking levels set at multiples of the off-source noise. The left-hand plot is blanked at 3 × 0.35 3\\times 0.35 μ \\mu Jy beam -1 and the right-hand plot is blanked at 3 × 0.84 3\\times 0.84 μ \\mu Jy beam -1 .",
+            "captionLatex": "Simulation as for Fig. 3 , but for a simple geometric model of a disc plus an additional clump of pebbles (black contours). The simulated images are shown in colour scale, with blanking levels set at multiples of the off-source noise. The left-hand plot is blanked at $3\\times 0.35$ $\\mu$ Jy beam -1 and the right-hand plot is blanked at $3\\times 0.84$ $\\mu$ Jy beam -1 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.22456v1/L1448C-N_R0.7T35_SKA.png",
+        "thumbnailAlt": "Left : L1448C-N as imaged by PEBBLeS. The black contours are at 3, 5, 7, and 9 σ rms \\sigma_{\\mathrm{rms}} , where the off-source noise σ rms ≈ 6 \\sigma_{\\mathrm{rms}}\\approx 6 μ \\mu Jy beam -1 with a beam of 82 × 50 82\\times 50 mas (white ellipse). A disc (thick white ellipse) and jets were measure",
+        "catchupDate": "2026-10-19"
+      },
+      {
+        "absId": "2610.22462",
+        "title": "The environments forming stellar and planetary systems",
+        "summary": "How does a star's birth environment set the mass, angular momentum and chemical complexity delivered to its planet-forming disk, and thereby whether it builds planets, brown dwarfs or stellar companions? This requires following material from the cloud to the sub-au to few-au scales where infalling gas, magnetized winds and the disk interact, across all star-forming environments. At frequencies where young disks are optically thin, current facilities, even ALMA after its Wideband Sensitivity Upgrade, fall short by a factor of a few in angular resolution and an order of magnitude in sensitivity. Likewise, resolving how disks around distant high-mass stars fragment into tight multiples requires a linear resolution of a few to a few tens of au, currently out of reach. Yet the disks characterized so far lie almost exclusively in nearby, isolated clouds at near-solar metallicity, although the environment (radiation field, ionization rate, gas and stellar density, pressure and metallicity) varies by orders of magnitude across the Galaxy. Most stars, probably including the Sun, form in clustered regions at kpc distances, and the widest metallicity range lies farther still, in the outer Galaxy, the Central Molecular Zone and the Magellanic Clouds. With three times finer angular resolution and ten times the sensitivity, ALMA2040 will follow the path of material from cloud to disk across the full stellar-mass spectrum and, for the first time, measure how this path changes with environment: resolving the sub-au infall-impact and wind-launching zones nearby, disk fragmentation and the onset of multiplicity in distant high-mass regions, and disk formation at a few tenths of solar metallicity. It will thereby reveal the dust-obscured, embedded origins of planetary systems that optical and infrared facilities, including the ELT, see only once they emerge, and show how the birth environment shapes them.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.22462",
+        "htmlUrl": "https://arxiv.org/html/2610.22462v1",
+        "authors": [
+          "Michael Kuffmeier",
+          "Jaime E. Pineda",
+          "Peter Schilke",
+          "Jes K. Jørgensen",
+          "Korash Assani",
+          "Alain Baudry",
+          "Maite Beltrán",
+          "Eleonora Bianchi",
+          "Claudio Codella",
+          "Laura Colzi",
+          "Audrey Coutens",
+          "Timea Csengeri",
+          "Maria Drozdovskaya",
+          "Vardan Elbakyan",
+          "Francesco Fontani",
+          "Gary Fuller",
+          "Josep Miquel Girart",
+          "Katharine Johnston",
+          "Pamela Klaassen",
+          "Rolf Kuiper",
+          "Sébastien Maret",
+          "Nagayoshi Ohashi",
+          "Linda Podio",
+          "Víctor M. Rivilla",
+          "Giovanni Sabatini",
+          "Patricio Sanhueza",
+          "Dominique Segura-Cox",
+          "Kei Tanaka",
+          "Maxime Tanious",
+          "Fengwei Xu",
+          "Yao-Lun Yang",
+          "Qizhou Zhang"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.EP",
+          "astro-ph.GA",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.22462v1/G327-2+binary_sims+C18O_dotzoom_wLabel.png",
+            "caption": ": From birth environment to system architecture. ALMA observations of the high-mass star-forming region G327-2 (left), with synthetic images from MHD simulations of high-mass binary formation in 1.3 mm continuum (centre; Oliva, Elbakyan & Kuiper, in prep.) and of streamer-fed low-mass disk formation in C 18 ​ O \\text{C}\\hphantom{{}^{\\text{18}}_{\\text{}}}{\\vphantom{\\text{X}}}^{\\mathchoice{\\hbox to0.0pt{\\hss$\\displaystyle\\vphantom{\\smash[t]{\\text{2}}}\\text{18}$}}{\\hbox to0.0pt{\\hss$\\textstyle\\vphantom{\\smash[t]{\\text{2}}}\\text{18}$}}{\\hbox to0.0pt{\\hss$\\scriptstyle\\vphantom{\\smash[t]{\\text{2}}}\\text{18}$}}{\\hbox to0.0pt{\\hss$\\scriptscriptstyle\\vphantom{\\smash[t]{\\text{2}}}\\text{18}$}}}\\kern 0.0pt\\text{O} 2–1 (right; Kuffmeier et al., in prep.). In G327-2 the multiplicity is resolved, but the individual sources (most likely disks) are not. With three times finer resolution and ten times better line sensitivity, ALMA2040 will resolve the feeding structures, the disks they build, and their fragmentation in the clustered environments where most planetary systems are assembled.",
+            "captionLatex": ": From birth environment to system architecture. ALMA observations of the high-mass star-forming region G327-2 (left), with synthetic images from MHD simulations of high-mass binary formation in 1.3 mm continuum (centre; Oliva, Elbakyan & Kuiper, in prep.) and of streamer-fed low-mass disk formation in $\\text{C}\\hphantom{{}^{\\text{18}}_{\\text{}}}{\\vphantom{\\text{X}}}^{\\mathchoice{\\hbox to0.0pt{\\hss$\\displaystyle\\vphantom{\\smash[t]{\\text{2}}}\\text{18}$}}{\\hbox to0.0pt{\\hss$\\textstyle\\vphantom{\\smash[t]{\\text{2}}}\\text{18}$}}{\\hbox to0.0pt{\\hss$\\scriptstyle\\vphantom{\\smash[t]{\\text{2}}}\\text{18}$}}{\\hbox to0.0pt{\\hss$\\scriptscriptstyle\\vphantom{\\smash[t]{\\text{2}}}\\text{18}$}}}\\kern 0.0pt\\text{O}$ 2–1 (right; Kuffmeier et al., in prep.). In G327-2 the multiplicity is resolved, but the individual sources (most likely disks) are not. With three times finer resolution and ten times better line sensitivity, ALMA2040 will resolve the feeding structures, the disks they build, and their fragmentation in the clustered environments where most planetary systems are assembled."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.22462v1/G327-2+binary_sims+C18O_dotzoom_wLabel.png",
+        "thumbnailAlt": ": From birth environment to system architecture. ALMA observations of the high-mass star-forming region G327-2 (left), with synthetic images from MHD simulations of high-mass binary formation in 1.3 mm continuum (centre; Oliva, Elbakyan & Kuiper, in prep.) and of streamer-fed low-mass disk formation",
+        "catchupDate": "2026-10-19"
+      },
+      {
+        "absId": "2610.23500",
+        "title": "The Atmospheric Chemistry and Surface Interactions on Mars (ACSIOM) Workshop 2025",
+        "summary": "The ACSIOM workshop was held in Cambridge from 10th-12th November 2025. Its primary aims were twofold: 1) to gather UK researchers involved in Mars atmospheric science to identify current shortcomings and challenges in the field, and 2) to discuss possible collaborations and future steps needed to maximise the research output from current and future Mars missions. Workshop attendees spanned a wide range of subjects and disciplines, from atmospheric modellers and surface scientists to experimental chemists and Earth/Venus/exoplanet scientists. One of the primary outcomes of the workshop as identified by the attendees was the need for more collaborations between these different communities. It was agreed that we currently lack sufficient interaction between disciplines and this is a key challenge we need to overcome in order to properly utilise and exploit the vast pool of martian expertise available in the UK. Modellers need reaction rates from experimentalists; experimentalists need modelling context to prioritise their experiments; geologists need modelling context to understand the features they see; modellers need geological context to constrain their results. Attendees stressed that the UK Mars community has a critical mass which is internationally recognised, and improving the communication between communities would allow significant progress to be made in martian research, allowing the UK to maintain leadership in Mars science for years to come. We highlight that this is a pivotal moment for such investments as many planetary missions, both for Mars and other terrestrial bodies, are about to be launched or are being considered in the coming years. Having a strong and close-knit community will be key to better identifying needs and capabilities in order to optimise investments in missions and to have the best scientific return possible.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.23500",
+        "htmlUrl": "https://arxiv.org/html/2610.23500v1",
+        "authors": [
+          "Benjamin Benne",
+          "Megan A. J. Brown",
+          "Bethan S. Gregory",
+          "Paul M. Streeter",
+          "ACSIOM Team"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.23500v1/logo_UKSA.png",
+            "caption": "Figure 1 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23500v1/UoE_Stacked_Logo_CMYK_v1_160215.png",
+            "caption": "Figure 2 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23500v1/diagram_WP_v2.png",
+            "caption": "Schematic depicting how each topic interacts with one another and the key processes responsible for this interaction."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23500v1/kahre_2017.png",
+            "caption": "(a) Forces experienced by dust particles and (b) forms of dust particle movement: suspension, saltation, and creep, based on particle mass. Adapted from [ 26 ] ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.23500v1/logo_UKSA.png",
+        "thumbnailAlt": "Figure 1 from the paper",
+        "catchupDate": "2026-10-19"
+      },
+      {
+        "absId": "2610.23636",
+        "title": "A Hectospec Spectroscopic Census of Kinematic Members in the Orion Nebula Cluster",
+        "summary": "We present a comprehensive spectroscopic census of the Orion Nebula Cluster (ONC), based primarily on low-resolution optical spectroscopy obtained with MMT/Hectospec. We derive spectral types, youth indicators, and accretion diagnostics for 1513 stars located in the ONC region, enabling the identification and characterization of pre-main-sequence stars. We combine these measurements with a kinematic membership analysis based on Gaia Data Release 3 astrometry to identify and confirm cluster members. Using these combined diagnostics, we identify and characterize 780 bona fide T Tauri stars associated with the ONC. In addition, we construct a census of protoplanetary discs using infrared photometry obtained with the IRAC and MIPS instruments aboard the Spitzer Space Telescope. We further derive stellar masses, ages, and extinctions using the MassAge code, which combines photometric and spectroscopic inputs with stellar evolutionary models, and employs a Monte Carlo approach for uncertainty propagation. The resulting homogeneous catalogue of ONC members provides spectroscopic characterizations, kinematic membership constraints, disc diagnostics, and self-consistent estimates of stellar physical parameters. This dataset offers a refined view of the stellar population of the ONC and provides a robust foundation for investigating its kinematic structure, age distribution, and protoplanetary disc population.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.23636",
+        "htmlUrl": "https://arxiv.org/html/2610.23636v1",
+        "authors": [
+          "Jesús Hernández",
+          "Ezequiel Manzo-Martínez",
+          "Lucía Adame",
+          "Sergio Sánchez-Sanjuán",
+          "Nuria Calvet",
+          "David Fernandez",
+          "Cesar Briceno",
+          "Javier Serna",
+          "Giovanni Pinzón",
+          "Lucia Martinez",
+          "Tom Megeath",
+          "John J. Tobin",
+          "Carlos Román-Zuñiga",
+          "Karina Maucó",
+          "Corina Zepeda",
+          "Andrea Bonilla-Barroso",
+          "Maria Gracia Batista",
+          "Javier Ballesteros-Paredes",
+          "Lori Allen",
+          "Luisa Zamudio-Ruvalcaba",
+          "Fabian Ahumada",
+          "Alejandro Alfonso",
+          "Johana Contreras",
+          "Jhordan Peña"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.23636v1/AV_comparison.png",
+            "caption": "Comparison between extinction estimates derived using nominal filter wavelengths and those obtained using effective wavelengths that account for the intrinsic SED of the source and the filter transmission curves. The one-to-one relation is shown for reference (dashed line). The colour bar indicates the effective temperature of the sources."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23636v1/mass_corner_std.png",
+            "caption": "Comparison of stellar masses derived with the MassAge code using different non-magnetic evolutionary models. Each panel compares a pair of models, with the one-to-one relation shown for reference. Stellar masses are expressed in units of solar masses ( M ⊙ \\mathrm{M}_{\\odot} ). The abbreviations denote the evolutionary models adopted: Pa = PARSEC ( Marigo et al., 2017 ) , Mi = MIST ( Dotter, 2016 ) , SF = Siess et al. (2000) , Pi = Pisa ( Tognelli et al., 2011 ) , Ba = Baraffe et al. (2002) ; Baraffe et al. (2015) , and S00 = Somers et al. (2020) without stellar spots. The colour of each point indicates the stellar ages from S00, as shown by the colour bar.",
+            "captionLatex": "Comparison of stellar masses derived with the MassAge code using different non-magnetic evolutionary models. Each panel compares a pair of models, with the one-to-one relation shown for reference. Stellar masses are expressed in units of solar masses ( $\\mathrm{M}_{\\odot}$ ). The abbreviations denote the evolutionary models adopted: Pa = PARSEC ( Marigo et al., 2017 ) , Mi = MIST ( Dotter, 2016 ) , SF = Siess et al. (2000) , Pi = Pisa ( Tognelli et al., 2011 ) , Ba = Baraffe et al. (2002) ; Baraffe et al. (2015) , and S00 = Somers et al. (2020) without stellar spots. The colour of each point indicates the stellar ages from S00, as shown by the colour bar."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23636v1/mass_corner_mag.png",
+            "caption": "Comparison of stellar masses derived with the MassAge code using evolutionary models that incorporate magnetic fields or stellar spots. Each panel compares a pair of models, with the one-to-one relation shown for reference. Stellar masses are expressed in units of solar masses ( M ⊙ \\mathrm{M}_{\\odot} ). The abbreviations denote the evolutionary models adopted: Fs = Feiden (2016) non-magnetic model, Fm = Feiden (2016) magnetic model, S00 = Somers et al. (2020) without stellar spots, and S34, S51, and S84 = Somers et al. (2020) models with 34%, 51%, and 85% spot coverage, respectively.The colour of each point indicates the stellar ages from S00, as shown by the colour bar.",
+            "captionLatex": "Comparison of stellar masses derived with the MassAge code using evolutionary models that incorporate magnetic fields or stellar spots. Each panel compares a pair of models, with the one-to-one relation shown for reference. Stellar masses are expressed in units of solar masses ( $\\mathrm{M}_{\\odot}$ ). The abbreviations denote the evolutionary models adopted: Fs = Feiden (2016) non-magnetic model, Fm = Feiden (2016) magnetic model, S00 = Somers et al. (2020) without stellar spots, and S34, S51, and S84 = Somers et al. (2020) models with 34%, 51%, and 85% spot coverage, respectively.The colour of each point indicates the stellar ages from S00, as shown by the colour bar."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23636v1/age_corner_std.png",
+            "caption": "Comparison of stellar ages derived with the MassAge code using different non-magnetic evolutionary models. Each panel compares a pair of models, with the one-to-one relation shown for reference. Stellar ages are expressed in Myr. The abbreviations denote the evolutionary models adopted: Pa = PARSEC ( Marigo et al., 2017 ) , Mi = MIST ( Dotter, 2016 ) , SF = Siess et al. (2000) , Pi = Pisa ( Tognelli et al., 2011 ) , Ba = Baraffe et al. (2002) ; Baraffe et al. (2015) , and S00 = Somers et al. (2020) without stellar spots. The colour of each point indicates the stellar masses from S00, as shown by the colour bar."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23636v1/age_corner_mag.png",
+            "caption": "Comparison of stellar ages derived with the MassAge code using evolutionary models that incorporate magnetic fields or stellar spots. Each panel compares a pair of models, with the one-to-one relation shown for reference. Stellar ages are expressed in Myr. The abbreviations denote the evolutionary models adopted: Fs = Feiden (2016) non-magnetic model, Fm = Feiden (2016) magnetic model, S00 = Somers et al. (2020) without stellar spots, and S34, S51, and S84 = Somers et al. (2020) models with 34%, 51%, and 85% spot coverage, respectively. The colour of each point indicates the stellar masses from S00, as shown by the colour bar."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23636v1/IRAC_classification.png",
+            "caption": "Colour-magnitude diagrams used to identify stars with infrared excesses at 5.8 and 8.0 µm. YSOs from Megeath et al. (2016) are shown as black dots. Stars in the main sample are shown as blue open circles, and bona fide T Tauri stars, which constitute a subset of the main sample, are highlighted with red open circles. The photospheric limits (black solid lines) were derived from Gaussian fits to the K-[3.6], K-[4.5], K-[5.8], and K-[8.0] colour distributions. The lower limits for CII objects from Luhman et al. (2010) (dotted lines) and the CII/CI boundaries corresponding to a flat SED (dashed-dotted lines) are also shown."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23636v1/Km8p0_vs_Km24_0p3_and_0p5Msun_1Myr_DAGA.png",
+            "caption": "Synthetic colors for grids of disc models, for central stars with masses 0.3 M ⊙ \\mathrm{M}_{\\odot} (squares) and a 0.5 M ⊙ \\mathrm{M}_{\\odot} (circles). The colour bar indicates the ϵ \\epsilon settling parameter and the size of the symbol represents the value of z big z_{\\mathrm{big}} . Vertical lines are the same as in Figure 11 .",
+            "captionLatex": "Synthetic colors for grids of disc models, for central stars with masses 0.3 $\\mathrm{M}_{\\odot}$ (squares) and a 0.5 $\\mathrm{M}_{\\odot}$ (circles). The colour bar indicates the $\\epsilon$ settling parameter and the size of the symbol represents the value of $z_{\\mathrm{big}}$ . Vertical lines are the same as in Figure 11 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23636v1/median_SED_ONC_Taurus_SigmaOri_Mauco16_normH_with_model_grid.png",
+            "caption": "Median SEDs of the ONC (blue), Taurus, from Esplin and Luhman (2019) (red), and σ \\sigma Ori from Maucó et al. (2016) (green). The shaded regions indicate the corresponding interquartile ranges. The diamonds and vertical bars represent the synthetic median SED and its interquartile range, respectively, obtained from a grid of disc models spanning a range of inclinations, dust-settling parameters, and mass accretion rates (see text for details). The dotted line shows the photospheric SED of an M4 star from Kenyon and Hartmann (1995) , included as a visual reference to illustrate the infrared excesses.",
+            "captionLatex": "Median SEDs of the ONC (blue), Taurus, from Esplin and Luhman (2019) (red), and $\\sigma$ Ori from Maucó et al. (2016) (green). The shaded regions indicate the corresponding interquartile ranges. The diamonds and vertical bars represent the synthetic median SED and its interquartile range, respectively, obtained from a grid of disc models spanning a range of inclinations, dust-settling parameters, and mass accretion rates (see text for details). The dotted line shows the photospheric SED of an M4 star from Kenyon and Hartmann (1995) , included as a visual reference to illustrate the infrared excesses."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.23636v1/AV_comparison.png",
+        "thumbnailAlt": "Comparison between extinction estimates derived using nominal filter wavelengths and those obtained using effective wavelengths that account for the intrinsic SED of the source and the filter transmission curves. The one-to-one relation is shown for reference (dashed line). The colour bar indicates ",
+        "catchupDate": "2026-10-19"
+      },
+      {
+        "absId": "2610.23640",
+        "title": "Survey of Orion Disks with ALMA (SODA) IV: Millimeter variability of protoplanetary disks",
+        "summary": "Context. Short-term millimeter-wavelength variability in Class II young stellar objects (YSOs) has been considered minimal, often dismissed as very rare in ALMA-based studies on short timescales. However, recent findings suggest that variability on sub-day timescales is significant. Aims. This study aims to quantify short timescale (~1 hour to ~3 days) millimeter flux variability in unresolved Class II YSO disks observed as part of the SODA survey, leveraging its large dataset to assess the statistical significance of such variability across the LDN 1641 and LDN 1647 regions in Orion. Methods. We analyze ALMA Band 6 observations of 873 YSOs obtained over multiple epochs using a custom flux extraction pipeline to separate individual execution blocks. By computing variability factors and statistical deviations from the mean flux, we identify sources exhibiting significant variability, accounting for noise and calibrator stability. Results. Even with conservative selection criteria, we identify 20 variable sources within the sample (~5.3% of all detections). The maximum of the measured variability factor is >=7 over about one hour. More liberal selection criteria yield up to 60 sources that could be called potentially variable (~15.9%). Conclusions. The number of variable sources detected in our sample indicates physical processes operating on time scales of hours, likely associated with magnetic reconnection and/or synchrotron radiation or strong cases of magnetic accretion changes. These detections show the need to reconsider typical stability assumptions in single-epoch observations and calls for follow-up studies in star-forming regions with ALMA. Masses derived from unresolved measurements could potentially be biased by this sort of variability.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.23640",
+        "htmlUrl": "https://arxiv.org/html/2610.23640v1",
+        "authors": [
+          "D. Krebs",
+          "A. Hacar",
+          "J.Forbrich",
+          "S.E. van Terwisga"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.23640v1/combipage.png",
+            "caption": "Flux variations in four representative targets of our SODA sample (rows) including both their concatenated ALMA map (first column) as well as the individual maps per epoch (second to fourth columns). Sources are sorted on increasing variability factor f var (Sect. 4.2 ) of each time series (bottom right corner in the rightmost panel). From top to bottom: (a) [MGM2012] 179 (no variability), (b) [MGM2012] 173 and (c) [MGM2012] 661 (intermediate variability), and (d) [MGM2012] 1041 (high variability). In each row the image fluxes are normalized with respect to the maximum peak flux value of the series (see color bar). Each sub-panel includes the time difference ( Δ ​ τ \\Delta\\tau ) with respect to the first observation τ 0 \\tau_{0} (top left corner) and the corresponding total flux F F (top right corner). The black crosses in the center of the image indicate the nominal Spitzer positions ( Megeath et al. 2012 ) . There is no significant offset between the nominal Spitzer positions and the perceived source position in this work.",
+            "captionLatex": "Flux variations in four representative targets of our SODA sample (rows) including both their concatenated ALMA map (first column) as well as the individual maps per epoch (second to fourth columns). Sources are sorted on increasing variability factor f var (Sect. 4.2 ) of each time series (bottom right corner in the rightmost panel). From top to bottom: (a) [MGM2012] 179 (no variability), (b) [MGM2012] 173 and (c) [MGM2012] 661 (intermediate variability), and (d) [MGM2012] 1041 (high variability). In each row the image fluxes are normalized with respect to the maximum peak flux value of the series (see color bar). Each sub-panel includes the time difference ( $\\Delta\\tau$ ) with respect to the first observation $\\tau_{0}$ (top left corner) and the corresponding total flux $F$ (top right corner). The black crosses in the center of the image indicate the nominal Spitzer positions ( Megeath et al. 2012 ) . There is no significant offset between the nominal Spitzer positions and the perceived source position in this work."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23640v1/var_cali.png",
+            "caption": "Flux variations (mean and standard deviation; green circles plus error bars) in the observed flux calibrators per SB (see Table 1 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23640v1/Figures/max_var_factor_cons.png",
+            "caption": "Variability factor ( V ​ F VF ) for all the SODA sources with fluxes higher than 4 σ i \\sigma_{i} identified by their [MGM2012] catalogue ID. Different symbols identify distinct detections in our survey: (grey inverted triangles) upper limits, (blue triangles) lower limits, and (red diamonds) variable sources (i.e. V ​ F > 1.2 VF>1.2 and V ​ F s V ​ F > 7 \\frac{VF}{s_{VF}}>7 ; see text for a discussion).",
+            "captionLatex": "Variability factor ( $VF$ ) for all the SODA sources with fluxes higher than 4 $\\sigma_{i}$ identified by their [MGM2012] catalogue ID. Different symbols identify distinct detections in our survey: (grey inverted triangles) upper limits, (blue triangles) lower limits, and (red diamonds) variable sources (i.e. $VF>1.2$ and $\\frac{VF}{s_{VF}}>7$ ; see text for a discussion)."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23640v1/Figures/Var_rms_alternative.png",
+            "caption": "Normalized flux variation ( σ F F 0 \\frac{\\sigma_{F}}{F_{0}} ) for all SODA sources with fluxes higher than 4 σ i \\sigma_{i} vs. the signal to noise ratio S/N of the concatenated image for all sources. The symbols identify distinct detections in the survey: (grey crosses) SODA targets, (blue triangles) lower limits and (red diamonds) variable sources (i.e. V ​ F > 1.2 VF>1.2 and V ​ F s V ​ F > 7 \\frac{VF}{s_{VF}}>7 ). The yellow line denotes the fit to the whole data set with the expected relationship as a gray line. The green line shows the maximum calibration variability. The grey crosses above the fit are not treated as variable since they do not meet our criteria for VF due to large uncertainties. Note that maximum calibration variability most pessimistically leads to a σ F F 0 \\frac{\\sigma_{F}}{F_{0}} of 7.4 % and a VF of 6.6 %.",
+            "captionLatex": "Normalized flux variation ( $\\frac{\\sigma_{F}}{F_{0}}$ ) for all SODA sources with fluxes higher than 4 $\\sigma_{i}$ vs. the signal to noise ratio S/N of the concatenated image for all sources. The symbols identify distinct detections in the survey: (grey crosses) SODA targets, (blue triangles) lower limits and (red diamonds) variable sources (i.e. $VF>1.2$ and $\\frac{VF}{s_{VF}}>7$ ). The yellow line denotes the fit to the whole data set with the expected relationship as a gray line. The green line shows the maximum calibration variability. The grey crosses above the fit are not treated as variable since they do not meet our criteria for VF due to large uncertainties. Note that maximum calibration variability most pessimistically leads to a $\\frac{\\sigma_{F}}{F_{0}}$ of 7.4 % and a VF of 6.6 %."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.23640v1/Figures/time_vs_VF_hist_nv.png",
+            "caption": "Normalized frequency of flux changes deemed variable in their respective timescale. The blue bars (left panel) show the variabilities over one hour, the red bars (mid panel) in one day and the green bars (right panel) over three days. The one hour timescale was sampled with all 377 sources, one day has around 260 and three days has less than 140 samples in our sample. Note that all three timescales were normalized to the total amount of detections (377), meaning that roughly 0.26 %(1/377) on this scale translate to one source."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.23640v1/combipage.png",
+        "thumbnailAlt": "Flux variations in four representative targets of our SODA sample (rows) including both their concatenated ALMA map (first column) as well as the individual maps per epoch (second to fourth columns). Sources are sorted on increasing variability factor f var (Sect. 4.2 ) of each time series (bottom r",
+        "catchupDate": "2026-10-19"
+      }
+    ],
+    "repl": [
+      {
+        "absId": "2610.13762",
+        "title": "The origin of the high heavy-element content of warm Jupiters",
+        "summary": "Planet interior models have revealed that warm Jupiters should harbor large heavy element masses (up to 30-40% of the planetary mass). Within the pebble drift and evaporation scenario, inward drifting pebbles can evaporate and enrich the inner disc with vapor to super-stellar values, accreteable by giant planets. As H$_2$O ice evaporates in the inner disc, while CO$_2$, CH$_4$ and CO evaporate in the outer disc, the enrichment of the disc with vapor decreases with increasing orbital distance. We use the chemcomp code to model the migration and growth of planets via pebble and gas accretion in discs around stars with different masses and discs with different sizes. We show (i) that pebble drift and evaporation can explain the wide range of derived heavy element contents of giant planets. (ii) Giant planets forming around stars with larger disc sizes can accrete larger quantities of heavy elements, because these discs can maintain a high pebble flux for a longer time. (iii) Planets forming or migrating interior to the water ice line can accrete larger amounts of heavy elements via the accretion of vapor enriched gas compared to planets forming in the outer disc regions. (iv) Metal rich stars can allow the formation of planets that are more enriched in heavy elements, if they form in the inner disc regions. Planets forming in the outer disc regions will be - independently of the disc metallicity - much less enriched compared. (v) Planets forming in discs with the same size and total mass, but around stars with higher mass, are only marginally more enriched compared to their counterparts forming around lower mass star. Our study suggests that the trend of increasing total heavy element mass with increasing planetary mass is caused by the accretion of vapor enriched gas in discs with different sizes in the combination with different origins of warm giant planets from the inner and outer disc.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.13762",
+        "htmlUrl": "https://arxiv.org/html/2610.13762v2",
+        "authors": [
+          "Bertram Bitsch"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.13762v2/MZdistance.png",
+            "caption": "Heavy-element mass (left) and metallicity (right) of planets starting at different orbital distances in a disc with α = 10 − 4 \\alpha=10^{-4} (circles), α = 3 × 10 − 4 \\alpha=3\\times 10^{-4} (stars), and α = 10 − 3 \\alpha=10^{-3} (triangles) colour-coded by their final orbital position relative to the water ice line in the corresponding systems. The black line with the grey error bands correspond to the fits from Chachan et al. (2025) .",
+            "captionLatex": "Heavy-element mass (left) and metallicity (right) of planets starting at different orbital distances in a disc with $\\alpha=10^{-4}$ (circles), $\\alpha=3\\times 10^{-4}$ (stars), and $\\alpha=10^{-3}$ (triangles) colour-coded by their final orbital position relative to the water ice line in the corresponding systems. The black line with the grey error bands correspond to the fits from Chachan et al. (2025) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.13762v2/Zstar.png",
+            "caption": "Left: Evolution of the heavy-element mass of planets starting at 2.0 AU in discs with Z = 0.024 Z=0.024 (dotted) and α = 10 − 4 \\alpha=10^{-4} , up to an evolution of 5 Myr. The solid lines correspond to planets forming in discs with a standard metallicity of Z = 0.016 Z=0.016 . The dashed lines correspond to a planet starting in the outer disc with Z = 0.016 Z=0.016 at 20 AU, where the pebble isolation mass is higher. The planets start in discs with different stellar masses and disc radii. Right: Final heavy-element mass of planets forming at different locations around a 1.4 M ⊙ M_{\\odot} star with a disc size of 320 AU and varying metallicities. The vertical dashed line at ≈ 2 \\approx 2 AU corresponds to the water ice line, interior to which the heavy-element content of planets increases significantly. The second dashed line at ≈ 9.5 \\approx 9.5 AU corresponds to the CO 2 evaporation front, while the grey line marks the pebble isolation mass. The planets forming in the very inner disc regions around fewer metal-rich stars can harbour a higher heavy-element mass compared to planets forming exterior to the water ice line around a high-metallicity star. Exterior to the CO 2 evaporation front, the disc metallicity does not significantly influence the total heavy-element mass of the planets, because this mass is set by the planet’s core, which is set by the pebble isolation mass that is independent of the disc metallicity.",
+            "captionLatex": "Left: Evolution of the heavy-element mass of planets starting at 2.0 AU in discs with $Z=0.024$ (dotted) and $\\alpha=10^{-4}$ , up to an evolution of 5 Myr. The solid lines correspond to planets forming in discs with a standard metallicity of $Z=0.016$ . The dashed lines correspond to a planet starting in the outer disc with $Z=0.016$ at 20 AU, where the pebble isolation mass is higher. The planets start in discs with different stellar masses and disc radii. Right: Final heavy-element mass of planets forming at different locations around a 1.4 $M_{\\odot}$ star with a disc size of 320 AU and varying metallicities. The vertical dashed line at $\\approx 2$ AU corresponds to the water ice line, interior to which the heavy-element content of planets increases significantly. The second dashed line at $\\approx 9.5$ AU corresponds to the CO 2 evaporation front, while the grey line marks the pebble isolation mass. The planets forming in the very inner disc regions around fewer metal-rich stars can harbour a higher heavy-element mass compared to planets forming exterior to the water ice line around a high-metallicity star. Exterior to the CO 2 evaporation front, the disc metallicity does not significantly influence the total heavy-element mass of the planets, because this mass is set by the planet’s core, which is set by the pebble isolation mass that is independent of the disc metallicity."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.13762v2/MZtracksgaps.png",
+            "caption": "Heavy-element mass as a function of planetary mass for planets forming around a 1.4 M ⊙ M_{\\odot} star with a disk size of 320 AU, α = 10 − 4 \\alpha=10^{-4} , and gaps introduced at different times with varying strength. The gaps are always at 50 AU. The planets start at 2 AU.",
+            "captionLatex": "Heavy-element mass as a function of planetary mass for planets forming around a 1.4 $M_{\\odot}$ star with a disk size of 320 AU, $\\alpha=10^{-4}$ , and gaps introduced at different times with varying strength. The gaps are always at 50 AU. The planets start at 2 AU."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.13762v2/MZdistanceOH.png",
+            "caption": "Top: O/H, C/H, and N/H of the atmospheres of all simulated planets for with Z = 0.016 Z=0.016 . The circles correspond to α = 10 − 4 \\alpha=10^{-4} ; the stars correspond to α = 3 × 10 − 4 \\alpha=3\\times 10^{-4} ; and the upside down triangles correspond to α = 10 − 3 \\alpha=10^{-3} . The lines and data points correspond to the fits and observational data from Lothringer et al. (2026) , where the solid line corresponds to the fits of the data from transmission spectroscopy and the dashed line corresponds to eclipse spectroscopy. Note the different scaling on the y-axis for the plots. Bottom: Heavy-element mass of planets as a function of their total mass, colour-coded by the atmospheric abundances of O/H, C/H, and N/H.",
+            "captionLatex": "Top: O/H, C/H, and N/H of the atmospheres of all simulated planets for with $Z=0.016$ . The circles correspond to $\\alpha=10^{-4}$ ; the stars correspond to $\\alpha=3\\times 10^{-4}$ ; and the upside down triangles correspond to $\\alpha=10^{-3}$ . The lines and data points correspond to the fits and observational data from Lothringer et al. (2026) , where the solid line corresponds to the fits of the data from transmission spectroscopy and the dashed line corresponds to eclipse spectroscopy. Note the different scaling on the y-axis for the plots. Bottom: Heavy-element mass of planets as a function of their total mass, colour-coded by the atmospheric abundances of O/H, C/H, and N/H."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.13762v2/MZdistance.png",
+        "thumbnailAlt": "Heavy-element mass (left) and metallicity (right) of planets starting at different orbital distances in a disc with α = 10 − 4 \\alpha=10^{-4} (circles), α = 3 × 10 − 4 \\alpha=3\\times 10^{-4} (stars), and α = 10 − 3 \\alpha=10^{-3} (triangles) colour-coded by their final orbital position relative to t",
+        "catchupDate": "2026-10-19"
+      },
+      {
+        "absId": "2610.22303",
+        "title": "Chemical Demographics of Star-forming Regions",
+        "summary": "Our understanding of complex organic chemistry during the formation of stars and planets is shaped by a handful of cherry-picked sources with bright molecular emission lines. This observational bias impedes our assessment of how universal chemical complexity is during star formation. The lack of systematic wideband spectral surveys for statistically significant samples of protostars and cores is a major roadblock to properly probing how COM inventories and abundances depend on the vast range of physical conditions, local cloud and global galactic environments, and evolutionary timescales of low- and high-mass star formation. In turn, this limits our ability to constrain and test physicochemical models, which depend critically on these parameters. The next-generation ALMA2040, with a 10x improvement in line sensitivity, is required to observe COMs, that we perceive as common today, in a fraction of the observing time that is needed today with ALMA. Such capabilities will propel us into the era of chemical demographics, whereby wideband (>100 GHz) spectral surveys at high sensitivity (routinely probing COM abundances down to 0.01% relative to CH3OH) will be executed towards >1000-10000 prestellar and protostellar sources. With robust chemical inventories towards large source sample sizes, we will be able to probe for dependencies of chemical complexity on mass regime, feedback processes in a cluster, Galactic position, metallicity, and time-variable accretion. Only with statistically significant samples at high sensitivity will we be able to assess the ubiquity and homogeneity of COM chemistry across the protostellar mass spectrum and natal cores. Constraining the diversity and availability of such species is critical for our understanding of the chemical reservoir available for planet formation, which eventually shapes (exo)planetary atmosphere compositions.",
+        "published": "2026-10-19T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.22303",
+        "htmlUrl": "https://arxiv.org/html/2610.22303v2",
+        "authors": [
+          "Maria N. Drozdovskaya",
+          "Timea Csengeri",
+          "Maria Teresa Beltrán",
+          "Jes Jørgensen",
+          "Alain Baudry",
+          "Henrik Beuther",
+          "Laure Bouscasse",
+          "Laura Colzi",
+          "Audrey Coutens",
+          "Marta De Simone",
+          "Pamela Klaassen",
+          "Maryvonne Gerin",
+          "Adam Ginsburg",
+          "Daniel Harsono",
+          "Katharine Johnston",
+          "Xing Lu",
+          "Sébastien Maret",
+          "Sergio Martín",
+          "Aina Palau",
+          "Giovanni Sabatini",
+          "Miguel Sanz-Novo",
+          "Maxime Tanious",
+          "Claudia Toci",
+          "Yao-Lun Yang",
+          "Shaoshan Zeng",
+          "Korash Assani",
+          "Aurore Bacmann",
+          "Eleonora Bianchi",
+          "Gary Fuller",
+          "Izaskun Jiménez-Serra",
+          "Ágnes Kóspál",
+          "Michael Küffmeier",
+          "Álvaro Sánchez-Monge",
+          "Frédérique Motte",
+          "Mamta Pandey-Pommier",
+          "Dries Van De Putte",
+          "Víctor Rivilla",
+          "Łukasz Tychoniec"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.EP",
+          "astro-ph.GA",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.22303v2/Sketch.png",
+            "caption": ": Illustration of ALMA2040 powerful capabilities in comparison to today’s ALMA in the context of low- and high-mass star-forming regions (SFRs) and emission from complex organic molecules (COMs)."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.22303v2/Sketch.png",
+        "thumbnailAlt": ": Illustration of ALMA2040 powerful capabilities in comparison to today’s ALMA in the context of low- and high-mass star-forming regions (SFRs) and emission from complex organic molecules (COMs).",
+        "catchupDate": "2026-10-19"
+      }
+    ]
+  }
+}
