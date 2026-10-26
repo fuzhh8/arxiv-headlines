@@ -1,0 +1,933 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "source": "arxiv-catchup",
+  "category": "astro-ph.EP",
+  "date": "2026-10-26",
+  "generatedAt": "2026-10-26T05:57:34.716Z",
+  "figuresStatus": "complete",
+  "figureCounts": {
+    "processed": 12,
+    "total": 12,
+    "found": 11
+  },
+  "counts": {
+    "new": 9,
+    "cross": 1,
+    "repl": 3
+  },
+  "papersBySection": {
+    "new": [
+      {
+        "absId": "2610.31784",
+        "title": "Demographics of Close-In TESS Exoplanets Orbiting FGK Main-sequence Stars II. Spectral-Type Dependence and the Neptunian Landscape",
+        "summary": "Understanding how planetary demographics depend on host star properties is essential for constraining planet formation and evolution theories. In this paper, we analyse close-in 0.5-16 d planet occurrence rates from the TESS Science Processing Operations Center (SPOC) full-frame image data for individual F-, G-, and K-type main-sequence stellar samples. Integrated over $0.5 < P < 16$ d and $2 < R_\\mathrm{p} < 20\\,R_\\oplus$, the occurrence rates are $12.1^{+3.0}_{-2.3}$, $10.2^{+1.2}_{-1.0}$, and $13.1^{+1.4}_{-1.2}$ planets per 100 stars for F-, G-, and K-type hosts, consistent with each other at $1\\sigma$, so any spectral-type dependence is localized rather than global. For transiting hot Jupiters, we measure $0.30^{+0.04}_{-0.03}$, $0.50\\pm0.03$, and $0.67^{+0.08}_{-0.07}$ per cent, with the rate peaking at K type; the latter being the first such measurement for K-type hosts. Modelling the Neptunian desert directly in occurrence-rate space, we find that the desert extends to longer orbital periods around hotter stars. Integrating over the desert interior gives $0.069^{+0.045}_{-0.011}$, $0.093^{+0.046}_{-0.022}$, and $0.150^{+0.033}_{-0.026}$ planets per 100 stars, implying about one close-in planet in a hundred lies inside the desert, and the desert is roughly twice as populated around K- as around F-type hosts. A rigorous Bayesian model comparison for the $6$-$8\\,R_\\oplus$ strip indicates that a distinct Neptunian ridge is not required to explain the measurements.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.31784",
+        "htmlUrl": "https://arxiv.org/html/2610.31784v1",
+        "authors": [
+          "Kaiming Cui",
+          "David J. Armstrong",
+          "Andreas Hadjigeorghiou",
+          "Marina Lafarga",
+          "Ares Osborn",
+          "George W. King",
+          "Tim Hallatt",
+          "Vedad Kunovac",
+          "Lauren Doyle"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.31784v1/stellar-temp.png",
+            "caption": "Effective temperature distribution of our TESS -SPOC FGK main-sequence stellar sample. Boxes with different colours indicate the counts and temperature boundaries adopted for F-type ( 6000 6000 – 7300 7300 K), G-type ( 5300 5300 – 6000 6000 K), and K-type ( 3900 3900 – 5300 5300 K) subsamples.",
+            "captionLatex": "Effective temperature distribution of our TESS -SPOC FGK main-sequence stellar sample. Boxes with different colours indicate the counts and temperature boundaries adopted for F-type ( $6000$ – $7300$ K), G-type ( $5300$ – $6000$ K), and K-type ( $3900$ – $5300$ K) subsamples."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31784v1/completenesses.png",
+            "caption": "Combined completeness Q ⁡ ( P , R p ) Q(P,R_{\\mathrm{p}}) of our detection, vetting, and validation pipeline in the period–radius plane, shown for the F-type (left), G-type (middle), and K-type (right) subsamples. The maps are the product of the observational-bias, detection-efficiency, vetting, false-positive, and SNR completeness terms described in Section 2.2 , and provide the Q ⁡ ( 𝝎 ) Q(\\boldsymbol{\\omega}) entering Equation 1 .",
+            "captionLatex": "Combined completeness $Q(P,R_{\\mathrm{p}})$ of our detection, vetting, and validation pipeline in the period–radius plane, shown for the F-type (left), G-type (middle), and K-type (right) subsamples. The maps are the product of the observational-bias, detection-efficiency, vetting, false-positive, and SNR completeness terms described in Section 2.2 , and provide the $Q(\\boldsymbol{\\omega})$ entering Equation 1 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31784v1/wKDE-F2.png",
+            "caption": "wKDE occurrence rate map for F-type stars in the period–radius plane. The colour scale is normalized logarithmically. The semi-major axis shown on the upper axis is a rough conversion based on the typical stellar mass of F-type stars, 1.3 ​ M ⊙ 1.3\\,M_{\\odot} , and is indicative only. The dashed red lines show the modelled upper and lower boundaries based on occurrence rates from Section 3.3 , with the shaded bands giving the 1 ​ σ 1\\sigma credible intervals. Our KDE maps and desert boundary plots can be reproduced with NDesPlot ( https://github.com/ckm3/NDesPlot ).",
+            "captionLatex": "wKDE occurrence rate map for F-type stars in the period–radius plane. The colour scale is normalized logarithmically. The semi-major axis shown on the upper axis is a rough conversion based on the typical stellar mass of F-type stars, $1.3\\,M_{\\odot}$ , and is indicative only. The dashed red lines show the modelled upper and lower boundaries based on occurrence rates from Section 3.3 , with the shaded bands giving the $1\\sigma$ credible intervals. Our KDE maps and desert boundary plots can be reproduced with NDesPlot ( https://github.com/ckm3/NDesPlot )."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31784v1/wKDE-G2.png",
+            "caption": "Same as Fig. 3 but for G-type stars. The semi-major axis is a rough estimation based on the typical stellar mass of G-type stars, 1.0 M ⊙ M_{\\odot} .",
+            "captionLatex": "Same as Fig. 3 but for G-type stars. The semi-major axis is a rough estimation based on the typical stellar mass of G-type stars, 1.0 $M_{\\odot}$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31784v1/wKDE-K2.png",
+            "caption": "Same as Fig. 3 but for K-type stars. The semi-major axis is a rough estimation based on the typical stellar mass of K-type stars, 0.7 M ⊙ M_{\\odot} .",
+            "captionLatex": "Same as Fig. 3 but for K-type stars. The semi-major axis is a rough estimation based on the typical stellar mass of K-type stars, 0.7 $M_{\\odot}$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31784v1/occ-rate-F.png",
+            "caption": "Occurrence rates of planet candidates around TESS -SPOC F-type main-sequence stars on a 10 × 10 10\\times 10 grid. Each cell displays the median occurrence rate as a percentage (planets per 100 stars) with uncertainties from the 16th and 84th percentiles. The colour encodes the occurrence rate density Γ \\Gamma , in planets per 100 stars per unit ln ⁡ P ​ ln ⁡ R p \\ln P\\,\\ln R_{\\mathrm{p}} , on a logarithmic scale, truncated at 0.01 0.01 – 0.5 0.5 to enhance visibility. Bins with zero detections are overlaid with diagonal lines. We also provide an online interactive plot that allows users to easily select any region and obtain its total occurrence rate.",
+            "captionLatex": "Occurrence rates of planet candidates around TESS -SPOC F-type main-sequence stars on a $10\\times 10$ grid. Each cell displays the median occurrence rate as a percentage (planets per 100 stars) with uncertainties from the 16th and 84th percentiles. The colour encodes the occurrence rate density $\\Gamma$ , in planets per 100 stars per unit $\\ln P\\,\\ln R_{\\mathrm{p}}$ , on a logarithmic scale, truncated at $0.01$ – $0.5$ to enhance visibility. Bins with zero detections are overlaid with diagonal lines. We also provide an online interactive plot that allows users to easily select any region and obtain its total occurrence rate."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31784v1/occ-rate-G.png",
+            "caption": "Same as Fig. 6 but for G-type stars."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31784v1/occ-rate-K.png",
+            "caption": "Same as Fig. 6 but for K-type stars."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.31784v1/stellar-temp.png",
+        "thumbnailAlt": "Effective temperature distribution of our TESS -SPOC FGK main-sequence stellar sample. Boxes with different colours indicate the counts and temperature boundaries adopted for F-type ( 6000 6000 – 7300 7300 K), G-type ( 5300 5300 – 6000 6000 K), and K-type ( 3900 3900 – 5300 5300 K) subsamples.",
+        "catchupDate": "2026-10-26"
+      },
+      {
+        "absId": "2610.31828",
+        "title": "Best Bulk Bennu (B3): Elemental compositions of aggregate samples from asteroid Bennu",
+        "summary": "Ivuna-type (CI) carbonaceous chondrites have long served as proxies for the bulk Solar System composition due to their close agreement with solar photospheric abundances and enrichment in volatile elements relative to other chondrite classes. However, CI chondrites have been subject to terrestrial alteration, which may have modified their original mineralogies and redistributed aqueously mobile elements. NASA's OSIRIS-REx mission delivered pristine material from the carbonaceous asteroid Bennu, and initial analyses revealed close compositional similarities with CI chondrites. This provides a valuable opportunity to refine estimates of the bulk Solar System composition. We report concentrations of 63 elements in aggregate (bulk, unsorted) Bennu material (representing a combined mass of ~8 g) analyzed across four laboratories. Within analytical uncertainties, we find no statistically significant differences among aliquots of two aggregate samples that were homogenized into powders, or among subsamples (including two previously reported) of a non-homogenized aggregate sample. Nor do we find measurable variations among sample masses ranging from tens of milligrams to several grams. These findings indicate that the material returned from Bennu is well mixed at the aggregate scale. Combining all of the data, we derive an average bulk elemental composition that we term Best Bulk Bennu (B3). Comparison of B3 with an average CI chondrite composition shows excellent agreement within analytical uncertainties, confirming that terrestrial alteration of CI chondrites is effectively isochemical for non-highly volatile elements. B3 and the CI chondrite average composition compare similarly to solar photospheric composition. Thus, CI meteorites and returned samples of carbonaceous asteroids are the best available materials for estimating the bulk Solar System composition of non-highly volatile elements.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.31828",
+        "htmlUrl": null,
+        "authors": [
+          "K. Wang",
+          "K. Lodders",
+          "P. Koefoed",
+          "M. Broussard",
+          "J. Wimpenny",
+          "J. Render",
+          "Q.R. Shollenberger",
+          "T.S. Kruijer",
+          "G.A. Brennecka",
+          "M. Amini",
+          "V. Lai",
+          "D. Weis",
+          "K.C. Welten",
+          "K. Nishiizumi",
+          "D.P. Glavin",
+          "J.P. Dworkin",
+          "C.M.O'D. Alexander",
+          "J.-A. Barrat",
+          "P. Haenecour",
+          "J.J. Barnes",
+          "A.N. Nguyen",
+          "H.C. Connolly Jr.",
+          "D.S. Lauretta"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "catchupDate": "2026-10-26"
+      },
+      {
+        "absId": "2610.31910",
+        "title": "Discovery of activity on Main Belt Asteroid 6993 (1995 BJ4)",
+        "summary": "We report the discovery of activity on asteroid 6993 (1995 BJ4) in the Zwicky Transient Facility (ZTF) alert stream data on UT 2026 August 5, with the help of machine learning. Visible activity can be seen as early as UT 2026 June 25. Activity on this outer-main belt object is likely not primarily driven by rotational instability, but rather is consistent with an impact event or sublimation based on several arguments. If this activity is sublimation driven, 6993 would be the largest known main belt comet (11.85 km), with the largest perihelion distance (2.853 au) and an unusually high geometric albedo of 0.166 $\\pm$ 0.030. Asteroid 6993 should be monitored as it approaches perihelion in 2027 January to distinguish between activity mechanisms and understand its potential volatile inventory.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.31910",
+        "htmlUrl": "https://arxiv.org/html/2610.31910v1",
+        "authors": [
+          "Erin M. Clark",
+          "David E. Trilling",
+          "Revanth Munugala",
+          "Michael S.P. Kelley",
+          "Henry Hsieh",
+          "Michael Gowanlock",
+          "Andrew McNeill",
+          "Savannah Chappus",
+          "Maria Chernyavskaya",
+          "Graceson Mule",
+          "Gunnar Johnson",
+          "Daniel Kramer"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.31910v1/figures/6993_ztf_plot.png",
+            "caption": "(Top) ZTF alert stamps for asteroid 6993 from UT 2026 June 25 through UT 2026 August 5. The exposure on the right on UT 2026 August 5 was the one identified by our CNN. The ZTF pixel scale is 1.0 arcseconds/pixel. (Bottom) ATLAS Mauna Loa Observatory exposures for asteroid 6993 on UT 2026 June 25 and UT 2026 July 25. Images were taken with the 0.5 m Wright-Schmidt Telescope, with a pixel scale of 1.860 arcseconds/pixel. (Both) Anti-solar (yellow) and anti-velocity (red) position angles overlap and align with the direction of the visible tail in each exposure, oriented southwest. The directions of North and East are indicated in each panel by white arrows and the position angles extend at arbitrary lengths, to show that they overlap."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31910v1/e_q_asteroids_confirmed.png",
+            "caption": "Eccentricity over perihelion distance for 10,000 background asteroids from the Minor Planet Center 4 4 4 See https://minorplanetcenter.net/data (grey) along with confirmed MBCs (purple). The red star is asteroid 6993."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31910v1/figures/abs_mag_6993_activity.png",
+            "caption": "(Left) Absolute magnitude ( H H ) in ZTF g g , ZTF r r , and ZTF i i filters for 6993 from UT 2026 June 25 through 2026 September 22. The object has a visible tail during all 65 observations in this range. The stars represent observations during June 2026. From 2026 June 25 to 2026 September 22, 6993 decreases in brightness by ∼ \\sim 0.20 magnitudes. (Right) The same observations shown in the left figure, fit to a derived rotation period of 3.896 hours and amplitude of 0.27. We derive g − r g-r and r − i r-i colors of 0.64 ± \\pm 0.02 and 0.19 ± \\pm 0.02, respectively during this activity epoch. The stars represent the observations from UT 2026 June 01 to 2026 July 31.",
+            "captionLatex": "(Left) Absolute magnitude ( $H$ ) in ZTF $g$ , ZTF $r$ , and ZTF $i$ filters for 6993 from UT 2026 June 25 through 2026 September 22. The object has a visible tail during all 65 observations in this range. The stars represent observations during June 2026. From 2026 June 25 to 2026 September 22, 6993 decreases in brightness by $\\sim$ 0.20 magnitudes. (Right) The same observations shown in the left figure, fit to a derived rotation period of 3.896 hours and amplitude of 0.27. We derive $g-r$ and $r-i$ colors of 0.64 $\\pm$ 0.02 and 0.19 $\\pm$ 0.02, respectively during this activity epoch. The stars represent the observations from UT 2026 June 01 to 2026 July 31."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.31910v1/figures/6993_ztf_plot.png",
+        "thumbnailAlt": "(Top) ZTF alert stamps for asteroid 6993 from UT 2026 June 25 through UT 2026 August 5. The exposure on the right on UT 2026 August 5 was the one identified by our CNN. The ZTF pixel scale is 1.0 arcseconds/pixel. (Bottom) ATLAS Mauna Loa Observatory exposures for asteroid 6993 on UT 2026 June 25 an",
+        "catchupDate": "2026-10-26"
+      },
+      {
+        "absId": "2610.32020",
+        "title": "OGLE-2015-BLG-1395Lb: A Cold Sub-Saturn Mass Planet Orbiting an M Dwarf",
+        "summary": "We present an analysis of the high-magnification microlensing event OGLE-2015-BLG-1395 and report the discovery of a sub-Saturn mass companion to the lens. Photometric coverage of the planetary anomaly in the light curve was obtained from the University of Tasmania's Harlingten 1.27m telescope. Additional data were obtained following the peak from several other observatories, allowing photometric calibration and color measurement of the source. Fits to the light curve reveal a companion with mass ratio of q = 0.00062 +/- 0.00007 and two degenerate solutions for the projected separation, s = 1.7 +/-0.1 or 0.59 +/-0.04 Einstein ring radii. Source and lens parameters are further constrained by Subaru and Keck adaptive optics (AO) imaging in 2016. Finite source effects and AO flux constraints allow us to determine the planet and host star parameters to better than a factor of 2. The system is an ~0.2 Jupiter-mass planet orbiting an ~0.25 solar mass (early-mid M-dwarf) main-sequence star in the Galactic disk, at a distance of ~2 kpc. The two degenerate solutions from the light curve both place the planet beyond the snow line. As a cold sub-Saturn around an M dwarf, OGLE-2015-BLG-1395Lb is in possible conflict with core accretion theory. Spitzer photometry from the time of the event is consistent with this conclusion, although highly uncertain due to faintness and crowding. The inferred relative proper motion of 9.4 mas/yr is consistent with a source star in the bulge and a lens in the disk, and predicts that the source and lens could be resolved a decade after the event.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.32020",
+        "htmlUrl": "https://arxiv.org/html/2610.32020v1",
+        "authors": [
+          "Andrew A. Cole",
+          "Joshua W. Blackman",
+          "Jean-Philippe Beaulieu",
+          "Etienne Bachelet",
+          "Jean-Baptiste Marquette",
+          "Natalia Rektsini",
+          "Erica Thygesen",
+          "A. Udalski",
+          "R. Poleski",
+          "P. Mróz",
+          "K.A. Rybicki",
+          "M.K. Szymański",
+          "I. Soszyński",
+          "P. Pietrukowicz",
+          "S. Kozłowski",
+          "J. Skowron",
+          "K. Ulaczyk",
+          "R.A. Street",
+          "Y. Tsapras",
+          "M. Dominik",
+          "A. Cassan",
+          "R. Figuera-Jaimes",
+          "K. Horne",
+          "R. Schmidt",
+          "C. Snodgrass",
+          "J. Wambsganss",
+          "I.A. Steele",
+          "J. Menzies",
+          "F. Abe",
+          "R.K. Barry",
+          "D.P. Bennett",
+          "A. Bhattacharya",
+          "I.A. Bond",
+          "A. Fukui",
+          "R. Hamada",
+          "Y. Hirao",
+          "A. Idei",
+          "S. Ishitani Silva",
+          "S. Miyazaki",
+          "Y. Muraki",
+          "T. Nagai",
+          "K. Nunota",
+          "G. Olmschenk",
+          "C. Ranc",
+          "N.J. Rattenbury",
+          "Y.K. Satoh",
+          "T. Sumi",
+          "D. Suzuki",
+          "T. Tamaoki",
+          "S.K. Terry",
+          "P. J. Tristram",
+          "A. Vandorou",
+          "H. Yama",
+          "M.P.G. Hundertmark",
+          "U.G. Jorgensen",
+          "P. Longa-Pena",
+          "N. Peixinho",
+          "J. Skottfelt",
+          "J. Southworth",
+          "M.I. Andersen",
+          "V. Bozza",
+          "M.J. Burgdorf",
+          "G. D'Ago",
+          "T.C. Hinse",
+          "E. Kerins",
+          "H. Korhonen",
+          "M. Küffmeier",
+          "L. Mancini",
+          "M. Rabus",
+          "S. Rahvar",
+          "M.D. Albrow",
+          "A. McDougall",
+          "K. Bolton",
+          "S. Dieters",
+          "C. Harlingten",
+          "K.M. Hill",
+          "T. Sprent",
+          "D. Warren"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.32020v1/ACole_OB151395_fig1.png",
+            "caption": "a) OGLE-IV I I -band finding chart for OGLE-2015-BLG-1395. The image is 2 ′ × {}^{\\prime}\\times 2 ′ ; North is up and East is to the left; b) University of Tasmania H127 image of OGLE-2015-BLG-1395 at maximum magnification ( A max ≈ A_{\\mathrm{max}}\\approx 800), at the same orientation and scale. The 120-second exposure is unfiltered and unguided.",
+            "captionLatex": "a) OGLE-IV $I$ -band finding chart for OGLE-2015-BLG-1395. The image is 2 ${}^{\\prime}\\times$ 2 ′ ; North is up and East is to the left; b) University of Tasmania H127 image of OGLE-2015-BLG-1395 at maximum magnification ( $A_{\\mathrm{max}}\\approx$ 800), at the same orientation and scale. The 120-second exposure is unfiltered and unguided."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32020v1/ACole_OB151395_fig2.png",
+            "caption": "K S K_{\\mathrm{S}} -band image of the microlensing event OGLE 2015-BLG-1395 obtained in 2016 with NIRC2 adaptive optics system at the Keck Observatory. The image is 5 ′′ wide with a scale of 40 mas/pixel, centered on the target. Source and lens are not resolved at this resolution. North is up and East is to the left; the half-crosshair indicates the source plus lens. Prominent scattered light from the bright star just northwest of the target is visible (c.f., Figure 1 ).",
+            "captionLatex": "$K_{\\mathrm{S}}$ -band image of the microlensing event OGLE 2015-BLG-1395 obtained in 2016 with NIRC2 adaptive optics system at the Keck Observatory. The image is 5 ′′ wide with a scale of 40 mas/pixel, centered on the target. Source and lens are not resolved at this resolution. North is up and East is to the left; the half-crosshair indicates the source plus lens. Prominent scattered light from the bright star just northwest of the target is visible (c.f., Figure 1 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32020v1/ACole_OB151395_fig3.png",
+            "caption": "OGLE-IV CMD of the field around OGLE-2015-BLG-1395 [ 88 ] . The approximate position of the source is shown, using the CTIO/SMARTS photometry and the magnification at the time of the I I -band measurement (see below). For reference, a PARSEC [ 29 ] isochrone of age 7.5 Gyr and Solar metallicity is shown in purple, for a representative distance of 7 kpc and reddening from the OGLE online extinction calculator.",
+            "captionLatex": "OGLE-IV CMD of the field around OGLE-2015-BLG-1395 [ 88 ] . The approximate position of the source is shown, using the CTIO/SMARTS photometry and the magnification at the time of the $I$ -band measurement (see below). For reference, a PARSEC [ 29 ] isochrone of age 7.5 Gyr and Solar metallicity is shown in purple, for a representative distance of 7 kpc and reddening from the OGLE online extinction calculator."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32020v1/ACole_OB151395_fig4_rev.jpg",
+            "caption": "Light curve and best model for the microlensing event OGLE-2015-BLG-1395. Data from various sources are color-coded as per the legend and identified in full in Table 1 . The only site to observe the event across the peak was UTGO (Tasmania). The best-fit model to the ground-based data is shown by the solid line and labelled FSBL (finite-source, binary lens;Table 3 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32020v1/ACole_OB151395_fig5_rev.jpg",
+            "caption": "Detail of the light curve around the peak, with the best finite-source binary lens (FSBL, solid line) and finite-source point lens (FSPL, dashed line) models overplotted. The residuals to the fits are shown in the middle and bottom panels, respectively. The fit parameters are shown in Table 3 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32020v1/ACole_OB151395_fig6.png",
+            "caption": "Grid search of log mass-ratio and log separation for finite-source, binary lens (FSBL) models of the microlensing event OGLE-2015-BLG-1395, as a guide to what to expect from the Markov Chain Monte Carlo (MCMC) explorations. The color coding gives the minimised χ 2 \\chi^{2} values. The symmetry of the diagram is due to the well-known close/wide degeneracy coming from the lens equation. The red lines represent the division between the close, resonant and wide caustic topologies (close on the left, wide on the right). Choosing starting points for the MCMC explorations from areas containing local minima results in the best-fit models as described in the text and Table 3 . All of the solutions in the valley of local minima lie in the regime of large planets ( − 4 ≲ log ⁡ q ≲ − 2 -4\\lesssim\\log q\\lesssim-2 ).",
+            "captionLatex": "Grid search of log mass-ratio and log separation for finite-source, binary lens (FSBL) models of the microlensing event OGLE-2015-BLG-1395, as a guide to what to expect from the Markov Chain Monte Carlo (MCMC) explorations. The color coding gives the minimised $\\chi^{2}$ values. The symmetry of the diagram is due to the well-known close/wide degeneracy coming from the lens equation. The red lines represent the division between the close, resonant and wide caustic topologies (close on the left, wide on the right). Choosing starting points for the MCMC explorations from areas containing local minima results in the best-fit models as described in the text and Table 3 . All of the solutions in the valley of local minima lie in the regime of large planets ( $-4\\lesssim\\log q\\lesssim-2$ )."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32020v1/ACole_OB151395_fig7.png",
+            "caption": "a) MCMC distributions for the best ground-based FSBL fit with wide topology. Contours show the joint likelihood levels for each pair of parameters. The histograms give the marginalised posterior distributions of each parameter over each row/column; b) Trajectory of the source in the image plane for the best wide topology solution with finite source effects as viewed from Earth, with parameters as in panel a). A timespan of 24 hours is covered, with t t increasing from left to right. The source radius is to scale with the Einstein ring radius and color-coded by observatory according to the legend. The planet is on the y y -axis at x x = 1.7 ± \\pm 0.1. The corner plots and source trajectory are nearly identical for the close solution (see Table 3 ).",
+            "captionLatex": "a) MCMC distributions for the best ground-based FSBL fit with wide topology. Contours show the joint likelihood levels for each pair of parameters. The histograms give the marginalised posterior distributions of each parameter over each row/column; b) Trajectory of the source in the image plane for the best wide topology solution with finite source effects as viewed from Earth, with parameters as in panel a). A timespan of 24 hours is covered, with $t$ increasing from left to right. The source radius is to scale with the Einstein ring radius and color-coded by observatory according to the legend. The planet is on the $y$ -axis at $x$ = 1.7 $\\pm$ 0.1. The corner plots and source trajectory are nearly identical for the close solution (see Table 3 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32020v1/ACole_OB151395_fig8.png",
+            "caption": "Best-fit model for the light curve including Spitzer Space Telescope data (data: navy blue stars; model: navy blue dashed line). The Spitzer parameters do not constrain the light curve parameters around the time of the planetary anomaly, but when a color prior is enforced the time of maximum as viewed from Spitzer is constrained well enough to provide a good estimate of the microlensing parallax. The model here is from column 5 of Table 3 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.32020v1/ACole_OB151395_fig1.png",
+        "thumbnailAlt": "a) OGLE-IV I I -band finding chart for OGLE-2015-BLG-1395. The image is 2 ′ × {}^{\\prime}\\times 2 ′ ; North is up and East is to the left; b) University of Tasmania H127 image of OGLE-2015-BLG-1395 at maximum magnification ( A max ≈ A_{\\mathrm{max}}\\approx 800), at the same orientation and scale. Th",
+        "catchupDate": "2026-10-26"
+      },
+      {
+        "absId": "2610.32815",
+        "title": "The GAPS Programme at TNG LXXXI. The puzzle of the HeI absorption signal in the atmosphere of V1298 Tau b with GIARPS@TNG",
+        "summary": "Atmospheric escape shapes close-in planets mostly in their first tens of Myr. The young V1298Tau system (10-30Myr) is a benchmark for investigating photoevaporation and planetary evolution at early stages. The metastable HeI near-infrared triplet is a key proxy for atmospheric escape. We aim to detect and characterise HeI in the extended atmosphere of V1298Taub. We analysed four transits over a 4-year baseline using GIARPS (GIANO-B + HARPS-N) at the Telescopio Nazionale Galileo. We re-derived the projected spin-orbit angle by modelling the Rossiter-McLaughlin effect. Using simultaneous optical and near-infrared high-resolution transmission spectroscopy of V1298Taub, we monitored the HeI triplet alongside key chromospheric indicators ($\\log R'_{HK}$, H$\\alpha$, and NaI) to disentangle stellar activity from planetary evaporation. While the stellar spectra show significant night-to-night variability, transmission spectroscopy reveals persistent HeI absorption across all four epochs. This contrasts with H$\\alpha$ and NaI, observed over two nights with simultaneous HARPS-N monitoring, which fluctuate between emission and absorption due to stellar activity. The consistent presence of HeI over 4 years may suggest a planetary origin, despite stellar-driven depth modulation. ATES hydrodynamic simulations show that stellar XUV flux variations modulate the HeI absorption depth and equivalent width. Furthermore, stellar wind fluctuations likely drive the observed night-to-night variability of the exospheric structure. The detection of HeI across all epochs may support planetary evaporation, despite modulation by stellar activity. Our results underscore that disentangling a planetary signal from stellar contamination remains challenging for highly active hosts; securing the planetary nature of the HeI signature requires activity monitoring and full transit coverage to establish a robust baseline.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.32815",
+        "htmlUrl": "https://arxiv.org/html/2610.32815v1",
+        "authors": [
+          "G. Guilluy",
+          "J. Orell-Miquel",
+          "A. Sozzetti",
+          "M. C. D'Arpa",
+          "N. Greco",
+          "A. F. Lanza",
+          "D. Sicilia",
+          "A. Caldiroli",
+          "R. Spinelli",
+          "D. Locci",
+          "P. Leonardi",
+          "L. Mancini",
+          "S. Colombo",
+          "M. Rainer",
+          "F. Borsa",
+          "A. Maggio",
+          "A. S. Bonomo",
+          "L. Affer",
+          "V. Andretta",
+          "F. Biassoni",
+          "A. Bignamini",
+          "W. Boschin",
+          "M. Brogi",
+          "C. Di Maio",
+          "L. Fossati",
+          "E. Gallo",
+          "F. Haardt",
+          "M. López-Puertas",
+          "V. Lorenzi",
+          "L. Malavolta",
+          "J. Maldonaldo",
+          "F. Manni",
+          "G. Micela",
+          "F. Murgas",
+          "V. Nascimbeni",
+          "E. Palle",
+          "J. Sanz-Forcada",
+          "G. Scandariato",
+          "J. Southworth",
+          "J. Tregloan-Reed"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.32815v1/RM.png",
+            "caption": ": Top panel : phase-folded HARPS-N RV time-series for Night 1 (blue squares) and Night 2 (yellow diamonds). The contribution from stellar activity has been removed. The thick black line shows the RML component of the best-fit model. Bottom panel : Same as the top panel but with the contribution from the RML effect removed. The thick black line shows the GP component of the best-fit model."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32815v1/maps.png",
+            "caption": ": 2D maps of transmission spectra in the planet rest frame in the region of the He I triplet, as a function of wavelength and planetary orbital phase. The contact points t 1 t_{1} , t 2 t_{2} , t 3 t_{3} and t 4 t_{4} are marked with horizontal dashed blue lines. The regions affected by OH contamination are masked (white vertical bands). Some residuals are left at the position of the stellar Si I line ( ∼ \\sim 10830 Å, highlighted in pink). This is due to the depth of the line, which can cause difficulties in spectral extraction ( Krishnamurthy et al. 2023 , e.g.,) . Dotted black and red lines mark the position of the He I lines in the stellar and planet rest frame, respectively. Lines with black squares mark the position of the strong H 2 O telluric line at ∼ \\sim 10835 Å. Vertical orange lines indicate the spectral region where the EWs of the individual transmission spectra in Fig. 5 have been computed. Orange horizontal line marks the orbital phase used as a threshold to compute the master-out for Night 1 e Night 4, respectively.",
+            "captionLatex": ": 2D maps of transmission spectra in the planet rest frame in the region of the He I triplet, as a function of wavelength and planetary orbital phase. The contact points $t_{1}$ , $t_{2}$ , $t_{3}$ and $t_{4}$ are marked with horizontal dashed blue lines. The regions affected by OH contamination are masked (white vertical bands). Some residuals are left at the position of the stellar Si I line ( $\\sim$ 10830 Å, highlighted in pink). This is due to the depth of the line, which can cause difficulties in spectral extraction ( Krishnamurthy et al. 2023 , e.g.,) . Dotted black and red lines mark the position of the He I lines in the stellar and planet rest frame, respectively. Lines with black squares mark the position of the strong H 2 O telluric line at $\\sim$ 10835 Å. Vertical orange lines indicate the spectral region where the EWs of the individual transmission spectra in Fig. 5 have been computed. Orange horizontal line marks the orbital phase used as a threshold to compute the master-out for Night 1 e Night 4, respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32815v1/halpha_ewp_parvati_cen.png",
+            "caption": ": Left panel : 2D maps of the H α \\alpha transmission spectra binned in phase and in wavelength, aligned in the planetary rest frame. Right panel : Time-series of the EWs derived from the transmission spectra using the PARVATI routine, integrated over the 6561.4 – 6564.2 Å, spectral range. A negative EW indicates an emission signal. Since we are measuring the EW of transmission spectra, where lines are typically expected in absorption, a decrease in flux below the continuum yields a positive EW, while an increase above the continuum yields a negative EW. Night 3 and Night 4 were excluded from this specific analysis due to the insufficient number of in-transit spectra.",
+            "captionLatex": ": Left panel : 2D maps of the H $\\alpha$ transmission spectra binned in phase and in wavelength, aligned in the planetary rest frame. Right panel : Time-series of the EWs derived from the transmission spectra using the PARVATI routine, integrated over the 6561.4 – 6564.2 Å, spectral range. A negative EW indicates an emission signal. Since we are measuring the EW of transmission spectra, where lines are typically expected in absorption, a decrease in flux below the continuum yields a positive EW, while an increase above the continuum yields a negative EW. Night 3 and Night 4 were excluded from this specific analysis due to the insufficient number of in-transit spectra."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32815v1/planet_phase_tracks.png",
+            "caption": ": Position of the V1298 Tau’s planets during each observed night. The closest planet is planet c, which transited 2 days before Night 1."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32815v1/emission_line.png",
+            "caption": ": Raw spectra at the beginning (left panel) and at the end of Night 4 around the helium triplet. Both images were taken with the same nodding position. In the first frame, the strong telluric OH doublet (10834.241 Å and 10834.338 Å, vacuum wavelengths) is clearly visible, while in the second frame, a second emission line appears. The vertical red line indicates the position of this emission feature, allowing comparison between the two frames. This line is airglow from metastable helium at 1.083 μ \\mu m.",
+            "captionLatex": ": Raw spectra at the beginning (left panel) and at the end of Night 4 around the helium triplet. Both images were taken with the same nodding position. In the first frame, the strong telluric OH doublet (10834.241 Å and 10834.338 Å, vacuum wavelengths) is clearly visible, while in the second frame, a second emission line appears. The vertical red line indicates the position of this emission feature, allowing comparison between the two frames. This line is airglow from metastable helium at 1.083 $\\mu$ m."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32815v1/NOT_lightcurve.png",
+            "caption": ": Top panel : Light curve of the V1298 Tau b transit, which we observed with AFOSC@NOT, compared with the best prism+gemc fits. Bottom panel : Representation of the stellar disc, starspot-complex position, and transit chord for the dataset containing a starspot anomaly."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32815v1/ts_Na.png",
+            "caption": ": Transmission spectra of V1298 Tau b centred around the Na I doublet in the planetary rest frame for Night 1 (top) and Night 2 (bottom). The small, semi-transparent points in the background represent the full-resolution observational data, whereas the distinct circles with their corresponding error bars indicate the data binned 20 times. The solid black line is the MCMC Gaussian fit performed by SLOPpy , while the vertical dashed gray lines indicates the rest frame transition wavelengths of the Na I D lines."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32815v1/adams_field_squeezed_neww.png",
+            "caption": ": Schematic section of a planetary magnetosphere with the x-axis pointing towards an incoming stellar wind streamer and the z-axis perpendicular to the orbital plane of the planet. The planetary dipole axis is assumed to be directed along the z-axis. The magnetospheric field is compressed in the hemisphere facing the streamer because of the wind ram pressure. On the other hand, the planetary field is unperturbed on the opposite hemisphere pointing away from the streamer. The solid lines represent the magnetic field lines in the case of the magnetosphere compressed by the streamer, while the dashed lines show the unperturbed configuration of the magnetic field, symmetric of that on the opposite unperturbed hemisphere."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.32815v1/RM.png",
+        "thumbnailAlt": ": Top panel : phase-folded HARPS-N RV time-series for Night 1 (blue squares) and Night 2 (yellow diamonds). The contribution from stellar activity has been removed. The thick black line shows the RML component of the best-fit model. Bottom panel : Same as the top panel but with the contribution from",
+        "catchupDate": "2026-10-26"
+      },
+      {
+        "absId": "2610.32833",
+        "title": "Diversity of planetary origins and compositions traced by stellar abundance differences of co-natal star systems",
+        "summary": "Co-natal stars, wide binaries that form from the same molecular cloud, should harbor the same stellar composition. Observations indicate stellar abundance differences in a small fraction of these co-natal systems. The stellar abundance differences have been attributed to the ingestion of planets by their host stars. We analyze a previous sample of co-natal stars to determine the composition of the planets that were ingested. The abundance differences in these co-natal pairs can show a positive abundance difference of the refractory elements (Fe, Mg, Si) paired with a positive, zero, or negative abundance difference of volatiles (O, C, S). Positive trends of refractory and volatile abundance differences can be explained (at minimum) with the ingestion of a single planet by one of the stars. Positive trends of refractory abundance differences paired with zero or negative abundance differences of oxygen and carbon imply that both stars are required to ingest planets formed at different locations (interior/exterior to the water and/or C-grain evaporation front). Some systems show a sulfur abundance difference that is a factor of a few lower than the abundance difference of Fe, Si, and Mg, even though sulfur is accreted via the moderately volatile compound FeS. This can be explained by the migration of one of the planets across the FeS evaporation front, where the planet first accretes large amounts of sulfur and then no sulfur, while still accreting the other refractory elements before being ingested by its host star. Our study shows that the planetary compositions derived from the detailed stellar abundances can explain the measured abundance differences of co-natal stars, giving a handle on the composition of exoplanets. At the same time it implies very different planetary compositions caused by the different formation location of these planets, in agreement with planet formation models.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.32833",
+        "htmlUrl": "https://arxiv.org/html/2610.32833v1",
+        "authors": [
+          "Bertram Bitsch",
+          "Fan Liu",
+          "Haiyang S. Wang"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "catchupDate": "2026-10-26"
+      },
+      {
+        "absId": "2610.32906",
+        "title": "The ALMA Survey of Gas Evolution of PROtoplanetary disks (AGE-PRO): Evolution of dust properties from multi-wavelength observations",
+        "summary": "Understanding the evolution of solids in protoplanetary discs is important to comprehend the formation of giant planets cores and terrestrial planets. The ALMA Large Program AGE-PRO studied key disc properties in a survey of 30 protoplanetary discs across three evolutionary stages: the embedded phase (0.5-1 Myr), the middle-age phase (1-3 Myr), and the end of the disc lifetime (2-6 Myr). Preliminary dust properties were estimated using 1.3 mm observations, but a multi-wavelength analysis provides a better constraint of important properties such as the dust disc mass, the dust temperature, and the maximum grain size. We present new ALMA 3.1 mm and 1.5 mm (Bands 3 and 5) continuum observations of the complete survey of 30 AGE-PRO discs. We fitted the observed visibilities and derived radial brightness profiles, spatially resolving 20 discs from the AGE-PRO sample at the two studied wavelengths. A multi-wavelength modelling was performed including also the radial profiles from the 1.3 mm observations. Our results replicate trends obtained from the single wavelength analysis: the dust disc size seems to be constant over age and the dust disc mass decreases with time, with a factor $\\sim$10-40 uncertainty from opacity assumptions. This result implies much lower gas-to-dust mass ratios for the discs in our sample than previously reported. In addition, the derived spectral indices are consistent with optically thick emission in a large fraction of the AGE-PRO discs, in particular for the Ophiuchus and Lupus discs.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.32906",
+        "htmlUrl": "https://arxiv.org/html/2610.32906v1",
+        "authors": [
+          "Camila Pulgarés",
+          "Laura M. Pérez",
+          "Carolina Agurto-Gangas",
+          "Lilian Luo",
+          "Paola Pinilla",
+          "Anibal Sierra",
+          "Miguel Vioque",
+          "Nicolás Kurtovic",
+          "Rossella Anania",
+          "John Carpenter",
+          "Lucas Cieza",
+          "Dingshan Deng",
+          "Camilo González-Ruilova",
+          "Michiel R. Hogerheijde",
+          "James Miley",
+          "Ke Zhang"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.32906v1/continuum.png",
+            "caption": "Band 5 (1.5 mm) continuum images of the whole AGE-PRO sample. The ellipse in the bottom left corner of each image marks the beam of the image. The total field of view (FOV) is of 2 ′′ 2^{\\prime\\prime} for all the images except for Lupus 10, where the FOV is of 4 ′′ 4^{\\prime\\prime} . The horizontal line in the top right of each panel correspond to a 30 au scale. The contours mark the 5 ​ σ 5\\sigma , 15 ​ σ 15\\sigma , 50 ​ σ 50\\sigma , and 95 ​ σ 95\\sigma detections. The used nomenclature correspond to those adopted in the AGE-PRO Large Program and can be found in Zhang et al. (2025) .",
+            "captionLatex": "Band 5 (1.5 mm) continuum images of the whole AGE-PRO sample. The ellipse in the bottom left corner of each image marks the beam of the image. The total field of view (FOV) is of $2^{\\prime\\prime}$ for all the images except for Lupus 10, where the FOV is of $4^{\\prime\\prime}$ . The horizontal line in the top right of each panel correspond to a 30 au scale. The contours mark the $5\\sigma$ , $15\\sigma$ , $50\\sigma$ , and $95\\sigma$ detections. The used nomenclature correspond to those adopted in the AGE-PRO Large Program and can be found in Zhang et al. (2025) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32906v1/rad_profiles.png",
+            "caption": "Normalized radial brightness profiles up to 100 au (300 au for Lupus 10) for the whole AGE-PRO survey in Bands 3, 5, and 6, the latter from Vioque et al. (2025a) . Dashed vertical lines represent the detected bumps/ring-like structures locations in the discs from Vioque et al. (2025a) . For each disc, the three radial profiles are convolved to the larger spatial resolution between the three observed wavelengths, which is represented by the horizontal line in the bottom of each panel."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32906v1/summary_alphaB3B6_substructures.png",
+            "caption": "Spectral indices between 1.3 and 3.1 mm observations, separated by discs with substructures (on the left), and discs with no detected substructures at the observed resolution (on the right). Colours indicate the optically thick fraction of each disc as defined in Tazzari et al. (2021) . The white squares mark the median of the measured values for substructured and smooth discs, while the star is the median considering only optically thin discs (with fraction less than 0.6)."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32906v1/selfcal_images_B3.png",
+            "caption": "Band 3 (3.1 mm) continuum images of the whole AGE-PRO sample. The ellipse in the bottom left corner of each image marks the beam of the image. The total field of view (FOV) is of 2 ′′ 2^{\\prime\\prime} for all the images except for Lupus 10, where the FOV is of 4 ′′ 4^{\\prime\\prime} . The horizontal line in the top right of each panel correspond to a 30 au scale. The contours mark the 5 ​ σ 5\\sigma , 15 ​ σ 15\\sigma , 50 ​ σ 50\\sigma , and 95 ​ σ 95\\sigma detections.",
+            "captionLatex": "Band 3 (3.1 mm) continuum images of the whole AGE-PRO sample. The ellipse in the bottom left corner of each image marks the beam of the image. The total field of view (FOV) is of $2^{\\prime\\prime}$ for all the images except for Lupus 10, where the FOV is of $4^{\\prime\\prime}$ . The horizontal line in the top right of each panel correspond to a 30 au scale. The contours mark the $5\\sigma$ , $15\\sigma$ , $50\\sigma$ , and $95\\sigma$ detections."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.32906v1/continuum.png",
+        "thumbnailAlt": "Band 5 (1.5 mm) continuum images of the whole AGE-PRO sample. The ellipse in the bottom left corner of each image marks the beam of the image. The total field of view (FOV) is of 2 ′′ 2^{\\prime\\prime} for all the images except for Lupus 10, where the FOV is of 4 ′′ 4^{\\prime\\prime} . The horizontal ",
+        "catchupDate": "2026-10-26"
+      },
+      {
+        "absId": "2610.32949",
+        "title": "ExoVetter and a TESS Exoplanet Transit Search of Kepler Stars as Ground Truth",
+        "summary": "We introduce a Python package called exoVetter that produces vetting metrics and visualizations to evaluate transiting exoplanet signals found in high-cadence time-series photometry. exoVetter is open source, modular, and independent of the mission data so that it can be easily expanded and used as part of different transit search pipelines tuned to different science cases and missions. We demonstrate its use in a pipeline as a way to distinguish real events found in a box-least squares exoplanet transit search of 324,530 light curves from the Transiting Exoplanet Survey Satellite mission; we limit our demonstration to stars also observed by the more sensitive Kepler telescope as a way to establish ground truth for the events found in the light curves. Using this ground truth, we provide baseline thresholds for several flux-level vetters and one centroid-offset vetter when using exoVetter metrics on TESS data. Our demonstration also indicates that it is possible to create a planet catalog from the light curves of dim targets (>13.5Tmag) that has a similar fraction of real events to that of the bright targets (<13.5Tmag) for short period events identified in the TESS-Gaia light curves.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.32949",
+        "htmlUrl": "https://arxiv.org/html/2610.32949v1",
+        "authors": [
+          "Matthew M. Dallas",
+          "Susan E. Mullally",
+          "Fergal Mullally",
+          "Michelle Kunimoto",
+          "Te Han",
+          "Timothy D. Brandt"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.32949v1/figures/viz_transit_train.png",
+            "caption": "TGLC calibrated aperture flux for TIC 399860444 (K00001.01) in TESS Sector 26. The confirmed transit times are overlaid in green while the federated TCE transit times discussed in § III are overlaid in red. This lightkurve object and TCE are used as input to VizTransit to produce the individual and folded transits shown in Figure 2 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32949v1/figures/viz_transit_2x2.png",
+            "caption": "The VizTransit outputs for K00001.01 with the right column set with transit_only = True to zoom in on the transit, max_transits = 5 to limit to the first five individual transits on the top row, and smooth = 3 to use three data points as the width in the smoothing filter in the bottom row. Note that VizTransit will automatically skip a transit that has no data (i.e., the fourth “transit” during the gap in Figure 1 is not shown and VizTransit correctly labels the next valid transit as “5”)."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32949v1/figures/centroid_offset_example.png",
+            "caption": "The Centroid difference image and significance plot outputs for KOI 6642.01 with the centroid offset taken from the Gaia catalog position of the target available on MAST. For visual clarity we only show the first three transit difference images, although 22 transits occur over the sector. Each of the transits is represented in the significance plot shown beneath, with outliers plotted in red."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32949v1/figures/vetting_cutoffs_log_panels.png",
+            "caption": "Distributions of the chosen vetting metrics for the federated transit-like KOI reference events, not federated transit-like KOI reference events, and no-KOI control populations. The vetting metric distributions are shown across the TCEs which remained after applying an initial SNR > > 1.3 cut. The thresholds were chosen to include as many of the federated transit-like KOI TCEs as possible while removing as many of the not federated KOI and no-KOI control TCEs as possible. Note that the MES and ModShift metrics can return NaNs, which are not displayed, but account for a majority of the no-KOI control events flagged by these metrics.",
+            "captionLatex": "Distributions of the chosen vetting metrics for the federated transit-like KOI reference events, not federated transit-like KOI reference events, and no-KOI control populations. The vetting metric distributions are shown across the TCEs which remained after applying an initial SNR $>$ 1.3 cut. The thresholds were chosen to include as many of the federated transit-like KOI TCEs as possible while removing as many of the not federated KOI and no-KOI control TCEs as possible. Note that the MES and ModShift metrics can return NaNs, which are not displayed, but account for a majority of the no-KOI control events flagged by these metrics."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32949v1/figures/completeness_effectiveness_reliability.png",
+            "caption": "Our vetting completeness (top left panel) and effectiveness (top right panel) of our initial static vetting cuts shown in Figure 4 and Table 2 when applied to the federated and no-KOI control TCEs, respectively. The reliability of the resulting federated events is shown in the bottom panel. For visual clarity we only plot SNRs from 1 to 13 as we automatically reject TCEs with SNR ≤ 1.3 \\leq 1.3 and a majority of both the no-KOI control and federated transit-like KOI TCEs have SNRs < 13 <13 . We also display regions with < < 5 total federated transit-like KOI events prior to vetting as gray in the completeness plot, < < 5 total no-KOI control events prior to vetting as gray in the effectiveness plot, and < < 5 total events post vetting as gray in the reliability plot.",
+            "captionLatex": "Our vetting completeness (top left panel) and effectiveness (top right panel) of our initial static vetting cuts shown in Figure 4 and Table 2 when applied to the federated and no-KOI control TCEs, respectively. The reliability of the resulting federated events is shown in the bottom panel. For visual clarity we only plot SNRs from 1 to 13 as we automatically reject TCEs with SNR $\\leq 1.3$ and a majority of both the no-KOI control and federated transit-like KOI TCEs have SNRs $<13$ . We also display regions with $<$ 5 total federated transit-like KOI events prior to vetting as gray in the completeness plot, $<$ 5 total no-KOI control events prior to vetting as gray in the effectiveness plot, and $<$ 5 total events post vetting as gray in the reliability plot."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32949v1/figures/false_offset_dist.png",
+            "caption": "The distribution of offsets on KOIs that exoVetter incorrectly identifies as having a significant centroid offset from TESS TPFs (blue), and correctly identifies with a significant centroid offset (orange). If a KOI was observed multiple times (i.e., in different sectors) we take the median offset. A majority of these spurious centroid offsets are < < 0.2 TESS pixels, smaller than TESS can reasonably be expected to identify.",
+            "captionLatex": "The distribution of offsets on KOIs that exoVetter incorrectly identifies as having a significant centroid offset from TESS TPFs (blue), and correctly identifies with a significant centroid offset (orange). If a KOI was observed multiple times (i.e., in different sectors) we take the median offset. A majority of these spurious centroid offsets are $<$ 0.2 TESS pixels, smaller than TESS can reasonably be expected to identify."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.32949v1/figures/viz_transit_train.png",
+        "thumbnailAlt": "TGLC calibrated aperture flux for TIC 399860444 (K00001.01) in TESS Sector 26. The confirmed transit times are overlaid in green while the federated TCE transit times discussed in § III are overlaid in red. This lightkurve object and TCE are used as input to VizTransit to produce the individual and ",
+        "catchupDate": "2026-10-26"
+      },
+      {
+        "absId": "2610.32972",
+        "title": "Comprehensive Visible and Near-infrared Keck and Gemini Monitoring and Characterization of Interstellar Comet 3I/ATLAS during its Encounter with the Solar System",
+        "summary": "We present 14 optical imaging and eight optical spectroscopic epochs of interstellar comet 3I/ATLAS from Keck/LRIS and Gemini/GMOS, two near-infrared (NIR) imaging epochs from Keck/MOSFIRE, and four NIR spectroscopic epochs from Gemini/Flamingos-2 and GNIRS, obtained between 2025 July and 2026 May. Mean GMOS colors of $g-r=0.732\\pm0.029$, $r-i=0.237\\pm0.025$, and $i-z=0.109\\pm0.022$ mag show no significant change across perihelion. Phase-corrected red-band activity follows $Af\\rho\\propto r_h^{-2.10\\pm0.14}$ inbound and $r_h^{-3.34\\pm0.43}$ outbound. Transverse-width and sunward-plume speeds imply dust losses of $2.7\\times10^9$ and $1.0\\times10^{10}$ kg over 2025 July 3--2026 May 15 for 1-$\\mu$m--1-mm grains, equivalent to global layers of 0.26 and 0.99 m under the adopted grain and nucleus assumptions. The concentrated coma, compact sunward feature, and antisolar tail seen on 2025 August 27 broadened by 2025 November 26; extended dust persisted through 2026 February 17. C$_2$/CN nearly doubled from $0.257\\pm0.014$ on 2025 September 14--15 to $0.481\\pm0.080$ on 2025 November 26, while C$_3$/CN fell from $0.327\\pm0.024$ on 2025 August 28 to $0.214\\pm0.009$ on 2025 September 14--15. MOSFIRE NIR imaging on 2025 July 11 gives $Y-J=0.466\\pm0.143$, $J-H=0.239\\pm0.052$, $H-K_s=0.454\\pm0.150$, and $J-K_s=0.693\\pm0.202$ mag. Spectra give $J-H=0.24$ mag on 2025 September 5--6 and $J-H=0.27$--0.28 and $J-K_s=0.21$--0.22 mag on 2025 December 1--2 over the retained passband intervals. Model-calibrated imaging on 2026 February 6 gives near-solar $J-K_s=0.303\\pm0.051$ mag. No water-ice absorption is robust to the tested continuum and calibration choices in the NIR spectra. These observations provide a lasting record of the comet's evolution through the Solar System and a benchmark for studying and monitoring future interstellar objects.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.32972",
+        "htmlUrl": "https://arxiv.org/html/2610.32972v1",
+        "authors": [
+          "Bryce T. Bolin",
+          "Jeffrey Cooke",
+          "Brian C. Lemaux",
+          "Marco Micheli",
+          "Davide Farnocchia",
+          "Laura-May Abron",
+          "Leo Y. Alcorn",
+          "Michael W. Coughlin",
+          "Christoffer Fremling",
+          "Josef Hanuš",
+          "Willem B. Hoogendam",
+          "Carl Ingebretsen",
+          "Oleksandra Ivanova",
+          "David O. Jones",
+          "Piera King",
+          "Ludmilla Kolokolova",
+          "Keith S. Noll",
+          "Filipp D. Romanov",
+          "Benjamin J. Shappee",
+          "Karleyne Silva",
+          "Matt Wahl",
+          "Pablo Candia",
+          "Kristin Chiboucas",
+          "Eleazar R. Carrasco",
+          "Veronica Firpo",
+          "Jeong-Eun Heo",
+          "Jameeka Marshall",
+          "Emily Peavy",
+          "Erin Figura",
+          "Denise Hung",
+          "Ariel Graykowski",
+          "Teo Močnik",
+          "Matias Rodriguez",
+          "David J. Tholen",
+          "Peter Vereš",
+          "Leila Alamos",
+          "Eunchong Kim",
+          "Jen Miller",
+          "Percy Gomez",
+          "Heather Hershley",
+          "Michael Lundquist",
+          "Rita Morris",
+          "Hyewon Suh",
+          "Emanuele Paolo Farina",
+          "Ryan Ridden",
+          "Mark Suhr"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.32972v1/x1.png",
+            "caption": "Gemini South GMOS imaging in u , g , r , i , Z u,g,r,i,Z columns. August 28 u u shares the August 27 g ​ r ​ i gri row and carries its own date. Panels give date, summed integration, compass, scale, Sun direction, and positive heliocentric-velocity direction. North is up and east left; absent filters are blank. September 5, 8, and 14 r r use 0.48-arcsec valid-pixel bins with bilinear rendering. September 6 r r uses a mask-normalized 0.94-arcsec-FWHM Gaussian average to suppress mask holes, reducing display resolution. Photometry and profiles use unsmoothed data. Exposure coverage is spatially nonuniform.",
+            "captionLatex": "Gemini South GMOS imaging in $u,g,r,i,Z$ columns. August 28 $u$ shares the August 27 $gri$ row and carries its own date. Panels give date, summed integration, compass, scale, Sun direction, and positive heliocentric-velocity direction. North is up and east left; absent filters are blank. September 5, 8, and 14 $r$ use 0.48-arcsec valid-pixel bins with bilinear rendering. September 6 $r$ uses a mask-normalized 0.94-arcsec-FWHM Gaussian average to suppress mask holes, reducing display resolution. Photometry and profiles use unsmoothed data. Exposure coverage is spatially nonuniform."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32972v1/x2.png",
+            "caption": "Continued."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32972v1/x3.png",
+            "caption": "Gemini North GMOS and Keck LRIS imaging in g , r / R , i , Z g,r/R,i,Z columns, following Figure 1 . Absent filters are blank and the LRIS row is centered. White circles locate the comet in March GMOS and May LRIS images; masked pixels are black.",
+            "captionLatex": "Gemini North GMOS and Keck LRIS imaging in $g,r/R,i,Z$ columns, following Figure 1 . Absent filters are blank and the LRIS row is centered. White circles locate the comet in March GMOS and May LRIS images; masked pixels are black."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32972v1/x4.png",
+            "caption": "Continued."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32972v1/x5.png",
+            "caption": "Continued."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32972v1/x6.png",
+            "caption": "Optical colors: g − r g-r versus r − i r-i (left) and r − z r-z (right). Blue/red/green asteroid groups follow Ivezić et al. [61] ; comet and outer-Solar-System samples follow Solontoi et al. [112] and Ofek [88] . The 1I point is purple with yellow errors; 2I has a black core with red outline and errors, using the values in Bolin et al. [14] . Left: arithmetic means of the July 3 and 6 discovery colors, g − r = 0.835 ± 0.034 g-r=0.835\\pm 0.034 and r − i = 0.160 ± 0.025 r-i=0.160\\pm 0.025 mag, assuming independent epoch errors and excluding shared calibration uncertainty. Right: the same July 3–6 g − r g-r mean paired with July 6-only r − z = 0.160 ± 0.054 r-z=0.160\\pm 0.054 mag. Dated GMOS points use the approximate stellar PS1-to-SDSS transformation [ 114 ] ; ellipses include shared-band covariance. Three epochs have matched calibrated g ​ r ​ i gri colors, two also with Z Z .",
+            "captionLatex": "Optical colors: $g-r$ versus $r-i$ (left) and $r-z$ (right). Blue/red/green asteroid groups follow Ivezić et al. [61] ; comet and outer-Solar-System samples follow Solontoi et al. [112] and Ofek [88] . The 1I point is purple with yellow errors; 2I has a black core with red outline and errors, using the values in Bolin et al. [14] . Left: arithmetic means of the July 3 and 6 discovery colors, $g-r=0.835\\pm 0.034$ and $r-i=0.160\\pm 0.025$ mag, assuming independent epoch errors and excluding shared calibration uncertainty. Right: the same July 3–6 $g-r$ mean paired with July 6-only $r-z=0.160\\pm 0.054$ mag. Dated GMOS points use the approximate stellar PS1-to-SDSS transformation [ 114 ] ; ellipses include shared-band covariance. Three epochs have matched calibrated $gri$ colors, two also with $Z$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32972v1/x10.png",
+            "caption": "Azimuthal-median division of paired GMOS g / r g/r images, with absent bands blank and March excluded. Orange labels give r h r_{h} , Δ \\Delta , α \\alpha , and δ E \\delta_{E} (Table 1 ). Compass/Sun arrows and scale bars are orange; heliocentric-velocity arrows are blue, with black outlines and label backgrounds. North is up and east left. The ratio scale shows deficits in blue, excesses in red, and unity in white; values beyond 0.5–1.5 saturate and masked pixels remain blank. The four September pairs use matched 0.48-arcsec native-area bins and radial annuli; other dates use 0.32-arcsec annuli on a 0.16-arcsec grid. No additional filter is applied. Detector masks, stellar residuals, and centering sensitivity limit jet identification.",
+            "captionLatex": "Azimuthal-median division of paired GMOS $g/r$ images, with absent bands blank and March excluded. Orange labels give $r_{h}$ , $\\Delta$ , $\\alpha$ , and $\\delta_{E}$ (Table 1 ). Compass/Sun arrows and scale bars are orange; heliocentric-velocity arrows are blue, with black outlines and label backgrounds. North is up and east left. The ratio scale shows deficits in blue, excesses in red, and unity in white; values beyond 0.5–1.5 saturate and masked pixels remain blank. The four September pairs use matched 0.48-arcsec native-area bins and radial annuli; other dates use 0.32-arcsec annuli on a 0.16-arcsec grid. No additional filter is applied. Detector masks, stellar residuals, and centering sensitivity limit jet identification."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.32972v1/x11.png",
+            "caption": "Continued."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.32972v1/x1.png",
+        "thumbnailAlt": "Gemini South GMOS imaging in u , g , r , i , Z u,g,r,i,Z columns. August 28 u u shares the August 27 g ​ r ​ i gri row and carries its own date. Panels give date, summed integration, compass, scale, Sun direction, and positive heliocentric-velocity direction. North is up and east left; absent filter",
+        "catchupDate": "2026-10-26"
+      }
+    ],
+    "cross": [
+      {
+        "absId": "2610.31742",
+        "title": "A Study of the 30 May 2026 Meteor Event Employing Data from Raspberry Boom Infrasound Sensors in the Boston Area",
+        "summary": "Infrasound signals of one and a half cycles of a 0.4 Hz pressure pulse were detected from the 30 May 2026 meteor over Cape Cod Bay at several university and private Raspberry Boom sensors in the Greater Boston area. Our analyses of these signals demonstrate the ability to define directivity to the source of the event based on differences in the timing of the signals, to determine its identity and location by analysis of the relationship between event distance and sensor event timing, and event acoustical power by the infrasonic pressures measured at the sensor sites. The infrasound event is determined to be the atmospheric fireball blast at between 40 and 50 km in altitude with acoustic energy on the order of 5% to 14% of the total fireball energy.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.31742",
+        "htmlUrl": "https://arxiv.org/html/2610.31742v1",
+        "authors": [
+          "S. Africk",
+          "A. Loeb"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.31742v1/fig1.png",
+            "caption": "NASA ARES reconstruction of meteor path from fireball blast to splash."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31742v1/fig2.png",
+            "caption": "White circles with black dots identify sites of seven Raspberry Boom sensors in greater Boston used in this study."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31742v1/figures/fig3.png",
+            "caption": "Infrasound signal detected at SomervilleL site."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31742v1/figures/fig4.png",
+            "caption": "Pressure Spectral Amplitude of signal detected at SommervilleL with peak at 0.4 Hz."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31742v1/figures/fig5.png",
+            "caption": "Geometry for source directivity estimation."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31742v1/figures/fig6.png",
+            "caption": "Sensor pair locations and positive (solid) and negative (dotted) direction lines illustrating the mirrorlike ambiguity in the directivity calculation."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31742v1/figures/fig7.png",
+            "caption": "Positive angle direction lines converging on the direction of the meteor sites with negative angle lines diverging away from the bay."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.31742v1/fig8.png",
+            "caption": "Inverse cosine function showing large slope below 20 ∘ 20^{\\circ} .",
+            "captionLatex": "Inverse cosine function showing large slope below $20^{\\circ}$ ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.31742v1/fig1.png",
+        "thumbnailAlt": "NASA ARES reconstruction of meteor path from fireball blast to splash.",
+        "catchupDate": "2026-10-26"
+      }
+    ],
+    "repl": [
+      {
+        "absId": "2503.22559",
+        "title": "Euclid: Quick Data Release (Q1) -- Ultracool dwarfs in the Euclid Deep Fields",
+        "summary": "Ultracool dwarfs (UCDs) encompass the lowest-mass stars and brown dwarfs at the substellar boundary. These intrinsically faint objects are challenging to detect, but the wide coverage and deep sensitivity of the Euclid survey increase confirmed UCD counts by orders of magnitude. We carried out a systematic study using Euclid Quick Data Release (Q1) low-resolution near-infrared spectra to identify and characterise UCDs. A sample of previously known UCDs in Q1 validated the analysis, which was then applied to newly identified UCD candidates in Euclid Deep Field North (EDF-N; 22.9 deg^2, down to J_E ~ 24.5 mag). We confirm 33 new UCDs in EDF-N, spanning spectral types M7-T1 (J_E = 17-21 mag) and distances of 50-600 pc. Two objects were followed up with optical and NIR observations using the Gran Telescopio Canarias, providing independent validation of Euclid classifications. We determined spectral types for 33 new UCDs and 167 previously known UCDs by fitting SpeX Prism Library Analysis Toolkit standards. The known sample includes 103 Dark Energy Survey objects (M7-T0, J_E = 17-22 mag), 6 literature sources (M8-T7, J_E = 18-20 mag), and 58 Gaia sources (M7-L1, J_E = 17-24 mag). Independent stellar parameters from atmospheric model fitting agree well with Euclid spectral types. We also investigated Gaia UCDs in Q1 by combining mean XP spectra with Euclid NIR spectra to determine radii. We present a publicly available catalogue including observations, classifications, and stellar parameters. This work demonstrates Euclid's capability to characterise faint stellar populations, establishing a foundation for large-scale UCD studies.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2503.22559",
+        "htmlUrl": "https://arxiv.org/html/2503.22559v2",
+        "authors": [
+          "A. Mohandasan",
+          "R. L. Smart",
+          "C. Reylé",
+          "V. Le Brun",
+          "A. Pérez-Garrido",
+          "E. Bañados",
+          "H. R. A. Jones",
+          "T. Dupuy",
+          "B. Goldman",
+          "S. L. Casewell",
+          "M. R. Zapatero Osorio",
+          "M. Rejkuba",
+          "E. L. Martín",
+          "S. Muñoz Torres",
+          "C. Dominguez-Tagle",
+          "M. Žerjal",
+          "N. Huélamo",
+          "N. Lodieu",
+          "P. Cruz",
+          "F. Z. Majid",
+          "R. Rebolo",
+          "M. W. Phillips",
+          "J.-Y. Zhang",
+          "N. Aghanim",
+          "B. Altieri",
+          "A. Amara",
+          "S. Andreon",
+          "N. Auricchio",
+          "C. Baccigalupi",
+          "M. Baldi",
+          "A. Balestra",
+          "S. Bardelli",
+          "P. Battaglia",
+          "A. Biviano",
+          "A. Bonchi",
+          "E. Branchini",
+          "M. Brescia",
+          "J. Brinchmann",
+          "S. Camera",
+          "G. Cañas-Herrera",
+          "V. Capobianco",
+          "C. Carbone",
+          "J. Carretero",
+          "S. Casas",
+          "M. Castellano",
+          "G. Castignani",
+          "S. Cavuoti",
+          "K. C. Chambers",
+          "A. Cimatti",
+          "C. Colodro-Conde",
+          "G. Congedo",
+          "C. J. Conselice",
+          "L. Conversi",
+          "Y. Copin",
+          "A. Costille",
+          "F. Courbin",
+          "H. M. Courtois",
+          "M. Cropper",
+          "A. Da Silva",
+          "H. Degaudenzi",
+          "G. De Lucia",
+          "H. Dole",
+          "M. Douspis",
+          "F. Dubath",
+          "X. Dupac",
+          "S. Dusini",
+          "S. Escoffier",
+          "M. Farina",
+          "F. Faustini",
+          "S. Ferriol",
+          "S. Fotopoulou",
+          "M. Frailis",
+          "E. Franceschi",
+          "S. Galeotta",
+          "K. George",
+          "W. Gillard",
+          "B. Gillis",
+          "C. Giocoli",
+          "J. Gracia-Carpio",
+          "B. R. Granett",
+          "A. Grazian",
+          "F. Grupp",
+          "S. V. H. Haugan",
+          "J. Hoar",
+          "W. Holmes",
+          "I. M. Hook",
+          "F. Hormuth",
+          "A. Hornstrup",
+          "K. Jahnke",
+          "M. Jhabvala",
+          "E. Keihänen",
+          "S. Kermiche",
+          "A. Kiessling",
+          "B. Kubik",
+          "K. Kuijken",
+          "M. Kümmel",
+          "M. Kunz",
+          "H. Kurki-Suonio",
+          "Q. Le Boulc'h",
+          "A. M. C. Le Brun"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP",
+          "astro-ph.GA",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2503.22559v2/Images/Ke_v3.png",
+            "caption": "Left panel : Keck MOSFIRE J J (MKO) band 33 ″ \\arcsec × \\times 33 ″ \\arcsec image showing J1811 + + 6658 in 2021, along with its predicted positions for 2024 and 2034. Right panel : Q1 background-subtracted J E J_{\\scriptscriptstyle\\rm E} image from 18 July 2024 with identical position markings and sizes.",
+            "captionLatex": "Left panel : Keck MOSFIRE $J$ (MKO) band 33 $\\arcsec$ $\\times$ 33 $\\arcsec$ image showing J1811 $+$ 6658 in 2021, along with its predicted positions for 2024 and 2034. Right panel : Q1 background-subtracted $J_{\\scriptscriptstyle\\rm E}$ image from 18 July 2024 with identical position markings and sizes."
+          },
+          {
+            "url": "https://arxiv.org/html/2503.22559v2/grid_witherr.png",
+            "caption": "Q1 spectra of a subset of newly discovered UCDs in the EDF-N. The colour scheme follows that used in Fig. 1 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2503.22559v2/Images/rpm_sys_new.png",
+            "caption": "Reduced proper motion diagrams for UCDs with reliable spectral typing. Diamonds represent newly identified UCDs, and dots show previously known UCDs, colour-coded by Euclid SpT. Dark background points correspond to all sources matched between AllWISE and Q1."
+          },
+          {
+            "url": "https://arxiv.org/html/2503.22559v2/Images/Teff_spt_nisp_atmo_nophot_mmj_eceb.png",
+            "caption": "T eff T_{\\mathrm{eff}} versus SpT plot for UCDs. The blue dots denote the known UCDs, and the orange diamonds denote the new UCDs. A uniformly distributed horizontal jitter of ± 0.1 \\pm 0.1 is applied to the x x -axis values for visual clarity. The purple and grey lines denote the empirical Stephens–Leggett and Pecaut–Mamajek T eff T_{\\mathrm{eff}} –SpT relations, respectively, with a ± \\pm 100 K uncertainty range.",
+            "captionLatex": "$T_{\\mathrm{eff}}$ versus SpT plot for UCDs. The blue dots denote the known UCDs, and the orange diamonds denote the new UCDs. A uniformly distributed horizontal jitter of $\\pm 0.1$ is applied to the $x$ -axis values for visual clarity. The purple and grey lines denote the empirical Stephens–Leggett and Pecaut–Mamajek $T_{\\mathrm{eff}}$ –SpT relations, respectively, with a $\\pm$ 100 K uncertainty range."
+          },
+          {
+            "url": "https://arxiv.org/html/2503.22559v2/Images/check_IHvsIJ_QSOT_gaia_4fwhmvis.png",
+            "caption": "Colour-colour diagrams of UCDs with reliable spectral typing. Dots represent 167 previously known UCDs, while diamonds denote the 33 new UCDs in EDF-N. They are colour-coded according to the Euclid SpT assigned in this paper, as denoted in the scale. Grey points in the background represent the Q1 objects with point _ like _ prob ≥ 0.8 \\geq 0.8 , with shading indicating number density. The lines indicate the expected locations of QSOs with redshifts from z = 5 z=5 to z = 9 z=9 . The solid white line shows the default QSO model predictions. Solid white and purple lines denote extremely weak and extremely strong lined QSOs. Dashed white and purple lines denote E(B − - V) = 0.1 mag and 0.2 mag, in the QSO rest frame. Dash-dotted white and purple lines denote extremely weak and strong-lined QSOs with E(B − - V) = 0.1 mag.",
+            "captionLatex": "Colour-colour diagrams of UCDs with reliable spectral typing. Dots represent 167 previously known UCDs, while diamonds denote the 33 new UCDs in EDF-N. They are colour-coded according to the Euclid SpT assigned in this paper, as denoted in the scale. Grey points in the background represent the Q1 objects with point _ like _ prob $\\geq 0.8$ , with shading indicating number density. The lines indicate the expected locations of QSOs with redshifts from $z=5$ to $z=9$ . The solid white line shows the default QSO model predictions. Solid white and purple lines denote extremely weak and extremely strong lined QSOs. Dashed white and purple lines denote E(B $-$ V) = 0.1 mag and 0.2 mag, in the QSO rest frame. Dash-dotted white and purple lines denote extremely weak and strong-lined QSOs with E(B $-$ V) = 0.1 mag."
+          },
+          {
+            "url": "https://arxiv.org/html/2503.22559v2/Images/Teff_vs_spt_euclid_atmo_bt_comapre_nophot_ppr.png",
+            "caption": "Comparison of T eff T_{\\mathrm{eff}} derived from Euclid spectra using ATMO and BT-Settl models. T eff T_{\\mathrm{eff}} is plotted as a function of Euclid SpT. Results from the ATMO model are shown as yellow pentagons, while those from the BT-Settl model are red triangles. The purple and grey lines denote the empirical Stephens–Leggett and Pecaut–Mamajek T eff T_{\\mathrm{eff}} –SpT relations, respectively, with a ± \\pm 100 K uncertainty range.",
+            "captionLatex": "Comparison of $T_{\\mathrm{eff}}$ derived from Euclid spectra using ATMO and BT-Settl models. $T_{\\mathrm{eff}}$ is plotted as a function of Euclid SpT. Results from the ATMO model are shown as yellow pentagons, while those from the BT-Settl model are red triangles. The purple and grey lines denote the empirical Stephens–Leggett and Pecaut–Mamajek $T_{\\mathrm{eff}}$ –SpT relations, respectively, with a $\\pm$ 100 K uncertainty range."
+          },
+          {
+            "url": "https://arxiv.org/html/2503.22559v2/26gaiaUCDspec_witherr.png",
+            "caption": "Gaia and Euclid spectra of the 26 Gaia UCDs in Q1. The full and the selected Euclid spectral points are denoted in grey and sky blue colours. The full Gaia XP spectrum and the selected RP spectral points are denoted in yellow and green colours. The SPLAT standard spectra corresponding to their SpT, scaled to the Euclid spectra, are plotted in red. The dashed beige region denotes atmospheric absorption regions."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2503.22559v2/Images/Ke_v3.png",
+        "thumbnailAlt": "Left panel : Keck MOSFIRE J J (MKO) band 33 ″ \\arcsec × \\times 33 ″ \\arcsec image showing J1811 + + 6658 in 2021, along with its predicted positions for 2024 and 2034. Right panel : Q1 background-subtracted J E J_{\\scriptscriptstyle\\rm E} image from 18 July 2024 with identical position markings and ",
+        "catchupDate": "2026-10-26"
+      },
+      {
+        "absId": "2607.13236",
+        "title": "What visibility-graph curvature measures in Forbush decreases: a calibration on the two largest events of solar cycle 25",
+        "summary": "Discrete curvatures of visibility graphs are increasingly used as descriptors of geophysical time series, but their response to a transient has rarely been calibrated against the simplest properties of that transient. We carry out this calibration for the nodal Forman--Ricci curvature $\\mathcal{F}$ of natural visibility graphs applied to neutron-monitor records of the Gannon storm (2024 May 10--11) and the 2025 June 1 Forbush decrease (FD), the two largest FDs of solar cycle 25, using 30-min NMDB data from six NM64 stations ($R_c \\simeq 0$--$7$~GV), i.e.\\ twelve station--event series. Curvature collapses at FD onset in every series (Cliff's $\\delta = 0.63$--$1.0$), but a 6-h running standard deviation separates onset from quiet time more strongly (mean $\\delta = 0.96$ vs $0.89$; mean block-permutation displacement $z = -27$ vs $-14$). Injecting synthetic decreases into the real pre-event records of each station shows that the curvature extreme follows $|\\mathcal{F}_{\\min}| \\propto (A/\\sigma)^{0.50}$ ($R^2 = 0.88$), where $A$ is the FD amplitude and $\\sigma$ the station's quiet-time noise, and is independent of the duration of the main phase (exponent $0.006$ over 3--36~h). With $A$, $\\sigma$ and the main-phase duration of each series as the only inputs, the calibration predicts the twelve observed extremes with standardized residuals of mean $-0.26$ and standard deviation $0.94$, and the observed extremes correlate with $A/\\sigma$ at Spearman $\\rho = 0.95$. Within the precision allowed by these data, nodal Forman--Ricci curvature of the whole-series visibility graph carries no information about these FDs beyond their amplitude relative to station noise; in particular, it does not distinguish the single-step Gannon decrease from the two-step June 2025 decrease.",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2607.13236",
+        "htmlUrl": "https://arxiv.org/html/2607.13236v2",
+        "authors": [
+          "D. Sierra-Porta"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2607.13236v2/fig_calibration.png",
+            "caption": "(a) Curvature extreme of 1080 synthetic decreases injected into the real quiet records of the six stations, against amplitude relative to station noise, colored by main-phase duration; the dashed line is the fit of Eq. ( 3 ). Open symbols are the twelve observed series. (b) Observed curvature extreme against the value predicted by each station’s calibration from its observed A A and T main T_{\\rm main} ; the band is the ± 1 ​ σ \\pm 1\\sigma scatter of the synthetic fits.",
+            "captionLatex": "(a) Curvature extreme of 1080 synthetic decreases injected into the real quiet records of the six stations, against amplitude relative to station noise, colored by main-phase duration; the dashed line is the fit of Eq. ( 3 ). Open symbols are the twelve observed series. (b) Observed curvature extreme against the value predicted by each station’s calibration from its observed $A$ and $T_{\\rm main}$ ; the band is the $\\pm 1\\sigma$ scatter of the synthetic fits."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2607.13236v2/fig_calibration.png",
+        "thumbnailAlt": "(a) Curvature extreme of 1080 synthetic decreases injected into the real quiet records of the six stations, against amplitude relative to station noise, colored by main-phase duration; the dashed line is the fit of Eq. ( 3 ). Open symbols are the twelve observed series. (b) Observed curvature extrem",
+        "catchupDate": "2026-10-26"
+      },
+      {
+        "absId": "2608.09990",
+        "title": "The iSTORM Instrument for Airborne Measurements of Gamma-Ray Emissions from Thunderstorms",
+        "summary": "The in-Situ Thunderstorm Observer for Radiation Mechanisms (iSTORM) is a gamma-ray spectrometer to study gamma-ray transients originating from thunderstorms, such as glows and terrestrial gamma-ray flashes (TGFs). It is designed and built by the U.S. Naval Research Laboratory for deployment aboard a NASA ER-2 aircraft. Using an array of 32 one-inch-diameter $\\mathrm{CeBr}_3$ scintillators read out with silicon photomultipliers (SiPMs), the instrument achieves an energy range of $\\sim 250 \\ \\mathrm{keV}$ to $5 \\ \\mathrm{MeV}$ under flight conditions, with a total geometrical area of $157 \\ \\mathrm{cm^2}$. One of two gamma-ray instruments in the ALOFT campaign, iSTORM recorded glows, terrestrial gamma-ray flashes (TGFs), and the newly discovered flickering gamma-ray flashes (FGFs).",
+        "published": "2026-10-26T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2608.09990",
+        "htmlUrl": "https://arxiv.org/html/2608.09990v2",
+        "authors": [
+          "Daniel Shy",
+          "J. Eric Grove",
+          "Bernard Phlips",
+          "Alena Schell",
+          "Mary Johnson-Rambert",
+          "Mason Quick",
+          "David Corredor",
+          "Scott Podgorny",
+          "Roy Salinas",
+          "Mitch Davis"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM",
+          "nucl-ex"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2608.09990v2/aloftTracks.png",
+            "caption": "GPS tracks of the 10 science flights during the ALOFT campaign, with each color representing a distinct flight path."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.09990v2/instrument/IMG_0932.jpg",
+            "caption": "Picture of a custom SiPM array developed for iSTORM. The SiPM array is then coupled to an individual CeBr 3 \\mathrm{CeBr}_{3} scintillator.",
+            "captionLatex": "Picture of a custom SiPM array developed for iSTORM. The SiPM array is then coupled to an individual $\\mathrm{CeBr}_{3}$ scintillator."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.09990v2/instrument/bareArrayHeaterPlacement.JPG",
+            "caption": "iSTORM’s CeBr 3 \\mathrm{CeBr}_{3} scintillator array. The wires on the anterior side are the resistive heaters while the posterior side contains the SiPM and associated electronics.",
+            "captionLatex": "iSTORM’s $\\mathrm{CeBr}_{3}$ scintillator array. The wires on the anterior side are the resistive heaters while the posterior side contains the SiPM and associated electronics."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.09990v2/instrument/explodedView.PNG",
+            "caption": "Exploded view of the iSTORM instrument"
+          },
+          {
+            "url": "https://arxiv.org/html/2608.09990v2/26V_temp_current.png",
+            "caption": "Current draw as a function of ambient temperature required to bias the SiPMs."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.09990v2/allSpectra_SignleDetector.png",
+            "caption": "Cs-137 spectrum as a function of different temperatures. Counts are normalized to the Cs-137 photopeak."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.09990v2/er2/IMG_3677.jpg",
+            "caption": "The iSTORM instrument mounted in the ER-2 right wing pod."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.09990v2/10MinGlow.png",
+            "caption": "GPS tracks of a segment of the July 24, 2023 flight. The marker color and size correspond to the count rate of that location. Each point represents a 5-second bin."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2608.09990v2/aloftTracks.png",
+        "thumbnailAlt": "GPS tracks of the 10 science flights during the ALOFT campaign, with each color representing a distinct flight path.",
+        "catchupDate": "2026-10-26"
+      }
+    ]
+  }
+}
