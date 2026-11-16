@@ -1,0 +1,1108 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "source": "arxiv-catchup",
+  "category": "astro-ph.EP",
+  "date": "2026-11-16",
+  "generatedAt": "2026-11-16T07:51:05.695Z",
+  "figuresStatus": "complete",
+  "figureCounts": {
+    "processed": 16,
+    "total": 16,
+    "found": 14
+  },
+  "counts": {
+    "new": 9,
+    "cross": 6,
+    "repl": 5
+  },
+  "papersBySection": {
+    "new": [
+      {
+        "absId": "2611.17423",
+        "title": "Exoplanets are predominately aligned with exo-Kuiper Belts",
+        "summary": "The architectures of planetary systems encode their formation and dynamical histories. In the Solar System, the near alignment of planetary orbits, the Kuiper Belt, and the Sun's equator supports planet formation in a rotating disk of gas and dust. However, some exoplanet systems show planets on orbits misaligned with their host stars or other planets, raising the question of whether misalignments are primordial or produced by post-formation dynamics. We present the first population-level constraints on the mutual inclinations of 32 planets in 16 systems relative to debris disks. We find that planets across orbital distances from 0.1 to 100 AU are predominantly aligned with the debris disks within 10 deg (30/32 planets). The alignment holds across systems spanning tens of million years to a few gigayears in age. These results indicate that the aligned architecture of the Solar System is representative of the birth conditions of exoplanet systems.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.17423",
+        "htmlUrl": "https://arxiv.org/html/2611.17423v1",
+        "authors": [
+          "Jingwen Zhang",
+          "Maxwell A. Millar-Blanchaer",
+          "Brendan P. Bowler",
+          "Tim D. Pearce",
+          "Marvin Morgan",
+          "William Thompson",
+          "Dori Blakely"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.17423v1/overview.png",
+            "caption": ": Overview of the radial architectures and planet-disk alignments across the planetary systems in our sample. A, Radial architecture of the planetary systems in our sample. Circles represent planets, with colors indicating their masses. Circle sizes scale with planet masses. Bars mark the locations of the debris disks observed at different wavelengths, denoted by colors. Panel A is intended to show the radial locations of the planets and debris disks, not the mutual inclinations between planets and disks. B, Minimum mutual inclination between planets and debris disks, Δ ​ i p , d = | i p − i d | \\Delta i_{p,d}=|i_{p}-i_{d}| , as a function of planetary orbital distance. Violin plots show the full posterior distributions, while circles and error bars indicate the MAP and 1 σ \\sigma credible intervals. C, The light blue shaded region shows the KDE of the pooled Δ ​ i p , d \\Delta i_{p,d} distribution for the full sample. Each system, including the Solar System, is included only once. We present the hierarchical Bayesian models (HBMs) with a Rayleigh distribution and a truncated Gaussian distribution in purple and green, respectively, plotted as the posterior medians (dashed lines) with their 68 % 68\\% credible intervals (shaded regions).",
+            "captionLatex": ": Overview of the radial architectures and planet-disk alignments across the planetary systems in our sample. A, Radial architecture of the planetary systems in our sample. Circles represent planets, with colors indicating their masses. Circle sizes scale with planet masses. Bars mark the locations of the debris disks observed at different wavelengths, denoted by colors. Panel A is intended to show the radial locations of the planets and debris disks, not the mutual inclinations between planets and disks. B, Minimum mutual inclination between planets and debris disks, $\\Delta i_{p,d}=|i_{p}-i_{d}|$ , as a function of planetary orbital distance. Violin plots show the full posterior distributions, while circles and error bars indicate the MAP and 1 $\\sigma$ credible intervals. C, The light blue shaded region shows the KDE of the pooled $\\Delta i_{p,d}$ distribution for the full sample. Each system, including the Solar System, is included only once. We present the hierarchical Bayesian models (HBMs) with a Rayleigh distribution and a truncated Gaussian distribution in purple and green, respectively, plotted as the posterior medians (dashed lines) with their $68\\%$ credible intervals (shaded regions)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17423v1/disk_planet_star_angles.png",
+            "caption": ": Comparison of stellar obliquity and planet-disk mutual inclinations. Left: Minimum stellar obliquity, Δ ​ i p , ∗ \\Delta i_{p,*} , as a function of minimum planet-disk mutual inclination, Δ ​ i p , d \\Delta i_{p,d} , for the 12 systems in our sample with measured stellar inclinations (including Solar System). Right: KDEs of Δ ​ i p , ∗ \\Delta i_{p,*} and Δ ​ i p , d \\Delta i_{p,d} across the 12 systems.",
+            "captionLatex": ": Comparison of stellar obliquity and planet-disk mutual inclinations. Left: Minimum stellar obliquity, $\\Delta i_{p,*}$ , as a function of minimum planet-disk mutual inclination, $\\Delta i_{p,d}$ , for the 12 systems in our sample with measured stellar inclinations (including Solar System). Right: KDEs of $\\Delta i_{p,*}$ and $\\Delta i_{p,d}$ across the 12 systems."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17423v1/disk_planet_star_angles_ages.png",
+            "caption": ": Planet-disk mutual inclination as a function of stellar age. Minimum mutual inclination between planet and debris disk, Δ ​ i p , d \\Delta i_{p,d} , is shown versus stellar age for the systems in our sample. The two systems with planets in misaligned orbits relative to the debris disks are labeled.",
+            "captionLatex": ": Planet-disk mutual inclination as a function of stellar age. Minimum mutual inclination between planet and debris disk, $\\Delta i_{p,d}$ , is shown versus stellar age for the systems in our sample. The two systems with planets in misaligned orbits relative to the debris disks are labeled."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17423v1/pooled_min2_marginalized_kde.png",
+            "caption": "Figure S1 : Distribution of 3-D planet-disk mutual inclinations ψ p , d \\psi_{p,d} and hierarchical Bayesian constraints on the underlying population. Left: KDEs of the pooled posterior distributions for ψ p , d \\psi_{p,d} . The green and orange dashed lines show the pooled distributions of the two degenerate solutions, p ⁡ ( ψ p , d 1 ) p(\\psi^{1}_{p,d}) and p ⁡ ( ψ p , d 2 ) p(\\psi^{2}_{p,d}) . The purple curve shows the equal-weight marginalized distribution, p ⁡ ( ψ p , d ) = 1 2 ​ p ​ ( ψ p , d 1 ) + 1 2 ​ p ​ ( ψ p , d 2 ) p(\\psi_{p,d})=\\frac{1}{2}p(\\psi^{1}_{p,d})+\\frac{1}{2}p(\\psi^{2}_{p,d}) . Right: HBM fits to ψ p , d \\psi_{p,d} assuming underlying Rayleigh (blue) and truncated Gaussian (red) distributions. The dashed lines show the posterior medians, and the shaded regions indicate the corresponding 68 % 68\\% credible intervals.",
+            "captionLatex": "Figure S1 : Distribution of 3-D planet-disk mutual inclinations $\\psi_{p,d}$ and hierarchical Bayesian constraints on the underlying population. Left: KDEs of the pooled posterior distributions for $\\psi_{p,d}$ . The green and orange dashed lines show the pooled distributions of the two degenerate solutions, $p(\\psi^{1}_{p,d})$ and $p(\\psi^{2}_{p,d})$ . The purple curve shows the equal-weight marginalized distribution, $p(\\psi_{p,d})=\\frac{1}{2}p(\\psi^{1}_{p,d})+\\frac{1}{2}p(\\psi^{2}_{p,d})$ . Right: HBM fits to $\\psi_{p,d}$ assuming underlying Rayleigh (blue) and truncated Gaussian (red) distributions. The dashed lines show the posterior medians, and the shaded regions indicate the corresponding $68\\%$ credible intervals."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17423v1/geometry.png",
+            "caption": "Figure S2 : Geometry of the disk orientation in three dimensions. The blue circle denotes the sky plane, with the z z -axis pointing along the line of sight. The yellow plane represents the debris disk, and the orange arrows indicate the normal vector of the disk plane. The solid and dashed vectors illustrate the prograde and retrograde degeneracy that arises because the direction of dust motion in the disk is unknown, corresponding to orbital inclinations of i d i_{d} and π − i d \\pi-i_{d} , respectively. The left and right panels show the additional degeneracy associated with the unknown near side of the disk, which gives rise to an ambiguity in the longitude of ascending node, Ω d \\Omega_{d} versus Ω d + π \\Omega_{d}+\\pi .",
+            "captionLatex": "Figure S2 : Geometry of the disk orientation in three dimensions. The blue circle denotes the sky plane, with the $z$ -axis pointing along the line of sight. The yellow plane represents the debris disk, and the orange arrows indicate the normal vector of the disk plane. The solid and dashed vectors illustrate the prograde and retrograde degeneracy that arises because the direction of dust motion in the disk is unknown, corresponding to orbital inclinations of $i_{d}$ and $\\pi-i_{d}$ , respectively. The left and right panels show the additional degeneracy associated with the unknown near side of the disk, which gives rise to an ambiguity in the longitude of ascending node, $\\Omega_{d}$ versus $\\Omega_{d}+\\pi$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17423v1/trunc_gaussian_chain_diagnostics.png",
+            "caption": "Figure S3 : MCMC diagnostics for the HBM fits to i p , d i_{p,d} . The top row shows the results for the Rayleigh population model, and the middle and bottom rows show the results for the truncated Gaussian population models. The left panels show the walker trace plots. The right panels show the corresponding marginalized posterior distributions, where dashed lines mark the posterior means.",
+            "captionLatex": "Figure S3 : MCMC diagnostics for the HBM fits to $i_{p,d}$ . The top row shows the results for the Rayleigh population model, and the middle and bottom rows show the results for the truncated Gaussian population models. The left panels show the walker trace plots. The right panels show the corresponding marginalized posterior distributions, where dashed lines mark the posterior means."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17423v1/psi_chain_diagnostics.png",
+            "caption": "Figure S4 : MCMC diagnostics for the HBM fits to ψ p , d \\psi_{p,d} . The top row shows the results for the Rayleigh population model, and the middle and bottom rows show the results for the truncated Gaussian population models. The left panels show the walker trace plots. The right panels show the corresponding marginalized posterior distributions, where dashed lines mark the posterior means.",
+            "captionLatex": "Figure S4 : MCMC diagnostics for the HBM fits to $\\psi_{p,d}$ . The top row shows the results for the Rayleigh population model, and the middle and bottom rows show the results for the truncated Gaussian population models. The left panels show the walker trace plots. The right panels show the corresponding marginalized posterior distributions, where dashed lines mark the posterior means."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17423v1/bias_test_median_delta.png",
+            "caption": "Figure S5 : Results of observation bias test. The histograms are from 20,000 Monte Carlo trials, with planet and disk inclinations were drawn from their posterior distributions in each trial. The blue distribution represents the observed sample, in which each planet is paired with the disk of the same system. The red distribution represents the randomly paring sample, in which planet and disk inclinations are randomly reassigned among systems."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.17423v1/overview.png",
+        "thumbnailAlt": ": Overview of the radial architectures and planet-disk alignments across the planetary systems in our sample. A, Radial architecture of the planetary systems in our sample. Circles represent planets, with colors indicating their masses. Circle sizes scale with planet masses. Bars mark the locations ",
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.17649",
+        "title": "DART ejecta reveal the recoil momentum budget of a kinetic impact",
+        "summary": "Double Asteroid Redirection Test (DART) demonstrated that ejecta recoil enhances asteroid deflection, but the ejecta processes generating and distributing this recoil remained unclear. We reconstruct three-dimensional ejecta evolution from time-resolved morphology and brightness observations, recovering previously missing constraints on momentum transfer and material transport. Integrating reconstructed momentum yields momentum enhancement factors $\\beta_\\mathrm{D}=2.13 \\pm 0.19 (1{\\sigma})$ for Dimorphos and $\\beta_\\mathrm{sys}=2.04 \\pm 0.19 (1{\\sigma})$ for the Didymos system. Combined with the measured deflection, the reconstructed recoil constrains Dimorphos's bulk density to $1435.18_{-153.71}^{+112.59} \\mathrm{kg m^{-3}}$ without assuming its mass. By linking observed orbital deflection to the released material, this reconstruction provides ejecta-based constraints for assessing kinetic-impact effectiveness and investigating how natural collisions drive mass loss and debris transport among small Solar System bodies.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.17649",
+        "htmlUrl": null,
+        "authors": [
+          "Zhijun Song",
+          "Yang Yu",
+          "Jian-Yang Li",
+          "Fabio Ferrari",
+          "Patrick Michel",
+          "Adriano C. Bagatin",
+          "Gonzalo Tancredi",
+          "Lioudmila Kolokolova",
+          "Tony F. Farnham",
+          "Andrew S. Rivkin",
+          "Bin Cheng",
+          "Hexi Baoyin"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.17667",
+        "title": "On the Existence of a Third Planet and an Apsidal Resonance Chain in the Kepler-396 System through TESS Data",
+        "summary": "The possible existence of a third planet in the Kepler-396 system has been previously proposed. Given that the planetary mass is poorly constrained and the orbit could be either interior or exterior to planet Kepler-396 c, that proposal is not clearly known in the community. In order to address this and further investigate Kepler-396 system's configuration, new TESS data are employed to form a long baseline of transit timing. Using the pixel-level decorrelation technique, the mid-transit times are determined. Through long baseline transit-timing-variation technique, we perform a comprehensive exploration of the parameter space of the third planet. Two best-fit solutions, derived from different priors of orbital inclinations, have led to the reduced chi-square values as 2.24 and 2.34 respectively, compared to 12.97 for the two-planet model. This result strongly suggests the existence of the third planet, i.e. Kepler-396 d. Based on these two best-fit solutions, the masses of Kepler-396 b, c, d are updated to be around 9, 4, 4 Earth Mass, and the corresponding orbital periods are 43, 89, 144 days, respectively. With these updated masses, Kepler-396 b is on the border between rocky or volatile-rich, Kepler-396 c is confirmed to be a volatile-rich super-puff planet, and both planets lie in the Neptune savanna. Dynamical simulations with three planets are performed, showing that they are stable for a timescale of $10^6$ years. The examination on resonant angles leads to the conclusion that planets Kepler-396 b, c, d form a three-body apsidal resonance chain.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.17667",
+        "htmlUrl": "https://arxiv.org/html/2611.17667v1",
+        "authors": [
+          "Li-Chin Yeh",
+          "Ing-Guey Jiang",
+          "Prangsutip Cherdwongsung",
+          "D. Bisht",
+          "Shraddha Biswas",
+          "Kaviya Parthasarathy",
+          "Hsin-Min Liu"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.17667v1/fig1_nuance_r1.png",
+            "caption": "The global light curves of Kepler-396 in TESS Sectors 76, 54, 74. The gray points are TESS data, the solid curves are the detrended global light curves, and the dotted lines indicate where the transit signals are. Right panels are the zoomed-in versions of left panels near the transit evens."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17667v1/flux_r2.png",
+            "caption": "The TESS transit light curves of Kepler-396 b and c. In each panel, the gray points are the TESS flux data and the orange points are 5-minute binned data. In top panels, the red curves are the best-fit PLD models. The middle panels are the residuals for the best-fit PLD models. The blue lines in the bottom panels are the trapezoid part of the best-fit PLD models."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17667v1/ttv_r1.png",
+            "caption": "The TTV plots for Kepler-396 b (left panels) and Kepler-396 c (right panels). In each panel, points with error bars are observational mid-transit times from Table B.1 and Table B.2 of Appendix B, and curves are theoretical TTV models. Blue points are the Kepler data from [ 117 ] , red points are the TESS data adopted from [ 62 ] , and purple points are our results. The orange curves in top panels are for two-planet model (Model 2p). In middle panels, the orange curves and the green curves are for Model 3pA1 and Model 3pA2 respectively. In bottom panels, the orange curves are for Model 3pB, and the green curves are for Model 3pC."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17667v1/MR_r1.png",
+            "caption": "The properties of Kepler-396 b and c. The left panel: Kepler-396 b and c (blue points for Model 3pA1 and green points for Model 3pA2) on the mass-radius plane, where gray dots are the planets from NASA Exoplanet Archive (https://exoplanetarchive.ipac.caltech.edu/, [ 23 ] ) with planetary radius and mass uncertainties below 30 % \\% . The dashed lines are adopted from [ 98 ] . The right panel: Kepler-396 b and c (blue points for Model 3pA1 and green points for Model 3pA2) on the period-radius plane of the observed planet population with exo-Neptunian boundaries from [ 19 ] .",
+            "captionLatex": "The properties of Kepler-396 b and c. The left panel: Kepler-396 b and c (blue points for Model 3pA1 and green points for Model 3pA2) on the mass-radius plane, where gray dots are the planets from NASA Exoplanet Archive (https://exoplanetarchive.ipac.caltech.edu/, [ 23 ] ) with planetary radius and mass uncertainties below 30 $\\%$ . The dashed lines are adopted from [ 98 ] . The right panel: Kepler-396 b and c (blue points for Model 3pA1 and green points for Model 3pA2) on the period-radius plane of the observed planet population with exo-Neptunian boundaries from [ 19 ] ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17667v1/figure_pei.png",
+            "caption": "The evolutions of period, eccentricities and inclination of the best-fit solution in Model 3pA1 and Model 3pA2 over 10 5 10^{5} years. The top panels are for Model 3pA1 and the bottom panels are for Model 3pA2 where black, blue, and red curves are for Kepler-396 b, c, d, respectively.",
+            "captionLatex": "The evolutions of period, eccentricities and inclination of the best-fit solution in Model 3pA1 and Model 3pA2 over $10^{5}$ years. The top panels are for Model 3pA1 and the bottom panels are for Model 3pA2 where black, blue, and red curves are for Kepler-396 b, c, d, respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17667v1/Ax_e6_per1.png",
+            "caption": "The distributions on period-eccentricity plane at the end time t = 10 6 t=10^{6} years for 100 simulations in Model 3pA1 (top panels) and another 100 simulations in Model 3pA2 (bottom panels). Left panels are for planet b, middle panels are for planet c, and right panels are for planet d. For convenice, Δ ​ p b ≡ p b − 42.99423 \\Delta p_{b}\\equiv p_{b}-42.99423 . The gray points are the values of the periods and eccentricities at the time t = 10 6 t=10^{6} . In addition, the black points with error bars present the means and standard deviations of the gray points, while the blue points with error bars show the best-fit solutions and its associated uncertainties.",
+            "captionLatex": "The distributions on period-eccentricity plane at the end time $t=10^{6}$ years for 100 simulations in Model 3pA1 (top panels) and another 100 simulations in Model 3pA2 (bottom panels). Left panels are for planet b, middle panels are for planet c, and right panels are for planet d. For convenice, $\\Delta p_{b}\\equiv p_{b}-42.99423$ . The gray points are the values of the periods and eccentricities at the time $t=10^{6}$ . In addition, the black points with error bars present the means and standard deviations of the gray points, while the blue points with error bars show the best-fit solutions and its associated uncertainties."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17667v1/tpf_s74r1.png",
+            "caption": "Figure A.1: The TPF of Kepler-396 at the starting time of Sector 74. The red slashed region is chosen as the aperture."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17667v1/corner_Axr1.png",
+            "caption": "Figure A.2: The posterior distributions of the parameters of MCMC samples, i.e. corner plot, for Model 3pA1, where Δ ​ p b = ( p b − 42.99415 ) × 10 4 \\Delta p_{b}=(p_{b}-42.99415)\\times 10^{4} , Δ ​ p c = ( p c − 88.50859 ) × 10 3 \\Delta p_{c}=(p_{c}-88.50859)\\times 10^{3} , and Δ ​ p d = ( p d − 144.0025 ) × 10 2 \\Delta p_{d}=(p_{d}-144.0025)\\times 10^{2}",
+            "captionLatex": "Figure A.2: The posterior distributions of the parameters of MCMC samples, i.e. corner plot, for Model 3pA1, where $\\Delta p_{b}=(p_{b}-42.99415)\\times 10^{4}$ , $\\Delta p_{c}=(p_{c}-88.50859)\\times 10^{3}$ , and $\\Delta p_{d}=(p_{d}-144.0025)\\times 10^{2}$"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.17667v1/fig1_nuance_r1.png",
+        "thumbnailAlt": "The global light curves of Kepler-396 in TESS Sectors 76, 54, 74. The gray points are TESS data, the solid curves are the detrended global light curves, and the dotted lines indicate where the transit signals are. Right panels are the zoomed-in versions of left panels near the transit evens.",
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.18083",
+        "title": "Separability defects in artificial satellite theory: intermediaries, zonal harmonics and secular separatrices",
+        "summary": "A five-input Poisson-bracket operator, which reproduces the Levi-Civita separability expressions and is cubic in the Hamiltonian, is used as a diagnostic of artificial satellite theory, in a modified polar-nodal chart regular at prograde equatorial orbits. For the general intermediary proposed by the author in 2020, covering those of Sterne, Garfinkel, Brouwer, Aksnes, Cid and Lahulla and Deprit, the linearised defects vanish if and only if the integrability ansatz holds, the condition for additive first-order Hamilton-Jacobi separation in polar-nodal variables. Second-order defects follow in closed form, and the coupling with the nodal pair comes from the dependence on the physical latitude, shared by the zonal term, Aksnes's intermediary and the originals of Sterne and Garfinkel. For every axisymmetric field the radial defect is linear, with a torque form, and the first-order zonal defect is the operator response to the first-order Lie generator, which also gives the second-order mean radial defect per revolution. In its gauge the long-period second-order average is common to intermediaries without latitude terms. Oblate structures with a displaced centre separate the zonal field exactly if and only if its coefficients satisfy the recurrence of Vinti's translated spheroidal potential, and along orbits propagated over 300 periods in the field truncated at $J_4$ they conserve the approximate third integral better than the centred structure, by median factors of 23 to 77. On secular separatrices the integrated defect is the derivative of the Melnikov function, tested in the eccentric Kozai-Lidov problem, and transverse zero sets of the operator define event surfaces.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.18083",
+        "htmlUrl": "https://arxiv.org/html/2611.18083v1",
+        "authors": [
+          "Vladimir Martinusi"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "math.DS"
+        ],
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.18107",
+        "title": "Model Choice or Model Bias? How stellar spectral libraries and activity modelling choices influence Ariel spectra- I. Forward model",
+        "summary": "The Ariel mission will conduct a population-level survey of approximately 1000 exoplanet atmospheres across its nominal lifetime, requiring unprecedented consistency in the treatment of stellar contamination of transmission spectra. We present a systematic comparison of stellar spectral libraries and modelling approaches for computing facular and spot contamination spectra across the full Ariel wavelength range (0.5-7.8 microns) for six stellar spectral types spanning F3 to M2. Using a surface resolved forward model with approximately 200 randomly generated active region configurations per spectral type, we compute contamination spectra at Ariel Tier 3 resolution and compare three 1D spectral libraries against 3D MHD stellar atmosphere spectra as a physical ground truth. We find that library-dependent differences in the facular treatment introduce systematic biases exceeding the Ariel Tier 3 sensitivity threshold of approximately 20 ppm across most of the wavelength range, for most spectral types and activity levels considered. These biases align with the absorption bands of water, carbon dioxide, carbon monoxide, and methane, rendering them indistinguishable from genuine atmospheric signals at Ariel's precision. Our results demonstrate hat the choice of stellar spectral library, in particular the faculae treatment is a critical and currently underappreciated source of systematic error for Ariel atmospheric characterisation. The impact on atmospheric retrievals is quantified in a companion paper.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.18107",
+        "htmlUrl": "https://arxiv.org/html/2611.18107v1",
+        "authors": [
+          "N.-E. Nèmec",
+          "A. Thompson",
+          "Ò. Porqueras-León",
+          "S. Stucki",
+          "N. R. C. Gomes",
+          "D. Baroch",
+          "I. Ribas"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.18107v1/Plots/plot_ariel_binned.png",
+            "caption": "Forward modelled stellar spectra as observed at Ariel Tier 3 spectral resolution with the different approaches. For more information on the different approaches representing each column we refer to the text."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18107v1/Plots/spectra_Spot_areas.png",
+            "caption": "Same spectra as shown in Fig. 1 with the projected spot area filling factors colorcoded."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18107v1/Plots/spectra_Facula_areas.png",
+            "caption": "Same as Fig. 2 but for the projected faculae area filling factors."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18107v1/Plots/spot_contrast.png",
+            "caption": "Contrasts of the spot spectra to the photospheric spectra for 3 selected spectral libraries. Colorcoded is the μ \\mu -angle for the StarSim 3D MPS-ATLAS spectra and the StarSim 1D MPS-ATLAS CLV spectra.",
+            "captionLatex": "Contrasts of the spot spectra to the photospheric spectra for 3 selected spectral libraries. Colorcoded is the $\\mu$ -angle for the StarSim 3D MPS-ATLAS spectra and the StarSim 1D MPS-ATLAS CLV spectra."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18107v1/Plots/fac_contrast.png",
+            "caption": "Same as Fig. 4 but for the faculae contrasts."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18107v1/Plots/plot_diff_vs_3DMHD_ppm.png",
+            "caption": "Similar as Fig. 1 but this time we calculated the difference between the other libraries and the 3D-MHD spectra. The blue shaded vertical lines indicate H 2 O, red shaded CO 2 , orange shaded CO, and green shaded CH 4 features."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.18107v1/Plots/plot_ariel_binned.png",
+        "thumbnailAlt": "Forward modelled stellar spectra as observed at Ariel Tier 3 spectral resolution with the different approaches. For more information on the different approaches representing each column we refer to the text.",
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.18271",
+        "title": "JCMT--Venus: Daily Monitoring of HDO and SO$_2$ Absorption in Venus' Mesosphere",
+        "summary": "We present three multi-week, disc-integrated James Clerk Maxwell Telescope (JCMT) campaigns monitoring HDO and SO$_2$ absorption in Venus' upper mesosphere at altitudes of approximately 80--110 km. Obtained in February 2022, July 2023, and August--September 2023, these observations provide dense temporal sampling and complementary observing geometries, enabling the disentanglement of short-term, long-term, and local solar time (LST) variability, which has been challenging in previous studies. We have four main findings. First, SO$_2$ in the upper mesosphere, being largely absent in February 2022 but present in both 2023 campaigns, may follow the same long-term trend observed at cloud tops. Second, long-term variability in H$_2$O is identified here for the first time and is interpreted as an anticorrelated response to the long-term change in SO$_2$, likely through H$_2$SO$_4$ formation. Third, H$_2$O is broadly stable within each campaign, although occasional short-term variability is present in the form of a depletion event. Finally, short-term variability is likely present for SO$_2$, but it does not dominate the overall behaviour. In the absence of strong long-term differences, the daily SO$_2$ abundance evolution is consistent with an asymmetric LST profile peaking near midnight, which is well reproduced by an independent model. These results are enabled by a dedicated reduction and retrieval pipeline that mitigates the strong standing-wave baseline structure in the spectra and quantifies systematic uncertainties, providing a methodological framework for future studies facing similar challenges.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.18271",
+        "htmlUrl": "https://arxiv.org/html/2611.18271v1",
+        "authors": [
+          "Wei Tang",
+          "David L. Clements",
+          "Jane Greaves",
+          "Malcolm J. Currie",
+          "Supachai Awiphan",
+          "Helen Jane Fraser",
+          "Masataka Imai",
+          "Ing-Guey Jiang",
+          "Xiaohu Li",
+          "Kim Miskovetz",
+          "David A Naylor",
+          "Bannawit Pimpanuwat",
+          "Anita M. S. Richards",
+          "Gerald Schieven",
+          "Stephen Serjeant",
+          "Sirinrat Sithajan"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.18271v1/large_ripple.png",
+            "caption": "Daily averaged spectra for the dates with the largest number of scans in each of Campaigns 1–3, shown in the geocentric frequency frame. Coloured solid curves show the spectra, while black dashed curves show the corresponding large-scale ripple models extracted using a mean filter."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18271v1/small_ripple.png",
+            "caption": "Small-scale ripples remaining after removal of the mean-filtered large-scale ripple. Coloured curves show daily averaged spectra for the selected dates with the largest number of scans in Campaigns 1, 2, and 3, in the geocentric frequency frame. A randomly selected 200-channel interval is displayed to illustrate the broadly aligned ripple structure across the three campaigns."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18271v1/hdo_so2_clean.png",
+            "caption": "Example of the Fourier-based removal of small-scale ripples from the 9 July spectrum in Campaign 2. For each species, the orange curve shows the spectrum before Fourier cleaning, the blue curve shows the modelled ripple structure, and the red curve shows the spectrum after subtraction of the ripple model. The left panel shows HDO and the right panel shows SO 2 . In each panel, the vertical dashed line marks the expected line centre."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18271v1/Weighting-H2O-SO2.png",
+            "caption": "Vertical line-depth contribution functions for SO 2 (orange), HDO (purple), and H 2 O (blue). Solid curves show the contribution functions after mean filtering and Fourier cleaning, while dashed curves show the corresponding unprocessed functions. The H 2 O contribution function is converted from the HDO response using the altitude-dependent D/H profile of Mahieux et al. (2024) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18271v1/c1.png",
+            "caption": "Daily H 2 O and SO 2 abundances for Campaign 1 (top), Campaign 2 (middle), and Campaign 3 (bottom)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18271v1/offset-map.png",
+            "caption": "Abundance error maps from the injection tests. Top: H 2 O error (input minus recovered abundance) as a function of channel offset from the line centre and observing date. Bottom: Same as the top panel, but for SO 2 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18271v1/c1_h2o_variation.png",
+            "caption": "Pairwise H 2 O matrices for Campaigns 1, 2, and 3. Panels show (left) the pairwise abundance-difference matrix Δ \\Delta , (middle) the corresponding uncertainty matrix σ \\sigma , and (right) the significance matrix | Δ | / σ |\\Delta|/\\sigma . In the Δ \\Delta panels, red and blue cells indicate abundance increases and decreases, respectively.",
+            "captionLatex": "Pairwise H 2 O matrices for Campaigns 1, 2, and 3. Panels show (left) the pairwise abundance-difference matrix $\\Delta$ , (middle) the corresponding uncertainty matrix $\\sigma$ , and (right) the significance matrix $|\\Delta|/\\sigma$ . In the $\\Delta$ panels, red and blue cells indicate abundance increases and decreases, respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18271v1/c2_so2_variation.png",
+            "caption": "Pairwise SO 2 matrices for Campaigns 2 and 3. Panels show (left) the pairwise abundance-difference matrix Δ \\Delta , (middle) the corresponding uncertainty matrix σ \\sigma , and (right) the significance matrix | Δ | / σ |\\Delta|/\\sigma .",
+            "captionLatex": "Pairwise SO 2 matrices for Campaigns 2 and 3. Panels show (left) the pairwise abundance-difference matrix $\\Delta$ , (middle) the corresponding uncertainty matrix $\\sigma$ , and (right) the significance matrix $|\\Delta|/\\sigma$ ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.18271v1/large_ripple.png",
+        "thumbnailAlt": "Daily averaged spectra for the dates with the largest number of scans in each of Campaigns 1–3, shown in the geocentric frequency frame. Coloured solid curves show the spectra, while black dashed curves show the corresponding large-scale ripple models extracted using a mean filter.",
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.18431",
+        "title": "The effect of vertical mixing on oxygen sequestration by refractory elements in the atmosphere of giant planets",
+        "summary": "The most widely used route to study the formation history of giant exoplanets is the C/O ratio, usually derived from H$_2$O, CO, CO$_2$ and CH$_4$. However, refractory elements can sequester a significant fraction of O, causing the observed C/O ratio to be overestimated with respect to the intrinsic one. Previous calculations of this bias relied on chemical equilibrium models. Here we quantify the impact of vertical mixing using the 1-D chemical kinetics code VULCAN, expanded with a Mg-Si-Fe network including the condensation and settling of enstatite, forsterite and metallic iron. We compute 168 models spanning equilibrium temperatures $T_{eq} \\in$ [700, 1500] K, eddy diffusion coefficients $K_{zz} \\in$ [$10^6$, $10^{10}$] cm$^2$ s$^{-1}$ and metallicities $Z \\in$ [0.9, 7.2] $Z_\\odot$, derived self-consistently from planet formation simulations. We find that vertical transport causes magnesium silicates to destabilize already at $T_{eq} \\sim 900$ K regardless of metallicity, releasing oxygen to H$_2$O and to minor gas-phase carriers such as SiO and Mg(OH)$_2$. Therefore, while equilibrium models predict a nearly constant C/O overestimation up to 1100-1300 K, in disequilibrium it drops sharply between 900 and 1200 K. In this transitional range the C/O overestimation is controlled by $K_{zz}$ and is partially degenerate with metallicity, while outside it is robust against both mixing intensity and the probed atmospheric layer, ranging from 14.5-23\\% at 700 K to 4.5-7\\% at 1500 K. Metallic iron condensation prevents Fe from sequestering oxygen, lowering the overestimation by about one third with respect to previous estimates. Finally, CH$_4$, CO$_2$ and the CH$_4$/CO ratio are most sensitive to $K_{zz}$ in the transitional range, and can provide a constraint on vertical mixing.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.18431",
+        "htmlUrl": "https://arxiv.org/html/2611.18431v1",
+        "authors": [
+          "Paolo Simonetti",
+          "Diego Turrini",
+          "Eugenio Schisano",
+          "Stavro L. Ivanovski",
+          "Romolo Politi",
+          "Sergio Fonte",
+          "Elenia Pacetti",
+          "Sergio Molinari",
+          "Matteo Brogi",
+          "Danae Polychroni",
+          "Michele Zusi",
+          "Valeria Cottini"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.18452",
+        "title": "Eleven Trans-Neptunian Objects and Eight Candidates Discovered by TESS",
+        "summary": "We report a blind search for trans-Neptunian objects (TNOs) in Transiting Exoplanet Survey Satellite (TESS) full-frame images from 2018 July 25 through 2026 November 6. We search 572 CCD fields near the ecliptic across 95 TESS sectors. After modeling and subtracting Gaia stars with the TESS-Gaia Light Curve package, we stack the residuals along curved trial paths and link detections across sectors. We identify eleven new TNOs, each detected blindly in two to five TESS sectors and independently in archival ground-based images, with arcs of 2-20 years. They have V = 20.8-22.1, heliocentric distances of 25-57 au, inclinations of 16-27 deg, and diameters of about 120-910 km for an assumed albedo of 0.08. They lie 9-26 deg from the ecliptic, and the largest is 5 deg from the Galactic plane. Eight additional objects linked across two or three TESS sectors lack secure independent recovery in the archives examined and remain candidates. The search recovers 314 known TNOs and Centaurs, with an empirical recovery fraction of 50% at V = 21.6 before quality cuts. Nine were discovered after TESS imaged them, including 2026 ED138 6.8 years before its discovery by Rubin. These results demonstrate the effectiveness of TESS for finding bright outer Solar System objects and extending their observational arcs.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.18452",
+        "htmlUrl": null,
+        "authors": [
+          "Te Han",
+          "Jeroen Audenaert",
+          "Avi Shporer",
+          "Daniel Muthukrishna",
+          "George R. Ricker"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.18481",
+        "title": "TOI-1699A: a sub-Neptune and a super-Jovian in an S-type planetary system",
+        "summary": "We present the detection and characterization of the TOI-1699A (TYC 3415-00428-1) S-type planetary system, hosted by the G5 V primary of a wide binary with an M3 V stellar companion at a projected separation of $\\sim$348 au. The inner planet, TOI-1699A b, was initially detected by TESS and confirmed with targeted CHEOPS photometry, ground-based photometry, and HARPS-N follow-up. With an orbital period of $\\sim$4.55 d, radius of $3.096^{+0.057}_{-0.056}$ $R_\\oplus$, mass of $13.9^{+1.9}_{-1.8}$ $M_\\oplus$, and bulk density of $2.58^{+0.40}_{-0.39}$ g cm$^{-3}$, TOI-1699A b lies firmly in the sub-Neptune regime and requires a substantial volatile envelope. The HARPS-N data additionally reveal a massive outer companion, TOI-1699A c, with an orbital period of $108.75 \\pm 0.10$ days, a low but significant eccentricity of $0.0737 \\pm 0.0034$, and a minimum mass of $5.54 \\pm 0.21$ $M_\\mathrm{Jup}$. Assuming coplanarity with the inner planet, TOI-1699A c is not expected to transit, and our dynamical stability analysis disfavors a stellar-mass nature and limits its true mass to $M_\\mathrm{c} \\lesssim 18$ $M_\\mathrm{Jup}$. Our combined data-driven and dynamical detection-limit analysis excludes additional planets between 54 and 235 days, and planets more massive than 27 $M_\\oplus$ at shorter periods. TOI-1699A joins the still limited sample of S-type multiplanet systems, while upcoming Gaia DR4 astrometry together with radial velocity monitoring can constrain the true mass and inclination of the outer planet.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.18481",
+        "htmlUrl": "https://arxiv.org/html/2611.18481v1",
+        "authors": [
+          "Angelica Psaridi",
+          "Manu Stalport",
+          "Giacomo Mantovan",
+          "Arianna Nigioni",
+          "Julia Venturini",
+          "Andrea Fortier",
+          "Davide Gandolfi",
+          "Alexis Heitzmann",
+          "Solène Ulmer-Moll",
+          "Andrea Bonfanti",
+          "Jo Ann Egger",
+          "Sérgio G. Sousa",
+          "Thomas G. Wilson",
+          "Gaia Lacedelli",
+          "Emma Nabbie",
+          "Karen A. Collins",
+          "Alexandre C. M. Correia",
+          "David Degen",
+          "Alexander J. Mustill",
+          "Vardan Adibekyan",
+          "Elise Furlan",
+          "Alexis Brandeker",
+          "Jorge Lillo-Box",
+          "Felipe Murgas",
+          "Nuno C. Santos",
+          "Amadeo Castro González",
+          "Babatunde Akinsanmi",
+          "Yann Alibert",
+          "Roi Alonso",
+          "Tamás Bárczy",
+          "David Barrado",
+          "Susana C. C. Barros",
+          "Wolfgang Baumjohann",
+          "Willy Benz",
+          "Nicolas Billot",
+          "Federico Biondi",
+          "Luca Borsato",
+          "Christopher Broeg",
+          "Andrew Collier Cameron",
+          "Szilárd Csizmadia",
+          "Patricio E. Cubillos",
+          "Melvyn B. Davies",
+          "Jerome de Leon",
+          "Magali Deleuil",
+          "Adrien Deline",
+          "Olivier D. S. Demangeon",
+          "Brice-Olivier Demory",
+          "Aliz Derekas",
+          "Billy Edwards",
+          "David Ehrenreich",
+          "Anders Erikson",
+          "Yoshi N. E. Eschen",
+          "Luca Fossati",
+          "Malcolm Fridlund",
+          "Izuru Fukuda",
+          "Akihiko Fukui",
+          "Tianjun Gan",
+          "Kosmas Gazeas",
+          "Michaël Gillon",
+          "Manuel Güdel",
+          "Maximilian N. Günther",
+          "Yuya Hayashi",
+          "Christiane Helling",
+          "Kate G. Isaak",
+          "László L. Kiss",
+          "Daniel Kitzmann",
+          "Emanuel Kopp",
+          "Judith Korth",
+          "Kristine W. F. Lam",
+          "Jacques Laskar",
+          "Alain Lecavelier des Etangs",
+          "Adrien Leleu",
+          "Monika Lendl",
+          "Kathryn V. Lester",
+          "Armin Luntzer",
+          "Demetrio Magrin",
+          "Pierre F. L. Maxted",
+          "Bruno Merín",
+          "Christoph Mordasini",
+          "Norio Narita",
+          "Valerio Nascimbeni",
+          "Göran Olofsson",
+          "Hugh P. Osborn",
+          "Roland Ottensamer",
+          "Isabella Pagano",
+          "Enric Pallé",
+          "Léna Parc",
+          "Hannu Parviainen",
+          "Austin Peel",
+          "Gisbert Peter",
+          "Daniele Piazza",
+          "Giampaolo Piotto",
+          "Don Pollacco",
+          "Didier Queloz",
+          "Roberto Ragazzoni",
+          "Nicola Rando",
+          "Francesco Ratti",
+          "Heike Rauer",
+          "Ignasi Ribas",
+          "Gaetano Scandariato"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.18481v1/figures/lightcurves_CHEOPS_TOI1699_raw_detrended_residuals.png",
+            "caption": ": CHEOPS light curves of TOI-1699A b from four visits (Table 1 ). The top panels show the raw flux and best-fit global model (orange line), middle panels show the detrended light curves with the best-fit transit model (orange line) and its ± \\pm 1 σ \\sigma region (shaded orange), and bottom panels show the residuals. Gray points correspond to the unbinned data, while black points show the binned data.",
+            "captionLatex": ": CHEOPS light curves of TOI-1699A b from four visits (Table 1 ). The top panels show the raw flux and best-fit global model (orange line), middle panels show the detrended light curves with the best-fit transit model (orange line) and its $\\pm$ 1 $\\sigma$ region (shaded orange), and bottom panels show the residuals. Gray points correspond to the unbinned data, while black points show the binned data."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18481v1/lc_phasefold_stack_TOI1699.png",
+            "caption": ": Phase-folded light curves of TOI-1699A b from TESS, CHEOPS, and the ground-based instruments. Light gray points show the individual measurements, darker points the binned data, and orange lines the best-fit transit model from the joint analysis."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18481v1/TOI1699_gemini.png",
+            "caption": ": 5 σ \\sigma contrast curves for TOI-1699A from the ’Alopeke speckle imager at Gemini North. The inset shows the reconstructed 832 nm image, where the horizontal bar indicates 1 arcsec.",
+            "captionLatex": ": 5 $\\sigma$ contrast curves for TOI-1699A from the ’Alopeke speckle imager at Gemini North. The inset shows the reconstructed 832 nm image, where the horizontal bar indicates 1 arcsec."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18481v1/figures/gls_TOI-1699_all_paper_small.png",
+            "caption": ": GLS periodogram of the HARPS-N RVs of TOI-1699A, corresponding activity indicators, and window function. Horizontal dashed lines indicate the FAP levels of 10%, 1%, and 0.1%, shown from darker to lighter blue. The vertical orange lines mark the orbital periods of TOI-1699A b and TOI-1699A c."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18481v1/figures/rv_combined_1699.png",
+            "caption": ": HARPS-N RV observations and best-fit models for the TOI-1699A system. The top panel shows the full RV time series, while the lower panels show the phase-folded RVs of TOI-1699A b and TOI-1699A c with their residuals. The orange line indicates the best-fit model and the shaded orange region the ± \\pm 1 σ \\sigma confidence interval.",
+            "captionLatex": ": HARPS-N RV observations and best-fit models for the TOI-1699A system. The top panel shows the full RV time series, while the lower panels show the phase-folded RVs of TOI-1699A b and TOI-1699A c with their residuals. The orange line indicates the best-fit model and the shaded orange region the $\\pm$ 1 $\\sigma$ confidence interval."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18481v1/figures/mass_radius_1699_paper_separation.png",
+            "caption": ": Mass-radius diagram of TOI-1699A b (diamond) and well-characterized planets from the PlanetS catalog (gray). S-type planets are shown as squares color-coded by projected binary separation. The horizontal dashed lines mark the radius valley. Composition curves show pure iron (brown), Earth-like (blue), and pure silicate (beige) interiors ( Zeng et al., 2019 ) , an Earth-like interior with a 1.5 % 1.5\\% H/He envelope (orange; Tang et al. 2025 ), and an Earth-like composition with an 80 % 80\\% water mass fraction (pink; Aguichine et al. 2025 ).",
+            "captionLatex": ": Mass-radius diagram of TOI-1699A b (diamond) and well-characterized planets from the PlanetS catalog (gray). S-type planets are shown as squares color-coded by projected binary separation. The horizontal dashed lines mark the radius valley. Composition curves show pure iron (brown), Earth-like (blue), and pure silicate (beige) interiors ( Zeng et al., 2019 ) , an Earth-like interior with a $1.5\\%$ H/He envelope (orange; Tang et al. 2025 ), and an Earth-like composition with an $80\\%$ water mass fraction (pink; Aguichine et al. 2025 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18481v1/figures/TOI1699_DetectionLimits_paper.png",
+            "caption": ": Planet detection limits in the inner system of TOI-1699A computed with ARDENT . The data-driven detection limits computed via injection-recovery tests are shown in brown. The dynamical detection limits are in orange. TOI-1699A b and TOI-1699A c are illustrated with black symbols (the upward triangle for TOI-1699A c means the planet mass lies above the represented mass range). The inset plot is a zoom-in onto planet b. The zone where additional planets could still be found is highlighted in orange."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18481v1/figures/full_tess_TOI1699.png",
+            "caption": ": TESS PDCSAP light curves of TOI-1699 from Sectors 20, 47, and 60. The orange line shows the best-fit transit-plus-GP model of TOI-1699A b from the joint analysis (Sect. 4.3 )."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.18481v1/figures/lightcurves_CHEOPS_TOI1699_raw_detrended_residuals.png",
+        "thumbnailAlt": ": CHEOPS light curves of TOI-1699A b from four visits (Table 1 ). The top panels show the raw flux and best-fit global model (orange line), middle panels show the detrended light curves with the best-fit transit model (orange line) and its ± \\pm 1 σ \\sigma region (shaded orange), and bottom panels s",
+        "catchupDate": "2026-11-16"
+      }
+    ],
+    "cross": [
+      {
+        "absId": "2611.17519",
+        "title": "Euclid DR1 Legacy Science on Ultracool Dwarfs: New URLD candidates in Euclid and SPHEREx",
+        "summary": "Unusually red L dwarfs (URLDs) probe extreme atmospheric conditions in the substellar regime, where enhanced dust opacity, cloud structure, and surface gravity effects challenge standard brown dwarf models. As free-floating analogues of young giant exoplanets, they provide key benchmarks for interpreting low-resolution infrared spectra from current and future wide-field space missions. The goal is to identify new red L dwarf candidates both photometrically and spectroscopically in the first data release (DR1) of the Euclid space mission. The area covered is about 1,900 and 50 square degrees in the wide and deep survey, respectively. We used colour cuts in multiple colour-colour diagrams combined with point-source and quality criteria to identify candidate red L dwarfs in both the Euclid wide and deep survey fields. We cross-matched photometric candidates with the SPHEREx mission and Euclid red grism spectra to confirm spectroscopic properties and evaluate bolometric magnitudes and colours. We identified 1202 and 38 red L dwarf candidates in the Euclid wide and deep surveys, respectively. Spectroscopic follow-up and archival cross-matching confirm a substantial new population of red L dwarfs. Distance-independent diagnostics show that these objects occupy distinct loci characterised by enhanced condensate opacity and significant redness. Euclid vastly expands the census of unusually red L dwarfs. While preliminary spectral classifications suggest many of these new candidates are intermediate-age (Pleiades-like) objects, a subset exhibits extremely red signatures indicative of very young, low-gravity (<=10 Myr) atmospheres, providing vital benchmarks for young exoplanet research.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.17519",
+        "htmlUrl": "https://arxiv.org/html/2611.17519v1",
+        "authors": [
+          "N. Lodieu",
+          "M. Žerjal",
+          "N. Vitas",
+          "C. Domínguez Tagle",
+          "E. L. Martín",
+          "J.-Y. Zhang",
+          "S. Tsilia"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.17519v1/plot_Euclid_colour_colour_redLdwarfs.png",
+            "caption": "Colour-colour diagrams depicting the location of URLDs. Light grey dots are the detections of a 20 arcmin random Euclid field. Black triangles and squares are the red L photometric candidates of the Wide and Deep surveys, respectively. Red dots are the URLDs with Euclid spectra and pink stars the known URLDs covered by Euclid ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17519v1/plot_step2v3_age_diagrams.png",
+            "caption": "Distance-independent diagnostics of the URLDs. Grey dots are normal L dwarfs, orange circles L β \\beta , red circles L γ \\gamma and cyan diamonds σ \\sigma Ori L dwarfs. Pink stars are the Euclid URLDs with SPHEREx spectra: filled for the new candidates and open for those already known. Pink diamonds are the Euclid candidates with measured Euclid colours lacking SPHEREx spectra (Sect. 3.1 ; Table 1 ). The black line and grey band show the median and ± 1 ​ σ \\pm 1\\sigma of the normal L dwarfs per spectral subtype.",
+            "captionLatex": "Distance-independent diagnostics of the URLDs. Grey dots are normal L dwarfs, orange circles L $\\beta$ , red circles L $\\gamma$ and cyan diamonds $\\sigma$ Ori L dwarfs. Pink stars are the Euclid URLDs with SPHEREx spectra: filled for the new candidates and open for those already known. Pink diamonds are the Euclid candidates with measured Euclid colours lacking SPHEREx spectra (Sect. 3.1 ; Table 1 ). The black line and grey band show the median and $\\pm 1\\sigma$ of the normal L dwarfs per spectral subtype."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17519v1/528642023292878141.png",
+            "caption": "Euclid images in the four filters ( I E I_{E} , Y E Y_{E} , J E J_{E} , and H E H_{E} of one URLD candidate. Image size is 2 × \\times 2 arcmin across. We show one example in this appendix; the other will be made available online.",
+            "captionLatex": "Euclid images in the four filters ( $I_{E}$ , $Y_{E}$ , $J_{E}$ , and $H_{E}$ of one URLD candidate. Image size is 2 $\\times$ 2 arcmin across. We show one example in this appendix; the other will be made available online."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17519v1/WISEAJ005811.69-565332.1.fits_spectrum_plot.png",
+            "caption": "SPHEREx spectra of known URLD candidates recovered in Euclid DR1."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17519v1/WISEAJ022908.28-530517.6.fits_fit_plot.png",
+            "caption": "SPHEREx spectra of new URLD candidates identified in Euclid DR1. Best two fits are indicated and come from the sample of known ultracool dwarfs with SPHEREx data ( Gagné et al., 2026a )"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.17519v1/plot_Euclid_colour_colour_redLdwarfs.png",
+        "thumbnailAlt": "Colour-colour diagrams depicting the location of URLDs. Light grey dots are the detections of a 20 arcmin random Euclid field. Black triangles and squares are the red L photometric candidates of the Wide and Deep surveys, respectively. Red dots are the URLDs with Euclid spectra and pink stars the kn",
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.17571",
+        "title": "Receiving Exoplanet Messages with Gravitational-wave Carriers: The Gravitational-wave Radial Velocity Method",
+        "summary": "Gravitational-wave (GW) radial velocity (RV) may offer a new method for detecting exoplanets, one that would primarily target planets orbiting GW-emitting, ultracompact, post-main-sequence stellar objects such as white dwarfs, neutron stars, and black holes. In this work we show that while similar to electromagnetic-based RV, this GW-based method depends on the ''phase modulation index'' (PMI), a parameter that is more sensitive to high-mass, long-period exoplanets. We investigate the potential of GW RV for GW sources in both the mid-frequency spectrum (where the upcoming LISA mission will operate) and the high-frequency spectrum (where the current LIGO-Virgo-KAGRA (LVK) observatories operate). Remarkably, we find that the PMI increases by a factor of $\\sim \\mathrm{O}\\left(10^4 - 10^6\\right)$ going from the mid-frequency to the high-frequency GW spectrum, which results in a greater redistribution of observed power due to the exoplanet's presence. By analyzing the power content of the observed GW signal, we derive analytic expressions to predict the GW carrier frequency power loss due to the exoplanet and the signal-to-noise ratio of the GW source and the exoplanet. We also explore the effects of the additional Doppler effect caused by the motion of the GW observatory and the potential for GW source parameter bias introduced by the presence of an undetected exoplanet. All of this helps us better understand where the GW RV method may work best in the exoplanet mass-period discovery space.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.17571",
+        "htmlUrl": null,
+        "authors": [
+          "Casey McGrath"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP",
+          "astro-ph.IM",
+          "gr-qc"
+        ],
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.17572",
+        "title": "Multimessenger Exoplanets: Combining Infrared Excess and Astrometry with Gravitational-wave Detections of Double White Dwarf Exoplanets",
+        "summary": "Multimessenger astrophysics provides a powerful framework for characterizing astrophysical systems through multiple, independent signals rather than relying solely on electromagnetic (EM) observations. While most prior multimessenger studies have focused on the properties of ultracompact objects, recent work has shown that gravitational waves (GWs) detectable with the upcoming Laser Interferometer Space Antenna (LISA) observatory can also be used to detect exoplanets orbiting stellar remnants. In particular, this includes circumbinary planets around tight double white dwarf (DWD) systems. This population is unique: no such planets are currently known around DWDs, and only a handful of circumbinary planets around main-sequence stars and planets orbiting white dwarfs (WDs) have been identified. Independent EM confirmation will be essential, especially for the first GW-detected exoplanets, to validate this method. While EM techniques are unlikely to efficiently survey large populations of DWDs, GW detection followed by targeted EM confirmation provides one pathway for identifying and characterizing these systems. Using a representative case, the known DWD ZTF J2243+5242 scaled to a fiducial distance of 150 pc, we compute the detectability of circumbinary exoplanets via LISA GW observations. We then demonstrate two complementary EM techniques--JWST infrared (IR) excess and Gaia or Habitable Worlds Observatory astrometry--that could independently confirm a GW-detected planet in this fiducial system. We present the first exploration of IR excess around DWDs as a viable exoplanet detection method, extending its established use for solitary WDs. Both EM techniques overlap with regions of parameter space where LISA is sensitive to DWD exoplanets, enabling robust confirmation and characterization.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.17572",
+        "htmlUrl": null,
+        "authors": [
+          "Casey McGrath",
+          "Mary Anne Limbach",
+          "Scott C. Noble",
+          "Vincent Kofman"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP",
+          "astro-ph.IM",
+          "gr-qc"
+        ],
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.17997",
+        "title": "Symbolic Regression Fitting for Roche Lobe Radius",
+        "summary": "We present a compact approximation to the dimensionless, volume-equivalent Roche lobe radius $R_{\\rm L}/a$, obtained by applying symbolic regression to radii calculated from the full Roche potential. Over $10^{-5}\\leq q\\leq10^5$, the expression reduces the root mean square error from $1.97\\times10^{-3}$ for Eggleton's formula to $5.95\\times10^{-4}$, while its maximum relative error is $1.39\\%$, compared with Eggleton's $0.83\\%$. Calculations at additional mass ratios give a mean relative error of $0.331\\%$. The formula is monotonic, recovers the $q^{\\frac{1}{3}}$ scaling at small mass ratio, and approaches a large-mass-ratio limit within $0.036\\%$ of the limiting Roche model. In a NumPy float64 benchmark of $10^7$ direct formula evaluations, the SR expression takes $0.217$~s compared with $0.450$~s for Eggleton, a speed-up of $2.08$. These results quantify the accuracy and evaluation cost of a compact algebraic alternative for binary-system calculations.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.17997",
+        "htmlUrl": "https://arxiv.org/html/2611.17997v1",
+        "authors": [
+          "Ye Ma",
+          "Xiaodong Li",
+          "Bo Ma",
+          "Zhanwen Han",
+          "Cong Yu"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.17997v1/figures/E3d.png",
+            "caption": "Three-dimensional equipotential contours for binary systems with different mass ratios ( Q = M 2 / M 1 Q=M_{2}/M_{1} ). Each subplot shows the gravitational potential surface at the inner Lagrange point energy level, with the primary mass ( M 1 M_{1} ) at z = 0 z=0 , secondary mass ( M 2 M_{2} ) at z = 1 z=1 , and the inner Lagrange point ( z 0 z_{0} ) and outer axial intersection ( z 1 z_{1} ) marked. The variation in contour shape demonstrates how the mass ratio affects the gravitational potential geometry, from extreme mass ratios ( Q = 0.01,100 Q=0.01,100 ) to equal masses ( Q = 1 Q=1 ).",
+            "captionLatex": "Three-dimensional equipotential contours for binary systems with different mass ratios ( $Q=M_{2}/M_{1}$ ). Each subplot shows the gravitational potential surface at the inner Lagrange point energy level, with the primary mass ( $M_{1}$ ) at $z=0$ , secondary mass ( $M_{2}$ ) at $z=1$ , and the inner Lagrange point ( $z_{0}$ ) and outer axial intersection ( $z_{1}$ ) marked. The variation in contour shape demonstrates how the mass ratio affects the gravitational potential geometry, from extreme mass ratios ( $Q=0.01,100$ ) to equal masses ( $Q=1$ )."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.17997v1/figures/Comparison_revised.png",
+            "caption": "Comparison of dimensionless Roche lobe radius approximations against the numerical reference. The left panels show R L / a R_{\\rm L}/a and the right panels show absolute relative errors in percent. The upper panels use the samples with 10 − 5 ≤ q ≤ 10 5 10^{-5}\\leq q\\leq 10^{5} , and the lower panels show their subset with 10 − 3 ≤ q ≤ 3 10^{-3}\\leq q\\leq 3 . The SR and original Eggleton formulas are the thick red dashed and blue solid curves, respectively. Their coefficient-adjusted variants use thinner dotted or dashed lines in the same color families; the numerical reference is dark gray.",
+            "captionLatex": "Comparison of dimensionless Roche lobe radius approximations against the numerical reference. The left panels show $R_{\\rm L}/a$ and the right panels show absolute relative errors in percent. The upper panels use the samples with $10^{-5}\\leq q\\leq 10^{5}$ , and the lower panels show their subset with $10^{-3}\\leq q\\leq 3$ . The SR and original Eggleton formulas are the thick red dashed and blue solid curves, respectively. Their coefficient-adjusted variants use thinner dotted or dashed lines in the same color families; the numerical reference is dark gray."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.17997v1/figures/E3d.png",
+        "thumbnailAlt": "Three-dimensional equipotential contours for binary systems with different mass ratios ( Q = M 2 / M 1 Q=M_{2}/M_{1} ). Each subplot shows the gravitational potential surface at the inner Lagrange point energy level, with the primary mass ( M 1 M_{1} ) at z = 0 z=0 , secondary mass ( M 2 M_{2} ) at ",
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.18246",
+        "title": "JWST/NIRISS-SOSS Spectroscopic Variability and Auroral Modelling of Warm Ultracool Dwarf LSR J1835+3259",
+        "summary": "Auroral variability in ultracool dwarfs (UCDs) has been proposed as a key source of optical and infrared modulation, yet its physical origin remains poorly understood. We present JWST Near Infrared Imager and Slitless Spectrograph/Single Object Slitless Spectroscopy (NIRISS/SOSS) time-series spectroscopy of the M8.5 UCD LSR J1835+3259. These observations probe the object's wavelength-dependent rotational variability, providing insight into the atmospheric processes underlying its infrared behaviour. Additional GTC/MEGARA optical spectra reveal that its H$\\alpha$ emission has declined markedly since earlier epochs, suggesting a reduced activity state during the JWST observations. We detect no emission from H$_3^+$ or absorption by hydronium in the NIRISS spectra. We use principal component analysis to identify two distinct modes of spectral variability: one dominated by FeH modulation near 1 $\\mu$m and another contributing broadband variability across the H and K bands. We find that no model atmosphere grid provides a reasonable fit to the average NIRISS spectrum. However, a blended model comprising an M-dwarf photosphere and a cooler blackbody component provides an improved fit to the mean spectrum, the broadband spectral energy distribution and the NIRISS broadband variability. By adding perturbations to PICASO model grids, we demonstrate that a combination of atmospheric heating and non-equilibrium chemistry can successfully mimic a blend of unperturbed photosphere and a blackbody, and that the presence of these effects may explain the unusual spectrum and variability of LSR J1835+3259.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.18246",
+        "htmlUrl": "https://arxiv.org/html/2611.18246v1",
+        "authors": [
+          "Eleanor Pike",
+          "Stuart Littlefair",
+          "J. Sebastian Pineda",
+          "Melodie Kao",
+          "Fei Wang",
+          "Ben Burningham",
+          "David García-Álvarez",
+          "Gregg Hallinan",
+          "Caroline Morley",
+          "John E. Gizis",
+          "John D. Nichols"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.18246v1/fully_calibrated_image_with_orders.png",
+            "caption": "Visualisation of calibrated NIRISS data frames overlaid with the centroid traces of orders 1 and 2. Note this is prior to the jwst PhotomStep , hence the units are in count rates, and that an upper limit of 20 e − / e^{-}/ s has been imposed to better show the contaminant orders from field stars. The order 2 trace is so heavily contaminated that we are unable to consider it within our analysis.",
+            "captionLatex": "Visualisation of calibrated NIRISS data frames overlaid with the centroid traces of orders 1 and 2. Note this is prior to the jwst PhotomStep , hence the units are in count rates, and that an upper limit of 20 $e^{-}/$ s has been imposed to better show the contaminant orders from field stars. The order 2 trace is so heavily contaminated that we are unable to consider it within our analysis."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18246v1/PCA_decomposition.png",
+            "caption": "Dynamic spectra, showing the variability in flux as a function of wavelength. The mean spectrum has been subtracted off each spectrum. Top : Observed dynamic spectra. Middle : PCA reconstruction of the dynamic spectrum with two components. Bottom : Residuals between observed and PCA modelled dynamic spectra."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18246v1/contribution_function.png",
+            "caption": "Emission contribution function of the Sonora Diamondback model used as the base atmosphere for the picaso perturbations, T eff T_{\\rm eff} = 2400 K, log g g = 5. Dashed lines indicate 10 − 0.8 10^{-0.8} and 1 bar, the pressures where we add perturbations in Figure 11 .",
+            "captionLatex": "Emission contribution function of the Sonora Diamondback model used as the base atmosphere for the picaso perturbations, $T_{\\rm eff}$ = 2400 K, log $g$ = 5. Dashed lines indicate $10^{-0.8}$ and 1 bar, the pressures where we add perturbations in Figure 11 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.18246v1/fully_calibrated_image_with_orders.png",
+        "thumbnailAlt": "Visualisation of calibrated NIRISS data frames overlaid with the centroid traces of orders 1 and 2. Note this is prior to the jwst PhotomStep , hence the units are in count rates, and that an upper limit of 20 e − / e^{-}/ s has been imposed to better show the contaminant orders from field stars. Th",
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.18314",
+        "title": "A Multiscale Analysis of an Interplanetary Shock from IMAP, SOLAR-1, and the L1 Constellation to Earth",
+        "summary": "Collisionless shocks are primary sites of particle acceleration throughout the Universe. Transient, mesoscale structures forming around these shocks influence their energy conversion efficiency, yet remain poorly observed at interplanetary (IP) shocks: spacecraft sample the shock transition briefly, and single-point measurements cannot disentangle temporal evolution from spatial structure. Here, we examine a fast, CME-driven IP shock of 2026 January 19, observed by IMAP, SOLAR-1, Wind, ACE, DSCOVR, and Aditya-L1 at L1 and by ARTEMIS and MMS near Earth, to determine its spatial and temporal structure. At MHD scales, a pre-existing solar wind flux tube is overtaken by the shock as it crosses the L1 fleet. This inflates the apparent magnetic compression ratio far beyond the ideal strong-shock limit of 4, showing that upstream and downstream intervals can sample different plasma and bias single-spacecraft estimates. At kinetic scales, IMAP and SOLAR-1, separated by only $\\sim$7 $R_E$ ($\\sim$340 ion inertial lengths), sample the same foreshock yet record localized structures that differ measurably; these are the first candidate signatures of large-scale foreshock transients at an IP shock. Further upstream, shocklets appear hundreds of $R_E$ ahead of the shock, consistent with steepening of ambient solar wind waves. Near Earth, the shock-to-flux-tube arrival lag increases to approximately six minutes, corresponding to a nominal sheath extension of $\\sim$50 $R_E$, indicating sheath expansion over $\\sim$200 $R_E$ of propagation. Together, these results show that the IP shock, its foreshock, and its sheath evolve across multiple scales from L1 to Earth, underscoring the need for multipoint measurements to resolve the underlying processes.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.18314",
+        "htmlUrl": "https://arxiv.org/html/2611.18314v1",
+        "authors": [
+          "Savvas Raptis",
+          "Drew L. Turner",
+          "Domenico Trotta",
+          "Vassilis Angelopoulos",
+          "James L. Burch",
+          "Dibyendu Chakrabarty",
+          "Eric Christian",
+          "Christina M. S. Cohen",
+          "Manuel E. Cuesta",
+          "Maher A. Dayeh",
+          "Robert W. Ebert",
+          "Hameedullah A. Farooki",
+          "Joe Giacalone",
+          "Matina Gkioulidou",
+          "Timothy Horbury",
+          "Immanuel C. Jebaraj",
+          "David J. McComas",
+          "Connor O'Brien",
+          "Srikar Paavan Tadepalli",
+          "Jamie S. Rankin",
+          "K. Sankarasubramanian",
+          "Nathan Schwadron",
+          "Bishwas L. Shrestha",
+          "Adam Szabo",
+          "Roy Torbert",
+          "Dimitrios Vassiliadis",
+          "Sarah Vines",
+          "Hanying Wei",
+          "Lynn B. Wilson III",
+          "Gary P. Zank",
+          "Lingling Zhao"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.18314v1/figure1.png",
+            "caption": "Multi-spacecraft overview of the 19 January 2026 interplanetary shock. Panels (a)–(h) show the GSE magnetic field components and magnitude observed by ACE, Wind, DSCOVR, Aditya-L1, IMAP, SOLAR-1, ARTEMIS-1, and MMS1, respectively, between 17:28:45 and 24:00:00 UTC. Vertical black lines mark the local shock ramps. Panel (i) shows the SMR index, with the vertical line marking the MMS1 shock arrival. Panels (j) and (k) show the spacecraft locations at their respective shock times in the GSE X X – Y Y and X X – Z Z planes. The blue circle marks Earth, the open diamond marks the nominal L1 point, and the gray curve shows an average bow-shock model [ 25 ] . The location-plot legend provides each spacecraft position in GSE coordinates, rounded to one decimal place.",
+            "captionLatex": "Multi-spacecraft overview of the 19 January 2026 interplanetary shock. Panels (a)–(h) show the GSE magnetic field components and magnitude observed by ACE, Wind, DSCOVR, Aditya-L1, IMAP, SOLAR-1, ARTEMIS-1, and MMS1, respectively, between 17:28:45 and 24:00:00 UTC. Vertical black lines mark the local shock ramps. Panel (i) shows the SMR index, with the vertical line marking the MMS1 shock arrival. Panels (j) and (k) show the spacecraft locations at their respective shock times in the GSE $X$ – $Y$ and $X$ – $Z$ planes. The blue circle marks Earth, the open diamond marks the nominal L1 point, and the gray curve shows an average bow-shock model [ 25 ] . The location-plot legend provides each spacecraft position in GSE coordinates, rounded to one decimal place."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18314v1/figure4.png",
+            "caption": "Evolution of upstream magnetic field fluctuations and shock obliquity. Panels (a)–(c) show power spectral densities (PSD) of | B | |B| at IMAP, SOLAR-1, and Wind, calculated from 30-min windows advanced in 1-min steps and colored by the window endpoint relative to each local shock. The dashed segment in panel (b) is an f − 5 / 3 f^{-5/3} reference line. Panels (d) and (e) show the matched logarithmic power ratios log 10 ⁡ ( P IMAP / P Wind ) \\log_{10}(P_{\\rm IMAP}/P_{\\rm Wind}) and log 10 ⁡ ( P IMAP / P SOLAR − 1 ) \\log_{10}(P_{\\rm IMAP}/P_{\\rm SOLAR-1}) , respectively; red therefore denotes stronger | B | |B| power at IMAP. These maps use a 21-bin median along log-frequency followed by a 5-min trailing median in time. Panel (f) shows θ B ​ n \\theta_{Bn} calculated from each spacecraft’s trailing 120-s magnetic field and the common six-spacecraft timing normal 𝐧 ^ timing = ( − 0.964 , − 0.127 , − 0.235 ) GSE \\hat{\\mathbf{n}}_{\\rm timing}=(-0.964,-0.127,-0.235)_{\\rm GSE} . Shading spans the 16th–84th percentiles obtained from six leave-one-spacecraft-out timing normals and magnetic field averaged over 30–300 s. Therefore, strictly speaking, it represents methodological sensitivity rather than statistical confidence. The horizontal dashed line marks θ B ​ n = 45 ∘ \\theta_{Bn}=45^{\\circ} .",
+            "captionLatex": "Evolution of upstream magnetic field fluctuations and shock obliquity. Panels (a)–(c) show power spectral densities (PSD) of $|B|$ at IMAP, SOLAR-1, and Wind, calculated from 30-min windows advanced in 1-min steps and colored by the window endpoint relative to each local shock. The dashed segment in panel (b) is an $f^{-5/3}$ reference line. Panels (d) and (e) show the matched logarithmic power ratios $\\log_{10}(P_{\\rm IMAP}/P_{\\rm Wind})$ and $\\log_{10}(P_{\\rm IMAP}/P_{\\rm SOLAR-1})$ , respectively; red therefore denotes stronger $|B|$ power at IMAP. These maps use a 21-bin median along log-frequency followed by a 5-min trailing median in time. Panel (f) shows $\\theta_{Bn}$ calculated from each spacecraft’s trailing 120-s magnetic field and the common six-spacecraft timing normal $\\hat{\\mathbf{n}}_{\\rm timing}=(-0.964,-0.127,-0.235)_{\\rm GSE}$ . Shading spans the 16th–84th percentiles obtained from six leave-one-spacecraft-out timing normals and magnetic field averaged over 30–300 s. Therefore, strictly speaking, it represents methodological sensitivity rather than statistical confidence. The horizontal dashed line marks $\\theta_{Bn}=45^{\\circ}$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18314v1/figure5.png",
+            "caption": "L1 shocklet candidates and magnetic polarization. Panels (a)–(c) show 100 min of upstream GSE magnetic field at IMAP, SOLAR-1, and Wind relative to each local interplanetary-shock crossing. Red vertical lines identify approximate IMAP and SOLAR-1 shocklet ramps. Panels (d)–(f) and (g)–(i) show, respectively, the IMAP and SOLAR-1 candidates: the unfiltered native magnetic field, the 0.2 0.2 – 2.0 2.0 Hz bandpass filtered magnetic field in MVA coordinates, and the corresponding L L – M M hodogram. Pale shading marks the MVA intervals, t − t ramp = [ − 7 , − 2 ] t-t_{\\rm ramp}=[-7,-2] s (IMAP) and [ − 4.5 , − 2 ] [-4.5,-2] s (SOLAR-1), each containing a single wave packet. Hodogram color advances through the interval; the open circle and filled square mark its start and end. The ordered MVA eigenvalues ( λ L , λ M , λ N ) (\\lambda_{L},\\lambda_{M},\\lambda_{N}) are ( 5.114 , 4.120 , 0.050 ) ​ nT 2 (5.114,4.120,0.050)\\,\\mathrm{nT^{2}} for IMAP and ( 1.286 , 1.069 , 0.046 ) ​ nT 2 (1.286,1.069,0.046)\\,\\mathrm{nT^{2}} for SOLAR-1. The shocklets exhibit compressive ramps and organized, nearly circular upstream magnetic rotations reflecting the presence of whistler precursors.",
+            "captionLatex": "L1 shocklet candidates and magnetic polarization. Panels (a)–(c) show 100 min of upstream GSE magnetic field at IMAP, SOLAR-1, and Wind relative to each local interplanetary-shock crossing. Red vertical lines identify approximate IMAP and SOLAR-1 shocklet ramps. Panels (d)–(f) and (g)–(i) show, respectively, the IMAP and SOLAR-1 candidates: the unfiltered native magnetic field, the $0.2$ – $2.0$ Hz bandpass filtered magnetic field in MVA coordinates, and the corresponding $L$ – $M$ hodogram. Pale shading marks the MVA intervals, $t-t_{\\rm ramp}=[-7,-2]$ s (IMAP) and $[-4.5,-2]$ s (SOLAR-1), each containing a single wave packet. Hodogram color advances through the interval; the open circle and filled square mark its start and end. The ordered MVA eigenvalues $(\\lambda_{L},\\lambda_{M},\\lambda_{N})$ are $(5.114,4.120,0.050)\\,\\mathrm{nT^{2}}$ for IMAP and $(1.286,1.069,0.046)\\,\\mathrm{nT^{2}}$ for SOLAR-1. The shocklets exhibit compressive ramps and organized, nearly circular upstream magnetic rotations reflecting the presence of whistler precursors."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18314v1/figure6.png",
+            "caption": "Upstream transient observations at IMAP and SOLAR-1. Left and right columns show IMAP and SOLAR-1 from 450 s upstream to each local interplanetary-shock crossing. Panels (a,b) show the native GSE magnetic components and magnitude; (c,d) the wavelet trace power spectra. Panels (e)–(j) show proton density, scalar speed, and temperature: colored points are unsmoothed IMAP/SWAPI pseudo-moments, black lines the 1-minute IMAP/SWAPI L3 moments, and SOLAR-1 shows the SWiPS L2 (uncorrected) moments. Panels (k,l) show θ B ​ n \\theta_{Bn} obtained from a 3-s moving averaged field and the local MX3 normal (radial scalar-speed proxy), with gray shading spanning the 16th–84th percentile range and the dashed line at 45 ∘ 45^{\\circ} . The two shaded bands (earlier, purple; later, green) mark localized interplanetary magnetic field (IMF) rotations, at roughly 18 : 56 : 10 18{:}56{:}10 – 18 : 58 : 00 18{:}58{:}00 UTC and from 80 to 10 s before each local shock, respectively, that differ measurably between IMAP and SOLAR-1 and are candidate large-scale foreshock transients (e.g., HFAs or foreshock bubbles). Top axes give distance from the shock using V sh = 850 ​ km ​ s − 1 V_{\\rm sh}=850\\,\\mathrm{km\\,s^{-1}} and d i = 131.6 ​ km d_{i}=131.6\\,\\mathrm{km} .",
+            "captionLatex": "Upstream transient observations at IMAP and SOLAR-1. Left and right columns show IMAP and SOLAR-1 from 450 s upstream to each local interplanetary-shock crossing. Panels (a,b) show the native GSE magnetic components and magnitude; (c,d) the wavelet trace power spectra. Panels (e)–(j) show proton density, scalar speed, and temperature: colored points are unsmoothed IMAP/SWAPI pseudo-moments, black lines the 1-minute IMAP/SWAPI L3 moments, and SOLAR-1 shows the SWiPS L2 (uncorrected) moments. Panels (k,l) show $\\theta_{Bn}$ obtained from a 3-s moving averaged field and the local MX3 normal (radial scalar-speed proxy), with gray shading spanning the 16th–84th percentile range and the dashed line at $45^{\\circ}$ . The two shaded bands (earlier, purple; later, green) mark localized interplanetary magnetic field (IMF) rotations, at roughly $18{:}56{:}10$ – $18{:}58{:}00$ UTC and from 80 to 10 s before each local shock, respectively, that differ measurably between IMAP and SOLAR-1 and are candidate large-scale foreshock transients (e.g., HFAs or foreshock bubbles). Top axes give distance from the shock using $V_{\\rm sh}=850\\,\\mathrm{km\\,s^{-1}}$ and $d_{i}=131.6\\,\\mathrm{km}$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18314v1/figure7.png",
+            "caption": "Evolution of the downstream flux-tube envelope from IMAP to MMS1. Panels (a)–(c) show the native GSE magnetic field components and magnitude at IMAP, ARTEMIS-1, and MMS1 from 20 s before to 15 min after each local interplanetary-shock crossing. Black vertical lines mark the local shocks. Red shading marks the broad flux-tube envelope, bounded by the B y B_{y} sign changes around its negative B y B_{y} interval, highlighting its relative location with respect to the shock. The upper axis gives effective downstream distance using V sh = 850 ​ km / s V_{\\rm sh}=850\\,\\mathrm{km/s} and R E = 6371 ​ km R_{E}=6371\\,\\mathrm{km} . Based on this, the shock-to-envelope separation grows from < 1 ​ R E <1\\,R_{E} at IMAP to ≈ 46 ​ R E \\approx 46\\,R_{E} at ARTEMIS-1 and ≈ 48 ​ R E \\approx 48\\,R_{E} at MMS, just upstream of Earth’s bow shock.",
+            "captionLatex": "Evolution of the downstream flux-tube envelope from IMAP to MMS1. Panels (a)–(c) show the native GSE magnetic field components and magnitude at IMAP, ARTEMIS-1, and MMS1 from 20 s before to 15 min after each local interplanetary-shock crossing. Black vertical lines mark the local shocks. Red shading marks the broad flux-tube envelope, bounded by the $B_{y}$ sign changes around its negative $B_{y}$ interval, highlighting its relative location with respect to the shock. The upper axis gives effective downstream distance using $V_{\\rm sh}=850\\,\\mathrm{km/s}$ and $R_{E}=6371\\,\\mathrm{km}$ . Based on this, the shock-to-envelope separation grows from $<1\\,R_{E}$ at IMAP to $\\approx 46\\,R_{E}$ at ARTEMIS-1 and $\\approx 48\\,R_{E}$ at MMS, just upstream of Earth’s bow shock."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.18314v1/figure9.png",
+            "caption": "Extended upstream context at IMAP and SOLAR-1. Same format and conventions as Figure 6 , extended from 50 min upstream to each local shock crossing. Magnetic field and θ B ​ n \\theta_{Bn} calculations use the native 64-Hz MAG cadence and the plotted traces retain every 16th native sample; the displayed Morlet trace power is averaged into non-overlapping 0.25-s bins after native-cadence wavelet calculation. Proton moments are shown as lines at their native sampling and contain only measured samples strictly upstream of each shock; proton temperature is logarithmic. Pale purple and green regions mark two localized IMF rotations, respectively, that appear to differ measurably between IMAP and SOLAR-1 and are potential large-scale foreshock-transient candidates (e.g., HFAs or foreshock bubbles). Thin gold intervals and dotted lines mark the MVA wave packets and approximate ramps of the IMAP and SOLAR-1 shocklet candidates analyzed in Figure 5 . The upper axes show effective distance in Earth radii using V sh = 850 ​ km / s V_{\\rm sh}=850\\,\\mathrm{km/s} and R E = 6371 ​ km R_{E}=6371\\,\\mathrm{km} .",
+            "captionLatex": "Extended upstream context at IMAP and SOLAR-1. Same format and conventions as Figure 6 , extended from 50 min upstream to each local shock crossing. Magnetic field and $\\theta_{Bn}$ calculations use the native 64-Hz MAG cadence and the plotted traces retain every 16th native sample; the displayed Morlet trace power is averaged into non-overlapping 0.25-s bins after native-cadence wavelet calculation. Proton moments are shown as lines at their native sampling and contain only measured samples strictly upstream of each shock; proton temperature is logarithmic. Pale purple and green regions mark two localized IMF rotations, respectively, that appear to differ measurably between IMAP and SOLAR-1 and are potential large-scale foreshock-transient candidates (e.g., HFAs or foreshock bubbles). Thin gold intervals and dotted lines mark the MVA wave packets and approximate ramps of the IMAP and SOLAR-1 shocklet candidates analyzed in Figure 5 . The upper axes show effective distance in Earth radii using $V_{\\rm sh}=850\\,\\mathrm{km/s}$ and $R_{E}=6371\\,\\mathrm{km}$ ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.18314v1/figure1.png",
+        "thumbnailAlt": "Multi-spacecraft overview of the 19 January 2026 interplanetary shock. Panels (a)–(h) show the GSE magnetic field components and magnitude observed by ACE, Wind, DSCOVR, Aditya-L1, IMAP, SOLAR-1, ARTEMIS-1, and MMS1, respectively, between 17:28:45 and 24:00:00 UTC. Vertical black lines mark the loca",
+        "catchupDate": "2026-11-16"
+      }
+    ],
+    "repl": [
+      {
+        "absId": "2607.25550",
+        "title": "The Influence of Dust Composition on Accretion Outbursts",
+        "summary": "Context: Episodic accretion outbursts have been shown to occur in protoplanetary discs due to thermal instability at the inner edge of the dead zone. These outbursts periodically heat up the dead zone, significantly altering the composition/chemistry and accretion onto the star. Aims: We investigate how these accretion outbursts affect the inner disc composition and how different dust compositions and properties affect the outbursts' dynamics. Methods: We run vertically integrated axis-symmetric dust and gas evolution models using the TriPoD method, including dust opacity dependent heating and cooling, a dead zone model, and compositional tracking of dust, including the evaporation and condensation of volatiles. Results: When considering dust to be made up of a condensation sequence of silicates and volatiles, the outburst evaporates most of the dust within 0.5 au. The fast re-condensation and subsequent viscous evolution reset the disc between bursts. Additionally, we find that the burst cycle period and maximal accretion rate directly correlate with the dust sublimation temperature.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2607.25550",
+        "htmlUrl": "https://arxiv.org/html/2607.25550v2",
+        "authors": [
+          "Nicolas Kaufmann",
+          "Anna B.T. Penzlin",
+          "Alfie Robinson",
+          "Alexandros Ziampras",
+          "Tilman Birnstiel",
+          "Richard Booth"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2607.25550v2/eps_T_sub.png",
+            "caption": "Initial dust-to-gas ratio as a function of temperature for our different setups, i.e. single-component setup (dashed), full composition (solid), and scalar treatment (shaded region and dotted lines)"
+          },
+          {
+            "url": "https://arxiv.org/html/2607.25550v2/compo_evolution_abs.png",
+            "caption": "State of the simulation at different times during the simulation (left to right: pre-burst, during, post-, and pre-burst of the next cycle), namely gas (blue) and dust (orange) surface-density and temperature (green) in the top panel, the relative fraction of each component in the solid dust (middle), and the surface distribution of the gas components without H-He (bottom)"
+          },
+          {
+            "url": "https://arxiv.org/html/2607.25550v2/comparison_size_dist.png",
+            "caption": "The dust size distribution (including CO-ice), with TriPoDPy (left) and cuDisc (right) at different times"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2607.25550v2/eps_T_sub.png",
+        "thumbnailAlt": "Initial dust-to-gas ratio as a function of temperature for our different setups, i.e. single-component setup (dashed), full composition (solid), and scalar treatment (shaded region and dotted lines)",
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2610.18114",
+        "title": "3D Global Climate Simulations of Synthetic Mars Warming",
+        "summary": "Artificial warming via engineered aerosols presents a novel pathway to bypass volatile scarcity on modern Mars. Utilizing the Generic Planetary Climate Model, we evaluate the physical feasibility of aerosol-induced terraforming over a full Martian year (669 Sols). Unlike previous approaches that added aerosols to background dust or assumed continuous nanoparticle injection, we simulate the complete substitution of natural dust with a single-injection profile of radiatively active aluminium nanoparticles without continuous dumping. This tests whether initial infrared greenhouse forcing can overcome the severe ice-albedo cooling induced by a massive regional water-ice sheet ($3400 \\text{ kg/m}^2$) localized in the Hellas Basin. Comparing this scenario against an unperturbed control run, we analyze surface temperature dynamics, sublimation fluxes, and water vapour concentration. Our 3D global climate simulations quantify the radiative-dynamical feedback thresholds and determine whether engineered aerosol forcing can trigger a self-sustaining water-vapour greenhouse effect or remains fundamentally limited by regional ice-albedo suppression in Hellas.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.18114",
+        "htmlUrl": "https://arxiv.org/html/2610.18114v4",
+        "authors": [
+          "Tom N. Landefeld",
+          "Harald Lesch"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.18114v4/figure4.jpeg",
+            "caption": "Figure 1 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2610.18114v4/figure5.jpeg",
+            "caption": "Figure 2 from the paper"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.18114v4/figure4.jpeg",
+        "thumbnailAlt": "Figure 1 from the paper",
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2610.21629",
+        "title": "A first look at the protoplanet WISPIT 2 b with VLTI/GRAVITY+",
+        "summary": "Confirmed observations of young protoplanets actively undergoing the process of formation have remained rare to date. In this article, we present new insights into the nature of the recently identified protoplanet WISPIT 2 b (age $\\sim5$ Myr) from Very Large Telescope Interferometer/GRAVITY+ observations. Through analysis of the spectral energy distribution (SED) and astrometry of WISPIT 2 b, with the inclusion of new GRAVITY+ data, we investigated the nature of the protoplanet's thermal emission and orbital properties. We performed an orbit fit with the inclusion of new high-precision GRAVITY+ astrometry to provide an updated orbital solution. We also analyzed the medium resolution GRAVITY+ $K$ band spectrum in combination with new Very Large Telescope/SPHERE and literature photometry, exploring both the atmospheric properties and the constraints on the circumplanetary environment. Finally, we checked for any signal from a resolved circumplanetary disk in the GRAVITY+ data. We detected the protoplanet WISPIT 2 b at $\\sim322$ mas separation from its host star. The new GRAVITY+ astrometry prefers an orbit with moderate eccentricity. Analysis of the SED reveals an effective temperature in the 900 to 1300 K regime and a slight preference for atmospheric models including clouds over pure blackbody emission. The new GRAVITY+ observations independently confirm WISPIT 2 b as a self-luminous and point-like companion that resides within the gap of the transitional disk at $\\sim60$ au from its host star. Further observations - either at higher signal-to-noise ratios or at longer wavelengths - are required to characterize the atmosphere and examine the presence of circumplanetary material from thermal emission of the dust.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.21629",
+        "htmlUrl": "https://arxiv.org/html/2610.21629v2",
+        "authors": [
+          "GRAVITY+ Collaboration",
+          "K. Abd El Dayem",
+          "R. Abuter",
+          "N. Aimar",
+          "M. Benisty",
+          "A. Berdeu",
+          "J.-P. Berger",
+          "A. Boccaletti",
+          "H. Bonnet",
+          "G. Bourdarot",
+          "W. Brandner",
+          "Y. Cao",
+          "L. M. Close",
+          "C. Correia",
+          "S. Cuevas Cardona",
+          "R. Davies",
+          "D. Defrère",
+          "L. Delit",
+          "F. Delplancke",
+          "A. Drescher",
+          "A. Eckart",
+          "F. Eisenhauer",
+          "L. Esteras Otal",
+          "M. Fabricius",
+          "A. Farah",
+          "H. Feuchtgruber",
+          "S. Flesch",
+          "N. M. Förster Schreiber",
+          "A. Foschi",
+          "Q. Fournier",
+          "P. Garcia",
+          "R. Garcia Lopez",
+          "R. Genzel",
+          "S. Gillessen",
+          "C. Ginski",
+          "T. Gomes",
+          "F. Gonté",
+          "V. Gopinath",
+          "J. Graf",
+          "M. Hartl",
+          "X. Haubois",
+          "F. Haussmann",
+          "T. Henning",
+          "S. F. Hönig",
+          "M. Houllé",
+          "H.-C. Jiang",
+          "S. Joharle",
+          "J. Kammerer",
+          "A. Kaufer",
+          "C. Keiman",
+          "M. A. Kenworthy",
+          "P. Kervella",
+          "J. Kolb",
+          "L. Kreidberg",
+          "L. Labadie",
+          "R. Laugier",
+          "S. Lacour",
+          "O. Lai",
+          "C. Lawlor",
+          "J.-B. Le Bouquin",
+          "J. Leftley",
+          "R. Li",
+          "B. Lopez",
+          "D. Lutz",
+          "F. Mang",
+          "G.-D. Marleau",
+          "A. Mérand",
+          "F. Millour",
+          "M. Montargès",
+          "N. More",
+          "N. Morujão",
+          "A. Nicolas",
+          "H. Nowacki",
+          "M. Nowak",
+          "S. Oberti",
+          "J. Osorno",
+          "T. Ott",
+          "S. Pappert",
+          "T. Paumard",
+          "C. Paladini",
+          "K. Perraut",
+          "G. Perrin",
+          "R. Petrov",
+          "P.O. Petrucci",
+          "N. Pourré",
+          "B. Prinoth",
+          "S. Rabien",
+          "C. Rau",
+          "D.C. Ribeiro",
+          "E. Rickman",
+          "S. Robbe-Dubois",
+          "M. Sadun Bordoni",
+          "M. Salman",
+          "J. Sanchez-Bermudez",
+          "J. Sauter",
+          "J. Scigliuto",
+          "J. Shangguan",
+          "P. Shchekaturov",
+          "T. T. Shimizu",
+          "C. Soenke"
+        ],
+        "categories": [
+          "astro-ph.EP"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.21629v2/wispit2_spectrum_fixed.png",
+            "caption": "BT-Settl-CIFIST stellar model atmosphere reddened by A V = 0.17 A_{V}=0.17 mag (black line) fitted to the archival Gaia Data Release 3, Tycho-2, and Two Micron All-Sky Survey photometry of WISPIT 2 (orange data points). The parameters of the best fitting model atmosphere are printed in the legend and agree well with those reported by van Capelleveen et al. (2025a) . The top panel shows the filter transmission profiles of the photometric data points. The bottom panel shows the residuals between the data points and the best fitting model atmosphere.",
+            "captionLatex": "BT-Settl-CIFIST stellar model atmosphere reddened by $A_{V}=0.17$ mag (black line) fitted to the archival Gaia Data Release 3, Tycho-2, and Two Micron All-Sky Survey photometry of WISPIT 2 (orange data points). The parameters of the best fitting model atmosphere are printed in the legend and agree well with those reported by van Capelleveen et al. (2025a) . The top panel shows the filter transmission profiles of the photometric data points. The bottom panel shows the residuals between the data points and the best fitting model atmosphere."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.21629v2/sphere.png",
+            "caption": "SPHERE IRDIS images of WISPIT 2 b in broadband H H taken in DPI mode, reduced with ADI/PCA with seven principal components. The hashed disk indicates the coronagraphic mask; the location of WISPIT 2 b is indicated with a dotted circle.",
+            "captionLatex": "SPHERE IRDIS images of WISPIT 2 b in broadband $H$ taken in DPI mode, reduced with ADI/PCA with seven principal components. The hashed disk indicates the coronagraphic mask; the location of WISPIT 2 b is indicated with a dotted circle."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.21629v2/orbits_inlet.png",
+            "caption": "Posterior distributions of the orbital parameters obtained from the three orbit fits described in Sect. 3.1 . Semimajor axis, eccentricity, argument of periapsis, dimensionless epoch, parallax, and total system mass are denoted by a a , e e , ω \\omega , τ \\tau , π \\pi , and M tot M_{\\text{tot}} , respectively. The reference epoch was defined as MJD 60,200. The inlets on the upper right show 30 randomly drawn samples from the orbit posterior with a zoom on the section with the GRAVITY+ and SPHERE measurements.",
+            "captionLatex": "Posterior distributions of the orbital parameters obtained from the three orbit fits described in Sect. 3.1 . Semimajor axis, eccentricity, argument of periapsis, dimensionless epoch, parallax, and total system mass are denoted by $a$ , $e$ , $\\omega$ , $\\tau$ , $\\pi$ , and $M_{\\text{tot}}$ , respectively. The reference epoch was defined as MJD 60,200. The inlets on the upper right show 30 randomly drawn samples from the orbit posterior with a zoom on the section with the GRAVITY+ and SPHERE measurements."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.21629v2/wispit2_detlim.png",
+            "caption": "Detection limits derived from the GRAVITY+ on-star observations of WISPIT 2 using companion injection and recovery tests calculated using fouriever . The dashed line shows the computed limits including poorly converged model fits and the solid line shows the same excluding them."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.21629v2/models_inlet.png",
+            "caption": "SED of WISPIT 2 b. The VLT/SPHERE H H and K S K_{S} band photometry are marked with blue circles. The LBTI/LMIRcam L L band photometry is marked with a purple diamond. The VLTI/GRAVITY+ binned spectrum is shown by the black squares. For comparison, we plot a single blackbody (solid gray line), two summed blackbodies (dashed gray line), and the two preferred atmospheric models, DRIFT-PHOENIX and Exo-REM , both with (dashed purple and orange lines respectively) and without (solid purple and orange lines respectively) the presence of a circumplanetary disk modeled by the addition of a blackbody.",
+            "captionLatex": "SED of WISPIT 2 b. The VLT/SPHERE $H$ and $K_{S}$ band photometry are marked with blue circles. The LBTI/LMIRcam $L$ band photometry is marked with a purple diamond. The VLTI/GRAVITY+ binned spectrum is shown by the black squares. For comparison, we plot a single blackbody (solid gray line), two summed blackbodies (dashed gray line), and the two preferred atmospheric models, DRIFT-PHOENIX and Exo-REM , both with (dashed purple and orange lines respectively) and without (solid purple and orange lines respectively) the presence of a circumplanetary disk modeled by the addition of a blackbody."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.21629v2/wispit2_spectrum_fixed.png",
+        "thumbnailAlt": "BT-Settl-CIFIST stellar model atmosphere reddened by A V = 0.17 A_{V}=0.17 mag (black line) fitted to the archival Gaia Data Release 3, Tycho-2, and Two Micron All-Sky Survey photometry of WISPIT 2 (orange data points). The parameters of the best fitting model atmosphere are printed in the legend an",
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.08719",
+        "title": "Coherent radio emission at 45 MHz from the nearby planet-hosting star GJ 725A",
+        "summary": "Ultra-low-frequency (<100 MHz) coherent radio emission from exoplanet-hosting stellar systems carries information about planetary and stellar magnetic fields, as well as the space weather environment - information that is difficult to obtain at other wavelengths. We carried out the circularly polarized LOFAR LBA Sky Survey, the most sensitive circularly polarized survey in this frequency range, using the LOFAR low-band antenna system. As part of this untargeted search, we detected a signal in a 1h observation that is coincident with the quiescent, planet-hosting, solar-neighborhood M dwarf GJ 725A at a distance of 3.5 pc. The signal has a high circular polarization fraction of $74\\pm16$% and a peak brightness of $B=135\\pm17$ mJy/beam between 42 MHz and 50 MHz. It was undetected in the 50-66 MHz range, with a 3$\\sigma$ upper limit of $B<48$ mJy/beam, corresponding to a drop of at least a factor 3 across 12 MHz, and indicating a strong spectral feature or cutoff around 50 MHz. Our detection represents the lowest-frequency confirmed detection of a stellar system. Based on the high estimated brightness temperature ($\\sim10^{14}$ K), transient character and polarization fraction, the emission is most plausibly attributed to the electron cyclotron maser instability. The available observations are not sufficient to identify the astrophysical origin of the emission. We consider three plausible scenarios: auroral emission of a yet undetected wide-orbit giant planet with a magnetic field $B\\geq18$ G, star-planet interaction with the known 11 d orbit terrestrial planet GJ 725Ab, or an origin due to stellar magnetic activity. Ultra-low-frequency monitoring, combined with new, preferably simultaneous observations in the X-rays, UV, and H$\\alpha$, and a search for a wide-orbit (thousands of days) giant planet across the full allowed parameter space will allow us to distinguish between these scenarios.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.08719",
+        "htmlUrl": "https://arxiv.org/html/2611.08719v2",
+        "authors": [
+          "H. W. Edler",
+          "J. R. Callingham",
+          "I. Davis",
+          "C. Cordun",
+          "F. de Gasperin",
+          "H. L. Le",
+          "B. J. S. Pope",
+          "H. K. Vedantham",
+          "R. J. van Weeren",
+          "P. Zarka"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.08719v2/astrometry.png",
+            "caption": ": Total (top) and circularly polarized intensity (bottom) of the transient source at 46 MHz, showing the 2 ​ σ 2\\sigma localization of the radio source (blue) and the position of GJ 725A (green) and GJ 725B (black) at the epoch of the LBA observation. The white ellipse in the lower left indicates the synthesized beam size of 24 ′′ × 11 ′′ 24^{\\prime\\prime}\\times 11^{\\prime\\prime} .",
+            "captionLatex": ": Total (top) and circularly polarized intensity (bottom) of the transient source at 46 MHz, showing the $2\\sigma$ localization of the radio source (blue) and the position of GJ 725A (green) and GJ 725B (black) at the epoch of the LBA observation. The white ellipse in the lower left indicates the synthesized beam size of $24^{\\prime\\prime}\\times 11^{\\prime\\prime}$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.08719v2/spectrum_IV.png",
+            "caption": ": Peak intensity and upper limit in Stokes I I (blue) and V V (red) of GJ 725 during the 1 h observation on 11 December 2020 (ID: 801916). As reference, we show the burst spectrum of Jupiter ( Zarka, 1998 ) , scaled to a distance of 3.53 pc by a factor of 1.5 in magnetic field strength and a factor of 7 in brightness (purple).",
+            "captionLatex": ": Peak intensity and upper limit in Stokes $I$ (blue) and $V$ (red) of GJ 725 during the 1 h observation on 11 December 2020 (ID: 801916). As reference, we show the burst spectrum of Jupiter ( Zarka, 1998 ) , scaled to a distance of 3.53 pc by a factor of 1.5 in magnetic field strength and a factor of 7 in brightness (purple)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.08719v2/dynspec_snr_TC00_stokes0.png",
+            "caption": ": Dynamic spectra of GJ 725 expressed in terms of S/N in Stokes I I (top) and V V (bottom). The dynamic spectra were convolved by a Gaussian kernel with a width of 1.17 MHz and 112 s. Near the top and right-hand side of the dynamic spectra, the frequency and time-collapsed significances are shown in bins corresponding to the width of the convolution kernels.",
+            "captionLatex": ": Dynamic spectra of GJ 725 expressed in terms of S/N in Stokes $I$ (top) and $V$ (bottom). The dynamic spectra were convolved by a Gaussian kernel with a width of 1.17 MHz and 112 s. Near the top and right-hand side of the dynamic spectra, the frequency and time-collapsed significances are shown in bins corresponding to the width of the convolution kernels."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.08719v2/spi_energy.png",
+            "caption": ": Efficiency ratio α rad \\alpha_{\\mathrm{rad}} between the observed power and maximum power directed toward the star in SPI, as predicted following Paul and Strugarek (2026) . Values are shown for a magnetized planet with an equatorial surface field of 0.5 G and a radius of 1.7 ​ R ⊕ 1.7\\,\\mathrm{R_{\\oplus}} . The area to the lower right of the yellow line is the regime in which sub-Alfvénic SPI can take place, and the dashed black lines mark the 10%, 5%, and 2% contours. The color scale is centered on the highest proposed radiative efficiency in the literature ( Kuznetsov, 2011 , 10%;) .",
+            "captionLatex": ": Efficiency ratio $\\alpha_{\\mathrm{rad}}$ between the observed power and maximum power directed toward the star in SPI, as predicted following Paul and Strugarek (2026) . Values are shown for a magnetized planet with an equatorial surface field of 0.5 G and a radius of $1.7\\,\\mathrm{R_{\\oplus}}$ . The area to the lower right of the yellow line is the regime in which sub-Alfvénic SPI can take place, and the dashed black lines mark the 10%, 5%, and 2% contours. The color scale is centered on the highest proposed radiative efficiency in the literature ( Kuznetsov, 2011 , 10%;) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.08719v2/dynspec_snr_unsmoothed_TC00_stokes0.png",
+            "caption": ": Dynamic spectra as in Fig. 4 but showing the S/N in bins of 1.17 MHz and 112 s."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.08719v2/plasma_formation.png",
+            "caption": ": Top: Ratio between plasma and cyclotron frequency at the location where the plasma frequency equals the maximum observed frequency of 50 MHz. This represents a formation condition for plasma emission. Center: Ratio between cyclotron and plasma frequency at the location where the cyclotron frequency equals 50 MHz. This represents the formation condition for ECMI. The yellow line illustrates the fit to the points where the ratio is unity shown in Eq. 2 . Bottom: Alfvénic Mach number at the orbital radius of GJ 725Ab."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.08719v2/probability.png",
+            "caption": ": Probability of visible SPI maser emission at the orbital phase of the radio detection ( ϕ det = 0.24 ± 0.05 \\phi_{\\mathrm{det}}=0.24\\pm 0.05 ) as a function of stellar inclination and magnetic obliquity.",
+            "captionLatex": ": Probability of visible SPI maser emission at the orbital phase of the radio detection ( $\\phi_{\\mathrm{det}}=0.24\\pm 0.05$ ) as a function of stellar inclination and magnetic obliquity."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.08719v2/astrometry.png",
+        "thumbnailAlt": ": Total (top) and circularly polarized intensity (bottom) of the transient source at 46 MHz, showing the 2 ​ σ 2\\sigma localization of the radio source (blue) and the position of GJ 725A (green) and GJ 725B (black) at the epoch of the LBA observation. The white ellipse in the lower left indicates th",
+        "catchupDate": "2026-11-16"
+      },
+      {
+        "absId": "2611.16715",
+        "title": "Resolving Radiogenic Heterogeneity in the Earth's Mantle with Multi-Site Geo-neutrino Measurements",
+        "summary": "We present a global fit to geo-neutrino measurements at four underground sites (Kamioka, Gran Sasso, Sudbury, Jiangmen), combining signal rates with site-specific predictions of the lithospheric contribution to constrain the quantity and distribution of radioactivity in the Earth's mantle. Assuming a uniform distribution of radioactivity in the mantle, we find a geo-neutrino rate of $S_\\text{mantle} = 14.8 \\pm 4.5$ NIU when the lithospheric predictions are allowed to vary within their uncertainties. This uniform-mantle signal rate corresponds to radiogenic heating of $18.5 \\pm 5.6$ TW. Although the uniform-mantle signal is resolved at $\\sim3.2\\sigma$, there is noticeable tension between the inferred mantle signals at Jiangmen and Kamioka, which may indicate non-uniform geo-neutrino production in the mantle. We explore six families of models to describe the heterogeneous spatial distribution of radiogenic elements in the Earth's mantle. Each model contains anomalous bodies or reservoirs carrying an excess of heat-producing elements over a depleted mantle (DM) background, with total inventory set by bulk-silicate-Earth mass balance and by a geochemical Th/U constraint. For each model, we compute the geo-response at each detector site and fit the resulting signals to the four measurements. A total of 968,274 individual model configurations are defined and tested. The results of $\\sim$3 million distinct fits show that no plausible mantle or lithosphere model applied uniformly to all four sites reproduces the difference between the inferred mantle signals at the Jiangmen and Kamioka sites. Only local, site-specific prescriptions are able to reach the observed difference, suggesting that the Kamioka-Jiangmen tension is due to a local effect or statistical scatter, rather than large-scale mantle structure.",
+        "published": "2026-11-16T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.16715",
+        "htmlUrl": "https://arxiv.org/html/2611.16715v2",
+        "authors": [
+          "Michael Leyton",
+          "Stephen T. Dye"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "hep-ex",
+          "hep-ph"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.16715v2/Top_2000km_VCge5.png",
+            "caption": "(a) 2000 2000 km above CMB",
+            "captionLatex": "(a) $2000$ km above CMB"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16715v2/Top_African_VCge5.png",
+            "caption": "(b) 1600 1600 km above CMB",
+            "captionLatex": "(b) $1600$ km above CMB"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16715v2/Top_1200km_VCge5.png",
+            "caption": "(c) 1200 1200 km above CMB",
+            "captionLatex": "(c) $1200$ km above CMB"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16715v2/Top_800km_VCge5.png",
+            "caption": "(d) 800 800 km above CMB",
+            "captionLatex": "(d) $800$ km above CMB"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16715v2/Top_400km_VCge5.png",
+            "caption": "(e) 400 400 km above CMB",
+            "captionLatex": "(e) $400$ km above CMB"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16715v2/Top_0km_VCge5.png",
+            "caption": "(f) 0 0 km above CMB",
+            "captionLatex": "(f) $0$ km above CMB"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16715v2/fig1_kamioka_vs_jiangmen.png",
+            "caption": ": S mantle ​ (Jiangmen) S_{\\text{mantle}}\\text{(Jiangmen)} (NIU) vs. S mantle ​ (Kamioka) S_{\\text{mantle}}\\text{(Kamioka)} (NIU) for all model configurations and fits ( ∼ \\sim 3.0 million) studied here, disaggregated into one panel per family. Solid regions with dark outlines are plausible fits (constrained, f ≤ 0.15 f\\leq 0.15 , MORB-consistent). Pale regions are unconstrained fits of any composition. Regions are drawn from the fitted points, widened by about 0.5 NIU so that thin features stay visible. Grey shading is the data likelihood out to 3 σ \\sigma , with labeled 1 σ \\sigma , 2 σ \\sigma , and 3 σ \\sigma contours around the data best estimate (black dot at 8.0, 32.6 NIU). The dashed line is Δ ​ S = 0 \\Delta S=0 , and thin diagonal lines mark Δ ​ S \\Delta S = 10, 20, and 30 NIU. The star represents the uniform mantle best fit at (14.8, 14.8) NIU.",
+            "captionLatex": ": $S_{\\text{mantle}}\\text{(Jiangmen)}$ (NIU) vs. $S_{\\text{mantle}}\\text{(Kamioka)}$ (NIU) for all model configurations and fits ( $\\sim$ 3.0 million) studied here, disaggregated into one panel per family. Solid regions with dark outlines are plausible fits (constrained, $f\\leq 0.15$ , MORB-consistent). Pale regions are unconstrained fits of any composition. Regions are drawn from the fitted points, widened by about 0.5 NIU so that thin features stay visible. Grey shading is the data likelihood out to 3 $\\sigma$ , with labeled 1 $\\sigma$ , 2 $\\sigma$ , and 3 $\\sigma$ contours around the data best estimate (black dot at 8.0, 32.6 NIU). The dashed line is $\\Delta S=0$ , and thin diagonal lines mark $\\Delta S$ = 10, 20, and 30 NIU. The star represents the uniform mantle best fit at (14.8, 14.8) NIU."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16715v2/fig3_summary_overlay.png",
+            "caption": ": Summary of Figure 9 : S mantle ​ (Jiangmen) S_{\\text{mantle}}\\text{(Jiangmen)} (NIU) vs. S mantle ​ (Kamioka) S_{\\text{mantle}}\\text{(Kamioka)} (NIU), with the plausible regions of all six families overlaid on one panel (constrained, f ≤ 0.15 f\\leq 0.15 , MORB-consistent). Colors are as in Figures 9 and 11 . Regions are drawn from a total of ∼ \\sim 3.0 million points, widened by 0.5 NIU so that thin features stay visible. Grey shading is the data likelihood out to 3 σ \\sigma , with labeled 1 σ \\sigma , 2 σ \\sigma , and 3 σ \\sigma contours around the data best estimate (black dot at 8.0, 32.6 NIU). The dashed line is Δ ​ S = 0 \\Delta S=0 , and thin diagonal lines mark Δ ​ S = 10 \\Delta S=10 , 20, and 30 NIU. The star represents the uniform mantle best fit (14.8, 14.8) NIU. All universal families cluster along Δ ​ S = 0 \\Delta S=0 . Only the site-specific offset at Jiangmen reaches the data region.",
+            "captionLatex": ": Summary of Figure 9 : $S_{\\text{mantle}}\\text{(Jiangmen)}$ (NIU) vs. $S_{\\text{mantle}}\\text{(Kamioka)}$ (NIU), with the plausible regions of all six families overlaid on one panel (constrained, $f\\leq 0.15$ , MORB-consistent). Colors are as in Figures 9 and 11 . Regions are drawn from a total of $\\sim$ 3.0 million points, widened by 0.5 NIU so that thin features stay visible. Grey shading is the data likelihood out to 3 $\\sigma$ , with labeled 1 $\\sigma$ , 2 $\\sigma$ , and 3 $\\sigma$ contours around the data best estimate (black dot at 8.0, 32.6 NIU). The dashed line is $\\Delta S=0$ , and thin diagonal lines mark $\\Delta S=10$ , 20, and 30 NIU. The star represents the uniform mantle best fit (14.8, 14.8) NIU. All universal families cluster along $\\Delta S=0$ . Only the site-specific offset at Jiangmen reaches the data region."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.16715v2/Top_2000km_VCge5.png",
+        "thumbnailAlt": "(a) 2000 2000 km above CMB",
+        "catchupDate": "2026-11-16"
+      }
+    ]
+  }
+}
