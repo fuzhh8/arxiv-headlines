@@ -1,0 +1,1384 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "source": "arxiv-catchup",
+  "category": "astro-ph.IM",
+  "date": "2026-11-18",
+  "generatedAt": "2026-11-18T08:25:40.274Z",
+  "figuresStatus": "complete",
+  "figureCounts": {
+    "processed": 30,
+    "total": 30,
+    "found": 27
+  },
+  "counts": {
+    "new": 9,
+    "cross": 15,
+    "repl": 8
+  },
+  "papersBySection": {
+    "new": [
+      {
+        "absId": "2611.21674",
+        "title": "Improving Early Detection of Scientifically Interesting Radio Sources Using Enhanced Isolation Forest",
+        "summary": "The rapid growth of radio astronomical surveys has created a major challenge in identifying scientifically interesting sources from large populations of observed objects. This study investigates whether enhanced Isolation Forest (iForest) methods can improve the early detection and ranking of scientifically interesting radio sources. Four iForest variants, Standard Enhanced, Pooled Gain, Kurtosis-based, and Hypervolume, are evaluated using 1,031 extended radio sources from the MeerKAT Galaxy Cluster Legacy Survey (MGCLS). Each source is represented by a 52-dimensional feature set derived using Bootstrap Your Own Latent (BYOL) self-supervised learning and principal component analysis (PCA), while expert scientific-interest ratings are used to define the ground-truth labels. The methods are evaluated using Average Precision (AP), receiver operating characteristic area under the curve (ROC AUC), Precision@10, Precision@50, and cumulative anomaly detection. Pooled Gain achieves the highest Average Precision (AP = 0.201) and the strongest early-stage ranking performance (P@10 = 0.600), identifying six expert-validated anomalies among the ten highest-ranked sources. Standard Enhanced and Kurtosis-based achieve the highest ROC AUC (0.677), while the AUC values of the four variants range from 0.653 to 0.677. These results indicate that feature-aware isolation strategies can improve the prioritization of scientifically interesting sources at the top of the ranked list, although overall discrimination remains comparable across the evaluated variants. The findings support the use of enhanced Isolation Forest methods as an initial ranking mechanism within human-in-the-loop systems for large-scale radio astronomical surveys.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.21674",
+        "htmlUrl": "https://arxiv.org/html/2611.21674v1",
+        "authors": [
+          "Pfunzo Thavhana",
+          "Clement Nyirenda",
+          "Michelle Lochner"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "cs.LG"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.21674v1/experimental_workflow.jpg",
+            "caption": "Fig. 1: Overall experimental workflow for the comparative evaluation of the four Isolation Forest variants."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21674v1/splitting.png",
+            "caption": "Fig. 2: Comparison of the splitting and scoring strategies used by the four evaluated Isolation Forest variants."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21674v1/pr_curves.png",
+            "caption": "Fig. 3: Precision–Recall curves for the four Isolation Forest variants, with expert scores ≥ 4 \\geq 4 treated as the positive class.",
+            "captionLatex": "Fig. 3: Precision–Recall curves for the four Isolation Forest variants, with expert scores $\\geq 4$ treated as the positive class."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21674v1/roc_curves.png",
+            "caption": "Fig. 4: ROC curves for the four Isolation Forest variants, with expert scores ≥ 4 \\geq 4 treated as the positive class.",
+            "captionLatex": "Fig. 4: ROC curves for the four Isolation Forest variants, with expert scores $\\geq 4$ treated as the positive class."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21674v1/cumulative_full.png",
+            "caption": "Fig. 5: Cumulative detection of expert-validated scientifically interesting sources for the full evaluation set."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21674v1/cumulative_first200.png",
+            "caption": "Fig. 6: Cumulative detection of expert-validated scientifically interesting sources among the first 200 ranked candidates."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.21674v1/experimental_workflow.jpg",
+        "thumbnailAlt": "Fig. 1: Overall experimental workflow for the comparative evaluation of the four Isolation Forest variants.",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.21686",
+        "title": "Mass-conservative voxelisation of smoothed particles using cumulative kernels",
+        "summary": "Smoothed particle hydrodynamics (SPH) simulations are frequently post-processed on Cartesian grids for applications such as radiative transfer calculations, visualisation, and data analysis. While numerous voxelisation algorithms have been proposed, relatively little attention has been paid to the fundamental properties that such algorithms should satisfy. We argue that SPH voxelisation algorithms should accurately reproduce the underlying density field, conserve mass globally, remain consistent under grid refinement, and be computationally efficient. We present a new finite-volume algorithm designed to satisfy these requirements simultaneously. Starting from a finite-volume formulation of the SPH density field, we derive a simple expression for the mass contained in a Cartesian voxel in terms of a cumulative kernel function. The cumulative kernel is tabulated numerically once for any compact-support smoothing kernel, independently of its analytical form, so that the same tabulation and voxelisation machinery applies unchanged to any such kernel. During voxelisation, the mass contributions are obtained from interpolated evaluations of this precomputed function at voxel corners, with values at corners shared by neighbouring voxels evaluated only once and reused. We compare the new cumulative-kernel algorithm to nearest-grid-point assignment, centre sampling, regular subsampling, and Monte Carlo integration, using direct high-order numerical integration as a reference for the voxel densities, and implement it in the 3D Monte Carlo radiative transfer code SKIRT. The cumulative-kernel algorithm reproduces the reference voxel densities substantially more accurately than the sampling-based methods considered. For the adopted $129^3$ cumulative-kernel lookup table (abridged).",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.21686",
+        "htmlUrl": null,
+        "authors": [
+          "Maarten Baes",
+          "Peter Camps",
+          "Kosei Matsumoto",
+          "Jules Dierickx",
+          "Andrea Gebek",
+          "Angelos Nersesian"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.GA"
+        ],
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.21770",
+        "title": "A Science Traceability Matrix for Micro-arcsecond Resolution X-ray Imaging",
+        "summary": "Our ability to understand the highest energy processes and environments in astronomy is directly tied to our ability to probe their physical processes at the smallest scales. Despite transformative progress in high-angular resolution instruments across the radio through optical, angular resolution within the X-rays has plateaued around $\\sim0.1-1''$, and therefore our window into the innermost regions of the high energy Universe lies primarily within spectral, timing, and/or polarimetric studies rather than direct imaging. This represents a significant barrier to gaining a robust understanding of key science questions, including the mechanisms of accretion and jet launching, the accretion activity and angular momentum losses of binary active galactic nuclei (AGN) leading to gravitational wave events, and the space weather events that may influence atmospheric evolution and prebiotic chemistry on potentially habitable exoplanets. The Accretion Explorer Interferometer (AEI) is a mission concept for X-ray imaging that could achieve up to $\\mu$as resolution, $\\sim5-6$ orders of magnitude better than current instrumentation. Here we present the scientific discovery space enabled by such an advance, and highlight areas of uncertainty and open questions that are critical to investigate for future development of this concept.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.21770",
+        "htmlUrl": "https://arxiv.org/html/2611.21770v1",
+        "authors": [
+          "Jenna M. Cann",
+          "Kimberly A. Weaver",
+          "Ryan W. Pfeifle",
+          "Jeffrey D. McKaig",
+          "Teresa Monsue",
+          "Laura D. Vega",
+          "Ronald Gamble",
+          "Miranda McCarthy",
+          "Kyla Mullaney",
+          "Kelly E. Whalen",
+          "Erini Lambrides",
+          "Atul Mohan",
+          "Isabella Carlton",
+          "Emma Kleiner",
+          "Kaylee DeGennaro",
+          "Mainak Singha",
+          "Andrea Astorga Bedoya",
+          "Neshini Sathishkumar"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.21770v1/array4.png",
+            "caption": "(a) Deployed AEI array at L2. The satellite that holds the detectors and combiner optic is to the lower left and the other six smaller satellites contain mirror flats to collect and redirect X-rays from the target (indicated by dashed lines). Array curvature is exaggerated for display."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21770v1/alignment.png",
+            "caption": "(b) Array alignment chart."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21770v1/questions.png",
+            "caption": ": Science questions to be explored with AEI . Above displays a subset of key science questions inspiring the science traceability matrix, connected with their respective Astro2020 [ 95 ] Decadal Priority."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21770v1/accretion.png",
+            "caption": ": Simulated image of an AGN accretion disk and hard X-ray corona observed with μ \\mu as resolution. The simulated disk was made assuming an accreting 10 8 ​ M ⊙ 10^{8}~\\mathrm{M}_{\\odot} SMBH at a distance of 5 Mpc from Earth, consistent with the closest objects where we can spatially resolve the corona with μ \\mu as resolution. Colors indicate intensity, with white indicating the highest intensity. This spherical corona has a radius of 10 ​ r g 10~r_{\\rm g} , in accordance with recent X-ray reverberation studies [ 56 ] .",
+            "captionLatex": ": Simulated image of an AGN accretion disk and hard X-ray corona observed with $\\mu$ as resolution. The simulated disk was made assuming an accreting $10^{8}~\\mathrm{M}_{\\odot}$ SMBH at a distance of 5 Mpc from Earth, consistent with the closest objects where we can spatially resolve the corona with $\\mu$ as resolution. Colors indicate intensity, with white indicating the highest intensity. This spherical corona has a radius of $10~r_{\\rm g}$ , in accordance with recent X-ray reverberation studies [ 56 ] ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21770v1/fig_Proxcen.png",
+            "caption": ": Proxima Centauri as a candidate for high-resolution X-ray observations with AEI: (a) A combined SDO/AIA 304 and 171 Å solar image is shown as a template of an active corona of a cool main-sequence star (F-M type). An orbiting exoplanet is shown as a dark patch. (b) NICER 0.3–2 keV X-ray observations of a flare from the active M dwarf YZ CMi, with an estimated X-ray energy of ∼ 10 31.7 \\sim 10^{31.7} erg [ 134 ] . (c) Illustrative simulated X-ray flare with an assumed energy of ∼ 10 33.5 \\sim 10^{33.5} erg. For comparison, Proxima Centauri is known to exhibit superflares with total energies reaching approximately this scale [ 51 ] ; the simulation is illustrative and does not imply an equivalent observed X-ray flare energy. Proxima Centauri’s quiescent X-ray flux is approximately 2.6 × 10 − 12 2.6\\times 10^{-12} erg cm -2 s -1 in the 0.2–10 keV band, corresponding to a luminosity of approximately 4.9 × 10 26 4.9\\times 10^{26} erg s -1 . This level of X-ray emission is comparable to that of the solar corona during periods of low activity [ 37 ] .",
+            "captionLatex": ": Proxima Centauri as a candidate for high-resolution X-ray observations with AEI: (a) A combined SDO/AIA 304 and 171 Å solar image is shown as a template of an active corona of a cool main-sequence star (F-M type). An orbiting exoplanet is shown as a dark patch. (b) NICER 0.3–2 keV X-ray observations of a flare from the active M dwarf YZ CMi, with an estimated X-ray energy of $\\sim 10^{31.7}$ erg [ 134 ] . (c) Illustrative simulated X-ray flare with an assumed energy of $\\sim 10^{33.5}$ erg. For comparison, Proxima Centauri is known to exhibit superflares with total energies reaching approximately this scale [ 51 ] ; the simulation is illustrative and does not imply an equivalent observed X-ray flare energy. Proxima Centauri’s quiescent X-ray flux is approximately $2.6\\times 10^{-12}$ erg cm -2 s -1 in the 0.2–10 keV band, corresponding to a luminosity of approximately $4.9\\times 10^{26}$ erg s -1 . This level of X-ray emission is comparable to that of the solar corona during periods of low activity [ 37 ] ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21770v1/jet_resolution_active_missions.png",
+            "caption": ": Angular size θ \\theta ( μ ​ a ​ s \\mu as ) required to resolve each AGN jet feature for six different targets. Values are computed from the angular diameter distance D A = D L / ( 1 + z ) 2 D_{A}=D_{L}/(1+z)^{2} and assume the characteristic feature scales of Table 1 .",
+            "captionLatex": ": Angular size $\\theta$ ( $\\mu as$ ) required to resolve each AGN jet feature for six different targets. Values are computed from the angular diameter distance $D_{A}=D_{L}/(1+z)^{2}$ and assume the characteristic feature scales of Table 1 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21770v1/STM_adj2.png",
+            "caption": ": Science traceability matrix developed for the Accretion Explorer Interferometer mission concept. With an ultra-high resolution X-ray imager such as AEI, we can explore critical open questions regarding the growth and feedback mechanisms of SMBHs, the precursors of gravitational wave events, and the effects of stellar flares on exoplanet habitability."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21770v1/TechSpec_adj2.png",
+            "caption": ": Critical technical specifications to address the science goals delineated in the science traceability matrix."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.21770v1/array4.png",
+        "thumbnailAlt": "(a) Deployed AEI array at L2. The satellite that holds the detectors and combiner optic is to the lower left and the other six smaller satellites contain mirror flats to collect and redirect X-rays from the target (indicated by dashed lines). Array curvature is exaggerated for display.",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.21794",
+        "title": "A Single-Shot Method for the Absolute Polarization Angle Calibration of CMB Telescopes with Artificial Sky Sources via Stellar Diffraction Encoding",
+        "summary": "Absolute polarization angle calibration of cosmic microwave background (CMB) telescopes at the $\\lesssim 0.1^\\circ$ level is needed to prevent instrumental mixing of $E$ modes into $B$ modes from biasing constraints on primordial gravitational waves and cosmic birefringence. Artificial polarized sky sources like drones, balloons, or satellites can provide calibration references, but transferring their emitted polarization angle from the payload frame to the celestial frame remains a challenge. We propose a calibrator architecture, applicable to any such source, in which a single dual-use grid-optic sets the polarization axis of the emitted millimeter-wave signal and also diffracts starlight into a co-aligned star camera. The resulting diffraction spectra record the grid's orientation relative to the stars, so that it can be measured directly on the sky without fine alignment between the camera and grid-optic. We describe the geometry and physics of this concept and show that it significantly simplifies obtaining the calibration angle the observatory needs, because precise payload attitude is no longer needed and the received polarization is insensitive to small line-of-sight errors. In simulations of 1000 real star fields that include camera-grid misalignment, lens distortion, lateral chromatic aberration, atmospheric refraction, and stellar colors, a single exposure recovers the polarizing grid-optic's orientation in the celestial frame with an uncertainty of $\\simeq 0.002^\\circ$, fifty times below the $0.1^\\circ$ goal. We also discuss the hardware tolerances a physical calibrator must meet, which future work will test. Our results establish the feasibility of this approach and motivate development of a dual-use grid-optic.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.21794",
+        "htmlUrl": "https://arxiv.org/html/2611.21794v1",
+        "authors": [
+          "Dillon J. Bass",
+          "Bradley R. Johnson"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.21794v1/figures/schematic5.png",
+            "caption": "A schematic of a calibrator using our method. A millimeter-wave emitter on the payload illuminates the grid-optic, which transmits only the polarization perpendicular to its wires toward the CMB telescope. Starlight passes through the same grid-optic into a star camera, which records each star together with its diffraction spectra (see Figure 2 for an example image). The camera precisely measures the orientation of the diffraction pattern relative to the star field, and this gives the orientation of the grid on the sky. This in turn gives the orientation of the polarized calibration signal on the sky, which is what polarimeter calibration for CMB studies requires. A single grid-optic, which can be fabricated with established photolithography techniques, thus enables the angle calibration needed for B B -mode searches.",
+            "captionLatex": "A schematic of a calibrator using our method. A millimeter-wave emitter on the payload illuminates the grid-optic, which transmits only the polarization perpendicular to its wires toward the CMB telescope. Starlight passes through the same grid-optic into a star camera, which records each star together with its diffraction spectra (see Figure 2 for an example image). The camera precisely measures the orientation of the diffraction pattern relative to the star field, and this gives the orientation of the grid on the sky. This in turn gives the orientation of the polarized calibration signal on the sky, which is what polarimeter calibration for CMB studies requires. A single grid-optic, which can be fabricated with established photolithography techniques, thus enables the angle calibration needed for $B$ -mode searches."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21794v1/figures/spectras.png",
+            "caption": "A proof-of-concept star-field exposure, similar to the images our future calibration payload will produce, that we took with a telescope using a commercially-available transmission diffraction grating. Alongside the point source stars are their dispersed first-order spectra, the optical signature that the grid-optic of Figure 1 imprints on the star camera image. A preliminary analysis of this image gives the orientation of the RA/Dec grid from the star field, and the orientation of the diffraction grating with respect to that grid as expected and described further in Section V.4 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21794v1/figures/representative_field.png",
+            "caption": "One simulated star camera image from the 1,000 used in this study (Section III.1 ). The top panel shows the output of the analysis pipeline. Gold circles mark the parent stars of anchored spectra that lie on the sensor, and faint gray circles mark the other stars matched by the plate solution. The red arrow shows the fitted grating direction, perpendicular to the wires, and the white arrow points north at the field center, where θ sky \\theta_{\\rm sky} is evaluated. The plate solution’s right ascension and declination grid is overlaid. Our pipeline (Section III.2 ) extracted a grid angle within 0.0007 ∘ 0.0007^{\\circ} of simulation truth and a reported uncertainty of only ± 0.0018 ∘ \\pm 0.0018^{\\circ} , well below the CMB goal of 0.1 ∘ 0.1^{\\circ} and in line with population level values (Section IV ). The bottom panel shows the region in the green box, resampled along the line from one parent star to its first-order spectrum. Here, it is possible to see more clearly the lever arm ℓ \\ell between the star and the centroid of its spectrum.",
+            "captionLatex": "One simulated star camera image from the 1,000 used in this study (Section III.1 ). The top panel shows the output of the analysis pipeline. Gold circles mark the parent stars of anchored spectra that lie on the sensor, and faint gray circles mark the other stars matched by the plate solution. The red arrow shows the fitted grating direction, perpendicular to the wires, and the white arrow points north at the field center, where $\\theta_{\\rm sky}$ is evaluated. The plate solution’s right ascension and declination grid is overlaid. Our pipeline (Section III.2 ) extracted a grid angle within $0.0007^{\\circ}$ of simulation truth and a reported uncertainty of only $\\pm 0.0018^{\\circ}$ , well below the CMB goal of $0.1^{\\circ}$ and in line with population level values (Section IV ). The bottom panel shows the region in the green box, resampled along the line from one parent star to its first-order spectrum. Here, it is possible to see more clearly the lever arm $\\ell$ between the star and the centroid of its spectrum."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21794v1/figures/uncertainty_histograms.png",
+            "caption": "Histograms showing our pipeline’s angle analysis results from all 1,000 simulated star field images. The left panel shows the recovered angle minus the simulation truth. The 68th percentile of the error from truth (shaded gray) is only ± 0.0015 ∘ \\pm 0.0015^{\\circ} , showing that our method recovers injected grid-optic angles on the sky extremely well. The right panel shows the reported uncertainty σ sky \\sigma_{\\mathrm{sky}} for each field. For these measurements the median reported uncertainty – which is the value that matters for real data, computed with no knowledge of the ground truth – is just 0.0018 ∘ 0.0018^{\\circ} . Together these plots show that, in principle, single images from our method contain all the information required to constrain a calibrator’s emitted polarization orientation to well below the 0.1 ∘ 0.1^{\\circ} level.",
+            "captionLatex": "Histograms showing our pipeline’s angle analysis results from all 1,000 simulated star field images. The left panel shows the recovered angle minus the simulation truth. The 68th percentile of the error from truth (shaded gray) is only $\\pm 0.0015^{\\circ}$ , showing that our method recovers injected grid-optic angles on the sky extremely well. The right panel shows the reported uncertainty $\\sigma_{\\mathrm{sky}}$ for each field. For these measurements the median reported uncertainty – which is the value that matters for real data, computed with no knowledge of the ground truth – is just $0.0018^{\\circ}$ . Together these plots show that, in principle, single images from our method contain all the information required to constrain a calibrator’s emitted polarization orientation to well below the $0.1^{\\circ}$ level."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.21794v1/figures/schematic5.png",
+        "thumbnailAlt": "A schematic of a calibrator using our method. A millimeter-wave emitter on the payload illuminates the grid-optic, which transmits only the polarization perpendicular to its wires toward the CMB telescope. Starlight passes through the same grid-optic into a star camera, which records each star toget",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.21850",
+        "title": "Improved accuracy of the reference photon calibration standards in the network of gravitational-wave observatories during the O4 observing run",
+        "summary": "The global network of gravitational wave observatories uses systems known as Photon Calibrators to provide absolute calibration via laser radiation pressure. Successive detector improvements are increasing sensitivity, enabling not only increase the detection rate but also detections with high signal to noise ratios. To optimally extract information from these detected signals, continual effort is directed at pushing the state of the art of the interferometer calibration accuracy. To improve the accuracy of the locally-maintained laser power standards for photon calibration, a new global calibration scheme was implemented by using transfer standards calibrated at both the National Institute of Standards and Tech- nology (NIST) in the US and the Physikalisch-Technische Bundesanstalt (PTB) in Germany during the recently completed fourth observing run. We report the results of a long-duration NIST-PTB bilateral comparison conducted over almost three years and the results of propagation of transfer standard calibrations to the reference power sensors maintained at each observatory.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.21850",
+        "htmlUrl": "https://arxiv.org/html/2611.21850v1",
+        "authors": [
+          "Dripta Bhattacharjee",
+          "Cervane Grimaud",
+          "Matthew Spidell",
+          "Stefan Kück",
+          "Dan Chen",
+          "Joseph Betzwieser",
+          "Shingo Hido",
+          "Paul Lagabbe",
+          "Holger Lecher",
+          "John Lehman",
+          "Francisco Llamas",
+          "Marco López",
+          "Loïc Rolland",
+          "Anthony Sanchez",
+          "Richard Savage"
+        ],
+        "categories": [
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.21850v1/O5Pcal.png",
+            "caption": "Revised global Pcal calibration scheme for future observing runs. A TS travels between NIST and the LHO where the NMI calibration is propagated to GSL. Dedicated TSs for Virgo and KAGRA, TSV and TSK, are calibrated using the GSL as a reference standard at LHO."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.21850v1/O5Pcal.png",
+        "thumbnailAlt": "Revised global Pcal calibration scheme for future observing runs. A TS travels between NIST and the LHO where the NMI calibration is propagated to GSL. Dedicated TSs for Virgo and KAGRA, TSV and TSK, are calibrated using the GSL as a reference standard at LHO.",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.22753",
+        "title": "Improved compensation for missing high-order aberrations with multi-frame blind deconvolution and phase diversity techniques",
+        "summary": "Context. Image restoration with phase diversity (PD) and multi-frame blind deconvolution (MFBD) techniques lead to remarkable improvement in image quality, but is limited by the number of aberration parameters that can be determined. Compensation for the missing high-order modes is needed to further improve image quality, and to compensate for residual straylight. Aims. We aim to improve on methods for compensating missing high-order aberrations previously proposed by Scharmer et al. (2010) and Lofdahl & Hillberg (2022). Methods. The wavefront is divided into a set of low-order aberrations, which are treated individually, and high-order aberrations that are treated collectively. The high-order part of the transfer function is averaged, assuming Gaussian seeing statistics with Kolmogorov turbulence for the individual aberrations. Assuming that their accumulated effect is roughly uniform over the pupil, we obtain a high-order modulation transfer function that is represented with a single free parameter. Results. The high quality of the of the proposed high-order modulation transfer function is verified by calculating the Strehl from random samples of point-spread functions for D/r0 ranging from 4 to 20, where D is the telescope diameter and r0 the Fried seeing parameter. The proposed approximation offers significant advantages over the earlier proposals. Conclusions. The proposed method of compensating for missing high-order aberrations in PD or MFBD image reconstruction can dramatically improve the fidelity of solar images. Variations of the seeing (r0) within a data-set can be compensated for self consistently during PD or MFBD processing, but the average value of r0 must be provided from an external source. The computational cost of implementing this method is marginal.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.22753",
+        "htmlUrl": "https://arxiv.org/html/2611.22753v1",
+        "authors": [
+          "G.B. Scharmer"
+        ],
+        "categories": [
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.22753v1/K-average.png",
+            "caption": "The structure of K ^ ​ ( ν ) \\hat{K}(\\nu) as defined by Eq. 17 , for n 1 n_{1} =36 (left), 66 (middle), and 91 (right). The images are scaled individually. Note the virtual absence of azimuthal variations.",
+            "captionLatex": "The structure of $\\hat{K}(\\nu)$ as defined by Eq. 17 , for $n_{1}$ =36 (left), 66 (middle), and 91 (right). The images are scaled individually. Note the virtual absence of azimuthal variations."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.22753v1/K-average.png",
+        "thumbnailAlt": "The structure of K ^ ​ ( ν ) \\hat{K}(\\nu) as defined by Eq. 17 , for n 1 n_{1} =36 (left), 66 (middle), and 91 (right). The images are scaled individually. Note the virtual absence of azimuthal variations.",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.23047",
+        "title": "A transformer analysis lowers the energy threshold and improves the sensitivity of a compact imaging atmospheric Cherenkov telescope",
+        "summary": "Context. A companion study simulated an idealised stand-alone imaging atmospheric Cherenkov telescope with a 5 m diameter mirror. A video vision transformer that processes the raw camera waveforms lowered its energy threshold by a factor of three, compared with the standard analysis based on image parameters. Aims. We use realistic photodetectors, compute the differential flux sensitivity, and study how hardware parameters affect the transformer analysis. Methods. With the simulation tools of the Cherenkov Telescope Array Observatory, we compare three photodetector efficiencies (100 %, 50 % and that of the LST-1 photomultipliers) with the transformer and with a standard analysis optimised for each. We then vary the dish diameter, field of view, pulse width and sampling rate. Results. With the LST-1 photomultipliers, the energy threshold is 0.18 TeV with the transformer and 0.73 TeV with the standard analysis. The standard analysis needs a photodetector efficiency of 100 % to match that threshold. The main reason is that the transformer works with events of about 35 photoelectrons in the camera, whereas the standard analysis needs about 200 before image cleaning. A 4 m dish with the transformer is more sensitive at all energies than a 5 m dish with the standard analysis. Dishes of 4, 5 and 6 m diameter give thresholds of 0.38, 0.18 and 0.13 TeV. Sampling the pixel signals at 2 GS/s instead of 5 GS/s raises the threshold to 0.26 TeV, whereas the single-photoelectron pulse width (1-3 ns) matters little. Conclusions. The analysis matters as much as the mirror area and the photodetector efficiency. With the transformer analysis, the idealised 5 m diameter telescope comes within a factor of about four of the sensitivity of LST-1 and MAGIC above 0.25 TeV, although its mirror area is 21 times smaller than that of the 23 m LST-1. This performance should improve substantially in the coming years.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.23047",
+        "htmlUrl": "https://arxiv.org/html/2611.23047v1",
+        "authors": [
+          "Elli Jobst",
+          "David Paneque",
+          "Lukas Heinrich"
+        ],
+        "categories": [
+          "astro-ph.IM"
+        ],
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.23069",
+        "title": "RevolIACT: a longitudinally distributed array of compact AI-driven Cherenkov telescopes for the time-domain sub-TeV sky",
+        "summary": "Context. The coming decade will be the golden era of time-domain astronomy. In ten years, however, sensitive very-high-energy observations below ~1 TeV may be possible only at the two sites of the Cherenkov Telescope Array Observatory (CTAO). Each can observe a source for only a few hours per night. Aims. We quantify the loss caused by this limited coverage and assess whether RevolIACT, an array of compact stand-alone AI-driven stations, can close the gap. Methods. We estimate the sensitivity that a stand-alone station needs to detect important transients seen by current imaging atmospheric Cherenkov telescopes (IACTs). We also compute the temporal coverage of layouts of ten to fourteen stations distributed in longitude, and how many of the 4401 Fermi-GBM gamma-ray bursts each layout could have observed when they occurred. Results. For each station, a sensitivity of ~15 % of the Crab flux in one hour above 0.2-0.3 TeV, about three times worse than that of current IACT systems, would suffice for an array to detect most of these transients. With the standard analysis, a telescope with a 5 m diameter mirror misses this target by a factor of 17. With a video vision transformer, it comes within a factor of two in an idealised simulation, and a 6 m telescope within 1.5. Ten to fourteen stations would provide three to four times the temporal coverage of CTAO, averaged over the sky and for the GBM bursts. Fourteen stations can observe most sources around the clock for about two months per year. Conclusions. Temporal coverage, not only flux sensitivity, will limit sub-TeV transient astronomy in the next decade. RevolIACT would complement CTAO. The concept relies on the transformer analysis, which is still young and will improve. The decisive next step is to confirm this performance on real data, with a prototype station.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.23069",
+        "htmlUrl": "https://arxiv.org/html/2611.23069v1",
+        "authors": [
+          "David Paneque",
+          "Elli Jobst",
+          "Lukas Heinrich",
+          "Alexander Hahn"
+        ],
+        "categories": [
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.23069v1/fig_array14_v2.png",
+            "caption": "The RevolIACT array in its fourteen-station form. All fourteen stations are at existing observatories. Top: circles mark the ten core stations, blue in the northern and vermilion in the southern hemisphere; green diamonds mark the two extension stations and green squares the two further stations; labels give the site and its altitude. Bottom: longitude separation between neighbouring stations and the time the Earth takes to rotate through it; the largest gap is drawn in bold. The gap across the date line (dashed vertical lines) is split between the two edges of the panel and labelled on both."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.23069v1/fig_array14opt_v2.png",
+            "caption": "Fourteen stations with locations optimised from scratch over all candidate sites at 900 m or higher. Circles mark existing observatories and triangles sites without an observatory; blue marks the northern and vermilion the southern hemisphere. Bottom panel as in Fig. 2 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.23069v1/fig_array14_v2.png",
+        "thumbnailAlt": "The RevolIACT array in its fourteen-station form. All fourteen stations are at existing observatories. Top: circles mark the ten core stations, blue in the northern and vermilion in the southern hemisphere; green diamonds mark the two extension stations and green squares the two further stations; la",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.23114",
+        "title": "Combining Pulsar Timing data with $\\texttt{MetaPulsar}$. The linearized timing model",
+        "summary": "Combining the data of multiple pulsar timing array (PTA) collaborations increases the sensitivity to nanohertz gravitational waves (GWs) and other signals correlated between pulsars. The International PTA (IPTA) has combined such data, but historically these projects have taken many years. We introduce $\\texttt{MetaPulsar}$, a software package that ingests the $\\texttt{.par}$ and $\\texttt{.tim}$ files of individual data releases, and turns them into single consistent deterministic models for the combined datasets, compatible with both timing packages $\\texttt{PINT}$ and $\\texttt{Tempo2}$. We validate the method in four ways. First, we show for two pulsars that the linearized timing solution of a combined dataset does not depend on the parameter values in the $\\texttt{.par}$. A mild exception is formed by the Shapiro-delay parameters. No combination considered requires a manual refit. Second, for PSR J0613$-$0200 we show that the residuals are explained by the timing model if we take intrinsic red-noise and dispersion-measure processes into account, and that the single-PTA timing posteriors agree with one another and with the combination, except for the parallax. Third, we quantify the consistency of the timing parameters measured by different PTAs with a two-sample tension statistic, for every pulsar that is observed by multiple PTAs. Finally, we carry out a gravitational-wave background search on the direct combination of the NANOGrav 9-yr, EPTA DR1 (v2.2), and PPTA DR2 data releases, the constituents of IPTA Data Release 2 (DR2). The combined dataset is assembled in under two hours, and the recovered amplitude and spectral index of the common process are consistent with the published IPTA DR2 result. With $\\texttt{MetaPulsar}$, a joint PTA analysis can be prototyped as soon as the individual collaborations publish their data, instead of after a years-long reprocessing effort.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.23114",
+        "htmlUrl": "https://arxiv.org/html/2611.23114v1",
+        "authors": [
+          "Wang-Wei Yu",
+          "Rutger van Haasteren"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "gr-qc"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.23114v1/J0613-0200_waveform_panels.png",
+            "caption": "Residual decomposition for the shared MetaPulsar combination of PSR J0613 − - 0200, with all noise hyperparameters held at their empirical-Bayes values. Panel (a) shows the pre-fit timing residuals of the combined dataset. Panel (b) shows the residuals after subtraction of the maximum-posterior timing model. Panels (c) and (d) show the reconstructed red-noise and dispersion-measure waveforms with their 1 ​ σ 1\\sigma bands. Panel (e) shows the residuals after subtraction of the timing model, both waveforms, and the epoch-correlated ECORR terms, which should be white. Panel (f) shows those residuals normalized by their per-TOA uncertainties, which should follow a univariate Gaussian, and panel (g) confirms this with a histogram of the normalized residuals against the standard normal distribution.",
+            "captionLatex": "Residual decomposition for the shared MetaPulsar combination of PSR J0613 $-$ 0200, with all noise hyperparameters held at their empirical-Bayes values. Panel (a) shows the pre-fit timing residuals of the combined dataset. Panel (b) shows the residuals after subtraction of the maximum-posterior timing model. Panels (c) and (d) show the reconstructed red-noise and dispersion-measure waveforms with their $1\\sigma$ bands. Panel (e) shows the residuals after subtraction of the timing model, both waveforms, and the epoch-correlated ECORR terms, which should be white. Panel (f) shows those residuals normalized by their per-TOA uncertainties, which should follow a univariate Gaussian, and panel (g) confirms this with a histogram of the normalized residuals against the standard normal distribution."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.23114v1/J0613-0200_waveform_panels.png",
+        "thumbnailAlt": "Residual decomposition for the shared MetaPulsar combination of PSR J0613 − - 0200, with all noise hyperparameters held at their empirical-Bayes values. Panel (a) shows the pre-fit timing residuals of the combined dataset. Panel (b) shows the residuals after subtraction of the maximum-posterior timi",
+        "catchupDate": "2026-11-18"
+      }
+    ],
+    "cross": [
+      {
+        "absId": "2611.21687",
+        "title": "Different Stories: European Astronomy as a Tool of Colonization in the Americas and Hawai'i",
+        "summary": "The history of Western astronomy is frequently told as a story of discovery, technological innovation, and human progress. Yet the astronomical knowledge, instruments, and techniques associated with these achievements also contributed to European colonial expansion. Through four material and visual examples - a marine chronometer, an astronomical surveying quadrant, the Nautical Almanac, and contemporary observatories on Maunakea - we invite reconsideration of astronomy's relationships with navigation, territorial mapping, colonial authority, and Indigenous lands. How might these histories be told differently when considered through Indigenous Knowledges and Perspectives? What might such reconsideration reveal about the continuing relationships between astronomy, colonialism, and place?",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.21687",
+        "htmlUrl": "https://arxiv.org/html/2611.21687v1",
+        "authors": [
+          "Gregg A. Wade",
+          "D. Lussier"
+        ],
+        "categories": [
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.21687v1/figures/chronometer.jpg",
+            "caption": "(a) Marine chronometer K1, carried aboard Cook’s Resolution , 1772–1775. National Maritime Museum, Greenwich. Photo: Authors."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21687v1/figures/quadrant.jpg",
+            "caption": "(b) Quadrant associated with surveys in Lower Canada, ca. 1780–1820; attributed to Peter and John Dollond. Photo: Board of Trustees, Science Museum, London."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21687v1/figures/almanac.jpg",
+            "caption": "(c) Title page of the Nautical Almanac for 1767. Smithsonian Institution Libraries."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21687v1/figures/maunakea.jpg",
+            "caption": "(d) Subaru and Keck observatories on Maunakea, 2019. Photo: A. Franceschini/Corbis News."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.21687v1/figures/chronometer.jpg",
+        "thumbnailAlt": "(a) Marine chronometer K1, carried aboard Cook’s Resolution , 1772–1775. National Maritime Museum, Greenwich. Photo: Authors.",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.21760",
+        "title": "The phase gradient spectrum: probing the squeezed bispectrum of the 21-cm signal during reionization",
+        "summary": "The 21-cm signal from the epoch of reionization is highly non-Gaussian. Standard analyses rely on the power spectrum, which is blind to the Fourier phases, while higher-order statistics such as the bispectrum are computationally expensive and spread information across triangle configurations. As an efficient alternative, we develop the \\textit{phase gradient spectrum}, which measures the circular coherence of phase differences between Fourier modes separated by a long-wavelength mode. We show analytically that this statistic measures the angle-averaged normalised squeezed bispectrum, which describes the response of small-scale power to long-wavelength fluctuations. Applied to reionization simulations with different ionizing source properties, the phase gradient spectrum of the 21-cm signal shows a characteristic non-monotonic evolution. At early times, the spectrum tracks the non-Gaussianity of the matter density field. Once the mean neutral fraction $\\langle x_\\mathrm{HI}\\rangle \\lesssim 0.9$, the spectrum follows the ionization topology. The phase coherence reaches a minimum midway through reionization and rises again as the remaining neutral regions shrink into isolated islands. Statistics that keep the sign of the squeezed bispectrum show that this minimum marks its sign change. This evolution holds for different reionization models and simulation frameworks. A Fisher forecast for a 1000-h Square Kilometre Array (SKA)-Low observation, combining five redshifts across reionization, shows that the phase gradient spectrum alone constrains the astrophysical parameters, and these constraints tighten by a factor of $\\gtrsim 2$ for a 10,000-h observation. Combining the phase gradient spectrum with the power spectrum tightens the marginalised constraints by up to $\\sim$20 per cent relative to the power spectrum alone.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.21760",
+        "htmlUrl": "https://arxiv.org/html/2611.21760v1",
+        "authors": [
+          "Sambit K. Giri",
+          "P. Daniel Meerburg",
+          "Léon V. E. Koopmans"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "astro-ph.GA",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.21760v1/lightcone_21cmfast_fiducial.png",
+            "caption": "All panels show the fiducial MassIndependent model of 21cmFAST . Top panel : Lightcone slice of the 21-cm brightness temperature field from one of the 100 realisations. Redshift decreases to the left, and we see ionized bubbles (blue regions) forming and growing over time. Bottom left panel : Phase gradient spectrum R ¯ ​ ( k ) \\bar{R}(k) of the matter overdensity field δ b \\delta_{b} at several redshifts. The black circles show the initial conditions of the simulation (a GRF), which agree with the analytic GRF noise limit of Eq. ( 7 ) and hide it in this panel. Coloured circles show measured values and the dashed curves with shaded regions show the analytic prediction from Eq. ( 6 ) with its 1 ​ σ 1\\sigma uncertainty. Bottom right panel : Phase gradient spectrum of the 21-cm brightness temperature field δ ​ T b \\delta T_{\\mathrm{b}} , coloured by mean neutral fraction ⟨ x HI ⟩ \\langle x_{\\mathrm{HI}}\\rangle (decreasing from red to blue). Dashed curves with shaded regions show the analytic prediction, and the grey dotted curve marks the GRF noise limit. Both bottom panels are computed from coeval simulation boxes of the model shown in the top panel, and the mean and standard deviation values are estimated over 100 realisations of varying initial cosmic seeds.",
+            "captionLatex": "All panels show the fiducial MassIndependent model of 21cmFAST . Top panel : Lightcone slice of the 21-cm brightness temperature field from one of the 100 realisations. Redshift decreases to the left, and we see ionized bubbles (blue regions) forming and growing over time. Bottom left panel : Phase gradient spectrum $\\bar{R}(k)$ of the matter overdensity field $\\delta_{b}$ at several redshifts. The black circles show the initial conditions of the simulation (a GRF), which agree with the analytic GRF noise limit of Eq. ( 7 ) and hide it in this panel. Coloured circles show measured values and the dashed curves with shaded regions show the analytic prediction from Eq. ( 6 ) with its $1\\sigma$ uncertainty. Bottom right panel : Phase gradient spectrum of the 21-cm brightness temperature field $\\delta T_{\\mathrm{b}}$ , coloured by mean neutral fraction $\\langle x_{\\mathrm{HI}}\\rangle$ (decreasing from red to blue). Dashed curves with shaded regions show the analytic prediction, and the grey dotted curve marks the GRF noise limit. Both bottom panels are computed from coeval simulation boxes of the model shown in the top panel, and the mean and standard deviation values are estimated over 100 realisations of varying initial cosmic seeds."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21760v1/covariance_power_combined_kmin_0.1_z_10,9,8,7,6.5_paramnames_F_STAR10,ALPHA_STAR,M_TURN_tobs_1000h.png",
+            "caption": "Correlation matrix C a ​ b / C a ​ a ​ C b ​ b C_{ab}/\\sqrt{C_{aa}C_{bb}} of the joint data vector of the power spectrum P ⁡ ( k ) P(k) and phase gradient spectrum R ¯ ​ ( k ) \\bar{R}(k) at z = 10 z=10 , 9, 8, 7 and 6.5 for a 1000-h SKA-Low observation. Solid lines separate the two statistics and dashed lines separate the redshifts.",
+            "captionLatex": "Correlation matrix $C_{ab}/\\sqrt{C_{aa}C_{bb}}$ of the joint data vector of the power spectrum $P(k)$ and phase gradient spectrum $\\bar{R}(k)$ at $z=10$ , 9, 8, 7 and 6.5 for a 1000-h SKA-Low observation. Solid lines separate the two statistics and dashed lines separate the redshifts."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.21760v1/lightcone_21cmfast_fiducial.png",
+        "thumbnailAlt": "All panels show the fiducial MassIndependent model of 21cmFAST . Top panel : Lightcone slice of the 21-cm brightness temperature field from one of the 100 realisations. Redshift decreases to the left, and we see ionized bubbles (blue regions) forming and growing over time. Bottom left panel : Phase ",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.21798",
+        "title": "Spectro-Spatial Survey Fusion",
+        "summary": "Imaging and spectroscopy constrain complementary information about the same sky but are usually processed separately. We introduce Spectro-Spatial Survey Fusion, a framework that unifies these measurements by fitting a continuous spectral surface-brightness field jointly through each instrument's response. Adapting from Gaussian splatting in computer vision, we represent the field as a sum of adaptive spatial Gaussians, each carrying a spectrum built from a shared, learned dictionary of templates. We demonstrate this on 400 Sloan Digital Sky Survey (SDSS) $ugriz$ exposures and 800 fiber spectra across an $84^{\\prime}\\times84^{\\prime}$ region of COSMOS. The joint fit closely reproduces the spatial structure and broad spectral diversity of galaxies, stars, and quasars. For fitted SDSS observations, the summed predicted flux in source-selected pixels agrees with the data to within 2 percent in every band, and 96 percent of fitted spectra agree to within 10 percent in integrated flux. Sparse fiber spectra constrain a dictionary shared by every Gaussian component, so a model spectrum can be queried anywhere in the imaged area, including where no spectrum was fitted. Without refitting, the field predicts withheld SDSS images and spectra, and selected Hyper Suprime-Cam (HSC) images and Dark Energy Spectroscopic Instrument (DESI) spectra, which never enter the fit. The field predicts broad spiral-arm patterns in HSC images of two selected galaxies and DESI continuum shapes for galaxies without a fitted fiber. This framework provides a route to combining surveys so that spatial and spectral information from different observations and instruments can constrain a common representation of the sky.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.21798",
+        "htmlUrl": "https://arxiv.org/html/2611.21798v1",
+        "authors": [
+          "Georgios N. Vassilakis",
+          "Miles Cranmer",
+          "Vasily Belokurov"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.21798v1/measurement_model.png",
+            "caption": "A schematic diagram of an SDSS image pixel and a fiber spectral bin for the same galaxy. The blue rectangular column spans the r r band at the position of one pixel. The pink disk spans the fiber aperture in a single 1.4 1.4 Å bin. Their sizes are not to scale, but emphasize the small spatial footprint and broad-in-wavelength bandpass of an image pixel, compared with the larger spatial aperture and narrow wavelength interval of a spectral bin. The right panels show the two measurements in the observed image and spectrum.",
+            "captionLatex": "A schematic diagram of an SDSS image pixel and a fiber spectral bin for the same galaxy. The blue rectangular column spans the $r$ band at the position of one pixel. The pink disk spans the fiber aperture in a single $1.4$ Å bin. Their sizes are not to scale, but emphasize the small spatial footprint and broad-in-wavelength bandpass of an image pixel, compared with the larger spatial aperture and narrow wavelength interval of a spectral bin. The right panels show the two measurements in the observed image and spectrum."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21798v1/representation.png",
+            "caption": "Schematic of the spatial and spectral components of the field’s underlying representation. On the left, sums of 1, 4, 16, and 64 Gaussians capture progressively finer structure in an observed galaxy. The ellipses below mark the 2 ​ σ 2\\sigma contours of the individual components. The right panel shows the 32 spectral templates learned from the full field, ordered by peak wavelength and each normalized to its own peak. Each component learns its own mixture of these 32 templates.",
+            "captionLatex": "Schematic of the spatial and spectral components of the field’s underlying representation. On the left, sums of 1, 4, 16, and 64 Gaussians capture progressively finer structure in an observed galaxy. The ellipses below mark the $2\\sigma$ contours of the individual components. The right panel shows the 32 spectral templates learned from the full field, ordered by peak wavelength and each normalized to its own peak. Each component learns its own mixture of these 32 templates."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21798v1/data_coverage.png",
+            "caption": "SDSS imaging and spectroscopy coverage across the 84 ′ × 84 ′ 84^{\\prime}\\times 84^{\\prime} COSMOS field. The shading on the left shows the total number of fitted u ​ g ​ r ​ i ​ z ugriz exposures covering each position. Dashed red outlines mark the ten withheld exposures, labeled by band. On the right, filled gray symbols mark the 800 fitted spectra and open red symbols the 89 withheld spectra. Circles mark galaxies, squares mark quasars, and triangles mark stars.",
+            "captionLatex": "SDSS imaging and spectroscopy coverage across the $84^{\\prime}\\times 84^{\\prime}$ COSMOS field. The shading on the left shows the total number of fitted $ugriz$ exposures covering each position. Dashed red outlines mark the ten withheld exposures, labeled by band. On the right, filled gray symbols mark the 800 fitted spectra and open red symbols the 89 withheld spectra. Circles mark galaxies, squares mark quasars, and triangles mark stars."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21798v1/fitting_loop.png",
+            "caption": "Overview of the field’s fitting procedure. At each step, the field is rendered through the observation operator to predict image pixels and spectral bins. These predictions are compared with the data using the loss defined in Section 3.3 , and Adam uses gradients of the fitting error to update the model parameters. Solid arrows show this cycle occurring every step, while dashed arrows show adaptive density control, which can split, duplicate, or prune components every 100 steps. The bottom row shows an observed r r -band galaxy’s evolving representation at four stages of the fit, ending after 11 epochs.",
+            "captionLatex": "Overview of the field’s fitting procedure. At each step, the field is rendered through the observation operator to predict image pixels and spectral bins. These predictions are compared with the data using the loss defined in Section 3.3 , and Adam uses gradients of the fitting error to update the model parameters. Solid arrows show this cycle occurring every step, while dashed arrows show adaptive density control, which can split, duplicate, or prune components every 100 steps. The bottom row shows an observed $r$ -band galaxy’s evolving representation at four stages of the fit, ending after 11 epochs."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21798v1/whole_field.png",
+            "caption": "Observed SDSS g g -band imaging and the field’s predictions across the 84 ′ × 84 ′ 84^{\\prime}\\times 84^{\\prime} COSMOS field. The field is represented by 2.86 million Gaussian components fitted to 873 million u ​ g ​ r ​ i ​ z ugriz image pixels and 800 fiber spectra. The top row compares mosaics of the observations (left) and predictions (right). Dashed outlines mark regions covered only by withheld g g -band exposures. The bottom row enlarges the 7 ′ × 7 ′ 7^{\\prime}\\times 7^{\\prime} region marked by the solid square, showing galaxies and stars at the native SDSS pixel scale of 0.396 ′′ 0.396^{\\prime\\prime} .",
+            "captionLatex": "Observed SDSS $g$ -band imaging and the field’s predictions across the $84^{\\prime}\\times 84^{\\prime}$ COSMOS field. The field is represented by 2.86 million Gaussian components fitted to 873 million $ugriz$ image pixels and 800 fiber spectra. The top row compares mosaics of the observations (left) and predictions (right). Dashed outlines mark regions covered only by withheld $g$ -band exposures. The bottom row enlarges the $7^{\\prime}\\times 7^{\\prime}$ region marked by the solid square, showing galaxies and stars at the native SDSS pixel scale of $0.396^{\\prime\\prime}$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21798v1/fitted_objects.png",
+            "caption": "Joint fit of the field to images and spectra of three galaxies, two stars, and a quasar. The three image columns show the observed SDSS r r -band image, the prediction, and their residual. Dashed circles mark the fiber apertures used for the spectra shown on the right, where gray curves show the observations and red curves show the field’s predictions through the same fibers. A single fitted field produces all the image and spectral predictions shown here, through their respective observation operators.",
+            "captionLatex": "Joint fit of the field to images and spectra of three galaxies, two stars, and a quasar. The three image columns show the observed SDSS $r$ -band image, the prediction, and their residual. Dashed circles mark the fiber apertures used for the spectra shown on the right, where gray curves show the observations and red curves show the field’s predictions through the same fibers. A single fitted field produces all the image and spectral predictions shown here, through their respective observation operators."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21798v1/withheld_spectra.png",
+            "caption": "Predicting spectra of withheld objects. Predictions of four withheld SDSS fiber spectra, showing a star, a galaxy, and two quasars. Gray curves show the observed spectra, which never entered the fit during training. Blue curves show predictions from the field when fitted to images alone, while red curves show predictions from the canonical fit of the field, which uses the same images and 800 spectra elsewhere in the field. The joint fit follows the observed continua more closely, generating spectra for objects constrained locally by broadband imaging. In these predictions, spectroscopy elsewhere constrains the spectral dictionary, improving predictions of withheld spectra beyond the fitted fiber positions."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21798v1/withheld_exposure.png",
+            "caption": "Prediction of an SDSS r r -band exposure withheld from the fit. The top row compares the observation (left) with the field’s prediction (right). Dashed lines enclose the region with no fitted r r -band coverage, while the edge strips retain r r -band measurements from another run. The bottom row enlarges the region marked by the solid square, showing the fitted u u , g g , i i , and z z images alongside the withheld r r -band image, its prediction, and their residual. Each Gaussian carries a continuous spectrum built from the shared dictionary and constrained by the other fitted bands, allowing the field to render the r r -band image even where no r r -band imaging entered the fit.",
+            "captionLatex": "Prediction of an SDSS $r$ -band exposure withheld from the fit. The top row compares the observation (left) with the field’s prediction (right). Dashed lines enclose the region with no fitted $r$ -band coverage, while the edge strips retain $r$ -band measurements from another run. The bottom row enlarges the region marked by the solid square, showing the fitted $u$ , $g$ , $i$ , and $z$ images alongside the withheld $r$ -band image, its prediction, and their residual. Each Gaussian carries a continuous spectrum built from the shared dictionary and constrained by the other fitted bands, allowing the field to render the $r$ -band image even where no $r$ -band imaging entered the fit."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.21798v1/measurement_model.png",
+        "thumbnailAlt": "A schematic diagram of an SDSS image pixel and a fiber spectral bin for the same galaxy. The blue rectangular column spans the r r band at the position of one pixel. The pink disk spans the fiber aperture in a single 1.4 1.4 Å bin. Their sizes are not to scale, but emphasize the small spatial footpr",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.21997",
+        "title": "Fundamental physics with quantum sensors in space",
+        "summary": "Quantum sensors such as atomic clocks, atom interferometers, and atomic magnetometers can be used as sensitive probes of physics beyond the Standard Model. Space offers microgravity, long baselines, low environmental noise, access to varying gravitational potentials, and unique opportunities involving the Sun, Moon, planets, and asteroids. These proceedings of the Aspen Center for Physics workshop on \"Fundamental physics in space with quantum sensors,\" held February 22-27, 2026, summarize the scientific case, current capabilities, and space mission concepts for investigating dark matter, testing general relativity, and detecting gravitational waves in frequency bands inaccessible from the ground.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.21997",
+        "htmlUrl": "https://arxiv.org/html/2611.21997v1",
+        "authors": [
+          "Jason Arakawa",
+          "Daniel J. Blumenthal",
+          "Oliver Buchmueller",
+          "Dmitry Budker",
+          "Luigi Cacciapuoti",
+          "Emily D. Caldwell",
+          "Andrei Derevianko",
+          "Benjamin P. Dix-Matthews",
+          "Michael A. Fedderke",
+          "Naceur Gaaloul",
+          "Susan Gardner",
+          "Jonah Glick",
+          "Paul Hamilton",
+          "Elena Jordan",
+          "Hidetoshi Katori",
+          "Peter Kurczynski",
+          "David R. Leibrandt",
+          "Anna L. Marchant",
+          "Indra Periwal",
+          "Igor Pikovski",
+          "Marianna S. Safronova",
+          "Christian Sanner",
+          "Sascha W. Schediwy",
+          "Volodymyr Takhistov",
+          "Yu-Cheng Tien",
+          "Yu-Dai Tsai",
+          "Jason R. Williams"
+        ],
+        "categories": [
+          "quant-ph",
+          "astro-ph.IM",
+          "gr-qc",
+          "hep-ph"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.21997v1/Marchant-CAITDM_fig.png",
+            "caption": "The CAITDM system. Left: Vacuum chamber mounted inside the 16U CubeSat frame. Right: Atom chip, developed at RAL Space, mounted on the lower vacuum chamber flange that incorporates all required electrical feedthroughs."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21997v1/CAL_Fig_2.png",
+            "caption": "CAL occupies one quad locker (red dashed) and one single locker within an EXPRESS rack in the ISS Destiny module (center). The quad locker (upper right) includes the majority of the lasers, optics, current drivers, and control electronics. It also houses the science module (lower right) that consists of the ultra-high vacuum physics package, optomechanical bench, and dual-layer magnetic shields. CAL has operated robustly and reproducibly for over eight years, creating quantum gases of rubidium and potassium and supporting multiple research campaigns for the flight principal investigators."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21997v1/Figures/Sanner-fig1.png",
+            "caption": "Diagnosing spacetime anisotropy through precision spectroscopy of an atomic transition. The clock frequency ν \\nu depends on the orientation of the atomic orbitals with respect to a Lorentz-violating spacetime deformation, which is in the electron sector parametrized via nonzero elements of the c μ ​ ν c_{\\mu\\nu} tensor as introduced in the Standard Model Extension (SME) framework [ 66 ] .",
+            "captionLatex": "Diagnosing spacetime anisotropy through precision spectroscopy of an atomic transition. The clock frequency $\\nu$ depends on the orientation of the atomic orbitals with respect to a Lorentz-violating spacetime deformation, which is in the electron sector parametrized via nonzero elements of the $c_{\\mu\\nu}$ tensor as introduced in the Standard Model Extension (SME) framework [ 66 ] ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21997v1/Fig_networks.png",
+            "caption": "Quantum networks of distributed clocks can probe superpositions of proper times across curved space-time [ 76 , 77 ] , testing the interplay of fundamental principles of quantum theory and general relativity."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21997v1/Figures/SchediwyF1.jpg",
+            "caption": "Photo of the TeraNet-2 optical ground station at the Yarragadee Geodetic Observatory."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21997v1/Figures/SchediwyF2.jpg",
+            "caption": "Concept for optical atomic clock timescale comparison between ground and space."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21997v1/Blumenthal_Fig10_panels.png",
+            "caption": "Silicon nitride component technologies: (a) self-injection locked (SIL) laser [ 202 ] , (b) extended cavity tunable laser (ECTL) [ 203 ] , (c) stimulated Brillouin laser (SBL) [ 185 , 204 ] , (d) coil resonator reference cavities [ 205 , 206 , 203 ] , (e) PZT optical modulators and filters [ 207 , 208 ] , and (f) cold atom beam delivery grating emitters [ 209 ] . Light–matter system-on-chip optical infrastructure: (g) cold rubidium atoms with an integrated 3D magneto-optical trap (MOT) and cold strontium atoms with blue and red MOTs and a lattice [ 205 ] , and (h) trapped-ion strontium clocks and qubits with a room-temperature surface electrode trap [ 206 ] ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.21997v1/Community-Roadmap.png",
+            "caption": "Community roadmap for cold atoms in space, as presented in the 2021 Cold Atoms in Space workshop summary [ 89 ] . Milestones are colour-coded by area of relevance: fundamental physics (red), Earth observation (purple), and atomic clocks (black). The main cold atom species targeted at each milestone are indicated. Several of the near-term milestones identified in this roadmap have since advanced substantially: ACES was installed on the ISS in April 2025, the ESA Quantum Space Gravimetry Pathfinder (CARIOQA) has entered Phase A with a launch target around 2030–2032, and a NASA Quantum Gravity Gradiometer Pathfinder has been initiated with a similar timeline."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.21997v1/Marchant-CAITDM_fig.png",
+        "thumbnailAlt": "The CAITDM system. Left: Vacuum chamber mounted inside the 16U CubeSat frame. Right: Atom chip, developed at RAL Space, mounted on the lower vacuum chamber flange that incorporates all required electrical feedthroughs.",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.22150",
+        "title": "Exomoons and Exorings with the Habitable Worlds Observatory. III. Icy Moons and Rings Often Outshine Their Planets",
+        "summary": "If we could observe the Solar System's giant planets with the upcoming Habitable Worlds Observatory (HWO), the dominant sources of reflected near-infrared light would not always be the planets themselves. In fact, the brightest sources are split roughly evenly between the giants and their icy companions: at the locations of the giant planets, the dominant point sources would be Jupiter, Saturn's rings, Uranus, and Triton (Neptune's icy moon). Motivated by these Solar System cases in which rings or moons outshine their host planets, we investigate the detectability of analogous exomoons and exorings with HWO. We compute the expected signal-to-noise ratios (S/N) for moons and rings with the same albedos as their Solar System counterparts over a range of sizes, system distances, and star to planet+moon or star to planet+ring separations. We find that reflected light from Triton-analog exomoons and Saturn-analog exorings is detectable with HWO over a broad parameter space. In the nearest systems, icy Titan-sized moons are detectable at star-moon separations of ~2 AU and icy Earth-sized moons out to ~6 AU. Moreover, Saturn-like exorings are likely to be the brightest point sources in many extrasolar systems, capable of greatly outshining any planets, while remaining potentially detectable at system distances out to 100 pc. These results highlight the need for further work to develop methods for identifying and disentangling exoring and exomoon signatures from exoplanet signals in HWO observations, where these sources will be blended and spatially unresolved.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.22150",
+        "htmlUrl": "https://arxiv.org/html/2611.22150v1",
+        "authors": [
+          "Sam Hopper",
+          "Mary Anne Limbach",
+          "Rachel Bowens-Rubin"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.22150v1/saturn_methane.png",
+            "caption": "Hubble photo of Saturn and its rings . While both the planet and rings are visible at 468 nm (left) , only the rings are visible at 889 nm (right) due to the methane absorption in Saturn’s atmosphere. This example illustrates how Saturn’s rings can outshine the planet by orders of magnitudes in portions of the near infrared. Image adapted from [ 78 ] ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22150v1/triton_jwst_labeled.png",
+            "caption": "JWST NIRCam image of Neptune and its moons . Triton (bright blue point source in the upper left) outshines it’s host planet Neptune in the near infrared (JWST NIRcam; Image Credit: NASA, ESA, CSA, and STScI)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22150v1/snr_plot_flipped.png",
+            "caption": "Estimated SNR with HWO . The estimated SNR values for exomoon and exorings were calculated across a variety of ring/moon sizes, orbital separation (e.g., the distance from the star to the planet+moon or planet+ring), and system distances. The left column of 3 plots shows the SNR of exomoons of varying sizes from smallest (Titan radius) on the top to largest (Earth radius) on the bottom. The right column of 3 plots shows the SNR of exorings of varying sizes from smallest (B-ring radius) on the top to largest on the bottom (2 × \\times the radii of Saturn’s A through D ring, or 2 × 1 ​ R S r ​ i ​ n ​ g 2\\times 1R_{S_{ring}} ). The middle panel corresponds to Saturn-sized rings. Rings comparable to or larger than Saturn’s are detectable to 5 S / N S/N across an impressively broad region of parameter space: they are detectable out to a = 5 a=5 AU to distances of 100 pc, and at a = 25 a=25 AU out to 20 pc. Additionally, Titan-sized moons with Triton-like geometric albedos are detectable at 5 S / N S/N out to orbital separations of ∼ 2 \\sim 2 AU. Earth-sized moons with Triton-like geometric albedos are detectable out to ∼ 5.5 \\sim 5.5 AU for the closest systems.",
+            "captionLatex": "Estimated SNR with HWO . The estimated SNR values for exomoon and exorings were calculated across a variety of ring/moon sizes, orbital separation (e.g., the distance from the star to the planet+moon or planet+ring), and system distances. The left column of 3 plots shows the SNR of exomoons of varying sizes from smallest (Titan radius) on the top to largest (Earth radius) on the bottom. The right column of 3 plots shows the SNR of exorings of varying sizes from smallest (B-ring radius) on the top to largest on the bottom (2 $\\times$ the radii of Saturn’s A through D ring, or $2\\times 1R_{S_{ring}}$ ). The middle panel corresponds to Saturn-sized rings. Rings comparable to or larger than Saturn’s are detectable to 5 $S/N$ across an impressively broad region of parameter space: they are detectable out to $a=5$ AU to distances of 100 pc, and at $a=25$ AU out to 20 pc. Additionally, Titan-sized moons with Triton-like geometric albedos are detectable at 5 $S/N$ out to orbital separations of $\\sim 2$ AU. Earth-sized moons with Triton-like geometric albedos are detectable out to $\\sim 5.5$ AU for the closest systems."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22150v1/contrast_curve_ss.png",
+            "caption": "The instrument contrast required for detecting the Solar System planets . The planets, rings (with ring inclination set to i = 45 ∘ i=45^{\\circ} ), and moons are denoted by their representative drawings. The minimum required contrast to detect a ringed-Saturn at various orbital separations from the sun is plotted as a brown solid line. Saturn is plotted twice to show its contrast with and without its rings. The minimum contrast for HWO (dotted blue line) is predicted to be around 2.5 × 10 − 11 2.5\\times 10^{-11} [ 28 ] . Sources above the line would be detectable by HWO if between the inner and outer working angle and inside the field of view.",
+            "captionLatex": "The instrument contrast required for detecting the Solar System planets . The planets, rings (with ring inclination set to $i=45^{\\circ}$ ), and moons are denoted by their representative drawings. The minimum required contrast to detect a ringed-Saturn at various orbital separations from the sun is plotted as a brown solid line. Saturn is plotted twice to show its contrast with and without its rings. The minimum contrast for HWO (dotted blue line) is predicted to be around $2.5\\times 10^{-11}$ [ 28 ] . Sources above the line would be detectable by HWO if between the inner and outer working angle and inside the field of view."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.22150v1/saturn_methane.png",
+        "thumbnailAlt": "Hubble photo of Saturn and its rings . While both the planet and rings are visible at 468 nm (left) , only the rings are visible at 889 nm (right) due to the methane absorption in Saturn’s atmosphere. This example illustrates how Saturn’s rings can outshine the planet by orders of magnitudes in port",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.22454",
+        "title": "Unveiling the mutual inclination distribution in astrometric surveys",
+        "summary": "Mutual inclination in three (or more) body systems (triple stars, circumbinary planets, multi-planetary systems, etc.) is a tracer of their formation and evolution. Gaia Data Release 4 will provide for the first time a catalog of orbital solutions for three-body systems. Because astrometry is only sensitive to the motion in the plane of the sky, there is a degeneracy in the orbital solutions leading to two possible solutions for the mutual inclination in three-body systems. We propose a hierarchical Bayesian framework to circumvent this degeneracy and unveil the mutual inclination distribution in the population. We tested our methods on simulated datasets, and showed that it reliably recovered the injected mutual inclination distributions in various cases. The method is thus promising for the statistical analysis of Gaia DR4 three-body systems.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.22454",
+        "htmlUrl": null,
+        "authors": [
+          "Jean-Baptiste Delisle"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.22473",
+        "title": "A branchless single-precision Voigt approximation for spectral synthesis",
+        "summary": "The Voigt function is evaluated repeatedly in spectral synthesis, and several widely used implementations carry an absolute error floor. We construct QLG, a family of branchless, single-precision approximations, separable in the damping parameter $a$. QLG is named for its three ingredients: Lorentzian and Gaussian generators $L$ and $G$, and an envelope $q$ that multiplies every fitted correction and vanishes at both endpoints. The leading Lorentzian wing amplitude is fixed analytically. Three members reach observed maximum full-profile relative errors of $6.5\\times10^{-3}$, $9.2\\times10^{-4}$, and $7\\times10^{-5}$ over $a\\in[10^{-9},10^{9}]$ and $|v|\\le10^{5}$. Extended-domain and randomized checks support these error levels. For the tested SIU, MOOG, and Humlicek w4 implementations, the relative error instead approaches 100% towards small values of the damping parameter. We compare synthesis-weighted costs on an Apple M1 and an AMD EPYC 9554 using gfortran 15, and propagate errors through solar-dwarf, red-supergiant, and M-dwarf syntheses. The least expensive member costs 0.98-1.05 times as much as the tabulated Synspec kernel on the M1 and 1.11-1.20 times as much on the EPYC, with a maximum flux error smaller by a factor of 3.6. The intermediate member costs less than every tested arithmetic kernel and holds the flux error below $10^{-3}$. The most accurate member costs 1.6-3.0 times less than w4 and gives 3.4-5.0 times smaller maximum flux errors in the tested syntheses.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.22473",
+        "htmlUrl": "https://arxiv.org/html/2611.22473v1",
+        "authors": [
+          "Richard Hoppe"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.22473v1/fig5_pseudo.png",
+            "caption": "The residual [ F − P ] / q [F-P]/q of Eq. ( 6 ) that the fitted correction must represent, over the ( r , L ) (r,L) domain, normalized to the profile peak. The colour map is centred on zero, so its orange half covers the small negative range. A single slice at fixed r r , marked here at r = 0.2 r=0.2 , approximates the residual at every r r to within the accuracy required of the lowest tier. That slice is the basis function Z 0.2 Z_{0.2} of Eq. ( 8 ), which QLG-bot reads from a table.",
+            "captionLatex": "The residual $[F-P]/q$ of Eq. ( 6 ) that the fitted correction must represent, over the $(r,L)$ domain, normalized to the profile peak. The colour map is centred on zero, so its orange half covers the small negative range. A single slice at fixed $r$ , marked here at $r=0.2$ , approximates the residual at every $r$ to within the accuracy required of the lowest tier. That slice is the basis function $Z_{0.2}$ of Eq. ( 8 ), which QLG-bot reads from a table."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.22473v1/fig5_pseudo.png",
+        "thumbnailAlt": "The residual [ F − P ] / q [F-P]/q of Eq. ( 6 ) that the fitted correction must represent, over the ( r , L ) (r,L) domain, normalized to the profile peak. The colour map is centred on zero, so its orange half covers the small negative range. A single slice at fixed r r , marked here at r = 0.2 r=0.",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.22602",
+        "title": "FILOS: a solar Filament Oscillation Simulator",
+        "summary": "We introduce FILOS, a solar Filament Oscillation Simulator designed to validate methods for inferring filament dynamics from H-alpha observations. FILOS constructs synthetic filaments from measured spines populated with three-dimensional dipped threads containing hydrostatic plasma. It computes H-alpha optical depth, projects the structure onto the image plane, applies the Global Oscillation Network Group (GONG) instrumental response, and embeds the result in observed GONG background sequences. Independently prescribed damped longitudinal and transverse motions can be imposed; longitudinal periods can also be calculated from thread curvature and prominence height using the pendulum model. In a representative longitudinal experiment, thread periods range from 44.2 to 87.6 min (median 60.8 min). Normalized Lomb-Scargle power maps recover the dominant periodicity and a period-halving signature near equilibrium. Time-distance fitting recovers an onset of 19.53 +/- 0.23 min for a prescribed 20 min and a collective period of 57.71 +/- 0.35 min. Differences from input thread-level values reflect projection, image formation, and progressive dephasing. FILOS also supplies segmentation masks and opacity-weighted plane-of-sky velocity fields, enabling controlled tests of oscillation analysis, observational biases, segmentation, and motion estimation.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.22602",
+        "htmlUrl": "https://arxiv.org/html/2611.22602v1",
+        "authors": [
+          "G. Castelló",
+          "M. Luna",
+          "J. Terradas"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.22602v1/video_frames.png",
+            "caption": ": Representative frames of a FILOS-generated longitudinal filament oscillation. The sequence has a cadence of 1 min, and the displayed frames are separated by 15 min. The associated movie is available online."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22602v1/psd_maps.png",
+            "caption": ": Spatial distribution of the mean standard-normalized Lomb–Scargle power in the period intervals (a) [25–35] min, (b) [55–65] min, (c) [85–95] min, and (d) [115–125] min for the reference longitudinal oscillation. The color scale is the dimensionless standard-normalized Lomb–Scargle power."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22602v1/slit_on_image.png",
+            "caption": ": Time–distance analysis of the reference experiment. Left: first H α \\alpha frame of the experiment described in section 3.1 , with the slit used to track the filament motion indicated by the red box. Right: corresponding time–distance diagram, with the best-fit damped oscillation model shown in red.",
+            "captionLatex": ": Time–distance analysis of the reference experiment. Left: first H $\\alpha$ frame of the experiment described in section 3.1 , with the slit used to track the filament motion indicated by the red box. Right: corresponding time–distance diagram, with the best-fit damped oscillation model shown in red."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22602v1/segmentation_masks.png",
+            "caption": ": First frame and FILOS-produced segmentation masks from the experiment described in section 3.1 . For this experiment we assumed a threshold for the opacity of τ t ​ h = 0.1 \\tau_{th}=0.1 . (a) Rendered H α \\alpha observation. (b) High-resolution ground-truth mask derived from the filament opacity. (c) Mask degraded to the GONG spatial resolution, providing a ground-truth label suitable for training and validating filament-segmentation models.",
+            "captionLatex": ": First frame and FILOS-produced segmentation masks from the experiment described in section 3.1 . For this experiment we assumed a threshold for the opacity of $\\tau_{th}=0.1$ . (a) Rendered H $\\alpha$ observation. (b) High-resolution ground-truth mask derived from the filament opacity. (c) Mask degraded to the GONG spatial resolution, providing a ground-truth label suitable for training and validating filament-segmentation models."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22602v1/velocity_quiver_6panels.png",
+            "caption": ": Two-dimensional velocity field derived from the FILOS dynamics for the same frames shown in Fig. 3 . Panels (a)–(f) are separated by 15 min. Red arrows indicate the direction of the projected velocity field, while the background colormap shows the velocity magnitude in km s -1 . The associated movie is available online."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22602v1/figures/appendix/time_distance_fit_new.png",
+            "caption": ": Time–distance diagram of the shared-period experiment. All filament threads oscillate with the same prescribed period, while the remaining simulation parameters are unchanged. The red curve represents the fitted damped-oscillation trajectory."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.22602v1/video_frames.png",
+        "thumbnailAlt": ": Representative frames of a FILOS-generated longitudinal filament oscillation. The sequence has a cadence of 1 min, and the displayed frames are separated by 15 min. The associated movie is available online.",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.22678",
+        "title": "Sub-electron noise with a buried-channel DePFET: characterisation of novel DePFET concepts",
+        "summary": "Depleted P-channel Field Effect Transistor (DePFET) pixel sensors combine Fano-limited energy resolution with fast, low-noise readout and are used in instruments ranging from particle tracking to X-ray astronomy. In this work, two novel DePFET technologies that address the two factors of the signal-to-noise ratio through fundamental changes to the intrinsic design are characterised: a buried-channel design aimed at reducing the limiting low-frequency noise by weakening the coupling between the channel and Si/SiO$_2$ interface traps, and a super-$g_q$ design intended to increase the charge gain by reducing the effective internal-gate capacitance. Their noise and energy resolution were mapped across the transistor bias space, over a wide temperature range (100-260 K) and for integration times of 0.4-9 $\\mu$s (readout times of 2-19.2 $\\mu$s per row), and compared with standard DePFETs as developed for the NewAthena Wide Field Imager (WFI). All three variants reach their lowest noise at about 155 K. The buried-channel device achieves an excellent equivalent noise charge (ENC) of 0.96 e$^-$ (at most 0.83 e$^-$ after subtracting the readout-electronics noise), demonstrating sub-electron noise over a complete 64$\\times$64 DePFET matrix in a single readout, alongside a power consumption reduction of more than 50%. The super-$g_q$ DePFET shows a 2.6-fold increase in charge gain (about 1100 pA/e$^-$) but exhibits higher total noise due to an excess noise contribution. The results highlight the potential of the novel DePFETs, with the buried-channel technology offering immediate benefits for low-noise applications such as the WFI.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.22678",
+        "htmlUrl": "https://arxiv.org/html/2611.22678v1",
+        "authors": [
+          "Sebastian M. Stadler",
+          "Alexander Bähr",
+          "Jelena Ninković",
+          "Peter Lechner",
+          "Johannes Treis",
+          "Christian Sandow"
+        ],
+        "categories": [
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.22678v1/media/DePFET_layout_topview.png",
+            "caption": ": Schematic drawing of the standard DePFET layout in top view (left) and in 3D (right), with cuts along the p-channel (p-Cut) and through the clear-structure (n90p-Cut). The p-channel cut illustrates electron-hole pair generation by an X-ray interaction, with arrows indicating the drift of electrons to the internal gate and of holes to the backside, whereas the clearing of the electrons accumulated in the internal gate is depicted in the clear-structure cut. The Clear is embedded in a deep p-well (red), which forms a potential barrier towards the bulk."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22678v1/Standard_out_text.png",
+            "caption": ": Schematic cross-sections of the intrinsic design of the three DePFET variants used in this work: (a) standard DePFET, with a shallow p-implantation at the Si/SiO 2 interface and the internal gate size defined by the source-drain spacing; (b) buried-channel DePFET, with the p-implantation shifted further away from the Si/SiO 2 interface deeper into the bulk; (c) super- g q g_{q} DePFET, with an additional strip-shaped n-implant on the source side, which appears as a localised dot in the 2D cross-section.",
+            "captionLatex": ": Schematic cross-sections of the intrinsic design of the three DePFET variants used in this work: (a) standard DePFET, with a shallow p-implantation at the Si/SiO 2 interface and the internal gate size defined by the source-drain spacing; (b) buried-channel DePFET, with the p-implantation shifted further away from the Si/SiO 2 interface deeper into the bulk; (c) super- $g_{q}$ DePFET, with an additional strip-shaped n-implant on the source side, which appears as a localised dot in the 2D cross-section."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22678v1/DePFET_ENC_scatter_perdevice.png",
+            "caption": ": Overview of the DePFET transistor bias sweep results for the four DUTs in the V GS , on V_{\\mathrm{GS,on}} – V DS V_{\\mathrm{DS}} plane. Each point represents one measured bias setting, coloured by its ENC on a diverging scale centred at 2.5 ​ e − 2.5\\,\\mathrm{e}^{-} , separating the operating conditions of high noise (red) from low noise (blue). Lines connect settings of constant I DS I_{\\mathrm{DS}} , labelled in \\upmu ​ A \\upmu\\mathrm{A} at their ends or in the legends. Measurements were performed at a sensor temperature of ≈ 220 ​ K \\approx 220\\,\\mathrm{K} and using an integration time of 4 ​ \\upmu ​ s 4\\,\\upmu\\mathrm{s} . For clarity, only a subset of the measured data is presented. Complete sweep results are provided in appendix C .",
+            "captionLatex": ": Overview of the DePFET transistor bias sweep results for the four DUTs in the $V_{\\mathrm{GS,on}}$ – $V_{\\mathrm{DS}}$ plane. Each point represents one measured bias setting, coloured by its ENC on a diverging scale centred at $2.5\\,\\mathrm{e}^{-}$ , separating the operating conditions of high noise (red) from low noise (blue). Lines connect settings of constant $I_{\\mathrm{DS}}$ , labelled in $\\upmu\\mathrm{A}$ at their ends or in the legends. Measurements were performed at a sensor temperature of $\\approx 220\\,\\mathrm{K}$ and using an integration time of $4\\,\\upmu\\mathrm{s}$ . For clarity, only a subset of the measured data is presented. Complete sweep results are provided in appendix C ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22678v1/DePFET_ENC_vs_Vgs.png",
+            "caption": ": Results of the DePFET transistor bias sweep of figure 6 replotted in detail. Columns are the DePFET devices (a) StdL, (b) StdR, (c) BC and (d) SGQ. ENC and σ out \\sigma_{\\mathrm{out}} as functions of V GS , on V_{\\mathrm{GS,on}} (top two panel rows) and ENC as a function of V DS V_{\\mathrm{DS}} (fourth panel row), at several constant drain currents (colour). The third panels show, for each I DS I_{\\mathrm{DS}} , the lowest achieved ENC and FWHM all \\mathrm{FWHM_{all}} . Bottom panel row depicts g q g_{q} as a function of V DS V_{\\mathrm{DS}} , calculated from G E G_{\\mathrm{E}} using eq. ( 3.2 ). The circle marks the ENC optimum across the measured bias space, and the diamond marks the FWHM all \\mathrm{FWHM_{all}} optimum. For clarity, only a subset of the measured data is presented. Complete sweep results are provided in appendix C .",
+            "captionLatex": ": Results of the DePFET transistor bias sweep of figure 6 replotted in detail. Columns are the DePFET devices (a) StdL, (b) StdR, (c) BC and (d) SGQ. ENC and $\\sigma_{\\mathrm{out}}$ as functions of $V_{\\mathrm{GS,on}}$ (top two panel rows) and ENC as a function of $V_{\\mathrm{DS}}$ (fourth panel row), at several constant drain currents (colour). The third panels show, for each $I_{\\mathrm{DS}}$ , the lowest achieved ENC and $\\mathrm{FWHM_{all}}$ . Bottom panel row depicts $g_{q}$ as a function of $V_{\\mathrm{DS}}$ , calculated from $G_{\\mathrm{E}}$ using eq. ( 3.2 ). The circle marks the ENC optimum across the measured bias space, and the diamond marks the $\\mathrm{FWHM_{all}}$ optimum. For clarity, only a subset of the measured data is presented. Complete sweep results are provided in appendix C ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22678v1/athena_depfet_scatter_matrix_with_enc.png",
+            "caption": ": All valid measurement points of the DePFET transistor bias sweep of the StdL device (section 4.2 ). Scatter matrix: pairwise relations between dependent ( Noise out \\mathrm{Noise_{out}} , G E G_{\\mathrm{E}} , ENC, FWHM all \\mathrm{FWHM_{all}} , V DS V_{\\mathrm{DS}} ) and independent variables ( V GS , on V_{\\mathrm{GS,on}} , I DS I_{\\mathrm{DS}} ). Each colour denotes one constant I DS I_{\\mathrm{DS}} contour (legend, in \\upmu ​ A \\upmu\\mathrm{A} ). The circle marks the ENC optimum and the diamond the FWHM all \\mathrm{FWHM_{all}} optimum of the swept bias space. Inset (top right): Noise out \\mathrm{Noise_{out}} in the V GS , on V_{\\mathrm{GS,on}} – V DS V_{\\mathrm{DS}} plane, with grey lines of constant I DS I_{\\mathrm{DS}} (labelled in \\upmu ​ A \\upmu\\mathrm{A} ) and black iso-lines of Noise out \\mathrm{Noise_{out}} (labelled in ADU).",
+            "captionLatex": ": All valid measurement points of the DePFET transistor bias sweep of the StdL device (section 4.2 ). Scatter matrix: pairwise relations between dependent ( $\\mathrm{Noise_{out}}$ , $G_{\\mathrm{E}}$ , ENC, $\\mathrm{FWHM_{all}}$ , $V_{\\mathrm{DS}}$ ) and independent variables ( $V_{\\mathrm{GS,on}}$ , $I_{\\mathrm{DS}}$ ). Each colour denotes one constant $I_{\\mathrm{DS}}$ contour (legend, in $\\upmu\\mathrm{A}$ ). The circle marks the ENC optimum and the diamond the $\\mathrm{FWHM_{all}}$ optimum of the swept bias space. Inset (top right): $\\mathrm{Noise_{out}}$ in the $V_{\\mathrm{GS,on}}$ – $V_{\\mathrm{DS}}$ plane, with grey lines of constant $I_{\\mathrm{DS}}$ (labelled in $\\upmu\\mathrm{A}$ ) and black iso-lines of $\\mathrm{Noise_{out}}$ (labelled in ADU)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22678v1/ref_depfet_scatter_matrix_with_enc.png",
+            "caption": ": As figure 14 , for the StdR device. The ENC and FWHM all \\mathrm{FWHM_{all}} optima coincide.",
+            "captionLatex": ": As figure 14 , for the StdR device. The ENC and $\\mathrm{FWHM_{all}}$ optima coincide."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22678v1/bc_depfet_scatter_matrix_with_enc.png",
+            "caption": ": As figure 14 , for the BC device. No Noise out \\mathrm{Noise_{out}} iso-lines are drawn, since Noise out \\mathrm{Noise_{out}} does not vary monotonically with V GS , on V_{\\mathrm{GS,on}} at constant I DS I_{\\mathrm{DS}} .",
+            "captionLatex": ": As figure 14 , for the BC device. No $\\mathrm{Noise_{out}}$ iso-lines are drawn, since $\\mathrm{Noise_{out}}$ does not vary monotonically with $V_{\\mathrm{GS,on}}$ at constant $I_{\\mathrm{DS}}$ ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.22678v1/media/DePFET_layout_topview.png",
+        "thumbnailAlt": ": Schematic drawing of the standard DePFET layout in top view (left) and in 3D (right), with cuts along the p-channel (p-Cut) and through the clear-structure (n90p-Cut). The p-channel cut illustrates electron-hole pair generation by an X-ray interaction, with arrows indicating the drift of electrons",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.22771",
+        "title": "Black hole ADaptive Multi-relation Mass Estimation based on Timing Analysis (BADMET)",
+        "summary": "Active galactic nucleus (AGN) variability is widely recognized as a promising avenue for constraining black hole mass, yet its practical application remains limited. Although the correlation between black hole mass and variability timescale has been extensively investigated, finite observational baselines often lead to systematic underestimation of the timescale, thereby hindering reliable mass estimation for individual sources. To address this limitation, we develop the Black hole ADaptive Multi-relation Mass Estimation based on Timing analysis (BADMET), an extendable framework that provides black hole mass estimates by assimilating multiple mass-related parameters that include variability properties. We show that incorporating the variability timescale improves mass recovery in the simulated sample and enhances agreement with the reference masses in the observed sample, achieving uncertainties of $\\lesssim 0.5$ dex even with a single X-ray observation.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.22771",
+        "htmlUrl": "https://arxiv.org/html/2611.22771v1",
+        "authors": [
+          "Ruisong Xia",
+          "Yongquan Xue",
+          "Hao Liu",
+          "Guowei Ren",
+          "Mouyuan Sun",
+          "Qingwen Wu",
+          "Jialai Wang",
+          "Shuying Zhou",
+          "Zhen-Bo Su",
+          "Shifu Zhu",
+          "Mengqiu Huang"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.GA",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.22771v1/fig1.png",
+            "caption": "Comparison of the true black hole masses with those recovered from seven different models for 100 sources randomly selected from the mock sample, encompassing all combinations of the three mock parameters ( τ \\tau , L X L_{\\rm X} , σ NXV 2 \\sigma^{2}_{\\rm NXV} ; see Table 1 ). Error bars indicate the 16th and 84th percentiles of the posterior distributions obtained from Markov Chain Monte Carlo sampling. The diagonal dashed line represents the one-to-one relation. For each panel, the NLL and the RMSE are shown in the lower right corner to quantify the recovery accuracy, with the NLL in the combined model highlighted in bold as the lowest, emphasizing its superior performance among the models. The inset panel (h) shows the histogram of the differences between predicted and true black hole masses, log ⁡ M pred − log ⁡ M true \\log M_{\\rm pred}-\\log M_{\\rm true} .",
+            "captionLatex": "Comparison of the true black hole masses with those recovered from seven different models for 100 sources randomly selected from the mock sample, encompassing all combinations of the three mock parameters ( $\\tau$ , $L_{\\rm X}$ , $\\sigma^{2}_{\\rm NXV}$ ; see Table 1 ). Error bars indicate the 16th and 84th percentiles of the posterior distributions obtained from Markov Chain Monte Carlo sampling. The diagonal dashed line represents the one-to-one relation. For each panel, the NLL and the RMSE are shown in the lower right corner to quantify the recovery accuracy, with the NLL in the combined model highlighted in bold as the lowest, emphasizing its superior performance among the models. The inset panel (h) shows the histogram of the differences between predicted and true black hole masses, $\\log M_{\\rm pred}-\\log M_{\\rm true}$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22771v1/fig2.png",
+            "caption": "Distributions of the properties of the real X-ray test sample: (a) black hole mass, (b) redshift, (c) X-ray luminosity, (d) normalized excess variance, (e) observer-frame DRW timescale, (f) observing baseline, (g) number of light-curve data points, and (h) DRW signal-to-noise ratio. Panels (a) and (b) are evaluated for the 112 distinct sources, while panels (c)–(h) are evaluated for the 399 individual exposures. Dashed lines mark the median values, and the annotations give the number of measurements included in each distribution."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22771v1/fig3.png",
+            "caption": "Same as Figure 1 but for the real X-ray sample [ 25 ] . The reference black hole masses are adopted from the literature, with a typical uncertainty of 0.1 dex; see Table A1 of Xia et al. [25] for details."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22771v1/figA.png",
+            "caption": "Figure A1: Same as Figure 3 , but showing the final mass estimates for sources. For sources with multiple exposures, the information from those exposures is combined."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.22771v1/fig1.png",
+        "thumbnailAlt": "Comparison of the true black hole masses with those recovered from seven different models for 100 sources randomly selected from the mock sample, encompassing all combinations of the three mock parameters ( τ \\tau , L X L_{\\rm X} , σ NXV 2 \\sigma^{2}_{\\rm NXV} ; see Table 1 ). Error bars indicate th",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.22833",
+        "title": "Search for UHE photon sources using direction-time clustering algorithms with a BDT particle discriminant",
+        "summary": "Direction-time clustering methods for neutral particle searches are motivated by the possibility that ultra-high-energy (UHE) neutral particles are produced during flaring periods of various astrophysical sources. In this scenario, clusters of events correlated in both arrival direction and time would be generated, which, when observed, would indicate a neutral-particle flare, and a non-observation would provide upper limits on fluxes for point-like sources. Focusing on UHE photon searches, an improvement of the sensitivity of direction-time clustering methods by the application of different photon tags, such as the depth of the extensive air shower maximum (X_max), the lateral distribution of the total signal across an array of detectors (S_b), or a cumulative signal trace-based discriminant variable (C_t), is investigated. A Boosted Decision Tree (BDT) is used to combine multiple observables, by which photon tagging is optimized and photon/hadron separation is improved. The number of events required to identify a photon flare is thereby further reduced compared to using individual photon tags, across a range of flare durations. The possibility of extending the known and assumed PeVatron photon sources into the UHE regime by applying these clustering methods to existing and future observatory data is also discussed. The discovery of UHE neutral particles would mark the next milestone in multimessenger astrophysics, by which a new window onto the non-thermal universe would be opened.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.22833",
+        "htmlUrl": "https://arxiv.org/html/2611.22833v1",
+        "authors": [
+          "Chaitanya Priyadarshi",
+          "Jarosław Stasielak",
+          "Nataliia Borodai",
+          "Megha Mogarkar",
+          "Jan Pękala",
+          "Dariusz Góra",
+          "Marcus Niechciol"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.22833v1/images/clustering_types.png",
+            "caption": ": The Braun method includes all consecutive multiplets of events, ordered in time, for investigating the direction-time correlations."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22833v1/images/BDT_c4_dist.png",
+            "caption": ": 1. BDT distribution, 2. ROC curves, with comparison with log 10 ⁡ S b \\log_{10}S_{b} , 3. Importance of the components used to train the BDT score",
+            "captionLatex": ": 1. BDT distribution, 2. ROC curves, with comparison with $\\log_{10}S_{b}$ , 3. Importance of the components used to train the BDT score"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22833v1/images/Final_thresh_comp_wo_time_w_wo_photon_tag_c4_v4.png",
+            "caption": ": MC comparison of the different Braun methods, without some components, and with all"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22833v1/images/target_OD750_c4_step1_all_v0.png",
+            "caption": "(a) Analysis Step 1: Distribution of the reconstructed number of signal events vs reconstructed flare duration of the analyzed signal multiplet, from the first step of the analysis. The TS values are used to scale the size and color of the diamond-shaped markers."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22833v1/images/target_OD750_c4_step2_all_v0.png",
+            "caption": "(b) Analysis Step 2: Background TS distribution obtained by scrambling 10 5 10^{5} times the data around the target sources. The red and black dashed lines mark the 3 ​ σ 3\\sigma and 5 ​ σ 5\\sigma thresholds for each distribution.",
+            "captionLatex": "(b) Analysis Step 2: Background TS distribution obtained by scrambling $10^{5}$ times the data around the target sources. The red and black dashed lines mark the $3\\sigma$ and $5\\sigma$ thresholds for each distribution."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22833v1/images/target_OD750_c4_final_p_comp_sig_v2.png",
+            "caption": ": Analysis Step 3: Final p-value comparison of the different categories of sources analyzed. The left plot shows the significance of the source with the lowest p-value, and the right plot shows the significance corresponding to the penalized p-value of the respective source category."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.22833v1/images/clustering_types.png",
+        "thumbnailAlt": ": The Braun method includes all consecutive multiplets of events, ordered in time, for investigating the direction-time correlations.",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.22913",
+        "title": "A novel method for dust evolution in protoplanetary disks and a new criterion for gap opening",
+        "summary": "We present the Grain Residence-Time Method (GRTM), a computationally efficient particle-tracking approach for studying dust evolution and trapping in protoplanetary disks. By reconstructing steady-state dust distributions from particle residence times, this method provides a way to obtain radial dust surface density profiles without directly evolving the dust as a fluid. We compare the GRTM with dust profiles computed via standard methods using the $\\texttt{FARGO3D}$ code, which models the dust as a pressureless fluid, and find very good agreement over a wide range of parameter space. Finally, we investigate how dust gap formation depends on the planet-to-star mass ratio ($q$) and Stokes number ($\\mathrm{St}$), through a parameter study, establishing an empirical criterion for dust gap opening. In doing so, we have discovered a new regime of gap opening for small grains with $St \\lesssim 10^{-2}$ and for planet mass well below Jupiter's, which is likely very relevant for gaps seen in ALMA images.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.22913",
+        "htmlUrl": "https://arxiv.org/html/2611.22913v1",
+        "authors": [
+          "SM Gopika",
+          "Paul C. Duffell"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.22913v1/both_hist_and_horse_diff_size_distribution.png",
+            "caption": "Demonstration of the Grain Residence- Time method for computing dust surface density. The left panel shows the particle trajectories in the 2D corotating frame, while the right panel shows the residence time ( d ​ t d ​ r \\frac{dt}{dr} ) and effective surface density ( 1 2 ​ π ​ r ​ d ​ t d ​ r \\frac{1}{2\\pi r}\\frac{dt}{dr} ) histograms. The red dashed line indicates the planet’s position ( r = r p r=r_{p} ) and the yellow solid line represents the Gaussian smoothed density profile. For this demonstration, we consider q = 3 × 10 − 4 q=3\\times 10^{-4} , α = 5 × 10 − 3 \\alpha=5\\times 10^{-3} , Mach number, ℳ = 10 \\mathcal{M}=10 , Stokes number S ​ t = 0.02 St=0.02 and the potential smoothening length to be ε = 0.5 ​ H \\varepsilon=0.5H , where H H is the disk scale height.",
+            "captionLatex": "Demonstration of the Grain Residence- Time method for computing dust surface density. The left panel shows the particle trajectories in the 2D corotating frame, while the right panel shows the residence time ( $\\frac{dt}{dr}$ ) and effective surface density ( $\\frac{1}{2\\pi r}\\frac{dt}{dr}$ ) histograms. The red dashed line indicates the planet’s position ( $r=r_{p}$ ) and the yellow solid line represents the Gaussian smoothed density profile. For this demonstration, we consider $q=3\\times 10^{-4}$ , $\\alpha=5\\times 10^{-3}$ , Mach number, $\\mathcal{M}=10$ , Stokes number $St=0.02$ and the potential smoothening length to be $\\varepsilon=0.5H$ , where $H$ is the disk scale height."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22913v1/both_gas_dust_timeseries.png",
+            "caption": "Azimuthally averaged gas (dashed lines) and dust (solid lines) density profiles from FARGO3D at different times. The parameters are q = 3 × 10 − 4 q=3\\times 10^{-4} , α = 0.005 \\alpha=0.005 , ℳ = 10 \\mathcal{M}=10 and S ​ t = 0.02 St=0.02 .",
+            "captionLatex": "Azimuthally averaged gas (dashed lines) and dust (solid lines) density profiles from FARGO3D at different times. The parameters are $q=3\\times 10^{-4}$ , $\\alpha=0.005$ , $\\mathcal{M}=10$ and $St=0.02$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22913v1/resolution_fargos.png",
+            "caption": "Azimuthally averaged dust density profiles from FARGO3D at different grid resolutions along with the reconstructed dust density from our Grain Residence-Time Method with five particles. The parameters are q = 3 × 10 − 4 q=3\\times 10^{-4} , α = 0.005 \\alpha=0.005 , ℳ = 10 \\mathcal{M}=10 and S ​ t = 0.02 St=0.02 .",
+            "captionLatex": "Azimuthally averaged dust density profiles from FARGO3D at different grid resolutions along with the reconstructed dust density from our Grain Residence-Time Method with five particles. The parameters are $q=3\\times 10^{-4}$ , $\\alpha=0.005$ , $\\mathcal{M}=10$ and $St=0.02$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22913v1/resgas_effects.png",
+            "caption": "Reconstructed dust density profiles obtained using gas velocity fields extracted at different spatial resolutions. Five particles are used for each resolution. The y-axis shows | v r , d NSH | ​ τ ​ ( r ) |v_{r,d}^{\\rm NSH}|\\,\\tau(r) , which is approximately unity away from the planet and deviates from unity near the planet.",
+            "captionLatex": "Reconstructed dust density profiles obtained using gas velocity fields extracted at different spatial resolutions. Five particles are used for each resolution. The y-axis shows $|v_{r,d}^{\\rm NSH}|\\,\\tau(r)$ , which is approximately unity away from the planet and deviates from unity near the planet."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22913v1/particle_convergence.png",
+            "caption": "Reconstructed dust density profiles for different particle numbers, using the same gas velocity field with a resolution of 1024 × 1024 1024\\times 1024 . The y-axis shows | v r , d NSH | ​ τ ​ ( r ) |v_{r,d}^{\\rm NSH}|\\,\\tau(r) , which is approximately unity away from the planet and deviates from unity near the planet.",
+            "captionLatex": "Reconstructed dust density profiles for different particle numbers, using the same gas velocity field with a resolution of $1024\\times 1024$ . The y-axis shows $|v_{r,d}^{\\rm NSH}|\\,\\tau(r)$ , which is approximately unity away from the planet and deviates from unity near the planet."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22913v1/trajectories_with_fargo.png",
+            "caption": "Selected particle trajectories overlaid on the FARGO3D dust density distribution."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22913v1/comparison_eps.png",
+            "caption": "Comparison of reconstructed dust surface density profiles with and without planetary potential smoothing. Because grid-based methods usually necessitate non-zero smoothing of the potential, we compare FARGO3D with GRTM using a smoothing length of ε = 0.5 ​ H \\varepsilon=0.5H , where H = r p ℳ H=\\frac{r_{p}}{\\mathcal{M}} . In addition, GRTM enables us to see how much the smoothing length affects the solution, in this case creating an over-density of dust on the outside of the planetary orbit when ε = 0 \\varepsilon=0 .",
+            "captionLatex": "Comparison of reconstructed dust surface density profiles with and without planetary potential smoothing. Because grid-based methods usually necessitate non-zero smoothing of the potential, we compare FARGO3D with GRTM using a smoothing length of $\\varepsilon=0.5H$ , where $H=\\frac{r_{p}}{\\mathcal{M}}$ . In addition, GRTM enables us to see how much the smoothing length affects the solution, in this case creating an over-density of dust on the outside of the planetary orbit when $\\varepsilon=0$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22913v1/small_st_group.png",
+            "caption": "Steady-state dust density profiles reconstructed from particle trajectories (solid line) using the gas velocity field from FARGO3D at a resolution of 1024 × 1024 1024\\times 1024 , alongside the corresponding dust density profiles from FARGO3D (dashed line) at t = 4000 t=4000 orbits, for different St \\mathrm{St} numbers. The black dashed line shows the planet’s position. All the plots have the same x and y axes limits.",
+            "captionLatex": "Steady-state dust density profiles reconstructed from particle trajectories (solid line) using the gas velocity field from FARGO3D at a resolution of $1024\\times 1024$ , alongside the corresponding dust density profiles from FARGO3D (dashed line) at $t=4000$ orbits, for different $\\mathrm{St}$ numbers. The black dashed line shows the planet’s position. All the plots have the same x and y axes limits."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.22913v1/both_hist_and_horse_diff_size_distribution.png",
+        "thumbnailAlt": "Demonstration of the Grain Residence- Time method for computing dust surface density. The left panel shows the particle trajectories in the 2D corotating frame, while the right panel shows the residence time ( d ​ t d ​ r \\frac{dt}{dr} ) and effective surface density ( 1 2 ​ π ​ r ​ d ​ t d ​ r \\fra",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.22952",
+        "title": "Observational diagnostics of external photoevaporation at millimetre wavelengths",
+        "summary": "External photoevaporation is increasingly recognised as an important influence on protoplanetary disk evolution. However, there are no established molecular line diagnostics that can reliably distinguish external irradiation from variations in intrinsic stellar and disk properties. We use a large grid of thermochemical models to predict the fluxes of 48 transitions from eight species observable with ALMA, spanning a wide range of system properties and external FUV fields of 100 to 100,000 G0. At fixed stellar and disk properties, all transitions generally brighten with increasing FUV field strength. HCO+ and CO fluxes increase monotonically in virtually all disks, whereas lower-excitation lines, particularly those of C2H and N2H+, respond weakly and non-monotonically. However, variations in stellar mass and disk size introduce substantial degeneracies, limiting the usefulness of individual line fluxes as tracers of external irradiation. We therefore assess all pairwise line flux ratios, which can significantly reduce these degeneracies, evaluating their correlation with the external field, the magnitude of their change across the FUV range, and predicted ALMA detectability. We identify 135 promising ratios, including several combining strong FUV sensitivity and high detectability with efficient single-tuning ALMA observations. The strongest diagnostics either contrast high- and low-excitation lines of the same or co-spatial species (e.g. CO J=8-7/J=1-0), probing different regions of the photoevaporative wind, or pair an FUV-sensitive wind tracer with comparatively insensitive emission arising closer to the disk (e.g. HCO+ J=3-2/C2H N=3-2). Our results provide a framework for identifying externally photoevaporating systems from spatially unresolved emission and constraining their incident FUV field strengths.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.22952",
+        "htmlUrl": "https://arxiv.org/html/2611.22952v1",
+        "authors": [
+          "Luke Keyte",
+          "Thomas J. Haworth",
+          "Tyger Peake",
+          "Alvaro Ribas"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.GA",
+          "astro-ph.IM",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.22952v1/Figures/fig_fluxes_all.png",
+            "caption": "Disk-integrated line fluxes for all models in our grid, assuming a face-on geometry and a source distance of 400 pc. Each marker represents a single transition, coloured by species and plotted at the corresponding rest frequency across ALMA Bands 3-10. For each transition, the thick bar spans the interquartile range across the model grid and the thin line covers the full range. A small horizontal jitter is applied for clarity. The shaded grey region indicates fluxes below an approximate 3 ​ σ 3\\sigma ALMA detection threshold, estimated for a 10-hour integration, assuming all emission is unresolved within a single synthesised beam.",
+            "captionLatex": "Disk-integrated line fluxes for all models in our grid, assuming a face-on geometry and a source distance of 400 pc. Each marker represents a single transition, coloured by species and plotted at the corresponding rest frequency across ALMA Bands 3-10. For each transition, the thick bar spans the interquartile range across the model grid and the thin line covers the full range. A small horizontal jitter is applied for clarity. The shaded grey region indicates fluxes below an approximate $3\\sigma$ ALMA detection threshold, estimated for a 10-hour integration, assuming all emission is unresolved within a single synthesised beam."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22952v1/Figures/fig_spearman_megaplot.png",
+            "caption": "Monotonic sensitivity of molecular line fluxes to the external FUV field, quantified by the Spearman rank correlation ρ \\rho between line flux and FUV field strength F FUV F_{\\mathrm{FUV}} . Each row is a single transition, grouped by species (colour). For each line, a higher Spearman ρ \\rho value indicates a stronger correlation between the FUV field and the line flux. Open circles show the grid-wide correlation ( ρ grid \\rho_{\\text{grid}} ), evaluated across all models, in which M ∗ M_{*} , r d r_{\\rm d} , Σ 1 ​ a ​ u \\Sigma_{\\rm 1au} and F FUV F_{\\rm FUV} all vary. Filled circles show the median fixed-structure correlation ( ρ fixed \\rho_{\\text{fixed}} ), computed separately within each set of models that share the same ( M ∗ , r d , Σ 1 ​ a ​ u ) (M_{*},r_{\\rm d},\\Sigma_{\\rm 1au}) and differ only in F FUV F_{\\rm FUV} . Coloured bars span the central quartile range of that distribution, indicating how consistently a line responds to FUV across different disk structures. Note that hyperfine transition labels have been shortened for clarity, see Table 2 for full transition designations.",
+            "captionLatex": "Monotonic sensitivity of molecular line fluxes to the external FUV field, quantified by the Spearman rank correlation $\\rho$ between line flux and FUV field strength $F_{\\mathrm{FUV}}$ . Each row is a single transition, grouped by species (colour). For each line, a higher Spearman $\\rho$ value indicates a stronger correlation between the FUV field and the line flux. Open circles show the grid-wide correlation ( $\\rho_{\\text{grid}}$ ), evaluated across all models, in which $M_{*}$ , $r_{\\rm d}$ , $\\Sigma_{\\rm 1au}$ and $F_{\\rm FUV}$ all vary. Filled circles show the median fixed-structure correlation ( $\\rho_{\\text{fixed}}$ ), computed separately within each set of models that share the same $(M_{*},r_{\\rm d},\\Sigma_{\\rm 1au})$ and differ only in $F_{\\rm FUV}$ . Coloured bars span the central quartile range of that distribution, indicating how consistently a line responds to FUV across different disk structures. Note that hyperfine transition labels have been shortened for clarity, see Table 2 for full transition designations."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22952v1/Figures/fig_spearman_all.png",
+            "caption": "Spearman rank correlation coefficients between the disk-integrated line fluxes and the stellar and disk parameters, for all 48 molecular transitions in the model grid. Each point represents a single transition, coloured by species. From left to right, panels show the correlation of each line flux with the stellar mass ( M ∗ M_{*} ), disk outer radius ( r d r_{\\mathrm{d}} ), and surface density at 1 au ( Σ 1 ​ a ​ u \\Sigma_{\\mathrm{1au}} ), plotted against its correlation with the external FUV field strength, ρ grid \\rho_{\\text{grid}} (Section 3.1.1 ). All coefficients are evaluated across the full model grid, in which all four parameters vary simultaneously, and they are therefore directly comparable to ρ grid \\rho_{\\text{grid}} in Figure 2 (open circles), rather than ρ fixed \\rho_{\\text{fixed}} , which is computed at fixed disk structure. Dashed lines indicate ρ = 0 \\rho=0 in each dimension. Transitions towards the upper right of each panel are positively correlated with both the external FUV field and the given stellar or disk parameter.",
+            "captionLatex": "Spearman rank correlation coefficients between the disk-integrated line fluxes and the stellar and disk parameters, for all 48 molecular transitions in the model grid. Each point represents a single transition, coloured by species. From left to right, panels show the correlation of each line flux with the stellar mass ( $M_{*}$ ), disk outer radius ( $r_{\\mathrm{d}}$ ), and surface density at 1 au ( $\\Sigma_{\\mathrm{1au}}$ ), plotted against its correlation with the external FUV field strength, $\\rho_{\\text{grid}}$ (Section 3.1.1 ). All coefficients are evaluated across the full model grid, in which all four parameters vary simultaneously, and they are therefore directly comparable to $\\rho_{\\text{grid}}$ in Figure 2 (open circles), rather than $\\rho_{\\text{fixed}}$ , which is computed at fixed disk structure. Dashed lines indicate $\\rho=0$ in each dimension. Transitions towards the upper right of each panel are positively correlated with both the external FUV field and the given stellar or disk parameter."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22952v1/Figures/fig_heatmap_subset_3species.png",
+            "caption": "Diagnostic power of molecular line flux ratios as tracers of external photoevaporation, shown for a representative subset of molecular species (CO, HCO + , C 2 H). These species are chosen to illustrate the two classes of diagnostic identified in Section 3.2 : excitation-sensitive ratios (e.g. CO high- J J /low- J J , HCO + /CO) and chemistry-sensitive ratios with a denominator that responds weakly to the external FUV field (e.g. HCO + /C 2 H). Each circle represents the ratio of the transition on the y y -axis (numerator) to that on the x x -axis (denominator), with colour denoting ρ fixed \\rho_{\\text{fixed}} and circle size the enhancement factor η FUV \\eta_{\\rm FUV} . Blue indicates that the ratio increases with F FUV F_{\\text{FUV}} and red that it decreases. Wedges along the axes indicate increasing E u E_{\\text{u}} within each species (see Table 2 ). The full matrix for all 8 species is shown in Appendix E .",
+            "captionLatex": "Diagnostic power of molecular line flux ratios as tracers of external photoevaporation, shown for a representative subset of molecular species (CO, HCO + , C 2 H). These species are chosen to illustrate the two classes of diagnostic identified in Section 3.2 : excitation-sensitive ratios (e.g. CO high- $J$ /low- $J$ , HCO + /CO) and chemistry-sensitive ratios with a denominator that responds weakly to the external FUV field (e.g. HCO + /C 2 H). Each circle represents the ratio of the transition on the $y$ -axis (numerator) to that on the $x$ -axis (denominator), with colour denoting $\\rho_{\\text{fixed}}$ and circle size the enhancement factor $\\eta_{\\rm FUV}$ . Blue indicates that the ratio increases with $F_{\\text{FUV}}$ and red that it decreases. Wedges along the axes indicate increasing $E_{\\text{u}}$ within each species (see Table 2 ). The full matrix for all 8 species is shown in Appendix E ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22952v1/Figures/fig_ratio_summary.png",
+            "caption": "Diagnostic performance of all 2256 line flux ratios, shown as the partial Spearman correlation with the external FUV field strength, ρ fixed \\rho_{\\text{fixed}} , against the median FUV enhancement factor, η FUV \\eta_{\\text{FUV}} . Points are coloured by the species forming the denominator of the ratio, and grey crosses mark ratios that fall below our detectability threshold ( f det < 0.5 f_{\\text{det}}<0.5 ). Dotted lines mark the cuts at ρ fixed \\rho_{\\text{fixed}} = 0.8 =0.8 and η FUV = 5 \\eta_{\\mathrm{FUV}}=5 , and the shaded region indicates where both are satisfied, containing the 135 shortlisted ratios of Table 4 .",
+            "captionLatex": "Diagnostic performance of all 2256 line flux ratios, shown as the partial Spearman correlation with the external FUV field strength, $\\rho_{\\text{fixed}}$ , against the median FUV enhancement factor, $\\eta_{\\text{FUV}}$ . Points are coloured by the species forming the denominator of the ratio, and grey crosses mark ratios that fall below our detectability threshold ( $f_{\\text{det}} 4 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22952v1/Figures/fig_abundance_maps.png",
+            "caption": "Abundance maps for the eight chemical species considered in this work (rows) for a representative model ( M ∗ = 0.6 ​ M ⊙ M_{*}=0.6\\,M_{\\odot} , Σ 1 ​ a ​ u = 1000 ​ g ​ cm − 2 \\Sigma_{\\mathrm{1au}}=1000\\,{\\rm g\\,cm^{-2}} , r d = 40 r_{\\mathrm{d}}=40 au) at external FUV field strengths of 10 2 10^{2} – 10 5 10^{5} G 0 (columns). Black contours enclose the central 25% (solid), 50% (dashed) and 75% (dotted) of the emission of the highest- E u E_{\\rm u} transition of each species (Table 2 ), computed for a face-on disk. The white dotted line marks the disk–wind boundary, defined as the gas density contour equal to the midplane density where τ = 1 \\tau=1 . With increasing F FUV F_{\\rm FUV} , the emission of [CI], C 2 H, CO, CN, HCO + and HCN shifts from the disk surface into the photoevaporative wind, whereas H 2 CO and N 2 H + remain confined to the disk–wind interface.",
+            "captionLatex": "Abundance maps for the eight chemical species considered in this work (rows) for a representative model ( $M_{*}=0.6\\,M_{\\odot}$ , $\\Sigma_{\\mathrm{1au}}=1000\\,{\\rm g\\,cm^{-2}}$ , $r_{\\mathrm{d}}=40$ au) at external FUV field strengths of $10^{2}$ – $10^{5}$ G 0 (columns). Black contours enclose the central 25% (solid), 50% (dashed) and 75% (dotted) of the emission of the highest- $E_{\\rm u}$ transition of each species (Table 2 ), computed for a face-on disk. The white dotted line marks the disk–wind boundary, defined as the gas density contour equal to the midplane density where $\\tau=1$ . With increasing $F_{\\rm FUV}$ , the emission of [CI], C 2 H, CO, CN, HCO + and HCN shifts from the disk surface into the photoevaporative wind, whereas H 2 CO and N 2 H + remain confined to the disk–wind interface."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22952v1/Figures/fig_inclination_test.png",
+            "caption": "Effect of disk inclination on the line fluxes and flux ratio diagnostics, based on the representative model of Figure 6 recomputed edge-on. Left: Inclination correction factor C X = F i = 90 ∘ / F i = 0 ∘ C_{X}=F_{i=90^{\\circ}}/F_{i=0^{\\circ}} against external FUV field strength. Faint lines show individual transitions and heavy lines the median for each species. The dashed line marks C X = 1 C_{X}=1 , where the flux is independent of viewing geometry. Right: FUV enhancement factor η FUV \\eta_{\\rm FUV} at i = 0 ∘ i=0^{\\circ} compared with i = 90 ∘ i=90^{\\circ} , for the 135 ratios shortlisted in Table 4 . Colour denotes the denominator species and shape the numerator. The dashed line is the 1:1 relation and the shaded region marks η FUV < 5 \\eta_{\\rm FUV}<5 , below which a ratio no longer satisfies the selection criteria of Section 3.2 .",
+            "captionLatex": "Effect of disk inclination on the line fluxes and flux ratio diagnostics, based on the representative model of Figure 6 recomputed edge-on. Left: Inclination correction factor $C_{X}=F_{i=90^{\\circ}}/F_{i=0^{\\circ}}$ against external FUV field strength. Faint lines show individual transitions and heavy lines the median for each species. The dashed line marks $C_{X}=1$ , where the flux is independent of viewing geometry. Right: FUV enhancement factor $\\eta_{\\rm FUV}$ at $i=0^{\\circ}$ compared with $i=90^{\\circ}$ , for the 135 ratios shortlisted in Table 4 . Colour denotes the denominator species and shape the numerator. The dashed line is the 1:1 relation and the shaded region marks $\\eta_{\\rm FUV} 3.2 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22952v1/Figures/fig_heatmap_revised.png",
+            "caption": "Full matrix of the 2256 line flux ratios formed from the 48 transitions considered in this work, grouped by species. Each circle represents the ratio of the transition on the y y -axis (numerator) to that on the x x -axis (denominator). Self-ratios along the diagonal are omitted. Colour denotes ρ fixed \\rho_{\\text{fixed}} , the correlation of each ratio with the external FUV field when the stellar and disk properties are held fixed, with blue indicating ratios that increase with F FUV F_{\\mathrm{FUV}} and red those that decrease. Circle size indicates the enhancement factor η FUV \\eta_{\\rm FUV} . Reciprocal ratios appear as mirror images across the diagonal, with the same circle size and the opposite sign of ρ fixed \\rho_{\\text{fixed}} . Wedges along each axis indicate increasing E u E_{\\rm u} within each species (see Table 2 for full details of the individual transitions).",
+            "captionLatex": "Full matrix of the 2256 line flux ratios formed from the 48 transitions considered in this work, grouped by species. Each circle represents the ratio of the transition on the $y$ -axis (numerator) to that on the $x$ -axis (denominator). Self-ratios along the diagonal are omitted. Colour denotes $\\rho_{\\text{fixed}}$ , the correlation of each ratio with the external FUV field when the stellar and disk properties are held fixed, with blue indicating ratios that increase with $F_{\\mathrm{FUV}}$ and red those that decrease. Circle size indicates the enhancement factor $\\eta_{\\rm FUV}$ . Reciprocal ratios appear as mirror images across the diagonal, with the same circle size and the opposite sign of $\\rho_{\\text{fixed}}$ . Wedges along each axis indicate increasing $E_{\\rm u}$ within each species (see Table 2 for full details of the individual transitions)."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.22952v1/Figures/fig_fluxes_all.png",
+        "thumbnailAlt": "Disk-integrated line fluxes for all models in our grid, assuming a face-on geometry and a source distance of 400 pc. Each marker represents a single transition, coloured by species and plotted at the corresponding rest frequency across ALMA Bands 3-10. For each transition, the thick bar spans the in",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.22999",
+        "title": "\\texttt{StochAXtic}: a JAX-Accelerated, End-to-End Differentiable Framework for Gravitational-Wave Backgrounds from Compact Binary Populations",
+        "summary": "We present \\texttt{StochAXtic}, a package for computing the dimensionless energy density spectrum $\\Omega_{\\mathrm{GW}}(f)$ of the stochastic gravitational-wave background generated by compact binary coalescences. Rather than sampling binary populations via Monte Carlo, \\texttt{StochAXtic} exploits the \\emph{scale invariance} of the waveforms: at fixed mass ratio, spins and tidal deformabilities, the waveform depends on the total mass only through the dimensionless combination $Mf$. This allows all computationally expensive waveform evaluations using \\texttt{LALSuite} to be performed once and stored in a population-independent lookup table. The subsequent integrals over mass and redshift can then be recast as convolutions and evaluated efficiently using fast Fourier transforms. We further employ truncated singular value decomposition to compress the lookup table, reducing both computational cost and memory requirements. Once the table has been computed and cached, \\texttt{StochAXtic} evaluates $\\Omega_{\\mathrm{GW}}(f)$ in a few milliseconds, achieving a relative numerical error below $10^{-3}$ at frequencies up to $1$ kHz. Its results agree with those of \\texttt{popstock} within the latter's statistical uncertainties. Implemented entirely in \\texttt{JAX}, \\texttt{StochAXtic} also provides gradients of $\\Omega_{\\mathrm{GW}}(f)$ with respect to population hyperparameters, enabling its direct integration with gradient-based inference methods including Hamiltonian Monte Carlo.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.22999",
+        "htmlUrl": "https://arxiv.org/html/2611.22999v1",
+        "authors": [
+          "Haowen Zhong",
+          "Ethan Vislosky",
+          "Emanuele Berti"
+        ],
+        "categories": [
+          "gr-qc",
+          "astro-ph.CO",
+          "astro-ph.HE",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.22999v1/tide_grid.png",
+            "caption": "The tidal parameters on the source-frame grid for the default EOS ( Λ 1.4 = 400 \\Lambda_{1.4}=400 , b 1 = − 6 b_{1}=-6 , b 2 = − 3 b_{2}=-3 , m NS , max = 2.3 ​ M ⊙ m_{\\rm NS,max}=2.3\\,M_{\\odot} ). Left: κ eff T \\kappa_{\\rm eff}^{T} , with white contours at the nodes κ c \\kappa_{c} of the table; the four nodes used to interpolate at the red star ( M = 2.7 ​ M ⊙ M=2.7\\,M_{\\odot} , q = 0.7 q=0.7 , κ 2 T = 94.7 \\kappa_{2}^{T}=94.7 ) are drawn thick. Right: The share of the primary, w w , in units of its upper bound w 0 ​ ( q ) w_{0}(q) , with white contours at the interior nodes w / w 0 = 1 / 3 w/w_{0}=1/3 and 2 / 3 2/3 ; the nodes 0 0 and 1 1 are the ends of the color scale. In the dark region the primary exceeds m NS , max m_{\\rm NS,max} , so that w = 0 w=0 ; in the gray region both stars do, and there are no tides.",
+            "captionLatex": "The tidal parameters on the source-frame grid for the default EOS ( $\\Lambda_{1.4}=400$ , $b_{1}=-6$ , $b_{2}=-3$ , $m_{\\rm NS,max}=2.3\\,M_{\\odot}$ ). Left: $\\kappa_{\\rm eff}^{T}$ , with white contours at the nodes $\\kappa_{c}$ of the table; the four nodes used to interpolate at the red star ( $M=2.7\\,M_{\\odot}$ , $q=0.7$ , $\\kappa_{2}^{T}=94.7$ ) are drawn thick. Right: The share of the primary, $w$ , in units of its upper bound $w_{0}(q)$ , with white contours at the interior nodes $w/w_{0}=1/3$ and $2/3$ ; the nodes $0$ and $1$ are the ends of the color scale. In the dark region the primary exceeds $m_{\\rm NS,max}$ , so that $w=0$ ; in the gray region both stars do, and there are no tides."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22999v1/MCMC_demo.png",
+            "caption": "Posterior samples of hyperparameters of the Madau-Dickinson merger rate model. We show 68% and 95% credible intervals. The injected true values are shown with red lines."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.22999v1/split_taper.png",
+            "caption": "Dependence of the NRTidalv3 intensity on w w , at fixed κ eff T = 60 \\kappa_{\\rm eff}^{T}=60 and M = 2.7 ​ M ⊙ M=2.7\\,M_{\\odot} , for q = 0.7 q=0.7 (top) and q = 0.3 q=0.3 (bottom). Left: Tidal factor T T [Eq. ( 82 )] for w w spanning [ 0 , w 0 ] [0,w_{0}] (color); grey: the union of the tapers of all w w . Middle: T T as a function of w w at fixed frequencies within the taper: exact (solid), the four nodes (dots), and the cubic interpolation (dashed). Right: Largest error over w w , in units of T ⁡ ( f m ) T(f_{\\rm m}) . Frequencies are in units of f m f_{\\rm m} at w = 0 w=0 .",
+            "captionLatex": "Dependence of the NRTidalv3 intensity on $w$ , at fixed $\\kappa_{\\rm eff}^{T}=60$ and $M=2.7\\,M_{\\odot}$ , for $q=0.7$ (top) and $q=0.3$ (bottom). Left: Tidal factor $T$ [Eq. ( 82 )] for $w$ spanning $[0,w_{0}]$ (color); grey: the union of the tapers of all $w$ . Middle: $T$ as a function of $w$ at fixed frequencies within the taper: exact (solid), the four nodes (dots), and the cubic interpolation (dashed). Right: Largest error over $w$ , in units of $T(f_{\\rm m})$ . Frequencies are in units of $f_{\\rm m}$ at $w=0$ ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.22999v1/tide_grid.png",
+        "thumbnailAlt": "The tidal parameters on the source-frame grid for the default EOS ( Λ 1.4 = 400 \\Lambda_{1.4}=400 , b 1 = − 6 b_{1}=-6 , b 2 = − 3 b_{2}=-3 , m NS , max = 2.3 ​ M ⊙ m_{\\rm NS,max}=2.3\\,M_{\\odot} ). Left: κ eff T \\kappa_{\\rm eff}^{T} , with white contours at the nodes κ c \\kappa_{c} of the table; the",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.23084",
+        "title": "An Efficient Method for Directly Integrating the Vlasov Equation in Collisionless and Weakly-Collisional Simulations",
+        "summary": "We describe and test a new numerical method to solve the Vlasov/Boltzmann equation in systems with arbitrary levels of collisionality. The method combines recent ideas to evolve the distribution function (DF) directly in 6+1 dimensional phase-space in a manner which is Lagrangian in both position+velocity. The 'particles' of traditional Monte-Carlo/Particle-In-Cell/N-body (MC/PIC/NB) methods become mesh-generating points defining a volume partition, each of which carries a set of momentum-Lagrangian basis functions representing a local anisotropic momentum DF. The DF is then integrated between cells and bases via a higher-order reconstruction and Godunov-type method, evolving a 10 or 13-moment representation of each basis to ensure manifest mass/momentum/energy conservation. The method allows one to represent arbitrary DFs, including multiple independent streams but also collisional or phase-mixed or thermal distributions (unlike traditional 'moments' or waterbag/tessellation methods), and the cost is bounded to a modest multiplier of MC/PIC/NB costs. We provide an example implementation which uses a spatially-Lagrangian volume partition, second-order reconstruction, and simple set of bases which ensure constant cell masses and couple directly to existing MC/PIC/NB machinery, made public in the code GIZMO. We validate in a series of test problems, demonstrating manifest conservation, Galilean and translation and rotation invariance, and ability to represent complex DFs without spurious dissipation or instability. We discuss applications where this method can have advantages compared to traditional algorithms for simulations of dark matter, stellar, weakly-collisional neutral gas, and particulate/dust dynamics; multiphase/polydisperse flows; cosmic ray and radiation transport/hydrodynamics; and plasma physics.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.23084",
+        "htmlUrl": "https://arxiv.org/html/2611.23084v1",
+        "authors": [
+          "Philip F. Hopkins"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "astro-ph.HE",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.23084v1/cartoon_xvdecomp.png",
+            "caption": "High-level schematic illustrating the method here ( right ), as compared to standard MC/PIC/NB methods ( left ). Left: In MC/PIC/NB: particles i i sample trajectories of individual micro-particles, i.e. a distribution function (DF) f ⁡ ( 𝐱 , 𝐯 , t ) ∝ δ ⁡ ( 𝐱 − 𝐱 i , 𝐯 − 𝐯 i , t ) f({\\bf x},\\,{\\bf v},\\,t)\\propto\\delta({\\bf x}-{\\bf x}_{i},\\,{\\bf v}-{\\bf v}_{i},\\,t) , but then get assigned a “weight” corresponding to many micro-particles ( Δ ​ m i ≫ m micro \\Delta m_{i}\\gg m_{\\rm micro} ). As such, concepts like “force softening” must be defined ad-hoc since the volume is not formally partitioned in any meaningful manner, and collisions or inter-particle forces must be sampled in a Monte-Carlo or coarse-grained manner. Right: The volume domain obeys a partition of unity into cells/domains Ω i \\Omega_{i} , around mesh-generating points 𝐱 i mesh {\\bf x}^{\\rm mesh}_{i} . For the MFM-like method we implement, these involve a smooth, overlapping decomposition with effective faces ( black line ) between neighbors, with Lagrangian motion 𝐱 i mesh = ⟨ 𝐱 ⟩ i = m i − 1 ​ ∫ Ω i ρ ⁡ ( 𝐱 ) ​ d 3 ​ 𝐱 {\\bf x}^{\\rm mesh}_{i}=\\langle{\\bf x}\\rangle_{i}=m_{i}^{-1}\\int_{\\Omega_{i}}\\rho({\\bf x}){\\rm d}^{3}{\\bf x} and 𝐯 i mesh ≡ d t ​ 𝐱 i mesh = ⟨ 𝐯 ⟩ i {\\bf v}^{\\rm mesh}_{i}\\equiv{\\rm d}_{t}{\\bf x}^{\\rm mesh}_{i}=\\langle{\\bf v}\\rangle_{i} . The DF is partitioned within each cell according to a set of basis functions f ⁡ ( 𝐯 | 𝐱 , t ) = ∑ ρ i , α ​ f ~ i , α ​ ( 𝐯 ) f({\\bf v}|{\\bf x},\\,t)=\\sum\\rho_{i,\\,\\alpha}\\tilde{f}_{i,\\,\\alpha}({\\bf v}) which are carried with the cells and evolve with time. The DF evolution is determined directly by the solution to the Vlasov equation, via fluxes between neighbors constructed at the face (after some higher-order reconstruction of f → f ∗ f\\to f^{\\ast} from each side). Thus the method is a full 6+1D representation of the DF, Lagrangian in both 𝐱 {\\bf x} and 𝐯 {\\bf v} .",
+            "captionLatex": "High-level schematic illustrating the method here ( right ), as compared to standard MC/PIC/NB methods ( left ). Left: In MC/PIC/NB: particles $i$ sample trajectories of individual micro-particles, i.e. a distribution function (DF) $f({\\bf x},\\,{\\bf v},\\,t)\\propto\\delta({\\bf x}-{\\bf x}_{i},\\,{\\bf v}-{\\bf v}_{i},\\,t)$ , but then get assigned a “weight” corresponding to many micro-particles ( $\\Delta m_{i}\\gg m_{\\rm micro}$ ). As such, concepts like “force softening” must be defined ad-hoc since the volume is not formally partitioned in any meaningful manner, and collisions or inter-particle forces must be sampled in a Monte-Carlo or coarse-grained manner. Right: The volume domain obeys a partition of unity into cells/domains $\\Omega_{i}$ , around mesh-generating points ${\\bf x}^{\\rm mesh}_{i}$ . For the MFM-like method we implement, these involve a smooth, overlapping decomposition with effective faces ( black line ) between neighbors, with Lagrangian motion ${\\bf x}^{\\rm mesh}_{i}=\\langle{\\bf x}\\rangle_{i}=m_{i}^{-1}\\int_{\\Omega_{i}}\\rho({\\bf x}){\\rm d}^{3}{\\bf x}$ and ${\\bf v}^{\\rm mesh}_{i}\\equiv{\\rm d}_{t}{\\bf x}^{\\rm mesh}_{i}=\\langle{\\bf v}\\rangle_{i}$ . The DF is partitioned within each cell according to a set of basis functions $f({\\bf v}|{\\bf x},\\,t)=\\sum\\rho_{i,\\,\\alpha}\\tilde{f}_{i,\\,\\alpha}({\\bf v})$ which are carried with the cells and evolve with time. The DF evolution is determined directly by the solution to the Vlasov equation, via fluxes between neighbors constructed at the face (after some higher-order reconstruction of $f\\to f^{\\ast}$ from each side). Thus the method is a full 6+1D representation of the DF, Lagrangian in both ${\\bf x}$ and ${\\bf v}$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.23084v1/fig_cartoon_vdf_2d.png",
+            "caption": "Schematic of the per-cell basis-function representation of the velocity DF f a ​ ( 𝐯 ) f_{a}({\\bf v}) . Left: a stylized 1D distribution (heavy black) with multiple unresolved peaks, reconstructed (red dashed) as a sum of N basis = 6 N_{\\rm basis}=6 Gaussian components (thin dashed coloured lines), each with its own weight ϖ α \\varpi_{\\alpha} , mean ⟨ v α ⟩ \\langle v_{\\alpha}\\rangle , and dispersion σ α \\sigma_{\\alpha} , all Lagrangian-evolved with the local flow. Right: a stylized 2D distribution f a ​ ( v x , v y ) f_{a}(v_{x},v_{y}) (filled contours of the mixture) built from N basis = 5 N_{\\rm basis}=5 anisotropic Gaussian basis components (here 5 5 independent streams), with 1 ​ σ 1\\sigma ellipses (white) marking the orientation and aspect of each individual g ~ α \\tilde{g}_{\\alpha} , and centres (white + + ) at ⟨ 𝐯 α ⟩ \\langle{\\bf v}_{\\alpha}\\rangle . The same parameters carry over directly to D = 3 D=3 , where each basis carries ( m , 𝐩 , 𝐓 ) (m,\\,{\\bf p},\\,{\\bf T}) with 𝐓 {\\bf T} a symmetric 3 × 3 3\\times 3 tensor encoding an anisotropic local dispersion. The fact that ⟨ 𝐯 α ⟩ \\langle{\\bf v}_{\\alpha}\\rangle and 𝐒 α {\\bf S}_{\\alpha} are themselves evolved Lagrangian variables – not fixed on a global ( v x , v y , v z ) (v_{x},v_{y},v_{z}) grid – is what makes this representation many orders of magnitude cheaper than a uniform-velocity-grid Vlasov scheme at comparable effective phase-space resolution.",
+            "captionLatex": "Schematic of the per-cell basis-function representation of the velocity DF $f_{a}({\\bf v})$ . Left: a stylized 1D distribution (heavy black) with multiple unresolved peaks, reconstructed (red dashed) as a sum of $N_{\\rm basis}=6$ Gaussian components (thin dashed coloured lines), each with its own weight $\\varpi_{\\alpha}$ , mean $\\langle v_{\\alpha}\\rangle$ , and dispersion $\\sigma_{\\alpha}$ , all Lagrangian-evolved with the local flow. Right: a stylized 2D distribution $f_{a}(v_{x},v_{y})$ (filled contours of the mixture) built from $N_{\\rm basis}=5$ anisotropic Gaussian basis components (here $5$ independent streams), with $1\\sigma$ ellipses (white) marking the orientation and aspect of each individual $\\tilde{g}_{\\alpha}$ , and centres (white $+$ ) at $\\langle{\\bf v}_{\\alpha}\\rangle$ . The same parameters carry over directly to $D=3$ , where each basis carries $(m,\\,{\\bf p},\\,{\\bf T})$ with ${\\bf T}$ a symmetric $3\\times 3$ tensor encoding an anisotropic local dispersion. The fact that $\\langle{\\bf v}_{\\alpha}\\rangle$ and ${\\bf S}_{\\alpha}$ are themselves evolved Lagrangian variables – not fixed on a global $(v_{x},v_{y},v_{z})$ grid – is what makes this representation many orders of magnitude cheaper than a uniform-velocity-grid Vlasov scheme at comparable effective phase-space resolution."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.23084v1/cartoon_xvdecomp.png",
+        "thumbnailAlt": "High-level schematic illustrating the method here ( right ), as compared to standard MC/PIC/NB methods ( left ). Left: In MC/PIC/NB: particles i i sample trajectories of individual micro-particles, i.e. a distribution function (DF) f ⁡ ( 𝐱 , 𝐯 , t ) ∝ δ ⁡ ( 𝐱 − 𝐱 i , 𝐯 − 𝐯 i , t ) f({\\bf x},\\,",
+        "catchupDate": "2026-11-18"
+      }
+    ],
+    "repl": [
+      {
+        "absId": "2509.06489",
+        "title": "Optimal robust detection statistics for pulsar timing arrays",
+        "summary": "Pulsar timing arrays (PTAs) seek to detect a nano-Hz stochastic gravitational-wave background (GWB) by searching for the characteristic Hellings and Downs angular pattern of timing residual correlations. So far, the evidence remains below the conventional $5\\sigma$ threshold, as assessed using the literature-standard \"optimal cross-correlation detection statistic\". While this quadratic combination of cross-correlated data maximizes the deflection (signal-to-noise ratio), it does not maximize the detection probability at fixed false-alarm probability (FAP), and therefore is not Neyman-Pearson (NP) optimal for the assumed noise and signal models. The NP-optimal detection statistic is a different quadratic form, but is not used because it also incorporates autocorrelations, making it more susceptible to uncertainties in the modeling of pulsar timing noise. Here, we derive the best compromise: a quadratic detection statistic which is as close as possible to the NP-optimal detection statistic (minimizing the variance of its difference with the NP statistic) subject to the constraint that it only uses cross-correlations, so that it is less affected by pulsar noise modeling errors. We study the performance of this new NPMV statistic for a simulated PTA whose noise and (putative) signal match those of the NANOGrav 15-year data release: GWB amplitude $A_{\\rm gw} = 2.1 \\times 10^{-15}$ and spectral index $\\gamma = 13/3$. Compared to the literature-standard \"optimal\" cross-correlation detection statistic, the NPMV statistic increases the detection probability by 47% when operating at a $5\\sigma$ false-alarm probability of $\\alpha = 2.9 \\times 10^{-7}$.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2509.06489",
+        "htmlUrl": "https://arxiv.org/html/2509.06489v2",
+        "authors": [
+          "Rutger van Haasteren",
+          "Bruce Allen",
+          "Joseph D. Romano"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "gr-qc"
+        ],
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2608.24459",
+        "title": "Wideband overlapped polyphase channelizer for kinetic inductance detector readout: split-path architecture and experimental characterization",
+        "summary": "Frequency-multiplexed readout of kinetic inductance detector arrays measures the complex transmission of thousands of superconducting resonators. The channelizer that separates them introduces systematic effects: a gain that depends on where each tone falls in the channel grid, leakage between channels and added noise. This article presents a 4096-channel polyphase channelizer with 2/1 overlap for a 4.096 GS/s input, implemented on a first-generation radio-frequency system-on-chip, and a procedure to characterize it on the board with two receive chains, one digitizing the excitation as a reference. A split-path architecture computes the two overlap states in parallel filter branches at 256 MHz and reorders them frame by frame, under three control rules; it keeps only the transform stage at 512 MHz and affords a prototype of 16 taps per polyphase path (65536 coefficients) at the multiplication rate of a published 8-tap bank. Each selected channel is exported as a complex series at 1 MS/s. The measured channel response follows the coefficient-table model within 0.15 dB down to -28 dB, with both overlapping channels at full gain across their common band. Leakage into every measured channel 1.875 MHz or more from the tone is -94 dBc or lower, apart from images attributed to converter interleaving. The signal-to-noise ratio per sample lies within 1.7 dB of the limit set by the data-sheet noise density of the converter, and an emulated detector pulse is recovered with a decay time of 14.65 $\\mu$s (standard uncertainty 0.04 $\\mu$s), within 0.7% of the expected value.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2608.24459",
+        "htmlUrl": "https://arxiv.org/html/2608.24459v2",
+        "authors": [
+          "Alberto Hernandez Fernandez",
+          "David Diaz Martin",
+          "Jose Javier Diaz Garcia",
+          "Roger John Hoyland",
+          "Luis Fernando Rodriguez Ramos",
+          "Diego Portero Rodriguez",
+          "Silvestre Rodriguez Perez"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "eess.SP"
+        ],
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2607.10403",
+        "title": "The muon Moonshot: Moon subsurface tomography with upward-going muons",
+        "summary": "We propose a novel muon Moonshot concept for lunar subsurface tomography based on upward-going muons originating from the lunar regolith. Unlike Earth, the Moon lacks an atmosphere, leaving dense regolith below and a near-vacuum environment above. Consequently, most downward-going hadrons are absorbed before decaying, while upward-going hadrons escaping the regolith can decay in flight, producing a significant flux of lunar muons. These muons can be detected by instruments on the lunar surface or in near-lunar orbit. We perform Monte Carlo simulations to investigate their energy spectra, angular distributions, and integrated fluxes under various theoretical and detector configurations. The results indicate that the lunar muon flux is sensitive to detector altitude under idealized geometry. This dependence demonstrates its potential as a novel, non-invasive probe of shallow subsurface voids. We also present case studies on the detection of underground cavities and water resources. For shallow overburden, large cavity signals remain detectable with estimated backgrounds and systematics. Weaker water signals remain challenging. Potential implementations in future lunar missions are also discussed.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2607.10403",
+        "htmlUrl": "https://arxiv.org/html/2607.10403v3",
+        "authors": [
+          "Zimo Hu",
+          "Leyun Gao",
+          "Zhengyun You",
+          "Qite Li",
+          "Qiang Li",
+          "Yuhong Yu",
+          "Liangwen Chen",
+          "Xueheng Zhang",
+          "Zhiyu Sun"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM",
+          "hep-ex",
+          "hep-ph"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2607.10403v3/Figure_1.png",
+            "caption": "Schematic illustration of the production of mesons, muons, and photons resulting from the interaction of primary cosmic rays with the lunar regolith. Muons escaping from the lunar surface can be detected by instruments located on the surface or at a height, providing a means for lunar subsurface tomography."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.10403v3/Figure_2.png",
+            "caption": "Simulated energy-differential muon fluxes at different altitudes for various levels of solar modulation potential Φ \\Phi , weighted by E 2 E^{2} . Each spectrum is obtained from N = 10 6 N=10^{6} primary cosmic-ray events.",
+            "captionLatex": "Simulated energy-differential muon fluxes at different altitudes for various levels of solar modulation potential $\\Phi$ , weighted by $E^{2}$ . Each spectrum is obtained from $N=10^{6}$ primary cosmic-ray events."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.10403v3/Figure_3.png",
+            "caption": "Simulated energy-differential fluxes of charged pions and charged kaons at the lunar surface, for various levels of solar modulation potential Φ \\Phi . Each distribution is obtained from N = 10 6 N=10^{6} primary cosmic-ray events.",
+            "captionLatex": "Simulated energy-differential fluxes of charged pions and charged kaons at the lunar surface, for various levels of solar modulation potential $\\Phi$ . Each distribution is obtained from $N=10^{6}$ primary cosmic-ray events."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.10403v3/Figure_4.png",
+            "caption": "Simulated energy-differential muon flux at the lunar surface under a solar modulation potential of Φ = 465 ​ MV \\Phi=465~\\mathrm{MV} . The curves correspond to different assumed subsurface structures beneath the lunar surface. The number of simulated primary cosmic-ray events for each distribution is indicated in the legend. The displayed x x -axis range is chosen to highlight the differences among the scenarios.",
+            "captionLatex": "Simulated energy-differential muon flux at the lunar surface under a solar modulation potential of $\\Phi=465~\\mathrm{MV}$ . The curves correspond to different assumed subsurface structures beneath the lunar surface. The number of simulated primary cosmic-ray events for each distribution is indicated in the legend. The displayed $x$ -axis range is chosen to highlight the differences among the scenarios."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.10403v3/Figure_5.png",
+            "caption": "Simulated energy-differential photon fluxes at the lunar surface for various levels of solar modulation potential Φ \\Phi , weighted by E 2 E^{2} . Each spectrum is obtained from N = 10 6 N=10^{6} primary cosmic-ray events. The data collected by the Fermi satellite [ 1 ] are also shown for comparison.",
+            "captionLatex": "Simulated energy-differential photon fluxes at the lunar surface for various levels of solar modulation potential $\\Phi$ , weighted by $E^{2}$ . Each spectrum is obtained from $N=10^{6}$ primary cosmic-ray events. The data collected by the Fermi satellite [ 1 ] are also shown for comparison."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.10403v3/Figure_6.png",
+            "caption": "Simulated energy-differential muon fluxes at various altitudes, for solar modulation potential Φ = 465 ​ MV \\Phi=465~\\mathrm{MV} , weighted by E 2 E^{2} . Each distribution is obtained from N = 10 6 N=10^{6} primary cosmic-ray events.",
+            "captionLatex": "Simulated energy-differential muon fluxes at various altitudes, for solar modulation potential $\\Phi=465~\\mathrm{MV}$ , weighted by $E^{2}$ . Each distribution is obtained from $N=10^{6}$ primary cosmic-ray events."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.10403v3/Figure_7.png",
+            "caption": "Simulated differential angular distributions at different altitudes, for various levels of solar modulation potential Φ \\Phi . Each distribution is obtained from N = 10 6 N=10^{6} primary cosmic-ray events.",
+            "captionLatex": "Simulated differential angular distributions at different altitudes, for various levels of solar modulation potential $\\Phi$ . Each distribution is obtained from $N=10^{6}$ primary cosmic-ray events."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2607.10403v3/Figure_1.png",
+        "thumbnailAlt": "Schematic illustration of the production of mesons, muons, and photons resulting from the interaction of primary cosmic rays with the lunar regolith. Muons escaping from the lunar surface can be detected by instruments located on the surface or at a height, providing a means for lunar subsurface tom",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2608.21394",
+        "title": "Cryogenic Mechanical Loss of GaAs/AlGaAs Crystalline Coatings",
+        "summary": "Optical coatings with minimal thermal noise are essential for high-precision, laser-based metrology experiments. Substrate-transferred crystalline GaAs/Al$_{0.92}$Ga$_{0.08}$As coatings have the lowest thermal noise for high-reflectivity mirror coatings with $\\lambda =900$ nm -- 12 $\\mu$m. Time-frequency stabilization experiments have demonstrated that GaAs/AlGaAs mirror coatings have a lower noise floor than amorphous mirror coatings. These mirrors are now being developed at sizes $\\ge 300$ mm for gravitational-wave detectors. In order to understand the coating's fundamental loss mechanisms, which cause thermal noise, we have performed the first measurement of the mechanical loss at cryogenic temperatures using a cryogenic, multimodal, gentle nodal suspension system, which operates from 12 K to room temperature. This initial measurement used a silicon substrate whose asymmetry produced excess friction with the nodal support. Accounting for this friction and Akhiezer loss in the substrate and coating, the mechanical loss agrees well with the thermal noise observed in experiments using cryogenic fixed-cavities with GaAs/AlGaAs mirrors.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2608.21394",
+        "htmlUrl": "https://arxiv.org/html/2608.21394v2",
+        "authors": [
+          "Nicholas A. Didio",
+          "Steven D. Penn",
+          "Satoshi Tanioka",
+          "Elenna M. Capote",
+          "Garrett D. Cole",
+          "Stefan W. Ballmer"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "gr-qc"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2608.21394v2/Figures/AlGaAsCoating.jpg",
+            "caption": "The GaAs/AlGaAs-coated silicon disk. The flat on the silicon substrate indicates the ( 110 ) (110) plane. The GaAs/AlGaAs [ 0 ​ 1 ¯ ​ 1 ] [0\\bar{1}1] orientation was aligned to this flat. The white streak across the sample is simply a reflection of the wall opposite the camera.",
+            "captionLatex": "The GaAs/AlGaAs-coated silicon disk. The flat on the silicon substrate indicates the $(110)$ plane. The GaAs/AlGaAs $[0\\bar{1}1]$ orientation was aligned to this flat. The white streak across the sample is simply a reflection of the wall opposite the camera."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.21394v2/Figures/CryoGeNS_Interior.jpg",
+            "caption": "The interior of the Cryo-GeNS chamber. The sample is a 10 ​ cm 10~$\\mathrm{c}\\mathrm{m}$ diameter bare silicon substrate.",
+            "captionLatex": "The interior of the Cryo-GeNS chamber. The sample is a $10~$\\mathrm{c}\\mathrm{m}$$ diameter bare silicon substrate."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.21394v2/Figures/SiliconLossVsTLoFricModes.png",
+            "caption": "The losses in the silicon wafer for the low friction modes including elastic, thermoelastic, phonon-phonon, and frictional losses."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.21394v2/Figures/SiliconResidualLoFricModes.png",
+            "caption": "The residual loss in the silicon wafer for the low friction modes including elastic, phonon-phonon, and frictional losses."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.21394v2/Figures/SuspensionDisplacementSubstrate-2.png",
+            "caption": "The z displacement at the suspension point for the uncoated silicon wafer. There is a monotonic mapping of higher displacement to higher frictional loss."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.21394v2/Figures/SiliconFriction.png",
+            "caption": "The combined elastic and friction loss in the silicon wafer are separated into the modes with minimal friction, ϕ E , s = ϕ Si = ( 6.4 ± 3.3 ) × 10 − 9 \\phi_{\\mathrm{E,s}}=\\phi_{\\mathrm{Si}}=\\left(6.4\\pm 3.3\\right)\\times 10^{-9} , and the modes dominated by frictional losses, with a power law decrease in loss as the displacement at the support point declines.",
+            "captionLatex": "The combined elastic and friction loss in the silicon wafer are separated into the modes with minimal friction, $\\phi_{\\mathrm{E,s}}=\\phi_{\\mathrm{Si}}=\\left(6.4\\pm 3.3\\right)\\times 10^{-9}$ , and the modes dominated by frictional losses, with a power law decrease in loss as the displacement at the support point declines."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.21394v2/Figures/AGCoatLossVsTLoFricModes.png",
+            "caption": "The losses in the GaAs/AlGaAs-coated silicon wafer for the low friction modes including elastic, thermoelastic, phonon-phonon, and frictional losses."
+          },
+          {
+            "url": "https://arxiv.org/html/2608.21394v2/Figures/AGCoatResidualLoFricModes.png",
+            "caption": "The residual loss in the GaAs/AlGaAs-coated silicon wafer for the low friction modes including elastic, phonon-phonon, and frictional losses."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2608.21394v2/Figures/AlGaAsCoating.jpg",
+        "thumbnailAlt": "The GaAs/AlGaAs-coated silicon disk. The flat on the silicon substrate indicates the ( 110 ) (110) plane. The GaAs/AlGaAs [ 0 ​ 1 ¯ ​ 1 ] [0\\bar{1}1] orientation was aligned to this flat. The white streak across the sample is simply a reflection of the wall opposite the camera.",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2610.04081",
+        "title": "AEGIS: Differentiable Mars Climate Model with Neural Closures",
+        "summary": "General circulation models (GCMs) are the primary tool for simulating planetary atmospheres. They play a vital role in understanding Mars's atmosphere, as forecasting its unique weather is mission-critical for operations such as entry, descent, and landing. Mars poses unusual challenges for these models, as observations are sparse compared to Earth. In addition, a thin $CO_2$ atmosphere alongside a radiatively active dust cycle creates a volatile atmosphere with large diurnal temperature swings and no true terrestrial analog for validation. Existing Mars GCMs, including the LMD PCM, the NASA Ames Mars GCM, and PlanetWRF, are mature and physically detailed but are implemented in legacy Fortran with finite-difference or finite-volume solvers, and they do not expose gradients for calibration or machine learning. Here we present AEGIS, a modular differentiable Mars climate model that couples Mars's unique atmospheric physics to the Dinosaur dynamical core, with interfaces for neural closures. We showcase stable ten-Mars-year simulations that reproduce the seasonal $CO_2$ cycle while conserving the total $CO_2$ inventory, capture realistic large-scale surface-temperature structure, and produce surface pressure that follows Mars Orbiter Laser Altimeter (MOLA) topography. Gradients through coupled trajectories agree with finite differences and support physical calibration and neural training. We compare with conventional GCMs, highlighting the framework's computational efficiency and differentiability.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.04081",
+        "htmlUrl": "https://arxiv.org/html/2610.04081v2",
+        "authors": [
+          "Sameera S Kashyap",
+          "Victor Cruz",
+          "Angel Yepez",
+          "Razvan Marinescu"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM",
+          "cs.AI"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.04081v2/assets/architecture.png",
+            "caption": "AEGIS architecture. Planetary constants and boundary data configure a shared GCM. Dinosaur supplies resolved dynamics; Mars physical operators supply column tendencies and surface evolution; neural components enter as bounded residuals or component replacements. The coupled time step advances atmosphere and surface reservoirs. Trajectory objectives connect the simulated fields to physical-parameter calibration and neural training through automatic differentiation. Dashed arrows denote this gradient-based update path."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.04081v2/figures/ls135_grid.png",
+            "caption": "Seasonal fields at L s = 135 ∘ L_{s}=135^{\\circ} from the AEGIS run and reference products. Columns show AEGIS, NASA Ames, MCD 6.1, and ARCO-MACDA; rows show surface temperature, surface pressure, near-surface wind speed, and surface CO 2 frost in pressure-equivalent units. White contours mark zero MOLA elevation, and each row shares a color scale. AEGIS and Ames use matched five-sol intervals; MCD and ARCO-MACDA use the averaging described above.",
+            "captionLatex": "Seasonal fields at $L_{s}=135^{\\circ}$ from the AEGIS run and reference products. Columns show AEGIS, NASA Ames, MCD 6.1, and ARCO-MACDA; rows show surface temperature, surface pressure, near-surface wind speed, and surface CO 2 frost in pressure-equivalent units. White contours mark zero MOLA elevation, and each row shares a color scale. AEGIS and Ames use matched five-sol intervals; MCD and ARCO-MACDA use the averaging described above."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.04081v2/figures/ls045_grid.png",
+            "caption": "Seasonal fields at L s = 45 ∘ L_{s}=45^{\\circ} . Columns, rows, MOLA contours, and averaging follow Figure 3 .",
+            "captionLatex": "Seasonal fields at $L_{s}=45^{\\circ}$ . Columns, rows, MOLA contours, and averaging follow Figure 3 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.04081v2/figures/ls225_grid.png",
+            "caption": "Seasonal fields at L s = 225 ∘ L_{s}=225^{\\circ} . Columns, rows, MOLA contours, and averaging follow Figure 3 .",
+            "captionLatex": "Seasonal fields at $L_{s}=225^{\\circ}$ . Columns, rows, MOLA contours, and averaging follow Figure 3 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.04081v2/figures/ls315_grid.png",
+            "caption": "Seasonal fields at L s = 315 ∘ L_{s}=315^{\\circ} . Columns, rows, MOLA contours, and averaging follow Figure 3 .",
+            "captionLatex": "Seasonal fields at $L_{s}=315^{\\circ}$ . Columns, rows, MOLA contours, and averaging follow Figure 3 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.04081v2/assets/architecture.png",
+        "thumbnailAlt": "AEGIS architecture. Planetary constants and boundary data configure a shared GCM. Dinosaur supplies resolved dynamics; Mars physical operators supply column tendencies and surface evolution; neural components enter as bounded residuals or component replacements. The coupled time step advances atmosp",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2610.22338",
+        "title": "Identifying deformed exoplanets with JWST and Ariel: A target selection metric for phase curve observations",
+        "summary": "The shape of an exoplanet encodes fundamental information about its internal structure. For close-in giant planets, strong stellar tidal forces induce measurable deformations that can be probed through high-precision photometry. These deformations are quantified by the fluid Love numbers, which characterise a planet's response to external perturbations and are directly linked to its internal density distribution. In this work, we assess the potential of JWST and the future Ariel mission to constrain the Love numbers of hot Jupiters through full-orbit phase curve observations. To identify the most promising targets for this science case, we introduce a new detection metric, the deformation metric (D), which combines the expected deformation amplitude with the anticipated photometric signal-to-noise ratio. We apply this metric to the Ariel target list and identify WASP-33 b, WASP-76 b, and HAT-P-32 b as the three most favourable targets that currently lack Love number measurements. Using WASP-76 b as a benchmark case, we perform end-to-end retrieval simulations and show that a single continuous JWST phase curve observation can constrain the Love number $h_{2f}$ to a precision of $\\sigma_{h_2f} \\approx 0.09$, while a single Ariel visit could achieve $\\sigma_{h_{2f}} \\approx 0.18$. Such precision is likely sufficient for Love number measurements to provide meaningful constraints on planetary interior models and to distinguish between competing interior-structure scenarios, opening a new observational avenue for probing the deep interiors of exoplanets.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.22338",
+        "htmlUrl": "https://arxiv.org/html/2610.22338v2",
+        "authors": [
+          "Vanesa Ramírez",
+          "Yamila Miguel",
+          "Billy Edwards",
+          "Babatunde Akinsanmi",
+          "Deivy Mercado"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.22338v2/candidates.png",
+            "caption": ": Distribution of the analysed exoplanet population in the planetary radius versus orbital period plane. Background grey circles represent the broader population of known transiting exoplanets from the NASA Exoplanet Archive. The Ariel target list is superimposed and colours-coded by the value of the deformation metric ( 𝒟 \\mathcal{D} ). The ten highest-ranked targets for phase curve deformation studies are highlighted with cyan open circles and numbered from 1 to 10 in order of descending 𝒟 \\mathcal{D} value (Table 2 for their detailed physical and orbital parameters). The optimal candidates clearly cluster in the upper-left quadrant, demonstrating the metric’s strong selection towards highly inflated giant planets on ultra-short-period orbits.",
+            "captionLatex": ": Distribution of the analysed exoplanet population in the planetary radius versus orbital period plane. Background grey circles represent the broader population of known transiting exoplanets from the NASA Exoplanet Archive. The Ariel target list is superimposed and colours-coded by the value of the deformation metric ( $\\mathcal{D}$ ). The ten highest-ranked targets for phase curve deformation studies are highlighted with cyan open circles and numbered from 1 to 10 in order of descending $\\mathcal{D}$ value (Table 2 for their detailed physical and orbital parameters). The optimal candidates clearly cluster in the upper-left quadrant, demonstrating the metric’s strong selection towards highly inflated giant planets on ultra-short-period orbits."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.22338v2/phasecurve_jwst_ariel_deformed_vs_spherical.png",
+            "caption": ": Representative simulated full-orbit phase curves of WASP-76 b for JWST/NRS1 (left) and Ariel /NIRSpec (right), comparing deformed- and spherical-planet fits. Panels a: Simulated data and phase-curve models. Panels b: Zoomed-in view of the phase curves with the fitted models overplotted. The solid cyan and red dashed curves represent the phase-curve models for the deformed and spherical planets, respectively. The dotted curves at the bottom of this panel show the corresponding stellar ellipsoidal variation components ( F EV F_{\\rm EV} ), while the yellow curve represents the contribution of tidal deformation to the total phase curve. Panels c and d show the residuals relative to the deformed (cyan) and spherical (red) planet models, respectively. In panel d, the black curve shows the difference between two models, highlighting the component of the phase-curve signal that cannot be fully reproduced by the spherical model. The simulated data show one noise realisation for each instrument.",
+            "captionLatex": ": Representative simulated full-orbit phase curves of WASP-76 b for JWST/NRS1 (left) and Ariel /NIRSpec (right), comparing deformed- and spherical-planet fits. Panels a: Simulated data and phase-curve models. Panels b: Zoomed-in view of the phase curves with the fitted models overplotted. The solid cyan and red dashed curves represent the phase-curve models for the deformed and spherical planets, respectively. The dotted curves at the bottom of this panel show the corresponding stellar ellipsoidal variation components ( $F_{\\rm EV}$ ), while the yellow curve represents the contribution of tidal deformation to the total phase curve. Panels c and d show the residuals relative to the deformed (cyan) and spherical (red) planet models, respectively. In panel d, the black curve shows the difference between two models, highlighting the component of the phase-curve signal that cannot be fully reproduced by the spherical model. The simulated data show one noise realisation for each instrument."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.22338v2/candidates.png",
+        "thumbnailAlt": ": Distribution of the analysed exoplanet population in the planetary radius versus orbital period plane. Background grey circles represent the broader population of known transiting exoplanets from the NASA Exoplanet Archive. The Ariel target list is superimposed and colours-coded by the value of th",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.03019",
+        "title": "Are habitable-zone TESS Objects of Interest really there? Period resolution from the full archive",
+        "summary": "TESS Objects of Interest (TOIs) seen as single or duo transits carry a catalogue period that is undefined or equal to the separation of the two events, and their insolation and any habitable-zone label inherit it. We reanalyse all 187 TOIs catalogued with P = 0 or P >= 200 d using all public TESS data through Sector 107, with a flux-based method that weights each alias by per-epoch transit likelihoods, the transit duration and a geometric prior, and tests for coherence, data edges, contamination by other planets and instrumental artefacts. It recovers 12 published periods blindly and, in injection-recovery tests, 71 per cent of periods constrained by a new transit, with no wrong period. It resolves 28 periods and fixes 8 more by exclusion. Are habitable-zone TOIs really there? Mostly not: of the 28 duo-transits that a catalogue-period criterion places in the conservative habitable zone, about two are expected to lie there, both giant planets, and none of the 12 small (Rp < 4 Earth radii) ones; those resolved are aliases of hotter planets. Conversely, habitable-zone planets hide behind missing or wrong periods: we recover three published M-dwarf examples and validate TOI-2298 b, a 3.0 Earth-radius sub-Neptune at 146.58 d in the conservative habitable zone of a K dwarf. Of three further planets validated with new periods, TOI-6075 b (1.7 Earth radii, 416.5 d, 833 d not excluded) lies beyond the outer edge and is the second validated transiting planet smaller than 2 Earth radii with P > 1 yr. We release alias-marginalised habitable-zone probabilities for the whole sample.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.03019",
+        "htmlUrl": "https://arxiv.org/html/2611.03019v2",
+        "authors": [
+          "Juan F. Pagés Navarrete"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.03019v2/fig6_sector7.png",
+            "caption": "SPOC 2-min light curves of TOI-4344.01, TOI-4348.01, TOI-4355.01 and TOI-6691.01 around BTJD 1507.6 (Sector 7), binned to 1 h and vertically offset. Triangles mark each catalogued epoch and the shaded band the interval BTJD 1507.52–1507.66 that contains all four. The simultaneous shallow dip in four unrelated stars, shared by the other stars on the same detector (Fig. 3 ), identifies an instrumental artefact."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.03019v2/fig4_zh.png",
+            "caption": "Habitable-zone status of the long-period TOIs. Shaded bands show the conservative (dark) and optimistic (light) habitable zones of Kopparapu et al. (2013) ; Kopparapu et al. (2014) . Yellow circles are duo-transits that the catalogue period places in the habitable zone and that remain unresolved, coloured by their probability of lying in the conservative habitable zone after marginalising the aliases; all have P(HZ) ≈ 0. Arrows go from the catalogue-period insolation to that of the resolved period (red for R p < 4 R_{\\rm p}<4 R⊕, pink for larger objects); triangles at the right edge mark catalogue insolations below the plotted range. Stars are mono-transits resolved in the habitable zone. Insolations use TIC parameters (0.56 S⊕ for TOI-2298 b; 0.62 S⊕ with Gaia DR3).",
+            "captionLatex": "Habitable-zone status of the long-period TOIs. Shaded bands show the conservative (dark) and optimistic (light) habitable zones of Kopparapu et al. (2013) ; Kopparapu et al. (2014) . Yellow circles are duo-transits that the catalogue period places in the habitable zone and that remain unresolved, coloured by their probability of lying in the conservative habitable zone after marginalising the aliases; all have P(HZ) ≈ 0. Arrows go from the catalogue-period insolation to that of the resolved period (red for $R_{\\rm p}<4$ R⊕, pink for larger objects); triangles at the right edge mark catalogue insolations below the plotted range. Stars are mono-transits resolved in the habitable zone. Insolations use TIC parameters (0.56 S⊕ for TOI-2298 b; 0.62 S⊕ with Gaia DR3)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.03019v2/fig8_validados.png",
+            "caption": "Phase-folded transits of TOI-5724 b, TOI-4629 b and TOI-6075 b with their juliet models, binned to 30 min. TOI-6075 b is folded at 416.48 d; the 833-d solution is not excluded (Section 6.1 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.03019v2/fig9_centroides.png",
+            "caption": "Difference-image centroids. Left and centre: out-of-transit and difference images of TOI-2298 in Sectors 24 and 83 (red cross: target; black cross: flux-weighted centroid of the difference image, recomputed here for illustration). In Sector 24 the signal is centred on the target; in Sector 83 the adjacent positive and negative pixels form a motion dipole. A bright star at the edge of the cut-outs saturates the colour scale. Right: distance of the difference-image centroid from the target against its distance from each neighbour that TRICERATOPS identifies as a possible host (medians over events, with the typical uncertainty); all lie far from the equidistance line."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.03019v2/fig6_sector7.png",
+        "thumbnailAlt": "SPOC 2-min light curves of TOI-4344.01, TOI-4348.01, TOI-4355.01 and TOI-6691.01 around BTJD 1507.6 (Sector 7), binned to 1 h and vertically offset. Triangles mark each catalogued epoch and the shaded band the interval BTJD 1507.52–1507.66 that contains all four. The simultaneous shallow dip in four",
+        "catchupDate": "2026-11-18"
+      },
+      {
+        "absId": "2611.14330",
+        "title": "Linking Outer Solar System Objects in Archival DECam Imaging: A Multi-year Linker Tested on Held-out Known Objects, and 189 Multi-opposition Candidates Including Five L4 Neptune Trojans, Two Retrograde Objects and Eight with a > 150 au",
+        "summary": "I link single-night detections in public DECam imaging: 74% of the NOIRLab Source Catalog DR2 (2012-2019) sky with four or more nights, and my extraction from 149,421 exposures (2020-2026). Of 931 secure known objects, single-season linking recovers 22.1-25.0%, a multi-year linker 26.5%, together 36.2%. The multi-year rule, fixed before its held-out tests, recovers 68% of DES objects brighter than r = 23.5 in a strip of its footprint and 14 of 47 known objects outside it. Its shifted-sky controls, complete for 162 of 165 blocks, return no candidate. For its 34 candidates not already known this limits pure chance alignments to under 4% (11% at seven nights), but not links that mix real and chance detections. At six nights real and control counts are indistinguishable. Identification by orbit finds 14 designated objects that a position check missed. The catalogue has 189 undesignated candidates with orbits from two or more oppositions, whose linked detections were re-measured on the images; 41 were then detected on two or more nights that their fits did not use. Listed apart are 63 weaker entries and 19 designated objects, 12 of them Rubin discoveries with 4.9-13.2 yr of earlier arc. Five are candidate L4 Neptune Trojans whose orbits and clones librate for 10 Myr (one reported independently by Jongma 2026, mostly from other data), two are retrograde candidates and eight have a > 150 au. There is no follow-up and no selection function. The Minor Planet Center has astrometry of 37 objects; unreleased positions are available on request, in confidence.",
+        "published": "2026-11-18T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.14330",
+        "htmlUrl": "https://arxiv.org/html/2611.14330v2",
+        "authors": [
+          "Gioele Cerati"
+        ],
+        "categories": [
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.14330v2/coverage_F1.png",
+            "caption": "Coverage of the two DECam data sets, NSC DR2 (2012–2019) and d25 (2020–2026), in cells of one square degree (equatorial coordinates). Top: median 5 ​ σ 5\\sigma depth of the exposures of a cell, r r -equivalent. Bottom: number of distinct nights; cells with fewer than four nights are red. Black: DES footprint. Dash-dotted: sky observed by Rubin in the public record (a lower bound). Dashed: ecliptic. Dotted: Galactic plane. The NSC DR2 layer is drawn from the catalogue files that I had downloaded, in cells offset by half a degree, and is neither all the sky that NSC DR2 covers nor only the sky that was read (Section II.4 ). No catalogue object is shown.",
+            "captionLatex": "Coverage of the two DECam data sets, NSC DR2 (2012–2019) and d25 (2020–2026), in cells of one square degree (equatorial coordinates). Top: median $5\\sigma$ depth of the exposures of a cell, $r$ -equivalent. Bottom: number of distinct nights; cells with fewer than four nights are red. Black: DES footprint. Dash-dotted: sky observed by Rubin in the public record (a lower bound). Dashed: ecliptic. Dotted: Galactic plane. The NSC DR2 layer is drawn from the catalogue files that I had downloaded, in cells offset by half a degree, and is neither all the sky that NSC DR2 covers nor only the sky that was read (Section II.4 ). No catalogue object is shown."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.14330v2/elements_tierA.png",
+            "caption": "Eccentricity and inclination against barycentric semimajor axis for the 189 tier-A objects, with the rounded elements of the machine-readable catalogue. Symbols give the dynamical class; open symbols are classes that are not secure. Grey points: designated objects, for orientation. No orientation angle enters the figure."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.14330v2/stamps.png",
+            "caption": "DECam images of GCT0044 (top) and of GCT0198 = 2026 GU 20 (bottom), a designated object of Table 11 , from the public NOIRLab archive. Each panel is 40 ′′ 40^{\\prime\\prime} on a side, with north up and east to the left. The first four panels of each row show the object on four nights in time order, with the UT date, the filter and the exposure time. The ticks mark the position given in the released file; for the first three panels of GCT0044 this is an NSC DR2 catalogue position that I did not re-measure. All four images of 2026 GU 20 predate its discovery observation of 2026 April 5, by 2.1 to 13.2 yr. The last panel of each row shows the sky position of one of the four (the third for GCT0044, the first for 2026 GU 20 ) on another night, on an exposure of equal or greater depth (2018 August 12 and 2016 March 2): nothing is at the ticks. The aperture signal-to-noise ratios measured for this figure are 14.2 to 42.7 for GCT0044, 7.9 to 14.9 for 2026 GU 20 , and 0.6 and 0.9 at the ticks of the two control panels. The pixels are those of the Community Pipeline images, rotated by 90 degrees and not resampled. The display is a linear stretch between the 1st and 99th percentiles of the central 20 ′′ 20^{\\prime\\prime} of each panel, in inverted grey scale; no other processing was applied.",
+            "captionLatex": "DECam images of GCT0044 (top) and of GCT0198 = 2026 GU 20 (bottom), a designated object of Table 11 , from the public NOIRLab archive. Each panel is $40^{\\prime\\prime}$ on a side, with north up and east to the left. The first four panels of each row show the object on four nights in time order, with the UT date, the filter and the exposure time. The ticks mark the position given in the released file; for the first three panels of GCT0044 this is an NSC DR2 catalogue position that I did not re-measure. All four images of 2026 GU 20 predate its discovery observation of 2026 April 5, by 2.1 to 13.2 yr. The last panel of each row shows the sky position of one of the four (the third for GCT0044, the first for 2026 GU 20 ) on another night, on an exposure of equal or greater depth (2018 August 12 and 2016 March 2): nothing is at the ticks. The aperture signal-to-noise ratios measured for this figure are 14.2 to 42.7 for GCT0044, 7.9 to 14.9 for 2026 GU 20 , and 0.6 and 0.9 at the ticks of the two control panels. The pixels are those of the Community Pipeline images, rotated by 90 degrees and not resampled. The display is a linear stretch between the 1st and 99th percentiles of the central $20^{\\prime\\prime}$ of each panel, in inverted grey scale; no other processing was applied."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.14330v2/coverage_F1.png",
+        "thumbnailAlt": "Coverage of the two DECam data sets, NSC DR2 (2012–2019) and d25 (2020–2026), in cells of one square degree (equatorial coordinates). Top: median 5 ​ σ 5\\sigma depth of the exposures of a cell, r r -equivalent. Bottom: number of distinct nights; cells with fewer than four nights are red. Black: DES ",
+        "catchupDate": "2026-11-18"
+      }
+    ]
+  }
+}
