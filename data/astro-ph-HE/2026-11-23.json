@@ -1,0 +1,1203 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "source": "arxiv-catchup",
+  "category": "astro-ph.HE",
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-23T08:52:00.395Z",
+  "figuresStatus": "complete",
+  "figureCounts": {
+    "processed": 28,
+    "total": 28,
+    "found": 21
+  },
+  "counts": {
+    "new": 12,
+    "cross": 7,
+    "repl": 9
+  },
+  "papersBySection": {
+    "new": [
+      {
+        "absId": "2611.26662",
+        "title": "Detection of GRB 261010A with GRID-11B",
+        "summary": "We report GRID-11B observations of the main emission episode of GRB 261010A. We measure $T_{90}=5.68^{+1.04}_{-0.32}$ s and a minimum variability timescale of $51.6^{+10.5}_{-9.8}$ ms. Its spectrum is described by a cutoff power law with $E_{\\rm p}=1089^{+171}_{-80}$ keV. At both candidate host redshifts ($z=0.070$ and $0.785$), the low $\\varepsilon$ values and their positions relative to the Amati relation suggest Type-I-like properties. These properties, despite the long duration, resemble those of GRB 211211A and motivate investigation of a possible compact-object merger origin.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26662",
+        "htmlUrl": "https://arxiv.org/html/2611.26662v1",
+        "authors": [
+          "Chenyu Wang",
+          "Longhao Li",
+          "Xiaofan Pan",
+          "Hua Feng",
+          "Ming Zeng",
+          "Zihan Yu"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.26681",
+        "title": "Lost in the Signal Model: Confusion Between Deterministic and Stochastic Gravitational Wave Signals in Pulsar Timing Array Data",
+        "summary": "With growing evidence for the presence of a gravitational wave background (GWB) in pulsar timing array (PTA) data, it is imperative to understand how this signal will act as a foreground for other GW signals, particularly those from individual supermassive black hole binaries (SMBHBs), which are predicted to be detected in the next decade. For PTAs, since these two types of signals are long-timescale persistent signals, a signal from an SMBHB system may already be present in the latest PTA datasets. In this work, we analyze how the presence of this signal could affect our detection statistics for the GWB, and how the presence of the GWB can affect our search for the SMBHB system. We find that individual SMBHB signals can significantly skew the recovery of the GWB amplitude and spectral index. However, when the SMBHB signals are recovered consistently, we are again able to recover the GWB power-law parameters, highlighting the importance of joint searches in future PTA searches for GWs. We also explore the rate of improvement of parameter estimation uncertainty, giving insight to the types of signals most likely to be identified well enough to enable multimessenger analyses.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26681",
+        "htmlUrl": "https://arxiv.org/html/2611.26681v1",
+        "authors": [
+          "Caitlin A. Witt",
+          "Nihan S. Pol"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.26681v1/sim_map_avg_snr_nihan.png",
+            "caption": "Sky locations of the pulsars in NANOGrav’s 15-year data set (grey stars) and our injected SMBHB signals (diamonds). The color axis represents the log-likelihood ratio of each binary, averaged across each combination of injected parameters."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26681v1/figures/free_spec_3panel_55_remade.png",
+            "caption": "Bayesian “free-spectrum” analyses showing posteriors (violins) of variance at frequencies i / T i/T in one realization of our data set containing either a GWB (blue) or a GWB+CW (peach and purple). These illustrate the recovery of injected power-law GWB (red line) and CW (gray dashed line). The CW frequencies seen in each pulsar (the ”pulsar-term frequencies”) are shown in light gray.",
+            "captionLatex": "Bayesian “free-spectrum” analyses showing posteriors (violins) of variance at frequencies $i/T$ in one realization of our data set containing either a GWB (blue) or a GWB+CW (peach and purple). These illustrate the recovery of injected power-law GWB (red line) and CW (gray dashed line). The CW frequencies seen in each pulsar (the ”pulsar-term frequencies”) are shown in light gray."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26681v1/skew_cw_side.png",
+            "caption": "When jointly modeling CWs and a CURN process, the clear ℳ \\mathcal{M} and f GW f_{\\rm GW} correlations disappear (left panel), but there is still significant skew between the recovered GWB parameters when there is a CW injected (orange and purple points) versus without (blue circles). This bias is larger for CWs injected at sky locations with ϕ < 12 \\phi<12 h. If the CW parameters are consistent with the injected values (right panel), there is no longer a significant difference in our parameter estimation as compared to the GWB-only data sets.",
+            "captionLatex": "When jointly modeling CWs and a CURN process, the clear $\\mathcal{M}$ and $f_{\\rm GW}$ correlations disappear (left panel), but there is still significant skew between the recovered GWB parameters when there is a CW injected (orange and purple points) versus without (blue circles). This bias is larger for CWs injected at sky locations with $\\phi<12$ h. If the CW parameters are consistent with the injected values (right panel), there is no longer a significant difference in our parameter estimation as compared to the GWB-only data sets."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.26681v1/sim_map_avg_snr_nihan.png",
+        "thumbnailAlt": "Sky locations of the pulsars in NANOGrav’s 15-year data set (grey stars) and our injected SMBHB signals (diamonds). The color axis represents the log-likelihood ratio of each binary, averaged across each combination of injected parameters.",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.26682",
+        "title": "Blazars through the eyes of REDSoX and GOSoX",
+        "summary": "Blazar polarimetric properties provide key constraints on the physical conditions within relativistic jets, offering insights into particle acceleration mechanisms, high-energy radiation processes, and jet composition. The Rocket Experiment Demonstration of a Soft X-ray Polarimeter (REDSoX) will serve as a precursor to the Globe Orbiting Soft X-ray Polarimeter (GOSoX), a state-of-the-art polarimeter designed for observations in the soft X-ray range (0.2-0.4 keV), with a planned launch for 2030. REDSoX and GOSoX will be the first (and currently only) X-ray polarimeters capable of performing observations below 1 keV, opening a new observational window into high-energy polarimetry. In this work, we investigate the soft X-ray polarimetric properties of blazars expected in the REDSoX and GOSoX band and assess the detectability of different samples of sources: one drawn from the RoboPol Monitoring Program, a statistically complete sample of gamma-ray-selected blazars spanning the low-, intermediate-, and high-synchrotron-peaked sources, and one cross-matched between the CAZ (CRTS, ATLAS, and ZTF) and eROSITA catalogs. We estimated the expected source fluxes in the selected energy bands through spectral energy distribution fitting performed with the Bjet-MCMC tool. We investigated the expected polarimetric properties under three competing emission scenarios: leptonic, hadronic, and hybrid, each one predicting distinct observational signatures. We assessed the detectability of every source by comparing our polarization degree predictions with the instrument's minimum detectable polarization function (MDP). Finally, we computed the detection probability for each source. This work offers a set of promising blazar targets for future observations with GOSoX, highlighting the mission's potential for probing relativistic jet physics through soft X-ray polarimetry.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26682",
+        "htmlUrl": "https://arxiv.org/html/2611.26682v1",
+        "authors": [
+          "Sara Capecchiacci",
+          "Ioannis Liodakis",
+          "Herman L. Marshall",
+          "Swati Ravi",
+          "Haocheng Zhang"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.26682v1/Images/BLLac_model.png",
+            "caption": ": The BL Lac models used as a template for all our LSP sources. Top: Fitted SED. Black stars represent the frequency-binned data. Bottom: Predicted PD. The dotted blue line represents the hadronic model, the dashed black line represents the leptonic, and the dash-dotted magenta line the hybrid. The blue shaded area highlights the GOSoX observation band (0.2-0.4 keV)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26682v1/Images/LSP_allmodels_redsox_1000000s.png",
+            "caption": "Figure 2 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26682v1/Images/ISP_allmodels_redsox_1000000s.png",
+            "caption": "Figure 3 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26682v1/Images/HSP_allmodels_redsox_300000s.png",
+            "caption": "Figure 4 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26682v1/Images/LSP.png",
+            "caption": "Figure 5 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26682v1/Images/ISP.png",
+            "caption": "Figure 6 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26682v1/Images/HSP.png",
+            "caption": "Figure 7 from the paper"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26682v1/Images/Mrk501_model.png",
+            "caption": "(a) Mrk 501 (HSP)"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.26682v1/Images/BLLac_model.png",
+        "thumbnailAlt": ": The BL Lac models used as a template for all our LSP sources. Top: Fitted SED. Black stars represent the frequency-binned data. Bottom: Predicted PD. The dotted blue line represents the hadronic model, the dashed black line represents the leptonic, and the dash-dotted magenta line the hybrid. The ",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.26696",
+        "title": "From Binary Wind to Radio Burst: Dispersion-Measure Evolution after Accretion-induced Collapse",
+        "summary": "Secular changes in the dispersion measures (DMs) of repeating fast radio bursts probe the source-local plasma. Such DM time variability has been interpreted with spherical, single-density-profile models. Accretion-induced collapse (AIC) of a white dwarf may instead follow binary interaction and occur inside a finite, anisotropic circumstellar structure. Here, we construct an angle-dependent toy model of aspherical AIC ejecta propagating through a pre-AIC free wind, shocked-wind bubble, swept-up external shell, and polar cavity, exploring a diffuse environment (number density of $1~{\\rm cm^{-3}}$, located at $10~$pc) and a compact cloud (number density of $500~{\\rm cm^{-3}}$, located at $0.3~$pc), bracketing ionized and initially neutral upstream gas. The unshocked ejecta initially yield ${\\rm DM}\\propto t^{-2}$, while crossings of the finite wind-bubble interfaces produce breaks and curvature in ${\\rm DM}(t)$. In initially neutral models, shock ionization can overcome geometric dilution: the total DM reverses from decline to growth after approximately $10$--$20$ yr and later turns over as the finite reservoir is processed. Ionized-upstream models instead generally decline or flatten. Without fitting individual sources, our models span both signs and the approximate magnitudes of the secular DM-variation rates measured among repeaters. In this dynamical framework, DM evolution is set by shock propagation through the circumsource density and ionization structure, rather than the contemporaneous burst rate, distinguishing it from photoionization-driven scenarios. Consequently, in our model, an instantaneous \\(d{\\rm DM}/dt\\) is not a unique indicator of source age. We suggest that the observed distribution of secular DM variation slope amplitudes and signs will be important for distinguishing among different models of DM variations in repeating FRBs.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26696",
+        "htmlUrl": "https://arxiv.org/html/2611.26696v1",
+        "authors": [
+          "Smadar Naoz",
+          "Victoria M. Kaspi"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.26696v1/CartoonNew.png",
+            "caption": "Illustration of the pre-AIC interacting binary system (left) and early AIC ejecta––circumstellar interaction (right). The cartoon is not to scale. The black dashed contour marks the Lagrangian core–envelope break, q = q core q=q_{\\rm core} . While this material remains unshocked, its physical radius along each direction is R core ​ ( θ , t ) = q core ​ R ejc ​ ( θ , t ) R_{\\rm core}(\\theta,t)=q_{\\rm core}R_{\\rm ejc}(\\theta,t) . It is a material boundary rather than a shock.",
+            "captionLatex": "Illustration of the pre-AIC interacting binary system (left) and early AIC ejecta––circumstellar interaction (right). The cartoon is not to scale. The black dashed contour marks the Lagrangian core–envelope break, $q=q_{\\rm core}$ . While this material remains unshocked, its physical radius along each direction is $R_{\\rm core}(\\theta,t)=q_{\\rm core}R_{\\rm ejc}(\\theta,t)$ . It is a material boundary rather than a shock."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26696v1/DynDMDown0n500Down1n1_0_90.png",
+            "caption": "Contributions to the local DM, grouped by material origin, as a function of time since the AIC. The rows show viewing inclinations i = 0 ∘ i=0^{\\circ} and 90 ∘ 90^{\\circ} . The left column shows an ionized external upstream embedded in a diffuse ISM with n ext = 1 ​ cm − 3 n_{\\rm ext}=1~{\\rm cm^{-3}} and R out = 10 ​ pc R_{\\rm out}=10~{\\rm pc} , while the right column shows a system embedded in a dense cloud with n ext = 500 ​ cm − 3 n_{\\rm ext}=500~{\\rm cm^{-3}} and R out = 0.3 ​ pc R_{\\rm out}=0.3~{\\rm pc} . In the dense-cloud example, the pre-AIC swept-up external shell and the external medium ahead of the AIC shock are neutral, whereas the AIC shock ionizes the processed material. The components are the unshocked AIC ejecta (blue), reverse-shocked AIC ejecta (green), pre-AIC free-wind material (purple), pre-AIC shocked-wind material (brown), pre-AIC swept-up external-medium shell material (magenta), and external-medium material (gray). Each circumstellar or external-medium component includes both the material already swept into the AIC-shocked shell and any material that remains ahead of the AIC forward shock. Solid and dashed curves correspond to ( M ejc , E K ) = ( 0.1 ​ M ⊙ , 10 50 ​ erg ) (M_{\\rm ejc},E_{K})=(0.1\\,M_{\\odot},10^{50}\\,{\\rm erg}) and ( 0.01 ​ M ⊙ , 10 49 ​ erg ) (0.01\\,M_{\\odot},10^{49}\\,{\\rm erg}) , respectively; the shaded bands span these two ejecta models. The vertical dotted lines mark the impact with the polar cavity wall, t hit t_{\\rm hit} ; crossings of the pre-AIC wind termination shock, contact discontinuity, and outer bubble shock, t ts t_{\\rm ts} , t cw t_{\\rm cw} , and t wb t_{\\rm wb} . These vertical landmarks correspond to the solid-curve ejecta model. By construction, the pre-AIC wind and swept-up shell components vanish in the polar direction.",
+            "captionLatex": "Contributions to the local DM, grouped by material origin, as a function of time since the AIC. The rows show viewing inclinations $i=0^{\\circ}$ and $90^{\\circ}$ . The left column shows an ionized external upstream embedded in a diffuse ISM with $n_{\\rm ext}=1~{\\rm cm^{-3}}$ and $R_{\\rm out}=10~{\\rm pc}$ , while the right column shows a system embedded in a dense cloud with $n_{\\rm ext}=500~{\\rm cm^{-3}}$ and $R_{\\rm out}=0.3~{\\rm pc}$ . In the dense-cloud example, the pre-AIC swept-up external shell and the external medium ahead of the AIC shock are neutral, whereas the AIC shock ionizes the processed material. The components are the unshocked AIC ejecta (blue), reverse-shocked AIC ejecta (green), pre-AIC free-wind material (purple), pre-AIC shocked-wind material (brown), pre-AIC swept-up external-medium shell material (magenta), and external-medium material (gray). Each circumstellar or external-medium component includes both the material already swept into the AIC-shocked shell and any material that remains ahead of the AIC forward shock. Solid and dashed curves correspond to $(M_{\\rm ejc},E_{K})=(0.1\\,M_{\\odot},10^{50}\\,{\\rm erg})$ and $(0.01\\,M_{\\odot},10^{49}\\,{\\rm erg})$ , respectively; the shaded bands span these two ejecta models. The vertical dotted lines mark the impact with the polar cavity wall, $t_{\\rm hit}$ ; crossings of the pre-AIC wind termination shock, contact discontinuity, and outer bubble shock, $t_{\\rm ts}$ , $t_{\\rm cw}$ , and $t_{\\rm wb}$ . These vertical landmarks correspond to the solid-curve ejecta model. By construction, the pre-AIC wind and swept-up shell components vanish in the polar direction."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26696v1/Obs_CompFull.png",
+            "caption": "Evolution and variability of the total local DM for an equatorial sightline, i = 90 ∘ i=90^{\\circ} , top, and i = 0 ∘ i=0^{\\circ} , bottom. The left and right columns show systems embedded in a diffuse ISM ( n ext = 1 ​ cm − 3 n_{\\rm ext}=1~{\\rm cm^{-3}} , R out = 10 ​ pc R_{\\rm out}=10~{\\rm pc} ) and a dense cloud ( n ext = 500 ​ cm − 3 n_{\\rm ext}=500~{\\rm cm^{-3}} , R out = 0.3 ​ pc R_{\\rm out}=0.3~{\\rm pc} ), respectively. Blue curves show the ionized-upstream model, while magenta curves show the neutral-upstream prescription, in which the pre-AIC swept-up external shell and the unshocked external medium are neutral but become ionized after being processed by the AIC shock. The top row shows the total local DM, and the bottom row shows its time derivative, d ​ DM loc / d ​ t d{\\rm DM}_{\\rm loc}/dt , with the horizontal gray line marking zero. The labeled horizontal colored lines indicate measured positive and negative DM-variation rates for selected repeating FRBs and are shown for comparison only; the models have not been fitted to the individual sources. Specifically, values for FRB 20190117A, FRB 20190907A, FRB 20210323C are estimated from Cook et al. [18] , and FRB 121102, FRB 20240619D, FRB 20220912A and FRB 20190520B are estimated from Hessels and others [31] , Ould-Boukattine et al. [62] , Abbott et al. [1] and Niu et al. [58] , respectively. We split FRB 121102 into the rising and declining branches. The observed DM variations are in the rest frame of the source, i.e. have been corrected for a ( 1 + z ) 2 (1+z)^{2} factor. For FRB 20240619D we used the upper limit z ≤ 0.37 z\\leq 0.37 from Ould-Boukattine et al. [62] , while those of FRBs 20190117A and 20190907A are the maxima inferred from their DMs, 0.46 and 0.33, respectively [ 55 ] . FRB 20220912A’s z = 0.077 z=0.077 is from Ravi et al. [73] , FRB 20190520B’s z = 0.24 z=0.24 is from Niu et al. [57] and FRB 121102’s z = 0.19 z=0.19 is from Tendulkar et al. [86] . For FRB 20210323C, there is no redshift",
+            "captionLatex": "Evolution and variability of the total local DM for an equatorial sightline, $i=90^{\\circ}$ , top, and $i=0^{\\circ}$ , bottom. The left and right columns show systems embedded in a diffuse ISM ( $n_{\\rm ext}=1~{\\rm cm^{-3}}$ , $R_{\\rm out}=10~{\\rm pc}$ ) and a dense cloud ( $n_{\\rm ext}=500~{\\rm cm^{-3}}$ , $R_{\\rm out}=0.3~{\\rm pc}$ ), respectively. Blue curves show the ionized-upstream model, while magenta curves show the neutral-upstream prescription, in which the pre-AIC swept-up external shell and the unshocked external medium are neutral but become ionized after being processed by the AIC shock. The top row shows the total local DM, and the bottom row shows its time derivative, $d{\\rm DM}_{\\rm loc}/dt$ , with the horizontal gray line marking zero. The labeled horizontal colored lines indicate measured positive and negative DM-variation rates for selected repeating FRBs and are shown for comparison only; the models have not been fitted to the individual sources. Specifically, values for FRB 20190117A, FRB 20190907A, FRB 20210323C are estimated from Cook et al. [18] , and FRB 121102, FRB 20240619D, FRB 20220912A and FRB 20190520B are estimated from Hessels and others [31] , Ould-Boukattine et al. [62] , Abbott et al. [1] and Niu et al. [58] , respectively. We split FRB 121102 into the rising and declining branches. The observed DM variations are in the rest frame of the source, i.e. have been corrected for a $(1+z)^{2}$ factor. For FRB 20240619D we used the upper limit $z\\leq 0.37$ from Ould-Boukattine et al. [62] , while those of FRBs 20190117A and 20190907A are the maxima inferred from their DMs, 0.46 and 0.33, respectively [ 55 ] . FRB 20220912A’s $z=0.077$ is from Ravi et al. [73] , FRB 20190520B’s $z=0.24$ is from Niu et al. [57] and FRB 121102’s $z=0.19$ is from Tendulkar et al. [86] . For FRB 20210323C, there is no redshift yet known, so we assume $z=0.2$ given its observed DM, and estimates for the Milky Way and host contributions [ 47 , 81 , 60 ] . Soli"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26696v1/SlopesHistogramSmooth.png",
+            "caption": "Probability distributions of the signed secular host-frame DM slope, d ​ DM / d ​ t d{\\rm DM}/dt , for mock populations of repeating FRB sources. The left column shows the diffuse external-medium model, n ext = 1 ​ cm − 3 n_{\\rm ext}=1~{\\rm cm^{-3}} and R out = 10 ​ pc R_{\\rm out}=10~{\\rm pc} , whereas the right column shows the finite dense-cloud model, n ext = 500 ​ cm − 3 n_{\\rm ext}=500~{\\rm cm^{-3}} and R out = 0.3 ​ pc R_{\\rm out}=0.3~{\\rm pc} . The external material is initially neutral in the upper row (pink) and fully ionized in the lower row (blue); material processed by the AIC forward shock is assumed to be ionized in both cases. For each panel, we draw 10 4 10^{4} mock sources with ages distributed uniformly in linear time between 1 1 and 10 3 10^{3} yr. Viewing directions are drawn isotropically. We approximate the angular dependence using representative non-polar and polar sightlines, i = 90 ∘ i=90^{\\circ} and i = 0 ∘ i=0^{\\circ} , weighted by cos ⁡ θ cav = 0.94 \\cos\\theta_{\\rm cav}=0.94 and 1 − cos ⁡ θ cav = 0.06 1-\\cos\\theta_{\\rm cav}=0.06 , respectively, for a polar-cavity half-opening angle θ cav = 20 ∘ \\theta_{\\rm cav}=20^{\\circ} . For each source, we generate 20 DM measurements with exponentially distributed inter-detection intervals having a mean of 135 135 days, corresponding to a mean monitoring baseline of approximately 7 7 yr, and obtain one value of DM slope S S from a linear fit to DM ⁡ ( t ) {\\rm DM}(t) . Solid curves correspond to ( M ej , E K ) = ( 0.1 ​ M ⊙ , 10 50 ​ erg ) (M_{\\rm ej},E_{K})=(0.1\\,M_{\\odot},10^{50}\\,{\\rm erg}) , and dashed curves to ( 0.01 ​ M ⊙ , 10 49 ​ erg ) (0.01\\,M_{\\odot},10^{49}\\,{\\rm erg}) . The scenario in which the FRB is embedded in an ISM and has a neutral upstream may yield a large abundance of positive slopes (specifically 96% and 94% for the solid and dashed lines, respectively), but they are limited to low values ∼ < 0.015 \\mathrel{\\hbox to0.0pt{\\lower 4.0pt\\hbox{\\hskip 1.0pt$\\sim$}\\hss}\\raise 1.0pt\\hb",
+            "captionLatex": "Probability distributions of the signed secular host-frame DM slope, $d{\\rm DM}/dt$ , for mock populations of repeating FRB sources. The left column shows the diffuse external-medium model, $n_{\\rm ext}=1~{\\rm cm^{-3}}$ and $R_{\\rm out}=10~{\\rm pc}$ , whereas the right column shows the finite dense-cloud model, $n_{\\rm ext}=500~{\\rm cm^{-3}}$ and $R_{\\rm out}=0.3~{\\rm pc}$ . The external material is initially neutral in the upper row (pink) and fully ionized in the lower row (blue); material processed by the AIC forward shock is assumed to be ionized in both cases. For each panel, we draw $10^{4}$ mock sources with ages distributed uniformly in linear time between $1$ and $10^{3}$ yr. Viewing directions are drawn isotropically. We approximate the angular dependence using representative non-polar and polar sightlines, $i=90^{\\circ}$ and $i=0^{\\circ}$ , weighted by $\\cos\\theta_{\\rm cav}=0.94$ and $1-\\cos\\theta_{\\rm cav}=0.06$ , respectively, for a polar-cavity half-opening angle $\\theta_{\\rm cav}=20^{\\circ}$ . For each source, we generate 20 DM measurements with exponentially distributed inter-detection intervals having a mean of $135$ days, corresponding to a mean monitoring baseline of approximately $7$ yr, and obtain one value of DM slope $S$ from a linear fit to ${\\rm DM}(t)$ . Solid curves correspond to $(M_{\\rm ej},E_{K})=(0.1\\,M_{\\odot},10^{50}\\,{\\rm erg})$ , and dashed curves to $(0.01\\,M_{\\odot},10^{49}\\,{\\rm erg})$ . The scenario in which the FRB is embedded in an ISM and has a neutral upstream may yield a large abundance of positive slopes (specifically 96% and 94% for the solid and dashed lines, respectively), but they are limited to low values $\\mathrel{\\hbox to0.0pt{\\lower 4.0pt\\hbox{\\hskip 1.0pt$\\sim$}\\hss}\\raise 1.0pt\\hbox{$ -3 yr -1 . The ISM for an ionized upstream is far more limited in its possible slopes $\\mathrel{\\hbox to0.0pt{\\lower 4.0pt\\hbox{\\hskip 1.0pt$\\sim$}\\hss}\\raise 1.0pt\\hbox{$ -3 yr -1 , and far less frequently ( $\\sim 2\\%$ and $3\\%$ )"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.26696v1/CartoonNew.png",
+        "thumbnailAlt": "Illustration of the pre-AIC interacting binary system (left) and early AIC ejecta––circumstellar interaction (right). The cartoon is not to scale. The black dashed contour marks the Lagrangian core–envelope break, q = q core q=q_{\\rm core} . While this material remains unshocked, its physical radius",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.26733",
+        "title": "NGC 1300: A rich reservoir of ultraluminous X-ray sources",
+        "summary": "We present the first systematic multi-epoch study of the X-ray source population of the barred spiral galaxy NGC 1300, using 12 archival Chandra observations spanning more than 15 years and archival Swift/XRT monitoring. Within the optical extent of the galaxy, we identify 42 X-ray sources, including six ultraluminous X-ray sources (ULXs) and 13 ULX candidates. The candidates have measured luminosities below $10^{39}$ erg s$^{-1}$, but their upper uncertainty bounds reach or exceed this threshold in at least one epoch. We examine source luminosities, long-term variability, broad-band spectral properties, and epoch-resolved X-ray luminosity functions (XLFs). Ten sources meet our transient criterion, seven have a variability significance of $S_{\\rm var}\\geq3$, and four meet both criteria. X32 is a highly variable ULX with a peak X-ray luminosity of $1.5\\times10^{40}$ erg s$^{-1}$, more than 715 times the non-detection upper limit. The hardness-intensity diagrams show diverse spectral behavior among the luminous sources, with no common hardness-luminosity evolution. X32 remains predominantly hard despite its large luminosity variations, and its X-ray colors are consistent with the empirical high-mass X-ray binary (HMXB) region of the color-color diagram. The cumulative XLFs above $10^{38}$ erg s$^{-1}$ have slopes of $\\beta\\simeq0.6$ to $1.0$, with evidence for a broken power law in only a few epochs. The number of off-nuclear sources reaching $10^{39}$ erg s$^{-1}$ ranges from zero to four per epoch. Long-term source variability thus strongly shapes the bright end of the XLF and makes the observed ULX census of NGC 1300 strongly epoch dependent. Multi-epoch monitoring is essential for establishing representative ULX populations in nearby galaxies.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26733",
+        "htmlUrl": "https://arxiv.org/html/2611.26733v1",
+        "authors": [
+          "Sinan Allak",
+          "Faruk Soydugan",
+          "Andrea Santangelo",
+          "Wei Yu",
+          "Santina Piraino",
+          "Daniel Kulinsky"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.26733v1/ds9.png",
+            "caption": "Three-color Chandra X-ray image of NGC 1300 constructed from the stacked observations. Red, green and blue correspond to the 0.3–1, 1–2 and 2–10 keV energy bands, respectively. The image is centered on source X12 at R.A. = 03 h ​ 19 m ​ 41.06 s =03^{\\rm h}19^{\\rm m}41.06^{\\rm s} and Dec. = − 19 ∘ ​ 24 ′ ​ 40.31 ′′ =-19^{\\circ}24^{\\prime}40.31^{\\prime\\prime} (J2000). X-ray sources detected within the adopted optical extent of NGC 1300 are marked and labeled X1–X42. Sources classified as secure ULXs and ULX candidates are highlighted in green, while the remaining detected sources are shown in white. The large dashed ellipse denotes the adopted D 25 D_{25} region of the galaxy. North is up and east is to the left, as indicated by the orientation marker in the lower-right corner. The scale bar corresponds to 0.5 ′ 0.5^{\\prime} ( ≃ 3.0 \\simeq 3.0 kpc at a distance of 20.7 Mpc).",
+            "captionLatex": "Three-color Chandra X-ray image of NGC 1300 constructed from the stacked observations. Red, green and blue correspond to the 0.3–1, 1–2 and 2–10 keV energy bands, respectively. The image is centered on source X12 at R.A. $=03^{\\rm h}19^{\\rm m}41.06^{\\rm s}$ and Dec. $=-19^{\\circ}24^{\\prime}40.31^{\\prime\\prime}$ (J2000). X-ray sources detected within the adopted optical extent of NGC 1300 are marked and labeled X1–X42. Sources classified as secure ULXs and ULX candidates are highlighted in green, while the remaining detected sources are shown in white. The large dashed ellipse denotes the adopted $D_{25}$ region of the galaxy. North is up and east is to the left, as indicated by the orientation marker in the lower-right corner. The scale bar corresponds to $0.5^{\\prime}$ ( $\\simeq 3.0$ kpc at a distance of 20.7 Mpc)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26733v1/fig/swiftxrt.jpeg",
+            "caption": "Stacked 0.3–10 keV Swift /XRT image of NGC 1300. The white circles, each with a radius of 20 ​ ″ 20\\arcsec , mark the Chandra -resolved sources X17, X19, X23, X28, and X32 used in the long-term variability analysis. The green dashed circle marks the center of NGC 1300. North is up and east is to the left.",
+            "captionLatex": "Stacked 0.3–10 keV Swift /XRT image of NGC 1300. The white circles, each with a radius of $20\\arcsec$ , mark the Chandra -resolved sources X17, X19, X23, X28, and X32 used in the long-term variability analysis. The green dashed circle marks the center of NGC 1300. North is up and east is to the left."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26733v1/jwstnircam.png",
+            "caption": "JWST/NIRCam three-color image of NGC 1300 with the positions of the X-ray sources detected with Chandra marked by magenta circles and labeled X1–X42. The X-ray source population is distributed across the optical disk, with a substantial fraction of the sources projected along or close to the prominent spiral-arm structures. The orientation and angular scale are indicated in the image."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.26733v1/ds9.png",
+        "thumbnailAlt": "Three-color Chandra X-ray image of NGC 1300 constructed from the stacked observations. Red, green and blue correspond to the 0.3–1, 1–2 and 2–10 keV energy bands, respectively. The image is centered on source X12 at R.A. = 03 h ​ 19 m ​ 41.06 s =03^{\\rm h}19^{\\rm m}41.06^{\\rm s} and Dec. = − 19 ∘ ​ ",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.26880",
+        "title": "Determining the Spin and Orbital Period of the Asynchronous Cataclysmic Variable X10 in 47 Tucanae",
+        "summary": "The X-ray source X10 in the globular cluster 47 Tuc has been identified as a cataclysmic variable (CV). With a suggested 4.7 hour periodicity, and a soft X-ray spectrum, it appears to be an unusually X-ray luminous ($L_X=2.2\\times10^{32}$ erg s$^{-1}$) polar CV. We use 286 ks of Chandra X-ray Observatory observations of 47 Tuc to study the X-ray timing behavior of 47 Tuc X10. X10 shows clear pulsations in the data, with occasional phase shifts. These suggest that X10 is an asynchronous polar CV, where the spin and orbital periods are slightly misaligned, and the dominant accretion flow shifts from one pole to the other. We use a Lomb-Scargle periodogram to suggest potential spin and orbital periods, then model the X-ray lightcurve using simple sinusoids to represent emission from each accretion pole, switching which pole is visible on the beat period. We find a white dwarf spin period of $P_{\\mathrm{spin}} = 4.2683$ h and derive an orbital period of $P_{\\mathrm{orb}} = 4.6779$ h from the beat modulation. This large degree of asynchronism (8.8%) suggests that X10 is in an unstable equilibrium, and may be a transitional system between an intermediate polar and a fully synchronized polar.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26880",
+        "htmlUrl": "https://arxiv.org/html/2611.26880v1",
+        "authors": [
+          "Daniel Mendoza-Fredes",
+          "Craig O. Heinke",
+          "Matthew Lang",
+          "Asma Hattawi"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.26880v1/raw_2002_data.png",
+            "caption": "Merged Chandra ACIS-S 0.3-8 keV X-ray light curve of X10, from the 2002 epoch. The dataset combines the eight distinct observations. Note the significant time gaps between observing windows."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26880v1/periodogram_omega.png",
+            "caption": "Lomb-Scargle periodogram of the 2002 X-ray dataset in angular frequency space. The two dominant peaks at ω 1 \\omega_{1} and ω 2 \\omega_{2} are indicated.",
+            "captionLatex": "Lomb-Scargle periodogram of the 2002 X-ray dataset in angular frequency space. The two dominant peaks at $\\omega_{1}$ and $\\omega_{2}$ are indicated."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26880v1/2002_zoomed_fit.png",
+            "caption": "Best-fit model derived from MCMC analysis, divided into the three distinct observing windows from Figure 1 . Top panel: Merged light curve of observations 2735, 3384, 2736, and 3385. Middle panel: Observations 2737 and 3386. Bottom panel: Observations 2738 and 3387. The red line represents the model constructed from the median posterior parameters. Time is shown relative to the start of the first observation ( t 0 t_{0} ).",
+            "captionLatex": "Best-fit model derived from MCMC analysis, divided into the three distinct observing windows from Figure 1 . Top panel: Merged light curve of observations 2735, 3384, 2736, and 3385. Middle panel: Observations 2737 and 3386. Bottom panel: Observations 2738 and 3387. The red line represents the model constructed from the median posterior parameters. Time is shown relative to the start of the first observation ( $t_{0}$ )."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26880v1/oc_diagram.png",
+            "caption": "O–C diagram of the X-ray pulse times of X10 for the MCMC spin frequency (top, ω \\omega ) and the two strongest periodogram peaks, Ω \\Omega (middle) and 2 ​ ω − Ω 2\\omega-\\Omega (bottom). Blue circles and red squares mark pulses from pole 1 and pole 2, respectively. The 1 ​ σ 1\\sigma uncertainties are smaller than the symbols. Only ω \\omega keeps the pulses near O–C = 0 =0 in all three observing windows.",
+            "captionLatex": "O–C diagram of the X-ray pulse times of X10 for the MCMC spin frequency (top, $\\omega$ ) and the two strongest periodogram peaks, $\\Omega$ (middle) and $2\\omega-\\Omega$ (bottom). Blue circles and red squares mark pulses from pole 1 and pole 2, respectively. The $1\\sigma$ uncertainties are smaller than the symbols. Only $\\omega$ keeps the pulses near O–C $=0$ in all three observing windows."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26880v1/periodogram_sidebands.png",
+            "caption": "Lomb-Scargle periodogram of the 2002 dataset, with the frequencies derived from MCMC model. The two dominant observed peaks, ω 1 \\omega_{1} and ω 2 \\omega_{2} , coincide with the orbital frequency Ω \\Omega (blue dashed) and the sideband 2 ​ ω − Ω 2\\omega-\\Omega (red dashed) derived from the model, while the spin frequency ω \\omega (gray solid) itself lies between them with lower power. The beat frequency ω − Ω \\omega-\\Omega (green dotted) is likewise suppressed relative to its harmonic 2 ​ ( ω − Ω ) 2(\\omega-\\Omega) (green dash-dotted).",
+            "captionLatex": "Lomb-Scargle periodogram of the 2002 dataset, with the frequencies derived from MCMC model. The two dominant observed peaks, $\\omega_{1}$ and $\\omega_{2}$ , coincide with the orbital frequency $\\Omega$ (blue dashed) and the sideband $2\\omega-\\Omega$ (red dashed) derived from the model, while the spin frequency $\\omega$ (gray solid) itself lies between them with lower power. The beat frequency $\\omega-\\Omega$ (green dotted) is likewise suppressed relative to its harmonic $2(\\omega-\\Omega)$ (green dash-dotted)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26880v1/cornerplot.png",
+            "caption": "Corner plot showing the marginalized posterior distributions of the model parameters obtained from the MCMC analysis. The one-dimensional histograms represent the marginalized posterior for each parameter, while the two-dimensional contours show the 68% and 95% credible regions. Vertical dashed lines indicate the median values of the posterior distributions."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.26880v1/raw_2002_data.png",
+        "thumbnailAlt": "Merged Chandra ACIS-S 0.3-8 keV X-ray light curve of X10, from the 2002 epoch. The dataset combines the eight distinct observations. Note the significant time gaps between observing windows.",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27051",
+        "title": "Disentangling Disk and Broad-Line Region Continuum Emission in a Sample of Active Galactic Nuclei",
+        "summary": "Recent continuum reverberation-mapping measurements of active galactic nuclei (AGNs) indicate that the inter-band time lags are significantly larger than those predicted by the light travel times across the standard thin model. In addition, the observed $u$-band excess suggests the presence of diffuse continuum (DC) radiation originating in the broad-line region (BLR). Spectroscopically, the Balmer and Paschen jumps in DC emission are unique indicators to quantify the contributions of the BLR to the observed continuum. Here, we study the DC contributions of 31 AGNs, whose spectra are obtained with the Space Telescope Imaging Spectrograph (STIS) on the Hubble Space Telescope (HST) and with X-shooter on the Very Large Telescope (VLT). In each spectrum, at least one of the Balmer and Paschen jumps is covered. For each object, we performed radiative transfer calculations using Cloudy within the Locally Optimally-emitting Clouds (LOC) model to construct source-specific DC spectral templates. We quantified the DC contribution by incorporating these templates as continuum components in spectral decomposition. The average ratio of the DC to total (i.e., disk+DC) continua is ~33% just below the Balmer jump (~3625 Å). The Balmer jump provides a stronger constraint on the DC component than the Paschen jump. Simulations based on mock spectra further demonstrate that an unsuitable template can introduce systematic, wavelength-dependent biases to the inferred DC fraction. Our results underscore the importance of employing appropriate DC templates in the spectral decomposition to infer the substantial DC contribution. Upcoming time-resolved spectra will enable more detailed modelling and tighter constraints on the disk and BLR.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27051",
+        "htmlUrl": "https://arxiv.org/html/2611.27051v1",
+        "authors": [
+          "Manqi Fu",
+          "Shuying Zhou",
+          "Hengxiao Guo",
+          "Zhi-Xiang Zhang",
+          "Marcin Marculewicz",
+          "Mouyuan Sun"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.27051v1/contour2.png",
+            "caption": "⟨ χ 2 ⟩ \\langle\\chi^{2}\\rangle values for Mrk 509. The red points mark the parameter set corresponding to the minimum ⟨ χ 2 ⟩ \\langle\\chi^{2}\\rangle , which is adopted to construct the DC templates used in subsequent analysis. The gray dashed contours indicate levels at 2, 4, and 8 times the minimum ⟨ χ 2 ⟩ \\langle\\chi^{2}\\rangle value.",
+            "captionLatex": "$\\langle\\chi^{2}\\rangle$ values for Mrk 509. The red points mark the parameter set corresponding to the minimum $\\langle\\chi^{2}\\rangle$ , which is adopted to construct the DC templates used in subsequent analysis. The gray dashed contours indicate levels at 2, 4, and 8 times the minimum $\\langle\\chi^{2}\\rangle$ value."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27051v1/jump_ratio7.png",
+            "caption": "Left: Comparison of the DC components derived from single-jump fitting under limited spectral coverage with those from two-jump fitting. Shown are the ratios of the DC fractions derived using only the Balmer jump (blue) and only the Paschen jump (orange), F DC , part F_{\\mathrm{DC,part}} , relative to those derived from fitting both jumps, F DC , tot F_{\\mathrm{DC,tot}} . The shaded regions show the 1 σ \\sigma dispersion. The results indicate that Balmer-jump fits are more robust, while Paschen-jump fits are usually overestimated. Right: Example of the spectral decomposition results of Mrk 1239, comparing the results obtained from two-jump fitting and single-jump fitting. The top panel shows the decomposition result obtained from fitting both jumps, while the bottom panel shows the decomposition results obtained by fitting only the Balmer jump and only the Paschen jump. The gray dashed line marks the wavelength to separate the blue and red spectral regions.",
+            "captionLatex": "Left: Comparison of the DC components derived from single-jump fitting under limited spectral coverage with those from two-jump fitting. Shown are the ratios of the DC fractions derived using only the Balmer jump (blue) and only the Paschen jump (orange), $F_{\\mathrm{DC,part}}$ , relative to those derived from fitting both jumps, $F_{\\mathrm{DC,tot}}$ . The shaded regions show the 1 $\\sigma$ dispersion. The results indicate that Balmer-jump fits are more robust, while Paschen-jump fits are usually overestimated. Right: Example of the spectral decomposition results of Mrk 1239, comparing the results obtained from two-jump fitting and single-jump fitting. The top panel shows the decomposition result obtained from fitting both jumps, while the bottom panel shows the decomposition results obtained by fitting only the Balmer jump and only the Paschen jump. The gray dashed line marks the wavelength to separate the blue and red spectral regions."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27051v1/disk_A1.png",
+            "caption": "Figure A1: Comparison of the DC contributions derived using three different accretion disk models for Mrk 1048. The upper three panels present the spectral decomposition results obtained with the BPL, PL, and SSD accretion disk models, respectively, with the corresponding χ 2 \\chi^{2} values shown in the lower part of each panel. In the χ 2 \\chi^{2} plots, dark curves mark the wavelength regions included in the continuum fitting, whereas light curves indicate the regions excluded from the fitting. In the bottom panel, the blue, green, and orange curves represent the DC fractions derived from the BPL, PL, and SSD decomposition results, respectively. These results illustrate the dependence of the derived DC fractions on the adopted disk model.",
+            "captionLatex": "Figure A1: Comparison of the DC contributions derived using three different accretion disk models for Mrk 1048. The upper three panels present the spectral decomposition results obtained with the BPL, PL, and SSD accretion disk models, respectively, with the corresponding $\\chi^{2}$ values shown in the lower part of each panel. In the $\\chi^{2}$ plots, dark curves mark the wavelength regions included in the continuum fitting, whereas light curves indicate the regions excluded from the fitting. In the bottom panel, the blue, green, and orange curves represent the DC fractions derived from the BPL, PL, and SSD decomposition results, respectively. These results illustrate the dependence of the derived DC fractions on the adopted disk model."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.27051v1/contour2.png",
+        "thumbnailAlt": "⟨ χ 2 ⟩ \\langle\\chi^{2}\\rangle values for Mrk 509. The red points mark the parameter set corresponding to the minimum ⟨ χ 2 ⟩ \\langle\\chi^{2}\\rangle , which is adopted to construct the DC templates used in subsequent analysis. The gray dashed contours indicate levels at 2, 4, and 8 times the minimum",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27508",
+        "title": "Hard X-ray spectroscopy of a short-period asynchronous polar: IGR J19552+0044",
+        "summary": "IGR J19552+0044 is an asynchronous polar with a beat modulation of $\\approx2$ days due to $\\approx3$% spin-orbit asynchronism. We present the first hard X-ray properties of this system using a NuSTAR observation. Spectral modeling yields a shock temperature of $kT_{\\rm s}=44.50^{+3.60}_{-3.29}$ keV, implying a white dwarf mass of $M_{\\rm WD}\\geq 0.85\\,M_\\odot$. We infer an average accretion rate of $\\dot{M}\\sim 3.0\\times 10^{-11}\\,M_\\odot\\,{\\rm yr}^{-1}$, consistent with expectations for short-period systems (orbital period $<2$ h). Even at this low accretion rate, we detect a significant Compton reflection component that gives a shock height of $H\\sim 0.3\\,R_{\\rm WD}$. Time-resolved spectroscopy of the observation, covering $\\approx61$% of a beat cycle, reveals a variation in $\\dot{M}$ by a factor of $\\sim 4.5$, providing X-ray evidence for the magnetic valve mechanism. Despite the large variations in $\\dot{M}$, no significant change in shock temperature is observed. This weak thermal response constrains the shock structure on the white dwarf surface, favoring a shock height that remains approximately constant as $\\dot{M}$ changes, potentially due to variations in the fractional accretion area $f$.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27508",
+        "htmlUrl": "https://arxiv.org/html/2611.27508v1",
+        "authors": [
+          "Akash Agarwal",
+          "Vikram Rana"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.SR"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.27508v1/lcurve_and_hardness_ratio.png",
+            "caption": "Background-subtracted X-ray light curves and hardness ratio of IGR J19552+0044 observed with NuSTAR. Top: Light curves in the 3–40 keV range from FPMA (red) and FPMB (green), binned at 400 s. Bottom: Hardness ratio, defined as (10–40 keV)/(3–10 keV), for FPMA. The dashed line indicates the mean hardness ratio. Shaded regions mark three intervals: T1, T2, and T3, as referenced in Section III.3 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27508v1/spectrum_IGR_nustar_rebin.png",
+            "caption": "NuSTAR X-ray spectra of IGR J19552+0044 obtained with FPMA (black) and FPMB (red). The top panel shows the observed spectra along with the best-fit model. The middle panel displays the residuals, expressed as (data-model)/error, for an absorbed multi-temperature plasma model. The bottom panel shows the residuals after including gaussian and reflection components, which provide the best fit to the data. For visual clarity, the spectra were rebinned for plotting purposes only."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27508v1/time_resolved_spectra_both_FPMA.png",
+            "caption": "Time-resolved spectra of the source, fitted using the model (const ∗ \\,*\\, TBabs ∗ * (gaussian + reflect ∗ * mkcflow)) as described in the text, are shown across three epochs (T1: red, T2: blue, T3: green) in the top panel. The bottom panel shows the corresponding residuals. For clarity, only FPMA data are shown.",
+            "captionLatex": "Time-resolved spectra of the source, fitted using the model (const $\\,*\\,$ TBabs $*$ (gaussian + reflect $*$ mkcflow)) as described in the text, are shown across three epochs (T1: red, T2: blue, T3: green) in the top panel. The bottom panel shows the corresponding residuals. For clarity, only FPMA data are shown."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.27508v1/lcurve_and_hardness_ratio.png",
+        "thumbnailAlt": "Background-subtracted X-ray light curves and hardness ratio of IGR J19552+0044 observed with NuSTAR. Top: Light curves in the 3–40 keV range from FPMA (red) and FPMB (green), binned at 400 s. Bottom: Hardness ratio, defined as (10–40 keV)/(3–10 keV), for FPMA. The dashed line indicates the mean hard",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27527",
+        "title": "Modelling scintillation in Fast Radio Bursts",
+        "summary": "Fast Radio Bursts (FRBs) are bright, ms-duration, extragalactic radio transients. Propagation through inhomogeneities in the ionised medium produces scintillation, observed as frequency-dependent intensity variations in their spectra, with bright patches, called scintles. The characteristic scintillation bandwidth probes scattering material along the line of sight. Measuring this scale can be challenging when the observing bandwidth of the burst spectra contains a few scintles. We study the uncertainties associated with recovering $\\nu_s$ from frequency autocorrelation functions (ACFs) under finite-bandwidth conditions. We examine the recovery of $\\nu_s$ from individual ACFs and investigate if averaging multiple independent ACFs provides a more robust measurement. Using simulations, we reproduce observational conditions to investigate the modelling of scintillation in ACFs and the associated measurement uncertainties. We use these simulations to test the finite scintle error (FSE) prescription and assess its applicability to real observations. We test the resulting modelling framework on Effelsberg Ultra Broad Band receiver observations of the repeating FRB 20240114A. As the number of scintles decreases, individual ACFs develop fluctuations that deviate from the expected Lorentzian profile. This results in increased scatter in the recovered $\\nu_s$ and a less reliable FSE prescription. Averaging multiple independent ACFs mitigates these effects and improves the recovery of $\\nu_s$ in the low-scintle regime. Our results provide a framework for ACF modelling and uncertainty estimation in FRBs. For individual bursts, the FSE is effective with sufficient scintles; we find $\\eta = 0.055$ more suitable for FRB analysis and update the FSE accordingly. For repeaters, averaging multiple ACFs and bootstrap resampling improve the recovery and uncertainty estimation of $\\nu_s$.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27527",
+        "htmlUrl": "https://arxiv.org/html/2611.27527v1",
+        "authors": [
+          "L. Nicotera",
+          "T.Sprenger",
+          "O.Wucknitz",
+          "L.G. Spitler",
+          "F. Eppel",
+          "P. Limaye"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.27527v1/simulated_2D_fields_Bnu20_vs_Bnu180_20260920_002652.png",
+            "caption": ": Simulated two-dimensional scintillation fields for two different values of the ratio between the observing bandwidth B B and the injected scintillation decorrelation bandwidth ν s \\nu_{s} . Left: B / ν s = 20 B/\\nu_{s}=20 , resulting in more isolated scintles across the band. Right: B / ν s = 180 B/\\nu_{s}=180 , producing a much denser scintillation pattern with a larger number of independent scintles.",
+            "captionLatex": ": Simulated two-dimensional scintillation fields for two different values of the ratio between the observing bandwidth $B$ and the injected scintillation decorrelation bandwidth $\\nu_{s}$ . Left: $B/\\nu_{s}=20$ , resulting in more isolated scintles across the band. Right: $B/\\nu_{s}=180$ , producing a much denser scintillation pattern with a larger number of independent scintles."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27527v1/15.png",
+            "caption": ": Top: Examples of individual simulated ACF realizations (grey) for different scintle numbers, compared with the theoretical Lorentzian expectation (black). The yellow dashed line represents the fit obtained with our analysis pipeline. As the number of scintles decreases (right to left), the ACF becomes increasingly noisy and exhibits larger deviations from the ideal profile. Bottom: Comparison between the theoretical Lorentzian ACF (black) and the mean ACF (red) obtained by averaging 50 independent simulated ACFs, shown in the background. The dashed orange curve represents the Lorentzian fit recovered by our developed pipeline. In all simulations, the input scintillation bandwidth is ν s , input = 1 ​ kHz \\nu_{s,\\mathrm{input}}=1\\penalty\\ \\mathrm{kHz} , while the boxes report the fitted ν s \\nu_{s} for both the individual realizations (top panels) and the mean ACFs (bottom panels).",
+            "captionLatex": ": Top: Examples of individual simulated ACF realizations (grey) for different scintle numbers, compared with the theoretical Lorentzian expectation (black). The yellow dashed line represents the fit obtained with our analysis pipeline. As the number of scintles decreases (right to left), the ACF becomes increasingly noisy and exhibits larger deviations from the ideal profile. Bottom: Comparison between the theoretical Lorentzian ACF (black) and the mean ACF (red) obtained by averaging 50 independent simulated ACFs, shown in the background. The dashed orange curve represents the Lorentzian fit recovered by our developed pipeline. In all simulations, the input scintillation bandwidth is $\\nu_{s,\\mathrm{input}}=1\\penalty\\ \\mathrm{kHz}$ , while the boxes report the fitted $\\nu_{s}$ for both the individual realizations (top panels) and the mean ACFs (bottom panels)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27527v1/FOUR_SELECTED_BURSTS_29_24_30_3_lse.png",
+            "caption": ": Example bursts from FRB 20240114A observed in UBB Band 2 and their corresponding frequency ACFs. The black curves show the best-fitting Lorentzian models. The scintillation bandwidth, ν s \\nu_{s} , obtained from each individual ACF and its associated formal fit uncertainty are reported in each panel.",
+            "captionLatex": ": Example bursts from FRB 20240114A observed in UBB Band 2 and their corresponding frequency ACFs. The black curves show the best-fitting Lorentzian models. The scintillation bandwidth, $\\nu_{s}$ , obtained from each individual ACF and its associated formal fit uncertainty are reported in each panel."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27527v1/posterior_nus.png",
+            "caption": ": Individual scintillation bandwidth measurements and posterior estimates for the bursts in UBB Band 2. Black crosses show the measured scintillation bandwidths ν s ′ \\nu_{s}^{\\prime} , with marker size scaling with burst S/N. The coloured points show the median of the posterior distribution for the underlying ν s \\nu_{s} , with the error bars indicating the corresponding 68% reliable intervals (16th–84th percentiles). The colour indicates N scint N_{\\rm scint} , calculated using the usable bandwidth of each burst and ν ¯ s = 17.49 \\overline{\\nu}_{s}=17.49 MHz obtained from the weighted-average ACF. The posterior estimates are generally consistent with the measured values, with broad and asymmetric intervals reflecting the larger uncertainty expected in the low- N scint N_{\\rm scint} regime.",
+            "captionLatex": ": Individual scintillation bandwidth measurements and posterior estimates for the bursts in UBB Band 2. Black crosses show the measured scintillation bandwidths $\\nu_{s}^{\\prime}$ , with marker size scaling with burst S/N. The coloured points show the median of the posterior distribution for the underlying $\\nu_{s}$ , with the error bars indicating the corresponding 68% reliable intervals (16th–84th percentiles). The colour indicates $N_{\\rm scint}$ , calculated using the usable bandwidth of each burst and $\\overline{\\nu}_{s}=17.49$ MHz obtained from the weighted-average ACF. The posterior estimates are generally consistent with the measured values, with broad and asymmetric intervals reflecting the larger uncertainty expected in the low- $N_{\\rm scint}$ regime."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.27527v1/simulated_2D_fields_Bnu20_vs_Bnu180_20260920_002652.png",
+        "thumbnailAlt": ": Simulated two-dimensional scintillation fields for two different values of the ratio between the observing bandwidth B B and the injected scintillation decorrelation bandwidth ν s \\nu_{s} . Left: B / ν s = 20 B/\\nu_{s}=20 , resulting in more isolated scintles across the band. Right: B / ν s = 180 ",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27693",
+        "title": "Probing for relativistic outflows in the Ultraluminous X-ray pulsar RX J0209.6-7427",
+        "summary": "Context. Relativistic winds have been observed in Ultraluminous X-ray sources (ULXs), but their detection at large distances remains limited. Galactic neutron stars accreting matter from Be-star companions provide a valuable opportunity to improve our understanding of these outflows. Aims. RX J0209.6-7427 is a Be-XRB, powered by a neutron star with a spin period of 9.3 seconds, that underwent an outburst in 2019, exceeding a bolometric luminosity of $10^{39}$ erg s$^{-1}$ at its peak. Owing to its relatively low distance and a high-resolution XMM-Newton observation, this source is a strong candidate for investigating outflows associated with super-Eddington accretion. Methods. The RGS spectrum yields 105,000 counts, a factor of two higher than any other deep ULX RGS spectrum. RGS and EPIC-pn data sets were modelled with a phenomenological continuum accounting for emission from the accretion disc and accretion column. The emission and absorption features were fitted with the optically-thin plasma models available in SPEX, exploring the temperature-velocity parameter space. Results. The modelling of emission features suggests the presence of a multiphase photoionised plasma approximately at rest with respect to the source. The absorption features can be reproduced either by blueshifted photoionised absorbers moving at approximately $0.1c$ and $0.2c$, the latter being more tentative, or by an alternative collisionally ionised absorption model, which provides a comparably acceptable fit. The presence of ultrafast outflows therefore remains a plausible, but non-unique, interpretation of the data. If associated with outflows, the inferred column densities appear lower than those reported for some persistent ULXs, potentially reflecting differences in the accretion-flow properties or the shorter super-Eddington phase of RX J0209.6-7427.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27693",
+        "htmlUrl": "https://arxiv.org/html/2611.27693v1",
+        "authors": [
+          "F. Barra",
+          "C. Pinto",
+          "T. di Salvo",
+          "S. Caserta",
+          "P. Kosec"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27742",
+        "title": "Disrupted stars and captured compact objects: Combining observations from multiple messengers to infer the population of massive black holes",
+        "summary": "Massive black holes (MBHs) are found in galactic centres, but their formation and evolution remain elusive. Tidal disruption events (TDEs) and extreme mass-ratio inspirals (EMRIs) both arise from stellar dynamics in the nuclear star clusters around MBHs, and are observed with electromagnetic surveys and gravitational waves, respectively. To overcome the scarcity of coincident detections, we formulate how to combine gravitational-wave detections from LISA-EMRIs with observations from ZTF-TDEs to measure properties of the MBH population. Building on two-dimensional Fokker-Planck simulations of EMRIs and TDEs, we model how their populations are affected by the MBH-host scaling relation, the nucleation fraction and the MBH occupation fraction, and analyse the resulting catalogues using joint hierarchical inference accounting for their individual selection biases. With current ZTF-TDE detections, we can already identify combinations of MBH formation favoured by and consistent with the observed TDE population, and derive corresponding predictions for the EMRI population detectable by LISA. Across a range of astrophysical assumptions, the ratio of detectable TDEs to EMRIs is high: ZTF detecting 2.7-84.3 times as many TDEs as LISA detects EMRIs. TDEs, through their numbers, set the shared mass and redshift distributions: LSST constrains the characteristic MBH mass to a 90% credible width of 0.31 dex and the power-law index of the redshift evolution to a precision of 0.11. EMRIs make up ~3.4% of the joint catalogue, yet carry more information than the whole ZTF sample and are the only probe of MBH spin and orbital eccentricity. TDEs will constrain the abundance of low-mass MBHs before LISA flies, while EMRIs will measure properties that electromagnetic surveys cannot. EMRI and TDE observations offer complementary insights into MBH growth and evolution that neither can provide alone.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27742",
+        "htmlUrl": "https://arxiv.org/html/2611.27742v1",
+        "authors": [
+          "Shashwat Singh",
+          "Luca Broggi",
+          "Christopher P. L. Berry",
+          "Marta Volonteri"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "gr-qc"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.27742v1/ztf_footprint_gradient.png",
+            "caption": "(a) ZTF era"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27742v1/lsst_footprint_gradient.png",
+            "caption": "(b) LSST/Rubin era"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27742v1/ppd_AB_shared.png",
+            "caption": ": \\Aclp PPD for the shared hyperparameters, the MBH mass (left of each pair) and the redshift (right), for Model 𝒜 \\mathcal{A} (left) and Model ℬ \\mathcal{B} (right). Coloured lines show the median and shaded bands the 90 % 90\\% interval over posterior samples, for the EMRI -only (pink), EMRI + ZTF (green), EMRI + LSST (blue) and EMRI + ZTF + LSST (orange) catalogues. The black lines show the eight underlying simulated population scenarios (Table 4 ).",
+            "captionLatex": ": \\Aclp PPD for the shared hyperparameters, the MBH mass (left of each pair) and the redshift (right), for Model $\\mathcal{A}$ (left) and Model $\\mathcal{B}$ (right). Coloured lines show the median and shaded bands the $90\\%$ interval over posterior samples, for the EMRI -only (pink), EMRI + ZTF (green), EMRI + LSST (blue) and EMRI + ZTF + LSST (orange) catalogues. The black lines show the eight underlying simulated population scenarios (Table 4 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27742v1/ppd_AB_unshared.png",
+            "caption": ": Similar to Fig. 10 , PPD for the unshared parameters a ∙ a_{\\bullet} (left of each pair) and e pl e_{\\mathrm{pl}} (right), for Model 𝒜 \\mathcal{A} (left) and Model ℬ \\mathcal{B} (right). Coloured lines show the median and shaded bands the 90 % 90\\% interval over posterior samples; we only show results for the EMRI -only analysis as the TDE add negligible information on these parameters. The black lines show the eight underlying simulated population scenarios (Table 4 ).",
+            "captionLatex": ": Similar to Fig. 10 , PPD for the unshared parameters $a_{\\bullet}$ (left of each pair) and $e_{\\mathrm{pl}}$ (right), for Model $\\mathcal{A}$ (left) and Model $\\mathcal{B}$ (right). Coloured lines show the median and shaded bands the $90\\%$ interval over posterior samples; we only show results for the EMRI -only analysis as the TDE add negligible information on these parameters. The black lines show the eight underlying simulated population scenarios (Table 4 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27742v1/violin_AB_v4.png",
+            "caption": ": Marginal posteriors of the shared hyperparameters for each scenario-catalogue combination, for Model 𝒜 \\mathcal{A} (top) and Model ℬ \\mathcal{B} (bottom).",
+            "captionLatex": ": Marginal posteriors of the shared hyperparameters for each scenario-catalogue combination, for Model $\\mathcal{A}$ (top) and Model $\\mathcal{B}$ (bottom)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27742v1/combined_dominant_scenario_grid_oleary21_TDE.png",
+            "caption": ": Simulated TDE production weight (after nucleation, MBH occupation, and the active-cusp cut) binned on a ( z , log 10 ⁡ M ⋆ ) (z,\\log_{10}M_{\\star}) grid for each of the eight population scenarios (Table 3 ), under the fiducial O’Leary et al. (2020) merger-rate model. The star marks the smoothed peak-weight bin in each panel; the dashed red lines and shaded regions mark the stated validity bounds ( z ≤ 6 z\\leq 6 , M ⋆ ≥ 10 9.7 ​ M ⊙ M_{\\star}\\geq 10^{9.7}~M_{\\odot} ) of O’Leary et al. (2020) , so that the fraction of each panel outside the shading is the fraction of the simulated production for which the merger rate is applied within its measured domain.",
+            "captionLatex": ": Simulated TDE production weight (after nucleation, MBH occupation, and the active-cusp cut) binned on a $(z,\\log_{10}M_{\\star})$ grid for each of the eight population scenarios (Table 3 ), under the fiducial O’Leary et al. (2020) merger-rate model. The star marks the smoothed peak-weight bin in each panel; the dashed red lines and shaded regions mark the stated validity bounds ( $z\\leq 6$ , $M_{\\star}\\geq 10^{9.7}~M_{\\odot}$ ) of O’Leary et al. (2020) , so that the fraction of each panel outside the shading is the fraction of the simulated production for which the merger rate is applied within its measured domain."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27742v1/combined_dominant_scenario_grid_oleary21_EMRI.png",
+            "caption": ": Simulated EMRI production weight (after nucleation, MBH occupation, and the active-cusp cut) binned on a ( z , log 10 ⁡ M ⋆ ) (z,\\log_{10}M_{\\star}) grid for each of the eight population scenarios (Table 3 ), under the fiducial O’Leary et al. (2020) merger-rate model. As in Fig. 16 , but for EMRI . The star marks the smoothed peak-weight bin in each panel; the dashed red lines and shaded regions mark the stated validity bounds ( z ≤ 6 z\\leq 6 , M ⋆ ≥ 10 9.7 ​ M ⊙ M_{\\star}\\geq 10^{9.7}~M_{\\odot} ) of O’Leary et al. (2020) , so that the fraction of each panel outside the shading is the fraction of the simulated production for which the merger rate is applied within its measured domain.",
+            "captionLatex": ": Simulated EMRI production weight (after nucleation, MBH occupation, and the active-cusp cut) binned on a $(z,\\log_{10}M_{\\star})$ grid for each of the eight population scenarios (Table 3 ), under the fiducial O’Leary et al. (2020) merger-rate model. As in Fig. 16 , but for EMRI . The star marks the smoothed peak-weight bin in each panel; the dashed red lines and shaded regions mark the stated validity bounds ( $z\\leq 6$ , $M_{\\star}\\geq 10^{9.7}~M_{\\odot}$ ) of O’Leary et al. (2020) , so that the fraction of each panel outside the shading is the fraction of the simulated production for which the merger rate is applied within its measured domain."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.27742v1/ztf_footprint_gradient.png",
+        "thumbnailAlt": "(a) ZTF era",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27820",
+        "title": "What determines the properties of Population III binaries?",
+        "summary": "Population~III binaries may provide a gravitational-wave probe of the first stellar populations. Uncertain initial binary parameter distributions and evolutionary prescriptions complicate predictions of their remnant masses, birth orbits and formation spins. Varying these model evolutionary parameters (MEPs) jointly is needed to identify which MEPs shape each property and whether their effects persist among binaries that merge. We use \\textsc{StarTrack} to evolve $2\\times10^6$ initial binaries per model across 1152 configurations spanning eight MEPs. To our knowledge, this is the largest grid of Population~III isolated-binary population-synthesis models to date by number of distinct parameter configurations. We compare the properties and correlations of all binary black holes (BBHs) with those of systems that merge within the adopted age of the Universe. The all-BBH (merging-BBH) model medians span $34.3$--$171.0 M_{\\odot}$ ($23.1$--$94.8 M_{\\odot}$) in total mass, $0.039$--$0.106$ ($0.018$--$0.129$) in effective aligned spin $\\chi_{\\mathrm{eff}}$ at formation, and $0.075$--$0.639$ ($0.039$--$0.983$) in birth eccentricity. Merger selection also changes correlations between BBH properties and the combinations of MEP values and prescriptions associated with them. We use variance-based sensitivity analysis to quantify how the initial binary parameter distributions and evolutionary prescriptions affect the predicted BBH properties.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27820",
+        "htmlUrl": "https://arxiv.org/html/2611.27820v1",
+        "authors": [
+          "Neha Singh",
+          "Tomasz Bulik"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "gr-qc"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.27820v1/plots/modelwise_sections/section_01_combined.png",
+            "caption": "Model-wise BBH summaries for SS=4, remnant=2 and α = 0.5 \\alpha=0.5 (section 1). Blue circles show the all-BBH population; orange squares show the merging-BBH population. From top to bottom, the panels show M tot M_{\\mathrm{tot}} , q q , e birth e_{\\mathrm{birth}} , χ eff \\chi_{\\mathrm{eff}} and χ p \\chi_{\\mathrm{p}} . Total masses are expressed in solar masses ( M ⊙ M_{\\odot} ). Markers give within-model medians and bars span the 10th–90th percentiles of the binary population. Open markers indicate fewer than ten BBHs. Plots covering the full model grid and the underlying data will be made available on Zenodo.",
+            "captionLatex": "Model-wise BBH summaries for SS=4, remnant=2 and $\\alpha=0.5$ (section 1). Blue circles show the all-BBH population; orange squares show the merging-BBH population. From top to bottom, the panels show $M_{\\mathrm{tot}}$ , $q$ , $e_{\\mathrm{birth}}$ , $\\chi_{\\mathrm{eff}}$ and $\\chi_{\\mathrm{p}}$ . Total masses are expressed in solar masses ( $M_{\\odot}$ ). Markers give within-model medians and bars span the 10th–90th percentiles of the binary population. Open markers indicate fewer than ten BBHs. Plots covering the full model grid and the underlying data will be made available on Zenodo."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27820v1/plots/modelwise_sections/section_08_combined.png",
+            "caption": "Model-wise BBH summaries for SS=5, remnant=2 and α = 1 \\alpha=1 (section 8). Populations, markers and percentile ranges follow Fig. 1 . Plots covering the full model grid and the underlying data will be made available on Zenodo.",
+            "captionLatex": "Model-wise BBH summaries for SS=5, remnant=2 and $\\alpha=1$ (section 8). Populations, markers and percentile ranges follow Fig. 1 . Plots covering the full model grid and the underlying data will be made available on Zenodo."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27820v1/plots/factor_responses/bbh_factor_responses_overlaid.png",
+            "caption": "Dependence of population summaries on MEP values or prescriptions for the all-BBH population (blue circles, shifted left) and the merging-BBH population (orange squares, shifted right). Horizontal axes show numerical values or prescription codes. Paired markers refer to the same value or prescription. Total masses are expressed in solar masses ( M ⊙ M_{\\odot} ). Tildes denote within-model medians. Markers give medians of these within-model medians; bars span their between-model 10th–90th percentiles, with equal model weights, not confidence intervals. All 1152 models contribute to the all-BBH summaries; 1053 nonempty models contribute after the total-delay cut ≤ t H \\leq t_{\\mathrm{H}} . The populations overlap. After merger selection, the combinations of other MEP values and prescriptions can differ between the plotted values or prescriptions, so the merging-BBH summaries are descriptive and conditional.",
+            "captionLatex": "Dependence of population summaries on MEP values or prescriptions for the all-BBH population (blue circles, shifted left) and the merging-BBH population (orange squares, shifted right). Horizontal axes show numerical values or prescription codes. Paired markers refer to the same value or prescription. Total masses are expressed in solar masses ( $M_{\\odot}$ ). Tildes denote within-model medians. Markers give medians of these within-model medians; bars span their between-model 10th–90th percentiles, with equal model weights, not confidence intervals. All 1152 models contribute to the all-BBH summaries; 1053 nonempty models contribute after the total-delay cut $\\leq t_{\\mathrm{H}}$ . The populations overlap. After merger selection, the combinations of other MEP values and prescriptions can differ between the plotted values or prescriptions, so the merging-BBH summaries are descriptive and conditional."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27820v1/plots/correlations/bbh_correlation_corner.png",
+            "caption": "Distributions of within-model Spearman correlations for the six selected BBH properties: ℳ \\mathcal{M} , q q , χ eff \\chi_{\\mathrm{eff}} , χ p \\chi_{\\mathrm{p}} , e birth e_{\\mathrm{birth}} and e 0.1 e_{0.1} . Blue solid and orange dashed outlines show the all-BBH and merging-BBH populations, respectively, with one coefficient per valid model. Top and left symbols identify the paired properties; every horizontal axis shows the Spearman coefficient ρ s \\rho_{s} . Each panel shows a coefficient histogram, not a joint response density. Vertical-axis ranges vary between panels. χ eff \\chi_{\\mathrm{eff}} and χ p \\chi_{\\mathrm{p}} are formation values; e 0.1 e_{0.1} is the Peters estimate at source-frame 2 ​ f orb = 0.1 ​ Hz 2f_{\\mathrm{orb}}=0.1\\,\\mathrm{Hz} .",
+            "captionLatex": "Distributions of within-model Spearman correlations for the six selected BBH properties: $\\mathcal{M}$ , $q$ , $\\chi_{\\mathrm{eff}}$ , $\\chi_{\\mathrm{p}}$ , $e_{\\mathrm{birth}}$ and $e_{0.1}$ . Blue solid and orange dashed outlines show the all-BBH and merging-BBH populations, respectively, with one coefficient per valid model. Top and left symbols identify the paired properties; every horizontal axis shows the Spearman coefficient $\\rho_{s}$ . Each panel shows a coefficient histogram, not a joint response density. Vertical-axis ranges vary between panels. $\\chi_{\\mathrm{eff}}$ and $\\chi_{\\mathrm{p}}$ are formation values; $e_{0.1}$ is the Peters estimate at source-frame $2f_{\\mathrm{orb}}=0.1\\,\\mathrm{Hz}$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27820v1/plots/variance_heatmaps/bbh_all_total_effect_heatmap.png",
+            "caption": "Variance-based sensitivity of BBH response summaries to the varied MEPs. (a) Sobol total-effect indices for the indicated within-model summaries across the complete 1152-model all-BBH grid. Each index includes the MEP’s main effect and interactions; a row need not sum to one. (b) Variance-based Shapley effects for the indicated merging-BBH summaries across the 1053 nonempty models; rows sum to one before rounding. In both panels, p10 and p90 denote the 10th and 90th percentiles. The panels use different sensitivity measures as well as different populations. Their response summaries are not identical to those shown in Fig. 3 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.27820v1/plots/modelwise_sections/section_01_combined.png",
+        "thumbnailAlt": "Model-wise BBH summaries for SS=4, remnant=2 and α = 0.5 \\alpha=0.5 (section 1). Blue circles show the all-BBH population; orange squares show the merging-BBH population. From top to bottom, the panels show M tot M_{\\mathrm{tot}} , q q , e birth e_{\\mathrm{birth}} , χ eff \\chi_{\\mathrm{eff}} and χ p",
+        "catchupDate": "2026-11-23"
+      }
+    ],
+    "cross": [
+      {
+        "absId": "2611.25310",
+        "title": "3D Binary Evolution of a Merging Binary Black Hole Progenitor",
+        "summary": "Mass transfer is a highly dynamical 3D process that spans evolutionary timescales in binary stars. It is key to the production of gravitational waves through formation of binary black holes and other double compact objects. We integrate global 3D hydrodynamics into stellar evolutionary modeling to resolve mass transfer across nuclear timescales. We employ the shellular approximation in the stellar evolution code MESA to map a 3D spatial structure by equipotential shells in the Roche geometry to maintain hydrostatic equilibrium across tidally-distorted surfaces. We employ the method of time-incremented multiscale evolution to alternate between stellar evolution and 3D hydrodynamics to span large timescales with dynamical feedback. We employ this framework to examine a likely merging binary black hole progenitor system of a low-metallicity 30Msol donor star and 9.3Msol black hole from the end of the main sequence to core Carbon depletion. We modeled two complete mass transfer phases in 3D while self-consistently accounting for stellar evolution. These comprised a thermal-timescale early Case B phase and a nuclear-timescale late Case B phase. The prescription of Kolb & Ritter (1990) closely predicted the results of 3D evolution, except at the end of the first phase of mass transfer; our 3D model remained well-contained by the outer Lagrange point, despite 1D predictions of substantial L3 overflow during this stage. We find incorporating 3D hydrodynamics during Case B mass transfer did not significantly impact expected merger times. Our model never overflowed L3 as predicted by 1D prescriptions. L2/L3 outflows formed even while underflowing those equipotentials. Our model suggests these outflows can be neglected for the evolution of similar systems, but were dense enough to potentially impact X-ray observations.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.25310",
+        "htmlUrl": "https://arxiv.org/html/2611.25310v1",
+        "authors": [
+          "David Dickson",
+          "Pablo Marchant",
+          "Jon Sundqvist",
+          "Mattias Fabry"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.25310v1/mesa_relaxation.png",
+            "caption": ": 3D model relaxation of a barely overflowing Case A star+star binary of masses 24.1 ​ M ⊙ 24.1\\penalty\\ M_{\\odot} and 18.4 ​ M ⊙ 18.4\\penalty\\ M_{\\odot} from a hydrostatic MESA profile. Each cell on a high resolution 3D VH-1 grid after 10,000 steps of relaxation ( ∼ ​ 1 ​ day \\mathord{\\sim}1\\penalty\\ \\text{day} ) is visualized as a pixel both in its initial state (blue), which constitutes the mapped MESA profile plus a beta-law wind profile, and relaxed steady state (orange). The steady state differs primarily by the formation of the tidal stream (A) at ϕ = ϕ L ​ 1 \\phi=\\phi_{L1} , supplemental wind accretion (B), and enhancement of the donor wind (C). These effects and the dispersion visible in the 3D steady state arises primarily from induced flow dynamics not accounted for in the 1D profile.",
+            "captionLatex": ": 3D model relaxation of a barely overflowing Case A star+star binary of masses $24.1\\penalty\\ M_{\\odot}$ and $18.4\\penalty\\ M_{\\odot}$ from a hydrostatic MESA profile. Each cell on a high resolution 3D VH-1 grid after 10,000 steps of relaxation ( $\\mathord{\\sim}1\\penalty\\ \\text{day}$ ) is visualized as a pixel both in its initial state (blue), which constitutes the mapped MESA profile plus a beta-law wind profile, and relaxed steady state (orange). The steady state differs primarily by the formation of the tidal stream (A) at $\\phi=\\phi_{L1}$ , supplemental wind accretion (B), and enhancement of the donor wind (C). These effects and the dispersion visible in the 3D steady state arises primarily from induced flow dynamics not accounted for in the 1D profile."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.25310v1/evovmass.png",
+            "caption": ": Evolution of Case B MT in our test BBH progenitor. The colored solid lines represent the analytical prescriptions of Kolb and Ritter (1990) and Marchant et al. (2021) for each evolutionary step of our 3D model. Dotted lines indicate the evolution obtained with 1D MESA using those prescriptions in lieu of hydrodynamics. Dashed lines approximate the effective radii of L1-3, computed with the methods of Eggleton (1983) , Marchant et al. (2016) , and Marchant et al. (2021) , respectively. Letters correspond to the evolutionary stages visualized in Figure 4 . The envelope stripping phase (near point g) is resolved in detail in Figure 7 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.25310v1/hrd.png",
+            "caption": ": A Hertzprung-Russell Diagram charting the evolution of our test BBH progenitor. Dotted lines indicate the evolution obtained with 1D MESA using the prescriptions of Marchant et al. (2021) and Kolb and Ritter (1990) in lieu of hydrodynamics. Letters correspond to the evolutionary stages visualized in Figure 4 . Black dots are spaced at 500 yr increments to visualize the rate of evolution."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.25310v1/stills.png",
+            "caption": ": 3D Dynamics of Case B MT across evolutionary time in our test BBH progenitor. The ecliptic plane is colored by density. A density isosurface is applied to visualize the off-ecliptic system geometry. Subplots are scaled by their binary separation for visibility. See also Movie 1 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.25310v1/specangmom.png",
+            "caption": ": Specific angular momenta of tidal streams normalized to circular orbits through their respective Lagrange points. Constant fit lines are additionally provided for L2 and L3. Model 359 corresponds to the start of the first MT phase."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.25310v1/mesameshres.png",
+            "caption": ": Deviation from hydrostatic condition with respect to radius across a range of 1D mesh resolutions. All four models utilize the same pre-computed geometry table."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.25310v1/deltat.png",
+            "caption": ": Evolution of filling factor and MT rate at a range of time resolutions. Dotted lines indicate the evolutionary path MESA would take without feedback from hydrodynamics at the original time resolution using the prescriptions of Kolb and Ritter (1990) and Marchant et al. (2021) , respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.25310v1/diskrelax.png",
+            "caption": ": Persistent impact of disk-initialization after twenty orbits of relaxation."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.25310v1/mesa_relaxation.png",
+        "thumbnailAlt": ": 3D model relaxation of a barely overflowing Case A star+star binary of masses 24.1 ​ M ⊙ 24.1\\penalty\\ M_{\\odot} and 18.4 ​ M ⊙ 18.4\\penalty\\ M_{\\odot} from a hydrostatic MESA profile. Each cell on a high resolution 3D VH-1 grid after 10,000 steps of relaxation ( ∼ ​ 1 ​ day \\mathord{\\sim}1\\penalt",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.26684",
+        "title": "Charge Exchange Illuminates Turbulent Cold-Hot Interfaces",
+        "summary": "Cold-hot interfaces are ubiquitous in the multiphase circumgalactic medium (CGM), galactic winds, and the Galactic Center (GC), yet their microscopic contact regions are difficult to observe. Charge exchange (CX), in which a highly ionized metal ion captures an electron from a neutral donor and emits soft X-ray lines, directly probes these interfaces. We develop a subgrid CX model coupled to a nonequilibrium ionization (NEI) network in hydrodynamic simulations of radiative turbulent mixing layers. CX soft X-rays are confined to a thin, highly corrugated cold-hot interface (corrugation factor $\\sim10$), whereas thermal emission fills the hot phase. Turbulent transport sustains high-charge ions at $T\\sim 10^4$-$10^5$ K, where they encounter neutral donors. The low-temperature O VIII fraction exceeds that in a uniformly cooling isobaric parcel, demonstrating the importance of mixing to the ionization history. CX depletes this cool ion population, while continued entrainment maintains the supply. Including a metagalactic ionizing background changes the ion distribution and enhances CX surface brightness by a factor of a few in our CGM comparison, but preserves the cool origin of most CX emission. In the limit of sufficient neutral column, CX surface brightness is ion-supply limited: higher donor density increases local emissivity but shortens the reaction layer. The system-wide CX-to-thermal soft X-ray ratio also depends on the volume-to-interface scale $V/A_{\\rm int}$, making CX a potential probe of multiphase structure in the CGM, galactic winds, and the GC.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26684",
+        "htmlUrl": "https://arxiv.org/html/2611.26684v1",
+        "authors": [
+          "Yizhan Zhang",
+          "Suoqing Ji",
+          "Guiyun Liang",
+          "Shuinai Zhang",
+          "Zhijie Qu"
+        ],
+        "categories": [
+          "astro-ph.GA",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.26684v1/cx_thermal_cgmZ0.3_time_sequence.png",
+            "caption": ": Time evolution in the CGM-Z0.3 (left) and GC-Z1 (right) runs, showing volume-weighted projections of temperature T T (top) and soft X-ray emissivities from CX ϵ CX \\epsilon_{\\mathrm{CX}} (middle) and thermal emission ϵ th \\epsilon_{\\mathrm{th}} (bottom). CX emission is confined to the corrugated cold-hot mixing interface, while thermal soft X-ray emission traces the hot phase.",
+            "captionLatex": ": Time evolution in the CGM-Z0.3 (left) and GC-Z1 (right) runs, showing volume-weighted projections of temperature $T$ (top) and soft X-ray emissivities from CX $\\epsilon_{\\mathrm{CX}}$ (middle) and thermal emission $\\epsilon_{\\mathrm{th}}$ (bottom). CX emission is confined to the corrugated cold-hot mixing interface, while thermal soft X-ray emission traces the hot phase."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26684v1/sxcx_temperature_surface.png",
+            "caption": ": Three orthographic views of the isosurface ϵ CX = 10 − 33 ​ erg ​ s − 1 ​ cm − 3 \\epsilon_{\\mathrm{CX}}=10^{-33}~\\mathrm{erg~s^{-1}~cm^{-3}} in the CGM-Z0.3-HR run at t = 33 ​ Myr t=33\\,\\mathrm{Myr} within the saturated stage, colored by the local gas temperature. The left panel is a top-down view normal to the initial interface, seen from the cold phase; the middle panel is an edge-on view parallel to the interface; and the right panel is a bottom-up view normal to the interface, seen from the hot phase. The CX-emitting region forms fragmented, highly corrugated sheets and filaments that occupy a geometrically thin mixing layer while providing a large cold-hot contact area. An interactive 3D version of this figure is available at https://skfb.ly/pO8Yw .",
+            "captionLatex": ": Three orthographic views of the isosurface $\\epsilon_{\\mathrm{CX}}=10^{-33}~\\mathrm{erg~s^{-1}~cm^{-3}}$ in the CGM-Z0.3-HR run at $t=33\\,\\mathrm{Myr}$ within the saturated stage, colored by the local gas temperature. The left panel is a top-down view normal to the initial interface, seen from the cold phase; the middle panel is an edge-on view parallel to the interface; and the right panel is a bottom-up view normal to the interface, seen from the hot phase. The CX-emitting region forms fragmented, highly corrugated sheets and filaments that occupy a geometrically thin mixing layer while providing a large cold-hot contact area. An interactive 3D version of this figure is available at https://skfb.ly/pO8Yw ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.26684v1/cx_thermal_cgmZ0.3_time_sequence.png",
+        "thumbnailAlt": ": Time evolution in the CGM-Z0.3 (left) and GC-Z1 (right) runs, showing volume-weighted projections of temperature T T (top) and soft X-ray emissivities from CX ϵ CX \\epsilon_{\\mathrm{CX}} (middle) and thermal emission ϵ th \\epsilon_{\\mathrm{th}} (bottom). CX emission is confined to the corrugated c",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.26685",
+        "title": "Little Red Dots at Cosmic Noon: Spectroscopy Reveals Declining Abundance but a Non-Evolving Luminosity Function Shape",
+        "summary": "Little red dots (LRDs) are an extremely abundant population of red, compact, broad-line objects primarily found in the early universe. At $5<z<8$, they are at least 10 times more abundant than UV-selected quasars. Yet, how this population evolves towards lower redshift is unclear. In this work, we present our search for LRDs at cosmic noon ($2\\lesssim z\\lesssim 4$) in nearly 20 deg$^2$ of the Deep/UltraDeep fields of the Hyper Suprime-Cam Subaru Strategic Program (HSC-SSP). Combining multiwavelength wide-field imaging surveys from 0.3 to 4.5 $\\mu$m, we identify 266 photometric LRD candidates. With spectroscopic follow-up from Keck/NIRES, VLT/X-shooter, and Magellan/FIRE on 24 candidates, we identify a sample of four LRDs with broad H$\\alpha$ emission. With the purity of the photometric sample calibrated by spectroscopy, we estimate the number density of LRDs to be approximately $6.8\\times10^{-7}$ cMpc$^{-3}$ at $2.10<z<2.55$---this is nearly a factor of 35 decrease from their flat number density evolution at $4\\lesssim z\\lesssim8$ estimated from JWST spectroscopic surveys. The knee of the LRD optical luminosity function also remains consistently at $M_{5500}\\approx-22$ mag across $2<z<5$, below that of quasars. We further speculate that only the abundance of LRDs, but not the shape of their optical luminosity function, evolves with redshift, and the Roman Space Telescope will be able to test this decisively with a substantially larger sample of low-redshift LRDs.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26685",
+        "htmlUrl": "https://arxiv.org/html/2611.26685v1",
+        "authors": [
+          "Yilun Ma",
+          "Daniel J. Lyon",
+          "Jenny E. Greene",
+          "Alberto Torralba",
+          "Jorryt Matthee",
+          "Ivo Labbe",
+          "Andy D. Goulding",
+          "David J. Setton",
+          "Marianna Annunziatella",
+          "Aayush Desai",
+          "Eiichi Egami",
+          "Xiaohui Fan",
+          "Karl Glazebrook",
+          "Vasily Kokorev",
+          "Jiaxuan Li",
+          "Xiaojing Lin",
+          "Danilo Marchesini",
+          "Themiya Nanayakkara",
+          "Luke Robbins",
+          "Anna Sajina",
+          "Marcin Sawicki"
+        ],
+        "categories": [
+          "astro-ph.GA",
+          "astro-ph.CO",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.26685v1/footprint.png",
+            "caption": "The photometric LRD candidates and spectroscopically targeted sources are shown in the RA–Dec plane. Dark red stars represent sources with a confirmed broad H α \\alpha emission line; light red stars represent sources where only a spectroscopic redshift is obtained from Ly α \\alpha emission, but no broad H α \\alpha available and/or detected. Pink circles represent sources that were targeted spectroscopically but no spectroscopic redshift obtained. Empty circles represents photometric candidates. The backgrounds are 2D-histograms showing source densities and survey footprints of the parent u u -to-IRAC catalog from which the LRD candidates were selected.",
+            "captionLatex": "The photometric LRD candidates and spectroscopically targeted sources are shown in the RA–Dec plane. Dark red stars represent sources with a confirmed broad H $\\alpha$ emission line; light red stars represent sources where only a spectroscopic redshift is obtained from Ly $\\alpha$ emission, but no broad H $\\alpha$ available and/or detected. Pink circles represent sources that were targeted spectroscopically but no spectroscopic redshift obtained. Empty circles represents photometric candidates. The backgrounds are 2D-histograms showing source densities and survey footprints of the parent $u$ -to-IRAC catalog from which the LRD candidates were selected."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26685v1/color_color.png",
+            "caption": "Left: The LRD candidates and spectroscopically confirmed LRDs are shown in the rest-frame UV-optical color space. Same as in Figure 1 , dark red stars represent sources with a confirmed broad H α \\alpha emission line; light red stars represent sources where only a spectroscopic redshift is obtained from Ly α \\alpha emission, but no broad H α \\alpha is available and/or detected. Pink circles represent sources that were targeted spectroscopically but no spectroscopic redshift was obtained. Empty circles represents photometric candidates. The gray background are sources in the parent u u -to-IRAC catalog from which the LRDs are selected. The dashed lines mark the selection criteria. Right: Same as the left panel but objects are shown in the rest-frame optical-NIR color space.",
+            "captionLatex": "Left: The LRD candidates and spectroscopically confirmed LRDs are shown in the rest-frame UV-optical color space. Same as in Figure 1 , dark red stars represent sources with a confirmed broad H $\\alpha$ emission line; light red stars represent sources where only a spectroscopic redshift is obtained from Ly $\\alpha$ emission, but no broad H $\\alpha$ is available and/or detected. Pink circles represent sources that were targeted spectroscopically but no spectroscopic redshift was obtained. Empty circles represents photometric candidates. The gray background are sources in the parent $u$ -to-IRAC catalog from which the LRDs are selected. The dashed lines mark the selection criteria. Right: Same as the left panel but objects are shown in the rest-frame optical-NIR color space."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26685v1/completeness_area_weighted.png",
+            "caption": "The selection completeness of the LRD selection as a function of optical luminosity and redshift averaged over the four HSC-D/UD fields. The lines are contours for a completeness of 50% ( 2.1 < z < 2.6 2.1<z<2.6 ) and 80% ( 2.2 < z < 2.5 2.2<z<2.5 ).",
+            "captionLatex": "The selection completeness of the LRD selection as a function of optical luminosity and redshift averaged over the four HSC-D/UD fields. The lines are contours for a completeness of 50% ( $2.1<z<2.6$ ) and 80% ( $2.2<z<2.5$ )."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26685v1/weight_visualization.png",
+            "caption": "All sources in the parent u u -to-IRAC catalog are color-coded and size-coded by the targeting priority weight w w defined in Section IV.1 . Darker color and larger marker size represent higher targeting priority weight. The definition of Δ slope \\Delta_{\\mathrm{slope}} , the UV-optical slope contrast is provided in Equation D3 .",
+            "captionLatex": "All sources in the parent $u$ -to-IRAC catalog are color-coded and size-coded by the targeting priority weight $w$ defined in Section IV.1 . Darker color and larger marker size represent higher targeting priority weight. The definition of $\\Delta_{\\mathrm{slope}}$ , the UV-optical slope contrast is provided in Equation D3 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26685v1/completeness_15_areas.png",
+            "caption": "Figure C2: The completeness of each subregions of the HSC D/UD fields (depending on the different combination of imaging depth i the optical and near-infrared) is shown as a function of redshift and optical luminosity. The red dashed lines show the parameter spaces where our selections is 50% complete."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.26685v1/footprint.png",
+        "thumbnailAlt": "The photometric LRD candidates and spectroscopically targeted sources are shown in the RA–Dec plane. Dark red stars represent sources with a confirmed broad H α \\alpha emission line; light red stars represent sources where only a spectroscopic redshift is obtained from Ly α \\alpha emission, but no b",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.26973",
+        "title": "Accretor Luminosity as Probe of Orbital Evolution and Magnetic Braking in AM CVn Binaries",
+        "summary": "AM CVn binaries are ultracompact systems with orbital periods $P_{\\rm orb} \\lesssim 70$ min, where a white dwarf accretes from a He-rich semidegenerate donor. At short orbital periods ($P_{\\rm orb} \\lesssim 20$ min), rapid accretion reheats the accretor. As the system widens and the mass transfer rate decreases, the accretor follows standard white dwarf cooling at longer orbital periods ($P_{\\rm orb} \\gtrsim 30$ min). The accretor cooling luminosity then acts as a powerful probe into the orbital evolution of the binary. Recent observations show that the accretor appears brighter (younger) at long orbital periods, compared to models where orbital angular momentum loss is solely set by gravitational wave emission. We show that additional angular momentum loss, which we ascribe to magnetic braking of the donor, can better reproduce observations of accretor luminosity. We test and constrain various proposed magnetic braking formalisms, for the white dwarf, helium star, and evolved cataclysmic variable (CV) channels for AM CVn formation. None of the magnetic braking formalisms in their original form can reproduce the observations, but the widely popular magnetic braking proposed by Rappaport et al. 1983 boosted by a factor $\\approx 5$, or the saturated magnetic braking proposed by Matt et al. 2015 boosted by a factor of $\\approx 150$, yields satisfactory results. We also find that the CARB formalism, recently applied to the evolved CV channel, is strongly in tension with observations of accretor luminosity. Our models motivate UV spectroscopy observations, and dedicated WD atmosphere models for AM CVn accretors.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26973",
+        "htmlUrl": "https://arxiv.org/html/2611.26973v1",
+        "authors": [
+          "Tin Long Sunny Wong",
+          "Peter Scherbak",
+          "Jim Fuller"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.26973v1/kap_comparison.png",
+            "caption": "Figure 1 from the paper"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.26973v1/kap_comparison.png",
+        "thumbnailAlt": "Figure 1 from the paper",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27442",
+        "title": "A Relativistic Newton's Third Law for Binaries in Environments",
+        "summary": "We derive the relativistic form of Newton's Third Law governing the interaction between intermediate- and extreme-mass-ratio inspirals and surrounding relativistic matter fields. Working within a two-parameter expansion, we rewrite the evolution of the secondary's orbital elements in a form resembling the integrated forces acting on the environment, avoiding the need to calculate any gravitational perturbations sourced by the dynamical matter content. Using the retarded and advanced Green's functions, we obtain both instantaneous and orbit-averaged laws relating the rate of change of the secondary's orbital energy and angular momentum to that of the matter and the gravitational-wave fluxes at that order. Our results clarify and correct the mixture of ad hoc balance prescriptions currently employed in the literature, providing first-principles forcing functions for the secondary's orbital elements in two ready-to-use forms: a leading-order formulation suitable for fast evaluation with complex relativistic matter simulations, and a first-post-adiabatic formulation of the energy and angular-momentum evolution in environments that are stationary and axisymmetric at leading order.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27442",
+        "htmlUrl": "https://arxiv.org/html/2611.27442v1",
+        "authors": [
+          "Conor Dyson",
+          "Adam Pound",
+          "Daniel J. D'Orazio",
+          "Maarten van de Meent",
+          "Lorenz Zwick"
+        ],
+        "categories": [
+          "gr-qc",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.27442v1/penrose_hypersurface.png",
+            "caption": "Penrose diagram of the black hole exterior. The constant- t t hypersurfaces Σ t 1 \\Sigma_{t_{1}} and Σ t 2 \\Sigma_{t_{2}} run between two timelike surfaces, one “close” to the bifurcation 2-sphere and the other “close” to spatial infinity, bounding the volume V T V_{T} (shaded). The orbiting secondary travels on the worldline γ \\gamma from i − i^{-} , passes through V T V_{T} at x x , and crosses ℋ + \\mathcal{H}^{+} .",
+            "captionLatex": "Penrose diagram of the black hole exterior. The constant- $t$ hypersurfaces $\\Sigma_{t_{1}}$ and $\\Sigma_{t_{2}}$ run between two timelike surfaces, one “close” to the bifurcation 2-sphere and the other “close” to spatial infinity, bounding the volume $V_{T}$ (shaded). The orbiting secondary travels on the worldline $\\gamma$ from $i^{-}$ , passes through $V_{T}$ at $x$ , and crosses $\\mathcal{H}^{+}$ ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.27442v1/penrose_hypersurface.png",
+        "thumbnailAlt": "Penrose diagram of the black hole exterior. The constant- t t hypersurfaces Σ t 1 \\Sigma_{t_{1}} and Σ t 2 \\Sigma_{t_{2}} run between two timelike surfaces, one “close” to the bifurcation 2-sphere and the other “close” to spatial infinity, bounding the volume V T V_{T} (shaded). The orbiting seconda",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27628",
+        "title": "Nuclear Urca cooling in magnetar crust and anomalous heating",
+        "summary": "We present a new result that the nuclear Urca process in magnetars, associated with ultrastrong magnetic field, dramatically alters the neutrino cooling efficiency to support higher surface temper ature, which is not common in ordinary neutron stars. A new formalism for neutrino luminosity accommodating finite temperature on top of magnetic field is extended with the use of realistic nuclear structure inputs for the Urca pair 29Na-29Mg. We find that the neutrino luminosity of Urca pair shows a spiral variation as a function of magnetic field and crust density, while the Urca pair persists, in contrast to previous studies. Applying geometrically correct volumetric energy loss rate to Urca shell at fixed density with varying magnetic field strength, our results show that thermally populated excited states at finite temperature enhance neutrino luminosity, whereas conditions con strained Urca-pair formation driven by ultrastrong magnetic field reduce cooling efficiency, which can explain high temperature of magnetar surface as a new possibility.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27628",
+        "htmlUrl": "https://arxiv.org/html/2611.27628v1",
+        "authors": [
+          "LInjing Qi",
+          "Qiye Hu",
+          "Xinxu Wang",
+          "Yudong Luo",
+          "Ligang Cao",
+          "Longjun Wang",
+          "Toshitaka Kajino",
+          "Hiroyuki Sagawa",
+          "Fengshou Zhang"
+        ],
+        "categories": [
+          "nucl-th",
+          "astro-ph.HE"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27669",
+        "title": "Nuclear Precision and Multimessenger Constraints on Neutron-Star Structure",
+        "summary": "Neutron-star cores retain structural freedom beyond the constraints supplied by nuclear measurements. We quantify this freedom through an observable-dependent variance ceiling and identify radius--Love compensation as a mechanism suppressing nuclear constraints on tides. Across four data-conditioned equation-of-state families, a pulsar radius measured to 0.3 km paired with a binary tide measured to 10\\% removes 44--68\\% of the current logarithmic Love-number variance. The framework connects laboratory precision and complementary stellar measurements to core structure.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27669",
+        "htmlUrl": "https://arxiv.org/html/2611.27669v1",
+        "authors": [
+          "Hisham Anwer",
+          "A. Adel",
+          "E. Omar"
+        ],
+        "categories": [
+          "nucl-th",
+          "astro-ph.HE",
+          "astro-ph.SR"
+        ],
+        "catchupDate": "2026-11-23"
+      }
+    ],
+    "repl": [
+      {
+        "absId": "2601.05048",
+        "title": "Jet launching from the Kerr black hole magnetosphere: An electrogeodesic approach",
+        "summary": "The launch of relativistic jets of plasma on astrophysical to cosmological scales is observed in a variety of astrophysical sources, from active galactic nuclei to X-ray binaries. While these jets can be reproduced by general relativistic magneto-hydrodynamics (GRMHD) and particle-in-cells (GRPIC) simulations of the dynamical Kerr magnetosphere, the development of analytic models to describe the physics of the jets has remained limited. A key challenge is to analytically describe the individual trajectories of accelerated charged particles, which ultimately build up the jet and emit radiation. In this work, we provide a first simple but fully analytical model of jet launching from the Kerr magnetosphere based on the motion of charged particles. To that end, we use the integrability of electrogeodesic motion in the Kerr monopole magnetosphere to study the ejection of charged particles near the poles. This enables us to derive (i) a criterion for the rotation axis to constitute a stable latitudinal equilibrium position, thereby representing an idealized jet, (ii) the expression for the magnetic frame-dragging effect, and (iii) the condition for an asymptotic observer to measure blueshifted particles emanating from the black hole surroundings. Our study reveals that particles can be accelerated only in a specific region whose maximal radius depends on the spin and magnetization of the black hole. We further show that these results extend to the split-monopole Kerr solution by a redefinition of the angular momentum of the charged particles. Alongside these results, we provide a detailed review of the construction of test magnetospheres from (explicit and hidden) symmetries of the Kerr geometry and the condition for the separability of the electrogeodesic motion in a test magnetosphere, which serves as a basis for the model studied in this work.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2601.05048",
+        "htmlUrl": "https://arxiv.org/html/2601.05048v3",
+        "authors": [
+          "Jibril Ben Achour",
+          "Ileyk El Mellah",
+          "Eric Gourgoulhon"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "gr-qc"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2606.10017",
+        "title": "Refined anti-proton and anti-deuteron fluxes from weak-scale Dark Matter",
+        "summary": "We provide the cosmic-ray (CR) fluxes of antiprotons and antideuterons produced by the Galactic annihilation or decay of weak-scale dark matter (DM) particles of masses in the range from a few GeV to 100 TeV. We estimate these fluxes based on the updated models for the propagation of charged particles in the Galaxy and using the improved $\\bar{p}$ and $\\bar{d}$ spectra provided by $\\texttt{CosmiXs}$. For the updated propagation models we consider the MIN/MED/MAX sets under the new SLIM/BIG/QUAINT schemes. We treat the Galactic propagation in a semi-analytic way including different possible effects such as spatial diffusion, energy-losses, convection and diffusive reacceleration. For the DM distribution in the Galactic halo we consider NFW, Einasto and Burkert profiles with the most updated parameters. Moreover, we also incorporate the latest models for the inelastic cross-sections of $\\bar{p}$ and $\\bar{d}$ based on ALICE data. We validate our calculations with those available in the literature or those obtained from other publicly available numerical packages. We compare the CR fluxes obtained in this work with those provided previously by $\\texttt{PPPC4DMID}$ which were based on old propagation scenarios. We find that the CR fluxes obtained here with the new propagation models are much more robust (compared to the older ones) under the variation MIN - MAX. We also discuss the impact of this in the improvement of the discovery potential of a possible DM signal in the light of the present and upcoming CR observations. We provide all our results for the DM-induced interstellar CR fluxes in a tabulated format (for the kinetic energy range 0.1 GeV - 100 TeV) in the $\\texttt{GitHub}$ repository of the newly created $\\texttt{CosmiXsPPPC}$ project. The results are ready to be used for studies related to DM indirect searches.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2606.10017",
+        "htmlUrl": "https://arxiv.org/html/2606.10017v3",
+        "authors": [
+          "Marco Cirelli",
+          "Mattia Di Mauro",
+          "Arpan Kar"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.CO",
+          "astro-ph.GA",
+          "hep-ph"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2608.09014",
+        "title": "Locating the missing baryons in the warm-hot intergalactic medium with fast radio bursts and the Sunyaev-Zel'dovich effect",
+        "summary": "Traditional astronomical censuses in the late-time Universe can only account for a fraction of the baryonic matter budget. Hydrodynamical simulations predict that the missing baryons reside in the vast filamentary structures of the cosmic web as a highly diffuse, warm-hot intergalactic medium (WHIM). Observing the WHIM directly has remained a long-standing challenge due to its typical temperature. In this study, we measure the angular cross-power spectrum between the dispersion measures (DMs) of fast radio bursts (FRBs) from the second CHIME/FRB catalog and the thermal Sunyaev-Zel'dovich (tSZ) Compton-$y$ map from the Planck satellite. After masking cataloged galaxy clusters, we find a positive correlation between FRB DMs and the tSZ map at $>98\\%$ confidence ($p_{\\rm null}=0.0169$). With a temperature normalization of $2.4\\times10^6\\ {\\rm K}$, we infer that a fraction $f_{\\rm WHIM}=0.375^{+0.165}_{-0.161}$ of cosmic baryons resides in the hotter WHIM. These measurements constrain a substantial reservoir of hotter diffuse gas in the cosmic web and statistically close the cosmic baryon budget in the local Universe under the adopted density and pressure model.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2608.09014",
+        "htmlUrl": "https://arxiv.org/html/2608.09014v2",
+        "authors": [
+          "Dao-Hong Zhai",
+          "F.Y. Wang",
+          "Zi-Gao Dai",
+          "Renyue Cen"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2608.09014v2/preview.png",
+            "caption": "Sky distribution of the FRB sample and the masked tSZ map. (a) The spatial distribution of FRBs and galaxy clusters. Blue and green dots represent clusters from the PSZ2 and MCXC-II catalogs, respectively. Crosses indicate FRBs located within a 3 ​ θ 500 3\\theta_{500} exclusion radius of any cluster and these are discarded. Orange dots represent the final FRB sample retained for the cross-correlation measurement. (b) The masked Compton- y y parameter map. Circular regions within a 3 ​ θ 500 3\\theta_{500} radius around all cataloged clusters are excluded to isolate the hotter diffuse WHIM signal. The exclusion mask is smoothed using a cosine apodization to prevent ringing artifacts. The Galactic plane and bright point sources are also masked out.",
+            "captionLatex": "Sky distribution of the FRB sample and the masked tSZ map. (a) The spatial distribution of FRBs and galaxy clusters. Blue and green dots represent clusters from the PSZ2 and MCXC-II catalogs, respectively. Crosses indicate FRBs located within a $3\\theta_{500}$ exclusion radius of any cluster and these are discarded. Orange dots represent the final FRB sample retained for the cross-correlation measurement. (b) The masked Compton- $y$ parameter map. Circular regions within a $3\\theta_{500}$ radius around all cataloged clusters are excluded to isolate the hotter diffuse WHIM signal. The exclusion mask is smoothed using a cosine apodization to prevent ringing artifacts. The Galactic plane and bright point sources are also masked out."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2608.09014v2/preview.png",
+        "thumbnailAlt": "Sky distribution of the FRB sample and the masked tSZ map. (a) The spatial distribution of FRBs and galaxy clusters. Blue and green dots represent clusters from the PSZ2 and MCXC-II catalogs, respectively. Crosses indicate FRBs located within a 3 ​ θ 500 3\\theta_{500} exclusion radius of any cluster",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2609.20787",
+        "title": "A systematic search for long GRBs without supernovae: global properties and rate of events",
+        "summary": "Some long duration gamma-ray bursts (LGRBs) are not associated with bright supernovae (SNe), indicating that their explosion mechanism differs from the traditional collapsar channel. SN-less LGRBs are rare, thus it remains unclear whether they are sporadic outliers or a substantial component of the GRB population. In this work, we use two decades of Swift observations to conduct a systematic search for nearby ($z\\lesssim$0.35) LGRBs without a confirmed SN association. Our analysis reveals a heterogeneous population linked, in part, to star-forming or dusty environments and, in part, to quiescent galaxies. Through the analysis of their high-energy properties, afterglows, and environments, we identify a sample of LGRBs with robust SN limits and distance scales, more than doubling the number of candidate SN-less events. From our fiducial sample, we derive a volumetric rate, not corrected for beaming, of $R = (0.5 \\pm 0.2) {\\rm~Gpc^{-3}\\ yr^{-1}}$, comparable to the apparent rate of short duration GRBs (SGRBs) and standard LGRBs with SNe with luminosities $L \\gtrsim\\,10^{50}\\,{\\rm erg\\,s^{-1}}$. For plausible beaming factors, the inferred rate of SN-less LGRBs is consistent with several compact binary merger channels, although the allowed parameter space is already narrow if the entire population is attributed to a single progenitor channel. Owing to the small number of candidate events and the uncertainties in their distance scale, our sample leaves the low-luminosity tail unconstrained. A larger sample will be needed to determine whether they are the faint tail of known progenitor channels or evidence of a distinct route to relativistic explosions.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.20787",
+        "htmlUrl": "https://arxiv.org/html/2609.20787v2",
+        "authors": [
+          "Yu-Han Yang",
+          "Eleonora Troja",
+          "Nicolas Monsalves",
+          "Massine El Kabir",
+          "Narjes Shahamat Dehsorkh",
+          "Hira Waseem"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.20787v2/Fig/GRB_lightcurve_gallery.png",
+            "caption": ": Swift /BAT mask-weighted light curves (15–350 keV) of the Group C sample: 18 LGRBs lacking SN associations as discussed in Sect. II (ULGRBs 090417B and 130925A are excluded). Black step lines show the 1 s uniformly binned peak-normalised count rate, with the light-gray bars indicating 1 ​ σ 1\\sigma uncertainties. Overplotted in red are the Bayesian blocks. Red dashed vertical lines and the shaded band mark the T 90 T_{90} interval.",
+            "captionLatex": ": Swift /BAT mask-weighted light curves (15–350 keV) of the Group C sample: 18 LGRBs lacking SN associations as discussed in Sect. II (ULGRBs 090417B and 130925A are excluded). Black step lines show the 1 s uniformly binned peak-normalised count rate, with the light-gray bars indicating $1\\sigma$ uncertainties. Overplotted in red are the Bayesian blocks. Red dashed vertical lines and the shaded band mark the $T_{90}$ interval."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.20787v2/Fig/npcc.png",
+            "caption": ": Normalized cumulative distribution of chance coincidence probabilities, P cc P_{\\rm cc} , for low redshift ( z ≲ z\\lesssim 0.35) galaxy associations. The green curve shows the full Swift LGRB sample without direct redshift measurements, whereas the red curve shows the same sample after excluding Group B bursts. The grey curve shows the SGRB distribution. The results from random sky positions are shown by the dashed line. At low P cc P_{\\rm cc} , the GRB samples show an excess relative to random positions, indicating that some associations are likely physical. At larger P cc P_{\\rm cc} , the GRB and random distributions become increasingly similar, suggesting that chance alignments dominate.",
+            "captionLatex": ": Normalized cumulative distribution of chance coincidence probabilities, $P_{\\rm cc}$ , for low redshift ( $z\\lesssim$ 0.35) galaxy associations. The green curve shows the full Swift LGRB sample without direct redshift measurements, whereas the red curve shows the same sample after excluding Group B bursts. The grey curve shows the SGRB distribution. The results from random sky positions are shown by the dashed line. At low $P_{\\rm cc}$ , the GRB samples show an excess relative to random positions, indicating that some associations are likely physical. At larger $P_{\\rm cc}$ , the GRB and random distributions become increasingly similar, suggesting that chance alignments dominate."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.20787v2/Fig/montage.png",
+            "caption": ": False-color g ​ r ​ z grz cutout images of the LGRBs in Group C from the Legacy Survey [ 54 ] . The image of GRB 051109B was instead acquired with the Keck Low Resolution Imaging Spectrometer (LRIS). The cyan circle marks the GRB localization region. Redshifts are reported in the lower-left corner of each panel, and the physical scale is shown in the lower-right corner. In the field of GRB 050911, three galaxy clusters are identified, and their members are marked by the colored circles. In the field of GRB 200716C the white contours show the peak of radio emission. The fields of GRBs 061021, 111225A, and 150727A are not shown as their faint host galaxies are not visible.",
+            "captionLatex": ": False-color $grz$ cutout images of the LGRBs in Group C from the Legacy Survey [ 54 ] . The image of GRB 051109B was instead acquired with the Keck Low Resolution Imaging Spectrometer (LRIS). The cyan circle marks the GRB localization region. Redshifts are reported in the lower-left corner of each panel, and the physical scale is shown in the lower-right corner. In the field of GRB 050911, three galaxy clusters are identified, and their members are marked by the colored circles. In the field of GRB 200716C the white contours show the peak of radio emission. The fields of GRBs 061021, 111225A, and 150727A are not shown as their faint host galaxies are not visible."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.20787v2/Fig/simlcbat.png",
+            "caption": ": Left: BAT partial coding map and response grid, as defined in Lien et al. [142] . Right: Simulated light curves of GRB 051109B at z = 0.10 z=0.10 for grid IDs 17, 9, and 1, corresponding to partial coding 100%, 50%, and 4%, respectively. The light curves are shown in the 15–350 keV band, assuming 27,000 enabled detectors.",
+            "captionLatex": ": Left: BAT partial coding map and response grid, as defined in Lien et al. [142] . Right: Simulated light curves of GRB 051109B at $z=0.10$ for grid IDs 17, 9, and 1, corresponding to partial coding 100%, 50%, and 4%, respectively. The light curves are shown in the 15–350 keV band, assuming 27,000 enabled detectors."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.20787v2/Fig/t90dist.png",
+            "caption": ": Duration distribution of Swift SGRBs, defined by T 90 < 2 T_{90}<2 s. The black curve represents a Gaussian fit to the distribution, centered at 0.5 s with σ \\sigma =0.54. The red histogram shows the candidate non-collapsar LGRBs identified at z ≲ z\\lesssim 0.35.",
+            "captionLatex": ": Duration distribution of Swift SGRBs, defined by $T_{90}"
+          },
+          {
+            "url": "https://arxiv.org/html/2609.20787v2/Fig/grbrate.png",
+            "caption": ": Event rate estimates for SGRBs (black circles), collapsar LGRBs (blue squares), and non-collapsar LGRBs (red diamond), not corrected for the unknown beaming factor f b f_{b} . All rates are renormalized to a common minimum peak luminosity of L min ≈ 10 50 ​ erg ​ s − 1 L_{\\min}\\approx 10^{50}\\,{\\rm erg\\,s^{-1}} . Literature values are taken from: Ando 9 (A04); Guetta and Piran 94 (GP06); Coward et al. 47 (C12); Wanderman and Piran 248 (WP15); Jin et al. 109 (J18); Dichiara et al. 58 (D20); Liang et al. 140 (L07); Wanderman and Piran 247 (WP10); Tan and Wang 224 (T15); Graff et al. 90 (G16); Lan et al. 127 (L19); Troja et al. 237 (T22).",
+            "captionLatex": ": Event rate estimates for SGRBs (black circles), collapsar LGRBs (blue squares), and non-collapsar LGRBs (red diamond), not corrected for the unknown beaming factor $f_{b}$ . All rates are renormalized to a common minimum peak luminosity of $L_{\\min}\\approx 10^{50}\\,{\\rm erg\\,s^{-1}}$ . Literature values are taken from: Ando 9 (A04); Guetta and Piran 94 (GP06); Coward et al. 47 (C12); Wanderman and Piran 248 (WP15); Jin et al. 109 (J18); Dichiara et al. 58 (D20); Liang et al. 140 (L07); Wanderman and Piran 247 (WP10); Tan and Wang 224 (T15); Graff et al. 90 (G16); Lan et al. 127 (L19); Troja et al. 237 (T22)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.20787v2/Fig/merger_rate.png",
+            "caption": ": Comparison between the beaming-corrected rate of non-collapsars LGRBs (black curve with 68% uncertainty shown by the grey band) and the volumetric rates for different compact binary mergers (horizontal shaded bands): (a) NS–NS mergers [ 1 ] , (b) NS–BH mergers [ 1 ] , assuming only ≲ \\lesssim 15% produces an electromagnetic signal [ 19 ] , (c) NS–NS mergers, assuming only 25% produce LGRBs, and (d) NS–WD mergers [ 97 ] , assuming only 25% produce LGRBs. The beaming factor is defined as f b = 1 − cos ⁡ θ j f_{b}=1-\\cos\\theta_{j} , where θ j \\theta_{j} is the jet angle. The vertical bands show the range of jet angles for which the LGRB rate is consistent with the progenitor rate.",
+            "captionLatex": ": Comparison between the beaming-corrected rate of non-collapsars LGRBs (black curve with 68% uncertainty shown by the grey band) and the volumetric rates for different compact binary mergers (horizontal shaded bands): (a) NS–NS mergers [ 1 ] , (b) NS–BH mergers [ 1 ] , assuming only $\\lesssim$ 15% produces an electromagnetic signal [ 19 ] , (c) NS–NS mergers, assuming only 25% produce LGRBs, and (d) NS–WD mergers [ 97 ] , assuming only 25% produce LGRBs. The beaming factor is defined as $f_{b}=1-\\cos\\theta_{j}$ , where $\\theta_{j}$ is the jet angle. The vertical bands show the range of jet angles for which the LGRB rate is consistent with the progenitor rate."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.20787v2/Fig/GRB111225A_spectrum.png",
+            "caption": "Figure A1 : Keck/LRIS ( T 0 + 0.82 T_{0}+0.82 d, black) and GTC/OSIRIS [ 228 , T 0 + 1.13 T_{0}+1.13 d, blue;] spectra of GRB 111225A. The Keck spectrum is scaled to the same-night LRIS R R -band photometry to correct for slit losses, whereas the GTC spectrum is rescaled for plotting purposes. Dashed lines are the corresponding error spectra. The nebular lines are marked. The inset shows the GRB localization (circle) on top of its faint host galaxy. The lower panels show our modeling of the H ​ α H\\alpha and H ​ β H\\beta lines. H β \\beta is strongly affected by sky emission and only marginally detected in the GTC spectrum.",
+            "captionLatex": "Figure A1 : Keck/LRIS ( $T_{0}+0.82$ d, black) and GTC/OSIRIS [ 228 , $T_{0}+1.13$ d, blue;] spectra of GRB 111225A. The Keck spectrum is scaled to the same-night LRIS $R$ -band photometry to correct for slit losses, whereas the GTC spectrum is rescaled for plotting purposes. Dashed lines are the corresponding error spectra. The nebular lines are marked. The inset shows the GRB localization (circle) on top of its faint host galaxy. The lower panels show our modeling of the $H\\alpha$ and $H\\beta$ lines. H $\\beta$ is strongly affected by sky emission and only marginally detected in the GTC spectrum."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.20787v2/Fig/GRB_lightcurve_gallery.png",
+        "thumbnailAlt": ": Swift /BAT mask-weighted light curves (15–350 keV) of the Group C sample: 18 LGRBs lacking SN associations as discussed in Sect. II (ULGRBs 090417B and 130925A are excluded). Black step lines show the 1 s uniformly binned peak-normalised count rate, with the light-gray bars indicating 1 ​ σ 1\\sigm",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2609.25842",
+        "title": "Kink instability as a particle acceleration mechanism in X-ray binaries and the connection to the outburst cycle",
+        "summary": "We consider whether the kink instability can explain particle acceleration in hard state 'compact' X-ray binary jets. We apply a 1D model to assess the expected growth rate of the instability for a variety of jet models, then scale results from simulations to estimate a dissipation rate for the magnetic energy in the jet. We then consider the effects of radiative cooling on the system. We find that hard state 'compact' X-ray binary jets are likely to be unstable to the kink instability within their acceleration zones across a plausible parameter space. We further find that depending on the parameters of the model, the jets may radiate over a variety of length scales ranging from length scales attributable to a 'failed' jet scenario, to those in keeping with resolved radio observations of 'compact' jets. We discuss the expected evolution of this model through the outburst cycle.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.25842",
+        "htmlUrl": "https://arxiv.org/html/2609.25842v2",
+        "authors": [
+          "Emma L. Elley",
+          "James H. Matthews",
+          "Alex J. Cooper",
+          "Fraser J. Cowie",
+          "Rob Fender"
+        ],
+        "categories": [
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.25842v2/growth_rates_no_jets_many_Lorentz.png",
+            "caption": "The contour plots show the number of times an initial perturbation grows by a factor of e by z ref = 2000 ​ r G z_{\\rm{ref}}=2000r_{G} (see panel a of Figure 2 for an illustration) for a range of acceleration parameters, a Γ a_{\\Gamma} , and shapes of the acceleration region (given by q 2 q_{2} ). We do this for three different values of Γ max \\Gamma_{\\rm{max}} . We begin the integration at 2 ​ z m 2z_{m} . z m z_{m} changes with the parameters of the model. We assume a maximally spinning black hole with a mass of 10 ​ M ⊙ 10\\,\\rm{M}_{\\odot} . A higher q 2 q_{2} results in a jet with a narrower opening angle with an acceleration zone whose geometry is more parabolic. These more parabolic jets accelerate to Γ max \\Gamma_{\\rm{max}} over a shorter distance, making them more stable than the conical jets with the same a Γ a_{\\Gamma} . The contour labelled with 8 e-foldings in the first panel shows a different and less significant pattern (the number of e-foldings changes very slowly in this region), but nonetheless highlights a competing effect. z m z_{m} changes most quickly at low q 2 q_{2} and can have an effect on the number of e-foldings encountered, because in our scheme, a larger z m z_{m} means a smaller integration region. For Γ max = 3 \\Gamma_{\\rm{max}}=3 , the main takeaway is that many e-foldings are reached by z ref z_{\\rm{ref}} for all of the parameter space, and all indicate growth beyond the limit of the linear theory, such that the shape of the contour showing 8 e-foldings is of little consequence to our results.",
+            "captionLatex": "The contour plots show the number of times an initial perturbation grows by a factor of e by $z_{\\rm{ref}}=2000r_{G}$ (see panel a of Figure 2 for an illustration) for a range of acceleration parameters, $a_{\\Gamma}$ , and shapes of the acceleration region (given by $q_{2}$ ). We do this for three different values of $\\Gamma_{\\rm{max}}$ . We begin the integration at $2z_{m}$ . $z_{m}$ changes with the parameters of the model. We assume a maximally spinning black hole with a mass of $10\\,\\rm{M}_{\\odot}$ . A higher $q_{2}$ results in a jet with a narrower opening angle with an acceleration zone whose geometry is more parabolic. These more parabolic jets accelerate to $\\Gamma_{\\rm{max}}$ over a shorter distance, making them more stable than the conical jets with the same $a_{\\Gamma}$ . The contour labelled with 8 e-foldings in the first panel shows a different and less significant pattern (the number of e-foldings changes very slowly in this region), but nonetheless highlights a competing effect. $z_{m}$ changes most quickly at low $q_{2}$ and can have an effect on the number of e-foldings encountered, because in our scheme, a larger $z_{m}$ means a smaller integration region. For $\\Gamma_{\\rm{max}}=3$ , the main takeaway is that many e-foldings are reached by $z_{\\rm{ref}}$ for all of the parameter space, and all indicate growth beyond the limit of the linear theory, such that the shape of the contour showing 8 e-foldings is of little consequence to our results."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.25842v2/integration_diagram.png",
+            "caption": "A perturbation to the jet material grows as the material moves along the jet axis, z z . To produce the parameter spaces shown in Figure 1 , for each given set of parameters, we integrate the number of times an initial perturbation grows by a factor of e e from z = 2 ​ z m z=2z_{m} to z = 2000 ​ r G z=2000r_{G} , shown here in panel a. Here we show the perturbed region as a significant fraction of the jet, but contained within the jet. Our later derivation relies on the perturbations affecting the jet material on scales of the order of the jet width, but the perturbations may or may not affect the entire jet cross section. In Figures 3 and 8 , we integrate along the jet height, showing the cumulative growth of a perturbation from z = 2 ​ z m z=2z_{m} to the height shown, illustrated here in panel b).",
+            "captionLatex": "A perturbation to the jet material grows as the material moves along the jet axis, $z$ . To produce the parameter spaces shown in Figure 1 , for each given set of parameters, we integrate the number of times an initial perturbation grows by a factor of $e$ from $z=2z_{m}$ to $z=2000r_{G}$ , shown here in panel a. Here we show the perturbed region as a significant fraction of the jet, but contained within the jet. Our later derivation relies on the perturbations affecting the jet material on scales of the order of the jet width, but the perturbations may or may not affect the entire jet cross section. In Figures 3 and 8 , we integrate along the jet height, showing the cumulative growth of a perturbation from $z=2z_{m}$ to the height shown, illustrated here in panel b)."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.25842v2/dissipation_lengthscales.png",
+            "caption": "Δ ​ z diss \\Delta z_{\\rm{diss}} estimated via scaling a dissipation timescale suggested by simulations to the width of jets given the 1D model once the KI has developed. The dissipation length scale is calculated as 750 ​ r j ​ ( e ​ foldings = 3 ) 750r_{j}(\\rm{e\\,foldings}=3) and we set a r = 1 a_{r}=1 . Each individual panel shows the dissipation length scale as a function of Γ max \\Gamma_{\\rm{max}} and q 2 q_{2} . The various panels show the dissipation length scale calculation for different pairs of a ⋆ a_{\\star} and a Γ a_{\\Gamma} .",
+            "captionLatex": "$\\Delta z_{\\rm{diss}}$ estimated via scaling a dissipation timescale suggested by simulations to the width of jets given the 1D model once the KI has developed. The dissipation length scale is calculated as $750r_{j}(\\rm{e\\,foldings}=3)$ and we set $a_{r}=1$ . Each individual panel shows the dissipation length scale as a function of $\\Gamma_{\\rm{max}}$ and $q_{2}$ . The various panels show the dissipation length scale calculation for different pairs of $a_{\\star}$ and $a_{\\Gamma}$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.25842v2/dissipation_heights.png",
+            "caption": "Height of 3 e-foldings with a r = 1 a_{r}=1 . As in Figure 6 , each individual panel shows the dissipation length scale as a function of Γ max \\Gamma_{\\rm{max}} and q 2 q_{2} . The various panels show the dissipation length scale calculation for different pairs of a ⋆ a_{\\star} and a Γ a_{\\Gamma} . The contours and hashing refer to estimates of the height of the first acceleration zone in the compact hard state jet, taken from Russell et al. (2020) .",
+            "captionLatex": "Height of 3 e-foldings with $a_{r}=1$ . As in Figure 6 , each individual panel shows the dissipation length scale as a function of $\\Gamma_{\\rm{max}}$ and $q_{2}$ . The various panels show the dissipation length scale calculation for different pairs of $a_{\\star}$ and $a_{\\Gamma}$ . The contours and hashing refer to estimates of the height of the first acceleration zone in the compact hard state jet, taken from Russell et al. (2020) ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.25842v2/growth_rates_no_jets_many_Lorentz.png",
+        "thumbnailAlt": "The contour plots show the number of times an initial perturbation grows by a factor of e by z ref = 2000 ​ r G z_{\\rm{ref}}=2000r_{G} (see panel a of Figure 2 for an illustration) for a range of acceleration parameters, a Γ a_{\\Gamma} , and shapes of the acceleration region (given by q 2 q_{2} ). W",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2610.10522",
+        "title": "Widespread steep X-ray spectra of luminous $z=5.85-7.64$ quasars and their implications for future X-ray surveys",
+        "summary": "Luminous quasars (QSOs) at the Epoch of Reionization (EoR, $z\\gtrsim6$) host billion-solar-mass black holes assembled within the first Gyr of cosmic time. Their X-ray emission probes the innermost accreting regions and constrains the physical state of the corona during early supermassive black hole (SMBH) growth. Previous results from the HYPerluminous quasars at the Epoch of ReionizatION (HYPERION) sample of $z \\gtrsim 6$ QSOs, powered by the most rapidly accreted SMBHs, suggested a link between X-ray spectral slope and long-term growth efficiency. We test whether the steep X-ray spectra of luminous z>6 QSOs are a general property of early SMBH growth or a peculiarity of the most efficiently grown SMBHs, using a sample extended mainly to the lowest growth efficiencies. We analysed the largest and most X-ray sensitive sample of 28 luminous QSOs at $z = 5.85-7.64$ (26 used in the correlation analysis), combining HYPERION targets, luminous non-HYPERION sources, and QSOs powered by moderately accreting SMBHs newly observed in our XMM-Newton Large Programme. We re-derived black hole masses and growth indicators for the entire sample homogeneously, incorporating the latest JWST-based spectroscopic measurements to ensure the most consistent and high-quality characterization across all targets. We found no statistically significant correlation between coronal spectral parameters and BH growth indicators: luminous $z \\gtrsim 6$ QSOs systematically show steep X-ray continua, with high photon indices and/or low high-energy cutoffs, consistent with cold coronae, possibly linked to rapid accretion. Finally, if steep X-ray slopes are common among early AGN, they may significantly reduce count rates, at fixed intrinsic luminosity, in future surveys of the EoR, affecting the detectability of steep-spectrum X-ray sources and thus the census of the early AGN population.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2610.10522",
+        "htmlUrl": "https://arxiv.org/html/2610.10522v5",
+        "authors": [
+          "A. Tortosa",
+          "L. Zappacosta",
+          "E. Piconcelli",
+          "I. Saccheo",
+          "G. Lanzuisi",
+          "E. Bertola",
+          "F. Vito",
+          "M. Bischetti",
+          "M. Brazzini",
+          "M. Castellano",
+          "S. Carniani",
+          "A. Comastri",
+          "S. Gallerani",
+          "R. Gilli",
+          "F. La Franca",
+          "P. Madau",
+          "R. Maiolino",
+          "G. Miniutti",
+          "B. Musiimenta",
+          "C. Piscitelli",
+          "F. Salvestrini",
+          "F. Tombesi",
+          "R. Tripodi",
+          "C. Vignali",
+          "M. Volonteri",
+          "A. Bongiorno",
+          "L. Borrelli",
+          "M. Brusa",
+          "I. V. Chilingaria",
+          "F. Civano",
+          "S. Cristiani",
+          "V. D'Odorico",
+          "D. De Cicco",
+          "C. Done",
+          "M. Elvis",
+          "X. Fan",
+          "C. Feruglio",
+          "F. Fiore",
+          "A. Grazian",
+          "M. Guainazzi",
+          "F. Haardt",
+          "A. Luminari",
+          "N. Menci",
+          "R. Middei",
+          "F. Nicastro",
+          "M. Paolillo",
+          "M. Perna",
+          "S. Puccetti",
+          "R. Schneider",
+          "V. Testa",
+          "R. Valiante",
+          "L. Vallini",
+          "E. Vanzella",
+          "G. Vietri"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2610.10522v5/L-M.png",
+            "caption": "Distribution of the sample in the M BH M_{\\rm BH} – L bol L_{\\rm bol} plane. Symbols are colour-coded by redshift. We compared our sample ( M BH M_{\\rm BH} values plotted here are, for simplicity, the mean values derived using all the available values reported in Tab. 3 ) with the X-ray selected type 1 AGN in XMM-COSMOS 0.04 < z < 4.5 0.04<z<4.5 from Lusso et al. 2010 and the values of the X-ray unobscured ( N H < 10 21 ​ cm − 2 N_{H}<10^{21}\\,\\rm cm^{-2} ) type I z < 0.1 z<0.1 AGN from the BASS sample from Mejía-Restrepo et al. 2022 .",
+            "captionLatex": "Distribution of the sample in the $M_{\\rm BH}$ – $L_{\\rm bol}$ plane. Symbols are colour-coded by redshift. We compared our sample ( $M_{\\rm BH}$ values plotted here are, for simplicity, the mean values derived using all the available values reported in Tab. 3 ) with the X-ray selected type 1 AGN in XMM-COSMOS $0.04 Lusso et al. 2010 and the values of the X-ray unobscured ( $N_{H} Mejía-Restrepo et al. 2022 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.10522v5/vCIV_gamma.png",
+            "caption": "Γ \\Gamma as a function of v C ​ iv v_{\\rm C\\penalty\\ \\textsc{iv}} . Points are colour coded for M s , Edd M_{\\rm s,Edd} . The horizontal dashed line represents the mean value of Γ \\Gamma . The solid black line indicates the best fitting relation, with the shaded region showing its 1 ​ σ 1\\sigma uncertainty",
+            "captionLatex": "$\\Gamma$ as a function of $v_{\\rm C\\penalty\\ \\textsc{iv}}$ . Points are colour coded for $M_{\\rm s,Edd}$ . The horizontal dashed line represents the mean value of $\\Gamma$ . The solid black line indicates the best fitting relation, with the shaded region showing its $1\\sigma$ uncertainty"
+          },
+          {
+            "url": "https://arxiv.org/html/2610.10522v5/vCIV_plots1.png",
+            "caption": "Left panel : L 2 − 10 ​ k ​ e ​ V L_{\\rm 2-10keV} as a function of v C ​ iv v_{\\rm C\\penalty\\ \\textsc{iv}} ; Right panel : α OX \\alpha_{\\rm OX} as a function of v C ​ iv v_{\\rm C\\penalty\\ \\textsc{iv}} . Points are colour coded for M s , Edd M_{\\rm s,Edd} . The horizontal dashed line in each panel represents the mean value of the corresponding y-parameter. The cyan and magenta dotted lines represent the relations derived for the WISSH QSOs sample by Zappacosta et al. (2020) and Degli Agosti et al. (2025) , respectively.",
+            "captionLatex": "Left panel : $L_{\\rm 2-10keV}$ as a function of $v_{\\rm C\\penalty\\ \\textsc{iv}}$ ; Right panel : $\\alpha_{\\rm OX}$ as a function of $v_{\\rm C\\penalty\\ \\textsc{iv}}$ . Points are colour coded for $M_{\\rm s,Edd}$ . The horizontal dashed line in each panel represents the mean value of the corresponding y-parameter. The cyan and magenta dotted lines represent the relations derived for the WISSH QSOs sample by Zappacosta et al. (2020) and Degli Agosti et al. (2025) , respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.10522v5/fraction_above_threshold.png",
+            "caption": "Cumulative fraction of sources with Γ \\Gamma above a given threshold for sample of z ≳ 6 z\\gtrsim 6 QSOs analysed in this work (blue) and for the WISSH z ∼ 2 − 4 z\\sim 2-4 QSOs sample (purple). The distribution confirms that our sample of z ≳ 6 z\\gtrsim 6 QSOs is characterised by systematically steep X-ray spectra, with a significant fraction of sources exhibiting Γ > 2.4 \\Gamma>2.4 .",
+            "captionLatex": "Cumulative fraction of sources with $\\Gamma$ above a given threshold for sample of $z\\gtrsim 6$ QSOs analysed in this work (blue) and for the WISSH $z\\sim 2-4$ QSOs sample (purple). The distribution confirms that our sample of $z\\gtrsim 6$ QSOs is characterised by systematically steep X-ray spectra, with a significant fraction of sources exhibiting $\\Gamma>2.4$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2610.10522v5/bias_Ec.png",
+            "caption": "The \"spectral cutoff energy bias\" ( R ​ ( E c ) EB R(E_{\\rm c})_{\\rm EB} ) as a function of high-energy cutoff ( E c E_{\\rm c} ), for XMM-Newton , Chandra , and NewAthena /WFI. Count rates ratios in the 0.3–2 keV, 0.3–7 keV and 2–10 keV bands are shown in top panels, middle panels and bottom panels, respectively. Different curves correspond to increasing redshift from z = 5 z=5 (yellow) to z = 10 z=10 (dark purple). The intrinsic rest-frame 2–10 keV luminosity is held fixed.",
+            "captionLatex": "The \"spectral cutoff energy bias\" ( $R(E_{\\rm c})_{\\rm EB}$ ) as a function of high-energy cutoff ( $E_{\\rm c}$ ), for XMM-Newton , Chandra , and NewAthena /WFI. Count rates ratios in the 0.3–2 keV, 0.3–7 keV and 2–10 keV bands are shown in top panels, middle panels and bottom panels, respectively. Different curves correspond to increasing redshift from $z=5$ (yellow) to $z=10$ (dark purple). The intrinsic rest-frame 2–10 keV luminosity is held fixed."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2610.10522v5/L-M.png",
+        "thumbnailAlt": "Distribution of the sample in the M BH M_{\\rm BH} – L bol L_{\\rm bol} plane. Symbols are colour-coded by redshift. We compared our sample ( M BH M_{\\rm BH} values plotted here are, for simplicity, the mean values derived using all the available values reported in Tab. 3 ) with the X-ray selected typ",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2603.16220",
+        "title": "Nuclear pasta in hot neutron-star matter and proto-neutron stars",
+        "summary": "We investigate nuclear pasta phases appearing in hot neutron-star matter based on the compressible liquid-drop model, where the matter consists of a dense liquid phase and a dilute gas phase separated by a sharp this http URL surface tension is calculated self-consistently from the Thomas-Fermi approximation, and it depends on temperature and isospin asymmetry. We employ relativistic mean-field (RMF) models with different symmetry energy slopes to describe nuclear interactions. It is found that the RMF models with smaller symmetry energy slopes result in various pasta phases at low temperatures, whereas those with larger symmetry energy slopes yield only the droplet configuration up to the crust-core transition density. We examine the occurrence and influence of pasta phases in proto-neutron stars with a constant entropy per baryon. These pasta phases may occur in the inner crust and play an important role in the thermal evolution of the star.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2603.16220",
+        "htmlUrl": "https://arxiv.org/html/2603.16220v2",
+        "authors": [
+          "Jian Zhou",
+          "Junbo Pang",
+          "Hong Shen",
+          "Jinniu Hu"
+        ],
+        "categories": [
+          "nucl-th",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2603.16220v2/EA.png",
+            "caption": "Energy per baryon E / A E/A of symmetric nuclear matter and pure neutron matter as a function of the baryon number density n b n_{b} in the TM1e and TM1 models (upper panel) and in the IUFSU models (lower panel).",
+            "captionLatex": "Energy per baryon $E/A$ of symmetric nuclear matter and pure neutron matter as a function of the baryon number density $n_{b}$ in the TM1e and TM1 models (upper panel) and in the IUFSU models (lower panel)."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.16220v2/Esym.png",
+            "caption": "Symmetry energy E sym E_{\\rm sym} as a function of the baryon number density n b n_{b} in the TM1e and TM1 models (upper panel) and in the IUFSU models (lower panel).",
+            "captionLatex": "Symmetry energy $E_{\\rm sym}$ as a function of the baryon number density $n_{b}$ in the TM1e and TM1 models (upper panel) and in the IUFSU models (lower panel)."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.16220v2/suft-TM1-IUFSU.png",
+            "caption": "Surface tension τ \\tau as a function of the proton fraction in the dense liquid phase Y p L Y_{p}^{L} for T = 1 T=1 and 10 10 MeV. The parametrized results (red dashed lines) are compared with those from the Thomas-Fermi approximation (blue solid lines).",
+            "captionLatex": "Surface tension $\\tau$ as a function of the proton fraction in the dense liquid phase $Y_{p}^{L}$ for $T=1$ and $10$ MeV. The parametrized results (red dashed lines) are compared with those from the Thomas-Fermi approximation (blue solid lines)."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.16220v2/Tnbs.png",
+            "caption": "Phase diagrams in the n b n_{b} – T T plane obtained in the CLD method. Different colors indicate the regions for different pasta shapes. The black dot-dashed lines indicate the boundary of nonuniform matter obtained from a bulk calculation without finite-size effects. The blue solid lines correspond to isentropic trajectories with entropy per baryon S = 0.5 , 1 , 2 S=0.5,\\,1,\\,2 .",
+            "captionLatex": "Phase diagrams in the $n_{b}$ – $T$ plane obtained in the CLD method. Different colors indicate the regions for different pasta shapes. The black dot-dashed lines indicate the boundary of nonuniform matter obtained from a bulk calculation without finite-size effects. The blue solid lines correspond to isentropic trajectories with entropy per baryon $S=0.5,\\,1,\\,2$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.16220v2/Yp.png",
+            "caption": "Average proton fraction Y p Y_{p} as a function of the baryon density n b n_{b} in matter under the conditions of charge neutrality and β \\beta equilibrium. The results for the TM1e and TM1 models are shown in the left and right panels, respectively. The dashed lines indicate the proton fraction of uniform matter.",
+            "captionLatex": "Average proton fraction $Y_{p}$ as a function of the baryon density $n_{b}$ in matter under the conditions of charge neutrality and $\\beta$ equilibrium. The results for the TM1e and TM1 models are shown in the left and right panels, respectively. The dashed lines indicate the proton fraction of uniform matter."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.16220v2/ni-r.png",
+            "caption": "Density profiles of nucleons and electrons within the Wigner-Seitz cell for a droplet configuration at n b = 0.02 ​ fm − 3 n_{b}=0.02\\,{\\rm fm^{-3}} . The results obtained with the TM1e and TM1 models are shown in the left and right panels, respectively. The cell boundary and the sharp interface between the liquid and gas phases are indicated by the vertical dashed lines.",
+            "captionLatex": "Density profiles of nucleons and electrons within the Wigner-Seitz cell for a droplet configuration at $n_{b}=0.02\\,{\\rm fm^{-3}}$ . The results obtained with the TM1e and TM1 models are shown in the left and right panels, respectively. The cell boundary and the sharp interface between the liquid and gas phases are indicated by the vertical dashed lines."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.16220v2/rdrc.png",
+            "caption": "Size of the Wigner-Seitz cell r C r_{C} (dashed lines) and that of the inner phase r D r_{D} (solid lines) as a function of the baryon density n b n_{b} . The results obtained with the TM1e and TM1 models are shown in the left and right panels, respectively.",
+            "captionLatex": "Size of the Wigner-Seitz cell $r_{C}$ (dashed lines) and that of the inner phase $r_{D}$ (solid lines) as a function of the baryon density $n_{b}$ . The results obtained with the TM1e and TM1 models are shown in the left and right panels, respectively."
+          },
+          {
+            "url": "https://arxiv.org/html/2603.16220v2/vol.png",
+            "caption": "Volume fraction of the liquid phase u u as a function of the baryon density n b n_{b} . The black dot–dashed lines correspond to the bulk equilibrium results.",
+            "captionLatex": "Volume fraction of the liquid phase $u$ as a function of the baryon density $n_{b}$ . The black dot–dashed lines correspond to the bulk equilibrium results."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2603.16220v2/EA.png",
+        "thumbnailAlt": "Energy per baryon E / A E/A of symmetric nuclear matter and pure neutron matter as a function of the baryon number density n b n_{b} in the TM1e and TM1 models (upper panel) and in the IUFSU models (lower panel).",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2606.19446",
+        "title": "Dynamical tidal response of neutron stars: From effective field theory to gravitational waveforms",
+        "summary": "We investigate the fully relativistic dynamical tidal response of neutron stars up to second order in the frequency. Combining the worldline effective field theory for extended gravitating bodies with perturbation theory of relativistic stellar models, we derive the tidal deformation induced by an external time-dependent field, including a universal logarithmic running term. In the effective theory, we work in dimensional regularization and, through a consistent matching procedure, obtain for the first time the complete leading-order dynamical tidal corrections to both the conservative dynamics and the gravitational-wave signal of compact binaries, including the scheme-dependent finite terms in addition to the running. We show that, in the relativistic regime, dynamical effects cannot be fully captured by mode excitations alone. The magnitude of the additional contribution depends on the stellar compactness, the equation of state, and the running term. Dynamical Love numbers are significantly enhanced with respect to their static counterparts for relatively small compactness. As a result, although they formally enter the gravitational-wave phase at eighth post-Newtonian order, dynamical tidal effects yield a nonnegligible contribution during the late inspiral. Using a Fisher-matrix analysis, we show that third-generation detectors such as the Einstein Telescope could measure dynamical Love numbers for a range of neutron-star masses and equations of state. Conversely, neglecting these effects can lead to significant biases in the inference of static Love numbers, and hence on the nuclear equation of state. Our results highlight the importance of dynamical tidal effects for high-precision gravitational-wave modeling with future detectors.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2606.19446",
+        "htmlUrl": "https://arxiv.org/html/2606.19446v3",
+        "authors": [
+          "Thomas Apostolidis",
+          "Valerio De Luca",
+          "Leonardo Gualtieri",
+          "Takuya Katagiri",
+          "Paolo Pani",
+          "Luca Santoni"
+        ],
+        "categories": [
+          "gr-qc",
+          "astro-ph.HE",
+          "hep-th"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2607.28736",
+        "title": "Cataclysmic variables from Gaia XP spectra: The Gaia emission-line magnitude (GEM) diagram",
+        "summary": "Gaia DR3 opens a new window for the census of Galactic stellar populations in all-sky surveys, specifically for identifying cataclysmic variables (CVs). While the majority of CVs are distributed below the main sequence on the Gaia HR diagram, identifying them among dominant background stellar populations remains a significant challenge. Here, we present the Gaia Emission-line Magnitude (GEM) diagram - a tool designed to isolate CV candidates from background stars located below the main sequence. Using Gaia photometric data and low-resolution BP/RP (XP) spectra, we construct the GEM diagram by plotting the extinction-corrected absolute magnitude ($M_{G0}$) against the pseudo-equivalent width of the H$\\alpha$ line ($pgEW_{H\\alpha}$), which is computed via a Gaussian line-profile approximation. We find that known CVs and major stellar background populations, including white dwarfs, hot subdwarfs, and white dwarf-main sequence binaries, occupy distinct regions on the GEM diagram, reflecting both their physical properties and the low-resolution nature of the Gaia XP spectra. We define an empirical selection line on the GEM diagram to separate true H$\\alpha$-emitting CVs from background contaminants. As a proof of concept, we apply the GEM diagram to a Gaia volume-limited sample within 250 pc ($G<17.5$ mag) distributed below the main sequence, recovering known CVs. Additionally, we identify three new CV candidates whose accreting nature is supported by archival X-ray data and optical variability. Compared to traditional optical color-based selection techniques, the GEM diagram uses Gaia's low-resolution spectra for initial target identification in all-sky surveys. This provides a more reliable framework for the statistical selection of CV candidates prior to ground-based spectroscopic follow-up and can be scaled to future Gaia data releases to map Galactic emission-line star populations.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2607.28736",
+        "htmlUrl": "https://arxiv.org/html/2607.28736v2",
+        "authors": [
+          "Ilkham Galiullin",
+          "Vladislav Dodon",
+          "Antonio C. Rodriguez",
+          "Askar Sibgatullin"
+        ],
+        "categories": [
+          "astro-ph.SR",
+          "astro-ph.GA",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2607.28736v2/HRclasses.png",
+            "caption": "Major stellar populations distributed below the main sequence on the Gaia HR diagram. For illustrative purposes, Gaia objects within a 100 pc sample are shown in gray. Symbols correspond to different populations: CVs (red dots); hot subdwarfs (pink stars); WDs (green triangles); and WD+MS binaries (blue right triangles). These stellar populations were compiled from different catalogs (see Section 2 ).Only sources with prominent H α \\alpha features (emission or absorption) in their Gaia XP spectra are plotted (significance threshold of | pgEW H ​ α / pgEW err | ≥ 3 |\\text{pgEW}_{\\rm H\\alpha}/\\text{pgEW}_{\\rm err}|\\geq 3 ; see Section 3 for more details).",
+            "captionLatex": "Major stellar populations distributed below the main sequence on the Gaia HR diagram. For illustrative purposes, Gaia objects within a 100 pc sample are shown in gray. Symbols correspond to different populations: CVs (red dots); hot subdwarfs (pink stars); WDs (green triangles); and WD+MS binaries (blue right triangles). These stellar populations were compiled from different catalogs (see Section 2 ).Only sources with prominent H $\\alpha$ features (emission or absorption) in their Gaia XP spectra are plotted (significance threshold of $|\\text{pgEW}_{\\rm H\\alpha}/\\text{pgEW}_{\\rm err}|\\geq 3$ ; see Section 3 for more details)."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.28736v2/spectra.png",
+            "caption": "Median Gaia XP spectra for different stellar populations distributed below the main sequence on the Gaia HR diagram. From top to bottom, panels display: CVs; WDs; WD+MS binaries; and hot subdwarfs. The position of H α \\alpha is indicated by a vertical dashed line. Only objects where the H α \\alpha line was identified were used to compute the median spectra. A prominent H α \\alpha emission line is visible for CVs, whereas absorption lines are present in the WDs and hot subdwarfs. The H α \\alpha emission feature in WD+MS binaries likely results from chromospheric emission, pseudo-emission artifacts of TiO molecular bands from the M-dwarf companion in the low-resolution Gaia XP spectra, or a combination of both.",
+            "captionLatex": "Median Gaia XP spectra for different stellar populations distributed below the main sequence on the Gaia HR diagram. From top to bottom, panels display: CVs; WDs; WD+MS binaries; and hot subdwarfs. The position of H $\\alpha$ is indicated by a vertical dashed line. Only objects where the H $\\alpha$ line was identified were used to compute the median spectra. A prominent H $\\alpha$ emission line is visible for CVs, whereas absorption lines are present in the WDs and hot subdwarfs. The H $\\alpha$ emission feature in WD+MS binaries likely results from chromospheric emission, pseudo-emission artifacts of TiO molecular bands from the M-dwarf companion in the low-resolution Gaia XP spectra, or a combination of both."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.28736v2/GEMclasses.png",
+            "caption": "GEM diagram for objects distributed below the main sequence on the Gaia HR diagram. The horizontal and vertical axes represent the absolute magnitude ( M G ​ 0 M_{G0} ) and the pseudo-Gaussian equivalent width ( p ​ g ​ E ​ W H ​ α pgEW_{\\rm H\\alpha} ), respectively. Left: Distribution of different stellar populations on the GEM diagram. The symbols for different populations are the same as in Figure 1 . Right: Schematic view of the GEM diagram. The dashed line shows the empirical threshold used to select CV candidates (see Equation 6 ).",
+            "captionLatex": "GEM diagram for objects distributed below the main sequence on the Gaia HR diagram. The horizontal and vertical axes represent the absolute magnitude ( $M_{G0}$ ) and the pseudo-Gaussian equivalent width ( $pgEW_{\\rm H\\alpha}$ ), respectively. Left: Distribution of different stellar populations on the GEM diagram. The symbols for different populations are the same as in Figure 1 . Right: Schematic view of the GEM diagram. The dashed line shows the empirical threshold used to select CV candidates (see Equation 6 )."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.28736v2/GEMcvs.png",
+            "caption": "GEM diagram for known CVs, categorized by their respective classes. Symbols correspond to: dwarf novae (blue dots); LARPs (black downward-pointing triangles); magnetic CVs (red stars); novae (purple upward-pointing triangles); and nova-like variables (orange squares)."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.28736v2/HR250pc.png",
+            "caption": "A proof of concept using Gaia objects within a 250 pc sample distributed below the main sequence (4207 objects with detected H α \\alpha lines). Left: Gaia HR diagram for objects within the 250 pc sample. The dashed line shows the cut used to query Gaia data below the main sequence. For illustrative purposes, the Gaia 100 pc sample is shown in gray. Right: GEM diagram. Known CVs within the Gaia 250 pc sample are shown in red. Two known CVs that fall below the empirical selection cut are included (see Appendix B for more details). The majority of these known CVs are distributed above the empirical selection line of the GEM diagram, demonstrating a clear separation between the CV population and the background stellar population.",
+            "captionLatex": "A proof of concept using Gaia objects within a 250 pc sample distributed below the main sequence (4207 objects with detected H $\\alpha$ lines). Left: Gaia HR diagram for objects within the 250 pc sample. The dashed line shows the cut used to query Gaia data below the main sequence. For illustrative purposes, the Gaia 100 pc sample is shown in gray. Right: GEM diagram. Known CVs within the Gaia 250 pc sample are shown in red. Two known CVs that fall below the empirical selection cut are included (see Appendix B for more details). The majority of these known CVs are distributed above the empirical selection line of the GEM diagram, demonstrating a clear separation between the CV population and the background stellar population."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.28736v2/GEM250pcvar.png",
+            "caption": "GEM diagram for Gaia objects within the 250 pc sample. Orange dots show variable objects identified by Gaia . Objects located above the empirical selection cut correspond to both known CVs and new CV candidates."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.28736v2/appsearchwindow.png",
+            "caption": "Distribution of the detected extrema wavelengths ( λ line − 656.3 \\lambda_{\\rm line}-656.3 nm) for each stellar population (left) and the volume-limited Gaia sample within 250 pc located below the main sequence on the Gaia HR diagram (right). The empirical 5 nm search window for the H α \\alpha line is marked by the shaded pink area.",
+            "captionLatex": "Distribution of the detected extrema wavelengths ( $\\lambda_{\\rm line}-656.3$ nm) for each stellar population (left) and the volume-limited Gaia sample within 250 pc located below the main sequence on the Gaia HR diagram (right). The empirical 5 nm search window for the H $\\alpha$ line is marked by the shaded pink area."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.28736v2/appwidth.png",
+            "caption": "Distribution of the detected line widths (in nm) within the 5 nm search window for each stellar population (left) and the volume-limited Gaia sample within 250 pc located below the main sequence on the Gaia HR diagram (right). The empirical selection threshold ( 𝚠𝚒𝚍𝚝𝚑 ≤ 15 {\\tt width}\\leq 15 nm) is marked by the shaded pink area.",
+            "captionLatex": "Distribution of the detected line widths (in nm) within the 5 nm search window for each stellar population (left) and the volume-limited Gaia sample within 250 pc located below the main sequence on the Gaia HR diagram (right). The empirical selection threshold ( ${\\tt width}\\leq 15$ nm) is marked by the shaded pink area."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2607.28736v2/HRclasses.png",
+        "thumbnailAlt": "Major stellar populations distributed below the main sequence on the Gaia HR diagram. For illustrative purposes, Gaia objects within a 100 pc sample are shown in gray. Symbols correspond to different populations: CVs (red dots); hot subdwarfs (pink stars); WDs (green triangles); and WD+MS binaries (",
+        "catchupDate": "2026-11-23"
+      }
+    ]
+  }
+}

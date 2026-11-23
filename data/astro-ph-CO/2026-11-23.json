@@ -1,0 +1,1336 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "source": "arxiv-catchup",
+  "category": "astro-ph.CO",
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-23T08:51:38.916Z",
+  "figuresStatus": "complete",
+  "figureCounts": {
+    "processed": 28,
+    "total": 28,
+    "found": 22
+  },
+  "counts": {
+    "new": 7,
+    "cross": 5,
+    "repl": 18
+  },
+  "papersBySection": {
+    "new": [
+      {
+        "absId": "2611.26785",
+        "title": "SciPIC-lite: A flexible Halo Occupation Distribution pipeline aimed at clustering observables",
+        "summary": "The Halo Occupation Distribution (HOD) framework provides a flexible approach to modelling the galaxy--halo connection in cosmological simulations, encoding the statistical relationship between galaxies and their host dark matter haloes. We present SciPIC-lite, a new public Python library for fast, flexible, and user-friendly HOD modelling, designed to populate dark matter haloes extracted from cosmological simulations with galaxies and to provide a comprehensive suite of tools for their subsequent analysis. The library is built around a modular and extensible codebase that incorporates the full breadth of the HOD framework, from the core occupation functions to a wide range of physically motivated extensions, making it suitable for a broad spectrum of galaxy clustering applications. We validate and characterise the performance of SciPIC-lite by developing a pipeline to fit the two-point correlation functions of H$\\alpha$-selected galaxies from the Flagship~2 simulation across multiple redshift bins. To this end, we populate AbacusSummit dark matter haloes with galaxies according to a variety of HOD parametrisations. We assess the robustness of the fits with respect to the choice of HOD parametrisation and the inclusion of physically motivated extensions, including assembly bias, velocity bias, conformity, and halo profile rescaling. The best-fit models are found to be remarkably robust across different HOD parametrisations and fitting configurations, with reduced $\\chi^2$ values clustering tightly around a common value regardless of the model adopted. We exploit these results to generate new AbacusSummit-based galaxy mocks that accurately reproduce the clustering properties of the Flagship~2 H$\\alpha$ galaxy population.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26785",
+        "htmlUrl": "https://arxiv.org/html/2611.26785v1",
+        "authors": [
+          "Gabriele Parimbelli",
+          "Martin Crocce",
+          "Giosuè Gambardella",
+          "Alexander Eggemeier",
+          "Pablo Fosalba",
+          "Elizabeth J. Gonzalez",
+          "Sujatha Ramakrishnan",
+          "Isaac Tutusaus",
+          "Zahra Baghkhani",
+          "Jorge Carretero",
+          "Francisco Castander",
+          "Andrea Pezzotta",
+          "Pau Tallada-Crespí"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.26822",
+        "title": "Kinetic Sunyaev Zel'dovich Velocity Reconstruction Using Vision Transformers",
+        "summary": "Kinetic Sunyaev Zel'dovich (kSZ) velocity reconstruction uses correlations between maps of the cosmic microwave background (CMB) and a tracer of large scale structure (LSS) to infer the large-scale peculiar velocity field. Standard approaches to kSZ velocity reconstruction use quadratic estimators that are Fisher optimal for purely Gaussian fields. Here, we develop a pipeline for kSZ velocity reconstruction based on Vision Transformers (ViT) and show that this approach can improve the fidelity of velocity reconstruction. This is consistent with the network utilizing non-Gaussian information in the inputs that the quadratic estimators do not, though with the single simulation realization we have access to, we cannot exclude overfitting. Our approach can be applied to full-resolution maps from existing and near-term CMB and LSS datasets.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26822",
+        "htmlUrl": "https://arxiv.org/html/2611.26822v1",
+        "authors": [
+          "Sophie Coulombe",
+          "Matthew C. Johnson"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.26822v1/Architecture.png",
+            "caption": "The Vision Transformer (ViT)-based kSZ velocity reconstruction pipeline. In the top panel, full-sky N side = 2048 N_{\\rm side}=2048 HEALPix maps are split into 12 2048 × 2048 2048\\times 2048 pixel faces, then each face is split into tiles of 256 × 256 256\\times 256 pixels which are the inputs to the ViT. In the bottom panel, 4 channels of tiles (one integrated T T tile and 3 binned τ \\tau tiles) are passed through the patch embedding to the Transformer Encoder Block consisting of Multi-Head Self Attention and MLP layers with Layer Norm, and then passed through the MLP Output head to the 3 channel output of binned v v tiles.",
+            "captionLatex": "The Vision Transformer (ViT)-based kSZ velocity reconstruction pipeline. In the top panel, full-sky $N_{\\rm side}=2048$ HEALPix maps are split into 12 $2048\\times 2048$ pixel faces, then each face is split into tiles of $256\\times 256$ pixels which are the inputs to the ViT. In the bottom panel, 4 channels of tiles (one integrated $T$ tile and 3 binned $\\tau$ tiles) are passed through the patch embedding to the Transformer Encoder Block consisting of Multi-Head Self Attention and MLP layers with Layer Norm, and then passed through the MLP Output head to the 3 channel output of binned $v$ tiles."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26822v1/Gauss_B0.png",
+            "caption": "The true (left) and reconstructed (middle and right) radial velocity field in Bin 0 for a random Gaussian validation sample with ϵ = 0 \\epsilon=0 (no primary CMB in the input, top row) and ϵ = 1 \\epsilon=1 (full primary CMB in the input, bottom row). The reconstruction with the QE is shown in the middle and the reconstruction with the trained ViT is shown on the right. In both cases, features in the reconstructions are visibly correlated with the true radial velocity maps. There is an increase in reconstruction noise for the QE at ϵ = 1 \\epsilon=1 while the amplitude of fluctuations in the ViT reconstruction stays the same, but features de-correlate with the true map.",
+            "captionLatex": "The true (left) and reconstructed (middle and right) radial velocity field in Bin 0 for a random Gaussian validation sample with $\\epsilon=0$ (no primary CMB in the input, top row) and $\\epsilon=1$ (full primary CMB in the input, bottom row). The reconstruction with the QE is shown in the middle and the reconstruction with the trained ViT is shown on the right. In both cases, features in the reconstructions are visibly correlated with the true radial velocity maps. There is an increase in reconstruction noise for the QE at $\\epsilon=1$ while the amplitude of fluctuations in the ViT reconstruction stays the same, but features de-correlate with the true map."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26822v1/Gauss_B1.png",
+            "caption": "Same as Fig. 5 but for Bin 1."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26822v1/Gauss_B2.png",
+            "caption": "Same as Fig. 5 but for Bin 2."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26822v1/Flamingo_B0.png",
+            "caption": "The true (left) and reconstructed (middle and right) radial velocity field in Bin 0 for the FLAMINGO data with ϵ = 0 \\epsilon=0 (no primary CMB in the input, top row) and ϵ = 1 \\epsilon=1 (full primary CMB in the input, bottom row). The reconstruction with the QE is shown on the left center, the reconstruction with the base ViT trained on only random Gaussian data is shown on the right center, the reconstruction with the finetuned ViT is shown on the right. The QE and finetuned ViT reconstruct the true radial velocity field with some fidelity. The base ViT trained only on random Gaussian mock data performs visibly worse.",
+            "captionLatex": "The true (left) and reconstructed (middle and right) radial velocity field in Bin 0 for the FLAMINGO data with $\\epsilon=0$ (no primary CMB in the input, top row) and $\\epsilon=1$ (full primary CMB in the input, bottom row). The reconstruction with the QE is shown on the left center, the reconstruction with the base ViT trained on only random Gaussian data is shown on the right center, the reconstruction with the finetuned ViT is shown on the right. The QE and finetuned ViT reconstruct the true radial velocity field with some fidelity. The base ViT trained only on random Gaussian mock data performs visibly worse."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26822v1/Flamingo_B1.png",
+            "caption": "Same as Fig. 9 but for Bin 1."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26822v1/Flamingo_B2.png",
+            "caption": "Same as Fig. 9 but for Bin 2."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.26822v1/Architecture.png",
+        "thumbnailAlt": "The Vision Transformer (ViT)-based kSZ velocity reconstruction pipeline. In the top panel, full-sky N side = 2048 N_{\\rm side}=2048 HEALPix maps are split into 12 2048 × 2048 2048\\times 2048 pixel faces, then each face is split into tiles of 256 × 256 256\\times 256 pixels which are the inputs to the",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.26864",
+        "title": "Information-Criterion-Driven, Non-linear Deprojection of Angular Imaging Systematics for the SPHEREx Galaxy Clustering Sample",
+        "summary": "Imaging systematics that inject false, or suppress true, galaxy clustering signals are of primary concern for current- and next-generation galaxy surveys, such as the Spectro-Photometer for the History of the Universe, Epoch of Reionization, and Ices Explorer (SPHEREx) in its search for local primordial non-Gaussianity $f_{\\rm NL}$. As statistical errors shrink with growing galaxy samples, systematic rather than statistical uncertainties come to dominate the cosmological error budget. For effects whose spatial patterns are known or well-modelled \\emph{a priori}, a common mitigation approach regresses (deprojects) the density variation associated with a known angular template. In this work we present and demonstrate novel aspects of this procedure as will be applied to the SPHEREx galaxy clustering sample. These include flexible -- but, crucially, constrained and interpretable -- non-linear basis regression with polynomial/spline bases, and aggressive information criterion-driven automated template selection with an associated unbiased two-stage regression, using agreement between two independent selectors as a consistency diagnostic. The method automatically selects a template set of minimal-but-sufficient complexity while limiting the number of templates actually regressed, minimising cosmological information loss and making modern additive-plus-multiplicative approaches tractable. We demonstrate these features on SPHEREx-like lognormal mock catalogues with injected contamination of various spatial profiles, amplitudes, and levels of complexity. Principled, signal-preserving deprojection of the kind demonstrated here is a crucial step towards achieving SPHEREx's goal of $\\sigma(f_{\\rm NL}) < 0.5$.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26864",
+        "htmlUrl": "https://arxiv.org/html/2611.26864v1",
+        "authors": [
+          "James R. Cheshire",
+          "Sean T. Bruton",
+          "Charuhas W. Shiveshwarkar"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.26864v1/paper_ln2_selection_rates.png",
+            "caption": "Selection rates (as the fraction of 100 mock realizations) for clean, low-contamination-amplitude, and high-contamination-amplitude mocks, for the Gram-Schmidt orthogonalized and raw template kits. Within each block, the first three columns (extinction, stellar density, and ecliptic depth proxy), are injected in the 2 and 5 ​ σ clean 5\\,\\sigma_{\\rm clean} cases, highlighted in red, while the remaining four columns represent templates which are provided to the regression but were never injected (false positives). The EN+BIC+OLS and IFS+OLS hybrid methods are generally much less susceptible to false-positives, particularly in the presence of other contamination, but trade a loss of recovery of some weakly-injected patterns.",
+            "captionLatex": "Selection rates (as the fraction of 100 mock realizations) for clean, low-contamination-amplitude, and high-contamination-amplitude mocks, for the Gram-Schmidt orthogonalized and raw template kits. Within each block, the first three columns (extinction, stellar density, and ecliptic depth proxy), are injected in the 2 and $5\\,\\sigma_{\\rm clean}$ cases, highlighted in red, while the remaining four columns represent templates which are provided to the regression but were never injected (false positives). The EN+BIC+OLS and IFS+OLS hybrid methods are generally much less susceptible to false-positives, particularly in the presence of other contamination, but trade a loss of recovery of some weakly-injected patterns."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26864v1/paper_ln2_order_selection.png",
+            "caption": "Automated order selection. Selection rates for the EN+BIC+OLS method for the suite of 7 templates and the six Legendre modes P k P_{k} . Contamination is injected linearly in P 1 P_{1} for extinction, stellar density, and the depth proxy, and a third-order pattern P 3 P_{3} is also injected for extinction (injected terms shown as red square outlines). The left column shows the null on clean mocks. The non-linear extinction terms are recovered robustly, though errant higher-order terms are often selected in place of the stellar density P 1 P_{1} term. For the Planck 857 GHz template, this false-positive rate has a physical origin due to its relationship with the extinction template, discussed further in Section 4.4 .",
+            "captionLatex": "Automated order selection. Selection rates for the EN+BIC+OLS method for the suite of 7 templates and the six Legendre modes $P_{k}$ . Contamination is injected linearly in $P_{1}$ for extinction, stellar density, and the depth proxy, and a third-order pattern $P_{3}$ is also injected for extinction (injected terms shown as red square outlines). The left column shows the null on clean mocks. The non-linear extinction terms are recovered robustly, though errant higher-order terms are often selected in place of the stellar density $P_{1}$ term. For the Planck 857 GHz template, this false-positive rate has a physical origin due to its relationship with the extinction template, discussed further in Section 4.4 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26864v1/paper_ln2_857_extinction.png",
+            "caption": "Higher-order template coupling. The left panel shows the (primary, never orthogonalized) CSFD dust extinction map and the central panel the post-orthogonalized residual Planck 857 GHz map. The former traces dust extinction and the latter emission, so they may be anticorrelated in diffuse (low-column-density) regions and strongly correlated in dense regions, which is made clear by plotting them against one another as in the right-hand panel showing a 2-D hexagonal histogram of pixel counts and means in equal-pixel quantile bins. The Gram-Schmidt orthogonalization procedure may remove the linear cross-correlation, but higher-order spatial relationships may persist."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.26864v1/paper_ln2_selection_rates.png",
+        "thumbnailAlt": "Selection rates (as the fraction of 100 mock realizations) for clean, low-contamination-amplitude, and high-contamination-amplitude mocks, for the Gram-Schmidt orthogonalized and raw template kits. Within each block, the first three columns (extinction, stellar density, and ecliptic depth proxy), ar",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27069",
+        "title": "Beyond the Peak: Constraining early dark energy with the damping tail",
+        "summary": "Early dark energy is commonly characterized by the amplitude and location of its primary energy-injection peak. We show that its post-peak evolution, which we call the \\emph{EDE tail}, provides an additional observable probe of the underlying scalar dynamics and can materially affect its ability to alleviate the Hubble tension. We construct a simple phenomenological framework in which distinct regions of a multiscale scalar potential govern the dynamics at different field scales. As a representative realization, we consider a potential that combines axion-like and $\\alpha$-attractor-like regimes, thereby allowing the EDE tail to be reshaped through reflection and asymmetric oscillations. Confronting this framework with cosmic microwave background, baryon acoustic oscillation, and supernova observations, we find an improved fit to the high-$\\ell$ CMB data together with a higher inferred bestfit $H_0$. Our results show that the EDE tail retains observable information about the underlying scalar potential that is not captured by the conventional peak parameters alone. This provides a complementary route for constructing and observationally distinguishing EDE scenarios, and potentially for further alleviating the Hubble tension.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27069",
+        "htmlUrl": "https://arxiv.org/html/2611.27069v1",
+        "authors": [
+          "Hao Wang",
+          "Gen Ye",
+          "Yun-Song Piao"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "hep-th"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.27069v1/alpgamma.png",
+            "caption": "Marginalized posterior in the log 10 ⁡ α \\log_{10}\\alpha – log 10 ⁡ γ \\log_{10}\\gamma plane for AtR, with samples colored by the derived log 10 ⁡ z c \\log_{10}z_{c} . The contours enclose the 68 % 68\\% and 95 % 95\\% credible regions, and the gray dashed lines mark α = 1 \\alpha=1 and γ = 1 \\gamma=1 . The black dot-dashed line denotes the constant- λ \\lambda relation in ( 3 ) for λ ≃ 1.6 \\lambda\\simeq 1.6 , a value close to that at the minimum. Samples near this line separate into log 10 ⁡ z c ≃ 3.8 \\log_{10}z_{c}\\simeq 3.8 and 3.4 3.4 , corresponding to the primary and secondary EDE injections.",
+            "captionLatex": "Marginalized posterior in the $\\log_{10}\\alpha$ – $\\log_{10}\\gamma$ plane for AtR, with samples colored by the derived $\\log_{10}z_{c}$ . The contours enclose the $68\\%$ and $95\\%$ credible regions, and the gray dashed lines mark $\\alpha=1$ and $\\gamma=1$ . The black dot-dashed line denotes the constant- $\\lambda$ relation in ( 3 ) for $\\lambda\\simeq 1.6$ , a value close to that at the minimum. Samples near this line separate into $\\log_{10}z_{c}\\simeq 3.8$ and $3.4$ , corresponding to the primary and secondary EDE injections."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27069v1/phi.png",
+            "caption": "Background evolution for AxionEDE, the AtR minimum, and an illustrative double-injection solution associated with the potential morphology in Fig. 1 (a). The left panel shows the EDE energy fraction f EDE f_{\\rm EDE} , and the right panel shows the scalar-field evolution. The AxionEDE curve is evaluated using the same cosmological parameters as the AtR minimum.",
+            "captionLatex": "Background evolution for AxionEDE, the AtR minimum, and an illustrative double-injection solution associated with the potential morphology in Fig. 1 (a). The left panel shows the EDE energy fraction $f_{\\rm EDE}$ , and the right panel shows the scalar-field evolution. The AxionEDE curve is evaluated using the same cosmological parameters as the AtR minimum."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27069v1/weyl.png",
+            "caption": "Relative residuals of the Weyl potential, Δ ​ Φ W / Φ W \\Delta\\Phi_{\\rm W}/\\Phi_{\\rm W} , with respect to the AxionEDE reference model, for k = 0.01 k=0.01 , 0.05 0.05 , and 0.1 ​ Mpc − 1 0.1\\,{\\rm Mpc}^{-1} from top to bottom.",
+            "captionLatex": "Relative residuals of the Weyl potential, $\\Delta\\Phi_{\\rm W}/\\Phi_{\\rm W}$ , with respect to the AxionEDE reference model, for $k=0.01$ , $0.05$ , and $0.1\\,{\\rm Mpc}^{-1}$ from top to bottom."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27069v1/mc.png",
+            "caption": "Marginalized posterior distributions for selected cosmological and scalar-field parameters in AxionEDE and AtR. The contours enclose the 68% and 95% credible regions."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.27069v1/alpgamma.png",
+        "thumbnailAlt": "Marginalized posterior in the log 10 ⁡ α \\log_{10}\\alpha – log 10 ⁡ γ \\log_{10}\\gamma plane for AtR, with samples colored by the derived log 10 ⁡ z c \\log_{10}z_{c} . The contours enclose the 68 % 68\\% and 95 % 95\\% credible regions, and the gray dashed lines mark α = 1 \\alpha=1 and γ = 1 \\gamma=1 .",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27151",
+        "title": "Fast and accurate large-volume Lyman-$α$ forest mocks with three-dimensional U-Net trained on IllustrisTNG and FLAMINGO",
+        "summary": "The Lyman-$\\alpha$ forest probes matter structure at $z\\gtrsim2$, constraining baryon acoustic oscillations, neutrino masses, and dark matter properties. Interpreting current and upcoming spectroscopic surveys requires mock catalogues spanning Gpc-scale volumes while capturing small-scale intergalactic medium physics. This combination of high resolution and large volume is prohibitively expensive for hydrodynamical simulations. We present a field-level emulator, based on a three-dimensional U-Net, that maps approximate density and velocity fields directly to Ly$\\alpha$ optical depth and transmitted flux. At $z\\sim3$, we train in small volumes and test on much larger, independent ones in two settings: IllustrisTNG (training on a $110\\,\\mathrm{cMpc}$ box and testing on a $300\\,\\mathrm{cMpc}$ box with 2LPT and $N$-body inputs) and FLAMINGO (training on $1\\,\\mathrm{cGpc}$ and testing on $2.8\\,\\mathrm{cGpc}$ with $N$-body inputs). The hydrodynamical statistics of TNG and FLAMINGO differ appreciably over their common $k$-range, by $\\sim15\\%$ in $P_{\\rm 1D}$, $\\sim17\\%$ in the bispectrum, and $\\sim40\\%$ in the connected trispectrum, although their normalized power-spectrum correlation structures remain broadly similar. Within each suite, the emulator reproduces $P_{\\rm 1D}$ to $2.8\\%$ in TNG and $5.6\\%$ in FLAMINGO, the bispectrum to $4$--$5\\%$, and the trispectrum to $10$--$16\\%$, while also recovering the flux PDF and broad correlation structure. Field-level emulation thus provides a practical route to large-volume Ly$\\alpha$-forest mocks for current and future surveys.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27151",
+        "htmlUrl": "https://arxiv.org/html/2611.27151v1",
+        "authors": [
+          "Bhaskar Arya",
+          "Soumak Maitra",
+          "Shadab Alam"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.27151v1/figures/U-Net.png",
+            "caption": ": Schematic representation of the anisotropic three-dimensional U-Net architectures used in this work. The two input channels contain the line-of-sight dark-matter density and velocity fields. Each convolutional block contains two 3 × 3 × 3 3\\times 3\\times 3 convolutions with ReLU activations, while downsampling and upsampling are performed only along the line-of-sight direction using kernels ( 2 , 1 , 1 ) (2,1,1) . The TNG and FLAMINGO models use four and three encoder levels, respectively, with bottleneck widths of 192 and 96 channels. Additive skip connections combine the encoder features with the corresponding upsampled decoder features. A final 1 × 1 × 1 1\\times 1\\times 1 convolution produces a single log 10 ⁡ τ \\log_{10}\\tau field, from which the transmitted flux is obtained as F = exp ⁡ ( − τ ) F=\\exp(-\\tau) .",
+            "captionLatex": ": Schematic representation of the anisotropic three-dimensional U-Net architectures used in this work. The two input channels contain the line-of-sight dark-matter density and velocity fields. Each convolutional block contains two $3\\times 3\\times 3$ convolutions with ReLU activations, while downsampling and upsampling are performed only along the line-of-sight direction using kernels $(2,1,1)$ . The TNG and FLAMINGO models use four and three encoder levels, respectively, with bottleneck widths of 192 and 96 channels. Additive skip connections combine the encoder features with the corresponding upsampled decoder features. A final $1\\times 1\\times 1$ convolution produces a single $\\log_{10}\\tau$ field, from which the transmitted flux is obtained as $F=\\exp(-\\tau)$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27151v1/combined_p1d_corr_matrices.png",
+            "caption": ": Correlation matrices of the noiseless P 1 ​ D P_{\\rm 1D} . Top: TNG hydrodynamical, ML ( N N -body and 2LPT inputs) and FGPA. Bottom: FLAMINGO hydrodynamical, ML ( N N -body) and FGPA. Dashed brackets mark the k k -bins common to both suites.",
+            "captionLatex": ": Correlation matrices of the noiseless $P_{\\rm 1D}$ . Top: TNG hydrodynamical, ML ( $N$ -body and 2LPT inputs) and FGPA. Bottom: FLAMINGO hydrodynamical, ML ( $N$ -body) and FGPA. Dashed brackets mark the $k$ -bins common to both suites."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27151v1/combined_bispectrum_absolute_maps.png",
+            "caption": ": 1D flux bispectra, binned by mode, in the TNG (top) and FLAMINGO (bottom) test volumes, for the hydrodynamical reference, ML predictions and FGPA. The horizontal and vertical axes are the positive mode-bin centres k 1 k_{1} and k 2 k_{2} in Mpc − 1 \\mathrm{Mpc}^{-1} . The colour shows B ⁡ ( k 1 , k 2 , − k 1 − k 2 ) B(k_{1},k_{2},-k_{1}-k_{2}) in Mpc 2 \\mathrm{Mpc}^{2} , averaged over all valid Fourier-mode pairs in each ( k 1 , k 2 ) (k_{1},k_{2}) bin satisfying one-dimensional triangle closure.",
+            "captionLatex": ": 1D flux bispectra, binned by mode, in the TNG (top) and FLAMINGO (bottom) test volumes, for the hydrodynamical reference, ML predictions and FGPA. The horizontal and vertical axes are the positive mode-bin centres $k_{1}$ and $k_{2}$ in $\\mathrm{Mpc}^{-1}$ . The colour shows $B(k_{1},k_{2},-k_{1}-k_{2})$ in $\\mathrm{Mpc}^{2}$ , averaged over all valid Fourier-mode pairs in each $(k_{1},k_{2})$ bin satisfying one-dimensional triangle closure."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27151v1/combined_trispectrum_absolute_maps.png",
+            "caption": ": Connected 1D flux trispectra, binned by mode; panels as in fig. 5 . The axes show the positive mode-bin centres k 1 k_{1} and k 2 k_{2} in Mpc − 1 \\mathrm{Mpc}^{-1} , and the colour shows the collapsed connected configuration T c ​ ( k 1 , − k 1 , k 2 , − k 2 ) T_{\\rm c}(k_{1},-k_{1},k_{2},-k_{2}) in Mpc 3 \\mathrm{Mpc}^{3} . Each element is the connected covariance of the mode-binned powers, averaged over all positive Fourier modes in the two bins; disconnected Wick contractions, including the additional diagonal exchange term, are subtracted.",
+            "captionLatex": ": Connected 1D flux trispectra, binned by mode; panels as in fig. 5 . The axes show the positive mode-bin centres $k_{1}$ and $k_{2}$ in $\\mathrm{Mpc}^{-1}$ , and the colour shows the collapsed connected configuration $T_{\\rm c}(k_{1},-k_{1},k_{2},-k_{2})$ in $\\mathrm{Mpc}^{3}$ . Each element is the connected covariance of the mode-binned powers, averaged over all positive Fourier modes in the two bins; disconnected Wick contractions, including the additional diagonal exchange term, are subtracted."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27151v1/p1d_correlation_tng_n544_to_flamingo_l1.png",
+            "caption": ": Correlation matrices of the P 1 ​ D P_{\\rm 1D} in the FLAMINGO 1 ​ cGpc 1\\,\\mathrm{cGpc} box. The left panel shows the FLAMINGO hydrodynamical reference, while the right panel shows the prediction from the network trained on the N ​ 544 N544 TNG300 simulation. The cross-simulation prediction reproduces the weak correlations across much of the large-scale region but does not recover the hydrodynamical mode-coupling pattern accurately at smaller scales. In particular, it under-predicts the positive correlations involving the highest- k k bins and introduces weak negative correlations between these bins and larger-scale modes.",
+            "captionLatex": ": Correlation matrices of the $P_{\\rm 1D}$ in the FLAMINGO $1\\,\\mathrm{cGpc}$ box. The left panel shows the FLAMINGO hydrodynamical reference, while the right panel shows the prediction from the network trained on the $N544$ TNG300 simulation. The cross-simulation prediction reproduces the weak correlations across much of the large-scale region but does not recover the hydrodynamical mode-coupling pattern accurately at smaller scales. In particular, it under-predicts the positive correlations involving the highest- $k$ bins and introduces weak negative correlations between these bins and larger-scale modes."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.27151v1/figures/U-Net.png",
+        "thumbnailAlt": ": Schematic representation of the anisotropic three-dimensional U-Net architectures used in this work. The two input channels contain the line-of-sight dark-matter density and velocity fields. Each convolutional block contains two 3 × 3 × 3 3\\times 3\\times 3 convolutions with ReLU activations, while",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27249",
+        "title": "Baryon-Enhanced Strong Lensing Signatures of Self-Interacting Dark Matter Subhalos",
+        "summary": "Self-interacting dark matter (SIDM) is generally expected to suppress subhalo strong lensing through core formation, with subsequent gravothermal collapse potentially enhancing it. We show that compact stars can make a viable population of galaxy-hosting SIDM subhalos more efficient lenses than their cold dark matter (CDM) counterparts. When the baryonic potential weakens or reverses the inner velocity-dispersion gradient, SIDM halos suppress or bypass core formation, allowing inner densities to grow from early times. The evolved SIDM subhalos produce larger deflection angles and tangential caustics than in CDM. Such galaxy-hosting subhalos also dominate the galaxy-galaxy strong-lensing (GGSL) budget in clusters, yet lie far below the resolution of cosmological simulations. We calibrate a baryonic parametric SIDM model to predict their effects in the three most massive TNG300-1 clusters, finding GGSL cross sections 1.4--2.7 times those in CDM, comparable to the excess inferred in recent analyses. Baryon-enhanced SIDM lensing can thus account for the observed GGSL excess and predicts stronger perturbations from luminous satellites, testable through resolved distortions of background arcs and rings.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27249",
+        "htmlUrl": "https://arxiv.org/html/2611.27249v1",
+        "authors": [
+          "Meiwen Yang",
+          "Daneng Yang",
+          "Siyuan Hou",
+          "Yi-Ying Wang",
+          "Yiping Shu",
+          "Yue-Lin Sming Tsai"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "astro-ph.GA"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.27249v1/TNG_data_with_inset.png",
+            "caption": "Subhalos of the most massive TNG300-1 cluster in the plane of Hernquist-to-NFW scale-density and scale-radius ratios, ρ H / ρ s \\rho_{H}/\\rho_{s} and r H / r s r_{H}/r_{s} . Halo and stellar parameters are evaluated at each subhalo’s dark matter peak-mass snapshot. Color indicates the stellar-to-halo mass ratio, M ⋆ / M h M_{\\star}/M_{h} , while marker size scales with halo virial radius. Stars denote the six benchmarks listed in Table 1 . The blue dashed line marks Φ b = 0.25 ​ Φ h \\Phi_{b}=0.25\\Phi_{h} , where Φ b ≡ G ​ ρ H ​ r H 2 \\Phi_{b}\\equiv G\\rho_{H}r_{H}^{2} and Φ h ≡ G ​ ρ s ​ r s 2 \\Phi_{h}\\equiv G\\rho_{s}r_{s}^{2} characterize the depths of the baryonic and NFW potentials, respectively. The black dashed curve marks r H = r c , max r_{H}=r_{\\mathrm{c,max}} , with r c , max r_{\\mathrm{c,max}} the maximum core radius predicted by the baryonic PSIDM model [ 36 ] . A substantial fraction of the massive subhalos, including the six benchmarks, lie to the right of both curves, where baryonic effects are expected to be strong. The inset shows the initial dark matter velocity-dispersion profiles of the six benchmarks, with (solid) and without (dashed) stars, in colors matching the main panel. The stellar potentials raise the inner dark matter velocity dispersions and weaken or reverse their radial gradients.",
+            "captionLatex": "Subhalos of the most massive TNG300-1 cluster in the plane of Hernquist-to-NFW scale-density and scale-radius ratios, $\\rho_{H}/\\rho_{s}$ and $r_{H}/r_{s}$ . Halo and stellar parameters are evaluated at each subhalo’s dark matter peak-mass snapshot. Color indicates the stellar-to-halo mass ratio, $M_{\\star}/M_{h}$ , while marker size scales with halo virial radius. Stars denote the six benchmarks listed in Table 1 . The blue dashed line marks $\\Phi_{b}=0.25\\Phi_{h}$ , where $\\Phi_{b}\\equiv G\\rho_{H}r_{H}^{2}$ and $\\Phi_{h}\\equiv G\\rho_{s}r_{s}^{2}$ characterize the depths of the baryonic and NFW potentials, respectively. The black dashed curve marks $r_{H}=r_{\\mathrm{c,max}}$ , with $r_{\\mathrm{c,max}}$ the maximum core radius predicted by the baryonic PSIDM model [ 36 ] . A substantial fraction of the massive subhalos, including the six benchmarks, lie to the right of both curves, where baryonic effects are expected to be strong. The inset shows the initial dark matter velocity-dispersion profiles of the six benchmarks, with (solid) and without (dashed) stars, in colors matching the main panel. The stellar potentials raise the inner dark matter velocity dispersions and weaken or reverse their radial gradients."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27249v1/GGSL_ratio_w_120.png",
+            "caption": "Individual subhalo lensing responses underlying the population-level GGSL enhancement. Each point represents a matched CDM/SIDM subhalo lens, with samples pooled from all 11 viewing directions for each of the three most massive TNG300-1 clusters, plotted against the SIDM effective Einstein radius. The vertical axis shows the ratio of its source-plane tangential caustic areas, σ T , i SIDM / σ T , i CDM \\sigma_{T,i}^{\\rm SIDM}/\\sigma_{T,i}^{\\rm CDM} . Colors indicate the gravothermal phase τ \\tau , marker sizes encode r t / r s r_{t}/r_{s} , and the dashed line marks equal cross sections. Most subhalo lenses show enhanced caustic areas relative to CDM, with stronger enhancement generally associated with larger τ \\tau . SIDM profiles are predicted using the recalibrated baryonic parametric model with σ 0 / m = 70 ​ cm 2 / g \\sigma_{0}/m=70\\,\\mathrm{cm^{2}/g} and w = 120 ​ km / s w=120\\,\\mathrm{km/s} . The calculations use identical stellar distributions and lensing environments, with z l = 0.439 z_{l}=0.439 and z s = 3 z_{s}=3 .",
+            "captionLatex": "Individual subhalo lensing responses underlying the population-level GGSL enhancement. Each point represents a matched CDM/SIDM subhalo lens, with samples pooled from all 11 viewing directions for each of the three most massive TNG300-1 clusters, plotted against the SIDM effective Einstein radius. The vertical axis shows the ratio of its source-plane tangential caustic areas, $\\sigma_{T,i}^{\\rm SIDM}/\\sigma_{T,i}^{\\rm CDM}$ . Colors indicate the gravothermal phase $\\tau$ , marker sizes encode $r_{t}/r_{s}$ , and the dashed line marks equal cross sections. Most subhalo lenses show enhanced caustic areas relative to CDM, with stronger enhancement generally associated with larger $\\tau$ . SIDM profiles are predicted using the recalibrated baryonic parametric model with $\\sigma_{0}/m=70\\,\\mathrm{cm^{2}/g}$ and $w=120\\,\\mathrm{km/s}$ . The calculations use identical stellar distributions and lensing environments, with $z_{l}=0.439$ and $z_{s}=3$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27249v1/gamma_map.png",
+            "caption": "Velocity dispersion slope at 0.05 ​ r s 0.05\\,r_{s} for different halo-baryon configurations. The yellow dashed line marks the parameter space where r c , max = r H r_{\\rm c,max}=r_{H} . Our benchmarks are indicated by asterisks. Substructures around the 10 15 ​ M ⊙ 10^{15}\\,M_{\\odot} host halo in TNG300-1 are shown as black scatter points. The color bar encodes the slope value at 0.05 ​ r s 0.05\\,r_{s} . Contour lines for slopes of 0, 0.05, and 0.1 are drawn in black, gray, and light gray, respectively. Benchmarks with slopes below 0.05 all skip the core formation phase.",
+            "captionLatex": "Velocity dispersion slope at $0.05\\,r_{s}$ for different halo-baryon configurations. The yellow dashed line marks the parameter space where $r_{\\rm c,max}=r_{H}$ . Our benchmarks are indicated by asterisks. Substructures around the $10^{15}\\,M_{\\odot}$ host halo in TNG300-1 are shown as black scatter points. The color bar encodes the slope value at $0.05\\,r_{s}$ . Contour lines for slopes of 0, 0.05, and 0.1 are drawn in black, gray, and light gray, respectively. Benchmarks with slopes below 0.05 all skip the core formation phase."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27249v1/PM_density_profiles_w120_sigma0_70.png",
+            "caption": "Effect of baryonic PSIDM recalibration on cluster subhalo density profiles. The original model of Ref. [ 36 ] (left, blue) and the recalibrated model (right, red) are applied to subhalos of the most massive TNG300-1 cluster, with matched CDM profiles shown in black. Both calculations use σ 0 / m = 70 ​ cm 2 / g \\sigma_{0}/m=70\\,\\mathrm{cm^{2}/g} and w = 120 ​ km / s w=120\\,\\mathrm{km/s} . Solid curves highlight the same subhalos in both panels, selected by 0.5 ′′ < θ E , eff < 3 ′′ 0.5^{\\prime\\prime}<\\theta_{\\rm E,eff}<3^{\\prime\\prime} in the recalibrated SIDM model. Faint dotted curves show the remaining subhalos with masses above 10 10 ​ M ⊙ 10^{10}\\,M_{\\odot} . Radii are normalized by the halo virial radius R vir R_{\\rm vir} .",
+            "captionLatex": "Effect of baryonic PSIDM recalibration on cluster subhalo density profiles. The original model of Ref. [ 36 ] (left, blue) and the recalibrated model (right, red) are applied to subhalos of the most massive TNG300-1 cluster, with matched CDM profiles shown in black. Both calculations use $\\sigma_{0}/m=70\\,\\mathrm{cm^{2}/g}$ and $w=120\\,\\mathrm{km/s}$ . Solid curves highlight the same subhalos in both panels, selected by $0.5^{\\prime\\prime}<\\theta_{\\rm E,eff}<3^{\\prime\\prime}$ in the recalibrated SIDM model. Faint dotted curves show the remaining subhalos with masses above $10^{10}\\,M_{\\odot}$ . Radii are normalized by the halo virial radius $R_{\\rm vir}$ ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.27249v1/TNG_data_with_inset.png",
+        "thumbnailAlt": "Subhalos of the most massive TNG300-1 cluster in the plane of Hernquist-to-NFW scale-density and scale-radius ratios, ρ H / ρ s \\rho_{H}/\\rho_{s} and r H / r s r_{H}/r_{s} . Halo and stellar parameters are evaluated at each subhalo’s dark matter peak-mass snapshot. Color indicates the stellar-to-hal",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27265",
+        "title": "Features investigated: A detailed study of axion monodromy inflation using CLiENT",
+        "summary": "We investigate features in the primordial power spectrum from inflation, specifically those predicted by the axion monodromy model, using recent observational data. In order to compute posteriors, profile likelihoods and Bayesian evidence accurately for the complex likelihood surfaces arising in this model we have used the CLiENT emulator framework. As our data combinations we use both a \"conservative\" set consisting of Planck PR4 temperature, polarisation and lensing data together with DESI DR2 BAO and Pantheon+ supernovae, and a more \"aggressive\" set which also includes small-scale CMB data from ACT and SPT. We find no robust oscillatory feature in current data. With the conservative data the best fit lies at a frequency $\\omega \\simeq 51$ and lowers $\\chi^2$ by 10.1 relative to a featureless spectrum. However, this feature is disfavoured by the more aggressive data combination, whose best fit lies at $\\omega \\simeq 31$ and lowers $\\chi^2$ by 7.4. Fits to featureless data are known to give similar improvements, and the Akaike information criterion, the Bayes factors and the look-elsewhere effect all indicate that neither improvement is significant. The amplitude is limited to $A_\\mathrm{osc} < 0.056$ and $A_\\mathrm{osc} < 0.062$ (95%) for the two datasets. The emulators reproduce the true log-likelihood at samples of their posteriors with rms errors of 0.07 and 0.16, and the profile likelihoods are calculated with the true likelihood, using the profile capability of CLiENT.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27265",
+        "htmlUrl": "https://arxiv.org/html/2611.27265v1",
+        "authors": [
+          "Steen Hannestad",
+          "Rasmus Lumbye",
+          "Andreas Nygaard",
+          "Thomas Tram"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "hep-ph"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.27265v1/omega_pp.png",
+            "caption": ": The frequency of the oscillation for PDP+. Top: the improvement in χ 2 \\chi^{2} relative to the best fit without oscillation, from the true profile likelihood in ( ω , ϕ ) (\\omega,\\phi) , i.e. with A osc A_{\\mathrm{osc}} and all other parameters maximised with the true likelihood (black), and the same profile calculated with the emulator (orange), relative to the same best fit without oscillation. The diamond is the best fit. It is found in the plane ( A osc , ϕ ) (A_{\\mathrm{osc}},\\phi) , in which ω \\omega is maximised, and lies between two nodes of the grid in ω \\omega . The spacing of the grid, about 1 in ω \\omega , is comparable with the width of the maxima in ω \\omega , so that the profile on the grid lies slightly below the best fit. The dashed lines show Δ ​ χ 2 = 1 \\Delta\\chi^{2}=1 and 4 relative to the best fit. Bottom: the marginalised posterior density of ω \\omega on a logarithmic scale. Neighbouring emulators are blended in the grey bands.",
+            "captionLatex": ": The frequency of the oscillation for PDP+. Top: the improvement in $\\chi^{2}$ relative to the best fit without oscillation, from the true profile likelihood in $(\\omega,\\phi)$ , i.e. with $A_{\\mathrm{osc}}$ and all other parameters maximised with the true likelihood (black), and the same profile calculated with the emulator (orange), relative to the same best fit without oscillation. The diamond is the best fit. It is found in the plane $(A_{\\mathrm{osc}},\\phi)$ , in which $\\omega$ is maximised, and lies between two nodes of the grid in $\\omega$ . The spacing of the grid, about 1 in $\\omega$ , is comparable with the width of the maxima in $\\omega$ , so that the profile on the grid lies slightly below the best fit. The dashed lines show $\\Delta\\chi^{2}=1$ and 4 relative to the best fit. Bottom: the marginalised posterior density of $\\omega$ on a logarithmic scale. Neighbouring emulators are blended in the grey bands."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27265v1/triangle_key.png",
+            "caption": ": The posterior of the spectral index, the running and the oscillation parameters for PDP+ (68%, 95% and 99.7% regions). The diamond is the best fit of the true profile likelihood. The panels with ω \\omega are drawn from histograms in bins of Δ ​ ω = 0.5 \\Delta\\omega=0.5 , which resolve the many narrow peaks of its posterior.",
+            "captionLatex": ": The posterior of the spectral index, the running and the oscillation parameters for PDP+ (68%, 95% and 99.7% regions). The diamond is the best fit of the true profile likelihood. The panels with $\\omega$ are drawn from histograms in bins of $\\Delta\\omega=0.5$ , which resolve the many narrow peaks of its posterior."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27265v1/profile_triangle.png",
+            "caption": ": The profile likelihood of PDP+ in the oscillation parameters. Below the diagonal: the two-dimensional profiles. The planes ( A osc , ω ) (A_{\\mathrm{osc}},\\omega) and ( ω , ϕ ) (\\omega,\\phi) are each calculated in four windows in ω \\omega of 50 × 50 50\\times 50 nodes, joined into one surface, and the plane ( A osc , ϕ ) (A_{\\mathrm{osc}},\\phi) on 50 × 50 50\\times 50 nodes. At each node the third oscillation parameter and all other parameters are maximised with the true likelihood. In the two lowest windows of ( A osc , ω ) (A_{\\mathrm{osc}},\\omega) the grid ends at A osc = 0.06 A_{\\mathrm{osc}}=0.06 and 0.09, respectively (white above). The regions with Δ ​ χ 2 < 2.30 \\Delta\\chi^{2}<2.30 , 6.18 and 11.83 relative to the best fit (diamond), i.e. the Gaussian 68%, 95% and 99.7% levels for two parameters, are shaded. In the ( ω , ϕ ) (\\omega,\\phi) plane no node is worse than the best fit without oscillation, Δ ​ χ 2 = 10.1 \\Delta\\chi^{2}=10.1 , since A osc = 0 A_{\\mathrm{osc}}=0 is allowed at all nodes, and the whole plane therefore lies inside the 99.7% level. Diagonal: the one-dimensional profile likelihood ratio e − Δ χ 2 / 2 \\mathrm{e}^{-\\Delta\\chi^{2}/2} relative to the best fit (black), from the better of the two surfaces that contain the parameter, the best fit (diamond) and the marginalised posterior with a maximum of 1 (blue). In ω \\omega the best fit lies between two nodes of the grid, and the profile is therefore below 1 (Fig. 1 ). For ω \\omega the posterior is a histogram in bins of width 0.5. The dashed lines show Δ ​ χ 2 = 1 \\Delta\\chi^{2}=1 and 4 for the profile.",
+            "captionLatex": ": The profile likelihood of PDP+ in the oscillation parameters. Below the diagonal: the two-dimensional profiles. The planes $(A_{\\mathrm{osc}},\\omega)$ and $(\\omega,\\phi)$ are each calculated in four windows in $\\omega$ of $50\\times 50$ nodes, joined into one surface, and the plane $(A_{\\mathrm{osc}},\\phi)$ on $50\\times 50$ nodes. At each node the third oscillation parameter and all other parameters are maximised with the true likelihood. In the two lowest windows of $(A_{\\mathrm{osc}},\\omega)$ the grid ends at $A_{\\mathrm{osc}}=0.06$ and 0.09, respectively (white above). The regions with $\\Delta\\chi^{2} 1 ). For $\\omega$ the posterior is a histogram in bins of width 0.5. The dashed lines show $\\Delta\\chi^{2}=1$ and 4 for the profile."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27265v1/omega_wc.png",
+            "caption": ": The frequency of the oscillation for H 0 ​ WC H_{0}{\\rm WC} , as in Fig. 1 : the profile likelihood calculated with the true likelihood (black) and with the emulator (orange), and the marginalised posterior. As for PDP+, the best fit (diamond) lies between two nodes of the grid in ω \\omega , and the profile on the grid therefore lies slightly below it. Neighbouring emulators of H 0 ​ WC H_{0}{\\rm WC} are blended in the grey bands.",
+            "captionLatex": ": The frequency of the oscillation for $H_{0}{\\rm WC}$ , as in Fig. 1 : the profile likelihood calculated with the true likelihood (black) and with the emulator (orange), and the marginalised posterior. As for PDP+, the best fit (diamond) lies between two nodes of the grid in $\\omega$ , and the profile on the grid therefore lies slightly below it. Neighbouring emulators of $H_{0}{\\rm WC}$ are blended in the grey bands."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27265v1/triangle_key_wc.png",
+            "caption": ": The posterior of the spectral index, the running and the oscillation parameters for H 0 ​ WC H_{0}{\\rm WC} (68%, 95% and 99.7% regions), as in Fig. 2 . The panels with ω \\omega are drawn from histograms in bins of Δ ​ ω = 0.5 \\Delta\\omega=0.5 .",
+            "captionLatex": ": The posterior of the spectral index, the running and the oscillation parameters for $H_{0}{\\rm WC}$ (68%, 95% and 99.7% regions), as in Fig. 2 . The panels with $\\omega$ are drawn from histograms in bins of $\\Delta\\omega=0.5$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.27265v1/profile_triangle_wc.png",
+            "caption": ": The profile likelihood of H 0 ​ WC H_{0}{\\rm WC} in the oscillation parameters, as in Fig. 3 . In ω \\omega the best fit again lies between two nodes of the grid, so that the one-dimensional profile is below 1. In the two lowest windows of ( A osc , ω ) (A_{\\mathrm{osc}},\\omega) the grid ends at A osc = 0.04 A_{\\mathrm{osc}}=0.04 and 0.07, respectively (white above). The marginalised posterior on the diagonal is shown in red.",
+            "captionLatex": ": The profile likelihood of $H_{0}{\\rm WC}$ in the oscillation parameters, as in Fig. 3 . In $\\omega$ the best fit again lies between two nodes of the grid, so that the one-dimensional profile is below 1. In the two lowest windows of $(A_{\\mathrm{osc}},\\omega)$ the grid ends at $A_{\\mathrm{osc}}=0.04$ and 0.07, respectively (white above). The marginalised posterior on the diagonal is shown in red."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.27265v1/omega_pp.png",
+        "thumbnailAlt": ": The frequency of the oscillation for PDP+. Top: the improvement in χ 2 \\chi^{2} relative to the best fit without oscillation, from the true profile likelihood in ( ω , ϕ ) (\\omega,\\phi) , i.e. with A osc A_{\\mathrm{osc}} and all other parameters maximised with the true likelihood (black), and the ",
+        "catchupDate": "2026-11-23"
+      }
+    ],
+    "cross": [
+      {
+        "absId": "2611.26685",
+        "title": "Little Red Dots at Cosmic Noon: Spectroscopy Reveals Declining Abundance but a Non-Evolving Luminosity Function Shape",
+        "summary": "Little red dots (LRDs) are an extremely abundant population of red, compact, broad-line objects primarily found in the early universe. At $5<z<8$, they are at least 10 times more abundant than UV-selected quasars. Yet, how this population evolves towards lower redshift is unclear. In this work, we present our search for LRDs at cosmic noon ($2\\lesssim z\\lesssim 4$) in nearly 20 deg$^2$ of the Deep/UltraDeep fields of the Hyper Suprime-Cam Subaru Strategic Program (HSC-SSP). Combining multiwavelength wide-field imaging surveys from 0.3 to 4.5 $\\mu$m, we identify 266 photometric LRD candidates. With spectroscopic follow-up from Keck/NIRES, VLT/X-shooter, and Magellan/FIRE on 24 candidates, we identify a sample of four LRDs with broad H$\\alpha$ emission. With the purity of the photometric sample calibrated by spectroscopy, we estimate the number density of LRDs to be approximately $6.8\\times10^{-7}$ cMpc$^{-3}$ at $2.10<z<2.55$---this is nearly a factor of 35 decrease from their flat number density evolution at $4\\lesssim z\\lesssim8$ estimated from JWST spectroscopic surveys. The knee of the LRD optical luminosity function also remains consistently at $M_{5500}\\approx-22$ mag across $2<z<5$, below that of quasars. We further speculate that only the abundance of LRDs, but not the shape of their optical luminosity function, evolves with redshift, and the Roman Space Telescope will be able to test this decisively with a substantially larger sample of low-redshift LRDs.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.26685",
+        "htmlUrl": "https://arxiv.org/html/2611.26685v1",
+        "authors": [
+          "Yilun Ma",
+          "Daniel J. Lyon",
+          "Jenny E. Greene",
+          "Alberto Torralba",
+          "Jorryt Matthee",
+          "Ivo Labbe",
+          "Andy D. Goulding",
+          "David J. Setton",
+          "Marianna Annunziatella",
+          "Aayush Desai",
+          "Eiichi Egami",
+          "Xiaohui Fan",
+          "Karl Glazebrook",
+          "Vasily Kokorev",
+          "Jiaxuan Li",
+          "Xiaojing Lin",
+          "Danilo Marchesini",
+          "Themiya Nanayakkara",
+          "Luke Robbins",
+          "Anna Sajina",
+          "Marcin Sawicki"
+        ],
+        "categories": [
+          "astro-ph.GA",
+          "astro-ph.CO",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.26685v1/footprint.png",
+            "caption": "The photometric LRD candidates and spectroscopically targeted sources are shown in the RA–Dec plane. Dark red stars represent sources with a confirmed broad H α \\alpha emission line; light red stars represent sources where only a spectroscopic redshift is obtained from Ly α \\alpha emission, but no broad H α \\alpha available and/or detected. Pink circles represent sources that were targeted spectroscopically but no spectroscopic redshift obtained. Empty circles represents photometric candidates. The backgrounds are 2D-histograms showing source densities and survey footprints of the parent u u -to-IRAC catalog from which the LRD candidates were selected.",
+            "captionLatex": "The photometric LRD candidates and spectroscopically targeted sources are shown in the RA–Dec plane. Dark red stars represent sources with a confirmed broad H $\\alpha$ emission line; light red stars represent sources where only a spectroscopic redshift is obtained from Ly $\\alpha$ emission, but no broad H $\\alpha$ available and/or detected. Pink circles represent sources that were targeted spectroscopically but no spectroscopic redshift obtained. Empty circles represents photometric candidates. The backgrounds are 2D-histograms showing source densities and survey footprints of the parent $u$ -to-IRAC catalog from which the LRD candidates were selected."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26685v1/color_color.png",
+            "caption": "Left: The LRD candidates and spectroscopically confirmed LRDs are shown in the rest-frame UV-optical color space. Same as in Figure 1 , dark red stars represent sources with a confirmed broad H α \\alpha emission line; light red stars represent sources where only a spectroscopic redshift is obtained from Ly α \\alpha emission, but no broad H α \\alpha is available and/or detected. Pink circles represent sources that were targeted spectroscopically but no spectroscopic redshift was obtained. Empty circles represents photometric candidates. The gray background are sources in the parent u u -to-IRAC catalog from which the LRDs are selected. The dashed lines mark the selection criteria. Right: Same as the left panel but objects are shown in the rest-frame optical-NIR color space.",
+            "captionLatex": "Left: The LRD candidates and spectroscopically confirmed LRDs are shown in the rest-frame UV-optical color space. Same as in Figure 1 , dark red stars represent sources with a confirmed broad H $\\alpha$ emission line; light red stars represent sources where only a spectroscopic redshift is obtained from Ly $\\alpha$ emission, but no broad H $\\alpha$ is available and/or detected. Pink circles represent sources that were targeted spectroscopically but no spectroscopic redshift was obtained. Empty circles represents photometric candidates. The gray background are sources in the parent $u$ -to-IRAC catalog from which the LRDs are selected. The dashed lines mark the selection criteria. Right: Same as the left panel but objects are shown in the rest-frame optical-NIR color space."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26685v1/completeness_area_weighted.png",
+            "caption": "The selection completeness of the LRD selection as a function of optical luminosity and redshift averaged over the four HSC-D/UD fields. The lines are contours for a completeness of 50% ( 2.1 < z < 2.6 2.1<z<2.6 ) and 80% ( 2.2 < z < 2.5 2.2<z<2.5 ).",
+            "captionLatex": "The selection completeness of the LRD selection as a function of optical luminosity and redshift averaged over the four HSC-D/UD fields. The lines are contours for a completeness of 50% ( $2.1<z<2.6$ ) and 80% ( $2.2<z<2.5$ )."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26685v1/weight_visualization.png",
+            "caption": "All sources in the parent u u -to-IRAC catalog are color-coded and size-coded by the targeting priority weight w w defined in Section IV.1 . Darker color and larger marker size represent higher targeting priority weight. The definition of Δ slope \\Delta_{\\mathrm{slope}} , the UV-optical slope contrast is provided in Equation D3 .",
+            "captionLatex": "All sources in the parent $u$ -to-IRAC catalog are color-coded and size-coded by the targeting priority weight $w$ defined in Section IV.1 . Darker color and larger marker size represent higher targeting priority weight. The definition of $\\Delta_{\\mathrm{slope}}$ , the UV-optical slope contrast is provided in Equation D3 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.26685v1/completeness_15_areas.png",
+            "caption": "Figure C2: The completeness of each subregions of the HSC D/UD fields (depending on the different combination of imaging depth i the optical and near-infrared) is shown as a function of redshift and optical luminosity. The red dashed lines show the parameter spaces where our selections is 50% complete."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.26685v1/footprint.png",
+        "thumbnailAlt": "The photometric LRD candidates and spectroscopically targeted sources are shown in the RA–Dec plane. Dark red stars represent sources with a confirmed broad H α \\alpha emission line; light red stars represent sources where only a spectroscopic redshift is obtained from Ly α \\alpha emission, but no b",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27006",
+        "title": "Physics-Guided Recursive Self-Improvement of Amortized Bayesian Inference Across Physics",
+        "summary": "Across physics, from the orbits of imaged exoplanets and the matter inside neutron stars to thin films at synchrotrons and cortical neurons, conservation laws, interference, and compensating currents compress the posteriors of precise data into tiny, curved regions where Markov chains need minutes to days. We introduce PhyRSI (physics-guided recursive self-improvement), in which an AI agent coupled to the simulator writes and revises an amortized Bayesian inference algorithm for each field, scored by the importance weights of the exact likelihood because the true posterior is unknown. It evolves coordinates, symmetries, and factorizations matched to the physics: orbital elements at the best-measured epoch, Fresnel-normalized reflectivity with a chart for each of its multiple solutions, coordinates along which Na+ and K+ currents compensate, a shared neutron-star equation of state that factorizes a 32-dimensional joint analysis, and the time-rescaling symmetry of predator-prey dynamics. In six fields, networks trained once on simulations return 36 posteriors of real observations in seconds, reweighted by the likelihood and agreeing with converged Markov chains about as closely as two independent chains agree with each other. Such posteriors could steer synchrotron film growth and patch-clamp recordings as they run, follow X-ray transients while they are bright, update the dense-matter equation of state as neutron stars are added, and compare physical models across catalogs. Inference can thus be evolved and checked by the physics itself rather than designed by hand for each problem.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27006",
+        "htmlUrl": null,
+        "authors": [
+          "Bo Liang",
+          "Mingtao Chen",
+          "Minghui Du",
+          "Ziren Luo",
+          "Guohua Wang",
+          "Peng Xu",
+          "Zhichao Hu",
+          "Maxm Pan"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "astro-ph.EP",
+          "astro-ph.IM"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27228",
+        "title": "Dark Energy Based on Modified Gravity: Where the Future Lies?",
+        "summary": "Based on current observational data, there is a strong possibility that dark energy was in a phantom regime in the near past, and a transition from a phantom to a quintessential regime may have occurred. Since then, many scenarios compatible with the DESI data have been proposed. In particular, there exist several realistic models in the framework of $F(R)$ gravity. In this paper, we show that such realistic models of $F(R)$ gravity may produce an anti-gravity or ghost graviton in the future. The problem could be avoided by further changing the parameters and fine-tuning the initial conditions, but we propose to introduce a potential barrier of the scalar field for the small scalar curvature region, which prevents the Universe from evolving into the anti-gravity or having a ghost graviton region, without the fine-tuning of the initial conditions. We also discuss how this regime can be tested using peculiar velocity and kSZ effect probes.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27228",
+        "htmlUrl": "https://arxiv.org/html/2611.27228v1",
+        "authors": [
+          "Shin'ichi Nojiri",
+          "Sergei D. Odintsov",
+          "V.K. Oikonomou",
+          "Oem Trivedi"
+        ],
+        "categories": [
+          "gr-qc",
+          "astro-ph.CO",
+          "hep-th"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27611",
+        "title": "Cosmological Correlators with Triple Massive Exchanges",
+        "summary": "Among all tree-level contributions to the primordial bispectrum, the triple exchange of massive scalars is the most challenging. In this paper we present an analytical formula for this bispectrum in the form of a double series, which allows the three exchanged fields to have different masses and converges throughout the whole physical region. We obtain it by expanding the mixed propagator with the softest momentum, so that the triple exchange becomes a sum of integrals over two mixed propagators. Each of these integrals satisfies a differential equation and is fixed by its value at equal momentum. We further show that the squeezed limit follows directly from this formula and takes a simple and compact form.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27611",
+        "htmlUrl": "https://arxiv.org/html/2611.27611v1",
+        "authors": [
+          "Shuntaro Aoki",
+          "Lucas Pinol",
+          "Zhehan Qin",
+          "Fumiya Sano",
+          "Masahide Yamaguchi",
+          "Yuhang Zhu"
+        ],
+        "categories": [
+          "hep-th",
+          "astro-ph.CO",
+          "gr-qc",
+          "hep-ph"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.27611v1/fig_shapes_isosceles.png",
+            "caption": "Triple exchange bispectrum for three different massive fields whose only nonzero cubic couplings are λ 123 \\lambda_{123} and its permutations, so that the sum ( 4 ) runs over the six ways of attaching the three fields to the external legs. We define S ⁡ ( k 1 , k 2 , k 3 ) ≡ ( k 1 ​ k 2 ​ k 3 ) 2 ​ ⟨ φ 𝒌 1 ​ φ 𝒌 2 ​ φ 𝒌 3 ⟩ ′ / H 3 S(k_{1},k_{2},k_{3})\\equiv(k_{1}k_{2}k_{3})^{2}\\langle\\varphi_{\\bm{k}_{1}}\\varphi_{\\bm{k}_{2}}\\varphi_{\\bm{k}_{3}}\\rangle^{\\prime}/H^{3} and multiply it by ( k 1 / k 3 ) − 1 / 2 (k_{1}/k_{3})^{-1/2} to remove its overall decay towards the squeezed limit. The result is shown in units of 10 − 5 ​ λ 123 / H 10^{-5}\\lambda_{123}/H for four sets of mass parameters ( μ 1 , μ 2 , μ 3 ) (\\mu_{1},\\mu_{2},\\mu_{3}) that share the same lightest field. The mixings ρ α = ( 1 4 + μ α 2 ) ​ H / 20 \\rho_{\\alpha}=(\\tfrac{1}{4}+\\mu_{\\alpha}^{2})H/20 offset the suppression by 1 / ( 1 4 + μ α 2 ) 1/(\\tfrac{1}{4}+\\mu_{\\alpha}^{2}) of each massive line and give the four sets a similar size. Since the couplings only enter through the overall factor λ 123 ​ ρ 1 ​ ρ 2 ​ ρ 3 \\lambda_{123}\\rho_{1}\\rho_{2}\\rho_{3} , any other choice rescales each set. Left: shape over all triangles with k 1 ≤ k 2 ≤ k 3 k_{1}\\leq k_{2}\\leq k_{3} and k 1 / k 3 ≥ 10 − 4 k_{1}/k_{3}\\geq 10^{-4} , as a function of log 10 ⁡ ( k 1 / k 3 ) \\log_{10}(k_{1}/k_{3}) and k 2 / k 3 k_{2}/k_{3} , from the analytical result ( 16 ) on about 10 3 10^{3} triangles per panel. Each panel has its own vertical and colour scale, with white at zero. The back edge of each surface is the isosceles line k 2 = k 3 k_{2}=k_{3} , which ends at the equilateral configuration, while the front edge consists of the folded configurations k 1 + k 2 = k 3 k_{1}+k_{2}=k_{3} for k 1 / k 3 ≤ 1 2 k_{1}/k_{3}\\leq\\tfrac{1}{2} and of the isosceles configurations k 1 = k 2 k_{1}=k_{2} beyond. Right: the same four sets, in the same colours, along the isosceles line k 2 = k 3 k_{2}=k_{3} as a function of κ = k 1 / k 3 \\kappa=k_{",
+            "captionLatex": "Triple exchange bispectrum for three different massive fields whose only nonzero cubic couplings are $\\lambda_{123}$ and its permutations, so that the sum ( 4 ) runs over the six ways of attaching the three fields to the external legs. We define $S(k_{1},k_{2},k_{3})\\equiv(k_{1}k_{2}k_{3})^{2}\\langle\\varphi_{\\bm{k}_{1}}\\varphi_{\\bm{k}_{2}}\\varphi_{\\bm{k}_{3}}\\rangle^{\\prime}/H^{3}$ and multiply it by $(k_{1}/k_{3})^{-1/2}$ to remove its overall decay towards the squeezed limit. The result is shown in units of $10^{-5}\\lambda_{123}/H$ for four sets of mass parameters $(\\mu_{1},\\mu_{2},\\mu_{3})$ that share the same lightest field. The mixings $\\rho_{\\alpha}=(\\tfrac{1}{4}+\\mu_{\\alpha}^{2})H/20$ offset the suppression by $1/(\\tfrac{1}{4}+\\mu_{\\alpha}^{2})$ of each massive line and give the four sets a similar size. Since the couplings only enter through the overall factor $\\lambda_{123}\\rho_{1}\\rho_{2}\\rho_{3}$ , any other choice rescales each set. Left: shape over all triangles with $k_{1}\\leq k_{2}\\leq k_{3}$ and $k_{1}/k_{3}\\geq 10^{-4}$ , as a function of $\\log_{10}(k_{1}/k_{3})$ and $k_{2}/k_{3}$ , from the analytical result ( 16 ) on about $10^{3}$ triangles per panel. Each panel has its own vertical and colour scale, with white at zero. The back edge of each surface is the isosceles line $k_{2}=k_{3}$ , which ends at the equilateral configuration, while the front edge consists of the folded configurations $k_{1}+k_{2}=k_{3}$ for $k_{1}/k_{3}\\leq\\tfrac{1}{2}$ and of the isosceles configurations $k_{1}=k_{2}$ beyond. Right: the same four sets, in the same colours, along the isosceles line $k_{2}=k_{3}$ as a function of $\\kappa=k_{1}/k_{3}$ , from $\\kappa=10^{-8}$ to the folded configuration $\\kappa=2$ . The dotted vertical line marks the lower end of the left panels, and the grey band the equilateral configuration. Solid lines: analytical result ( 16 ). Dots: numerical integration of ( 9 ), which agrees with the analytical result to numerical precision. Dashed line"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.27611v1/fig_shapes_isosceles.png",
+        "thumbnailAlt": "Triple exchange bispectrum for three different massive fields whose only nonzero cubic couplings are λ 123 \\lambda_{123} and its permutations, so that the sum ( 4 ) runs over the six ways of attaching the three fields to the external legs. We define S ⁡ ( k 1 , k 2 , k 3 ) ≡ ( k 1 ​ k 2 ​ k 3 ) 2 ​ ",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.27986",
+        "title": "Ohmic warm inflation",
+        "summary": "We show that Warm Little Inflation is anomalous, lacks a suitable inflaton potential, and cannot sustain the thermal bath, as the quasi-static approximation over-estimated the dissipated power. To address these issues, we propose a new friction mechanism and new anomaly-free models based on one fermion charged under a U(1) gauge group in one extra dimension. The four-dimensional lattice version is a ring of $N$ U(1) groups with one fermion at each site, reducing to an anomaly-free version of the warm little inflaton model for $N=2$. The inflaton is a Wilson line, protected for $N\\ge5$. Large $N$ allows a suitable monodromy inflaton potential. In the continuum limit, $N\\to\\infty$, the inflaton velocity becomes a five-dimensional electric field and friction becomes Ohmic dissipation, which seems able to sustain warm inflation compatibly with observations.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.27986",
+        "htmlUrl": "https://arxiv.org/html/2611.27986v1",
+        "authors": [
+          "Anish Ghoshal",
+          "Alessandro Strumia"
+        ],
+        "categories": [
+          "hep-ph",
+          "astro-ph.CO",
+          "hep-th"
+        ],
+        "catchupDate": "2026-11-23"
+      }
+    ],
+    "repl": [
+      {
+        "absId": "2502.11568",
+        "title": "Alleviating the Hubble tension with self-interacting ultralight dark matter",
+        "summary": "We study the possibility that a self-interacting ultralight dark matter field with a characteristic energy scale $\\tilde{m}\\simeq 1~{\\rm eV}$ can behave like an extra radiation component before recombination. This additional radiation can reduce the sound horizon of the photon-baryon fluid. A smaller sound horizon can give a higher inferred value of the present-day Hubble parameter at the background level, and thus may help reduce the Hubble tension. This effect can be obtained without adding another dark sector component besides self-interacting ULDM. A full perturbation and likelihood analysis is needed to see if the model is consistent with CMB and structure-formation data.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2502.11568",
+        "htmlUrl": "https://arxiv.org/html/2502.11568v2",
+        "authors": [
+          "Jae-Weon Lee"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2502.11568v2/slowroll.png",
+            "caption": "A schematic of the potential V ⁡ ( ϕ ) V(\\phi) of the ULDM field oscillating in the potential is shown. ( ϕ o ​ s ​ c , ϕ m , ϕ e ​ q ) (\\phi_{osc},\\phi_{m},\\phi_{eq}) here represent the positive oscillation amplitudes (turning-point values) at the redshifts ( z o ​ s ​ c , z m , z e ​ q ) (z_{osc},z_{m},z_{eq}) , respectively. The oscillating field behaves as a radiation-like component for z m < z < z o ​ s ​ c . z_{m}<z<z_{osc}.",
+            "captionLatex": "A schematic of the potential $V(\\phi)$ of the ULDM field oscillating in the potential is shown. $(\\phi_{osc},\\phi_{m},\\phi_{eq})$ here represent the positive oscillation amplitudes (turning-point values) at the redshifts $(z_{osc},z_{m},z_{eq})$ , respectively. The oscillating field behaves as a radiation-like component for $z_{m}<z<z_{osc}.$"
+          },
+          {
+            "url": "https://arxiv.org/html/2502.11568v2/Omega.png",
+            "caption": "Piecewise background densities normalized to the present total density ρ tot , 0 \\rho_{\\rm tot,0} at m ~ = 1.5 ​ eV \\tilde{m}=1.5~{\\rm eV} and T o ​ s ​ c = 0.1 ​ MeV T_{osc}=0.1~{\\rm MeV} . The solid red curve is ULDM, the dashed red curve is CDM with the same present abundance, the blue and gray curves are radiation and baryons, the green horizontal line is the cosmological constant, and the purple curve is the ULDM total. We fix ω b = 0.022 \\omega_{b}=0.022 , ω ϕ = 0.119 \\omega_{\\phi}=0.119 , ω r = 4.2 × 10 − 5 \\omega_{r}=4.2\\times 10^{-5} and ω Λ = 0.3212 \\omega_{\\Lambda}=0.3212 in this illustration. Vertical lines indicate z l ​ s z_{ls} , z e ​ q z_{eq} , z m z_{m} and z o ​ s ​ c z_{osc} . Constant post-annihilation g ∗ g_{*} and g ∗ s g_{*s} are assumed in drawing the curves; their continuation around and above the onset is schematic and does not represent a BBN computation.",
+            "captionLatex": "Piecewise background densities normalized to the present total density $\\rho_{\\rm tot,0}$ at $\\tilde{m}=1.5~{\\rm eV}$ and $T_{osc}=0.1~{\\rm MeV}$ . The solid red curve is ULDM, the dashed red curve is CDM with the same present abundance, the blue and gray curves are radiation and baryons, the green horizontal line is the cosmological constant, and the purple curve is the ULDM total. We fix $\\omega_{b}=0.022$ , $\\omega_{\\phi}=0.119$ , $\\omega_{r}=4.2\\times 10^{-5}$ and $\\omega_{\\Lambda}=0.3212$ in this illustration. Vertical lines indicate $z_{ls}$ , $z_{eq}$ , $z_{m}$ and $z_{osc}$ . Constant post-annihilation $g_{*}$ and $g_{*s}$ are assumed in drawing the curves; their continuation around and above the onset is schematic and does not represent a BBN computation."
+          },
+          {
+            "url": "https://arxiv.org/html/2502.11568v2/Hratio.png",
+            "caption": "The present-day Hubble-parameter ratio Q ≡ H 0 ULDM / H 0 Λ ​ CDM Q\\equiv H_{0}^{\\rm ULDM}/H_{0}^{\\Lambda{\\rm CDM}} as a function of m ~ \\tilde{m} for T osc = 0.1 ​ MeV T_{\\rm osc}=0.1~{\\rm MeV} (solid blue curve). The physical densities ω b = 0.022 \\omega_{b}=0.022 , ω ϕ = 0.119 \\omega_{\\phi}=0.119 and ω r = 4.2 × 10 − 5 \\omega_{r}=4.2\\times 10^{-5} are fixed at their fiducial values, while ω Λ \\omega_{\\Lambda} is determined at each mass by matching θ s = 0.0104112 \\theta_{s}=0.0104112 . The dashed orange curve shows R s = r s Λ ​ CDM / r s ULDM R_{s}=r_{s}^{\\Lambda{\\rm CDM}}/r_{s}^{\\rm ULDM} for comparison. The shaded region spans the 16th–84th percentiles from 5000 independent draws of ω b \\omega_{b} and ω ϕ \\omega_{\\phi} . The lower panel shows the deviation of this band from the fiducial Hubble-parameter ratio Q fid Q_{\\rm fid} on an enlarged scale. The band represents sensitivity to the input densities rather than an observational confidence interval. The calculation uses a background-only sudden-transition approximation with z ls = 1089 z_{\\rm ls}=1089 .",
+            "captionLatex": "The present-day Hubble-parameter ratio $Q\\equiv H_{0}^{\\rm ULDM}/H_{0}^{\\Lambda{\\rm CDM}}$ as a function of $\\tilde{m}$ for $T_{\\rm osc}=0.1~{\\rm MeV}$ (solid blue curve). The physical densities $\\omega_{b}=0.022$ , $\\omega_{\\phi}=0.119$ and $\\omega_{r}=4.2\\times 10^{-5}$ are fixed at their fiducial values, while $\\omega_{\\Lambda}$ is determined at each mass by matching $\\theta_{s}=0.0104112$ . The dashed orange curve shows $R_{s}=r_{s}^{\\Lambda{\\rm CDM}}/r_{s}^{\\rm ULDM}$ for comparison. The shaded region spans the 16th–84th percentiles from 5000 independent draws of $\\omega_{b}$ and $\\omega_{\\phi}$ . The lower panel shows the deviation of this band from the fiducial Hubble-parameter ratio $Q_{\\rm fid}$ on an enlarged scale. The band represents sensitivity to the input densities rather than an observational confidence interval. The calculation uses a background-only sudden-transition approximation with $z_{\\rm ls}=1089$ ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2502.11568v2/slowroll.png",
+        "thumbnailAlt": "A schematic of the potential V ⁡ ( ϕ ) V(\\phi) of the ULDM field oscillating in the potential is shown. ( ϕ o ​ s ​ c , ϕ m , ϕ e ​ q ) (\\phi_{osc},\\phi_{m},\\phi_{eq}) here represent the positive oscillation amplitudes (turning-point values) at the redshifts ( z o ​ s ​ c , z m , z e ​ q ) (z_{osc},",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2508.03823",
+        "title": "Scaling Relations for Dark Matter Halos Hosting Ultra-Faint Dwarf Galaxies",
+        "summary": "We consider the extraction of parameters of dark matter halos hosting ultra-faint dwarf galaxies, in the case where there are only ${\\cal O}(10)$ identified member stars with measured line-of-sight velocities. This scenario is likely to be increasingly common, as upcoming newly discovered dwarf galaxies in the Milky Way, by e.g. the Rubin Observatory, will likely (at least initially) have only a few identified members. Assuming an NFW dark matter profile, equilibrium modeling likely can only robustly extract one halo parameter ($\\rho_s r_s$), but the scale radius itself will typically be unconstrained. In these cases, the results obtainable from Jeans modeling can be well replicated by a simple scaling relation motivated by the half-light mass estimator. As a application, we examine the recently discovered stellar system Ursa Major III, which has been optimistically assessed to have the largest $J$-factor of any known object. We suggest that, because of the presence of outlier stars, the $J$-factor obtained from modeling of Ursa Major III is likely inflated, as it is inconsistent with the half-light mass estimator, while removal of the outliers will leave the $J$-factor unconstrained from below.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2508.03823",
+        "htmlUrl": "https://arxiv.org/html/2508.03823v2",
+        "authors": [
+          "Levi K. C. Fisher",
+          "Isabelle S. Goldstein",
+          "Jason Kumar",
+          "Louis E. Strigari"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "astro-ph.GA",
+          "hep-ph"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2508.03823v2/all_dSphs_rhos0rs_rhors_dist.png",
+            "caption": ": The ρ s / r s \\rho_{s}/r_{s} and ρ s ​ r s \\rho_{s}r_{s} posteriors for 9 dSphs (labeled). The contours, from darker to lighter, show the ( 0.5 , 1 , 1.5 , 2 ) ​ σ (0.5,1,1.5,2)\\sigma 2D-Gaussian-equivalent credible intervals.",
+            "captionLatex": ": The $\\rho_{s}/r_{s}$ and $\\rho_{s}r_{s}$ posteriors for 9 dSphs (labeled). The contours, from darker to lighter, show the $(0.5,1,1.5,2)\\sigma$ 2D-Gaussian-equivalent credible intervals."
+          },
+          {
+            "url": "https://arxiv.org/html/2508.03823v2/UMa3_combined.png",
+            "caption": ": The left panel shows ρ s / r s \\rho_{s}/r_{s} and ρ s ​ r s \\rho_{s}r_{s} posteriors for Ursa Major III. The right panel shows the histogram of log 10 ⁡ ( 4 ​ π ​ G N ​ k ​ ρ s ​ r s ​ r h / ( km / s ) 2 ) \\log_{10}(4\\pi G_{N}k\\rho_{s}r_{s}r_{h}/({\\rm km}/{\\rm s})^{2}) for Ursa Major III. The purple shaded region is the 90 % 90\\% containment region. Also shown is the mean value of σ ¯ l ​ o ​ s 2 / ( km / s ) 2 \\overline{\\sigma}_{los}^{2}/({\\rm km}/{\\rm s})^{2} (dashed black line) and uncertainties (yellow band) found in Ref. [ 10 ] . Both panels use all 11 member stars identified in Ref. [ 10 ] .",
+            "captionLatex": ": The left panel shows $\\rho_{s}/r_{s}$ and $\\rho_{s}r_{s}$ posteriors for Ursa Major III. The right panel shows the histogram of $\\log_{10}(4\\pi G_{N}k\\rho_{s}r_{s}r_{h}/({\\rm km}/{\\rm s})^{2})$ for Ursa Major III. The purple shaded region is the $90\\%$ containment region. Also shown is the mean value of $\\overline{\\sigma}_{los}^{2}/({\\rm km}/{\\rm s})^{2}$ (dashed black line) and uncertainties (yellow band) found in Ref. [ 10 ] . Both panels use all 11 member stars identified in Ref. [ 10 ] ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2508.03823v2/all_dSphs_rhos0rs_rhors_dist.png",
+        "thumbnailAlt": ": The ρ s / r s \\rho_{s}/r_{s} and ρ s ​ r s \\rho_{s}r_{s} posteriors for 9 dSphs (labeled). The contours, from darker to lighter, show the ( 0.5 , 1 , 1.5 , 2 ) ​ σ (0.5,1,1.5,2)\\sigma 2D-Gaussian-equivalent credible intervals.",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2601.14559",
+        "title": "Dark Energy Survey Year 6 Results: Cosmological Constraints from Galaxy Clustering and Weak Lensing",
+        "summary": "We present cosmology results combining galaxy clustering and weak gravitational lensing measured in the full six years (Y6) of observations by the Dark Energy Survey (DES) covering $\\sim$5000 deg$^2$. We perform a large-scale structure analysis using three two-point correlation functions (3$\\times$2pt): (i) cosmic shear from 140 million source galaxy shapes, (ii) galaxy clustering of 9 million lens galaxy positions, and (iii) galaxy-galaxy lensing from their cross-correlation. We model the data in flat $\\Lambda$CDM and $w$CDM cosmologies. The combined analysis yields $S_8\\equiv \\sigma_8 (\\Omega_{\\rm m}/0.3)^{0.5} = 0.789^{+0.012}_{-0.012}$ and matter density $\\Omega_{\\rm m} = 0.333^{+0.023}_{-0.028}$ in $\\Lambda$CDM (68\\% CL), where $\\sigma_8$ is the clustering amplitude. These constraints show a (full-space) parameter difference of 1.8$\\sigma$ from a combination of cosmic microwave background (CMB) primary anisotropy datasets from Planck 2018, ACT-DR6, and SPT-3G DR1. Projected only into $S_8$ the difference is $2.6\\sigma$. In $w$CDM the Y6 3$\\times$2pt results yield $S_8 = 0.782^{+0.021}_{-0.020}$, $\\Omega_{\\rm m} = 0.325^{+0.032}_{-0.035}$, and dark energy equation-of-state parameter $w = -1.12^{+0.26}_{-0.20}$. For the first time, we combine all DES dark-energy probes: 3$\\times$2pt, SNe Ia, BAO and Clusters. In $\\Lambda$CDM this combination yields a $2.8\\sigma$ parameter difference from the CMB. When combining DES 3$\\times$2pt with other low-redshift datasets (DESI DR2 BAO, DES SNe Ia, SPT clusters), we find a 2.3$\\sigma$ parameter difference with CMB. A joint fit of Y6 3$\\times$2pt, CMB, and those low-redshift datasets produces the tightest $\\Lambda$CDM constraints to date: $S_8 = 0.806^{+0.006}_{-0.007}$, $\\Omega_{\\rm m} = 0.302^{+0.003}_{-0.003}$, $h = 0.683^{+0.003}_{-0.002}$, and $\\sum m_\\nu < 0.14$ eV (95\\% CL). In $w$CDM, this combination yields $w = -0.981^{+0.021}_{-0.022}$.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2601.14559",
+        "htmlUrl": "https://arxiv.org/html/2601.14559v3",
+        "authors": [
+          "DES Collaboration",
+          "T. M. C. Abbott",
+          "M. Adamow",
+          "M. Aguena",
+          "A. Alarcon",
+          "S. S. Allam",
+          "O. Alves",
+          "A. Amon",
+          "D. Anbajagane",
+          "F. Andrade-Oliveira",
+          "S. Avila",
+          "D. Bacon",
+          "E. J. Baxter",
+          "J. Beas-Gonzalez",
+          "K. Bechtol",
+          "M. R. Becker",
+          "G. M. Bernstein",
+          "E. Bertin",
+          "J. Blazek",
+          "S. Bocquet",
+          "D. Brooks",
+          "D. Brout",
+          "H. Camacho",
+          "G. Camacho-Ciurana",
+          "R. Camilleri",
+          "G. Campailla",
+          "A. Campos",
+          "A. Carnero Rosell",
+          "M. Carrasco Kind",
+          "J. Carretero",
+          "P. Carrilho",
+          "F. J. Castander",
+          "R. Cawthon",
+          "C. Chang",
+          "A. Choi",
+          "J. M. Coloma-Nadal",
+          "M. Costanzi",
+          "M. Crocce",
+          "W. d'Assignies",
+          "L. N. da Costa",
+          "M. E. da Silva Pereira",
+          "T. M. Davis",
+          "J. De Vicente",
+          "J. DeRose",
+          "H. T. Diehl",
+          "S. Dodelson",
+          "P. Doel",
+          "C. Doux",
+          "A. Drlica-Wagner",
+          "T. F. Eifler",
+          "J. Elvin-Poole",
+          "J. Estrada",
+          "S. Everett",
+          "A. E. Evrard",
+          "J. Fang",
+          "A. Farahi",
+          "A. Ferté",
+          "B. Flaugher",
+          "P. Fosalba",
+          "J. Frieman",
+          "J. García-Bellido",
+          "M. Gatti",
+          "E. Gaztanaga",
+          "G. Giannini",
+          "P. Giles",
+          "K. Glazebrook",
+          "M. Gorsuch",
+          "D. Gruen",
+          "R. A. Gruendl",
+          "J. Gschwend",
+          "G. Gutierrez",
+          "I. Harrison",
+          "W. G. Hartley",
+          "E. Henning",
+          "K. Herner",
+          "S. R. Hinton",
+          "D. L. Hollowood",
+          "K. Honscheid",
+          "E. M. Huff",
+          "D. Huterer",
+          "B. Jain",
+          "D. J. James",
+          "M. Jarvis",
+          "N. Jeffrey",
+          "T. Jeltema",
+          "T. Kacprzak",
+          "S. Kent",
+          "A. Kovacs",
+          "E. Krause",
+          "R. Kron",
+          "K. Kuehn",
+          "O. Lahav",
+          "S. Lee",
+          "E. Legnani",
+          "C. Lidman",
+          "H. Lin",
+          "N. MacCrann",
+          "M. Manera",
+          "T. Manning",
+          "J. L. Marshall"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2601.14559v3/des_footprint_3x2_v9.png",
+            "caption": "DES footprint in equatorial coordinates. The ∼ 5000 ​ deg 2 \\sim 5000\\deg^{2} wide-field survey footprint is shown as a black outline, with overplotted convergence map using the Wiener filter reconstruction method [ 79 ] . The white circles, scaled to approximately one full DECam field-of-view, show the supernovae field locations. Other current and planned surveys are shown as well. The South Pole Telescope footprint includes the SPTpol and SPT-SZ surveys described in [ 11 ] .",
+            "captionLatex": "DES footprint in equatorial coordinates. The $\\sim 5000\\deg^{2}$ wide-field survey footprint is shown as a black outline, with overplotted convergence map using the Wiener filter reconstruction method [ 79 ] . The white circles, scaled to approximately one full DECam field-of-view, show the supernovae field locations. Other current and planned surveys are shown as well. The South Pole Telescope footprint includes the SPTpol and SPT-SZ surveys described in [ 11 ] ."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.14559v3/plot_nuisance_3x2pt.png",
+            "caption": "Cosmological and nuisance parameter posteriors for the 3 × 2 3\\times 2 pt linear galaxy bias Λ \\Lambda CDM case. We show only a subset of ten nuisance parameters out of the full set of 50. The star symbols correspond to the MAP values from minimizer runs. We also display the gaussian priors in the case of calibrated parameters. All other parameters have uninformative flat priors.",
+            "captionLatex": "Cosmological and nuisance parameter posteriors for the $3\\times 2$ pt linear galaxy bias $\\Lambda$ CDM case. We show only a subset of ten nuisance parameters out of the full set of 50. The star symbols correspond to the MAP values from minimizer runs. We also display the gaussian priors in the case of calibrated parameters. All other parameters have uninformative flat priors."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2601.14559v3/des_footprint_3x2_v9.png",
+        "thumbnailAlt": "DES footprint in equatorial coordinates. The ∼ 5000 ​ deg 2 \\sim 5000\\deg^{2} wide-field survey footprint is shown as a black outline, with overplotted convergence map using the Wiener filter reconstruction method [ 79 ] . The white circles, scaled to approximately one full DECam field-of-view, show",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2602.16651",
+        "title": "Interpreting the HI 21-cm cosmology maps through Largest Cluster Statistics III: Impact of the lightcone effect",
+        "summary": "The redshifted 21-cm signal emitted by neutral Hydrogen (HI) is a promising probe to understand the evolution of the topology of ionized regions during the Epoch of Reionization (EoR). The topology of ionized regions allows us to infer the nature and properties of ionizing sources, i.e., early galaxies and AGNs. Traditional Fourier statistics, such as the power spectrum, help us quantify the strength of fluctuations in this field at different length scales but do not preserve its phase information. Analyzing the 21-cm brightness temperature field in the image domain retains its non-Gaussian characteristics and morphological information. One such approach is to track the coalescence of multiple ionized regions to form one contiguous ionized region spanning the universe. This is referred to as percolation, and its onset is quantified by a sharp rise in the value of the Largest Cluster Statistic (LCS) approaching unity. In this work, we carry out a percolation analysis of 21-cm brightness temperature maps by studying the redshift evolution of the LCS along a lightcone to distinguish between several simulated reionization scenarios. We estimate the LCS of subvolumes of different sizes in mock SKA-Low 21-cm lightcone maps and study their redshift evolution for different reionization scenarios using a moving volume approach. We find that the optimal size of the moving volume that reproduces the percolation transition from coeval maps varies across reionization scenarios and the evolution of LCS remains distinct across the reionization scenarios for a fixed moving volume bandwidth. The inferred percolation transition strongly depends on the synthesized beam width and the percentage gain calibration error, and is tractable for an optimistic SKA-Low observational setup.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2602.16651",
+        "htmlUrl": "https://arxiv.org/html/2602.16651v2",
+        "authors": [
+          "Hemanth Potluri",
+          "Manas Mohit Dosibhatla",
+          "Samit Kumar Pal",
+          "Leon Noble",
+          "Chandra Shekhar Murmu",
+          "Suman Majumdar",
+          "Saswata Dasgupta",
+          "Satadru Bag",
+          "Abhirup Datta"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2602.16651v2/lightcones_real_space.png",
+            "caption": "Left : Corresponding slices cut along the line of sight of 21-cm brightness temperature lightcone maps for the fiducial, clumping, PL3, UIB, and UV+SXR+UIB reionization scenarios. The horizontal axis is the line of sight with reionization progressing from right to left. The observed frequencies ν obs \\nu_{\\rm obs} correspond to the frequencies at which the 21-cm emission from the redshift of the slice can be observed. Right : Corresponding slices of the same lightcone maps cut perpendicular to the line of sight at z = 7.91 z=7.91 .",
+            "captionLatex": "Left : Corresponding slices cut along the line of sight of 21-cm brightness temperature lightcone maps for the fiducial, clumping, PL3, UIB, and UV+SXR+UIB reionization scenarios. The horizontal axis is the line of sight with reionization progressing from right to left. The observed frequencies $\\nu_{\\rm obs}$ correspond to the frequencies at which the 21-cm emission from the redshift of the slice can be observed. Right : Corresponding slices of the same lightcone maps cut perpendicular to the line of sight at $z=7.91$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2602.16651v2/Compare_observed_hi_signal.png",
+            "caption": "Slices of the observed 21-cm lightcone maps at 165.87 MHz. From left to right in the top panel: the lightcone map without instrumental effects, the map including synthesized beam effect but without gain calibration errors. From left to right in the bottom panel: the map including synthesized beam effect with ∼ 0.02 % \\sim 0.02\\% gain calibration error and the map including synthesized beam effect with ∼ 0.2 % \\sim 0.2\\% gain calibration error.",
+            "captionLatex": "Slices of the observed 21-cm lightcone maps at 165.87 MHz. From left to right in the top panel: the lightcone map without instrumental effects, the map including synthesized beam effect but without gain calibration errors. From left to right in the bottom panel: the map including synthesized beam effect with $\\sim 0.02\\%$ gain calibration error and the map including synthesized beam effect with $\\sim 0.2\\%$ gain calibration error."
+          },
+          {
+            "url": "https://arxiv.org/html/2602.16651v2/pl3_slices.png",
+            "caption": "Slices of the PL( n = 3 n=3 ) model lightcone perpendicular to the line of sight at ν obs = 145 \\nu_{\\rm obs}=145 MHz, 150 150 MHz, and 155 155 MHz.",
+            "captionLatex": "Slices of the PL( $n=3$ ) model lightcone perpendicular to the line of sight at $\\nu_{\\rm obs}=145$ MHz, $150$ MHz, and $155$ MHz."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2602.16651v2/lightcones_real_space.png",
+        "thumbnailAlt": "Left : Corresponding slices cut along the line of sight of 21-cm brightness temperature lightcone maps for the fiducial, clumping, PL3, UIB, and UV+SXR+UIB reionization scenarios. The horizontal axis is the line of sight with reionization progressing from right to left. The observed frequencies ν ob",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2607.14525",
+        "title": "Probabilistic redshift estimation of undetected galaxies from multi-band background light maps",
+        "summary": "Accurate knowledge of the redshift distributions of undetected galaxy populations is essential for extracting the cosmological information encoded in the cosmic optical background. We present the first framework for estimating these distributions directly from multi-band maps of unresolved background light, using conditional normalising flows trained on realistic image simulations. For imaging quality comparable to that expected from the Euclid survey and the Vera C. Rubin Observatory Legacy Survey of Space and Time (LSST), our model achieves sub-per cent accuracy in both the mean and standard deviation of the flux-weighted redshift distributions when the training and target samples are statistically well matched. Furthermore, the network proves highly resilient to incomplete photometric coverage when combined with tailored data imputation strategies. To address the challenge of statistical mismatches between simulations and real observations, we propose incorporating observational quantities into the target variables, providing a built-in diagnostic to assess model reliability and uncertainty from the predictions themselves. We also demonstrate the feasibility of map-based tomographic analyses, showing that the model retains sufficient pixel-level detail to recover redshift distributions for tomographically defined subsamples with near sub-per cent accuracy across all bins.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2607.14525",
+        "htmlUrl": "https://arxiv.org/html/2607.14525v2",
+        "authors": [
+          "Shun-Sheng Li",
+          "Hendrik Hildebrandt",
+          "Ludovic Van Waerbeke"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "astro-ph.IM"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2607.14525v2/figures/B_fits_imags.png",
+            "caption": "Comparison of simulated Euclid VIS images before (left) and after (middle) the removal of detectable galaxies. For clearer visualisation of the clustering of undetected galaxies, the right panel shows a noise-free image of the undetected galaxies alone. The plotted region spans 0.69 arcmin 2 , containing 154 galaxies in total, of which 119 remain undetected. Within this region, the brightest galaxy has a VIS input magnitude of 21.0 mag, compared with 25.2 mag for the brightest undetected galaxy."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.14525v2/figures/A_input_mag_distri.png",
+            "caption": "Comparison of the Euclid VIS magnitude distributions of the whole sample (black), the identified detectable sample (blue), and the undetected sample (red). The overall decline in source counts beyond a magnitude of ∼ 27 {\\sim}27 reflects the intrinsic mass resolution limits of the Flagship simulation.",
+            "captionLatex": "Comparison of the Euclid VIS magnitude distributions of the whole sample (black), the identified detectable sample (blue), and the undetected sample (red). The overall decline in source counts beyond a magnitude of ${\\sim}27$ reflects the intrinsic mass resolution limits of the Flagship simulation."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.14525v2/figures/C_healpix_map_cata22916_magcut29_VIS.png",
+            "caption": "Comparison of HEALPix maps constructed from the simulated Euclid VIS images, without (top) and with (middle) undetected galaxies. The prominent tile-level variations arise from changing background noise levels across the footprint, whilst the finer, smaller-scale fluctuations reveal the underlying large-scale structure traced by the undetected galaxies. The bottom panel shows the same map with a uniform noise level across all tiles, in which the large-scale structure is more clearly visible. This uniform-noise case is presented here solely for visual comparison and is not used in model training."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.14525v2/figures/C_healpix_hist_cata22916_undetected2_magcut24.png",
+            "caption": "Distributions of pixel values across all ten bands of the HEALPix maps in the training sample. A general trend towards higher overall surface brightness and broader distributions is observed in the redder bands."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.14525v2/figures/D_fiducial_whole.png",
+            "caption": "Comparison of the model-predicted target distributions (blue lines) with the underlying truth (shaded histograms) for the fiducial evaluation sample. The four panels, in clockwise order, correspond to the redshift distribution, VIS flux distribution, VIS flux-weighted redshift distribution, and VIS background noise RMS distribution. The quoted summary statistics are also presented in Table 2 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.14525v2/figures/F_incomplete.png",
+            "caption": "Comparison of VIS flux-weighted redshift distributions between model predictions (lines) and the underlying truth (shaded histogram) for different levels of missing data. Top: Distributions. Bottom: Fractional residuals, defined as ( n pred − n true ) / n true (n_{\\mathrm{pred}}-n_{\\mathrm{true}})/n_{\\mathrm{true}} . Different colours correspond to different levels of missing data, with dashed lines indicating raw results without imputation and solid lines indicating results after applying the imputation strategies detailed in Section 4.1 .",
+            "captionLatex": "Comparison of VIS flux-weighted redshift distributions between model predictions (lines) and the underlying truth (shaded histogram) for different levels of missing data. Top: Distributions. Bottom: Fractional residuals, defined as $(n_{\\mathrm{pred}}-n_{\\mathrm{true}})/n_{\\mathrm{true}}$ . Different colours correspond to different levels of missing data, with dashed lines indicating raw results without imputation and solid lines indicating results after applying the imputation strategies detailed in Section 4.1 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.14525v2/figures/G_shift_noise.png",
+            "caption": "Comparison of the model-predicted target distributions (lines) with the underlying truth (shaded histograms) for the out-of-distribution test samples. The four panels, in clockwise order, correspond to the redshift distribution, VIS flux distribution, VIS flux-weighted redshift distribution, and VIS background noise RMS distribution. Different colours correspond to different levels of shift in the imaging noise background, as detailed in Section 2 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.14525v2/figures/E_fiducial_tomo.png",
+            "caption": "Comparison of VIS flux-weighted redshift distributions between model predictions (lines) and the underlying truth (shaded histograms) for tomographic subsamples defined by pixel-level redshift binning. Each panel corresponds to a different tomographic bin, with the pixel mean redshift range indicated in the panel title."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2607.14525v2/figures/B_fits_imags.png",
+        "thumbnailAlt": "Comparison of simulated Euclid VIS images before (left) and after (middle) the removal of detectable galaxies. For clearer visualisation of the clustering of undetected galaxies, the right panel shows a noise-free image of the undetected galaxies alone. The plotted region spans 0.69 arcmin 2 , conta",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2607.21244",
+        "title": "Shape wall: Constraints on late-time solutions to the Hubble tension from the dimensionless expansion rate",
+        "summary": "The standard \"no-go theorem\" against late-time solutions to the Hubble tension is essentially a normalization wall, since Baryon Acoustic Oscillation (BAO) measurements constrain the product $H_0r_d$, with $r_d$ the sound horizon at baryon drag. However, late-time solutions (which keep $r_d$ fixed) are tightly constrained not only by the BAO normalization $H_0r_d$, but also by the shape of the expansion history, i.e. the dimensionless expansion rate $E(z) \\equiv H(z)/H_0$. We show that, if $r_d$ and the acoustic angular scale $\\theta_s$ are fixed, an increase in $H_0$ needs to be matched by an equal fractional increase in the dimensionless distance integral $I \\equiv \\int dz/E(z)$: $\\delta H_0/H_0 \\simeq \\delta I/I$. We use this to quantify the \"shape wall\" set by relative distance constraints on $E(z)$, which we reconstruct nonparametrically, using Gaussian Processes and the latest unanchored Type Ia Supernovae (SNeIa) and BAO data. In our most conservative analysis using PantheonPlus SNeIa and DESI DR2 BAO data, we find a maximum fractional increase in $H_0$ of $\\lesssim 2\\%$, falling well short of the $\\gtrsim 8\\%$ required to solve the tension. This shape wall holds even in the presence of early-time new physics, and limits the maximum increase in $H_0$ which can be contributed by late-time modifications to $E(z)$ at fixed $\\theta_s$. Therefore, late-time modifications, whether invoked alone or alongside early-time new physics, face not only the well-known normalization wall, but also a stringent percent-level shape wall.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2607.21244",
+        "htmlUrl": "https://arxiv.org/html/2607.21244v3",
+        "authors": [
+          "Miguel A. Sabogal",
+          "Luis A. Escamilla",
+          "Davide Pedrotti",
+          "Edvig Selimaj",
+          "Sunny Vagnozzi"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "gr-qc",
+          "hep-ph",
+          "hep-th"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2607.21244v3/shape_wall_table.png",
+            "caption": "Visual representation of the shape wall. We show the geometrical conditions required to shift the Hubble constant H 0 H_{0} , when fixing the acoustic angular scale θ s \\theta_{s} [see Eq. ( 7 ), with δ ​ θ s / θ s ≈ 0 \\delta\\theta_{s}/\\theta_{s}\\approx 0 ], with green (purple) indicating larger (smaller) values of H 0 H_{0} , and the black dot indicating the fiducial Λ \\Lambda CDM model. Purely late-time and purely early-time modifications corresponding to moving along the vertical and horizontal directions respectively. The solid (dash-dotted) diagonal corresponds to the value of H 0 H_{0} inferred from Planck + ACT + SPT data within Λ \\Lambda CDM (the Local Distance Network), with the region in between the two being the one where the Hubble tension is alleviated. On the right we show the posterior distributions for δ ​ I / I fid \\delta I/I^{\\text{fid}} within two benchmark scenarios to be discussed in Sec. V (see Tab. 2 ): a more conservative scenario (black) and a maximally permissive scenario (gray), with dashed lines indicating the respective 95% upper limits reported in Tab. 2 . This figure is based on a related figure originally presented by William Giarè, whom we thank for sharing his plotting code, publicly available at https://github.com/williamgiare/wgcosmo/blob/main/plots/Hubble_Tension/Mixed_Solutions.ipynb , which we have adapted.",
+            "captionLatex": "Visual representation of the shape wall. We show the geometrical conditions required to shift the Hubble constant $H_{0}$ , when fixing the acoustic angular scale $\\theta_{s}$ [see Eq. ( 7 ), with $\\delta\\theta_{s}/\\theta_{s}\\approx 0$ ], with green (purple) indicating larger (smaller) values of $H_{0}$ , and the black dot indicating the fiducial $\\Lambda$ CDM model. Purely late-time and purely early-time modifications corresponding to moving along the vertical and horizontal directions respectively. The solid (dash-dotted) diagonal corresponds to the value of $H_{0}$ inferred from Planck + ACT + SPT data within $\\Lambda$ CDM (the Local Distance Network), with the region in between the two being the one where the Hubble tension is alleviated. On the right we show the posterior distributions for $\\delta I/I^{\\text{fid}}$ within two benchmark scenarios to be discussed in Sec. V (see Tab. 2 ): a more conservative scenario (black) and a maximally permissive scenario (gray), with dashed lines indicating the respective 95% upper limits reported in Tab. 2 . This figure is based on a related figure originally presented by William Giarè, whom we thank for sharing his plotting code, publicly available at https://github.com/williamgiare/wgcosmo/blob/main/plots/Hubble_Tension/Mixed_Solutions.ipynb , which we have adapted."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.21244v3/deltaI_full_Om_test_late_times.png",
+            "caption": "Posterior of δ ​ I < / I < fid \\delta I_{<}/I_{<}^{\\rm fid} using the PantheonPlus + DESI dataset combination for different fiducial values of Ω m fid \\Omega_{\\rm m}^{\\rm fid} displayed in the color bar. The dashed line marks δ ​ I < = 0 \\delta I_{<}=0 , i.e. I < = I < fid ​ ( Ω m fid ) I_{<}=I_{<}^{\\rm fid}\\left(\\Omega_{\\rm m}^{\\rm fid}\\right) . The labels quantify the shift of the mean in percent, with respect to the baseline case displayed in white, Ω m fid = 0.31 \\Omega_{\\rm m}^{\\rm fid}=0.31 .",
+            "captionLatex": "Posterior of $\\delta I_{ PantheonPlus + DESI dataset combination for different fiducial values of $\\Omega_{\\rm m}^{\\rm fid}$ displayed in the color bar. The dashed line marks $\\delta I_{<}=0$ , i.e. $I_{<}=I_{<}^{\\rm fid}\\left(\\Omega_{\\rm m}^{\\rm fid}\\right)$ . The labels quantify the shift of the mean in percent, with respect to the baseline case displayed in white, $\\Omega_{\\rm m}^{\\rm fid}=0.31$ ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2607.21244v3/shape_wall_table.png",
+        "thumbnailAlt": "Visual representation of the shape wall. We show the geometrical conditions required to shift the Hubble constant H 0 H_{0} , when fixing the acoustic angular scale θ s \\theta_{s} [see Eq. ( 7 ), with δ ​ θ s / θ s ≈ 0 \\delta\\theta_{s}/\\theta_{s}\\approx 0 ], with green (purple) indicating larger (sm",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2608.13346",
+        "title": "Automatic detection of fast oscillations of dark matter scalar field and updated cosmological constraints on QCDM",
+        "summary": "It is well known that a scalar field dark matter with a quadratic potential undergoes fast oscillations when the time period represented by the mass scale in the Klein-Gordon equation becomes much smaller than that set by the Hubble parameter. This makes a solution to the equation numerically intractable. Many works in the literature have addressed the problem by either switching between solving the Klein-Gordon equation in the well-behaved regime to solving the fluid equations at the onset of oscillations, or by introducing a new set of variables that can absorb these oscillations. Despite being successful, these techniques rely on an estimate of when the oscillations start. For large scale scans of a model's parameter space, this can become cumbersome. Furthermore, the techniques have been used mainly for non-interacting dark matter models. In this work, we introduce an averaging technique with an automatic detection of the onset of oscillations, capable of capturing the non-interacting as well as the interacting dark matter scenarios. The technique, implemented in \\texttt{CLASS}, is tested on the QCDM model and shows excellent detection and averaging abilities. We also update the cosmological constraints on the model using the most recent public data.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2608.13346",
+        "htmlUrl": "https://arxiv.org/html/2608.13346v2",
+        "authors": [
+          "Amin Aboubrahim",
+          "Pran Nath"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2608.13346v2/triangle_plot_cmb.png",
+            "caption": ": Triangle plot showing the 2D joint and 1D marginalized posteriors of a number cosmological parameters of QCDM for the following data set combinations: CMB (red contours), CMB+PP+DESI (blue contours) and CMB+PPS+DESI (green contours)."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2608.13346v2/triangle_plot_cmb.png",
+        "thumbnailAlt": ": Triangle plot showing the 2D joint and 1D marginalized posteriors of a number cosmological parameters of QCDM for the following data set combinations: CMB (red contours), CMB+PP+DESI (blue contours) and CMB+PPS+DESI (green contours).",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2508.18448",
+        "title": "Imprints of screened dark energy on nonlocal quantum correlations",
+        "summary": "We investigate how screening mechanisms, reconciling light scalar fields driving cosmic acceleration with local fifth force constraints, can be probed via their impact on nonlocal quantum correlations between entangled spin pairs, whose evolution on a curved background is affected by General Relativity (GR) and screened modified gravity effects. We consider a gedankenexperiment featuring a pair of massive, spin-$1/2$ particles orbiting the Earth, evaluating their nonlocal correlations through spin observables associated to the Clauser-Horne-Shimony-Holt (CHSH) inequality. Using a general formalism developed earlier for curved space-time spin evolution, we compute the effects of screening on the CHSH inequality, finding its degree of violation to be suppressed relative to the flat space-time case. Applying this formalism to the chameleon, symmetron, and dilaton mechanisms, we identify currently unconstrained regions of parameter space where the screening contribution is comparable to that of GR. While detecting these effects will be challenging, our work provides a proof-of-principle for testing screened dark energy through quantum nonlocality.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2508.18448",
+        "htmlUrl": "https://arxiv.org/html/2508.18448v5",
+        "authors": [
+          "Fabiano Feleppa",
+          "Gaetano Lambiase",
+          "Sunny Vagnozzi"
+        ],
+        "categories": [
+          "gr-qc",
+          "astro-ph.CO",
+          "hep-ph",
+          "quant-ph"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2511.08448",
+        "title": "Bounds on screened dark energy from near-Earth space-based measurements",
+        "summary": "We test screened dark energy with near-Earth, space-based measurements. In a post-Newtonian framework, we compute leading corrections to geodetic precession (Gravity Probe B), LAGEOS-2 pericenter advance, and the Sagnac delay in a prospective orbital configuration, yielding bounds on chameleon, symmetron, and dilaton models. LAGEOS-2 sets the strongest Earth-orbit limits on symmetron and dilaton, while a Sagnac setup at the projected sensitivity of state-of-the-art space clocks gives the tightest chameleon constraint. These results show that low-density, space-based experiments sensitively probe screened dark energy and exclude previously allowed parameter space. Notably, at an assumed delay precision of $\\mathcal{O}\\big(10^{-19}\\big)$, a Sagnac test would exclude the entire chameleon parameter space considered.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2511.08448",
+        "htmlUrl": null,
+        "authors": [
+          "Fabiano Feleppa",
+          "Welmoed Marit de Graaf",
+          "Philippe Brax",
+          "Gaetano Lambiase"
+        ],
+        "categories": [
+          "gr-qc",
+          "astro-ph.CO",
+          "hep-ph"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2601.22644",
+        "title": "Nonlocal Corrections to Scalar Field Effective Action in de Sitter spacetime",
+        "summary": "We investigate the one-loop effective action for a test scalar field in a general Friedmann-Lemaître-Robertson-Walker (FLRW) background, specifically focusing on quantum corrections up to the second order in the interaction strength. By employing the Schwinger-Keldysh formalism, we derive the equation of motion for the field expectation value, which incorporates not only the standard local radiative corrections but also novel nonlocal features: a memory term and a stochastic noise term. We identify all ultraviolet divergent structures within these nonlocal terms and provide a consistent renormalization procedure. To analyze the physical impact of these terms, we apply a local approximation under the assumption of slowly-varying fields, by which the memory term acts as a negative contribution to the drift coefficient. As a concrete application, we consider a massive $\\phi^4$ theory and show that these one-loop corrections lead to a suppression of the field variance in the infrared regime compared to the tree-level results.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2601.22644",
+        "htmlUrl": "https://arxiv.org/html/2601.22644v2",
+        "authors": [
+          "Will Cerne",
+          "Teruaki Suyama"
+        ],
+        "categories": [
+          "gr-qc",
+          "astro-ph.CO",
+          "hep-th"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2601.22644v2/peq_overlay_m2_0.200_lam_0.1.png",
+            "caption": "A comparison of the equilibrium probability distribution for three cases: tree level, the first order correction, and the full non-local corrections. Φ \\Phi is given in units of H H .",
+            "captionLatex": "A comparison of the equilibrium probability distribution for three cases: tree level, the first order correction, and the full non-local corrections. $\\Phi$ is given in units of $H$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.22644v2/phi2_relative_difference_vs_mass.png",
+            "caption": "The relative difference of the variance from the tree level result as a function of m 2 H 2 \\frac{m^{2}}{H^{2}} for three different values of the coupling constant λ \\lambda .",
+            "captionLatex": "The relative difference of the variance from the tree level result as a function of $\\frac{m^{2}}{H^{2}}$ for three different values of the coupling constant $\\lambda$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2601.22644v2/phi2_vs_lambda_twopanel.png",
+            "caption": "Expectation value ⟨ Φ 2 ⟩ H 2 \\frac{\\langle\\Phi^{2}\\rangle}{H^{2}} as a function of λ \\lambda . Both panels show first-order and non-local corrections.",
+            "captionLatex": "Expectation value $\\frac{\\langle\\Phi^{2}\\rangle}{H^{2}}$ as a function of $\\lambda$ . Both panels show first-order and non-local corrections."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2601.22644v2/peq_overlay_m2_0.200_lam_0.1.png",
+        "thumbnailAlt": "A comparison of the equilibrium probability distribution for three cases: tree level, the first order correction, and the full non-local corrections. Φ \\Phi is given in units of H H .",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2602.23915",
+        "title": "Impact of non-standard neutrino-electron interactions on Big Bang Nucleosynthesis",
+        "summary": "Neutrino non-standard interactions (NSI) with electrons, predicted in many extended theoretical models of particle physics, are known to alter the picture of neutrino decoupling from the cosmic plasma. We update previous analyses of neutrino decoupling in the presence of NSI with electrons, extending the parameter space and assessing their impact on the primordial light-element abundances produced during Big Bang Nucleosynthesis (BBN). We show that tracking the NSI-induced modifications of the neutrino distributions is necessary to accurately predict the helium-4 abundance, which cannot be derived from a pure $N_{\\rm eff}$-driven change. BBN therefore provides additional observables that are complementary to $N_{\\rm eff}$. We then derive cosmological constraints on non-universal and flavour-changing NSI parameters, using different dataset combinations, and compare them with bounds from terrestrial experiments. We find that the cosmological limits are significantly less stringent than the terrestrial ones, but they provide an independent probe of neutrino interactions in the early universe.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2602.23915",
+        "htmlUrl": "https://arxiv.org/html/2602.23915v4",
+        "authors": [
+          "Julien Froustey",
+          "Stefano Gariazzo",
+          "Jaume Moncho",
+          "Sergio Pastor",
+          "Ofelia Pisanti"
+        ],
+        "categories": [
+          "hep-ph",
+          "astro-ph.CO"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2605.13738",
+        "title": "Inpainting to search for premerger massive black hole binaries in realistic LISA datasets",
+        "summary": "A key science target of the Laser Interferometer Space Antenna (LISA) is to carry out multi-messenger observations of massive black hole binaries, observing the merger simultaneously in gravitational waves and with electromagnetic observatories. Identifying that a merger is happening and providing an updating estimate of the sky location in the hours, days and weeks before the merger is critical to enable electromagnetic observations of the merger event. In this work we demonstrate and compare two methods for premerger identification of massive black hole binaries; a zero-latency filter approach and, for the first time, an approach using an ``inpainting'' technique. We apply these methods to the LISA Data Challenge dataset 2a--Sangria-HM--and demonstrate the successful recovery of the 14 signals in the dataset that we expected to be identifiable at least half a day before merger. We show that the inpainting method can identify premerger signals even when gaps are present in the data, demonstrating the recovery of a signal even when 3 day-long data gaps are added to the 14 days preceding merger. Finally, we explore the challenge of overlapping signals, using a region of overlapping signals in the Sangria-HM dataset, all of which merge within a 10-day window, and show how removing signals that have been confidently identified from the data allows us to identify quieter signals in the same period.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2605.13738",
+        "htmlUrl": "https://arxiv.org/html/2605.13738v3",
+        "authors": [
+          "Gareth Cabourn Davies",
+          "Ian Harry"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.CO",
+          "gr-qc",
+          "hep-ex"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2605.13738v3/figure_1_psds_with_sources.png",
+            "caption": ": Comparison of power spectral densities used in this work. The power spectral density is estimated from the Sangria-HM dataset using the Welch method as described in [ 1 ] . We use the full Sangria dataset, median averaging across segments, applying Hann windowing, and using a segment duration of 18.25 hours and a stride of 9.125 days. The model shown is the noise model used to produce the Sangria-HM dataset, and is shown with and without unresolvable Galactic binary sources. We show the power spectral density model and estimate smoothed using the method described in Section II.2 . We also show the characteristic strain for a representative MBHB signal from Sangria-HM (Signal 2), which shows that at 14, 7 and 4 days-before-merger, the MBHB does not overlap the Galactic binary confusion noise in frequency, but when the signal reaches around one day before merger (blue line), the Galactic binary confusion noise starts to overlap with the signal."
+          },
+          {
+            "url": "https://arxiv.org/html/2605.13738v3/figure_2_smoothing_60mHz.png",
+            "caption": ": The method used to smooth over the dip in the power-spectral density at 60 mHz. We draw a straight line between the two peaks either side of this point, and smoothly transition between the estimated power-spectral density and the straight line using a Hann window. This ensures that there are no immediate jumps in the power-spectral density to cause spectral leakage. This is applied to both the estimated and modeled power-spectral density used in later analysis."
+          },
+          {
+            "url": "https://arxiv.org/html/2605.13738v3/figure_5_signal_10_removed.png",
+            "caption": ": Signal 10 results, showing results with and without the secondary peaks, for the removed results, the signal is removed from the data two hours before merger. Each circle and cross correspond to a different data end time as the search is performed with the data end time stepping forward in hourly steps. We also see peaks in the data before merger, these are the post-signal peaks for Signal 9, which is 21 days before Signal 10. Equivalent plots for all signals are included in the data release."
+          },
+          {
+            "url": "https://arxiv.org/html/2605.13738v3/figure_6_zerolatency_result.png",
+            "caption": ": Search results for the zero-latency filter search. Each circle corresponds to a different data end time as the search is performed with the data end time stepping forward in hourly steps."
+          },
+          {
+            "url": "https://arxiv.org/html/2605.13738v3/figure_7_forecast_inpainting_estimate.png",
+            "caption": ": Signal-to-noise ratio (SNR) as a function of the forecast merger time and the time before merger. Each circle corresponds to a different data end time as the search is performed with the data end time stepping forward in hourly steps. Produced using the inpainting technique to analyze the Sangria-HM dataset. Signals have been removed from the data once they reach 2 hours before merger."
+          },
+          {
+            "url": "https://arxiv.org/html/2605.13738v3/figure_8_signal_0_timeline.png",
+            "caption": ": Timeline of results for Signal Zero, demonstrating the inclusion of gaps in the data in the days before merger. Timeline plots for all signals are included in the data release."
+          },
+          {
+            "url": "https://arxiv.org/html/2605.13738v3/figure_9a_focused_region_no_removal.png",
+            "caption": "(a) No removal of signals"
+          },
+          {
+            "url": "https://arxiv.org/html/2605.13738v3/figure_9b_focused_region_2hr_removal.png",
+            "caption": "(b) Signals are removed 2 hours before merger"
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2605.13738v3/figure_1_psds_with_sources.png",
+        "thumbnailAlt": ": Comparison of power spectral densities used in this work. The power spectral density is estimated from the Sangria-HM dataset using the Welch method as described in [ 1 ] . We use the full Sangria dataset, median averaging across segments, applying Hann windowing, and using a segment duration of 1",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2605.18944",
+        "title": "The Majoron Cosmological Window: Dark Matter and Thermal Leptogenesis",
+        "summary": "The majoron is the Nambu-Goldstone boson associated with the spontaneous breaking of a global $B-L$ symmetry. Remarkably, the minimal majoron framework can simultaneously address three key empirical indications of physics beyond the Standard Model: neutrino masses, the matter-antimatter asymmetry, and dark matter. In this work, we identify the cosmologically viable region in which majoron dark matter and high-scale thermal leptogenesis can be realised simultaneously. We show that successful leptogenesis plays a central role in making this scenario predictive: by constraining the right-handed-neutrino mass scale, it determines the irreducible freeze-in contribution to the majoron abundance and fixes the size of the couplings relevant for visible dark matter decays. Combining the irreducible dark matter production mechanisms with warm dark matter limits and indirect searches for decaying dark matter, we map the resulting majoron cosmological window and show that future X- and gamma-ray telescopes can probe part of the surviving parameter space.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2605.18944",
+        "htmlUrl": "https://arxiv.org/html/2605.18944v2",
+        "authors": [
+          "Arturo de Giorgi",
+          "Daniel Naredo-Tuero",
+          "Xavier Ponce Díaz"
+        ],
+        "categories": [
+          "hep-ph",
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2605.18944v2/leptowaves.png",
+            "caption": "Parameter space available (within the black contour) for thermal leptogenesis in relation to the peak and abundance of the GWs spectrum."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2605.18944v2/leptowaves.png",
+        "thumbnailAlt": "Parameter space available (within the black contour) for thermal leptogenesis in relation to the peak and abundance of the GWs spectrum.",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2606.10017",
+        "title": "Refined anti-proton and anti-deuteron fluxes from weak-scale Dark Matter",
+        "summary": "We provide the cosmic-ray (CR) fluxes of antiprotons and antideuterons produced by the Galactic annihilation or decay of weak-scale dark matter (DM) particles of masses in the range from a few GeV to 100 TeV. We estimate these fluxes based on the updated models for the propagation of charged particles in the Galaxy and using the improved $\\bar{p}$ and $\\bar{d}$ spectra provided by $\\texttt{CosmiXs}$. For the updated propagation models we consider the MIN/MED/MAX sets under the new SLIM/BIG/QUAINT schemes. We treat the Galactic propagation in a semi-analytic way including different possible effects such as spatial diffusion, energy-losses, convection and diffusive reacceleration. For the DM distribution in the Galactic halo we consider NFW, Einasto and Burkert profiles with the most updated parameters. Moreover, we also incorporate the latest models for the inelastic cross-sections of $\\bar{p}$ and $\\bar{d}$ based on ALICE data. We validate our calculations with those available in the literature or those obtained from other publicly available numerical packages. We compare the CR fluxes obtained in this work with those provided previously by $\\texttt{PPPC4DMID}$ which were based on old propagation scenarios. We find that the CR fluxes obtained here with the new propagation models are much more robust (compared to the older ones) under the variation MIN - MAX. We also discuss the impact of this in the improvement of the discovery potential of a possible DM signal in the light of the present and upcoming CR observations. We provide all our results for the DM-induced interstellar CR fluxes in a tabulated format (for the kinetic energy range 0.1 GeV - 100 TeV) in the $\\texttt{GitHub}$ repository of the newly created $\\texttt{CosmiXsPPPC}$ project. The results are ready to be used for studies related to DM indirect searches.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2606.10017",
+        "htmlUrl": "https://arxiv.org/html/2606.10017v3",
+        "authors": [
+          "Marco Cirelli",
+          "Mattia Di Mauro",
+          "Arpan Kar"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.CO",
+          "astro-ph.GA",
+          "hep-ph"
+        ],
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2607.23119",
+        "title": "Parameter Estimation on LIGO-Virgo-KAGRA O4a Binary Merger Triggers with Sub-solar Mass Components",
+        "summary": "The LIGO-Virgo-KAGRA collaboration has reported the results for searches for sub-solar mass components in compact binary coalescence during observing run O4a. No detection candidates were identified, but the most significant seven triggers were reported. We present the results of Bayesian parameter inference on these triggers. Five of the triggers show agreement between the Bayesian parameter estimation and the search pipeline trigger. Our results show that three of the triggers may contain a possible sub-solar mass component. Parameter estimation indicates that the other two events, if real, would be neutron star - black hole binaries. The remaining two triggers do not provide informative parameter estimation. We also study three O4a compact binary coalescence triggers, and one O3 trigger, that have been noted by three other groups, and our parameter estimation indicates that three of these may contain a sub-solar mass component. We study the data quality associated with these triggers. Finally, we discuss the challenges for parameter estimation on compact binary coalescence events containing a sub-solar mass component: long signal duration, possible small chirp masses, possible small mass ratios, and data quality issues over potentially hundreds of seconds of data.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2607.23119",
+        "htmlUrl": "https://arxiv.org/html/2607.23119v3",
+        "authors": [
+          "Nelson Christensen",
+          "Neil Cornish",
+          "Florian Kühnel",
+          "Mairi Sakellariadou",
+          "Andres Santiago Villares Guanga"
+        ],
+        "categories": [
+          "gr-qc",
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2607.23119v3/1378760557_256_2_corner1.png",
+            "caption": "A corner plot for the trigger at 2023-09-14 21:02:19.50 UTC showing the source frame component masses, m 1 m_{1} and m 2 m_{2} , the effective spin χ eff \\chi_{\\rm eff} , and the detector frame chirp mass m c m_{c} .",
+            "captionLatex": "A corner plot for the trigger at 2023-09-14 21:02:19.50 UTC showing the source frame component masses, $m_{1}$ and $m_{2}$ , the effective spin $\\chi_{\\rm eff}$ , and the detector frame chirp mass $m_{c}$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.23119v3/SNRtrack_1378760557_256_2sigma1.png",
+            "caption": "The SNR 2 of the signal as a function of frequency for the 2023-09-14 21:02:19.50 UTC trigger. The black line is calculated from the data ( d | h d\\mid h ). The blue line corresponds to a draw from the likelihood ( h | h h\\mid h ). The blue region are the ± 1 ​ σ \\pm 1\\sigma errors on the SNR 2 estimation.",
+            "captionLatex": "The SNR 2 of the signal as a function of frequency for the 2023-09-14 21:02:19.50 UTC trigger. The black line is calculated from the data ( $d\\mid h$ ). The blue line corresponds to a draw from the likelihood ( $h\\mid h$ ). The blue region are the $\\pm 1\\sigma$ errors on the SNR 2 estimation."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.23119v3/1378760557_corner_masses2_f.png",
+            "caption": "Posterior distributions for the detector frame component masses, m 1 m_{1} and m 2 m_{2} , for the trigger at 2023-09-14 21:02:19.50 UTC. The estimates come from analyzing only the data from L1, only from H1, and analyzing H1 and L1 together.",
+            "captionLatex": "Posterior distributions for the detector frame component masses, $m_{1}$ and $m_{2}$ , for the trigger at 2023-09-14 21:02:19.50 UTC. The estimates come from analyzing only the data from L1, only from H1, and analyzing H1 and L1 together."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.23119v3/1378760557_corner_chieffq2_f.png",
+            "caption": "Posterior distributions for the effective spin χ eff \\chi_{\\rm eff} and the mass ratio q = m 2 / m 1 q=m_{2}/m_{1} for the trigger at 2023-09-14 21:02:19.50 UTC. The estimates come from analyzing only the data from L1, only from H1, and analyzing H1 and L1 together.",
+            "captionLatex": "Posterior distributions for the effective spin $\\chi_{\\rm eff}$ and the mass ratio $q=m_{2}/m_{1}$ for the trigger at 2023-09-14 21:02:19.50 UTC. The estimates come from analyzing only the data from L1, only from H1, and analyzing H1 and L1 together."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.23119v3/power_1378760557_1.png",
+            "caption": "The WDM power distribution for whitened data from the L1 detector for the trigger from 2023-09-14 21:02:19.50 UTC (1378760557.50 GPS). The data covers the 256 seconds from GPS time 1378760305 to 1378760561. The power level stays within the expected range, indicating that the data are stationary during this period. Also, there are no visual indication of noise transients."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.23119v3/tranPS_1378760557_1.png",
+            "caption": "The smoothed WDM power fluctuation map for the same stretch of data shown in Fig. 5 ."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.23119v3/pvalues_1378760557_1.png",
+            "caption": "Anderson-Darling p-values for the same stretch of data shown in Fig. 5 . The color scale shows − log 10 ⁡ ( p ) -\\log_{10}(p) .",
+            "captionLatex": "Anderson-Darling p-values for the same stretch of data shown in Fig. 5 . The color scale shows $-\\log_{10}(p)$ ."
+          },
+          {
+            "url": "https://arxiv.org/html/2607.23119v3/phist_1378760557_1.png",
+            "caption": "Anderson-Darling p-value histogram for the same stretch of data shown in Fig. 5 ."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2607.23119v3/1378760557_256_2_corner1.png",
+        "thumbnailAlt": "A corner plot for the trigger at 2023-09-14 21:02:19.50 UTC showing the source frame component masses, m 1 m_{1} and m 2 m_{2} , the effective spin χ eff \\chi_{\\rm eff} , and the detector frame chirp mass m c m_{c} .",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2608.09014",
+        "title": "Locating the missing baryons in the warm-hot intergalactic medium with fast radio bursts and the Sunyaev-Zel'dovich effect",
+        "summary": "Traditional astronomical censuses in the late-time Universe can only account for a fraction of the baryonic matter budget. Hydrodynamical simulations predict that the missing baryons reside in the vast filamentary structures of the cosmic web as a highly diffuse, warm-hot intergalactic medium (WHIM). Observing the WHIM directly has remained a long-standing challenge due to its typical temperature. In this study, we measure the angular cross-power spectrum between the dispersion measures (DMs) of fast radio bursts (FRBs) from the second CHIME/FRB catalog and the thermal Sunyaev-Zel'dovich (tSZ) Compton-$y$ map from the Planck satellite. After masking cataloged galaxy clusters, we find a positive correlation between FRB DMs and the tSZ map at $>98\\%$ confidence ($p_{\\rm null}=0.0169$). With a temperature normalization of $2.4\\times10^6\\ {\\rm K}$, we infer that a fraction $f_{\\rm WHIM}=0.375^{+0.165}_{-0.161}$ of cosmic baryons resides in the hotter WHIM. These measurements constrain a substantial reservoir of hotter diffuse gas in the cosmic web and statistically close the cosmic baryon budget in the local Universe under the adopted density and pressure model.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2608.09014",
+        "htmlUrl": "https://arxiv.org/html/2608.09014v2",
+        "authors": [
+          "Dao-Hong Zhai",
+          "F.Y. Wang",
+          "Zi-Gao Dai",
+          "Renyue Cen"
+        ],
+        "categories": [
+          "astro-ph.HE",
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2608.09014v2/preview.png",
+            "caption": "Sky distribution of the FRB sample and the masked tSZ map. (a) The spatial distribution of FRBs and galaxy clusters. Blue and green dots represent clusters from the PSZ2 and MCXC-II catalogs, respectively. Crosses indicate FRBs located within a 3 ​ θ 500 3\\theta_{500} exclusion radius of any cluster and these are discarded. Orange dots represent the final FRB sample retained for the cross-correlation measurement. (b) The masked Compton- y y parameter map. Circular regions within a 3 ​ θ 500 3\\theta_{500} radius around all cataloged clusters are excluded to isolate the hotter diffuse WHIM signal. The exclusion mask is smoothed using a cosine apodization to prevent ringing artifacts. The Galactic plane and bright point sources are also masked out.",
+            "captionLatex": "Sky distribution of the FRB sample and the masked tSZ map. (a) The spatial distribution of FRBs and galaxy clusters. Blue and green dots represent clusters from the PSZ2 and MCXC-II catalogs, respectively. Crosses indicate FRBs located within a $3\\theta_{500}$ exclusion radius of any cluster and these are discarded. Orange dots represent the final FRB sample retained for the cross-correlation measurement. (b) The masked Compton- $y$ parameter map. Circular regions within a $3\\theta_{500}$ radius around all cataloged clusters are excluded to isolate the hotter diffuse WHIM signal. The exclusion mask is smoothed using a cosine apodization to prevent ringing artifacts. The Galactic plane and bright point sources are also masked out."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2608.09014v2/preview.png",
+        "thumbnailAlt": "Sky distribution of the FRB sample and the masked tSZ map. (a) The spatial distribution of FRBs and galaxy clusters. Blue and green dots represent clusters from the PSZ2 and MCXC-II catalogs, respectively. Crosses indicate FRBs located within a 3 ​ θ 500 3\\theta_{500} exclusion radius of any cluster",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2609.00115",
+        "title": "Early Supermassive Black Holes and Little Red Dots Require Free-Fall Growth",
+        "summary": "Supermassive black holes/active galactic nuclei (SMBHs/AGN), forming only a few hundred million years after the Big Bang as observed with the James Webb Space Telescope (JWST), challenge theoretical understanding. How could they grow so massive $(M_{\\rm BH} > 10^6 {\\rm \\,M}_\\odot)$ so quickly after initial seeding? Is this rapid growth related to the numerous and enigmatic Little Red Dots (LRDs), compact sources with AGN-like characteristics, discovered by JWST? To address these mysteries, we consider the first-order constraint on SMBH growth: enough baryonic material has to reach the vicinity of the SMBH seed, located near the bottom of the gravitational potential well of the host dark matter halo. We specifically examine cold-mode accretion, where gas from the cosmic environment flows into the virialized halo in cold streams without being shock-heated, efficiently reaching the center on a free-fall timescale. We find that cold mode accretion is necessary to supply material for the SMBHs to reach the observed masses, whereas for shock-heated gas inflow the required amount could only be supplied by implausibly rare halos. Moreover, cold-mode inflow in rare $(\\sim1$ Gpc$^{-3}$) halos matches the mass and number of the massive quasars, and halos able to support super-Eddington accretion for massive SMBHs ($\\sim10^7$ M$_\\odot$) match LRD number densities. The decreasing LRD abundance at lower redshifts may then reflect the termination of cold-mode accretion in the growing host halos. The populations of massive SMBHs and LRDs at early times may thus arise naturally from cosmological structure formation, based on the abundance of halos capable of supplying sufficient material through cold accretion.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2609.00115",
+        "htmlUrl": "https://arxiv.org/html/2609.00115v2",
+        "authors": [
+          "Junehyoung Jeon",
+          "Volker Bromm",
+          "Michael Boylan-Kolchin",
+          "Julian B. Muñoz"
+        ],
+        "categories": [
+          "astro-ph.GA",
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2609.00115v2/outline.png",
+            "caption": "Conceptual framework for predicting the number density of systems that can support a given accretion rate across redshifts. For a specific halo mass and redshift, the infall rate at a given radius (here 10 − 3 ​ R vir 10^{-3}R_{\\rm vir} ) can be determined based on Eq. 1 or 3 . Together with the halo mass function (HMF), the volume density of such systems can be inferred. Combining these ingredients, we arrive at the redshift-evolution of accretion rate volume densities, as discussed in detail in the main text.",
+            "captionLatex": "Conceptual framework for predicting the number density of systems that can support a given accretion rate across redshifts. For a specific halo mass and redshift, the infall rate at a given radius (here $10^{-3}R_{\\rm vir}$ ) can be determined based on Eq. 1 or 3 . Together with the halo mass function (HMF), the volume density of such systems can be inferred. Combining these ingredients, we arrive at the redshift-evolution of accretion rate volume densities, as discussed in detail in the main text."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.00115v2/accreted_mass_nodex.png",
+            "caption": "Cumulative mass growth across redshift assuming that halos evolve with constant number density. Using the Bondi-Hoyle or free fall accretion rate at 10 − 3 ​ R vir 10^{-3}R_{\\rm vir} , we calculate the total mass accreted across redshift for a given halo number density. We compare the results against high-redshift quasar and AGN observations, including LRDs marked as red stars. The regimes for non-disruptive feedback and cold-mode accretion ( M halo < 10 12 M_{\\rm halo}<10^{12} M ⊙ ) are marked as in Fig. 2 . Both the observationally inferred quasar and JWST AGN masses could be reached by free-fall accretion, although for the most massive quasars, cold-mode accretion may not be possible anymore towards lower redshifts.",
+            "captionLatex": "Cumulative mass growth across redshift assuming that halos evolve with constant number density. Using the Bondi-Hoyle or free fall accretion rate at $10^{-3}R_{\\rm vir}$ , we calculate the total mass accreted across redshift for a given halo number density. We compare the results against high-redshift quasar and AGN observations, including LRDs marked as red stars. The regimes for non-disruptive feedback and cold-mode accretion ( $M_{\\rm halo} ⊙ ) are marked as in Fig. 2 . Both the observationally inferred quasar and JWST AGN masses could be reached by free-fall accretion, although for the most massive quasars, cold-mode accretion may not be possible anymore towards lower redshifts."
+          },
+          {
+            "url": "https://arxiv.org/html/2609.00115v2/halo_mass_accreted_vs_mass.png",
+            "caption": "Accreted BH mass (approximately measured at 10 − 3 ​ R vir 10^{-3}R_{\\rm vir} ) vs. host halo mass for select redshifts, assuming that halos evolve with constant number densities, for the Bondi-Hoyle or free-fall rates. The free-fall rates mark the limit of the accreted mass/the maximum BH mass possible. BH mass values above the free-fall limit, the most optimal accretion, thus cannot be accounted in this way. We compare against clustering measurements of quasar ( A.-C. Eilers et al., 2024 ; R. F. Trainor & C. C. Steidel, 2012 ) and low-luminosity AGN ( J. Arita et al., 2025 ) host halo masses, and the local M − σ M-\\sigma relation ( A. E. Evrard et al., 2008 ; J. Kormendy & L. C. Ho, 2013 ) . We also mark the halo masses for which the volume density falls below 10 − 6 10^{-6} Mpc -3 at the plotted redshifts. The high-redshift AGN host halo mass (and lower limit) measurements are below or within the free-fall boundary, but lie significantly above the Bondi-Hoyle model. Thus, to produce the observed AGN and quasars, near free-fall growth is necessary.",
+            "captionLatex": "Accreted BH mass (approximately measured at $10^{-3}R_{\\rm vir}$ ) vs. host halo mass for select redshifts, assuming that halos evolve with constant number densities, for the Bondi-Hoyle or free-fall rates. The free-fall rates mark the limit of the accreted mass/the maximum BH mass possible. BH mass values above the free-fall limit, the most optimal accretion, thus cannot be accounted in this way. We compare against clustering measurements of quasar ( A.-C. Eilers et al., 2024 ; R. F. Trainor & C. C. Steidel, 2012 ) and low-luminosity AGN ( J. Arita et al., 2025 ) host halo masses, and the local $M-\\sigma$ relation ( A. E. Evrard et al., 2008 ; J. Kormendy & L. C. Ho, 2013 ) . We also mark the halo masses for which the volume density falls below $10^{-6}$ Mpc -3 at the plotted redshifts. The high-redshift AGN host halo mass (and lower limit) measurements are below or within the free-fall boundary, but lie significantly above the Bondi-Hoyle model. Thus, to produce the observed AGN and quasars, near free-fall growth is necessary."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2609.00115v2/outline.png",
+        "thumbnailAlt": "Conceptual framework for predicting the number density of systems that can support a given accretion rate across redshifts. For a specific halo mass and redshift, the infall rate at a given radius (here 10 − 3 ​ R vir 10^{-3}R_{\\rm vir} ) can be determined based on Eq. 1 or 3 . Together with the hal",
+        "catchupDate": "2026-11-23"
+      },
+      {
+        "absId": "2611.16480",
+        "title": "Euclid Data Release 1 (DR1). An overview of the Science Ground Segment architecture and operations",
+        "summary": "The Euclid mission is designed to address fundamental questions on the nature of dark energy and dark matter by mapping the extragalactic sky with a wide-area survey complemented by targeted deep observations. The required scientific performance places stringent demands on the Euclid Science Ground Segment (SGS), which transforms raw telemetry into calibrated, validated, and scientifically exploitable products. The SGS is a distributed system comprising the Euclid Science Operations Centre, the Science Data Centres, Instrument Operation Teams, and supporting Organisation Units, within a common architectural and procedural framework. This paper presents the SGS as implemented for Data Release 1 (DR1), describing its organisation, architecture, processing functions, and operational model. We outline the main components of the SGS common infrastructure. A key element is the Euclid Archive System (EAS), the central metadata repository based on a common data model. It comprises a Distributed Storage System, providing scalable storage of data files across the Science Data Centres; a Data Processing System used by the pipelines to register and access files and their lineage; and a Science Archive, distributing validated data products. Processing is coordinated by a common orchestration framework based on the Infrastructure Abstraction Layer, providing workflow management and resource abstraction of distributed compute clusters. Software development, integration, and deployment are supported by the Common Development Environment. We describe daily operations, calibration, and quality control, followed by the DR1 production campaign, including processing flows, validation strategy, and computational and data volumes. This infrastructure enabled Euclid DR1, involving 35 million jobs across nine Science Data Centres and 6.7 million core-hours, demonstrating robustness and scalability of the SGS.",
+        "published": "2026-11-23T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.16480",
+        "htmlUrl": "https://arxiv.org/html/2611.16480v2",
+        "authors": [
+          "Euclid Collaboration",
+          "M. Ruffenach",
+          "M. Frailis",
+          "A. Zacchei",
+          "P. Casenove",
+          "M. S. Holliman",
+          "H. Aussel",
+          "B. Altieri",
+          "G. Angora",
+          "A. Basset",
+          "A. N. Belikov",
+          "J. BENARROCH",
+          "T. Bouvard",
+          "M. Brescia",
+          "S. Cavuoti",
+          "S. Farrens",
+          "R. Gimenez",
+          "R. Giusteri",
+          "X. Goudot",
+          "A. Gregorio",
+          "J. Haase",
+          "T. Heuberger",
+          "S. Kruk",
+          "G. Libet",
+          "S. Marcin",
+          "S. Maurogordato",
+          "M. Melchior",
+          "F. Pasian",
+          "G. Riccio",
+          "F. Rizzo",
+          "E. A. Valentijn",
+          "O. R. Williams",
+          "S. Andreon",
+          "N. Auricchio",
+          "S. Awan",
+          "C. Baccigalupi",
+          "M. Baldi",
+          "A. Balestra",
+          "S. Bardelli",
+          "P. Battaglia",
+          "R. Bender",
+          "A. Biviano",
+          "R. P. Blake",
+          "A. Bonchi",
+          "E. Branchini",
+          "S. Camera",
+          "V. Capobianco",
+          "C. Carbone",
+          "J. Carretero",
+          "M. Castellano",
+          "G. Castignani",
+          "P.-Y. Chabaud",
+          "K. C. Chambers",
+          "A. Cimatti",
+          "C. Colodro-Conde",
+          "G. Congedo",
+          "C. J. Conselice",
+          "L. Conversi",
+          "Y. Copin",
+          "A. Costille",
+          "F. Courbin",
+          "H. M. Courtois",
+          "M. Cropper",
+          "R. da Silva",
+          "H. Degaudenzi",
+          "S. de la Torre",
+          "G. De Lucia",
+          "C. Dolding",
+          "H. Dole",
+          "F. Dubath",
+          "X. Dupac",
+          "S. Dusini",
+          "S. Escoffier",
+          "M. Farina",
+          "R. Farinelli",
+          "F. Faustini",
+          "S. Ferriol",
+          "F. Finelli",
+          "N. Fourmanoit",
+          "E. Franceschi",
+          "P. Franzetti",
+          "M. Fumana",
+          "L. Gabarra",
+          "S. Galeotta",
+          "K. George",
+          "W. Gillard",
+          "B. Gillis",
+          "C. Giocoli",
+          "P. Gómez-Alvarez",
+          "J. Gracia-Carpio",
+          "A. Grazian",
+          "F. Grupp",
+          "S. Gwyn",
+          "W. G. Hartley",
+          "S. V. H. Haugan",
+          "G. Helou",
+          "S. Hemmati",
+          "J. Hoar",
+          "H. Hoekstra",
+          "W. Holmes"
+        ],
+        "categories": [
+          "astro-ph.IM",
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.16480v2/SGS_organigram.png",
+            "caption": "Organisation of the Euclid SGS , from ( Laureijs et al. 2011 ) , updated to reflect the current SGS organisation. The activities inside the dashed box are responsibility of the EC SGS ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16480v2/SDC_ressources.png",
+            "caption": "Resources of EC SGS SDCs in terms of storage and processing resources."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16480v2/SGS_Pipelines.png",
+            "caption": "Illustration of the interaction of the PFs inside the SGS , as well as some key products. PFs are depicted as rounded rectangles, document icons represent data products. Each PF writes its outputs to the EAS - DPS before they are consumed asynchronously by downstream processing pipelines — no direct communication occurs between them."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16480v2/SGS_system_3.png",
+            "caption": "Interaction of system components of the SGS ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16480v2/Figures/SGS_processing_june_small.png",
+            "caption": "PPO processing states of the SGS in June 2025 as seen in the global Grafana dashboard."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.16480v2/MER_Profiling.png",
+            "caption": "Resource usage of the MER initialise task during the DR1 EWS processing. Each point corresponds to one execution of the task on a single tile, coloured by the SDC on which it was run. The columns show the resource usage: the peak memory (max resident memory), the mean number of used CPU cores, and the total run time (from left to right), as a function of the number of sources in the tile (top row) and the number of Gaia sources (bottom row)."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.16480v2/SGS_organigram.png",
+        "thumbnailAlt": "Organisation of the Euclid SGS , from ( Laureijs et al. 2011 ) , updated to reflect the current SGS organisation. The activities inside the dashed box are responsibility of the EC SGS .",
+        "catchupDate": "2026-11-23"
+      }
+    ]
+  }
+}
