@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "status": "ok",
+  "source": "arxiv-catchup",
+  "category": "astro-ph.CO",
+  "date": "2026-11-25",
+  "generatedAt": "2026-11-25T09:43:46.113Z",
+  "figuresStatus": "complete",
+  "figureCounts": {
+    "processed": 8,
+    "total": 8,
+    "found": 5
+  },
+  "counts": {
+    "new": 8,
+    "cross": 0,
+    "repl": 0
+  },
+  "papersBySection": {
+    "new": [
+      {
+        "absId": "2611.31272",
+        "title": "In-in formalism & $\\mathcal{T}_{C}^{\\star}$-product: no contribution from total time derivatives",
+        "summary": "In the in-in formalism, total time derivatives are sometimes argued to contribute nontrivially to inflationary correlators at the evaluation point, i.e., at the end of inflation. In this paper, we disprove this claim based on the path integral. After formulating the canonical quantization and the regulated path integral of systems with total time derivatives, we derive the $\\mathcal{T}_{C}^{\\star}$-ordering, the correct operator ordering on the closed time path. In the $\\mathcal{T}_{C}^{\\star}$-ordering, the evaluation point, or the turning point of the in-in contour, is merely an intermediate point and is never an endpoint of the generalized path integral contour. As a result, any apparent boundary contributions at the turning point of the forward and backward branches completely cancel out. We demonstrate this cancellation by re-analyzing examples in the literature, with an emphasis on contact terms associated with the $\\mathcal{T}_{C}^{\\star}$-ordering overlooked previously.",
+        "published": "2026-11-25T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.31272",
+        "htmlUrl": "https://arxiv.org/html/2611.31272v1",
+        "authors": [
+          "Yohei Ema",
+          "Muzi Hong",
+          "Ryusuke Jinno",
+          "Kyohei Mukaida"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "hep-ph",
+          "hep-th"
+        ],
+        "catchupDate": "2026-11-25"
+      },
+      {
+        "absId": "2611.31273",
+        "title": "Magnetar driven Dainotti relation with up to 56\\% reduced uncertainties: probing the Expansion History of the Universe",
+        "summary": "The persistent tension in Hubble constant measurements and recent DESI hints of dynamical dark energy motivate extending the distance ladder beyond Type~Ia supernovae (SNe~Ia) and Cosmic Chronometers (CC) into the largely unexplored range $z\\sim2$--$6$. We use X-ray plateau emission of long gamma-ray bursts (GRBs), standardized through the two-dimensional Dainotti relation, as a probe of this gap. We analyze two samples: a platinum sample (P50, 50~GRBs, light-curve quality cuts) and a magnetar sample (M23, 23~GRBs, selected by requiring the magnetar spin-down model to be statistically preferred over the Willingale parametrization). We calibrate the Dainotti relation anchored independently to the Master SNe~Ia compilation and to Cosmic Chronometers, and propagate the result into a joint flat-$\\Lambda$CDM inference via MCMC. Despite containing less than half the GRBs of P50, M23 yields an intrinsic scatter $\\sim41\\%$ smaller, demonstrating that physically motivated selection outperforms quality cuts. Both samples give nearly identical cosmological constraints once combined with SNe~Ia and CC: M23 gives $H_0=69.45\\pm0.32\\ \\mathrm{km\\,s^{-1}\\,Mpc^{-1}}$ and $\\Omega_m=0.34^{+0.01}_{-0.02}$; P50 gives $H_0=69.46\\pm0.33$ and $\\Omega_m=0.34\\pm0.02$, both in $3$--$3.5\\sigma$ tension with Planck and SH0ES. We further introduce a novel joint likelihood that simultaneously fits individual plateau light curves and the Dainotti correlation, reducing the intrinsic scatter by $\\sim56\\%$ relative to the platinum sample and avoiding local maxima from sparse light-curve data. These results establish magnetar-selected GRB plateaus as a robust, high-redshift complement to existing distance-ladder probes, with a clear path toward improved constraining efficiency as sample sizes grow.",
+        "published": "2026-11-25T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.31273",
+        "htmlUrl": "https://arxiv.org/html/2611.31273v1",
+        "authors": [
+          "Konstantinos F. Dialektopoulos",
+          "Aleksander Łukasz Lenart",
+          "Maria Giovanna Dainotti",
+          "Jackson Levi Said",
+          "Nissim Fraija"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "astro-ph.HE"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.31273v1/scatter_matrix_magnetar.jpg",
+            "caption": "The parameter space of a selected sample of 23 magnetar-origin GRBs. The flux at the end of the plateau and its duration were obtained by fitting ideal magnetar and W07 models, which are shown as red and blue dots, respectively. The photon index Γ \\Gamma and redshift z z values are the same irrespective of the fitted model.",
+            "captionLatex": "The parameter space of a selected sample of 23 magnetar-origin GRBs. The flux at the end of the plateau and its duration were obtained by fitting ideal magnetar and W07 models, which are shown as red and blue dots, respectively. The photon index $\\Gamma$ and redshift $z$ values are the same irrespective of the fitted model."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.31273v1/vary_both_gaussian_names_readable_M23.png",
+            "caption": "Posterior distributions from the joint light-curve and Dainotti correlation MCMC for the M23 sample, with Gaussian priors on H 0 H_{0} and Ω m \\Omega_{m} centered on 70 and 0.3 respectively. Diagonal panels show marginalized 1D posteriors; off-diagonal panels show 2D credible regions at 68% and 95%. The 48 light-curve parameters ( F a , i , T a , i F_{a,i},T_{a,i} , i = 1 , … , 23 i=1,\\dots,23 ) are fitted simultaneously with the Dainotti correlation parameters ( a , b , σ int a,b,\\sigma_{\\rm int} ) and cosmological parameters ( H 0 , Ω m H_{0},\\Omega_{m} ). This run serves to validate the joint likelihood and confirm that the correlation parameters are stable when the cosmological parameters are anchored externally.",
+            "captionLatex": "Posterior distributions from the joint light-curve and Dainotti correlation MCMC for the M23 sample, with Gaussian priors on $H_{0}$ and $\\Omega_{m}$ centered on 70 and 0.3 respectively. Diagonal panels show marginalized 1D posteriors; off-diagonal panels show 2D credible regions at 68% and 95%. The 48 light-curve parameters ( $F_{a,i},T_{a,i}$ , $i=1,\\dots,23$ ) are fitted simultaneously with the Dainotti correlation parameters ( $a,b,\\sigma_{\\rm int}$ ) and cosmological parameters ( $H_{0},\\Omega_{m}$ ). This run serves to validate the joint likelihood and confirm that the correlation parameters are stable when the cosmological parameters are anchored externally."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.31273v1/scatter_matrix_magnetar.jpg",
+        "thumbnailAlt": "The parameter space of a selected sample of 23 magnetar-origin GRBs. The flux at the end of the plateau and its duration were obtained by fitting ideal magnetar and W07 models, which are shown as red and blue dots, respectively. The photon index Γ \\Gamma and redshift z z values are the same irrespec",
+        "catchupDate": "2026-11-25"
+      },
+      {
+        "absId": "2611.31282",
+        "title": "CosmoMap: Predicting Hot Gas Temperature and Density from Dark Matter with a Conditioned 3D U-Net",
+        "summary": "Mock X-ray observations of hot gas in galaxy groups, clusters and the cosmic web require its temperature and density over large volumes and many cosmologies, for which hydrodynamical simulations are expensive. We present CosmoMap, a 3D U-Net FiLM-conditioned on cosmological and feedback parameters that predicts gas temperature $T$ and electron density $n_{\\rm e}$ from dark matter density and velocity. On the CAMELS IllustrisTNG Latin hypercube, CosmoMap reaches $R^2 = 0.765$ for $\\log T$ and $0.934$ for $\\log n_{\\rm e}$ at $z=0$, reducing the error of gradient-boosted trees by 22-23 per cent. Temperature is predicted best in the densest regions, mostly galaxy- and group-scale haloes ($R^2 = 0.88$), but the electron density of the brightest X-ray-emitting gas is biased low by $0.12$ dex. One model outperforms the baselines at every redshift up to $z=2$, and using inputs from gravity-only simulations costs little accuracy. The predictions reproduce scaling relations, surface brightness profile shapes and most of the cosmological information in the gas. They produce box-integrated luminosities with a median bias of $-0.16$ dex, sensitive at the $0.2$ dex level to the inference scheme unless batch normalisation is used. Training for per-voxel uncertainties with a heteroscedastic likelihood costs accuracy and lowers luminosities by a further $0.1$-$0.3$ dex; the composite-loss variant, CosmoMap-$\\sigma$, provides uncertainties that are calibrated at 68 per cent after rescaling by predicted emissivity, except for the density of the brightest gas. Compact structures are smoothed: mock X-ray lightcones recover 89 per cent of the brightest tenth of sources but 28 per cent of all sources.",
+        "published": "2026-11-25T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.31282",
+        "htmlUrl": "https://arxiv.org/html/2611.31282v1",
+        "authors": [
+          "Aman Bhutani",
+          "Maggie Lieu"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.31282v1/figures/slices_z0.png",
+            "caption": "A 1.56 ​ h − 1 ​ Mpc 1.56\\,h^{-1}\\,\\mathrm{Mpc} -thick slab (averaged in log space) through the test box with the median temperature R 2 R^{2} , at z = 0 z=0 . Rows show temperature, electron density and emissivity; columns show the inputs, the simulation, CosmoMap, the gradient-boosted trees, and the residuals of CosmoMap and of the trees.",
+            "captionLatex": "A $1.56\\,h^{-1}\\,\\mathrm{Mpc}$ -thick slab (averaged in log space) through the test box with the median temperature $R^{2}$ , at $z=0$ . Rows show temperature, electron density and emissivity; columns show the inputs, the simulation, CosmoMap, the gradient-boosted trees, and the residuals of CosmoMap and of the trees."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.31282v1/figures/clusters.png",
+            "caption": "Projected emissivity around the three brightest structures in one test box at z = 0 z=0 : truth, CosmoMap and residual (left), and surface brightness profiles with β \\beta -model fits (right). The maps are 8.0 ​ h − 1 ​ Mpc 8.0\\,h^{-1}\\,\\mathrm{Mpc} across and integrated over the same depth.",
+            "captionLatex": "Projected emissivity around the three brightest structures in one test box at $z=0$ : truth, CosmoMap and residual (left), and surface brightness profiles with $\\beta$ -model fits (right). The maps are $8.0\\,h^{-1}\\,\\mathrm{Mpc}$ across and integrated over the same depth."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.31282v1/figures/lightcone.png",
+            "caption": "A 1 ∘ × 1 ∘ 1^{\\circ}\\times 1^{\\circ} mock X-ray lightcone ( 0.05 < z < 2.25 0.05<z<2.25 ) built from the true fields (left) and from the multi-redshift CosmoMap predictions (centre), after convolution with a 30 ′′ 30^{\\prime\\prime} PSF; circles mark detected sources. This is the first of the 10 lightcones; it has 93 true and 60 predicted sources, against 1016 and 357 over all ten. Right: cumulative source counts above the local background, per square degree, over 10 lightcones.",
+            "captionLatex": "A $1^{\\circ}\\times 1^{\\circ}$ mock X-ray lightcone ( $0.05<z<2.25$ ) built from the true fields (left) and from the multi-redshift CosmoMap predictions (centre), after convolution with a $30^{\\prime\\prime}$ PSF; circles mark detected sources. This is the first of the 10 lightcones; it has 93 true and 60 predicted sources, against 1016 and 357 over all ten. Right: cumulative source counts above the local background, per square degree, over 10 lightcones."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.31282v1/figures/slices_z0.png",
+        "thumbnailAlt": "A 1.56 ​ h − 1 ​ Mpc 1.56\\,h^{-1}\\,\\mathrm{Mpc} -thick slab (averaged in log space) through the test box with the median temperature R 2 R^{2} , at z = 0 z=0 . Rows show temperature, electron density and emissivity; columns show the inputs, the simulation, CosmoMap, the gradient-boosted trees, and t",
+        "catchupDate": "2026-11-25"
+      },
+      {
+        "absId": "2611.31364",
+        "title": "Enhanced spatial resolution and performance for N-body simulation of self-interacting dark matter",
+        "summary": "Studying the implications of self-interacting dark matter (SIDM) on astrophysical objects often requires simulations. N-body simulations are a standard tool but face a few challenges. One is resolving the mean free path in gravothermally collapsing halos. This is necessary to obtain accurate results and is achieved in state-of-the-art simulations by increasing the number of resolution elements. I aim to formulate a numerical scheme that gives an enhanced spatial resolution compared to those methods and allows increasing the resolution without changing the number of resolution elements. The novel scheme that I present is formulated by discarding the classic approach of using kernel functions and computing interaction probabilities. Instead, pairs of particles always interact if their distance is below a specific threshold. Importantly, this distance threshold depends on their relative velocity and the size of the time step. This new formulation no longer requires some of the computations in state-of-the-art schemes and thus helps to increase the performance. Through a variety of test problems with known solutions, I study the accuracy of the new scheme and demonstrate its advantages over state-of-the-art SIDM formulations. Notably, the scheme reduced the computational costs, making the SIDM computations typically much cheaper than gravity. As a consequence, a typical SIDM simulation of isotropic scattering requires only a few percent of its total computational cost for the self-interactions. In conclusion, the new scheme presents an improvement over previous schemes and helps to address current challenges. Besides the enhanced performance, it allows us to achieve a higher accuracy when simulating gravothermally collapsing SIDM halos.",
+        "published": "2026-11-25T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.31364",
+        "htmlUrl": "https://arxiv.org/html/2611.31364v1",
+        "authors": [
+          "Moritz S. Fischer"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "astro-ph.GA",
+          "hep-ph"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.31364v1/Fig1.png",
+            "caption": "Test problem for the scattering rate and velocities of isotropic, velocity-independent scattering. The left panel gives the number of scatter events times the physical DM particle mass since the start of the simulation (black) and compares it to the analytic solution (red, Eq. ( 20 )). The middle panel displays the distribution of relative velocities at which the scatterings take place (black). Here, the analytic expectation (red) is given by Eq. ( 21 ). The energy conservation is shown in the right panel. This test was originally introduced by Fischer et al. (2026) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.31364v1/Fig2.png",
+            "caption": "Deceleration test for the small-angle scattering scheme. A single particle travels through a constant background density. Only the drag force is applied while the random component is neglected. The velocity and position of the test particle are shown as a function of time for the simulation and analytic prediction. This test was originally introduced by Fischer et al. (2021a) ."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.31364v1/Fig4.png",
+            "caption": "Test for the SSHI implementation. The number of interactions of the satellite particles (black) is shown as a function of time. As a comparison, I show the expected number of interactions (red) according to Eq. ( 27 ) as well."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.31364v1/Fig1.png",
+        "thumbnailAlt": "Test problem for the scattering rate and velocities of isotropic, velocity-independent scattering. The left panel gives the number of scatter events times the physical DM particle mass since the start of the simulation (black) and compares it to the analytic solution (red, Eq. ( 20 )). The middle pa",
+        "catchupDate": "2026-11-25"
+      },
+      {
+        "absId": "2611.31374",
+        "title": "Late-time cosmic acceleration from matter inhomogeneities: constraints from DESI DR2 and SNe Ia",
+        "summary": "We present the first observational constraints on the Misner-Sharp (MS) mass of the universe, within a newly proposed exact General Relativity solution providing a non-perturbative description of nonlinear cosmic structure formation. At early times, when statistical homogeneity and isotropy are satisfied, our model reduces to usual FLRW cosmology, accommodating Cosmic Microwave Background (CMB) data. At late times, the departure from homogeneity and isotropy on scales $\\lesssim 200$ Mpc -- codified in the scale-dependent redshift distribution of the MS mass -- naturally induces cosmic acceleration, through an extensive term generated by the MS mass asymptotic limit on large scales. We derive the MS mass from Baryon Acoustic Oscillation data from the Dark Energy Spectroscopic Instrument (DESI) and Type Ia Supernovae, obtaining a value of the cosmological constant in agreement with $\\Lambda$CDM results. We outline broader implications and future observational prospects, highlighting how multi-probe strategies -- particularly CMB lensing and the late Integrated Sachs-Wolfe effect -- can ultimately test this solution to the dark energy puzzle.",
+        "published": "2026-11-25T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.31374",
+        "htmlUrl": "https://arxiv.org/html/2611.31374v1",
+        "authors": [
+          "Mariano Cadoni",
+          "Andrea Cozzumbo",
+          "Riccardo Murgia",
+          "Matteo Pili",
+          "Mirko Pitzalis",
+          "Andrea P. Sanna",
+          "Matteo Schulz",
+          "Ilaria Usai"
+        ],
+        "categories": [
+          "astro-ph.CO",
+          "gr-qc"
+        ],
+        "catchupDate": "2026-11-25"
+      },
+      {
+        "absId": "2611.31411",
+        "title": "Parallel and perpendicular: a two-population test with POSSUM radio galaxies confirms hint of CMB birefringence",
+        "summary": "Analyses of the cosmic microwave background (CMB) polarisation find an isotropic rotation of the linear polarisation plane, cosmic birefringence, of $\\beta\\sim0.2^\\circ$--$0.3^\\circ$, hinting at parity-violating physics. An independent test at low redshift with different systematics is needed. Radio galaxies provide such a test because their Faraday de-rotated polarisation angle $\\chi_0$ is statistically aligned with their position angle $\\psi$. Previous tests fitted only the population with $\\chi_0-\\psi\\approx90^\\circ$. We add the population with $\\chi_0-\\psi\\approx0^\\circ$, which is rotated by the same angle. We fit $\\chi_0-\\psi$ with two axial von-Mises distributions plus a uniform background, with an unbinned likelihood including each source's angle error. We apply this to 33,298 components of 16,649 double radio sources from the Polarisation Sky Survey of the Universe's Magnetism (POSSUM), with both components at polarised S/N $>10$ and separated by more than half the beam. Both populations are equally abundant. In the CMB convention we measure $\\beta=0.48^\\circ\\pm0.35^\\circ$, agreeing with the CMB in sign and amplitude. Including the $0^\\circ$ population halves the variance of $\\beta$. Components closer than half a beam carry no information on the source axis; excluding them leaves $\\beta$ unchanged and makes the two populations consistent in all morphological classes. Combining with the joint ACT and Planck likelihood for a late-time rotation yields $\\beta=0.282^\\circ\\pm0.056^\\circ$, $5.0\\sigma$ from zero. At $z\\sim0.5$, radio galaxies probe the rotation of the last $\\sim$ 5 Gyr. A CMB-sized rotation there would point to a late-evolving field such as axion-like dark energy, whereas a rotation before reionisation, e.g. by axion-like dark matter, predicts $\\beta\\approx0$. Given absolute angle calibration, the full POSSUM survey can test the CMB result independently.",
+        "published": "2026-11-25T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.31411",
+        "htmlUrl": "https://arxiv.org/html/2611.31411v1",
+        "authors": [
+          "Marcus Brüggen",
+          "Jorinde Dreismann",
+          "Pranjal Trivedi",
+          "Shane P. O'Sullivan",
+          "Takuya Akahori",
+          "Fumihiro Naokawa",
+          "Cameron L. Van Eck",
+          "Marco Regis"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.31411v1/fig1_right_profile_likelihood.png",
+            "caption": "Left: Δ = χ 0 − ψ \\Delta=\\chi_{0}-\\psi for the 33,298 33,298 components of the baseline sample ( 5 ∘ 5^{\\circ} bins). Curves show the unbinned model of Eq. ( 2 ) summed over all components (solid), and its standard-angle (dashed) and perpendicular (dotted) parts, each added to the uniform background. Right: Profile likelihood of the birefringence angle β \\beta (IAU convention).",
+            "captionLatex": "Left: $\\Delta=\\chi_{0}-\\psi$ for the $33,298$ components of the baseline sample ( $5^{\\circ}$ bins). Curves show the unbinned model of Eq. ( 2 ) summed over all components (solid), and its standard-angle (dashed) and perpendicular (dotted) parts, each added to the uniform background. Right: Profile likelihood of the birefringence angle $\\beta$ (IAU convention)."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.31411v1/fig1_right_profile_likelihood.png",
+        "thumbnailAlt": "Left: Δ = χ 0 − ψ \\Delta=\\chi_{0}-\\psi for the 33,298 33,298 components of the baseline sample ( 5 ∘ 5^{\\circ} bins). Curves show the unbinned model of Eq. ( 2 ) summed over all components (solid), and its standard-angle (dashed) and perpendicular (dotted) parts, each added to the uniform background",
+        "catchupDate": "2026-11-25"
+      },
+      {
+        "absId": "2611.31450",
+        "title": "Symbolic Regression Diagnostics of 1D Lyman Alpha Forest Emulator",
+        "summary": "We use symbolic regression to diagnose the parameter dependence of a black-box multi-fidelity emulator of the Lyman-alpha forest 1D flux power spectrum. Symbolic regression is appealing in its ability to reduce complex parameter spaces, thereby reducing compute time and offering potential interpretability in parameter inter-dependencies. Starting from a pretrained Gaussian-process (GP) emulator that connects low- and high-resolution PRIYA simulations, we search for explicit equations describing the dependence of the power spectrum on resolution and each cosmological and astrophysical parameter. We find that symbolic regression can recover equations that reproduce the emulator values well, but accurate predictions do not guarantee accurate parameter derivatives, making such equations unreliable for downstream applications such as Fisher forecasts. We therefore introduce a derivative-faithfulness diagnostic that directly compares the parameter gradient of each symbolic equation to the GP, and explore a derivative-matching (Sobolev) loss to improve this agreement. At z = 3.6, the Sobolev objective yields derivative-faithful equations for 9 of the 11 PRIYA parameters constraining the Lyman-alpha forest, with the approach only ineffective on h and AGN, whose 1D power spectrum imprints are weak or degenerate. Redefining the training objective with the Sobolev loss is a more robust and computationally efficient approach to gradient-matching repair than increasing model complexity. Our methods present potential mitigation strategies for failure modes of PySR, enabling downstream Fisher forecasts in some of these cases. Further, we document limitations potentially relevant to future work bridging symbolic regression with emulators. Our results demonstrate symbolic regression as an emulator diagnostic tool, with particular utility for low-dimensional or weakly coupled parameter dependencies.",
+        "published": "2026-11-25T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.31450",
+        "htmlUrl": "https://arxiv.org/html/2611.31450v1",
+        "authors": [
+          "Aidan Behmer",
+          "Ming-Feng Ho",
+          "Camille Avestruz",
+          "Yanhui Yang",
+          "Simeon Bird"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "catchupDate": "2026-11-25"
+      },
+      {
+        "absId": "2611.31494",
+        "title": "Learning to find cosmic filaments with graph neural networks",
+        "summary": "Inferring the large-scale structure of the Universe from galaxy surveys is a fundamental challenge in cosmology. In particular, cosmic filaments form an extended and geometrically complex network whose underlying structure cannot be reconstructed from discrete galaxy catalogs without uncertainty. We investigate a generative approach to filament finding based on flow matching and graph neural networks. The learned model reproduces key statistical properties of the target filament distribution while generating a distribution over possible filament configurations, demonstrating its ability to model uncertainty. Our work provides a first step towards probabilistic inference of the cosmic web directly from galaxy surveys. More broadly, these results demonstrate the potential of conditional generative models for reconstructing filament-like structures from sparse observational tracers.",
+        "published": "2026-11-25T00:00:00.000Z",
+        "updated": null,
+        "link": "https://arxiv.org/abs/2611.31494",
+        "htmlUrl": "https://arxiv.org/html/2611.31494v1",
+        "authors": [
+          "Alexis Tastet",
+          "Daniela Galárraga-Espinosa",
+          "Leander Thiele"
+        ],
+        "categories": [
+          "astro-ph.CO"
+        ],
+        "figures": [
+          {
+            "url": "https://arxiv.org/html/2611.31494v1/logigram_train.png",
+            "caption": "Logigram of the training method. As an input, the galaxies are associated with a label which corresponds to filaments computed by DisPerSE."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.31494v1/raw_density_grid64_sig15.0.png",
+            "caption": "Distribution used for the initial sampling of test particles. Left: given a galaxy distribution, we compute its density on a 64 3 64^{3} grid. Middle: the density is smoothed with a Gaussian kernel whose standard deviation is set to 15 ​ h − 1 ​ Mpc 15\\,h^{-1}\\,\\mathrm{Mpc} . Right: Sample from this probability density in the slice [85,100].",
+            "captionLatex": "Distribution used for the initial sampling of test particles. Left: given a galaxy distribution, we compute its density on a $64^{3}$ grid. Middle: the density is smoothed with a Gaussian kernel whose standard deviation is set to $15\\,h^{-1}\\,\\mathrm{Mpc}$ . Right: Sample from this probability density in the slice [85,100]."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.31494v1/infer_25_Ninit20.png",
+            "caption": "Left: Slice of 20 ​ h − 1 ​ Mpc 20\\,h^{-1}\\text{Mpc} thickness of the box where several runs with the trained model have been performed (in blue). A single run is highlighted in red. Right: Average two-point correlation function of the test particles on 15 random initializations. The bars represent the deviation",
+            "captionLatex": "Left: Slice of $20\\,h^{-1}\\text{Mpc}$ thickness of the box where several runs with the trained model have been performed (in blue). A single run is highlighted in red. Right: Average two-point correlation function of the test particles on 15 random initializations. The bars represent the deviation"
+          },
+          {
+            "url": "https://arxiv.org/html/2611.31494v1/cfgfilA_galaxies_kPP24_L10_epoch36_Ninit15_cross_cor.png",
+            "caption": "Left: Cross correlation between the test particles and the target particles with the same set up as in Fig 3 . Right: Signal S := Var close ​ C − Var random ​ C Var random ​ C S:=\\frac{\\text{Var}_{\\text{close}}C-\\text{Var}_{\\text{random}}C}{\\text{Var}_{\\text{random}}C} with C C being the cross-correlation for the test/target particles (black), the galaxies/test particles (blue), and the galaxies/target particles (green).",
+            "captionLatex": "Left: Cross correlation between the test particles and the target particles with the same set up as in Fig 3 . Right: Signal $S:=\\frac{\\text{Var}_{\\text{close}}C-\\text{Var}_{\\text{random}}C}{\\text{Var}_{\\text{random}}C}$ with $C$ being the cross-correlation for the test/target particles (black), the galaxies/test particles (blue), and the galaxies/target particles (green)."
+          },
+          {
+            "url": "https://arxiv.org/html/2611.31494v1/validation_idx5.png",
+            "caption": "Histogram of filament lengths in log scale. In black the histogram of DisPerSE, and in other colors the histograms of the reconstruction algorithm for different values of β \\beta . In red dot, the line shows the cut introduced for the length of the filaments.",
+            "captionLatex": "Histogram of filament lengths in log scale. In black the histogram of DisPerSE, and in other colors the histograms of the reconstruction algorithm for different values of $\\beta$ . In red dot, the line shows the cut introduced for the length of the filaments."
+          }
+        ],
+        "thumbnailUrl": "https://arxiv.org/html/2611.31494v1/logigram_train.png",
+        "thumbnailAlt": "Logigram of the training method. As an input, the galaxies are associated with a label which corresponds to filaments computed by DisPerSE.",
+        "catchupDate": "2026-11-25"
+      }
+    ],
+    "cross": [],
+    "repl": []
+  }
+}
